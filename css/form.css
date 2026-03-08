@@ -1,0 +1,123 @@
+/* =========================================
+    6. İLETİŞİM FORMU
+   ========================================= */
+.iletisim-form-alani {
+    background-color: #eee;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 50px 0;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+.iletisim-form-alani h2 { 
+    color: #000080; 
+    text-align: center; 
+    margin-bottom: 30px; 
+}
+
+.form-satir { 
+    display: flex; 
+    gap: 20px; 
+    margin-bottom: 20px; 
+}
+
+input[type="text"], input[type="tel"], input[type="email"], textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #d1d1d1;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.radyo-grup { 
+    display: flex; 
+    gap: 25px; 
+    margin: 10px 0 20px 0; 
+}
+
+/* --- KVKK VE BUTON SATIRI (Yanyana & Ortalanmış) --- */
+.kvkk-satir {
+    display: flex;
+    align-items: center;    
+    justify-content: center; 
+    gap: 30px;              
+    margin: 35px 0;
+    width: 100%;            
+}
+
+.kvkk-alani {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.kvkk-alani input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin: 0; /* Tarayıcı boşluklarını sıfırla */
+}
+
+.kvkk-alani label {
+    font-size: 15px;
+    color: #444;
+    font-weight: 500;
+    white-space: nowrap; 
+    cursor: pointer;
+}
+
+/* --- ANA GÖNDER BUTONU (Genişletilmiş Versiyon) --- */
+.form-buton-kucuk {
+    background-color: #000080;
+    color: #fff;
+    border: none;
+    padding: 14px 45px; 
+    min-width: 220px; 
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.form-buton-kucuk:hover {
+    background-color: #FF0000;
+    padding: 14px 50px; 
+    box-shadow: 0 6px 12px rgba(255,0,0,0.2);
+    transform: translateY(-2px);
+}
+
+/* =========================================
+    9. MOBİL UYUMLULUK (501px ALTI)
+   ========================================= */
+@media (max-width: 501px) {
+    .form-satir { 
+        flex-direction: column; 
+        gap: 15px;
+    }
+
+    .kvkk-satir {
+        flex-direction: column; 
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .kvkk-alani label {
+        white-space: normal; 
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .form-buton-kucuk {
+        width: 100%; 
+        min-width: unset;
+        padding: 15px;
+        font-size: 16px;
+    }
+}

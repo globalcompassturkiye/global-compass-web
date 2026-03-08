@@ -1,0 +1,150 @@
+/* =========================================
+   ANA SAYFA SEKMELİ NAVİGASYON (ÇALIŞAN HALİ)
+   ========================================= */
+
+.hizmet-tab-alani { 
+    max-width: 1200px; 
+    margin: 40px auto; 
+    padding: 0 20px; 
+}
+.hizmet-tab-alani input[type="radio"] { display: none !important; }
+
+/* Ana Panelleri Göster/Gizle */
+.tab-panel { display: none; }
+#tab-dil:checked ~ #panel-dil,
+#tab-yaz:checked ~ #panel-yaz { 
+    display: block !important; 
+}
+
+/* Alt Panelleri (İç sekmeler) Göster/Gizle */
+.alt-panel { display: none !important; }
+
+#dil-ing:checked ~ #panel-dil-ing,
+#dil-usa:checked ~ #panel-dil-usa,
+#yaz-ing:checked ~ #panel-yaz-ing,
+#yaz-isvicre:checked ~ #panel-yaz-isvicre,
+#yaz-almanya:checked ~ #panel-yaz-almanya,
+#yaz-kanada:checked ~ #panel-yaz-kanada,
+#yaz-italya:checked ~ #panel-yaz-italya {
+    display: block !important;
+}
+
+/* Aktif Sekme Renkleri */
+input:checked + .alt-tab-etiket,
+input:checked + .ana-tab-etiket {
+    background: #000080 !important;
+    color: #fff !important;
+    border-color: #000080 !important;
+}
+
+/* =========================================
+   FOOTER (1920px ZEMİN - 1200px İÇERİK)
+   ========================================= */
+
+.ana-footer {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    background-color: #f0f4f8;
+    /* ... diğer ayarlar ... */
+}
+
+.footer-kapsayici-1200 {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px 15px 20px;
+}
+
+/* LOGO ALANI */
+.footer-logo-alani {
+    margin-bottom: 5px;
+    padding-top: 5px;
+    line-height: 0; /* Altındaki hayali boşluğu siler */
+}
+
+.footer-logo-img {
+    max-width: 180px;
+    height: auto;
+    display: inline-block;
+}
+
+/* İLETİŞİM VE İÇERİK */
+.footer-merkezi-icerik {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 15px;
+}
+
+.footer-adres-metni {
+    font-size: 14px;
+    color: #4a5568;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.footer-iletisim-satiri {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+}
+
+.footer-ayrac { color: #cbd5e0; font-weight: 300; }
+
+.footer-link-sade {
+    text-decoration: none;
+    color: #1a202c;
+    font-weight: 500;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-link-sade:hover { color: #FF0000; }
+
+/* KVKK YAN YANA */
+.footer-kvkk-satiri {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 25px;
+    border-top: 1px solid #d1d9e0;
+    padding-top: 15px;
+    width: 100%;
+}
+
+.footer-kvkk-satiri a {
+    text-decoration: none;
+    color: #718096;
+    font-size: 12px;
+}
+
+/* ALT TELİF BÖLÜMÜ - DAHA ŞIK VE TEMİZ */
+.footer-alt-telif {
+    background-color: transparent; /* Kirli gri efekti kaldırıldı */
+    padding: 20px 0; /* Biraz daha nefes alması için alan açıldı */
+    border-top: 1px solid rgba(0, 0, 128, 0.05); /* Çok hafif lacivert tonlu ince çizgi */
+    text-align: center;
+}
+
+.footer-alt-telif p {
+    font-size: 11px; /* Bir tık küçültüldü */
+    color: #94a3b8; /* Daha yumuşak bir gri-mavi tonu */
+    margin: 0;
+    letter-spacing: 0.8px; /* Harf aralığı açılarak premium bir hava verildi */
+    text-transform: uppercase; /* Kurumsal bir duruş için tamamen büyük harf */
+    font-weight: 400;
+}
+
+/* MOBİL UYUMLULUK */
+@media (max-width: 768px) {
+    .footer-iletisim-satiri { flex-direction: column; gap: 10px; }
+    .footer-ayrac { display: none; }
+    .footer-kvkk-satiri { flex-direction: column; gap: 12px; }
+}

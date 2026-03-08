@@ -1,0 +1,119 @@
+/* =========================================
+   ANA SAYFA SEKMELİ NAVİGASYON (HİBRİT ÇÖZÜM)
+   ========================================= */
+
+.hizmet-tab-alani { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+.hizmet-tab-alani input[type="radio"] { display: none !important; }
+
+/* --- ANA TAB ETİKETLERİ (Dil / Yaz) --- */
+.ana-tab-etiket {
+    padding: 12px 30px;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    color: #000080;          /* Yazı lacivert */
+    background-color: #ffffff; /* Normalde içi beyaz */
+    border: 2px solid #d1d1d1; /* Gri çerçeve */
+    border-radius: 5px;        /* Köşeler 5px */
+    margin-right: 8px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+/* Hover: Çerçeve kırmızıya döner */
+.ana-tab-etiket:hover {
+    border-color: #FF0000;
+}
+
+/* Aktif Ana Sekme: İçi kırmızı, yazı lacivert */
+#tab-dil:checked ~ label[for="tab-dil"],
+#tab-yaz:checked ~ label[for="tab-yaz"] {
+    background-color: #FF0000 !important;
+    color: #000080 !important;
+    border-color: #FF0000 !important;
+}
+
+/* Ana Panelleri Göster/Gizle */
+.tab-panel { display: none; padding: 20px 0; }
+#tab-dil:checked ~ #panel-dil,
+#tab-yaz:checked ~ #panel-yaz { display: block !important; }
+
+/* --- ALT SEKME TASARIMI --- */
+.alt-tab-kapsayici { 
+    background: #f9f9f9; 
+    padding: 30px; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    border: 1px solid #eee;
+}
+
+.alt-tab-etiket {
+    padding: 8px 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;        /* 30px'den 5px'e indirildi (Bütünlük sağlandı) */
+    background: #ffffff; 
+    border: 1px solid #d1d1d1; 
+    display: inline-block;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000080; 
+    transition: all 0.3s ease;
+}
+
+/* Alt Sekme Hover: İçi kırmızı, yazı lacivert */
+.alt-tab-etiket:hover {
+    background-color: #FF0000;
+    color: #000080;
+    border-color: #FF0000;
+}
+
+/* --- AKTİF ALT SEKME RENKLERİ (İçi Lacivert, Yazı Beyaz) --- */
+#dil-ing:checked ~ label[for="dil-ing"],
+#dil-usa:checked ~ label[for="dil-usa"],
+#yaz-ing:checked ~ label[for="yaz-ing"],
+#yaz-isvicre:checked ~ label[for="yaz-isvicre"],
+#yaz-almanya:checked ~ label[for="yaz-almanya"],
+#yaz-kanada:checked ~ label[for="yaz-kanada"],
+#yaz-italya:checked ~ label[for="yaz-italya"] {
+    background: #000080 !important;
+    color: #ffffff !important;
+    border-color: #000080 !important;
+}
+
+/* --- ALT PANELLERİ GÖSTERME MANTIĞI --- */
+.alt-panel { display: none !important; margin-top: 30px; width: 100%; }
+
+#dil-ing:checked ~ #panel-dil-ing,
+#dil-usa:checked ~ #panel-dil-usa,
+#yaz-ing:checked ~ #panel-yaz-ing,
+#yaz-isvicre:checked ~ #panel-yaz-isvicre,
+#yaz-almanya:checked ~ #panel-yaz-almanya,
+#yaz-kanada:checked ~ #panel-yaz-kanada,
+#yaz-italya:checked ~ #panel-yaz-italya {
+    display: block !important;
+}
+
+/* --- İÇERİK DÜZENİ --- */
+.tab-ic-icerik { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; }
+.tab-metin { flex: 2; }
+.tab-link-listesi { list-style: none; padding: 0; margin: 20px 0; display: flex; flex-direction: column; gap: 12px; }
+.tab-link-listesi li { display: flex; align-items: center; }
+.tab-link-listesi li::before { content: "•"; color: #FF0000; font-weight: bold; margin-right: 10px; }
+.tab-link-listesi li a { text-decoration: none; color: #555; font-size: 15px; font-weight: 500; transition: 0.2s; }
+.tab-link-listesi li a:hover { color: #FF0000; padding-left: 5px; }
+
+.ana-buton { 
+    display: inline-block; padding: 10px 25px; background: #000080; color: #fff; 
+    text-decoration: none; border-radius: 5px; font-weight: bold; transition: 0.3s;
+}
+.ana-buton:hover { background: #FF0000; color: #000080; }
+
+@media (max-width: 768px) {
+    .tab-ic-icerik { flex-direction: column; gap: 20px; }
+    .tab-aksiyon { text-align: center; width: 100%; }
+    .ana-tab-etiket { width: 48%; margin-bottom: 5px; padding: 10px; font-size: 14px; margin-right: 4px; }
+    .alt-tab-etiket { font-size: 13px; padding: 6px 15px; }
+}

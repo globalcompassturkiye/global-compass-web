@@ -1,0 +1,81 @@
+/* =========================================
+   3. SİTE HARİTASI (BREADCRUMB - KOMPAKT)
+   ========================================= */
+.site-haritasi-yolu {
+    width: 100%;
+    margin: 15px 0 25px 0;
+}
+
+.breadcrumb-kutu {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding: 8px 18px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+    box-sizing: border-box;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+}
+
+.breadcrumb-kutu::-webkit-scrollbar {
+    display: none;
+}
+
+/* Genel metin ayarları (Normal kalınlık) */
+.breadcrumb-kutu a, 
+.breadcrumb-kutu .ayrac {
+    font-size: 16px; 
+    letter-spacing: 0.3px;
+    color: #000000;
+    font-weight: 500; /* Linkler ve ayraçlar normal kalsın */
+}
+
+/* Sadece İçinde Bulunulan Sayfa (Kalın) */
+.breadcrumb-kutu .su-anki-sayfa {
+    font-size: 16px;
+    color: #000000;
+    font-weight: 800; /* Sadece bu kalın olacak */
+}
+
+.ana-sayfa-ikon img {
+    width: 16px; 
+    height: auto;
+    display: block;
+    opacity: 0.9;
+}
+
+.ayrac {
+    color: #666;
+    user-select: none;
+}
+
+.breadcrumb-kutu a {
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.breadcrumb-kutu a:hover {
+    color: #e30613;
+    text-decoration: underline;
+}
+
+/* =========================================
+   MOBİL UYUMLULUK
+   ========================================= */
+@media (max-width: 768px) {
+    .breadcrumb-kutu a, 
+    .breadcrumb-kutu .su-anki-sayfa, 
+    .breadcrumb-kutu .ayrac {
+        font-size: 14px;
+    }
+    
+    .ana-sayfa-ikon img {
+        width: 14px;
+    }
+}

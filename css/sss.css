@@ -1,0 +1,88 @@
+/* =========================================
+    SSS (AKORDEON) ALANI
+   ========================================= */
+
+/* İlk Kutunun Üst Boşluğu - Padding eklendiği için burayı azalttık */
+.sss-alani .sss-item:first-child {
+    margin-top: 5px; /* 15px'den 5px'e düşürüldü */
+}
+
+/* Ana Kutu Yapısı */
+.sss-item {
+    border: 1px solid #d1d1d1;
+    border-radius: 5px;
+    margin-bottom: 12px;
+    padding: 12px 15px;
+    background: #fff;
+}
+
+/* Soru (Summary) Ayarları */
+.sss-item summary { 
+    cursor: pointer; 
+    list-style: none; 
+    padding-left: 30px; 
+    position: relative; 
+    outline: none;
+    display: flex;
+    align-items: center;
+}
+
+/* Chrome/Safari için standart oku gizleme */
+.sss-item summary::-webkit-details-marker { 
+    display: none; 
+}
+
+/* Başlık: 16px, Siyah ve Kalın */
+.sss-item summary h3 {
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    color: #000000 !important;
+    margin: 0 !important;
+    line-height: 1.4;
+}
+
+/* Aşağı Ok İkonu (▼) */
+.sss-item summary::before { 
+    content: "▼"; 
+    position: absolute; 
+    left: 5px; 
+    color: #000000;
+    font-size: 12px;
+    top: 50%; 
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+}
+
+/* Akordeon Açıldığında Oku Döndür */
+.sss-item[open] summary::before { 
+    transform: translateY(-50%) rotate(180deg);
+}
+
+/* Soru ile Cevap Arasındaki Alan */
+.sss-icerik p {
+    padding-top: 15px;
+    padding-bottom: 5px;
+    line-height: 1.6;
+    color: #555;
+    font-size: 15px;
+    border-top: 1px solid #f4f4f4; 
+    margin-top: 10px;
+}
+
+/* =========================================
+    SSS MOBİL UYUM (EN ALTTA)
+   ========================================= */
+@media (max-width: 501px) {
+    .sss-alani .sss-item:first-child {
+        margin-top: 15px; /* Mobildeki 35px'lik aşırı boşluk 15px'e düşürüldü */
+    }
+    .sss-item summary h3 {
+        font-size: 15px !important;
+    }
+    .sss-item summary {
+        padding-left: 25px;
+    }
+    .sss-item summary::before {
+        font-size: 10px;
+    }
+}

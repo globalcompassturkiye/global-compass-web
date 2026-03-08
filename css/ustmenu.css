@@ -1,0 +1,130 @@
+/* =========================================
+    2. SABİT ÜST ALAN (TOP BAR + ANA MENÜ)
+   ========================================= */
+
+.sabit-ust-alan {
+    position: relative;
+    width: 100%;
+}
+
+.ust-serit {
+    background-color: #000080;
+    padding: 8px 0;
+    width: 100%;
+}
+
+.ust-serit-kapsayici {
+    max-width: 1920px;           
+    margin: 0 auto;
+    padding: 0 25px;
+    display: flex;
+    justify-content: flex-end;   
+    box-sizing: border-box;
+}
+
+.yardimci-menu ul {
+    list-style: none;
+    margin: 0; padding: 0;
+    display: flex;
+    gap: 75px; 
+}
+
+.yardimci-menu a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    transition: all 0.3s ease;
+}
+
+.yardimci-menu a:hover {
+    color: #FF0000;
+}
+
+/* --- ANA MENÜ ALANI --- */
+.ust-menu {
+    background-color: #ffffff;
+    width: 100%;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.menu-kapsayici {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1920px; 
+    margin: 0 auto;    
+    padding: 10px 0; /* 15px'den 10px'e çekildi */
+    gap: 10px;      /* Logo ile menü arası boşluk 25px'den 10px'e çekildi */
+}
+
+.logo img {
+    max-height: 70px; 
+    width: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.navigasyon {
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+}
+
+.navigasyon ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 15px;      /* Yatay boşluk daraltıldı (50px -> 15px) */
+    flex-wrap: wrap; 
+    justify-content: center;
+    line-height: 1.2; /* Alt satıra geçen metinler için dikey mesafe daraltıldı */
+}
+
+.navigasyon a {
+    text-decoration: none;
+    color: #333;
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 8px 15px; /* Dikey padding 10px'den 8px'e düşürüldü */
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+    display: inline-block; /* Çizgi ve boşluk kontrolü için eklendi */
+}
+
+.navigasyon a:hover, .navigasyon a.aktif {
+    color: #000080;
+    border-bottom: 3px solid #FF0000;
+}
+
+/* =========================================
+    MOBİL DÜZENLEMELER (501px ALTI)
+   ========================================= */
+@media (max-width: 501px) {
+    .ust-serit-kapsayici {
+        justify-content: center; 
+    }
+    
+    .yardimci-menu ul {
+        gap: 20px; 
+    }
+
+    .menu-kapsayici {
+        gap: 8px;   /* Mobilde logo-menü arası daha da daraltıldı */
+        padding: 10px 0;
+    }
+
+    .navigasyon ul {
+        gap: 5px;   /* Mobilde kelimelerin birbirine çok uzak durması engellendi */
+    }
+    
+    .navigasyon a {
+        font-size: 13px; /* 14px'den 13px'e çekildi ki daha az satıra bölünsün */
+        padding: 5px 8px; /* Dikey ve yatay boşluk minimize edildi */
+    }
+}

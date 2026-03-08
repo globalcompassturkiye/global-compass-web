@@ -1,0 +1,77 @@
+/* =========================================
+   7. YÖNLENDİRME KARTLARI
+   ========================================= */
+.alt-yonlendirme-alani { 
+    display: flex; 
+    gap: 30px; 
+    margin: 60px 0; 
+    flex-wrap: wrap; 
+}
+
+.yonlendirme-karti {
+    flex: 1;
+    min-width: 300px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px; /* Daha modern bir kavis */
+    padding: 35px;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* İçeriği kartın boyuna yayar */
+}
+
+/* Hover Efekti: Daha derin gölge ve lacivert vurgu */
+.yonlendirme-karti:hover { 
+    transform: translateY(-8px); 
+    border-color: #000080; 
+    box-shadow: 0 15px 30px rgba(0, 0, 128, 0.08); 
+}
+
+.yonlendirme-karti h2 { 
+    color: #000080; 
+    margin: 0 0 15px 0; 
+    font-size: 24px; 
+    font-weight: 800;
+}
+
+.yonlendirme-karti p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Kart Linki (Butonumsu Görünüm) */
+.kart-link { 
+    display: inline-block; 
+    color: #000080; 
+    text-decoration: none; 
+    font-weight: 700; 
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #eee; /* Varsayılan silik çizgi */
+    transition: 0.3s; 
+    align-self: flex-start; /* Sadece metin kadar yer kaplar */
+}
+
+.kart-link:hover { 
+    color: #FF0000; 
+    border-bottom-color: #FF0000; 
+    padding-left: 5px; /* Hafif sağa kayma efekti */
+}
+
+/* MOBİL (501px ALTI) */
+@media (max-width: 501px) {
+    .alt-yonlendirme-alani {
+        margin: 40px 10px;
+        gap: 20px;
+    }
+    
+    .yonlendirme-karti {
+        padding: 25px;
+        min-width: 100%; /* Mobilde tam genişlik */
+    }
+}
