@@ -62,7 +62,13 @@
             <nav class="navigasyon" id="nav-menu" aria-label="Ana menü">
                 <ul class="nav-list">
                     <li><a href="/" class="aktif">Ana Sayfa</a></li>
-                    <li><a href="/yurt-disi-lise">Lise</a></li>
+                    <li class="has-dropdown">
+                        <a href="/yurt-disi-lise" aria-haspopup="true" aria-expanded="false">Lise</a>
+                        <ul class="submenu">
+                            <li><a href="/yurt-disi-lise/">Tümü</a></li>
+                            <li><a href="/yurt-disi-lise/degisim-programlari/">Değişim Programları</a></li>
+                        </ul>
+                    </li>
                     <li><a href="/yurt-disi-universite">Üniversite</a></li>
                     <li><a href="/yurt-disi-yuksek-lisans-mba">Yüksek Lisans & MBA</a></li>
                     <li><a href="/yurt-disi-online-egitim">Online Eğitim</a></li>
@@ -129,12 +135,7 @@
 
 
 <section class="icerik-alani" style="margin-top: 40px; max-width: 1200px; margin-left: auto; margin-right: auto; padding: 0 15px;">
-    <div style="text-align: center; margin-bottom: 50px;">
-        <h2 style="color: #000080; font-size: 26px; font-weight: 800; text-transform: uppercase; margin-bottom: 15px;">2026 Akademik Yılında Hayallerinizi Sınırların Ötesine Taşıyın!</h2>
-        <p style="color: #666; font-size: 15px; max-width: 850px; margin: 0 auto;">
-            Dünyanın en prestijli eğitim kurumlarından oluşan <strong>300’den fazla partnerimiz</strong> ve uzman kadromuzla, yurt dışı eğitim yolculuğunuzda <strong>Global Compass</strong> güvencesiyle yanınızdayız.
-        </p>
-    </div>
+
 
     <div class="beceri-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px 20px;">
         
@@ -361,11 +362,19 @@
         });
         document.querySelectorAll('.has-dropdown > a').forEach(function(trigger) {
             trigger.addEventListener('click', function(e) {
-                if (window.innerWidth <= 992) {
-                    e.preventDefault();
+                if (window.innerWidth <= 500) {
                     var parent = this.closest('.has-dropdown');
-                    parent.classList.toggle('submenu-open');
-                    this.setAttribute('aria-expanded', parent.classList.contains('submenu-open'));
+                    if (!parent) return;
+                    // İlk dokunuşta sadece aç/kapat, ikinci dokunuşta linke git
+                    if (!parent.classList.contains('submenu-open')) {
+                        e.preventDefault();
+                        parent.classList.add('submenu-open');
+                        this.setAttribute('aria-expanded', 'true');
+                    } else {
+                        // İkinci dokunuşta varsayılan davranış (href'e git)
+                        parent.classList.remove('submenu-open');
+                        this.setAttribute('aria-expanded', 'false');
+                    }
                 }
             });
         });

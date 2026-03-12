@@ -31,6 +31,13 @@
     color: #000000;
 }
 
+/* Bazı sayfalarda summary içinde kullanılan h3 başlıklarını küçült ve hizala */
+.sss-item summary h3 {
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0;
+}
+
 /* Chrome/Safari için standart oku gizleme */
 .sss-item summary::-webkit-details-marker { 
     display: none; 

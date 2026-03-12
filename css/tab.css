@@ -135,7 +135,9 @@
 #yaz-isvicre:checked ~ #panel-yaz-isvicre,
 #yaz-almanya:checked ~ #panel-yaz-almanya,
 #yaz-kanada:checked ~ #panel-yaz-kanada,
-#yaz-italya:checked ~ #panel-yaz-italya {
+#yaz-italya:checked ~ #panel-yaz-italya,
+#yas-13-15:checked ~ #panel-yas-13-15,
+#yas-16-18:checked ~ #panel-yas-16-18 {
     display: block !important;
 }
 

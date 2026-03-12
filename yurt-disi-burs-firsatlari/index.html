@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
@@ -62,7 +62,13 @@
             <nav class="navigasyon" id="nav-menu" aria-label="Ana menü">
                 <ul class="nav-list">
                     <li><a href="/">Ana Sayfa</a></li>
-                    <li><a href="/yurt-disi-lise">Lise</a></li>
+                    <li class="has-dropdown">
+                        <a href="/yurt-disi-lise" aria-haspopup="true" aria-expanded="false">Lise</a>
+                        <ul class="submenu">
+                            <li><a href="/yurt-disi-lise/">Tümü</a></li>
+                            <li><a href="/yurt-disi-lise/degisim-programlari/">Değişim Programları</a></li>
+                        </ul>
+                    </li>
                     <li><a href="/yurt-disi-universite">Üniversite</a></li>
                     <li><a href="/yurt-disi-yuksek-lisans-mba">Yüksek Lisans & MBA</a></li>
                     <li><a href="/yurt-disi-online-egitim">Online Eğitim</a></li>
@@ -144,60 +150,30 @@
             </div>
         </section>
 
-<div class="gri-cerceve-kutu">
-    <h2 class="kutu-baslik">Yurt Dışında Burs Almak İçin Neler Gerekli?</h2>
-    
-    <p>Burs başvurularında başarı şansınızı artırmak için sadece akademik not ortalaması (GPA) yeterli değildir. Uluslararası kurumlar, öğrencinin potansiyelini bir bütün olarak değerlendirir. Yurt dışı eğitim bursu kazanmak için odaklanmanız gereken temel kriterler:</p>
-
-    <ol class="kutu-liste-sirali">
-        <li>
-            <p><strong>Akademik Başarı:</strong></p>
-            <span>Yüksek not ortalaması ve varsa akademik ödüller.</span>
-        </li>
-        
-        <li>
-            <p><strong>Dil Yeterliliği:</strong></p>
-            <span>IELTS, TOEFL veya Duolingo gibi sınavlardan alınan geçerli skorlar.</span>
-        </li>
-
-        <li>
-            <p><strong>Sosyal Sorumluluk ve Liderlik:</strong></p>
-            <span>Gönüllü projeler, spor ve sanat faaliyetleri.</span>
-        </li>
-
-        <li>
-            <p><strong>Niyet Mektubu (Statement of Purpose):</strong></p>
-            <span>Hedeflerinizi ve neden o bursu hak ettiğinizi anlatan profesyonel bir yazı.</span>
-        </li>
-
-        <li>
-            <p><strong>Referans Mektupları:</strong></p>
-            <span>Akademisyenlerden veya yöneticilerden alınan güçlü tavsiyeler.</span>
-        </li>
-    </ol>
-</div>
-
-<div class="gri-cerceve-kutu">
+<div class="gri-cerceve-kutu burs-program-kutu">
     <h2 class="kutu-baslik">En Popüler Uluslararası Burs Programları</h2>
     
     <p>Dünya genelinde Türk öğrencilere kapılarını açan, eğitim ve yaşam giderlerini kapsayan birçok prestijli program bulunmaktadır:</p>
 
-    <ol class="kutu-liste-sirali">
-        <li>
-            <p><strong>Avrupa Bursları (Erasmus+, Jean Monnet ve Daha Fazlası):</strong></p>
-            <span>Avrupa Birliği tarafından sağlanan burslar, özellikle yüksek lisans öğrencileri için büyük fırsatlar sunar. İtalya'daki DSU bursları, Almanya’daki DAAD programları en çok tercih edilenler arasındadır.</span>
-        </li>
+    <div class="burs-program-grid">
+        <div class="burs-program-kart">
+            <div class="burs-program-ikon">🇪🇺</div>
+            <h3>Avrupa Bursları (Erasmus+, Jean Monnet ve Daha Fazlası)</h3>
+            <p>Avrupa Birliği tarafından sağlanan burslar, özellikle yüksek lisans öğrencileri için büyük fırsatlar sunar. İtalya'daki DSU bursları, Almanya’daki DAAD programları en çok tercih edilenler arasındadır.</p>
+        </div>
         
-        <li>
-            <p><strong>İngiltere’de Eğitim Bursları (Chevening & Great Scholarships):</strong></p>
-            <span>İngiltere’de yüksek lisans yapmak isteyen adaylar için Chevening, tam kapsamlı bir finansman sağlar. Ayrıca üniversitelerin kendi bünyesinde sunduğu başarı indirimleri mevcuttur.</span>
-        </li>
+        <div class="burs-program-kart">
+            <div class="burs-program-ikon">🇬🇧</div>
+            <h3>İngiltere’de Eğitim Bursları (Chevening & Great Scholarships)</h3>
+            <p>İngiltere’de yüksek lisans yapmak isteyen adaylar için Chevening, tam kapsamlı bir finansman sağlar. Ayrıca üniversitelerin kendi bünyesinde sunduğu başarı indirimleri mevcuttur.</p>
+        </div>
 
-        <li>
-            <p><strong>Amerika ve Kanada Burs Fırsatları:</strong></p>
-            <span>Amerika Birleşik Devletleri’nde Fulbright bursu en bilinen programdır. Kanada’da ise araştırma odaklı öğrenciler için Vanier bursları ön plana çıkar.</span>
-        </li>
-    </ol>
+        <div class="burs-program-kart">
+            <div class="burs-program-ikon">🇺🇸🇨🇦</div>
+            <h3>Amerika ve Kanada Burs Fırsatları</h3>
+            <p>Amerika Birleşik Devletleri’nde Fulbright bursu en bilinen programdır. Kanada’da ise araştırma odaklı öğrenciler için Vanier bursları ön plana çıkar.</p>
+        </div>
+    </div>
 </div>
 
 <div class="gri-cerceve-kutu">
@@ -205,20 +181,20 @@
     
     <p>Burs süreci, kabul sürecinden bağımsız ve ek strateji gerektiren bir yoldur. Global Compass uzmanlığıyla bu süreci şu adımlarla yönetiyoruz:</p>
 
-    <ol class="kutu-liste-sirali">
+    <ol class="burs-sure-adimlar">
         <li>
-            <p><strong>Profil Analizi:</strong></p>
-            <span>Akademik geçmişinizi, finansal ihtiyaçlarınızı ve sosyal başarılarınızı detaylıca inceleyerek size en uygun burs programlarını listeliyoruz.</span>
+            <h3>Profil Analizi</h3>
+            <p>Akademik geçmişinizi, finansal ihtiyaçlarınızı ve sosyal başarılarınızı detaylıca inceleyerek size en uygun burs programlarını listeliyoruz.</p>
         </li>
         
         <li>
-            <p><strong>Dosya Hazırlığı:</strong></p>
-            <span>Burs komitelerini etkileyecek özgeçmiş (CV) ve niyet mektubunuzu (SOP) global profesyonel standartlara getirerek profilinizi ön plana çıkarıyoruz.</span>
+            <h3>Dosya Hazırlığı</h3>
+            <p>Burs komitelerini etkileyecek özgeçmiş (CV) ve niyet mektubunuzu (SOP) global profesyonel standartlara getirerek profilinizi ön plana çıkarıyoruz.</p>
         </li>
 
         <li>
-            <p><strong>Başvuru Takvimi ve Takip:</strong></p>
-            <span>Bursların son başvuru tarihlerini ve gerekli ek belgeleri titizlikle takip ediyor, dosyanızın hatasız ve tam zamanında teslim edilmesini sağlıyoruz.</span>
+            <h3>Başvuru Takvimi ve Takip</h3>
+            <p>Bursların son başvuru tarihlerini ve gerekli ek belgeleri titizlikle takip ediyor, dosyanızın hatasız ve tam zamanında teslim edilmesini sağlıyoruz.</p>
         </li>
     </ol>
 </div>
@@ -228,16 +204,30 @@
     <div class="sss-alani">
 
         <details class="sss-item">
-            <summary>1. Ortalamam çok yüksek değil, yine de burs alabilir miyim?</summary>
+            <summary>1. Yurt dışı eğitim için tam burs almak mümkün mü?</summary>
             <div class="sss-icerik">
-                <p>Evet! Bazı üniversiteler sadece akademik başarıya değil, yeteneklerinize, liderlik potansiyelinize veya maddi ihtiyacınıza göre de burs vermektedir. Global Compass olarak, profilinizi çok yönlü analiz ederek akademik ortalamanız dışındaki güçlü yönlerinizi öne çıkaran burs seçeneklerini değerlendiriyoruz.</p>
+                <p>Tam burslar (eğitim ve yaşam giderleri) oldukça rekabetçidir ve genellikle üstün akademik başarı, güçlü bir portfolyo veya sporcu yeteneği gerektirir. Ancak %10’dan %50’ye kadar değişen kısmi burslar çok daha ulaşılabilirdir. Uzman danışmanlarımız, profilinize en uygun okul ve hükümet burslarını sizin için araştırarak başvuru sürecinizi yönetir.</p>
             </div>
         </details>
 
         <details class="sss-item">
-            <summary>2. Burs başvuruları ne zaman yapılır?</summary>
+            <summary>2. Burs başvuruları ne zaman yapılmalıdır?</summary>
             <div class="sss-icerik">
-                <p>Burs başvuruları genellikle üniversite başvuru takvimiyle paralel yürür. Kabul şansınızı ve finansal destek imkanlarını maksimize etmek için, eğitim başlangıç tarihinden en az 6 ila 9 ay önce tüm süreçlerin ve dosya hazırlıklarının tamamlanması gerekmektedir.</p>
+                <p>Burs başvuruları genellikle okul kabul sürecinden aylar önce başlar. Özellikle "Erken Başvuru Bursları" (Early Bird) fırsatlarını kaçırmamak için eğitim döneminden en az 6 ila 9 ay önce sürecin başlatılmasını öneriyoruz. Geç yapılan başvurularda fonlar tükenebileceği için erken hareket etmek en büyük avantajdır.</p>
+            </div>
+        </details>
+
+        <details class="sss-item">
+            <summary>3. Burs alabilmek için not ortalamam (GPA) ne kadar olmalı?</summary>
+            <div class="sss-icerik">
+                <p>Akademik burslar için genellikle 4.0 üzerinden 3.0 ve üzeri bir ortalama beklenir. Ancak not ortalamanız bu seviyenin altında olsa bile; etkileyici bir niyet mektubu, sosyal sorumluluk projeleri veya yüksek dil skoru (IELTS/TOEFL) gibi unsurlarla desteklenen başvurularda burs alma şansınız devam eder.</p>
+            </div>
+        </details>
+
+        <details class="sss-item">
+            <summary>4. Burs başvurusu sürecinde profesyonel danışmanlık hizmeti veriyor musunuz?</summary>
+            <div class="sss-icerik">
+                <p>Evet. Global Compass olarak sadece okul seçimi değil, burs şansınızı en üst seviyeye çıkaracak "Niyet Mektubu" (Statement of Purpose) yazımı, mülakat simülasyonları ve evrak optimizasyonu konularında profesyonel rehberlik sağlıyoruz. Amacımız, bütçenize en uygun ve prestijli eğitimi almanızı sağlamaktır.</p>
             </div>
         </details>
 
@@ -334,20 +324,34 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "1. Ortalamam çok yüksek değil, yine de burs alabilir miyim?",
+      "name": "Yurt dışı eğitim için tam burs almak mümkün mü?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Evet! Bazı üniversiteler sadece akademik başarıya değil, yeteneklerinize, liderlik potansiyelinize veya maddi ihtiyacınıza göre de burs vermektedir. Global Compass olarak, profilinizi çok yönlü analiz ederek akademik ortalamanız dışındaki güçlü yönlerinizi öne çıkaran burs seçeneklerini değerlendiriyoruz."
+        "text": "Tam burslar (eğitim ve yaşam giderleri) oldukça rekabetçidir ve genellikle üstün akademik başarı, güçlü bir portfolyo veya sporcu yeteneği gerektirir. Ancak %10’dan %50’ye kadar değişen kısmi burslar çok daha ulaşılabilirdir. Uzman danışmanlarımız, profilinize en uygun okul ve hükümet burslarını sizin için araştırarak başvuru sürecinizi yönetir."
       }
     },
     {
-      "@type": {
-        "@type": "Question",
-        "name": "2. Burs başvuruları ne zaman yapılır?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Burs başvuruları genellikle üniversite başvuru takvimiyle paralel yürür. Kabul şansınızı ve finansal destek imkanlarını maksimize etmek için, eğitim başlangıç tarihinden en az 6 ila 9 ay önce tüm süreçlerin ve dosya hazırlıklarının tamamlanması gerekmektedir."
-        }
+      "@type": "Question",
+      "name": "Burs başvuruları ne zaman yapılmalıdır?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Burs başvuruları genellikle okul kabul sürecinden aylar önce başlar. Özellikle \"Erken Başvuru Bursları\" (Early Bird) fırsatlarını kaçırmamak için eğitim döneminden en az 6 ila 9 ay önce sürecin başlatılmasını öneriyoruz. Geç yapılan başvurularda fonlar tükenebileceği için erken hareket etmek en büyük avantajdır."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Burs alabilmek için not ortalamam (GPA) ne kadar olmalı?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Akademik burslar için genellikle 4.0 üzerinden 3.0 ve üzeri bir ortalama beklenir. Ancak not ortalamanız bu seviyenin altında olsa bile; etkileyici bir niyet mektubu, sosyal sorumluluk projeleri veya yüksek dil skoru (IELTS/TOEFL) gibi unsurlarla desteklenen başvurularda burs alma şansınız devam eder."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Burs başvurusu sürecinde profesyonel danışmanlık hizmeti veriyor musunuz?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Evet. Global Compass olarak sadece okul seçimi değil, burs şansınızı en üst seviyeye çıkaracak \"Niyet Mektubu\" (Statement of Purpose) yazımı, mülakat simülasyonları ve evrak optimizasyonu konularında profesyonel rehberlik sağlıyoruz. Amacımız, bütçenize en uygun ve prestijli eğitimi almanızı sağlamaktır."
       }
     }
   ]

@@ -68,6 +68,12 @@
     padding: 6px 12px !important;
 }
 
+.breadcrumb-kutu .ana-sayfa-ikon img {
+    width: 18px;
+    height: 18px;
+    display: block;
+}
+
 /* -----------------------------------------
     MOBİL UYUM (768px Altı)
    ----------------------------------------- */

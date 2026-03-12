@@ -178,6 +178,21 @@
     box-shadow: 0 2px 8px rgba(13, 148, 136, 0.05);
 }
 
+/* Almanya yaz kampları bloğu – küçük düzenlemeler */
+.almanya-kamp-deneyimi-kutu .kutu-liste {
+    margin: 10px 0 0 0;
+}
+
+.almanya-kamp-deneyimi-kutu .kutu-liste li {
+    margin-bottom: 4px;
+}
+
+.almanya-kamp-deneyimi-kutu .almanya-kamp-geziler-not {
+    font-size: 13px;
+    color: #475569;
+    margin-top: 8px;
+}
+
 .yaz-okullari-avantaj-kutu .yaz-konaklama-ikon {
     font-size: 28px;
     line-height: 1;
@@ -205,6 +220,160 @@
     }
     .yaz-okullari-avantaj-kutu .yaz-konaklama-ikon {
         font-size: 24px;
+    }
+}
+
+/* Almanya sayfası - ikonlu kart grid tasarımı */
+.almanya-avantaj-kartlar-kutu .almanya-avantaj-kart-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    margin-top: 22px;
+}
+
+.almanya-avantaj-kart {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 18px 16px 16px 16px;
+    box-shadow: 0 3px 10px rgba(15, 23, 42, 0.06);
+    text-align: left;
+}
+
+.almanya-avantaj-ikon {
+    width: 36px;
+    height: 36px;
+    border-radius: 999px;
+    background: #ecfdf5;
+    border: 1px solid #a7f3d0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.almanya-avantaj-kart h3 {
+    font-size: 15.5px;
+    font-weight: 700;
+    color: #0f766e;
+    margin: 0 0 6px 0;
+}
+
+.almanya-avantaj-kart p {
+    font-size: 14.5px;
+    color: #444;
+    margin: 0;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .almanya-avantaj-kartlar-kutu .almanya-avantaj-kart-grid {
+        gap: 14px;
+    }
+}
+
+/* Almanya sayfası - dikey timeline tasarımı */
+.almanya-avantaj-timeline-kutu .almanya-avantaj-timeline {
+    margin-top: 22px;
+    position: relative;
+    padding-left: 24px;
+}
+
+.almanya-avantaj-timeline-kutu .almanya-avantaj-timeline::before {
+    content: "";
+    position: absolute;
+    left: 11px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, rgba(15, 118, 110, 0.2), rgba(15, 118, 110, 0.5));
+}
+
+.almanya-adim {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 16px;
+}
+
+.almanya-adim:last-child {
+    margin-bottom: 0;
+}
+
+.almanya-adim-nokta {
+    width: 18px;
+    height: 18px;
+    border-radius: 999px;
+    background: #ecfdf5;
+    border: 2px solid #0f766e;
+    flex-shrink: 0;
+    position: relative;
+    top: 2px;
+}
+
+.almanya-adim-icerik h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 4px 0;
+}
+
+.almanya-adim-icerik p {
+    font-size: 14.5px;
+    color: #444;
+    margin: 0;
+    line-height: 1.55;
+}
+
+@media (max-width: 768px) {
+    .almanya-avantaj-timeline-kutu .almanya-avantaj-timeline {
+        padding-left: 20px;
+    }
+}
+
+/* Almanya sayfası - görsel + metin iki sütun */
+.almanya-avantaj-gorsel-kutu .almanya-avantaj-gorsel {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 22px;
+    align-items: center;
+}
+
+.almanya-avantaj-gorsel-sol {
+    flex: 1 1 260px;
+}
+
+.almanya-avantaj-gorsel-sol img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.almanya-avantaj-gorsel-sag {
+    flex: 1 1 280px;
+}
+
+.almanya-avantaj-gorsel-sag h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #000080;
+    margin: 0 0 8px 0;
+}
+
+.almanya-avantaj-gorsel-sag p {
+    font-size: 14.5px;
+    color: #444;
+    margin: 0 0 8px 0;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .almanya-avantaj-gorsel-kutu .almanya-avantaj-gorsel {
+        flex-direction: column;
     }
 }
 
@@ -354,7 +523,12 @@
 
 @media (max-width: 768px) {
     .immerse-detay-kutu .immerse-detay-grid {
-        justify-content: stretch;
+        justify-content: center;
+    }
+
+    .immerse-detay-kutu .immerse-detay-kart {
+        max-width: none;
+        width: 100%;
     }
 }
 
@@ -530,6 +704,8 @@
 #yas15-18:checked ~ .yas-tab-basliklar label[for="yas15-18"],
 #yas16-18:checked ~ .yas-tab-basliklar label[for="yas16-18"],
 #yas18-30:checked ~ .yas-tab-basliklar label[for="yas18-30"],
+#yas13-15-oxford:checked ~ .yas-tab-basliklar label[for="yas13-15-oxford"],
+#yas16-18-oxford:checked ~ .yas-tab-basliklar label[for="yas16-18-oxford"],
 /* Londra Immerse sektör ziyaretleri sekmeleri */
 #sektor-mimarlik:checked ~ .yas-tab-basliklar label[for="sektor-mimarlik"],
 #sektor-bankacilik:checked ~ .yas-tab-basliklar label[for="sektor-bankacilik"],
@@ -556,6 +732,8 @@
 #yas15-18:checked ~ .yas-tab-icerikler .yas15-18-icerik,
 #yas16-18:checked ~ .yas-tab-icerikler .yas16-18-icerik,
 #yas18-30:checked ~ .yas-tab-icerikler .yas18-30-icerik,
+#yas13-15-oxford:checked ~ .yas-tab-icerikler .yas13-15-oxford-icerik,
+#yas16-18-oxford:checked ~ .yas-tab-icerikler .yas16-18-oxford-icerik,
 /* Londra Immerse sektör ziyaretleri sekmeleri */
 #sektor-mimarlik:checked ~ .yas-tab-icerikler .sektor-mimarlik-icerik,
 #sektor-bankacilik:checked ~ .yas-tab-icerikler .sektor-bankacilik-icerik,
@@ -711,6 +889,37 @@
     line-height: 1.6;
 }
 
+/* Immerse Oxford – konaklama metni için özel düzen */
+.oxford-konaklama-kutu .konaklama-intro-panel {
+    background: #ffffff;
+    border-left-color: #0f766e;
+    box-shadow: none;
+}
+
+/* Immerse Oxford – konaklama galerisi hizalaması */
+.oxford-konaklama-kutu .immerse-konaklama-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1000px;
+    margin-top: 22px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.oxford-konaklama-kutu .immerse-konaklama-kart {
+    flex: 0 1 30%;
+    max-width: 300px;
+}
+
+@media (max-width: 768px) {
+    .oxford-konaklama-kutu .immerse-konaklama-kart {
+        flex: 0 1 100%;
+        max-width: none;
+    }
+}
+
 .konaklama-intro-panel p:last-child {
     margin-bottom: 0;
 }
@@ -720,6 +929,10 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
     margin-top: 22px;
+    justify-items: center;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* InvestIN öne çıkanlar: 4 görsel yan yana */
@@ -827,7 +1040,7 @@
 
 .immerse-konaklama-kart figcaption {
     padding: 10px 14px 12px 14px;
-    text-align: left;
+    text-align: center;
     background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);
 }
 
@@ -926,7 +1139,13 @@
 #gez-kings-chapel:checked ~ .yas-tab-basliklar label[for="gez-kings-chapel"],
 #gez-mentor-aile:checked ~ .yas-tab-basliklar label[for="gez-mentor-aile"],
 #gez-cambridge-simgeleri:checked ~ .yas-tab-basliklar label[for="gez-cambridge-simgeleri"],
-#gez-kulturel-etkinlikler:checked ~ .yas-tab-basliklar label[for="gez-kulturel-etkinlikler"] {
+#gez-kulturel-etkinlikler:checked ~ .yas-tab-basliklar label[for="gez-kulturel-etkinlikler"],
+/* Oxford Immerse – Programa Dahil Geziler sekmeleri */
+#oxford-geleneksel:checked ~ .yas-tab-basliklar label[for="oxford-geleneksel"],
+#oxford-tarihi-yapilar:checked ~ .yas-tab-basliklar label[for="oxford-tarihi-yapilar"],
+#oxford-botanik-bahcesi:checked ~ .yas-tab-basliklar label[for="oxford-botanik-bahcesi"],
+#oxford-cherwell-sandal:checked ~ .yas-tab-basliklar label[for="oxford-cherwell-sandal"],
+#oxford-yuruyus-turu:checked ~ .yas-tab-basliklar label[for="oxford-yuruyus-turu"] {
     background: #0f766e;
     color: #ffffff;
     border-color: #0f766e;
@@ -942,7 +1161,13 @@
 #gez-kings-chapel:checked ~ .yas-tab-icerikler .gez-kings-chapel-icerik,
 #gez-mentor-aile:checked ~ .yas-tab-icerikler .gez-mentor-aile-icerik,
 #gez-cambridge-simgeleri:checked ~ .yas-tab-icerikler .gez-cambridge-simgeleri-icerik,
-#gez-kulturel-etkinlikler:checked ~ .yas-tab-icerikler .gez-kulturel-etkinlikler-icerik {
+#gez-kulturel-etkinlikler:checked ~ .yas-tab-icerikler .gez-kulturel-etkinlikler-icerik,
+/* Oxford Immerse – Programa Dahil Geziler sekmeleri içerikleri */
+#oxford-geleneksel:checked ~ .yas-tab-icerikler .oxford-geleneksel-icerik,
+#oxford-tarihi-yapilar:checked ~ .yas-tab-icerikler .oxford-tarihi-yapilar-icerik,
+#oxford-botanik-bahcesi:checked ~ .yas-tab-icerikler .oxford-botanik-bahcesi-icerik,
+#oxford-cherwell-sandal:checked ~ .yas-tab-icerikler .oxford-cherwell-sandal-icerik,
+#oxford-yuruyus-turu:checked ~ .yas-tab-icerikler .oxford-yuruyus-turu-icerik {
     display: block;
 }
 

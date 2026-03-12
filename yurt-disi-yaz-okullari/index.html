@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
@@ -63,7 +63,13 @@
             <nav class="navigasyon" id="nav-menu" aria-label="Ana menü">
                 <ul class="nav-list">
                     <li><a href="/">Ana Sayfa</a></li>
-                    <li><a href="/yurt-disi-lise">Lise</a></li>
+                    <li class="has-dropdown">
+                        <a href="/yurt-disi-lise" aria-haspopup="true" aria-expanded="false">Lise</a>
+                        <ul class="submenu">
+                            <li><a href="/yurt-disi-lise/">Tümü</a></li>
+                            <li><a href="/yurt-disi-lise/degisim-programlari/">Değişim Programları</a></li>
+                        </ul>
+                    </li>
                     <li><a href="/yurt-disi-universite">Üniversite</a></li>
                     <li><a href="/yurt-disi-yuksek-lisans-mba">Yüksek Lisans & MBA</a></li>
                     <li><a href="/yurt-disi-online-egitim">Online Eğitim</a></li>

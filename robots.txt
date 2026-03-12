@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Gereksiz sistem dosyalarını taratmayarak tarama bütçeni koru
+Disallow: /admin/
+Disallow: /config/
+Disallow: /temp/
+Disallow: /test/
+
+# Google ve diğer botlara yol haritanı göster (Yorumu kaldırdık)
+Sitemap: https://www.globalcompass.com.tr/sitemap.xml

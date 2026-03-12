@@ -9,7 +9,7 @@
 
 .ust-serit {
     background-color: #000080;
-    padding: 8px 0;
+    padding: 10px 0;
     width: 100%;
 }
 
@@ -63,8 +63,14 @@
     gap: 10px;      /* Logo ile menü arası boşluk 25px'den 10px'e çekildi */
 }
 
+/* Tüm sayfalarda üst alandaki logo satırı için standart padding */
+.ust-menu .ust-alan {
+    padding: 16px 24px 20px !important;
+    box-sizing: border-box;
+}
+
 .logo img {
-    max-height: 70px; 
+    max-height: 76px; 
     width: auto;
     display: block;
     margin: 0 auto;
@@ -127,27 +133,33 @@ body.ana-sayfa {
 }
 .ana-sayfa .ust-serit {
     background: linear-gradient(90deg, #000070 0%, #000080 50%, #000090 100%);
-    padding: 10px 0;
 }
 .ana-sayfa .ust-menu {
     background: #fff;
     border-bottom: 1px solid #f0f0f5;
-    padding: 12px 0 0 0;
+    padding: 0;
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.04);
     position: relative;
 }
 .ana-sayfa .ust-menu .ust-alan {
     max-width: 1920px;
     width: 100%;
-    padding: 16px 24px 20px !important;
     position: relative;
-    box-sizing: border-box;
 }
+/* Ana sayfa logosu da tüm sayfalarla aynı yüksekliği kullanır */
 .ana-sayfa .logo img {
     max-height: 76px;
 }
 .ana-sayfa .sosyal-medya-alani a:hover {
     transform: scale(1.1);
+}
+
+/* Tüm sayfalarda sosyal medya alanı hizalaması */
+.sosyal-medya-alani {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 /* --- Ana sayfa navigasyon: 1920px tam genişlik, sol-sağ dayalı, çok açık yeşil zemin --- */
@@ -172,27 +184,36 @@ body.ana-sayfa {
     align-items: center;
 }
 .navigasyon > ul > li {
+    position: relative;
     border-right: 3px solid #ccc;
-    padding-right: 35px;
-    margin-right: 35px;
-    transition: background-color 0.2s ease, box-shadow 0.2s ease;
-    box-shadow: inset 0 -6px 0 transparent;
+    /* Sağ-sol boşluk ve satırlar arasında hafif dikey boşluk */
+    padding: 0 35px;
+    margin: 4px 0 4px 0; /* üst/alt 4px, sağ/sol 0 */
+    transition: background-color 0.2s ease;
 }
 .navigasyon > ul > li:last-child {
     border-right: none;
     padding-right: 35px;
     margin-right: 0;
 }
-/* İki ayırıcı arasındaki alan: hover ve aktifte tamamen beyaz; lacivert çizgi box-shadow ile (köşe sivriliği yok) */
+.navigasyon > ul > li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 6px;
+    background-color: #000080;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
 .navigasyon > ul > li:hover,
 .navigasyon > ul > li:has(.aktif) {
     background-color: #ffffff;
-    box-shadow: inset 0 -6px 0 #000080;
 }
-.navigasyon > ul > li:hover:not(:first-child),
-.navigasyon > ul > li:has(.aktif):not(:first-child) {
-    margin-left: -35px;
-    padding-left: 35px;
+.navigasyon > ul > li:hover::after,
+.navigasyon > ul > li:has(.aktif)::after {
+    opacity: 1;
 }
 .navigasyon > ul > li:hover a,
 .navigasyon > ul > li:has(.aktif) a {
@@ -200,7 +221,7 @@ body.ana-sayfa {
 }
 .navigasyon a {
     font-family: inherit;
-    font-size: 17px;
+    font-size: 16px; /* Masaüstü */
     font-weight: 700;
     color: #000080;
     padding: 12px 18px;
@@ -208,8 +229,11 @@ body.ana-sayfa {
     border-bottom: none;
     letter-spacing: 0.02em;
     text-decoration: none;
-    display: inline-block;
+    display: block;
+    max-width: 100%;
+    overflow: hidden; /* Taşmayı engelle, ama ... gösterme */
     background-color: #ffffff;
+    white-space: nowrap;
     transition: color 0.2s ease, background-color 0.2s ease;
 }
 .navigasyon a:hover,
@@ -248,10 +272,10 @@ body.ana-sayfa {
     display: flex;
     flex-direction: column;
 }
-/* Açılır menü, ait olduğu menü öğesi ile aynı genişlikte (tüm sayfalar) */
+/* Açılır menü genişliği: en az ana menü kadar, gerekirse içerik kadar genişler */
 .navigasyon .has-dropdown .submenu {
-    width: 100%;
-    min-width: 0;
+    min-width: 100%;
+    width: max-content;
     box-sizing: border-box;
 }
 .navigasyon .has-dropdown {
@@ -275,11 +299,12 @@ body.ana-sayfa {
     white-space: nowrap;
     background-color: #ffffff;
     text-align: center;
+    overflow: visible; /* Uzun metinlerde açılır menü genişlesin, metin kesilmesin */
 }
 .navigasyon .submenu a:hover {
     color: #000080;
-    background: #ffffff;
-    border-bottom-color: transparent;
+    background: #f5f5f5;
+    text-decoration: underline;
 }
 .navigasyon .submenu li {
     border-bottom: 1px solid #f5f5f5;
@@ -340,42 +365,43 @@ body.ana-sayfa {
     transform: translateY(-7px) rotate(-45deg);
 }
 
-/* --- Tablet: menü görünür, alt satır üstteki tüm öğelerin altını kaplar, kalın lacivert çizgi tam genişlik --- */
+/* --- Tablet: menü görünür, alt satır üstteki tüm öğelerin altını kaplar, kalın lacivert çizgi sadece hover/aktifte.
+   Bu kırılımda ayraç çizgilerini kaldırıp, satırlar arası boşluk kullanıyoruz. --- */
 @media (max-width: 992px) {
     .navigasyon {
         padding: 0 12px 12px 12px;
     }
     .navigasyon > ul {
         width: 100%;
-        justify-content: center;
+        justify-content: space-between;
         gap: 0;
-        border-bottom: 6px solid #000080;
+        border-bottom: 6px solid transparent;
         padding-bottom: 0;
     }
     .navigasyon > ul > li {
-        padding-right: 24px;
-        margin-right: 24px;
-        flex: 1 1 0%;
-        min-width: 130px;
+        padding: 0 16px 6px; /* Altta lacivert çizgi için alan bırak */
+        margin: 8px 0; /* Satırlar arası boşluğu artır */
+        /* Satırdaki menü öğeleri satır genişliğini eşit paylaşsın:
+           1 öğe varsa %100, 2 öğe varsa %50 + padding/ayraçlar */
+        flex: 1 1 260px;
+        min-width: 0;
         box-sizing: border-box;
+        /* Ayraçlar tablet genişliklerinde de görünsün;
+           sadece çok dar mobil görünümde kaldırılacak. */
     }
     .navigasyon > ul > li:last-child {
-        padding-right: 24px;
+        padding-right: 16px;
         margin-right: 0;
-    }
-    .navigasyon > ul > li:hover:not(:first-child),
-    .navigasyon > ul > li:has(.aktif):not(:first-child) {
-        margin-left: -24px;
-        padding-left: 24px;
     }
     .navigasyon > ul > li > a {
         padding: 10px 14px;
-        font-size: 15px;
+        font-size: 14px; /* Tablet */
+        text-align: center;
     }
 }
 
-/* --- Ana sayfa: mobil – hamburger menü --- */
-@media (max-width: 768px) {
+/* --- Mobil – hamburger menü (500px ve altı) --- */
+@media (max-width: 500px) {
     .ust-menu {
         padding-bottom: 12px;
     }
@@ -412,7 +438,7 @@ body.ana-sayfa {
         gap: 0;
     }
     .navigasyon > ul > li {
-        border-right: none;
+        border-right: none; /* Çok dar mobilde dikey ayraç yok */
         padding-right: 0;
         margin-right: 0;
         border-bottom: 1px solid #f0f0f5;
@@ -431,7 +457,7 @@ body.ana-sayfa {
     }
     .navigasyon .nav-list > li > a {
         padding: 14px 24px;
-        font-size: 15px;
+        font-size: 13px; /* Mobil */
         display: block;
     }
     .navigasyon .has-dropdown > a::after {
@@ -470,7 +496,7 @@ body.ana-sayfa {
 /* =========================================
     MOBİL DÜZENLEMELER (768px ALTI)
    ========================================= */
-@media (max-width: 768px) {
+@media (max-width: 500px) {
     .ust-serit-kapsayici {
         justify-content: center; 
     }
