@@ -11,21 +11,43 @@ html, body {
     margin: 0 !important;
     padding: 0 !important;
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    overflow-x: hidden; /* Sayfanın sağa sola yalpalamasını kesin engeller */
 }
 
 body {
     font-family: 'Poppins', sans-serif;
     color: #333;
-    line-height: 1.6;
+    line-height: 2;
     background-color: #ffffff;
-    padding-top: 0 !important; 
+    display: block;
+}
+
+strong {
+    color: #000000;
+    font-weight: 700;
+}
+
+.alt-cizgili-baslik, 
+.ana-sirali-liste > li > strong,
+.sss-item summary h3 {
+    color: #2c3e50 !important;
 }
 
 /* =========================================
-    2. ANA İÇERİK ALANI
+    2. ANA İÇERİK VE TİPOGRAFİ
    ========================================= */
+
+.ana-sayfa-slogan {
+    font-size: 22px;            /* Slogan için ideal boyut */
+    color: #000080;           /* Kurumsal Lacivert */
+    font-weight: 700;           /* Güçlü ve profesyonel bir duruş (Bold) */
+    margin-bottom: 30px;        /* Altındaki içerikle olan mesafe */
+    text-align: center;         /* Sloganı sayfada ortalar */
+    max-width: 1200px;           /* Metnin çok yayılmasını engeller */
+    margin-left: auto;          /* Sağdan ve soldan ortalamak için */
+    margin-right: auto;
+}
+
 .icerik-alani {
     max-width: 1200px;
     margin: 0 auto;
@@ -34,25 +56,30 @@ body {
 
 h1 {
     font-weight: 800;
-    font-size: 32px;
+    font-size: 33px;
     color: #000080;
-    line-height: 1.3; 
     text-align: center;
-    margin: 35px 0 25px 0;
+    margin: 25px 0 15px 0;
+    line-height: 2;
 }
 
-.vurgu-renk { 
-    color: #bd0505; 
+p {
+    font-size: 15px;
+    color: #000;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+.vurgu-renk {
+    color: #bd0505;
     padding-top: 15px;
     display: inline-block;
 }
 
-p {
-    font-size: 15px; 
-    color: #000;
-    text-align: justify;
-    margin-bottom: 15px;
-    line-height: 1.7;
+.vurgu-renk2 {
+    color: #000080;
+    padding-top: 15px;
+    display: inline-block;
 }
 
 /* =========================================
@@ -63,8 +90,7 @@ p {
     margin: 45px auto 25px auto;
     border: 1px solid #d1d1d1;
     border-radius: 8px;
-    /* Üst padding'i 25px'den 40px'e çıkardık */
-    padding: 40px 25px 15px 25px; 
+    padding: 40px 25px 15px 25px;
     position: relative;
     background-color: #ffffff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
@@ -81,88 +107,190 @@ h2.kutu-baslik {
     font-size: 19px;
     font-weight: 700;
     border-radius: 4px;
-    white-space: normal; 
+    white-space: normal;
     overflow-wrap: break-word;
     word-wrap: break-word;
-    max-width: 90%; 
-    line-height: 1.2; 
+    max-width: 90%;
 }
 
-.kutu-liste { 
-    list-style: none; 
-    padding: 0; 
-    margin: 0 !important; 
+h2.kutu-baslik.sss-baslik {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    left: 25px;
+    transform: translateY(-50%);
+    text-align: left;
+    line-height: 2;
 }
 
-.kutu-liste li { 
-    position: relative; 
-    padding-left: 25px; 
-    margin-bottom: 10px; 
-    text-align: left; 
+/* 2 satırlık SSS: üst çerçeve ile başlık arası (Oxford stili - 2 satır için yeterli boşluk) */
+.gri-cerceve-kutu:has(.sss-baslik),
+.sss-gri-kutu {
+    padding-top: 90px;
+}
+/* SSS çerçevesi ile üstteki bölüm çerçevesi arasında ek 25px boşluk – tüm SSS sayfalarında */
+.gri-cerceve-kutu:has(.sss-baslik),
+.sss-gri-kutu {
+    margin-top: 70px;
+}
+
+/* SSS başlığı ile 1. soru arası - tek kaynak (diğer etkenler sıfır) */
+.sss-baslik + .sss-alani {
+    padding-top: 0px;
+    margin-top: 0;
+}
+.sss-baslik + .sss-alani > *:first-child {
+    margin-top: 0 !important;
+}
+
+h2.kutu-baslik .sss-alt-satir {
+    display: block;
+    margin-top: 4px;
+    font-size: 0.95em;
+    color: #bd0505 !important;
+}
+
+.kutu-liste {
+    list-style: none;
+    padding: 0;
+    margin: 0 !important;
+}
+
+.kutu-liste li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    text-align: left;
     font-size: 15px;
     line-height: 1.5;
+    font-weight: 400;
 }
 
 .kutu-liste li:last-child { margin-bottom: 0 !important; }
 
-.kutu-liste li::before { 
-    content: "■"; 
-    position: absolute; 
-    left: 0; 
-    color: #000080; 
+/* Oxford / Bournemouth Eğitim Deneyimi kutusu - ikonlu bölümler */
+.oxford-egitim-kutu .egitim-ozet,
+.bournemouth-egitim-kutu .egitim-ozet {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 22px;
+    font-style: italic;
+}
+
+.oxford-egitim-kutu .egitim-bloklar,
+.bournemouth-egitim-kutu .egitim-bloklar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px 24px;
+}
+
+.oxford-egitim-kutu .egitim-blok,
+.bournemouth-egitim-kutu .egitim-blok {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    padding: 14px 16px;
+    background: #f9fafb;
+    border-radius: 8px;
+    border-left: 3px solid #000080;
+}
+
+.oxford-egitim-kutu .egitim-ikon,
+.bournemouth-egitim-kutu .egitim-ikon {
+    font-size: 24px;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.oxford-egitim-kutu .egitim-ikon-ozel,
+.bournemouth-egitim-kutu .egitim-ikon-ozel {
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #000080;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.oxford-egitim-kutu .egitim-blok h4,
+.bournemouth-egitim-kutu .egitim-blok h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #000080;
+    margin: 0 0 6px 0;
+}
+
+.oxford-egitim-kutu .egitim-blok p,
+.bournemouth-egitim-kutu .egitim-blok p {
+    font-size: 14px;
+    color: #444;
+    margin: 0;
+    line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+    .oxford-egitim-kutu .egitim-bloklar,
+    .bournemouth-egitim-kutu .egitim-bloklar {
+        grid-template-columns: 1fr;
+    }
+}
+
+.kutu-liste li::before {
+    content: "■";
+    position: absolute;
+    left: 0;
+    color: #000080;
     font-size: 10px;
-    top: 4px; 
+    top: 4px;
 }
 
 .kutu-liste li p {
     margin-bottom: 0 !important;
     line-height: 1.2;
+    font-weight: 400;
 }
 
-.kutu-liste li strong {
-    display: inline-block;
-    color: #000000;
+.ana-sirali-liste {
+    padding-left: 20px;
+}
+
+.ana-sirali-liste > li {
+    margin-bottom: 25px;
+    font-size: 18px;
     font-weight: 700;
+    color: #2c3e50;
 }
 
-.kutu-liste li p + span {
-    display: block;
-    margin-top: -2px; 
-    line-height: 1.5;
-}
-
-.kutu-liste-sirali {
-    padding-left: 20px; 
-    list-style-position: outside;
-    margin: 0 !important;
-}
-
-.kutu-liste-sirali li {
-    margin-bottom: 15px; 
-    color: #333;
+.ana-sirali-liste p {
+    font-weight: 400;
     font-size: 15px;
-    line-height: 1.6;
+    margin-top: 8px;
+    color: #555;
 }
 
-.kutu-liste-sirali li::marker {
-    color: #000080;
-    font-weight: 700;
-}
-
-.kutu-liste-sirali li p {
-    margin-bottom: 0 !important;
-    line-height: 1.2;
+.alt-cizgili-baslik {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-color: #2c3e50;
+    text-decoration-thickness: 1px;
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: 700 !important;
 }
 
 /* =========================================
-    4. ÖZEL BİLEŞENLER (BUTON VE KIRMIZI KUTU)
+    4. BUTONLAR VE KIRMIZI VURGU KUTUSU
    ========================================= */
 .buton-alani {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
     justify-content: center;
-    margin: 30px 0; /* Ortak margin değeri */
+    margin: 30px 0;
 }
 
 .ana-buton {
@@ -178,7 +306,7 @@ h2.kutu-baslik {
     box-shadow: 0 4px 15px rgba(0,0,0,0.15);
     border: 2px solid #000080;
     text-align: center;
-    flex: 0 1 calc(33.333% - 15px); 
+    flex: 0 1 calc(33.333% - 15px);
     min-width: 200px;
 }
 
@@ -188,11 +316,14 @@ h2.kutu-baslik {
     transform: translateY(-2px);
 }
 
-/* KIRMIZI KUTU ANA KONTEYNER */
+p + .kirmizi-kutu {
+    margin-top: 25px;
+}
+
 .kirmizi-kutu {
     background-color: #e30613;
     padding: 12px 20px;
-    border-radius: 5px; /* Köşeler tam 5px */
+    border-radius: 5px;
     margin: 15px 0;
     display: flex;
     flex-direction: column;
@@ -200,182 +331,56 @@ h2.kutu-baslik {
     justify-content: center;
 }
 
-/* GENEL PARAGRAF AYARLARI */
 .kirmizi-kutu p {
     margin: 0;
     line-height: 1.2;
     font-weight: 700;
     font-size: 20px;
     color: #ffffff;
+    text-align: center;
 }
 
-/* 1. SATIR (BEYAZ VE OKLAR) */
 .kirmizi-kutu p.ust-satir {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Okları köşelere yaslar */
+    justify-content: space-between;
     width: 100%;
 }
 
-.kirmizi-kutu p.ust-satir::before, 
+.kirmizi-kutu p.ust-satir::before,
 .kirmizi-kutu p.ust-satir::after {
     content: "▼";
     font-size: 22px;
 }
 
-.kirmizi-kutu p.ust-satir::before { margin-right: 12px; }
-.kirmizi-kutu p.ust-satir::after { margin-left: 12px; }
-
-/* 2. SATIR (LACİVERT VE TAM ORTALI) */
 .kirmizi-kutu p.alt-satir-lacivert {
     color: #00235d;
-    margin-top: 8px; /* İki satır arası boşluk */
-    display: block;  /* Flex'i iptal ederek okların alanını temizler */
-    width: 100%;
-    text-align: center; /* Metni tam merkeze kilitler */
-}
-
-/* OKLARI ALT SATIRDA KESİN OLARAK KAPAT */
-.kirmizi-kutu p.alt-satir-lacivert::before,
-.kirmizi-kutu p.alt-satir-lacivert::after {
-    display: none !important;
-}
-
-/* =========================================
-    5. FOOTER GENEL
-   ========================================= */
-footer .footer-alt-linkler, 
-footer .kvkk-alani {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
+    margin-top: 8px;
+    display: block;
     width: 100%;
     text-align: center;
-    margin-top: 20px;
-}
-
-footer .kvkk-alani a {
-    display: inline-block;
-    text-decoration: none;
-    font-size: 13px;
-    color: #666;
 }
 
 /* =========================================
-    6. MOBİL UYUMLULUK (MEDIA QUERIES)
+    5. ŞEHİR KARTLARI (REPEATER)
    ========================================= */
-
-@media (max-width: 768px) {
-    h1 { font-size: 26px; margin: 25px 0; }
-    
-    .gri-cerceve-kutu {
-        margin: 45px 15px 20px 15px;
-        padding: 52px 18px 10px 18px; 
-    }
-
-    h2.kutu-baslik {
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 92%;
-        font-size: 16px !important;
-        text-align: center;
-        padding: 10px 12px;
-    }
-
-    p, .kutu-liste li {
-        font-size: 14px;
-        line-height: 1.6;
-        text-align: justify;
-        hyphens: auto;
-        word-break: break-word;
-    }
-
-    .kutu-liste li {
-        padding-right: 5px;
-        margin-bottom: 12px; 
-    }
-
-    .kirmizi-kutu {
-        border-radius: 20px;
-        padding: 12px 20px;
-    }
-
-    .kirmizi-kutu p {
-        font-size: 15px;
-        gap: 10px;
-    }
-
-    .buton-alani .ana-buton {
-        flex: 0 1 calc(50% - 15px);
-    }
-
-    footer .kvkk-alani, 
-    footer .footer-bottom,
-    footer .footer-links {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        justify-content: center !important;
-        text-align: center !important;
-        width: 100% !important;
-        padding-left: 0 !important;
-        margin-left: 0 !important;
-    }
-
-    footer .kvkk-alani a {
-        display: block !important;
-        width: 100%;
-        margin: 8px 0;
-    }
-}
-
-@media (max-width: 501px) {
-    .buton-alani {
-        flex-direction: column;
-        align-items: center;
-    }
-    .ana-buton {
-        width: 100%;
-    }
-}
-
-@media (max-width: 480px) {
-    h1 { font-size: 22px; }
-    .ok-isareti { display: none; }
-    
-    .gri-cerceve-kutu {
-        padding-top: 60px; 
-    }
-
-    .buton-alani .ana-buton {
-        flex: 0 1 100%;
-    }
-}
-
-/* =========================================
-   ŞEHİR KARE KARTLARI (REPEATER) SİSTEMİ
-   ========================================= */
-
 .sehir-kare-yigini {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; 
+    gap: 20px;
     justify-content: center;
     margin: 25px auto;
-    max-width: 1200px; /* İçerik alanıyla hizalı olması için */
+    max-width: 1200px;
 }
 
 .kare-kart {
     width: 350px;
     height: 350px;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     border: 1px solid #d1d1d1;
-    /* Üst köşeler 0 (Düz), Alt köşeler 50px */
-    border-radius: 0 0 50px 50px !important; 
-    overflow: hidden; 
+    border-radius: 5px 5px 50px 50px !important;
+    overflow: hidden;
     background: #ffffff;
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
@@ -384,32 +389,31 @@ footer .kvkk-alani a {
 .kare-kart:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-    border-color: #000080;
 }
 
 .kare-resim {
     width: 100%;
     height: 300px;
     overflow: hidden;
-    border-radius: 0 !important; /* Resmin üstü hep düz kalsın */
 }
 
 .kare-resim img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
     display: block;
     transition: transform 0.5s ease;
+    border-radius: 5px 5px 0 0;
 }
 
 .kare-kart:hover .kare-resim img {
-    transform: scale(1.1);
+    transform: none;
 }
 
 .kare-btn {
     width: 100%;
-    height: 50px; 
-    background-color: #000080 !important; 
+    height: 50px;
+    background-color: #000080 !important;
     color: #ffffff !important;
     text-decoration: none;
     display: flex;
@@ -419,8 +423,7 @@ footer .kvkk-alani a {
     font-size: 15px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    /* BURASI DÜZELDİ: Hem px eklendi hem !important ile zorlandı */
-    border-radius: 0 0 50px 50px !important; 
+    border-radius: 0 0 50px 50px !important;
     transition: background 0.3s ease;
     border: none;
     cursor: pointer;
@@ -432,23 +435,1364 @@ footer .kvkk-alani a {
 }
 
 /* =========================================
-   MOBİL UYUMLULUK
+    6. VURGULU OKUL TABLOSU
    ========================================= */
-@media (max-width: 768px) {
-    .sehir-kare-yigini { gap: 15px; }
+.vurgulu-tablo-konteyner {
+    margin: 30px 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.tablo-baslik-alani {
+    background: #000080;
+    color: white;
+    padding: 12px 20px;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.okul-satiri-vurgulu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+.okul-satiri-vurgulu:hover { background: #fdfdfd; }
+
+.satir-sol {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.okul-ikon {
+    font-size: 24px;
+    background: #f8f9fa;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid #eee;
+}
+
+.okul-metin .okul-isim {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+.vurgulu-incele-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #2c3e50;
+    color: white !important;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.vurgulu-incele-btn:hover {
+    background: #e74c3c;
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
+}
+
+/* =========================================
+    7. FİYATA DAHİL OLANLAR
+   ========================================= */
+.dahil-olanlar-konteyner {
+    background: #fdfdfd;
+    padding: 40px 20px;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    margin-top: 50px;
+}
+
+.dahil-ana-baslik {
+    color: #000080;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 40px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.dahil-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.dahil-kart {
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.dahil-kart-baslik {
+    color: #000080;
+    font-size: 16px;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.dahil-kart-baslik::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #bd0505;
+    font-weight: bold;
+}
+
+.vurgu-kart {
+    border-left: 4px solid #bd0505;
+    background: #fff9f9;
+}
+
+/* =========================================
+    8. KONAKLAMA SEÇENEKLERİ
+   ========================================= */
+.konaklama-konteyner {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.konaklama-ana-baslik {
+    color: #000080;
+    font-size: 26px;
+    text-align: center;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.konaklama-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.konaklama-kart {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 30px 25px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.konaklama-badge {
+    position: absolute;
+    top: -12px;
+    left: 25px;
+    background: #27ae60;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.konaklama-badge.blue { background: #000080; }
+.konaklama-badge.red { background: #bd0505; }
+
+/* =========================================
+    9. MODERN OKUL LİSTESİ (PREMIUM)
+   ========================================= */
+.okul-liste-kapsayici {
+    max-width: 1200px;
+    margin: 50px auto 25px auto;
+    border: 1px solid #d1d1d1;
+    border-radius: 5px;
+    padding: 35px 20px 15px 20px;
+    background-color: #ffffff;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.okul-liste-baslik {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    transform: translateY(-50%);
+    display: inline-block;
+    background-color: #000080;
+    color: #ffffff;
+    padding: 8px 18px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 5px;
+    margin: 0;
+    text-align: left;
+}
+
+.okul-liste-kapsayici .modern-okul-listesi {
+    max-width: 100%;
+    margin: 0;
+}
+
+.okul-liste-kapsayici .premium-liste-kart {
+    border: none;
+    box-shadow: none;
+    padding: 10px 0;
+}
+
+.okul-liste-kapsayici .premium-liste-kart:hover {
+    transform: none;
+    border-color: transparent;
+    box-shadow: none;
+}
+
+.okul-liste-kapsayici:hover {
+    border-color: #000080;
+    box-shadow: 0 10px 25px rgba(0, 0, 128, 0.10);
+    transform: translateY(-4px);
+}
+
+.premium-okul-kart {
+    position: relative;
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #f0f0f0;
+    border-radius: 20px;
+    padding: 30px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    margin-bottom: 20px;
+}
+
+.kart-bg-no {
+    position: absolute;
+    right: 20%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 150px;
+    font-weight: 900;
+    color: #f8f9fa;
+    z-index: 1;
+    user-select: none;
+}
+
+.kart-sol {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    z-index: 2;
+}
+
+.premium-btn {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #1a1a1a;
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* =========================================
+    10. RADİKAL MOBİL VE 15PX DÜZENLEME
+   ========================================= */
+@media screen and (max-width: 768px) {
     
-    .kare-kart {
-        width: 100%; 
-        max-width: 340px; 
-        height: auto; 
-        border-radius: 0 0 40px 40px !important; 
+    /* Evrensel 15px Padding Kuralı */
+    .icerik-alani, 
+    .dahil-olanlar-konteyner, 
+    .konaklama-konteyner, 
+    .modern-okul-listesi, 
+    .vurgulu-tablo-konteyner, 
+    .sehir-kare-yigini {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
-    
-    .kare-resim { height: 240px; }
-    
-    .kare-btn {
-        height: 45px; 
-        font-size: 14px;
-        border-radius: 0 0 40px 40px !important;
+
+    /* Gri Kutu Taşma ve Boşluk Ayarı */
+    .gri-cerceve-kutu {
+        margin: 45px 15px 25px 15px !important;
+        width: calc(100% - 30px) !important;
+        padding: 50px 15px 15px 15px !important;
+    }
+
+    .gri-cerceve-kutu:has(.sss-baslik),
+    .sss-gri-kutu {
+        padding-top: 90px !important;
+    }
+
+    h2.kutu-baslik {
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        width: 90%;
+        text-align: center;
+        font-size: 15px !important;
+    }
+    h2.kutu-baslik.sss-baslik {
+        left: 25px !important;
+        transform: translateY(-50%) !important;
+        text-align: left;
+    }
+
+    h1 { font-size: 24px; margin: 25px 0; }
+    p, .kutu-liste li, .ana-sirali-liste p { font-size: 14px; text-align: justify; }
+
+    /* Premium Kartlar Mobilde Dikey */
+    .premium-okul-kart {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 25px 15px !important;
+        gap: 20px;
+    }
+    .kart-bg-no { display: none; }
+    .kart-sag, .premium-btn { width: 100%; justify-content: center; }
+
+    /* Şehir Kartları */
+    .kare-kart {
+        width: 100% !important;
+        max-width: none !important;
+    }
+
+    /* Gridleri Tek Sütuna Düşür */
+    .dahil-grid, .konaklama-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Okul Tablosu Mobilde Dikey */
+    .okul-satiri-vurgulu {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    .satir-sol { flex-direction: column; }
+    .vurgulu-incele-btn { width: 100%; justify-content: center; }
+
+    footer .kvkk-alani, footer .footer-bottom {
+        flex-direction: column !important;
+        gap: 10px;
     }
 }
+
+@media (max-width: 768px) {
+    .buton-alani { flex-direction: column; padding: 0 15px; }
+    .ana-buton { width: 100% !important; margin: 0; }
+}
+
+/* 501px altı: gri çerçeveler bilgi istek formu ile aynı genişlikte */
+@media (max-width: 501px) {
+    .gri-cerceve-kutu {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: 100% !important;
+    }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.8; }
+    100% { transform: scale(2.5); opacity: 0; }
+}
+
+.kare-resim-link {
+    display: block; /* Linkin görsel alanını tam kaplaması için */
+    overflow: hidden;
+    text-decoration: none;
+}
+
+/* Görsele tıklandığında veya üzerine gelindiğinde büyüme efekti */
+.kare-resim img {
+    transition: transform 0.5s ease;
+}
+
+.kare-resim-link:hover img {
+    transform: scale(1.1); /* Görsel linkine hover yapınca resim büyür */
+}
+
+@media (max-width: 992px) {
+    .konaklama-grid { 
+        grid-template-columns: 1fr !important; 
+    }
+    .konaklama-kart {
+        margin-bottom: 20px !important;
+    }
+}
+
+/* =========================================
+    KAMPÜS VE PROGRAM DETAYLARI (OPTİMİZE)
+   ========================================= */
+
+/* 1. Ana Konteynır - 1200px Standart */
+.kampus-tanitim-alani {
+    margin: 60px auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+/* 2. Ana Çerçeve - Alt Boşluk 25px Sabitlendi */
+.kampus-cerceve {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+    padding: 45px 35px 25px 35px; /* Üst, Sağ, Alt(25px), Sol */
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+/* 3. Çizgi Üstü Kurumsal Başlık (Sentence Case) */
+.kutu-baslik {
+    position: absolute;
+    top: -15px; 
+    left: 25px;
+    background: #fff; 
+    padding: 0 15px;
+    color: #000080; /* Kurumsal Lacivert */
+    font-size: 19px;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: normal;
+}
+
+/* 4. İçerik ve Metin Yapısı */
+.kampus-icerik {
+    color: #444;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.kampus-vurgu span, 
+.program-kart h3, 
+.program-ekstralar p strong,
+.deneyim-paneli strong {
+    color: #bd0505; /* Kurumsal Kırmızı Vurgular */
+    font-weight: 700;
+}
+
+/* 5. Paneller ve Kartlar */
+.deneyim-paneli {
+    background: #fdfdfd;
+    border-left: 4px solid #000080;
+    padding: 20px;
+    margin: 25px 0;
+    font-style: italic;
+    color: #333;
+}
+
+.ozellik-ozeti {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.ozellik-kart {
+    flex: 1;
+    min-width: 180px;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 4px;
+    border-bottom: 3px solid #bd0505;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.ozellik-kart:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* 6. Grid Yapıları (Programlar ve Olanaklar) */
+.program-grid, .olanaklar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 25px;
+}
+
+.program-kart h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed #eee;
+    padding-bottom: 5px;
+}
+
+/* 7. Listeler ve İkonlar */
+.olanak-liste {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.olanak-liste li {
+    padding-left: 20px;
+    margin-bottom: 8px;
+    position: relative;
+    font-size: 14.5px;
+    color: #555;
+}
+
+.olanak-liste li::before {
+    content: "✓";
+    color: #000080;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.program-ekstralar {
+    margin-top: 25px;
+    padding: 15px;
+    background: #fdfdfd;
+    border-radius: 4px;
+}
+
+/* 8. Butonlar ve Aksiyon Alanları */
+.kampus-aksiyon {
+    margin-top: 25px;
+}
+
+.fiyat-aksiyon {
+    text-align: center;
+    background: #f9f9f9;
+    padding: 40px;
+    border-radius: 8px;
+    margin-top: 40px;
+}
+
+.buton-premium {
+    display: inline-block;
+    background: #000080;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13px;
+    transition: all 0.3s ease;
+}
+
+.buton-premium:hover {
+    background: #bd0505;
+    transform: translateY(-2px);
+}
+
+/* Dahil Olanlar Grid Sistemi */
+.dahil-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.dahil-kart {
+    padding: 25px;
+    background: #ffffff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.dahil-kart:hover {
+    border-color: #000080;
+    box-shadow: 0 5px 15px rgba(0,0,128,0.05);
+    transform: translateY(-3px);
+}
+
+.dahil-kart-baslik {
+    color: #000080; /* Lacivert */
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 28px;
+}
+
+.dahil-kart-baslik::before {
+    content: "✓";
+    color: #bd0505; /* Kırmızı Check */
+    position: absolute;
+    left: 0;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.vurgu-kart {
+    background: #fdfdfd;
+    border: 1px solid #000080;
+}
+
+/* Konaklama Grid Sistemi */
+.konaklama-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.konaklama-kart {
+    background: #ffffff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 35px 25px 25px 25px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.konaklama-kart:hover {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    border-color: #000080;
+}
+
+.konaklama-kart h3 {
+    color: #000080;
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+/* Konaklama Rozetleri */
+.konaklama-badge {
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    background: #bd0505; /* Kurumsal Kırmızı */
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.konaklama-badge.blue {
+    background: #000080; /* Kurumsal Lacivert */
+}
+
+/* Mobilde Grid Düzeni */
+@media (max-width: 768px) {
+    .konaklama-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Bu kısım yukarıdaki eski çakışan kodları ezecektir */
+
+.modern-okul-listesi, .kampus-tanitim-alani, .icerik-alani {
+    max-width: 1200px !important; /* Genişliği 1200px'e zorladık */
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.premium-okul-kart {
+    position: relative;
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #f0f0f0;
+    border-radius: 20px;
+    padding: 35px 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    margin-bottom: 25px;
+}
+
+.okul-metin .okul-isim {
+    font-size: 22px;
+    color: #000080;
+    font-weight: 800;
+}
+
+.premium-btn {
+    background: #000080 !important;
+    color: #fff !important;
+    padding: 14px 30px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+}
+
+.premium-btn:hover {
+    background: #bd0505 !important;
+}
+
+.kart-bg-no {
+    position: absolute;
+    right: 15%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 150px;
+    font-weight: 900;
+    color: #f8f9fa;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* --- OKUL LİSTESİ ÖZEL TASARIMI --- */
+.modern-okul-listesi {
+    max-width: 1200px !important;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.premium-liste-kart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    border: 1px solid #f0f0f0;
+    padding: 25px 35px;
+    border-radius: 12px;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+.premium-liste-kart:hover {
+    transform: translateX(10px); /* Hafif sağa kayma efekti */
+    border-color: #000080;
+    box-shadow: 0 10px 30px rgba(0,0,128,0.08);
+}
+
+/* Okul İsmi Stili */
+.okul-isim-link {
+    text-decoration: none;
+    color: #000080 !important; /* Kurumsal Lacivert */
+    font-size: 20px;
+    font-weight: 800;
+    transition: 0.3s;
+}
+
+.okul-isim-link:hover {
+    color: #bd0505 !important; /* Üzerine gelince kırmızı */
+}
+
+/* Numara Stili */
+.kart-numara, .kart-numara-vurgu, .liste-index {
+    font-size: 24px;
+    font-weight: 900;
+    color: #e0e0e0;
+    margin-right: 20px;
+}
+
+/* Buton Stili */
+.incele-btn-minimal, .btn-modern-incele {
+    text-decoration: none;
+    color: #000080;
+    font-weight: 700;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.incele-btn-minimal:hover {
+    color: #bd0505;
+}
+
+.ok-animasyon {
+    transition: transform 0.3s ease;
+}
+
+.premium-liste-kart:hover .ok-animasyon {
+    transform: translateX(5px);
+}
+
+/* Mobilde Tek Satırı Koru ama Küçült */
+@media (max-width: 768px) {
+    .premium-liste-kart {
+        padding: 20px;
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    .okul-isim-link { font-size: 17px; }
+}
+
+/* --- SKYLINE OKUL LİSTESİ ÖZEL --- */
+.modern-okul-listesi {
+    max-width: 1200px !important;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.skyline-stil {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Sol ve sağ grubu iki uca iter */
+    background: #ffffff;
+    border: 1px solid #f0f0f0;
+    padding: 20px 30px;
+    border-radius: 12px;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    margin-bottom: 15px;
+}
+
+.skyline-stil:hover {
+    border-color: #000080;
+    transform: translateX(8px); /* Hafif sağa hareket */
+    box-shadow: 0 8px 25px rgba(0,0,128,0.08);
+}
+
+/* Sol Taraf Yerleşimi */
+.kart-sol-grup {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Numara, Ayraç ve İsim arası boşluk */
+    flex: 1; /* İsmin geniş alanı kaplamasını sağlar */
+}
+
+.kart-numara {
+    font-size: 22px;
+    font-weight: 900;
+    color: #e0e0e0; /* Hafif gri numara */
+    font-family: 'Poppins', sans-serif;
+}
+
+.ayrac-dikey {
+    width: 1px;
+    height: 30px;
+    background: #eee;
+}
+
+.okul-isim-link {
+    text-decoration: none;
+    color: #000080 !important; /* Kurumsal Lacivert */
+    font-size: 19px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.okul-isim-link:hover {
+    color: #bd0505 !important; /* Üzerine gelince kırmızı */
+}
+
+/* Sağ Taraf Yerleşimi */
+.incele-btn-minimal {
+    text-decoration: none;
+    color: #444;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap; /* Buton metninin kırılmasını önler */
+    transition: 0.3s;
+}
+
+.skyline-stil:hover .incele-btn-minimal {
+    color: #000080;
+}
+
+.ok-animasyon {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.skyline-stil:hover .ok-animasyon {
+    transform: translateX(5px);
+    color: #bd0505;
+}
+
+/* Mobil Uyumluluk */
+@media (max-width: 768px) {
+    .skyline-stil {
+        flex-direction: column;
+        text-align: left;
+        align-items: flex-start;
+        padding: 20px;
+    }
+    
+    .kart-sol-grup {
+        margin-bottom: 15px;
+    }
+    
+    .ayrac-dikey { display: none; } /* Mobilde ayraçı gizleyip ferahlık sağladık */
+    
+    .kart-aksiyon {
+        width: 100%;
+        border-top: 1px solid #f9f9f9;
+        padding-top: 15px;
+    }
+}
+
+/* --- ANA SAYFA KARŞILAMA (HERO) --- */
+.ana-karsilama-alani {
+    width: 100%;
+    padding: 100px 0 80px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.karsilama-konteynir {
+    max-width: 1200px !important;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+.karsilama-icerik {
+    max-width: 1200px; /* Okunabilirlik için metin genişliğini sınırladık */
+    margin: 0 auto;
+    text-align: center;
+}
+
+.ust-vurgu {
+    display: inline-block;
+    color: #bd0505; /* Kurumsal Kırmızı */
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.karsilama-icerik h1 {
+    font-size: 48px !important; /* Ana sayfa olduğu için daha büyük */
+    line-height: 2;
+    margin-bottom: 25px;
+    color: #000080;
+}
+
+.karsilama-icerik h1 span {
+    color: #333;
+    font-weight: 400;
+}
+
+.ana-p {
+    font-size: 18px !important;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 40px;
+    text-align: center !important; /* Karşılama metni ortalı daha şık durur */
+}
+
+/* Buton Grupları */
+.karsilama-aksiyon {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.ana-buton-vurgu {
+    background: #000080;
+    color: #fff;
+    padding: 16px 40px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+    box-shadow: 0 10px 20px rgba(0,0,128,0.15);
+}
+
+.ana-buton-vurgu:hover {
+    background: #bd0505;
+    transform: translateY(-3px);
+}
+
+.ana-buton-light {
+    border: 2px solid #000080;
+    color: #000080;
+    padding: 14px 40px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.ana-buton-light:hover {
+    background: #f0f0f5;
+}
+
+/* Güven Rozetleri */
+.guven-rozetleri {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    border-top: 1px solid #eee;
+    padding-top: 30px;
+}
+
+.rozet-item {
+    font-size: 14px;
+    font-weight: 600;
+    color: #000080;
+}
+
+/* Mobilde Ölçekleme */
+@media (max-width: 768px) {
+    .karsilama-icerik h1 { font-size: 32px !important; }
+    .karsilama-aksiyon { flex-direction: column; }
+    .guven-rozetleri { flex-direction: column; gap: 10px; }
+}
+
+/* Marka ve Vurgu Alanı */
+.ust-marka-alani {
+    margin-bottom: 15px;
+}
+
+.marka-baslik {
+    font-size: 18px !important;
+    font-weight: 700;
+    color: #000080; /* Kurumsal Lacivert */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.vurgu-renk2 {
+    color: #bd0505 !important; /* Kurumsal Kırmızı */
+    margin-left: 10px;
+    font-weight: 800;
+    position: relative;
+}
+
+/* Ana Slogan Ayarı */
+.karsilama-icerik h1 {
+    font-size: 42px !important;
+    color: #333;
+    line-height: 2;
+    margin-top: 10px;
+}
+
+.karsilama-icerik h1 span {
+    color: #000080; /* Sloganın ikinci kısmını lacivert yaparak dengeledik */
+    font-weight: 800;
+}
+
+/* H1: Marka Başlığı Ayarı */
+.ana-logo-baslik {
+    font-size: 20px !important; /* Marka ismi olduğu için devasa değil, prestijli boyutta */
+    font-weight: 700;
+    color: #000080; /* Lacivert */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Kırmızı Vurgu (Yurt Dışı Eğitim) */
+.vurgu-renk2 {
+    color: #bd0505 !important; /* Kurumsal Kırmızı */
+    font-weight: 800;
+    padding-left: 15px;
+    border-left: 2px solid #eee; /* Arada şık bir ayraç */
+}
+
+/* Mobil Düzenleme */
+@media (max-width: 768px) {
+    .ana-logo-baslik { font-size: 16px !important; flex-direction: column; gap: 5px; }
+    .vurgu-renk2 { border-left: none; padding-left: 0; }
+    .dev-slogan { font-size: 34px !important; }
+}
+
+/* Genel Bölüm Düzeni */
+.akademik-akıs-alani {
+    padding: 80px 0;
+    position: relative;
+}
+
+.akıs-header {
+    margin-bottom: 40px;
+    position: relative;
+    height: 30px; /* Başlığın oturması için alan */
+}
+
+/* Giriş Metni (Geniş ve Ferah) */
+.ana-motto-kutusu {
+    background: var(--gri-acik);
+    padding: 40px;
+    border-radius: 20px;
+    margin-bottom: 60px;
+    border-left: 6px solid var(--ana-lacivert);
+}
+
+.ana-motto-kutusu p {
+    font-size: 20px !important; /* Daha büyük ve vurucu */
+    color: var(--ana-lacivert);
+    margin: 0;
+}
+
+/* Yatay Şerit Yapısı */
+.kazanim-seridi {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    gap: 20px;
+}
+
+/* Arkadaki İnce Bağlantı Çizgisi */
+.kazanim-seridi::before {
+    content: "";
+    position: absolute;
+    top: 25px; /* Noktaların tam ortası */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #e0e0e0;
+    z-index: 1;
+}
+
+.kazanim-duragi {
+    flex: 1;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.durak-noktasi {
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border: 2px solid var(--ana-lacivert);
+    border-radius: 50%;
+    margin: 0 auto 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nokta-ic {
+    width: 12px;
+    height: 12px;
+    background: var(--ana-kirmizi);
+    border-radius: 50%;
+}
+
+.durak-metin h3 {
+    font-size: 19px;
+    color: var(--ana-lacivert);
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.durak-metin p {
+    font-size: 15px;
+    color: #555;
+    padding: 0 10px;
+}
+
+/* Mobilde Dikey Akışa Dön */
+@media (max-width: 768px) {
+    .kazanim-seridi { flex-direction: column; gap: 40px; }
+    .kazanim-seridi::before { display: none; }
+    .kazanim-duragi { text-align: left; display: flex; gap: 20px; }
+    .durak-noktasi { margin: 0; flex-shrink: 0; }
+}
+
+/* =========================================
+    LONDRA AVANTAJ KARTLARI
+   ========================================= */
+.dil-okullari-program-kutu + .gri-cerceve-kutu,
+.londra-neden-kutu + .gri-cerceve-kutu,
+.oxford-neden-kutu + .gri-cerceve-kutu,
+.bournemouth-neden-kutu + .gri-cerceve-kutu {
+    margin-top: 70px;
+}
+
+.dil-okullari-kariyer-kutu .avantaj-grid,
+.londra-neden-kutu .avantaj-grid,
+.oxford-neden-kutu .avantaj-grid,
+.bournemouth-neden-kutu .avantaj-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 25px;
+    counter-reset: avantaj-num;
+}
+
+.dil-okullari-kariyer-kutu .avantaj-kart,
+.londra-neden-kutu .avantaj-kart,
+.oxford-neden-kutu .avantaj-kart,
+.bournemouth-neden-kutu .avantaj-kart {
+    flex: 0 0 calc((100% - 40px) / 3);
+    min-width: 240px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 18px 16px 18px 54px;
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.04);
+    height: 100%;
+    position: relative;
+    counter-increment: avantaj-num;
+}
+
+.dil-okullari-kariyer-kutu .avantaj-kart::before,
+.londra-neden-kutu .avantaj-kart::before,
+.oxford-neden-kutu .avantaj-kart::before,
+.bournemouth-neden-kutu .avantaj-kart::before {
+    content: counter(avantaj-num);
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(135deg, #000080 0%, #1a237e 100%);
+    color: #fff;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 28px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 128, 0.25);
+}
+
+.dil-okullari-kariyer-kutu .avantaj-kart h3,
+.londra-neden-kutu .avantaj-kart h3,
+.oxford-neden-kutu .avantaj-kart h3,
+.bournemouth-neden-kutu .avantaj-kart h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #000080;
+    margin-bottom: 8px;
+}
+
+.dil-okullari-kariyer-kutu .avantaj-kart p,
+.londra-neden-kutu .avantaj-kart p,
+.oxford-neden-kutu .avantaj-kart p,
+.bournemouth-neden-kutu .avantaj-kart p {
+    font-size: 14.5px;
+    color: #444;
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .dil-okullari-kariyer-kutu .avantaj-grid,
+    .londra-neden-kutu .avantaj-grid,
+    .oxford-neden-kutu .avantaj-grid,
+    .bournemouth-neden-kutu .avantaj-grid {
+        gap: 15px;
+    }
+    .dil-okullari-kariyer-kutu .avantaj-kart,
+    .londra-neden-kutu .avantaj-kart,
+    .oxford-neden-kutu .avantaj-kart,
+    .bournemouth-neden-kutu .avantaj-kart {
+        flex: 0 0 100%;
+    }
+}
+
+/* Konaklama Alternatifleri - Yatay ikon + sol çizgi tasarımı */
+.dil-okullari-konaklama-kutu .konaklama-liste {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 25px;
+}
+.dil-okullari-konaklama-kutu .konaklama-oge {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 18px 20px;
+    background: #f8fafc;
+    border-left: 4px solid #000080;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 2px 6px rgba(0,0,128,0.06);
+}
+.dil-okullari-konaklama-kutu .konaklama-ikon {
+    font-size: 28px;
+    line-height: 1;
+    flex-shrink: 0;
+}
+.dil-okullari-konaklama-kutu .konaklama-icerik h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #000080;
+    margin: 0 0 6px 0;
+}
+.dil-okullari-konaklama-kutu .konaklama-icerik p {
+    font-size: 14.5px;
+    color: #444;
+    margin: 0;
+    line-height: 1.5;
+}
+@media (max-width: 768px) {
+    .dil-okullari-konaklama-kutu .konaklama-oge {
+        padding: 14px 16px;
+        gap: 14px;
+    }
+    .dil-okullari-konaklama-kutu .konaklama-ikon {
+        font-size: 24px;
+    }
+}
+
+/* Program Seçenekleri - Üst kenar + badge tasarımı */
+.dil-okullari-program-kutu .program-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin-top: 25px;
+}
+.dil-okullari-program-kutu .program-kart {
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #e8ecf0;
+    border-top: 4px solid #000080;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.dil-okullari-program-kutu .program-etiket {
+    display: inline-block;
+    padding: 6px 14px;
+    background: rgba(0,0,128,0.08);
+    color: #000080;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 20px;
+    margin-bottom: 12px;
+}
+.dil-okullari-program-kutu .program-kart p {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.55;
+    margin: 0;
+}
+.dil-okullari-program-kutu .program-kart:nth-child(5) {
+    grid-column: 1 / -1;
+    max-width: calc((100% - 18px) / 2);
+    justify-self: center;
+}
+@media (max-width: 768px) {
+    .dil-okullari-program-kutu .program-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+    .dil-okullari-program-kutu .program-kart {
+        padding: 16px;
+    }
+    .dil-okullari-program-kutu .program-kart:nth-child(5) {
+        max-width: none;
+    }
+}
+

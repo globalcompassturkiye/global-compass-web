@@ -1,76 +1,120 @@
 /* =========================================
-   ANA SAYFA SEKMELİ NAVİGASYON (HİBRİT ÇÖZÜM)
+   ANA SAYFA SEKMELİ NAVİGASYON (KURUMSAL)
    ========================================= */
 
-.hizmet-tab-alani { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
-.hizmet-tab-alani input[type="radio"] { display: none !important; }
+/* 1. Genel Konteyner */
+.hizmet-tab-alani {
+    max-width: 1200px;
+    margin: 40px auto;
+    background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 40%, #ffffff 100%);
+    border-radius: 16px;
+    padding: 53px 28px 30px;
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.06);
+    position: relative;
+    overflow: hidden;
+}
 
-/* --- ANA TAB ETİKETLERİ (Dil / Yaz) --- */
+.hizmet-tab-alani::before {
+    content: "";
+    position: absolute;
+    right: -80px;
+    top: -80px;
+    width: 220px;
+    height: 220px;
+    background: radial-gradient(circle at center, rgba(0, 0, 128, 0.10), transparent 60%);
+    pointer-events: none;
+}
+
+.hizmet-tab-alani::after {
+    content: "";
+    position: absolute;
+    left: -60px;
+    bottom: -60px;
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(circle at center, rgba(189, 5, 5, 0.08), transparent 60%);
+    pointer-events: none;
+}
+
+/* Radyo butonlarını gizle */
+.hizmet-tab-alani input[type="radio"] { 
+    display: none !important; 
+}
+
+/* 2. Ana Tab Etiketleri (Dil Okulları / Yaz Okulları) */
 .ana-tab-etiket {
-    padding: 12px 30px;
     display: inline-block;
-    cursor: pointer;
+    padding: 11px 32px;
     font-weight: 700;
-    font-size: 16px;
-    color: #000080;          /* Yazı lacivert */
-    background-color: #ffffff; /* Normalde içi beyaz */
-    border: 2px solid #d1d1d1; /* Gri çerçeve */
-    border-radius: 5px;        /* Köşeler 5px */
+    cursor: pointer;
+    color: #4a4a4a;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    border-radius: 5px;
     margin-right: 8px;
-    transition: all 0.3s ease;
-    text-align: center;
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
+    backdrop-filter: blur(8px);
+    transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
 }
 
-/* Hover: Çerçeve kırmızıya döner */
+/* Ana Tab Hover */
 .ana-tab-etiket:hover {
-    border-color: #FF0000;
+    background: #f3f4ff;
+    border-color: rgba(0, 0, 128, 0.18);
+    color: #000080;
+    transform: translateY(-1px);
+    box-shadow: 0 10px 22px rgba(15, 23, 42, 0.1);
 }
 
-/* Aktif Ana Sekme: İçi kırmızı, yazı lacivert */
+/* Aktif Ana Tab (Lacivert) */
 #tab-dil:checked ~ label[for="tab-dil"],
 #tab-yaz:checked ~ label[for="tab-yaz"] {
-    background-color: #FF0000 !important;
-    color: #000080 !important;
-    border-color: #FF0000 !important;
+    background: #000080 !important;
+    color: #ffffff !important;
+    border-color: #000080 !important;
+    box-shadow: 0 14px 28px rgba(15, 23, 42, 0.2);
+    transform: translateY(-1px);
 }
 
-/* Ana Panelleri Göster/Gizle */
-.tab-panel { display: none; padding: 20px 0; }
+/* 3. Ana Panel Gösterimi */
+.tab-panel { display: none; }
 #tab-dil:checked ~ #panel-dil,
 #tab-yaz:checked ~ #panel-yaz { display: block !important; }
 
-/* --- ALT SEKME TASARIMI --- */
-.alt-tab-kapsayici { 
-    background: #f9f9f9; 
-    padding: 30px; 
-    border-radius: 12px; 
-    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-    border: 1px solid #eee;
+/* 4. Alt Tab Kapsayıcı (Ülkeler Bölümü) */
+.alt-tab-kapsayici {
+    margin-top: 26px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(148, 163, 184, 0.2);
 }
 
 .alt-tab-etiket {
-    padding: 8px 20px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;        /* 30px'den 5px'e indirildi (Bütünlük sağlandı) */
-    background: #ffffff; 
-    border: 1px solid #d1d1d1; 
     display: inline-block;
-    cursor: pointer;
-    font-size: 14px;
+    padding: 7px 18px;
+    margin: 0 6px 10px 0;
     font-weight: 600;
-    color: #000080; 
-    transition: all 0.3s ease;
+    cursor: pointer;
+    color: #64748b;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    border-radius: 5px;
+    font-size: 13px;
+    transition: all 0.18s ease;
 }
 
-/* Alt Sekme Hover: İçi kırmızı, yazı lacivert */
+/* Alt Tab Hover */
 .alt-tab-etiket:hover {
-    background-color: #FF0000;
-    color: #000080;
-    border-color: #FF0000;
+    border-color: rgba(189, 5, 5, 0.55);
+    color: #bd0505;
+    background: #fff5f5;
+    transform: translateY(-1px);
 }
 
-/* --- AKTİF ALT SEKME RENKLERİ (İçi Lacivert, Yazı Beyaz) --- */
+/* Aktif Alt Tab (Kırmızı) */
 #dil-ing:checked ~ label[for="dil-ing"],
 #dil-usa:checked ~ label[for="dil-usa"],
 #yaz-ing:checked ~ label[for="yaz-ing"],
@@ -78,14 +122,13 @@
 #yaz-almanya:checked ~ label[for="yaz-almanya"],
 #yaz-kanada:checked ~ label[for="yaz-kanada"],
 #yaz-italya:checked ~ label[for="yaz-italya"] {
-    background: #000080 !important;
+    background: #bd0505 !important;
     color: #ffffff !important;
-    border-color: #000080 !important;
+    border-color: #bd0505 !important;
 }
 
-/* --- ALT PANELLERİ GÖSTERME MANTIĞI --- */
-.alt-panel { display: none !important; margin-top: 30px; width: 100%; }
-
+/* 5. Alt Panel Gösterimi */
+.alt-panel { display: none !important; margin-top: 20px; width: 100%; }
 #dil-ing:checked ~ #panel-dil-ing,
 #dil-usa:checked ~ #panel-dil-usa,
 #yaz-ing:checked ~ #panel-yaz-ing,
@@ -96,24 +139,50 @@
     display: block !important;
 }
 
-/* --- İÇERİK DÜZENİ --- */
-.tab-ic-icerik { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; }
-.tab-metin { flex: 2; }
-.tab-link-listesi { list-style: none; padding: 0; margin: 20px 0; display: flex; flex-direction: column; gap: 12px; }
-.tab-link-listesi li { display: flex; align-items: center; }
-.tab-link-listesi li::before { content: "•"; color: #FF0000; font-weight: bold; margin-right: 10px; }
-.tab-link-listesi li a { text-decoration: none; color: #555; font-size: 15px; font-weight: 500; transition: 0.2s; }
-.tab-link-listesi li a:hover { color: #FF0000; padding-left: 5px; }
+/* 6. İç İçerik Düzeni */
+.tab-ic-icerik {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    background: #ffffff;
+    padding: 24px 26px;
+    border-radius: 14px;
+    box-shadow: 0 14px 32px rgba(15, 23, 42, 0.08);
+    animation: fadeIn 0.4s ease;
+}
 
+.tab-metin h3 { color: #000080; font-size: 20px; margin-bottom: 10px; font-weight: 700; }
+.tab-metin p { color: #666; font-size: 14px; margin-bottom: 20px; }
+
+/* Link Listesi */
+.tab-link-listesi { list-style: none; padding: 0; margin-bottom: 20px; }
+.tab-link-listesi li { margin-bottom: 10px; display: flex; align-items: center; }
+.tab-link-listesi li::before { content: "→"; color: #bd0505; margin-right: 10px; font-weight: bold; }
+.tab-link-listesi li a { text-decoration: none; color: #444; font-size: 14px; transition: 0.2s; }
+.tab-link-listesi li a:hover { color: #bd0505; text-decoration: underline; }
+
+/* 7. Aksiyon Butonu */
 .ana-buton { 
-    display: inline-block; padding: 10px 25px; background: #000080; color: #fff; 
-    text-decoration: none; border-radius: 5px; font-weight: bold; transition: 0.3s;
+    display: inline-block; padding: 12px 30px; background: #000080; color: #fff; 
+    text-decoration: none; border-radius: 5px; font-weight: 700; font-size: 14px;
+    transition: all 0.3s ease; text-align: center;
 }
-.ana-buton:hover { background: #FF0000; color: #000080; }
+.ana-buton:hover { background: #bd0505; color: #fff; transform: translateY(-2px); }
 
-@media (max-width: 768px) {
-    .tab-ic-icerik { flex-direction: column; gap: 20px; }
-    .tab-aksiyon { text-align: center; width: 100%; }
-    .ana-tab-etiket { width: 48%; margin-bottom: 5px; padding: 10px; font-size: 14px; margin-right: 4px; }
-    .alt-tab-etiket { font-size: 13px; padding: 6px 15px; }
+/* Animasyon */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
 }
+
+/* 8. Mobil Uyumluluk */
+@media (max-width: 768px) {
+    .hizmet-tab-alani { padding: 15px; margin: 20px 15px; }
+    .tab-ic-icerik { flex-direction: column; padding: 20px; gap: 20px; }
+    .ana-tab-etiket { width: calc(50% - 5px); padding: 12px 5px; font-size: 12px; margin-right: 5px; margin-bottom: 10px; }
+    .alt-tab-etiket { font-size: 12px; padding: 6px 12px; }
+    .tab-aksiyon { width: 100%; }
+    .ana-buton { width: 100%; }
+}
+

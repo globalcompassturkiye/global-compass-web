@@ -1,0 +1,68 @@
+/* Genel Bölüm Ayarları */
+.uni-sayfasi-avantajlar {
+    padding: 80px 0;
+}
+
+.ust-aciklama {
+    text-align: center;
+    max-width: 800px;
+    margin: 20px auto 60px auto;
+    font-size: 17px;
+    color: #555;
+}
+
+/* 3'lü Panel Grubu */
+.mühürlü-panel-grubu {
+    display: flex;
+    gap: 35px;
+    margin-top: 40px;
+}
+
+.mühürlü-cerceve {
+    flex: 1;
+    position: relative;
+    border: 1px solid var(--gri-cerceve); /* style.css'deki gri renk */
+    padding: 45px 25px 30px 25px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+/* Lacivert Mühür Başlık */
+.cizgi-ustu-baslik {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Tam merkeze ve çizgi üstüne oturtur */
+    background-color: var(--ana-lacivert); /* root'taki lacivert */
+    color: #ffffff !important;
+    padding: 10px 25px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 50px;
+    white-space: nowrap;
+    border: 3px solid #ffffff; /* Kartla kesiştiği yerde temiz görünmesi için */
+    box-shadow: 0 4px 12px rgba(0, 0, 128, 0.15);
+}
+
+.mühürlü-cerceve:hover {
+    border-color: var(--ana-lacivert);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.cerceve-icerik p {
+    text-align: center;
+    font-size: 15px;
+    color: #444;
+    margin: 0;
+    /* line-height: 2 body'den miras geliyor */
+}
+
+/* Mobil Uyumluluk */
+@media (max-width: 992px) {
+    .mühürlü-panel-grubu {
+        flex-direction: column;
+        gap: 50px;
+    }
+}

@@ -1,81 +1,181 @@
 /* =========================================
-   3. SİTE HARİTASI (BREADCRUMB - KOMPAKT)
+    SİTE HARİTASI (MODERN ETİKET TASARIMI)
+    Tüm Cihazlar İçin Ortak & Responsive
    ========================================= */
 .site-haritasi-yolu {
     width: 100%;
-    margin: 15px 0 25px 0;
+    background-color: #fdfdfd; /* Çok hafif zemin rengi */
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
 }
 
 .breadcrumb-kutu {
     max-width: 1200px;
     margin: 0 auto;
-    background-color: #ffffff;
-    border: 1px solid #e0e0e0;
-    padding: 8px 18px;
-    border-radius: 6px;
+    padding: 15px 25px;
     display: flex;
+    flex-wrap: wrap; /* Sığmadığında paket halinde alta geçer */
     align-items: center;
-    gap: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
-    box-sizing: border-box;
-    overflow-x: auto;
-    white-space: nowrap;
-    scrollbar-width: none;
+    gap: 10px;
+    list-style: none;
 }
 
-.breadcrumb-kutu::-webkit-scrollbar {
-    display: none;
-}
-
-/* Genel metin ayarları (Normal kalınlık) */
+/* Her bir durak (Link ve Mevcut Sayfa) */
 .breadcrumb-kutu a, 
-.breadcrumb-kutu .ayrac {
-    font-size: 16px; 
-    letter-spacing: 0.3px;
-    color: #000000;
-    font-weight: 500; /* Linkler ve ayraçlar normal kalsın */
-}
-
-/* Sadece İçinde Bulunulan Sayfa (Kalın) */
 .breadcrumb-kutu .su-anki-sayfa {
-    font-size: 16px;
-    color: #000000;
-    font-weight: 800; /* Sadece bu kalın olacak */
+    display: inline-flex;
+    align-items: center;
+    background-color: #f4f6f8;
+    color: #000080 !important; /* Senin kurumsal lacivertin */
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 5px; /* Tam istediğin 5px köşeler */
+    border: 1px solid #e0e4e8;
+    transition: all 0.3s ease;
+    white-space: nowrap;
 }
 
-.ana-sayfa-ikon img {
-    width: 16px; 
-    height: auto;
-    display: block;
-    opacity: 0.9;
+/* Masaüstünde Hover Etkisi */
+.breadcrumb-kutu a:hover {
+    background-color: #000080;
+    color: #ffffff !important;
+    border-color: #000080;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,128,0.1);
 }
 
-.ayrac {
-    color: #666;
+/* Üzerinde Bulunulan Sayfa Vurgusu */
+.breadcrumb-kutu .su-anki-sayfa {
+    background-color: #000080;
+    color: #ffffff !important;
+    border: 1px solid #000080;
+    cursor: default;
+}
+
+/* Ayraç (>) Tasarımı */
+.breadcrumb-kutu .ayrac,
+.breadcrumb-kutu .breadcrumb-ayrac {
+    color: #abb5be;
+    font-size: 12px;
+    font-weight: bold;
     user-select: none;
 }
 
-.breadcrumb-kutu a {
-    text-decoration: none;
-    transition: all 0.2s ease;
+/* Ana Sayfa İkon Kutusu Ayarı */
+.breadcrumb-kutu .ana-sayfa-ikon {
+    padding: 6px 12px !important;
 }
 
-.breadcrumb-kutu a:hover {
-    color: #e30613;
-    text-decoration: underline;
-}
-
-/* =========================================
-   MOBİL UYUMLULUK
-   ========================================= */
+/* -----------------------------------------
+    MOBİL UYUM (768px Altı)
+   ----------------------------------------- */
 @media (max-width: 768px) {
+    .breadcrumb-kutu {
+        padding: 12px 15px;
+        gap: 6px; /* Mobilde daha sıkı dizilim */
+    }
+
     .breadcrumb-kutu a, 
-    .breadcrumb-kutu .su-anki-sayfa, 
-    .breadcrumb-kutu .ayrac {
-        font-size: 14px;
+    .breadcrumb-kutu .su-anki-sayfa {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .breadcrumb-kutu .ayrac,
+    .breadcrumb-kutu .breadcrumb-ayrac {
+        font-size: 11px;
+        margin: 0 2px;
+    }
+}
+
+@media (max-width: 768px) {
+    .breadcrumb-kutu {
+        display: flex !important;
+        flex-wrap: wrap !important; /* Kategorinin bittiği mantıklı yerden alta atar */
+        align-items: center !important;
+        gap: 6px !important; /* Elemanlar arası dengeli boşluk */
+        padding: 12px 15px !important;
+        background: #ffffff !important;
+    }
+
+    /* Her bir link ve mevcut sayfa kutusu */
+    .breadcrumb-kutu a, 
+    .breadcrumb-kutu .su-anki-sayfa {
+        display: inline-flex !important;
+        align-items: center;
+        background: #f4f6f8; /* Çok hafif profesyonel gri */
+        padding: 8px 12px !important;
+        border-radius: 5px !important; /* Tam istediğin 5px köşeler */
+        font-size: 12px !important;
+        font-weight: 500;
+        text-decoration: none !important;
+        color: #000080 !important; /* Senin lacivertin */
+        border: 1px solid #e0e4e8;
+        white-space: nowrap !important;
+        transition: all 0.2s ease;
+    }
+
+    /* Üzerinde olduğumuz sayfa vurgusu */
+    .breadcrumb-kutu .su-anki-sayfa {
+        background: #000080 !important;
+        color: #ffffff !important;
+        border: 1px solid #000080;
+    }
+
+    /* Ayraçların (>) tasarımı */
+    .breadcrumb-kutu .ayrac,
+    .breadcrumb-kutu .breadcrumb-ayrac {
+        display: inline-block !important;
+        color: #abb5be !important;
+        font-size: 11px !important;
+        margin: 0 2px !important;
+        font-weight: bold;
+    }
+
+    /* Ana sayfa ikon kutusunu diğerleriyle eşitleyelim */
+    .breadcrumb-kutu .ana-sayfa-ikon {
+        padding: 6px 10px !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
     }
     
-    .ana-sayfa-ikon img {
-        width: 14px;
+    .breadcrumb-kutu .ana-sayfa-ikon img {
+        margin: 0 !important;
+    }
+}
+
+/* -----------------------------------------
+    501px Altı: Dar Ekran Optimizasyonu
+   ----------------------------------------- */
+@media (max-width: 501px) {
+    .breadcrumb-kutu {
+        padding: 10px 15px !important;
+        gap: 4px !important;
+    }
+
+    .breadcrumb-kutu a, 
+    .breadcrumb-kutu .su-anki-sayfa {
+        font-size: 11px !important;
+        padding: 6px 10px !important;
+        min-height: 36px; /* Dokunmatik hedef yeterliliği */
+        border-radius: 4px !important;
+    }
+
+    .breadcrumb-kutu .ayrac,
+    .breadcrumb-kutu .breadcrumb-ayrac {
+        font-size: 10px !important;
+        margin: 0 1px !important;
+    }
+
+    .breadcrumb-kutu .ana-sayfa-ikon {
+        padding: 5px 8px !important;
+    }
+
+    .breadcrumb-kutu .ana-sayfa-ikon img {
+        width: 18px !important;
+        height: 18px !important;
     }
 }

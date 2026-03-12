@@ -1,51 +1,118 @@
 /* =========================================
-    6. İLETİŞİM FORMU
+    6. İLETİŞİM FORMU (Gri Çerçeve Uyumlu)
    ========================================= */
+.kirmizi-kutu + .iletisim-form-alani {
+    margin-top: 50px;
+}
+
 .iletisim-form-alani {
-    background-color: #eee;
-    padding: 15px;
-    border-radius: 10px;
-    margin: 50px 0;
-    border: 1px solid #ddd;
+    background: #e8f4f8;
+    margin: 25px 0 25px 0;
+    border-radius: 8px;
     box-sizing: border-box;
-}
-
-.iletisim-form-alani h2 { 
-    color: #000080; 
-    text-align: center; 
-    margin-bottom: 30px; 
-}
-
-.form-satir { 
-    display: flex; 
-    gap: 20px; 
-    margin-bottom: 20px; 
-}
-
-input[type="text"], input[type="tel"], input[type="email"], textarea {
-    width: 100%;
-    padding: 12px 15px;
+    position: relative;
     border: 1px solid #d1d1d1;
-    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    padding: 70px 25px 25px 25px;
+}
+
+.iletisim-form-alani h2 {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    transform: translateY(-50%);
+    background-color: #000080;
+    color: #ffffff;
+    padding: 8px 20px;
+    font-size: 19px;
+    font-weight: 700;
+    border-radius: 4px;
+    margin: 0;
+}
+
+.iletisim-form-alani > p {
+    padding: 0;
+    margin: 0 0 20px;
+    font-size: 15px;
+    color: #4a5568;
+    line-height: 1.7;
+}
+
+.iletisim-form-alani form {
+    padding: 0;
+}
+
+.form-satir {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 18px;
+}
+
+.iletisim-form-alani input[type="text"],
+.iletisim-form-alani input[type="tel"],
+.iletisim-form-alani input[type="email"],
+.iletisim-form-alani textarea {
+    width: 100%;
+    padding: 13px 16px;
+    border: 1px solid #d1d9e0;
+    border-radius: 4px;
     font-family: inherit;
-    font-size: 16px;
+    font-size: 15px;
     box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-.radyo-grup { 
-    display: flex; 
-    gap: 25px; 
-    margin: 10px 0 20px 0; 
+.iletisim-form-alani input:focus,
+.iletisim-form-alani textarea:focus {
+    outline: none;
+    border-color: #000080;
+    box-shadow: 0 0 0 2px rgba(0, 0, 128, 0.15);
 }
 
-/* --- KVKK VE BUTON SATIRI (Yanyana & Ortalanmış) --- */
+.iletisim-form-alani input::placeholder,
+.iletisim-form-alani textarea::placeholder {
+    color: #9ca3af;
+}
+
+.radyo-grup {
+    display: flex;
+    gap: 28px;
+    margin: 16px 0 22px 0;
+}
+
+.radyo-grup label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    color: #374151;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.radyo-grup input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #000080;
+    cursor: pointer;
+}
+
+.iletisim-form-alani textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* --- KVKK VE BUTON --- */
 .kvkk-satir {
     display: flex;
-    align-items: center;    
-    justify-content: center; 
-    gap: 30px;              
-    margin: 35px 0;
-    width: 100%;            
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 28px;
+    margin: 28px 0 0;
+    padding-top: 24px;
+    border-top: 1px solid #e8ecf0;
+    width: 100%;
 }
 
 .kvkk-alani {
@@ -58,45 +125,53 @@ input[type="text"], input[type="tel"], input[type="email"], textarea {
     width: 20px;
     height: 20px;
     cursor: pointer;
-    margin: 0; /* Tarayıcı boşluklarını sıfırla */
+    margin: 0;
+    accent-color: #000080;
 }
 
 .kvkk-alani label {
-    font-size: 15px;
-    color: #444;
+    font-size: 14px;
+    color: #4b5563;
     font-weight: 500;
-    white-space: nowrap; 
+    white-space: nowrap;
     cursor: pointer;
 }
 
-/* --- ANA GÖNDER BUTONU (Genişletilmiş Versiyon) --- */
+.kvkk-link {
+    color: #000080;
+    font-weight: 600;
+}
+
 .form-buton-kucuk {
-    background-color: #000080;
+    background: #bd0505;
     color: #fff;
     border: none;
-    padding: 14px 45px; 
-    min-width: 220px; 
+    padding: 14px 52px;
+    min-width: 220px;
     font-size: 15px;
     font-weight: 700;
-    border-radius: 6px;
+    border-radius: 4px;
     cursor: pointer;
     text-transform: uppercase;
-    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    transition: all 0.25s ease;
     white-space: nowrap;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .form-buton-kucuk:hover {
-    background-color: #FF0000;
-    padding: 14px 50px; 
-    box-shadow: 0 6px 12px rgba(255,0,0,0.2);
-    transform: translateY(-2px);
+    background: #000080;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 128, 0.3);
 }
 
 /* =========================================
     9. MOBİL UYUMLULUK (501px ALTI)
    ========================================= */
-@media (max-width: 501px) {
+@media (max-width: 768px) {
+    .iletisim-form-alani > p {
+        text-align: justify;
+    }
+
     .form-satir { 
         flex-direction: column; 
         gap: 15px;

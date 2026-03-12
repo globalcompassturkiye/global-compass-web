@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="../css/form.css">
     <link rel="stylesheet" href="../css/yonlendirme-kart.css">
     <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/yurt-disi-yuksek-lisans-mba.css">
 </head>
 <body>
     <div class="sabit-ust-alan">
@@ -32,26 +33,61 @@
             </div>
         </div>
 
-        <header class="ust-menu">
-            <div class="menu-kapsayici">
-                <div class="logo">
+        <header class="ust-menu" style="background: #fff; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 1000;">
+            <div class="ust-alan" style="max-width: 1400px; margin: 0 auto; padding: 20px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center;">
+                <div></div> <div class="logo">
                     <a href="/">
-                        <img src="../img/global-compass-logo.webp" alt="Global Compass Logo" width="200" height="70" decoding="async">
+                        <img src="/img/global-compass-logo.webp" alt="Global Compass Logo">
                     </a>
                 </div>
-                <nav class="navigasyon">
-                    <ul>
-                        <li><a href="/">Ana Sayfa</a></li>
-                        <li><a href="/yurt-disi-lise">Lise</a></li>
-                        <li><a href="/yurt-disi-universite">Üniversite</a></li>
-                        <li><a href="/yurt-disi-yuksek-lisans-mba" class="aktif">Yüksek Lisans & Mba</a></li>
-                        <li><a href="/yurt-disi-online-egitim">Online Eğitim</a></li>
-                        <li><a href="/yurt-disi-burs-firsatlari">Burs Fırsatları</a></li>
-                        <li><a href="/yurt-disi-dil-okullari">Dil Okulları</a></li>
-                        <li><a href="/yurt-disi-yaz-okullari">Yaz Okulları</a></li>
-                    </ul>
-                </nav>
+
+                <div class="sosyal-medya-alani" style="display: flex; gap: 20px; justify-content: flex-end; align-items: center;">
+                    <a href="https://facebook.com/globalcompass" target="_blank" style="transition: transform 0.3s ease; background: none;">
+                        <img src="/img/sosyal/facebook-logo-transparent.webp" alt="Facebook" width="30" height="30" style="display: block;">
+                    </a>
+                    <a href="https://instagram.com/globalcompass" target="_blank" style="transition: transform 0.3s ease; background: none;">
+                        <img src="/img/sosyal/instagram-logo-transparent.webp" alt="Instagram" width="30" height="30" style="display: block;">
+                    </a>
+                    <a href="https://youtube.com/globalcompass" target="_blank" style="transition: transform 0.3s ease; background: none;">
+                        <img src="/img/sosyal/youtube-logo-transparent.webp" alt="Youtube" width="30" height="30" style="display: block;">
+                    </a>
+                </div>
             </div>
+
+            <button type="button" class="nav-toggle" aria-label="Menüyü aç/kapat" aria-expanded="false" aria-controls="nav-menu">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
+            <nav class="navigasyon" id="nav-menu" aria-label="Ana menü">
+                <ul class="nav-list">
+                    <li><a href="/">Ana Sayfa</a></li>
+                    <li><a href="/yurt-disi-lise">Lise</a></li>
+                    <li><a href="/yurt-disi-universite">Üniversite</a></li>
+                    <li><a href="/yurt-disi-yuksek-lisans-mba" class="aktif">Yüksek Lisans & MBA</a></li>
+                    <li><a href="/yurt-disi-online-egitim">Online Eğitim</a></li>
+                    <li><a href="/yurt-disi-burs-firsatlari">Burs Fırsatları</a></li>
+                    <li class="has-dropdown">
+                        <a href="/yurt-disi-dil-okullari" aria-haspopup="true" aria-expanded="false">Dil Okulları</a>
+                        <ul class="submenu">
+                            <li><a href="/yurt-disi-dil-okullari">Tümü</a></li>
+                            <li><a href="/yurt-disi-dil-okullari/uk/">İngiltere</a></li>
+                            <li><a href="/yurt-disi-dil-okullari/usa/">Amerika</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="/yurt-disi-yaz-okullari" aria-haspopup="true" aria-expanded="false">Yaz Okulları</a>
+                        <ul class="submenu">
+                            <li><a href="/yurt-disi-yaz-okullari">Tümü</a></li>
+                            <li><a href="/yurt-disi-yaz-okullari/uk/">İngiltere</a></li>
+                            <li><a href="/yurt-disi-yaz-okullari/switzerland/">İsviçre</a></li>
+                            <li><a href="/yurt-disi-yaz-okullari/germany/">Almanya</a></li>
+                            <li><a href="/yurt-disi-yaz-okullari/canada/">Kanada</a></li>
+                            <li><a href="/yurt-disi-yaz-okullari/italy/">İtalya</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
         </header>
     </div>
 
@@ -62,7 +98,7 @@
                     <img src="../img/home-icon.png" alt="Ana Sayfa" width="22" height="22" decoding="async">
                 </a>
                 <span class="breadcrumb-ayrac">></span> 
-                <span class="su-anki-sayfa">Yüksek Lisans & Mba</span>
+                <span class="su-anki-sayfa">Yüksek Lisans & MBA</span>
             </div>
         </nav>
 
@@ -215,46 +251,46 @@
 </div>
 
 <div class="gri-cerceve-kutu">
-    <h2 class="kutu-baslik">Yüksek Lisans & MBA Hakkında Sık Sorulan Sorular</h2>
+    <h2 class="kutu-baslik sss-baslik">Yüksek Lisans & MBA Hakkında<span class="sss-alt-satir">Sıkça Sorulan Sorular (SSS)</span></h2>
     <div class="sss-alani">
 
         <details class="sss-item">
-            <summary><h3>1. Yurt dışında yüksek lisans için sınav şartı var mı?</h3></summary>
+            <summary>1. Yurt dışında yüksek lisans için sınav şartı var mı?</summary>
             <div class="sss-icerik">
                 <p>Avrupa’daki birçok devlet üniversitesi, adaylara GMAT veya GRE gibi akademik sınav şartı aranmaksızın sınavsız yüksek lisans kabulü alarak eğitim hayatına hızlı başlama fırsatı sunmaktadır. Buna karşılık, Amerika Birleşik Devletleri'ndeki elit eğitim kurumları ve dünya çapındaki prestijli MBA programları, adayların analitik yetkinliklerini ölçmek adına GMAT veya GRE skorlarını zorunlu bir kriter olarak talep etmektedir. Global Compass olarak, kariyer hedeflerinize uygun sınavsız rotaları analiz ediyor veya rekabetçi işletme okullarına yönelik başvuru stratejilerinizi profesyonelce yönetiyoruz.</p>
             </div>
         </details>
 
         <details class="sss-item">
-            <summary><h3>2. Yurt dışında yüksek lisans yapmak için not ortalaması (GPA) ne kadar önemli?</h3></summary>
+            <summary>2. Yurt dışında yüksek lisans yapmak için not ortalaması (GPA) ne kadar önemli?</summary>
             <div class="sss-icerik">
                 <p>Yurt dışı yüksek lisans başvurularında lisans not ortalaması (GPA), akademik başarınızın en temel göstergesidir. Özellikle İngiltere, Amerika ve Almanya'daki prestijli üniversiteler genellikle 2.50 ve üzeri bir ortalama beklerken, "Top Tier" (ilk 100) okullar için bu sınır 3.00 ve üzeridir. Ancak GPA’nız hedeflediğiniz seviyenin altındaysa; güçlü bir Niyet Mektubu (SOP), yüksek IELTS/TOEFL skorları veya ilgili alandaki iş deneyiminizle bu durumu dengeleyerek kabul alma şansınızı artırabilirsiniz.</p>
             </div>
         </details>
 
         <details class="sss-item">
-            <summary><h3>3. MBA yapmak için iş tecrübesi şart mı?</h3></summary>
+            <summary>3. MBA yapmak için iş tecrübesi şart mı?</summary>
             <div class="sss-icerik">
                 <p>Bu durum tamamen başvuru yapacağınız programın türüne bağlıdır. Executive MBA veya global çapta saygınlığı olan "Full-time MBA" programları genellikle 2 ila 5 yıl arası profesyonel iş deneyimi talep eder. Ancak kariyerine yeni başlayanlar için tasarlanmış, iş tecrübesi şartı aramayan "Early Career MBA" veya "Pre-experience Master in Management" programları da mevcuttur. Global Compass olarak, kariyer geçmişinize en uygun işletme okulunu seçmenizde size profesyonel destek sunuyoruz.</p>
             </div>
         </details>
 
         <details class="sss-item">
-            <summary><h3>4. Yurt dışı yüksek lisans başvuruları ne zaman yapılmalıdır?</h3></summary>
+            <summary>4. Yurt dışı yüksek lisans başvuruları ne zaman yapılmalıdır?</summary>
             <div class="sss-icerik">
                 <p>Başvuru süreci, planlanan eğitim başlangıç tarihinden en az 9-12 ay önce başlatılmalıdır. Özellikle burs imkanlarından yararlanmak ve vize prosedürlerini (İngiltere CAS belgesi, Almanya bloke hesap vb.) zamanında tamamlamak için erken başvuru kritiktir. Çoğu üniversite için "Early Bird" (erken başvuru) dönemi Kasım-Ocak aylarında, ana başvuru dönemi ise Mart-Mayıs aylarında yoğunlaşmaktadır.</p>
             </div>
         </details>
 
         <details class="sss-item">
-            <summary><h3>5. Yurt dışında yüksek lisans yaparken çalışma izni veriliyor mu?</h3></summary>
+            <summary>5. Yurt dışında yüksek lisans yaparken çalışma izni veriliyor mu?</summary>
             <div class="sss-icerik">
                 <p>Evet, birçok popüler eğitim destinasyonu uluslararası öğrencilere yasal çalışma hakları tanımaktadır. Örneğin; İngiltere, Kanada, İrlanda ve Avustralya gibi ülkelerde eğitim süresince haftada 20 saat part-time, tatil dönemlerinde ise tam zamanlı çalışma hakkınız bulunur. Ayrıca, mezuniyet sonrası sunulan "Post-Study Work Visa" ile İngiltere'de 2 yıl, Kanada'da ise 3 yıla kadar kalıp profesyonel kariyerinize global bir adım atabilirsiniz.</p>
             </div>
         </details>
 
         <details class="sss-item">
-            <summary><h3>6. Dil yeterlilik belgesi (IELTS/TOEFL) olmadan şartlı kabul alınabilir mi?</h3></summary>
+            <summary>6. Dil yeterlilik belgesi (IELTS/TOEFL) olmadan şartlı kabul alınabilir mi?</summary>
             <div class="sss-icerik">
                 <p>Evet, birçok üniversite akademik olarak uygun bulduğu adaylara "Şartlı Kabul" (Conditional Offer) sunar. Bu, üniversitenin "akademik olarak seni kabul ediyorum, ancak eğitime başlamadan önce gerekli dil skorunu sunmalısın" demesidir. Eğer dil seviyeniz henüz yeterli değilse, üniversitelerin kendi bünyesindeki "Pre-sessional English" programlarına katılarak doğrudan yüksek lisansa geçiş yapabilirsiniz.</p>
             </div>
@@ -303,7 +339,9 @@
             </form>
         </section>
 
-<section class="alt-yonlendirme-alani">
+<div class="okul-liste-kapsayici">
+    <h2 class="okul-liste-baslik">Bu sayfalarda ilginizi Çekebilir</h2>
+    <section class="alt-yonlendirme-alani">
     <div class="yonlendirme-karti">
         <h2>Yüksek Lisans ve MBA Burs Fırsatları</h2>
         <p>Global kariyer yolculuğunuzda finansal yükünüzü hafifletin! %10'dan %100'e varan akademik başarı bursları, MBA özel indirimleri ve ülkelerin sunduğu uluslararası fonlar hakkında güncel başvuru fırsatlarını keşfedin.</p>
@@ -316,6 +354,7 @@
         <a href="/yurt-disi-dil-okullari" class="kart-link">Dil Okullarını İncele! →</a>
     </div>
 </section>
+</div>
     </article>
 
 <footer class="ana-footer">
@@ -398,6 +437,30 @@
     }
   ]
 }
+</script>
+
+<script>
+(function() {
+    var toggle = document.querySelector('.nav-toggle');
+    var nav = document.querySelector('.navigasyon');
+    if (toggle && nav) {
+        toggle.addEventListener('click', function() {
+            var open = nav.classList.toggle('is-open');
+            toggle.classList.toggle('is-open', open);
+            toggle.setAttribute('aria-expanded', open);
+        });
+        document.querySelectorAll('.has-dropdown > a').forEach(function(trigger) {
+            trigger.addEventListener('click', function(e) {
+                if (window.innerWidth <= 992) {
+                    e.preventDefault();
+                    var parent = this.closest('.has-dropdown');
+                    parent.classList.toggle('submenu-open');
+                    this.setAttribute('aria-expanded', parent.classList.contains('submenu-open'));
+                }
+            });
+        });
+    }
+})();
 </script>
 </body>
 </html>

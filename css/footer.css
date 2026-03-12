@@ -65,7 +65,6 @@ input:checked + .ana-tab-etiket {
 .footer-logo-alani {
     margin-bottom: 5px;
     padding-top: 5px;
-    line-height: 0; /* Altındaki hayali boşluğu siler */
 }
 
 .footer-logo-img {
@@ -86,7 +85,6 @@ input:checked + .ana-tab-etiket {
     font-size: 14px;
     color: #4a5568;
     margin: 0;
-    line-height: 1.4;
 }
 
 .footer-iletisim-satiri {

@@ -2,9 +2,10 @@
     SSS (AKORDEON) ALANI
    ========================================= */
 
-/* İlk Kutunun Üst Boşluğu - Padding eklendiği için burayı azalttık */
-.sss-alani .sss-item:first-child {
-    margin-top: 5px; /* 15px'den 5px'e düşürüldü */
+/* İlk SSS üst boşluğu - margin sıfır (boşluk sadece style.css padding-top) */
+.sss-baslik + .sss-alani .sss-item:first-child,
+.sss-alani > .sss-item:first-child {
+    margin-top: 0 !important;
 }
 
 /* Ana Kutu Yapısı */
@@ -25,20 +26,14 @@
     outline: none;
     display: flex;
     align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000000;
 }
 
 /* Chrome/Safari için standart oku gizleme */
 .sss-item summary::-webkit-details-marker { 
     display: none; 
-}
-
-/* Başlık: 16px, Siyah ve Kalın */
-.sss-item summary h3 {
-    font-size: 16px !important;
-    font-weight: 700 !important;
-    color: #000000 !important;
-    margin: 0 !important;
-    line-height: 1.4;
 }
 
 /* Aşağı Ok İkonu (▼) */
@@ -62,7 +57,6 @@
 .sss-icerik p {
     padding-top: 15px;
     padding-bottom: 5px;
-    line-height: 1.6;
     color: #555;
     font-size: 15px;
     border-top: 1px solid #f4f4f4; 
@@ -72,15 +66,13 @@
 /* =========================================
     SSS MOBİL UYUM (EN ALTTA)
    ========================================= */
-@media (max-width: 501px) {
+@media (max-width: 768px) {
     .sss-alani .sss-item:first-child {
-        margin-top: 15px; /* Mobildeki 35px'lik aşırı boşluk 15px'e düşürüldü */
-    }
-    .sss-item summary h3 {
-        font-size: 15px !important;
+        margin-top: 0; /* Başlık-1. soru arası style.css padding-top ile belirlenir */
     }
     .sss-item summary {
         padding-left: 25px;
+        font-size: 15px;
     }
     .sss-item summary::before {
         font-size: 10px;

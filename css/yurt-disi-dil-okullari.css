@@ -1,0 +1,72 @@
+/* Yurt Dışı Dil Okulları sayfasına özel stiller */
+/* Ülke seçim kartları – yaz okulları sayfasıyla aynı tasarım */
+
+.ulke-secim-butonlari {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    justify-content: center;
+    margin: 35px 0 60px 0;
+}
+
+.ulke-secim-butonlari .ulke-buton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 16px 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    border: 1px solid #e2e8f0;
+    background: linear-gradient(135deg, #f9fafb 0%, #ffffff 45%, #ecfeff 100%);
+    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+
+.ulke-buton-metin {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.ulke-buton-ok {
+    font-size: 18px;
+    opacity: 0.9;
+    transition: transform 0.25s ease;
+}
+
+.ulke-secim-butonlari .ulke-buton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+    border-color: #0f766e;
+    background: linear-gradient(135deg, #ecfeff 0%, #e0f2fe 40%, #f9fafb 100%);
+}
+
+.ulke-secim-butonlari .ulke-buton:hover .ulke-buton-ok {
+    transform: translateX(4px);
+}
+
+/* Ülke bazlı hafif renk vurguları (UK & USA) */
+.ulke-buton-uk {
+    background: linear-gradient(135deg, #eff6ff 0%, #ffffff 50%, #e0f2fe 100%);
+}
+
+.ulke-buton-usa {
+    background: linear-gradient(135deg, #fef2f2 0%, #ffffff 50%, #fee2e2 100%);
+}
+
+@media (max-width: 768px) {
+    .ulke-secim-butonlari {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin: 30px 0 50px 0;
+    }
+
+    .ulke-secim-butonlari .ulke-buton {
+        padding: 14px 16px;
+    }
+
+    .ulke-buton-metin {
+        font-size: 14px;
+    }
+}
