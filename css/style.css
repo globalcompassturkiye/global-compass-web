@@ -209,6 +209,12 @@ h2.kutu-baslik .sss-alt-satir {
     color: #bd0505 !important;
 }
 
+/* 2 satırlı h2: 1. satır beyaz (h2 rengi), 2. satır kırmızı – ikinci satır <br> sonrası span.vurgu-renk ile sarılmalı */
+h2.kutu-baslik .vurgu-renk {
+    color: #bd0505 !important;
+    display: inline-block;
+}
+
 .kutu-liste {
     list-style: none;
     padding: 0;
@@ -466,6 +472,72 @@ h2.kutu-baslik .sss-alt-satir {
     margin: 0;
     line-height: 1.65;
 }
+
+/* Toronto Immerse – Neler Var? dikey zaman çizelgesi tasarımı */
+.toronto-neler-kutu .toronto-neler-zaman-cizelgesi {
+    position: relative;
+    margin-top: 20px;
+    padding-left: 26px;
+}
+
+.toronto-neler-kutu .toronto-neler-zaman-cizelgesi::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, #000080, #38bdf8);
+    opacity: 0.5;
+}
+
+.toronto-neler-adim {
+    position: relative;
+    padding-left: 18px;
+    padding-bottom: 18px;
+}
+
+.toronto-neler-adim:last-child {
+    padding-bottom: 0;
+}
+
+.toronto-neler-adim::before {
+    content: "";
+    position: absolute;
+    left: -8px;
+    top: 4px;
+    width: 14px;
+    height: 14px;
+    border-radius: 999px;
+    background: #ffffff;
+    border: 3px solid #000080;
+    box-shadow: 0 0 0 3px rgba(129, 140, 248, 0.25);
+}
+
+.toronto-neler-baslik {
+    font-size: 15.5px;
+    font-weight: 700;
+    color: #000080;
+    margin: 0 0 6px 0;
+}
+
+.toronto-neler-aciklama {
+    font-size: 14.5px;
+    color: #444444;
+    margin: 0;
+    line-height: 1.7;
+}
+
+@media (max-width: 640px) {
+    .toronto-neler-kutu .toronto-neler-zaman-cizelgesi {
+        padding-left: 20px;
+    }
+    .toronto-neler-adim {
+        padding-left: 14px;
+        padding-bottom: 16px;
+    }
+}
+
 
 /* İtalya yaz okulları – vizyoner avantaj kartları */
 .italy-avantaj-kutu .italy-avantaj-grid {
