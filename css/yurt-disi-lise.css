@@ -1,2 +1,6 @@
 /* Yurt Dışı Lise sayfasına özel stiller */
 
+.ulke-secim-butonlari.lise-buton-orta {
+    grid-template-columns: 1fr;
+    justify-items: center;
+}

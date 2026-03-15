@@ -8,6 +8,12 @@
     padding: 0 20px 60px;
 }
 
+/* Bilgi İstek Formu - üstteki çerçevelerle arası 50px, iç boşluk */
+.iletisim-sayfa .iletisim-form-alani {
+    margin-top: 50px;
+    padding: 50px;
+}
+
 /* ---------- HERO BÖLÜMÜ ---------- */
 .iletisim-hero {
     position: relative;
@@ -48,7 +54,7 @@
 
 .iletisim-hero-aciklama {
     position: relative;
-    max-width: 580px;
+    max-width: 1200px;
     margin: 0 auto !important;
     font-size: 16px !important;
     color: rgba(255,255,255,0.92) !important;
