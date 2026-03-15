@@ -1,4 +1,111 @@
 /* =========================================
+    SSS SAYFASI – H1 İKİNCİ SATIR VURGUSU
+   ========================================= */
+h1 .h1-vurgu {
+    color: #000080;
+    font-weight: 700;
+}
+
+/* =========================================
+    SSS ANA SAYFA – ARAMA VE KATEGORİ
+   ========================================= */
+.sss-arama-kutusu {
+    max-width: 480px;
+    margin: 0 auto 28px;
+}
+.sss-arama-etiket {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+.sss-arama-input {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 16px;
+    font-family: inherit;
+    border: 1px solid #d1d1d1;
+    border-radius: 8px;
+    background: #fff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.sss-arama-input:focus {
+    outline: none;
+    border-color: #000080;
+    box-shadow: 0 0 0 3px rgba(0, 0, 128, 0.15);
+}
+.sss-arama-input::placeholder {
+    color: #888;
+}
+
+.sss-kategori-kartlari {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    margin-bottom: 36px;
+}
+.sss-kategori-karti {
+    display: block;
+    padding: 24px;
+    background: #f8f9fa;
+    border: 1px solid #e0e4e8;
+    border-radius: 10px;
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+.sss-kategori-karti:hover {
+    background: #fff;
+    border-color: #000080;
+    box-shadow: 0 8px 24px rgba(0, 0, 128, 0.12);
+    transform: translateY(-2px);
+}
+.sss-kategori-baslik {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    color: #000080;
+    margin-bottom: 8px;
+}
+.sss-kategori-aciklama {
+    display: block;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.sss-en-cok-sorulan { margin-bottom: 32px; }
+.sss-bolum-baslik {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 16px;
+}
+.sss-sonuc-yok {
+    text-align: center;
+    color: #666;
+    padding: 24px 16px;
+    font-size: 15px;
+}
+
+/* =========================================
+    AKORDEON SMOOTH GEÇİŞ (sss-icerik-sarmal)
+   ========================================= */
+.sss-item .sss-icerik-sarmal {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.35s ease;
+}
+.sss-item[open] .sss-icerik-sarmal {
+    grid-template-rows: 1fr;
+}
+.sss-icerik-sarmal > div {
+    min-height: 0;
+    overflow: hidden;
+}
+
+/* =========================================
     SSS (AKORDEON) ALANI
    ========================================= */
 
@@ -71,9 +178,47 @@
 }
 
 /* =========================================
+    SSS SAYFASI – TAB ALANI (standart tab yapısı)
+   ========================================= */
+.sss-tab-alani .tab-panel { display: none; }
+#sss-genel:checked ~ #panel-sss-genel,
+#sss-yaz:checked ~ #panel-sss-yaz {
+    display: block !important;
+}
+#sss-genel:checked ~ label[for="sss-genel"],
+#sss-yaz:checked ~ label[for="sss-yaz"] {
+    background: #000080 !important;
+    color: #ffffff !important;
+    border-color: #000080 !important;
+    box-shadow: 0 14px 28px rgba(15, 23, 42, 0.2);
+    transform: translateY(-1px);
+}
+
+/* =========================================
     SSS MOBİL UYUM (EN ALTTA)
    ========================================= */
 @media (max-width: 768px) {
+    .sss-arama-kutusu {
+        margin-bottom: 20px;
+    }
+    .sss-arama-input {
+        padding: 10px 14px;
+        font-size: 16px; /* iOS zoom önleme */
+    }
+    .sss-kategori-kartlari {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-bottom: 28px;
+    }
+    .sss-kategori-karti {
+        padding: 18px;
+    }
+    .sss-kategori-baslik {
+        font-size: 17px;
+    }
+    .sss-bolum-baslik {
+        font-size: 18px;
+    }
     .sss-alani .sss-item:first-child {
         margin-top: 0; /* Başlık-1. soru arası style.css padding-top ile belirlenir */
     }

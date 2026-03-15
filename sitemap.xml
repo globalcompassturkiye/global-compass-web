@@ -2,144 +2,341 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.globalcompass.com.tr/</loc>
-  </url>
-
-  <url>
-    <loc>https://www.globalcompass.com.tr/yurt-disi-yaz-okullari/germany/freiburg/</loc>
-  </url>
-  <url>
-    <loc>https://www.globalcompass.com.tr/yurt-disi-yaz-okullari/germany/frankfurt/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.globalcompass.com.tr/yurt-disi-yaz-okullari/italy/milan/</loc>
-  </url>
-  <url>
-    <loc>https://www.globalcompass.com.tr/yurt-disi-yaz-okullari/italy/</loc>
-  </url>
-  <url>
-    <loc>https://www.globalcompass.com.tr/yurt-disi-yaz-okullari/canada/toronto/</loc>
-  </url>
-  <url>
-    <loc>https://www.globalcompass.com.tr/yurt-disi-yaz-okullari/canada/</loc>
-  </url>
-  <url>
-    <loc>https://www.globalcompass.com.tr/yurt-disi-yaz-okullari/switzerland/</loc>
-  </url>
-  <url>
-    <loc>https://www.globalcompass.com.tr/yurt-disi-yaz-okullari/switzerland/swiss-education-academy/</loc>
-  </url>
-
-  <url>
-    <loc>https://www.globalcompass.com.tr/yurt-disi-burs-firsatlari/</loc>
-  </url>
-  <url>
-    <loc>https://www.globalcompass.com.tr/yurt-disi-online-egitim/</loc>
-  </url>
-
-  <url>
-    <loc>https://www.globalcompass.com.tr/yurt-disi-yaz-okullari/germany/</loc>
-  </url>
-
-  <url>
-    <loc>https://www.globalcompass.com.tr/yurt-disi-yaz-okullari/uk/oxford/</loc>
-  </url>
-  <url>
-    <loc>https://www.globalcompass.com.tr/yurt-disi-yaz-okullari/uk/london/investin/</loc>
-  </url>
-  <url>
-    <loc>https://www.globalcompass.com.tr/yurt-disi-yaz-okullari/uk/london/immerse-education/</loc>
-  </url>
-  <url>
-    <loc>https://www.globalcompass.com.tr/yurt-disi-yaz-okullari/uk/cambridge/immerse-education/</loc>
-  </url>
-  <url>
-    <loc>https://www.globalcompass.com.tr/yurt-disi-yaz-okullari/uk/oxford/immerse-education/</loc>
-  </url>
-
-  <url>
-    <loc>https://www.globalcompass.com.tr/iletisim/</loc>
+    <loc>https://www.globalcompass.com.tr/hakkimizda/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.globalcompass.com.tr/hizmetlerimiz/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.globalcompass.com.tr/iletisim/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.globalcompass.com.tr/sss/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.globalcompass.com.tr/kvkk-aydinlatma-metni/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://www.globalcompass.com.tr/kvkk-acik-riza-metni/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://www.globalcompass.com.tr/gizlilik-politikasi/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://www.globalcompass.com.tr/cerez-aydinlatma-metni/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
   </url>
 
+  <url>
+    <loc>https://www.globalcompass.com.tr/yurt-disi-lise/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.globalcompass.com.tr/yurt-disi-lise/degisim-programlari/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.globalcompass.com.tr/yurt-disi-universite/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://www.globalcompass.com.tr/yurt-disi-yuksek-lisans-mba/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.globalcompass.com.tr/yurt-disi-online-egitim/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.globalcompass.com.tr/yurt-disi-burs-firsatlari/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <url>
+    <loc>https://www.globalcompass.com.tr/yurt-disi-dil-okullari/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.globalcompass.com.tr/yurt-disi-dil-okullari/uk/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.globalcompass.com.tr/yurt-disi-dil-okullari/uk/london/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.globalcompass.com.tr/yurt-disi-dil-okullari/uk/london/kings-education/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.globalcompass.com.tr/yurt-disi-dil-okullari/uk/oxford/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.globalcompass.com.tr/yurt-disi-dil-okullari/uk/oxford/kings-education/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.globalcompass.com.tr/yurt-disi-dil-okullari/uk/bournemouth/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.globalcompass.com.tr/yurt-disi-dil-okullari/uk/bournemouth/kings-education/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.globalcompass.com.tr/yurt-disi-dil-okullari/usa/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.globalcompass.com.tr/yurt-disi-dil-okullari/usa/new-york/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.globalcompass.com.tr/yurt-disi-dil-okullari/usa/new-york/kings-education/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.globalcompass.com.tr/yurt-disi-dil-okullari/usa/boston/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.globalcompass.com.tr/yurt-disi-dil-okullari/usa/boston/kings-education/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.globalcompass.com.tr/yurt-disi-dil-okullari/usa/los-angeles/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.globalcompass.com.tr/yurt-disi-dil-okullari/usa/los-angeles/kings-education/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://www.globalcompass.com.tr/yurt-disi-yaz-okullari/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.globalcompass.com.tr/yurt-disi-yaz-okullari/uk/</loc>
-  </url>
-
-  <url>
-    <loc>https://www.globalcompass.com.tr/yurt-disi-dil-okullari/usa/new-york/</loc>
-  </url>
-  <url>
-    <loc>https://www.globalcompass.com.tr/yurt-disi-dil-okullari/uk/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.globalcompass.com.tr/yurt-disi-dil-okullari/uk/bournemouth/</loc>
+    <loc>https://www.globalcompass.com.tr/yurt-disi-yaz-okullari/uk/london/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.globalcompass.com.tr/yurt-disi-dil-okullari/usa/boston/</loc>
+    <loc>https://www.globalcompass.com.tr/yurt-disi-yaz-okullari/uk/london/immerse-education/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.globalcompass.com.tr/yurt-disi-dil-okullari/usa/boston/kings-education/</loc>
+    <loc>https://www.globalcompass.com.tr/yurt-disi-yaz-okullari/uk/london/investin/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.globalcompass.com.tr/yurt-disi-dil-okullari/uk/london/</loc>
+    <loc>https://www.globalcompass.com.tr/yurt-disi-yaz-okullari/uk/oxford/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.globalcompass.com.tr/yurt-disi-dil-okullari/</loc>
+    <loc>https://www.globalcompass.com.tr/yurt-disi-yaz-okullari/uk/oxford/immerse-education/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
-
   <url>
     <loc>https://www.globalcompass.com.tr/yurt-disi-yaz-okullari/uk/cambridge/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://www.globalcompass.com.tr/yurt-disi-dil-okullari/usa/</loc>
+    <loc>https://www.globalcompass.com.tr/yurt-disi-yaz-okullari/uk/cambridge/immerse-education/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://www.globalcompass.com.tr/yurt-disi-dil-okullari/usa/new-york/kings-education/</loc>
-  </url>
-
   <url>
     <loc>https://www.globalcompass.com.tr/yurt-disi-yaz-okullari/uk/bournemouth/</loc>
-  </url>
-  <url>
-    <loc>https://www.globalcompass.com.tr/yurt-disi-dil-okullari/usa/los-angeles/kings-education/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.globalcompass.com.tr/yurt-disi-yaz-okullari/uk/bournemouth/kings-education/</loc>
-  </url>
-
-  <url>
-    <loc>https://www.globalcompass.com.tr/yurt-disi-lise/degisim-programlari/</loc>
-  </url>
-  <url>
-    <loc>https://www.globalcompass.com.tr/yurt-disi-lise/</loc>
-  </url>
-
-  <url>
-    <loc>https://www.globalcompass.com.tr/yurt-disi-yaz-okullari/uk/london/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.globalcompass.com.tr/yurt-disi-dil-okullari/uk/london/kings-education/</loc>
+    <loc>https://www.globalcompass.com.tr/yurt-disi-yaz-okullari/canada/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.globalcompass.com.tr/yurt-disi-dil-okullari/uk/oxford/</loc>
+    <loc>https://www.globalcompass.com.tr/yurt-disi-yaz-okullari/canada/toronto/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://www.globalcompass.com.tr/yurt-disi-universite/</loc>
+    <loc>https://www.globalcompass.com.tr/yurt-disi-yaz-okullari/canada/toronto/immerse-education/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.globalcompass.com.tr/yurt-disi-yaz-okullari/switzerland/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.globalcompass.com.tr/yurt-disi-yaz-okullari/switzerland/chantemerle/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.globalcompass.com.tr/yurt-disi-yaz-okullari/switzerland/swiss-education-academy/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.globalcompass.com.tr/yurt-disi-yaz-okullari/germany/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.globalcompass.com.tr/yurt-disi-yaz-okullari/germany/frankfurt/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.globalcompass.com.tr/yurt-disi-yaz-okullari/germany/frankfurt/alpadia/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.globalcompass.com.tr/yurt-disi-yaz-okullari/germany/freiburg/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.globalcompass.com.tr/yurt-disi-yaz-okullari/germany/freiburg/alpadia/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.globalcompass.com.tr/yurt-disi-yaz-okullari/italy/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.globalcompass.com.tr/yurt-disi-yaz-okullari/italy/milan/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.globalcompass.com.tr/yurt-disi-yaz-okullari/italy/milan/sportech-academy/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.globalcompass.com.tr/yurt-disi-yaz-okullari/italy/milan/sportech-academy/futbol/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>
-
