@@ -2087,8 +2087,13 @@ p + .kirmizi-kutu {
     .karsilama-aksiyon { flex-direction: column; }
     .guven-rozetleri { flex-direction: column; gap: 10px; }
     .sosyal-medya-alani {
-        gap: 5px !important;           /* 20px’in %25’i, yani %75 azalma */
+        flex-direction: column;        /* Dikey hizala */
+        align-items: flex-end;         /* En sağa yasla */
+        gap: 5px !important;           /* Aradaki boşluk korunsun */
         padding-right: 0 !important;   /* Tam sağa yasla */
+    }
+    .logo {
+        text-align: center;            /* Logo alanını tam ortala */
     }
 }
 

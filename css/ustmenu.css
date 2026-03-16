@@ -320,9 +320,10 @@ body.ana-sayfa {
     display: none;
     flex-direction: column;
     justify-content: center;
-    gap: 5px;
-    width: 44px;
-    height: 44px;
+    align-items: center;              /* Çubukları yatayda ortaya al */
+    gap: 7px;
+    width: 66px;
+    height: 66px;
     padding: 10px;
     background: transparent;
     border: 1px solid #e0e0e0;
@@ -340,11 +341,22 @@ body.ana-sayfa {
 }
 .nav-toggle-bar {
     display: block;
-    width: 20px;
-    height: 2px;
+    width: 28px;
+    height: 3px;
     background: #333;
     border-radius: 1px;
     transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* Hamburger altında "Menü" yazısı */
+.nav-toggle::after {
+    content: "Menü";
+    margin-top: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
 }
 .navigasyon.is-open + .nav-toggle .nav-toggle-bar:nth-child(1),
 .nav-toggle:has(+ .navigasyon.is-open) .nav-toggle-bar:nth-child(1) { display: none; }
@@ -508,6 +520,12 @@ body.ana-sayfa {
     .menu-kapsayici {
         gap: 8px;
         padding: 10px 0;
+    }
+
+    /* Header içi yatay boşluğu sağda sıfırla ki
+       sosyal medya ikonları gerçekten en sağa dayansın */
+    .ust-menu .ust-alan {
+        padding-right: 0 !important;
     }
 
     .navigasyon ul {
