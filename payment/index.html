@@ -257,6 +257,7 @@
                 Ödeme adımında PayTR’in güvenli ödeme altyapısına yönlendirileceksiniz.
             </p>
             <p id="siparis-bilgi" class="aciklama"></p>
+            <p id="tutar-gorunum" class="aciklama"></p>
 
             <form id="odeme-formu">
                 <div class="form-satir">
@@ -404,6 +405,14 @@
                     }
                     if (siparisBilgi && data.ad) {
                         siparisBilgi.textContent = 'Sipariş: ' + data.ad;
+                    }
+                    var tutarGorunum = document.getElementById('tutar-gorunum');
+                    if (tutarGorunum) {
+                        var sayi = Number(data.tutar);
+                        if (!isNaN(sayi)) {
+                            var formatted = sayi.toLocaleString('tr-TR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+                            tutarGorunum.textContent = 'Ödenecek Tutar: ' + formatted + ' TL';
+                        }
                     }
                 })
                 .catch(function(err) {
