@@ -314,7 +314,7 @@
         <section class="iletisim-form-alani">
             <h2>Bilgi İstek Formu</h2>
             <p>Kings Education Bournemouth programları, konaklama alternatifleri ve 2026 fiyatları hakkında bilgi almak için formu doldurarak danışmanlarımızla iletişime geçebilirsiniz.</p>
-            <form action="https://formspree.io/f/xykndryw" method="POST">
+            <form action="#" method="POST" id="iletisim-formu">
                 <div class="form-satir">
                     <input type="text" name="ad" placeholder="Adınız" required>
                     <input type="text" name="soyad" placeholder="Soyadınız" required>
@@ -407,8 +407,42 @@
                 });
             });
         }
-    })();
-    </script>
+})();
+
+(function() {
+  var form = document.getElementById('iletisim-formu');
+  if (!form) return;
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var buton = form.querySelector('button[type="submit"]');
+    if (buton) buton.disabled = true;
+    var payload = {
+      ad: (form.querySelector('[name="ad"]') || {}).value || '',
+      soyad: (form.querySelector('[name="soyad"]') || {}).value || '',
+      email: (form.querySelector('[name="email"]') || {}).value || '',
+      telefon: (form.querySelector('[name="telefon"]') || {}).value || '',
+      kimlik: ((form.querySelector('input[type="radio"][name^="kimlik"]:checked')) || {}).value || '',
+      mesaj: (form.querySelector('[name="mesaj"]') || {}).value || ''
+    };
+    fetch('https://global-compass-paytr.canmuratsubat.workers.dev/iletisim', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    })
+    .then(function(res) {
+      if (!res.ok) throw new Error('Hata');
+      form.reset();
+      alert('Mesajınız iletildi, en kısa sürede sizinle iletişime geçeceğiz.');
+    })
+    .catch(function() {
+      alert('Bir hata oluştu, lütfen tekrar deneyin.');
+    })
+    .finally(function() {
+      if (buton) buton.disabled = false;
+    });
+  });
+})();
+</script>
 </body>
 </html>
 

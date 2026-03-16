@@ -312,15 +312,15 @@
         <section class="iletisim-form-alani">
             <h2>Bilgi İstek Formu</h2>
             <p>Global kariyer hedeflerinize en uygun yüksek lisans veya MBA programını keşfetmek ve başvuru sürecinizi yönetmek için bugün uzman eğitim danışmanlarımızdan ücretsiz ön bilgilendirme randevusu alabilirsiniz.</p>
-            <form action="https://formspree.io/f/xykndryw" method="POST">
+            <form action="#" method="POST" id="iletisim-formu">
                 <div class="form-satir">
-                    <input type="text" placeholder="Adınız" required>
-                    <input type="text" placeholder="Soyadınız" required>
+                    <input type="text" name="ad" placeholder="Adınız" required>
+                    <input type="text" name="soyad" placeholder="Soyadınız" required>
                 </div>
 
                 <div class="form-satir">
-                    <input type="tel" placeholder="Telefon*" required>
-                    <input type="email" placeholder="E-Posta*" required>
+                    <input type="tel" name="telefon" placeholder="Telefon*" required>
+                    <input type="email" name="email" placeholder="E-Posta*" required>
                 </div>
 
                 <div class="form-grup">
@@ -331,7 +331,7 @@
                     </div>
                 </div>
 
-                <textarea placeholder="Merak Ettikleriniz*" rows="4" required></textarea>
+                <textarea name="mesaj" placeholder="Merak Ettikleriniz*" rows="4" required></textarea>
 
                 <div class="kvkk-satir">
                     <div class="kvkk-alani">
@@ -466,6 +466,40 @@
             });
         });
     }
+})();
+
+(function() {
+  var form = document.getElementById('iletisim-formu');
+  if (!form) return;
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var buton = form.querySelector('button[type="submit"]');
+    if (buton) buton.disabled = true;
+    var payload = {
+      ad: (form.querySelector('[name="ad"]') || {}).value || '',
+      soyad: (form.querySelector('[name="soyad"]') || {}).value || '',
+      email: (form.querySelector('[name="email"]') || {}).value || '',
+      telefon: (form.querySelector('[name="telefon"]') || {}).value || '',
+      kimlik: ((form.querySelector('input[type="radio"][name^="kimlik"]:checked')) || {}).value || '',
+      mesaj: (form.querySelector('[name="mesaj"]') || {}).value || ''
+    };
+    fetch('https://global-compass-paytr.canmuratsubat.workers.dev/iletisim', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    })
+    .then(function(res) {
+      if (!res.ok) throw new Error('Hata');
+      form.reset();
+      alert('Mesajınız iletildi, en kısa sürede sizinle iletişime geçeceğiz.');
+    })
+    .catch(function() {
+      alert('Bir hata oluştu, lütfen tekrar deneyin.');
+    })
+    .finally(function() {
+      if (buton) buton.disabled = false;
+    });
+  });
 })();
 </script>
 </body>
