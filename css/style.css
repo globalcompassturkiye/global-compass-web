@@ -2097,7 +2097,7 @@ p + .kirmizi-kutu {
 
 /* Mobilde Ölçekleme */
 @media (max-width: 768px) {
-    .karsilama-icerik h1 { font-size: 24px !important; }
+    .karsilama-icerik h1 { font-size: 18px !important; }
     .ana-p { text-align: justify !important; }
     .karsilama-aksiyon { flex-direction: column; }
     .guven-rozetleri { flex-direction: column; gap: 4px; }
@@ -2113,16 +2113,7 @@ p + .kirmizi-kutu {
     }
 }
 
-/* 501px ve altı: ana sayfa h1'i 22px yap */
-@media (max-width: 501px) {
-    .karsilama-icerik h1 {
-        font-size: 33px !important;
-    }
-    /* Özellikle marka başlığı tek satıra insin */
-    body.ana-sayfa .ana-marka-baslik {
-        font-size: 33px !important;
-    }
-}
+/* 501px ve altı için ek kural gerek yok; yukarıdaki 18px mobil ayarı yeterli */
 
 /* Marka ve Vurgu Alanı */
 .ust-marka-alani {
