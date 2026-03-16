@@ -2086,6 +2086,10 @@ p + .kirmizi-kutu {
     .ana-p { text-align: justify !important; }
     .karsilama-aksiyon { flex-direction: column; }
     .guven-rozetleri { flex-direction: column; gap: 10px; }
+    .sosyal-medya-alani {
+        gap: 5px !important;           /* 20px’in %25’i, yani %75 azalma */
+        padding-right: 0 !important;   /* Tam sağa yasla */
+    }
 }
 
 /* Marka ve Vurgu Alanı */
