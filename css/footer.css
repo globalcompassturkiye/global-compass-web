@@ -2,10 +2,11 @@
    ANA SAYFA SEKMELİ NAVİGASYON (ÇALIŞAN HALİ)
    ========================================= */
 
+/* Eski sekmeli navigasyon için temel hizalama – iç padding üstten 25px */
 .hizmet-tab-alani { 
     max-width: 1200px; 
     margin: 40px auto; 
-    padding: 0 20px; 
+    padding: 25px 20px 0 20px; 
 }
 .hizmet-tab-alani input[type="radio"] { display: none !important; }
 
@@ -138,6 +139,21 @@ input:checked + .ana-tab-etiket {
     letter-spacing: 0.8px; /* Harf aralığı açılarak premium bir hava verildi */
     text-transform: uppercase; /* Kurumsal bir duruş için tamamen büyük harf */
     font-weight: 400;
+}
+
+/* Tüm sayfalarda alt telif metnini tek tip yap */
+.footer-alt-telif p {
+    visibility: hidden;
+    position: relative;
+}
+.footer-alt-telif p::before {
+    content: "Global Compass - Yurt Dışı Eğitim Danışmanlığı";
+    visibility: visible;
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    text-align: center;
 }
 
 /* MOBİL UYUMLULUK */

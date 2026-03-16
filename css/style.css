@@ -38,13 +38,13 @@ strong {
    ========================================= */
 
 .ana-sayfa-slogan {
-    font-size: 22px;            /* Slogan için ideal boyut */
-    color: #000080;           /* Kurumsal Lacivert */
-    font-weight: 700;           /* Güçlü ve profesyonel bir duruş (Bold) */
-    margin-bottom: 30px;        /* Altındaki içerikle olan mesafe */
-    text-align: center;         /* Sloganı sayfada ortalar */
-    max-width: 1200px;           /* Metnin çok yayılmasını engeller */
-    margin-left: auto;          /* Sağdan ve soldan ortalamak için */
+    font-size: 22px;              /* Slogan için ideal boyut */
+    color: #000000;               /* Siyah */
+    font-weight: 700;             /* Güçlü ve profesyonel bir duruş (Bold) */
+    margin-bottom: 30px;          /* Altındaki içerikle olan mesafe */
+    text-align: center;           /* Sloganı sayfada ortalar */
+    max-width: 1200px;            /* Metnin çok yayılmasını engeller */
+    margin-left: auto;            /* Sağdan ve soldan ortalamak için */
     margin-right: auto;
 }
 
@@ -1431,6 +1431,20 @@ p + .kirmizi-kutu {
     }
 }
 
+/* 768px altı: ana sayfa hizmet kartları – boşluk ayarları */
+@media (max-width: 768px) {
+    /* Ana sayfa hizmet kartları: kartlar arası dikey boşluk 25px olsun */
+    .ana-sayfa .beceri-grid {
+        gap: 25px 0 !important;  /* dikey 25px, yatay 0 (zaten tek sütun) */
+    }
+    /* Kartlar arası dış boşluğu grid yönetsin, ekstra margin verme */
+    a.ana-hizmet-karti.gri-cerceve-kutu {
+        margin: 0 !important;
+        /* Masaüstü görünümdeki iç padding’i koru (25px 20px) */
+        padding: 25px 20px !important;
+    }
+}
+
 @media (max-width: 768px) {
     .buton-alani { flex-direction: column; padding: 0 15px; }
     .ana-buton { width: 100% !important; margin: 0; }
@@ -1980,7 +1994,7 @@ p + .kirmizi-kutu {
 /* --- ANA SAYFA KARŞILAMA (HERO) --- */
 .ana-karsilama-alani {
     width: 100%;
-    padding: 100px 0 80px 0;
+    padding: 25px 0 80px 0;
     background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
     border-bottom: 1px solid #f0f0f0;
 }
@@ -2008,8 +2022,9 @@ p + .kirmizi-kutu {
 }
 
 .karsilama-icerik h1 {
-    font-size: 48px !important; /* Ana sayfa olduğu için daha büyük */
-    line-height: 2;
+    font-size: 36px !important; /* Masaüstünde tek satıra sığacak boyut */
+    line-height: 1.3;
+    margin-top: 0;
     margin-bottom: 25px;
     color: #000080;
 }
@@ -2071,21 +2086,22 @@ p + .kirmizi-kutu {
     justify-content: center;
     gap: 30px;
     border-top: 1px solid #eee;
-    padding-top: 30px;
+    padding: 70px 0 20px 0; /* Üst: 70px, Alt: 20px */
 }
 
 .rozet-item {
-    font-size: 14px;
-    font-weight: 600;
-    color: #000080;
+    font-size: 26px;
+    font-weight: 700;  /* Daha kalın */
+    color: #bd0505;    /* Kırmızı */
 }
 
 /* Mobilde Ölçekleme */
 @media (max-width: 768px) {
-    .karsilama-icerik h1 { font-size: 28px !important; }
+    .karsilama-icerik h1 { font-size: 24px !important; }
     .ana-p { text-align: justify !important; }
     .karsilama-aksiyon { flex-direction: column; }
-    .guven-rozetleri { flex-direction: column; gap: 10px; }
+    .guven-rozetleri { flex-direction: column; gap: 4px; }
+    .rozet-item { font-size: 20px; } /* Mobilde 20px */
     .sosyal-medya-alani {
         flex-direction: column;        /* Dikey hizala */
         align-items: flex-end;         /* En sağa yasla */
@@ -2094,6 +2110,17 @@ p + .kirmizi-kutu {
     }
     .logo {
         text-align: center;            /* Logo alanını tam ortala */
+    }
+}
+
+/* 501px ve altı: ana sayfa h1'i 22px yap */
+@media (max-width: 501px) {
+    .karsilama-icerik h1 {
+        font-size: 33px !important;
+    }
+    /* Özellikle marka başlığı tek satıra insin */
+    body.ana-sayfa .ana-marka-baslik {
+        font-size: 33px !important;
     }
 }
 
@@ -2258,6 +2285,36 @@ p + .kirmizi-kutu {
     .kazanim-seridi::before { display: none; }
     .kazanim-duragi { text-align: left; display: flex; gap: 20px; }
     .durak-noktasi { margin: 0; flex-shrink: 0; }
+}
+
+/* Ana sayfa h1 – mobilde (telefonlarda) kesin 28px olsun */
+@media (max-width: 768px) {
+    body.ana-sayfa .karsilama-icerik .ana-marka-baslik {
+        font-size: 28px !important;
+    }
+}
+
+/* Ana sayfa hero alanı – mobilde öğeler arası 50px boşluk */
+@media (max-width: 768px) {
+    .ana-sayfa .ana-karsilama-alani .ana-marka-baslik,
+    .ana-sayfa .ana-karsilama-alani .ana-sayfa-slogan,
+    .ana-sayfa .ana-karsilama-alani .ana-p,
+    .ana-sayfa .ana-karsilama-alani .karsilama-aksiyon,
+    .ana-sayfa .ana-karsilama-alani .guven-rozetleri {
+        margin-bottom: 50px !important;
+    }
+    /* Son bloğun altında ekstra boşluk birikmesin */
+    .ana-sayfa .ana-karsilama-alani .guven-rozetleri {
+        padding-top: 30px; /* üst çizgi boşluğu kalsın */
+    }
+}
+
+/* 501px altı: rozetler altındaki genel paddingi azalt */
+@media (max-width: 501px) {
+    .ana-sayfa .ana-karsilama-alani {
+        padding-top: 25px;
+        padding-bottom: 25px; /* üst ve alt padding eşitlendi */
+    }
 }
 
 /* =========================================

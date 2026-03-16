@@ -2,38 +2,28 @@
    ANA SAYFA SEKMELİ NAVİGASYON (KURUMSAL)
    ========================================= */
 
-/* 1. Genel Konteyner */
+/* 1. Genel Konteyner – gri çerçeve kutu stili (başlıksız) */
 .hizmet-tab-alani {
     max-width: 1200px;
-    margin: 40px auto;
-    background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 40%, #ffffff 100%);
-    border-radius: 16px;
-    padding: 53px 28px 30px;
-    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.06);
+    margin: 25px auto; /* Rozetler ile aradaki dış boşluğu azalttık */
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 25px 25px 25px; /* üst ve alt gri çerçeve ile butonlar arası 25px */
+    border: 1px solid #d1d1d1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
     position: relative;
     overflow: hidden;
 }
 
-.hizmet-tab-alani::before {
-    content: "";
-    position: absolute;
-    right: -80px;
-    top: -80px;
-    width: 220px;
-    height: 220px;
-    background: radial-gradient(circle at center, rgba(0, 0, 128, 0.10), transparent 60%);
-    pointer-events: none;
+/* Ana sayfada tab butonlarını her ekranda ortala */
+body.ana-sayfa .hizmet-tab-alani {
+    text-align: center;
 }
 
+/* Ana sayfa hizmet tab alanında dekoratif arka plan dairelerini kaldır */
+.hizmet-tab-alani::before,
 .hizmet-tab-alani::after {
-    content: "";
-    position: absolute;
-    left: -60px;
-    bottom: -60px;
-    width: 180px;
-    height: 180px;
-    background: radial-gradient(circle at center, rgba(189, 5, 5, 0.08), transparent 60%);
-    pointer-events: none;
+    content: none;
 }
 
 /* Radyo butonlarını gizle */
@@ -41,43 +31,56 @@
     display: none !important; 
 }
 
-/* 2. Ana Tab Etiketleri (Dil Okulları / Yaz Okulları) */
-.ana-tab-etiket {
-    display: inline-block;
-    padding: 11px 32px;
-    font-weight: 700;
+/* 2. Ana sayfa hizmet tab alanındaki tüm butonlar için ortak stil
+   (ana sekmeler + alt sekmeler) – sadece ana sayfada geçerli */
+body.ana-sayfa .hizmet-tab-alani .ana-tab-etiket,
+body.ana-sayfa .hizmet-tab-alani .alt-tab-etiket {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 16px 20px;
+    font-weight: 600;
     cursor: pointer;
-    color: #4a4a4a;
-    background: rgba(255, 255, 255, 0.9);
-    border: 1px solid rgba(0, 0, 0, 0.03);
-    border-radius: 5px;
-    margin-right: 8px;
-    margin-top: 10px;
-    text-transform: uppercase;
-    font-size: 14px;
-    letter-spacing: 0.5px;
-    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
+    color: #0f172a;
+    background: linear-gradient(135deg, #f9fafb 0%, #ffffff 45%, #ecfeff 100%);
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    margin: 10px 12px 10px 0;
+    text-transform: none;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.06);
     backdrop-filter: blur(8px);
-    transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease,
+                background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+    white-space: nowrap;
+    text-align: center;
 }
 
-/* Ana Tab Hover */
-.ana-tab-etiket:hover {
-    background: #f3f4ff;
-    border-color: rgba(0, 0, 128, 0.18);
-    color: #000080;
-    transform: translateY(-1px);
-    box-shadow: 0 10px 22px rgba(15, 23, 42, 0.1);
+/* Ana butonların üst/alt boşluğunu gri çizgiye göre ortala */
+body.ana-sayfa .hizmet-tab-alani .ana-tab-etiket {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
-/* Aktif Ana Tab (Lacivert) */
-#tab-dil:checked ~ label[for="tab-dil"],
-#tab-yaz:checked ~ label[for="tab-yaz"] {
-    background: #000080 !important;
+/* Ana ve alt tab butonları için ortak hover animasyonu */
+body.ana-sayfa .hizmet-tab-alani .ana-tab-etiket:hover,
+body.ana-sayfa .hizmet-tab-alani .alt-tab-etiket:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+    border-color: #0f766e;
+    background: linear-gradient(135deg, #ecfeff 0%, #e0f2fe 40%, #f9fafb 100%);
+}
+
+/* Aktif Ana Tab – alt butonlarla aynı renk, sadece boyut farkı */
+body.ana-sayfa #tab-dil:checked ~ label[for="tab-dil"],
+body.ana-sayfa #tab-yaz:checked ~ label[for="tab-yaz"] {
+    background: #bd0505 !important;
     color: #ffffff !important;
-    border-color: #000080 !important;
+    border-color: #bd0505 !important;
     box-shadow: 0 14px 28px rgba(15, 23, 42, 0.2);
-    transform: translateY(-1px);
+    transform: translateY(-3px);
 }
 
 /* 3. Ana Panel Gösterimi */
@@ -87,32 +90,25 @@
 
 /* 4. Alt Tab Kapsayıcı (Ülkeler Bölümü) */
 .alt-tab-kapsayici {
-    margin-top: 26px;
-    padding-top: 18px;
+    margin-top: 25px;
+    padding-top: 25px;
     border-top: 1px solid rgba(148, 163, 184, 0.2);
 }
 
-.alt-tab-etiket {
-    display: inline-block;
-    padding: 7px 18px;
-    margin: 0 6px 10px 0;
-    font-weight: 600;
-    cursor: pointer;
-    color: #64748b;
-    background: rgba(255, 255, 255, 0.95);
-    border: 1px solid rgba(148, 163, 184, 0.35);
-    border-radius: 5px;
+/* Alt sekmeler – sadece boyut farkı (daha küçük) */
+body.ana-sayfa .hizmet-tab-alani .alt-tab-etiket {
+    padding: 12px 16px;
     font-size: 13px;
-    transition: all 0.18s ease;
 }
 
-/* Alt Tab Hover */
-.alt-tab-etiket:hover {
-    border-color: rgba(189, 5, 5, 0.55);
-    color: #bd0505;
-    background: #fff5f5;
-    transform: translateY(-1px);
+/* Ana sekme butonları: üst ve alt gri çerçeve ile alt çizgi arasında
+   dikeyde daha ortalı dursun */
+body.ana-sayfa .hizmet-tab-alani .ana-tab-etiket {
+    margin-top: 0;
+    margin-bottom: 0;
 }
+
+/* Alt Tab Hover (üstteki ortak kuralla aynı; burada ekstra stil yok) */
 
 /* Aktif Alt Tab (Kırmızı) */
 #dil-ing:checked ~ label[for="dil-ing"],
@@ -128,7 +124,12 @@
 }
 
 /* 5. Alt Panel Gösterimi */
-.alt-panel { display: none !important; margin-top: 20px; width: 100%; }
+.alt-panel {
+    display: none !important;
+    margin-top: 20px;
+    margin-bottom: 25px; /* Altında 25px dış boşluk */
+    width: 100%;
+}
 #dil-ing:checked ~ #panel-dil-ing,
 #dil-usa:checked ~ #panel-dil-usa,
 #yaz-ing:checked ~ #panel-yaz-ing,
@@ -148,14 +149,24 @@
     align-items: flex-start;
     gap: 30px;
     background: #ffffff;
-    padding: 24px 26px;
+    padding: 24px 26px 25px 26px; /* alt padding 25px */
     border-radius: 14px;
     box-shadow: 0 14px 32px rgba(15, 23, 42, 0.08);
     animation: fadeIn 0.4s ease;
 }
 
+/* Alt paneller içindeki çerçevenin köşeleri 0px olsun */
+.alt-panel .tab-ic-icerik {
+    border-radius: 0;
+}
+
 .tab-metin h3 { color: #000080; font-size: 20px; margin-bottom: 10px; font-weight: 700; }
 .tab-metin p { color: #666; font-size: 14px; margin-bottom: 20px; }
+
+/* Tab içindeki metin ve başlıkları sola yasla */
+.tab-metin {
+    text-align: left;
+}
 
 /* Link Listesi */
 .tab-link-listesi { list-style: none; padding: 0; margin-bottom: 20px; }
@@ -182,7 +193,15 @@
 @media (max-width: 768px) {
     .hizmet-tab-alani { padding: 15px; margin: 20px 15px; }
     .tab-ic-icerik { flex-direction: column; padding: 20px; gap: 20px; }
-    .ana-tab-etiket { width: calc(50% - 5px); padding: 12px 5px; font-size: 12px; margin-right: 5px; margin-bottom: 10px; }
+    /* Ana sekme butonları: içerik kadar geniş, daha küçük padding ve font;
+       böylece 768 altı ekranda da daha geç alt satıra geçerler */
+    .ana-tab-etiket {
+        width: auto;
+        padding: 10px 14px;
+        font-size: 13px;
+        margin-right: 8px;
+        margin-bottom: 8px;
+    }
     .alt-tab-etiket { font-size: 12px; padding: 6px 12px; }
     .tab-aksiyon { width: 100%; }
     .ana-buton { width: 100%; }
