@@ -509,7 +509,7 @@ body.ana-sayfa {
 /* =========================================
     MOBİL DÜZENLEMELER (768px ALTI)
    ========================================= */
-@media (max-width: 500px) {
+@media (max-width: 768px) {
     .ust-serit-kapsayici {
         justify-content: center; 
     }
@@ -523,9 +523,15 @@ body.ana-sayfa {
         padding: 10px 0;
     }
 
-    /* Header içi yatay boşluğu sağda sıfırla ki
-       sosyal medya ikonları gerçekten en sağa dayansın */
+    /* Logo mobilde masaüstüne göre yaklaşık %25 daha küçük (76px → 57px) */
+    .logo img {
+        max-height: 57px !important;
+    }
+
+    /* Logo satırı: üst ve alt boşluk 15px, sağ sıfır */
     .ust-menu .ust-alan {
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
         padding-right: 0 !important;
     }
 
