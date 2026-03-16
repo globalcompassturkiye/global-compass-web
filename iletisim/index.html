@@ -158,23 +158,23 @@
         <section class="iletisim-form-alani">
             <h2>Bilgi İstek Formu</h2>
             <p>Yurt dışı eğitim danışmanlığı, program seçenekleri, fiyatlar ve başvuru süreçleri hakkında bilgi almak için formu doldurmanız yeterlidir. Uzman danışmanlarımız en kısa sürede sizinle iletişime geçecektir.</p>
-            <form action="https://formspree.io/f/xykndryw" method="POST">
+            <form id="iletisim-formu" action="#" method="POST">
                 <div class="form-satir">
-                    <input type="text" placeholder="Adınız" required>
-                    <input type="text" placeholder="Soyadınız" required>
+                    <input type="text" name="ad" placeholder="Adınız" required>
+                    <input type="text" name="soyad" placeholder="Soyadınız" required>
                 </div>
                 <div class="form-satir">
-                    <input type="tel" placeholder="Telefon*" required>
-                    <input type="email" placeholder="E-Posta*" required>
+                    <input type="tel" name="telefon" placeholder="Telefon*" required>
+                    <input type="email" name="email" placeholder="E-Posta*" required>
                 </div>
                 <div class="form-grup">
                     <div class="radyo-grup">
-                        <label><input type="radio" name="kimlik-iletisim" value="ogrenci"> Öğrenciyim</label>
-                        <label><input type="radio" name="kimlik-iletisim" value="veli"> Veliyim</label>
-                        <label><input type="radio" name="kimlik-iletisim" value="diger"> Diğer</label>
+                        <label><input type="radio" name="kimlik" value="ogrenci"> Öğrenciyim</label>
+                        <label><input type="radio" name="kimlik" value="veli"> Veliyim</label>
+                        <label><input type="radio" name="kimlik" value="diger"> Diğer</label>
                     </div>
                 </div>
-                <textarea placeholder="Merak Ettikleriniz*" rows="4" required></textarea>
+                <textarea name="mesaj" placeholder="Merak Ettikleriniz*" rows="4" required></textarea>
                 <div class="kvkk-satir">
                     <div class="kvkk-alani">
                         <input type="checkbox" id="kvkk-onay-iletisim" required>
@@ -184,6 +184,40 @@
                     </div>
                     <button type="submit" class="form-buton-kucuk">Gönder</button>
                 </div>
+            <script>
+document.getElementById('iletisim-formu').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var form = e.target;
+  var buton = form.querySelector('button[type="submit"]');
+  buton.disabled = true;
+  
+  var payload = {
+    ad: form.querySelector('[name="ad"]').value.trim(),
+    soyad: form.querySelector('[name="soyad"]').value.trim(),
+    email: form.querySelector('[name="email"]').value.trim(),
+    telefon: form.querySelector('[name="telefon"]').value.trim(),
+    kimlik: (form.querySelector('[name="kimlik"]:checked') || {}).value || '',
+    mesaj: form.querySelector('[name="mesaj"]').value.trim()
+  };
+
+  fetch('https://global-compass-paytr.canmuratsubat.workers.dev/iletisim', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  })
+  .then(function(res) {
+    if (!res.ok) throw new Error('Hata');
+    form.reset();
+    alert('Mesajınız iletildi, en kısa sürede sizinle iletişime geçeceğiz.');
+  })
+  .catch(function() {
+    alert('Bir hata oluştu, lütfen tekrar deneyin.');
+  })
+  .finally(function() {
+    buton.disabled = false;
+  });
+});
+</script>
             </form>
         </section>
 
