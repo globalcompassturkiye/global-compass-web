@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ödeme Başarılı | Global Compass</title>
+    <title>Ödeme Başarısız | Global Compass</title>
     <link rel="icon" href="/img/global-compass-favicon.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,20 +21,20 @@
             text-align: center;
         }
         .odeme-sonuc-kutu {
-            border: 1px solid #d1d1d1;
+            border: 1px solid #fecaca;
             border-radius: 10px;
             padding: 40px 25px 30px;
-            background: #ffffff;
-            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+            background: #fef2f2;
+            box-shadow: 0 10px 25px rgba(185, 28, 28, 0.08);
         }
         .odeme-sonuc-kutu h1 {
             font-size: 26px;
-            color: #065f46;
+            color: #b91c1c;
             margin-bottom: 10px;
         }
         .odeme-sonuc-kutu p {
             font-size: 14px;
-            color: #4b5563;
+            color: #7f1d1d;
             margin-bottom: 16px;
         }
         .odeme-sonuc-kutu .buton-alani {
@@ -93,57 +93,16 @@
                     </a>
                 </div>
             </div>
-
-            <button type="button" class="nav-toggle" aria-label="Menüyü aç/kapat" aria-expanded="false" aria-controls="nav-menu">
-                <span class="nav-toggle-bar"></span>
-                <span class="nav-toggle-bar"></span>
-                <span class="nav-toggle-bar"></span>
-            </button>
-            <nav class="navigasyon" id="nav-menu" aria-label="Ana menü">
-                <ul class="nav-list">
-                    <li><a href="/">Ana Sayfa</a></li>
-                    <li class="has-dropdown">
-                        <a href="/yurt-disi-lise" aria-haspopup="true" aria-expanded="false">Lise</a>
-                        <ul class="submenu">
-                            <li><a href="/yurt-disi-lise/">Tümü</a></li>
-                            <li><a href="/yurt-disi-lise/degisim-programlari/">Değişim Programları</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/yurt-disi-universite">Üniversite</a></li>
-                    <li><a href="/yurt-disi-yuksek-lisans-mba">Yüksek Lisans & MBA</a></li>
-                    <li><a href="/yurt-disi-online-egitim">Online Eğitim</a></li>
-                    <li><a href="/yurt-disi-burs-firsatlari">Burs Fırsatları</a></li>
-                    <li class="has-dropdown">
-                        <a href="/yurt-disi-dil-okullari" aria-haspopup="true" aria-expanded="false">Dil Okulları</a>
-                        <ul class="submenu">
-                            <li><a href="/yurt-disi-dil-okullari">Tümü</a></li>
-                            <li><a href="/yurt-disi-dil-okullari/uk/">İngiltere</a></li>
-                            <li><a href="/yurt-disi-dil-okullari/usa/">Amerika</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-dropdown">
-                        <a href="/yurt-disi-yaz-okullari" aria-haspopup="true" aria-expanded="false">Yaz Okulları</a>
-                        <ul class="submenu">
-                            <li><a href="/yurt-disi-yaz-okullari">Tümü</a></li>
-                            <li><a href="/yurt-disi-yaz-okullari/uk/">İngiltere</a></li>
-                            <li><a href="/yurt-disi-yaz-okullari/switzerland/">İsviçre</a></li>
-                            <li><a href="/yurt-disi-yaz-okullari/germany/">Almanya</a></li>
-                            <li><a href="/yurt-disi-yaz-okullari/canada/">Kanada</a></li>
-                            <li><a href="/yurt-disi-yaz-okullari/italy/">İtalya</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
         </header>
     </div>
 
     <article class="icerik-alani odeme-sonuc-kapsayici">
         <div class="odeme-sonuc-kutu">
-            <h1>Ödemeniz Başarıyla Tamamlandı</h1>
-            <p>Ödemeniz için teşekkür ederiz. Danışmanlarımız en kısa sürede sizinle iletişime geçecektir.</p>
-            <p>Herhangi bir sorunuz olursa <a href="/iletisim/">iletişim</a> sayfamızdan bize ulaşabilirsiniz.</p>
+            <h1>Ödeme Tamamlanamadı</h1>
+            <p>Ödeme işleminiz sırasında bir hata oluştu veya işlem iptal edildi.</p>
+            <p>Lütfen tekrar deneyin. Sorun devam ederse iletişim sayfamız üzerinden bize ulaşabilirsiniz.</p>
             <div class="buton-alani">
-                <a href="/" class="odeme-sonuc-buton">Ana Sayfaya Dön</a>
+                <a href="/payment/tr/" class="odeme-sonuc-buton">Tekrar Dene</a>
             </div>
         </div>
     </article>
@@ -162,10 +121,10 @@
                 </div>
             </div>
             <nav class="footer-kvkk-satiri">
-                <a href="/kvkk-aydinlatma-metni">KVKK Aydınlatma Metni</a>
-                <a href="/kvkk-acik-riza-metni">KVKK Açık Rıza Metni</a>
+                <a href="/kvkk-aydinlatma-metni">KVKK Aydınlatma Metни</a>
+                <a href="/kvkk-acik-riza-metni">KVKK Açık Rıza Metни</a>
                 <a href="/gizlilik-politikasi">Gizlilik Politikası</a>
-                <a href="/cerez-aydinlatma-metni">Çerez Aydınlatma Metni</a>
+                <a href="/cerez-aydinlatma-metni">Çerez Aydınlatma Metни</a>
             </nav>
         </div>
         <div class="footer-alt-telif">
