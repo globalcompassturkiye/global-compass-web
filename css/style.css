@@ -2024,7 +2024,7 @@ p + .kirmizi-kutu {
     line-height: 1.8;
     color: #555;
     margin-bottom: 40px;
-    text-align: center !important; /* Karşılama metni ortalı daha şık durur */
+    text-align: justify !important;
 }
 
 /* Buton Grupları */
@@ -2082,7 +2082,8 @@ p + .kirmizi-kutu {
 
 /* Mobilde Ölçekleme */
 @media (max-width: 768px) {
-    .karsilama-icerik h1 { font-size: 32px !important; }
+    .karsilama-icerik h1 { font-size: 28px !important; }
+    .ana-p { text-align: justify !important; }
     .karsilama-aksiyon { flex-direction: column; }
     .guven-rozetleri { flex-direction: column; gap: 10px; }
 }
@@ -2146,6 +2147,7 @@ p + .kirmizi-kutu {
 /* Mobil Düzenleme */
 @media (max-width: 768px) {
     .ana-logo-baslik { font-size: 16px !important; flex-direction: column; gap: 5px; }
+    .ana-marka-baslik { font-size: 28px !important; }
     .vurgu-renk2 { border-left: none; padding-left: 0; }
     .dev-slogan { font-size: 34px !important; }
 }
