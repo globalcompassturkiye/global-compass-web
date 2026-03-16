@@ -351,6 +351,7 @@ body.ana-sayfa {
 /* Hamburger altında "Menü" yazısı */
 .nav-toggle::after {
     content: "Menü";
+    position: static;
     margin-top: 4px;
     font-size: 11px;
     font-weight: 600;
@@ -529,18 +530,26 @@ body.ana-sayfa {
     }
 
     .navigasyon ul {
-        gap: 8px;
-        padding: 0 10px;
+        gap: 0;
+        padding: 0;
     }
-    
-    .navigasyon a {
-        font-size: 13px;
-        padding: 4px 2px 8px 2px;
+
+    /* Açılan mobil menüde her satır kompakt ve tam genişlikte olsun */
+    .navigasyon > ul > li {
+        flex: 0 0 auto;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        border-right: none;
+        border-bottom: 1px solid #f0f0f5;
     }
 
     .navigasyon .nav-list > li > a {
-        padding: 12px 20px;
-        font-size: 18px;
+        display: block;
+        width: 100%;
+        padding: 10px 20px;
+        font-size: 16px;
+        text-align: left;
     }
     .nav-toggle {
         left: 20px;
