@@ -358,6 +358,10 @@
         var form = document.getElementById('odeme-formu');
         var hataKutusu = document.getElementById('odeme-hata');
         var buton = document.getElementById('odeme-buton');
+        var tutarInput = document.getElementById('tutar');
+        var siparisInput = document.getElementById('siparis-id');
+        var siparisBilgi = document.getElementById('siparis-bilgi');
+        var tutarGorunum = document.getElementById('tutar-gorunum');
 
         function gosterHata(mesaj) {
             if (!hataKutusu) return;
@@ -371,16 +375,12 @@
             hataKutusu.style.display = 'none';
         }
 
-        // URL'den sipariş ID oku ve sipariş detayını getir
-        (function() {
+        // Sayfa yüklenince URL'den id'yi oku ve siparişi getir
+        (function hazirlaSiparis() {
             var params = new URLSearchParams(window.location.search || '');
             var urlId = params.get('id');
-            var siparisInput = document.getElementById('siparis-id');
-            var tutarInput = document.getElementById('tutar');
-            var siparisBilgi = document.getElementById('siparis-bilgi');
-
             if (!urlId) {
-                gosterHata('Geçersiz ödeme bağlantısı. Lütfen danışmanınızla iletişime geçin.');
+                gosterHata('Geçersiz ödeme bağlantısı.');
                 if (buton) buton.disabled = true;
                 return;
             }
@@ -392,7 +392,7 @@
             fetch('https://global-compass-paytr.canmuratsubat.workers.dev/siparis?id=' + encodeURIComponent(urlId))
                 .then(function(res) {
                     if (!res.ok) {
-                        throw new Error('not_found');
+                        throw new Error('fetch_failed');
                     }
                     return res.json();
                 })
@@ -400,13 +400,11 @@
                     if (!data || typeof data.tutar === 'undefined') {
                         throw new Error('no_amount');
                     }
+                    // 4. tutar değerini hidden input'a yaz
                     if (tutarInput) {
                         tutarInput.value = data.tutar;
                     }
-                    if (siparisBilgi && data.ad) {
-                        siparisBilgi.textContent = 'Sipariş: ' + data.ad;
-                    }
-                    var tutarGorunum = document.getElementById('tutar-gorunum');
+                    // 5. Ödenecek Tutar: 45.097,00 TL
                     if (tutarGorunum) {
                         var sayi = Number(data.tutar);
                         if (!isNaN(sayi)) {
@@ -414,10 +412,14 @@
                             tutarGorunum.textContent = 'Ödenecek Tutar: ' + formatted + ' TL';
                         }
                     }
+                    // Sipariş açıklaması (ad) göster
+                    if (siparisBilgi && data.ad) {
+                        siparisBilgi.textContent = 'Sipariş: ' + data.ad;
+                    }
                 })
                 .catch(function(err) {
                     console.error(err);
-                    gosterHata('Geçersiz ödeme bağlantısı. Lütfen danışmanınızla iletişime geçin.');
+                    gosterHata('Geçersiz ödeme bağlantısı.');
                     if (buton) buton.disabled = true;
                 });
         })();
@@ -462,10 +464,10 @@
                 var soyad = document.getElementById('soyad').value.trim();
                 var email = document.getElementById('email').value.trim();
                 var telefon = document.getElementById('telefon').value.trim();
-                var tutar = document.getElementById('tutar').value.trim();
-                var siparisId = document.getElementById('siparis-id').value.trim();
+                var tutar = tutarInput ? tutarInput.value.trim() : '';
+                var siparisId = siparisInput ? siparisInput.value.trim() : '';
 
-                if (!ad || !soyad || !email || !telefon || !tutar) {
+                if (!ad || !soyad || !email || !telefon || !tutar || !siparisId) {
                     gosterHata('Lütfen tüm alanları doldurun.');
                     buton.disabled = false;
                     return;
