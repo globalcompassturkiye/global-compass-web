@@ -131,6 +131,10 @@ h1 {
         padding-left: 15px;
         padding-right: 15px;
     }
+    body.ana-sayfa .icerik-alani.ana-hizmetler-bolumu {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 
 /* Ana sayfa – hizmet kartları bölümü (alt grid) */
