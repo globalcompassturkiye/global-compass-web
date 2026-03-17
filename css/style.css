@@ -1508,35 +1508,11 @@ p + .kirmizi-kutu {
 
 /* 501px altı: gri çerçeveler bilgi istek formu ile aynı genişlikte */
 @media (max-width: 501px) {
-    .gri-cerceve-kutu {
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        width: 100% !important;
-    }
-
-    /* Ana sayfa hizmet kartları için tek sütun ve eşit yükseklik */
-    body.ana-sayfa .beceri-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 20px;
-        align-items: stretch;
-    }
-
-    body.ana-sayfa .ana-hizmet-karti {
-        display: flex;
-        flex-direction: column;
-        min-height: 180px;
-        height: 100%;
-    }
-
-    body.ana-sayfa .ana-hizmet-karti h3 {
-        margin-bottom: 10px;
-        flex-shrink: 0;
-    }
-
-    body.ana-sayfa .ana-hizmet-karti p {
-        flex-grow: 1;
-        margin: 0;
+    .gri-cerceve-kutu,
+    body.ana-sayfa .hizmet-tab-alani {
+        margin-left: 15px !important;
+        margin-right: 15px !important;
+        width: auto !important;
     }
 }
 
