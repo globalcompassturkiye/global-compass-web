@@ -49,6 +49,7 @@ input:checked + .ana-tab-etiket {
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
+    margin-top: 25px;
     background-color: #f0f4f8;
     /* ... diğer ayarlar ... */
 }

@@ -36,6 +36,12 @@
     justify-content: space-between; /* İçeriği kartın boyuna yayar */
 }
 
+/* Bilgi istek formu altındaki tek yönlendirme kartı kırmızı bant ve form ile aynı genişlikte olsun */
+.yonlendirme-karti {
+    max-width: 1100px;
+    margin: 25px auto 0 auto;
+}
+
 /* Hover Efekti: Daha derin gölge ve lacivert vurgu */
 .yonlendirme-karti:hover { 
     transform: translateY(-8px); 

@@ -63,10 +63,15 @@
     gap: 10px;      /* Logo ile menü arası boşluk 25px'den 10px'e çekildi */
 }
 
-/* Tüm sayfalarda üst alandaki logo satırı için standart padding */
+/* Tüm sayfalarda üst alandaki logo + sosyal medya satırı için standart yerleşim */
 .ust-menu .ust-alan {
+    max-width: 1400px;
+    margin: 0 auto;
     padding: 16px 24px 20px !important;
     box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
 }
 
 .logo img {
@@ -544,10 +549,10 @@ body.ana-sayfa {
         max-height: 57px !important;
     }
 
-    /* Logo satırı: üst ve alt boşluk 15px, sağ sıfır */
+    /* Logo satırı: üst ve alt boşluk 5px, sağ sıfır */
     .ust-menu .ust-alan {
-        padding-top: 15px !important;
-        padding-bottom: 15px !important;
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
         padding-right: 0 !important;
     }
 

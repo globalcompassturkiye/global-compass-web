@@ -6,13 +6,14 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 18px;
     justify-content: center;
-    margin: 35px 0 60px 0;
+    max-width: 1100px;
+    margin: 35px auto 60px auto;
 }
 
 .ulke-secim-butonlari .ulke-buton {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 12px;
     padding: 16px 18px;
     border-radius: 12px;
@@ -46,13 +47,10 @@
     transform: translateX(4px);
 }
 
-/* Ülke bazlı hafif renk vurguları (UK & USA) */
-.ulke-buton-uk {
-    background: linear-gradient(135deg, #eff6ff 0%, #ffffff 50%, #e0f2fe 100%);
-}
-
+/* Ülke bazlı hafif renk vurguları (UK & USA) – ana sayfa alt tab tasarımıyla tam uyum için iptal edildi */
+.ulke-buton-uk,
 .ulke-buton-usa {
-    background: linear-gradient(135deg, #fef2f2 0%, #ffffff 50%, #fee2e2 100%);
+    background: linear-gradient(135deg, #f9fafb 0%, #ffffff 45%, #ecfeff 100%);
 }
 
 @media (max-width: 768px) {
