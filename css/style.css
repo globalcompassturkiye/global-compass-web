@@ -122,6 +122,26 @@ h1 {
     }
 }
 
+@media (max-width: 768px) {
+    .icerik-alani {
+        margin: 0;
+        width: 100%;
+        padding: 0 15px;
+    }
+}
+
+/* Ana sayfa – hizmet kartları bölümü (alt grid) */
+.ana-sayfa .icerik-alani.ana-hizmetler-bolumu {
+    margin-top: 40px;
+    padding: 0 45px;
+}
+
+.ana-sayfa .beceri-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px 20px;
+}
+
 p {
     font-size: 15px;
     color: #000;
@@ -141,6 +161,25 @@ p {
     display: inline-block;
 }
 
+.ana-sayfa .beceri-grid h3 {
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    background: #ffffff;
+    padding: 0 10px;
+    color: #000080;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.ana-sayfa .beceri-grid p {
+    font-size: 14px;
+    color: #555555;
+    margin: 0;
+}
+
 /* =========================================
     3. GRI ÇERÇEVE KUTU VE LİSTELER
    ========================================= */
@@ -158,6 +197,16 @@ p {
 /* Ana sayfa hizmet kartları – kurumsal hover */
 a.ana-hizmet-karti {
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+}
+a.ana-hizmet-karti.gri-cerceve-kutu {
+    display: block;
+    position: relative;
+    border: 1px solid #dddddd;
+    padding: 25px 20px;
+    margin: 0;
+    border-radius: 5px;
+    text-decoration: none;
+    color: inherit;
 }
 a.ana-hizmet-karti:hover {
     transform: translateY(-6px);

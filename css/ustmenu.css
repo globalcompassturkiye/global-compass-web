@@ -135,16 +135,23 @@ body.ana-sayfa {
     background: linear-gradient(90deg, #000070 0%, #000080 50%, #000090 100%);
 }
 .ana-sayfa .ust-menu {
-    background: #fff;
-    border-bottom: 1px solid #f0f0f5;
+    background: #ffffff;
+    border-bottom: 1px solid #eeeeee;
     padding: 0;
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.04);
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 .ana-sayfa .ust-menu .ust-alan {
     max-width: 1920px;
     width: 100%;
     position: relative;
+    margin: 0 auto;
+    padding: 20px !important;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
 }
 /* Ana sayfa logosu da tüm sayfalarla aynı yüksekliği kullanır */
 .ana-sayfa .logo img {
@@ -160,6 +167,15 @@ body.ana-sayfa {
     gap: 20px;
     justify-content: flex-end;
     align-items: center;
+}
+
+.sosyal-medya-alani a {
+    transition: transform 0.3s ease;
+    background: none;
+}
+
+.sosyal-medya-alani img {
+    display: block;
 }
 
 /* --- Ana sayfa navigasyon: 1920px tam genişlik, sol-sağ dayalı, çok açık yeşil zemin --- */
