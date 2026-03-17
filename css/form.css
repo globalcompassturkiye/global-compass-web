@@ -30,6 +30,14 @@
     margin: 0;
 }
 
+@media (max-width: 501px) {
+    .iletisim-form-alani h2 {
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
+
 .iletisim-form-alani > p {
     padding: 0;
     margin: 0 0 20px;

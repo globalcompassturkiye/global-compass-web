@@ -80,7 +80,7 @@
 /* MOBİL (501px ALTI) */
 @media (max-width: 768px) {
     .alt-yonlendirme-alani {
-        margin: 0 10px 40px 10px;
+        margin: 0 0 40px 0;
         gap: 20px;
     }
     .okul-liste-kapsayici .alt-yonlendirme-alani {
@@ -90,5 +90,14 @@
     .yonlendirme-karti {
         padding: 25px;
         min-width: 100%; /* Mobilde tam genişlik */
+    }
+}
+
+@media (max-width: 501px) {
+    .yonlendirme-karti h1,
+    .yonlendirme-karti h2,
+    .yonlendirme-karti h3,
+    .yonlendirme-karti h4 {
+        text-align: center;
     }
 }

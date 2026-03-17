@@ -122,6 +122,14 @@ h1 {
     }
 }
 
+/* Online eğitim hero alanı da 501px altında 15px standardına uysun */
+@media (max-width: 501px) {
+    .online-hero {
+        margin: 0;
+        margin-bottom: 25px;
+    }
+}
+
 @media (max-width: 768px) {
     body.ana-sayfa .icerik-alani,
     body.ana-sayfa .hizmet-tab-alani {
@@ -1506,13 +1514,30 @@ p + .kirmizi-kutu {
     .ana-buton { width: 100% !important; margin: 0; }
 }
 
-/* 501px altı: gri çerçeveler bilgi istek formu ile aynı genişlikte */
+/* 501px altı: tüm içerikler ekrandan 15px içeride hizalansın */
 @media (max-width: 501px) {
+    /* Dış konteyner: tüm sayfalarda metin ve kutular için 15px iç boşluk */
+    .icerik-alani {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    /* İç içe icerik-alani kullanılıyorsa (üniversite sayfası gibi),
+       iç katmanlar ekstra padding eklemesin; sadece en dış katman 15px olsun */
+    .icerik-alani .icerik-alani {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    /* İçteki çerçeve kutular: container içinde tam otursun (ekstra margin yok) */
     .gri-cerceve-kutu,
-    body.ana-sayfa .hizmet-tab-alani {
-        margin-left: 15px !important;
-        margin-right: 15px !important;
-        width: auto !important;
+    .hizmet-tab-alani,
+    .kirmizi-kutu,
+    .iletisim-form-alani,
+    .yonlendirme-karti {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: 100% !important;
     }
 }
 

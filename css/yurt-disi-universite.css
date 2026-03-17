@@ -64,3 +64,58 @@
     }
 }
 
+/* Ana metin altındaki avantaj grid'i (Kariyer, Eğitim Kalitesi, Kişisel Gelişim, Neden Biz) */
+
+.uni-avantaj-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+    background: #ffffff;
+}
+
+.uni-avantaj-grid .gri-cerceve-kutu {
+    margin: 20px 0;
+    padding-top: 45px;
+    border-color: #dddddd;
+}
+
+.uni-avantaj-grid .kutu-baslik {
+    background: #000080 !important;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.uni-avantaj-grid .kutu-liste > li > strong {
+    display: block;
+    color: #000080;
+    margin-bottom: 2px;
+}
+
+/* En alttaki geniş kırmızı başlıklı kutu */
+.uni-avantaj-grid .kutu-baslik.uni-kirmizi-baslik {
+    background: #bd0505 !important;
+}
+
+.uni-avantaj-ic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 10px;
+}
+
+.icerik-alani.uni-avantaj-bolumu {
+    margin-top: 40px;
+}
+
+/* 501px altı: üniversite sayfasında iç içe icerik-alani kullanan bloklarda
+   sadece en dış katman 15px padding alsın */
+@media (max-width: 501px) {
+    /* Ana article zaten 15px padding alıyor; içteki icerik-alani'lerin
+       extra padding eklememesini sağlıyoruz */
+    .premium-uni-alani.icerik-alani,
+    .icerik-alani.uni-avantaj-bolumu {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
