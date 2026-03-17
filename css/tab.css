@@ -207,3 +207,33 @@ body.ana-sayfa .hizmet-tab-alani .ana-tab-etiket {
     .ana-buton { width: 100%; }
 }
 
+@media (max-width: 501px) {
+    /* Alt sekme butonları: aynı yükseklik ve grid gibi dizilim */
+    .alt-tab-kapsayici {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .alt-tab-etiket {
+        flex: 1 1 calc(50% - 5px);
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 10px 15px;
+        box-sizing: border-box;
+    }
+
+    /* Ana tab etiketleri için sabit yükseklik */
+    .hizmet-tab-alani > .ana-tab-etiket {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 55px;
+        padding: 0 20px;
+    }
+}
+
