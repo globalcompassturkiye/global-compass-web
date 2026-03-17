@@ -93,7 +93,11 @@
     }
 }
 
-@media (max-width: 501px) {
+@media (max-width: 768px) {
+    .okul-liste-kapsayici .yonlendirme-karti h1,
+    .okul-liste-kapsayici .yonlendirme-karti h2,
+    .okul-liste-kapsayici .yonlendirme-karti h3,
+    .okul-liste-kapsayici .yonlendirme-karti h4,
     .yonlendirme-karti h1,
     .yonlendirme-karti h2,
     .yonlendirme-karti h3,
