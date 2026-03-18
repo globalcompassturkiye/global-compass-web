@@ -38,7 +38,7 @@
 
 /* Bilgi istek formu altındaki tek yönlendirme kartı kırmızı bant ve form ile aynı genişlikte olsun */
 .yonlendirme-karti {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 25px auto 0 auto;
 }
 
@@ -96,6 +96,20 @@
     .yonlendirme-karti {
         padding: 25px;
         min-width: 100%; /* Mobilde tam genişlik */
+    }
+}
+
+/* 1200px ve üzeri: yönlendirme kartı çerçevesi %100 doldursun */
+@media (min-width: 1201px) {
+    .okul-liste-kapsayici .alt-yonlendirme-alani {
+        width: 100%;
+    }
+
+    .okul-liste-kapsayici .yonlendirme-karti {
+        width: 100% !important;
+        max-width: none !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
     }
 }
 

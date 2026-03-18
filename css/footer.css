@@ -87,6 +87,8 @@ input:checked + .ana-tab-etiket {
     font-size: 14px;
     color: #4a5568;
     margin: 0;
+    text-align: center;
+    width: 100%;
 }
 
 .footer-iletisim-satiri {
@@ -164,4 +166,11 @@ input:checked + .ana-tab-etiket {
     .footer-iletisim-satiri { flex-direction: column; gap: 10px; }
     .footer-ayrac { display: none; }
     .footer-kvkk-satiri { flex-direction: column; gap: 12px; }
+}
+
+/* 501px altı: adres iki satıra düşse bile ortalı dursun */
+@media (max-width: 501px) {
+    .footer-merkezi-icerik {
+        align-items: center;
+    }
 }

@@ -180,18 +180,22 @@
 
 .icerik-alani.uni-avantaj-bolumu {
     margin-top: 40px;
+    /* İç içe icerik-alani nedeniyle oluşan çift gutter'ı kaldır:
+       dıştaki icerik-alani üzerinden sadece tek gutter (15px / 25px) kalsın. */
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 
+/* İç içe icerik-alani (article -> section) nedeniyle bazı ekranlarda
+   en üst gri çerçeve 50px daha dar görünebiliyor.
+   Bu nested section padding'ini kaldırarak dış çerçevelerle aynı hizaya getiriyoruz. */
 /* 501px altı: üniversite sayfasında iç içe icerik-alani kullanan bloklarda
    sadece en dış katman 15px padding alsın */
 @media (max-width: 501px) {
     /* Ana article zaten 15px padding alıyor; içteki icerik-alani'lerin
        extra padding eklememesini sağlıyoruz */
     .premium-uni-alani.icerik-alani,
-    .icerik-alani.uni-avantaj-bolumu {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-    }
+    /* padding artık baz seviyede kapalı */
 }
 
 @media (max-width: 992px) {

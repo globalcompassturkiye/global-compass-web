@@ -4,7 +4,7 @@
 
 /* Sayfa genel - daha geniş içerik */
 .iletisim-sayfa.icerik-alani {
-    max-width: 1100px;
+    max-width: 1200px;
     padding: 0 20px 60px;
 }
 
@@ -263,12 +263,14 @@
 .iletisim-sss-kutu.gri-cerceve-kutu {
     border-radius: 16px;
     box-shadow: 0 4px 24px rgba(0,0,128,0.06);
+    max-width: 1200px;
 }
 
 /* ---------- RESPONSİVE ---------- */
 @media (max-width: 768px) {
     .iletisim-hero {
-        margin: 0 -20px;
+        /* style.css içinde 768px altı .icerik-alani için padding-left/right 15px'e düşüyor */
+        margin: 0 -15px;
         padding: 40px 24px 45px;
         border-radius: 16px;
     }
@@ -301,5 +303,20 @@
 
     .ofis-adres-alani {
         order: 1;
+    }
+
+    /* Mobilde padding/taşmayı engelle: tam genişlik */
+    .iletisim-kartlar,
+    .ofis-harita-kutu,
+    .iletisim-form-alani {
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .iletisim-sss-kutu.gri-cerceve-kutu {
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
     }
 }

@@ -2,8 +2,8 @@
     1. GENEL SIFIRLAMA VE TEMEL AYARLAR
    ========================================= */
 * {
-    margin: 0;
-    padding: 0;
+    margin: 50;
+    padding: 50;
     box-sizing: border-box;
 }
 
@@ -31,7 +31,7 @@ strong {
 .ana-sirali-liste > li > strong,
 .sss-item summary h3 {
     color: #2c3e50 !important;
-    font-size: 14px;
+    font-size: 28px;
     font-weight: 700;
 }
 
@@ -51,9 +51,9 @@ strong {
 }
 
 .icerik-alani {
-    max-width: 1150px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 25px; /* 1150 + 25 + 25 = 1200 toplam dış genişlik */
+    padding: 0 25px; /* max-width 1200 içinde, içeriğe 25px yan padding */
 }
 
 h1 {
@@ -83,13 +83,21 @@ h1 {
 /* Online eğitim sayfası hero alanı */
 .online-hero {
     position: relative;
-    margin: 0 -25px;
+    margin: 0 0 30px 0;
     padding: 50px 30px 55px;
     background: linear-gradient(135deg, #0a0a2e 0%, #16213e 40%, #1a237e 75%, #000080 100%);
     border-radius: 20px;
     overflow: hidden;
     text-align: center;
-    margin-bottom: 30px;
+}
+
+.sayfa-hero-gorsel {
+    margin: 0;
+}
+.sayfa-hero-gorsel img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 .online-hero-desen {
@@ -128,11 +136,45 @@ h1 {
     line-height: 1.8;
 }
 
+@media (min-width: 1201px) {
+    /* 1200px dış frame'ler: .icerik-alani iç padding'i (25px) telafi */
+    /* Ana sayfa hizmet kartları iç grid'de; global genişletme boşluk/oturmayı bozabiliyor */
+    .icerik-alani .gri-cerceve-kutu:not(.ana-hizmet-karti),
+    .icerik-alani .kirmizi-kutu,
+    .icerik-alani .hizmet-tab-alani,
+    .icerik-alani .iletisim-form-alani,
+    .icerik-alani .yonlendirme-karti,
+    .icerik-alani .okul-liste-kapsayici {
+        margin-left: -25px !important;
+        margin-right: -25px !important;
+        width: calc(100% + 50px) !important;
+        max-width: none !important;
+    }
+
+    /* Hero arka planları ve hero görselleri de dış frame ile aynı hizaya gelsin */
+    .icerik-alani [class$="-hero"],
+    .icerik-alani .sayfa-hero-gorsel {
+        margin-left: -25px !important;
+        margin-right: -25px !important;
+    }
+    .icerik-alani .sayfa-hero-gorsel {
+        width: calc(100% + 50px) !important;
+        max-width: none !important;
+    }
+}
+
 @media (max-width: 768px) {
     .online-hero {
-        margin: 0 -15px;
+        /* 501-768 aralığında da diğer çerçeveler gibi 15px yan boşluk bırakalım */
+        margin: 0;
         padding: 40px 20px 45px;
         border-radius: 16px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .sayfa-hero-gorsel {
+        margin: 0;
+        width: 100%;
     }
     .online-hero-baslik {
         font-size: 26px;
@@ -144,6 +186,9 @@ h1 {
     .online-hero {
         margin: 0;
         margin-bottom: 25px;
+    }
+    .sayfa-hero-gorsel {
+        margin: 0;
     }
 }
 
@@ -216,7 +261,7 @@ p {
     3. GRI ÇERÇEVE KUTU VE LİSTELER
    ========================================= */
 .gri-cerceve-kutu {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 45px auto 0 auto;
     border: 1px solid #d1d1d1;
     border-radius: 8px;
@@ -294,7 +339,7 @@ body.kings-oxford-sayfa .kings-oxford-foto {
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     background: #ffffff;
     padding: 0;
-    max-width: 1100px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
     column-gap: 25px;
@@ -359,7 +404,7 @@ body.kings-oxford-sayfa .kings-oxford-foto {
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     background: #ffffff;
     padding: 0;
-    max-width: 1100px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
     column-gap: 25px;
@@ -1374,7 +1419,7 @@ p + .kirmizi-kutu {
     background-color: #e30613;
     padding: 12px 0;
     border-radius: 5px;
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 25px auto 0 auto;
     display: flex;
     flex-direction: column;
@@ -1422,7 +1467,7 @@ p + .kirmizi-kutu {
     gap: 20px;
     justify-content: center;
     margin: 25px auto;
-    max-width: 1100px;
+    max-width: 1200px;
 }
 
 .kare-kart {
@@ -1583,7 +1628,7 @@ p + .kirmizi-kutu {
     border: none;        /* en dış kenarlığı kaldır */
     border-radius: 12px;
     margin-top: 15px;
-    max-width: 1100px;
+    max-width: 1200px;
 }
 
 .dahil-ana-baslik {
@@ -1967,7 +2012,7 @@ p + .kirmizi-kutu {
     9. MODERN OKUL LİSTESİ (PREMIUM)
    ========================================= */
 .okul-liste-kapsayici {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 50px auto 25px auto;
     border: 1px solid #d1d1d1;
     border-radius: 5px;
@@ -2111,8 +2156,10 @@ p + .kirmizi-kutu {
 
     /* Gri Kutu Taşma ve Boşluk Ayarı (genel) */
     .gri-cerceve-kutu {
-        margin: 45px 15px 0 15px;
-        width: calc(100% - 30px);
+        /* 768px altında da sol/sağ boşluğu parent (icerik-alani) padding'inden
+           üretilsin. Böylece breakpoint'ler arası boşluk farkı oluşmaz. */
+        margin: 45px 0 0 0;
+        width: 100%;
         padding: 40px 15px 15px 15px;
     }
 
@@ -2180,13 +2227,35 @@ p + .kirmizi-kutu {
 @media (max-width: 768px) {
     /* Ana sayfa hizmet kartları: kartlar arası dikey boşluk 25px olsun */
     .ana-sayfa .beceri-grid {
-        gap: 25px 0 !important;  /* dikey 25px, yatay 0 (zaten tek sütun) */
+        gap: 25px 20px !important;  /* dikey 25px, yatay 20px */
     }
     /* Kartlar arası dış boşluğu grid yönetsin, ekstra margin verme */
     a.ana-hizmet-karti.gri-cerceve-kutu {
         margin: 0 !important;
         /* Masaüstü görünümdeki iç padding’i koru (25px 20px) */
         padding: 25px 20px !important;
+    }
+}
+
+/* 1200px altı: sayfa içeriği sol/sağdan 15px boşlukla hizalansın */
+@media (max-width: 1200px) {
+    .icerik-alani {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    /* 1200px altı: dış frame'ler + hero'lar 15px gutter'ı bozmasın */
+    .icerik-alani .gri-cerceve-kutu,
+    .icerik-alani .kirmizi-kutu,
+    .icerik-alani .hizmet-tab-alani,
+    .icerik-alani .iletisim-form-alani,
+    .icerik-alani .yonlendirme-karti,
+    .icerik-alani [class$="-hero"],
+    .icerik-alani .sayfa-hero-gorsel {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: 100% !important;
+        max-width: none !important;
     }
 }
 
@@ -2220,6 +2289,7 @@ p + .kirmizi-kutu {
         margin-right: 0 !important;
         width: 100% !important;
     }
+
 
     /* Oxford & Boston Kings – 3'lü beceri kartları da
        diğer gri çerçevelerle aynı genişlikte olsun */
