@@ -68,15 +68,34 @@
 
 .uni-avantaj-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 10px;
     background: #ffffff;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Ana gri çerçeve (başlık + 3 kart) genişliği 1200px olsun */
+.uni-avantaj-main-kutu {
+    max-width: 1200px;
+    margin-top: 0;
+}
+
+.uni-avantaj-main-kutu .uni-avantaj-grid {
+    max-width: none; /* gri çerçevenin içinde tam yayılma */
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .uni-avantaj-grid .gri-cerceve-kutu {
     margin: 20px 0;
     padding-top: 45px;
     border-color: #dddddd;
+}
+
+.uni-avantaj-grid .immerse-detay-kart {
+    max-width: none !important; /* grid içinde eşit yayılma */
 }
 
 .uni-avantaj-grid .kutu-baslik {
@@ -96,11 +115,67 @@
     background: #bd0505 !important;
 }
 
+/* "Neden Üniversite Eğitimi İçin Bizi Seçmelisiniz?" kutusu 3 kartın altına insin */
+.uni-avantaj-grid .uni-avantaj-bizi-secmelisiniz-kutu {
+    grid-column: 1 / -1;
+}
+
+/* 2+1: 3. kart (Kişisel Gelişim) altta ortalı dursun */
+.uni-avantaj-grid > .immerse-detay-kart:nth-child(3) {
+    grid-column: 1 / -1;
+    justify-self: center;
+}
+
 .uni-avantaj-ic-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 15px;
     padding: 10px;
+}
+
+/* Bu sayfadaki rozet kartlarını (dahil-rozet-kart) ortala */
+.dahil-rozet-grid {
+    justify-items: center;
+}
+
+.dahil-rozet-kart {
+    justify-self: center;
+}
+
+/* Popüler Ülkeler (5 kart) -> 2+2+1 düzen */
+.ulke-egitim-grid-2-2-1 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    align-items: stretch;
+    justify-items: stretch;
+}
+
+.ulke-egitim-grid-2-2-1 > .dahil-rozet-kart:nth-child(5) {
+    /* 5. kart: 2 kolonun ortasında dursun ama diğer kartlarla aynı genişlikte kalsın */
+    grid-column: 1 / -1;
+    grid-row: 3;
+    justify-self: center;
+    width: calc(50% - 11px); /* column-gap(22px)'in yarısı kadar çıkar */
+}
+
+.ulke-egitim-grid-2-2-1 > .dahil-rozet-kart {
+    align-self: stretch;
+    height: 100%;
+    justify-self: stretch;
+}
+
+@media (max-width: 992px) {
+    .ulke-egitim-grid-2-2-1 {
+        grid-template-columns: 1fr !important;
+    }
+    .ulke-egitim-grid-2-2-1 > .dahil-rozet-kart:nth-child(5) {
+        grid-column: auto;
+    }
+}
+
+/* "Global Compass İle Adım Adım Üniversite Başvurusu" bölümünde 3. kartı (Vize...) altta ortala */
+.uni-adimlar-kutu .dahil-rozet-kart:nth-child(3) {
+    grid-column: 1 / -1;
+    justify-self: center;
 }
 
 .icerik-alani.uni-avantaj-bolumu {
@@ -116,6 +191,18 @@
     .icerik-alani.uni-avantaj-bolumu {
         padding-left: 0 !important;
         padding-right: 0 !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .uni-avantaj-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .uni-avantaj-grid {
+        grid-template-columns: 1fr;
     }
 }
 

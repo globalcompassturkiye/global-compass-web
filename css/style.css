@@ -31,6 +31,8 @@ strong {
 .ana-sirali-liste > li > strong,
 .sss-item summary h3 {
     color: #2c3e50 !important;
+    font-size: 14px;
+    font-weight: 700;
 }
 
 /* =========================================
@@ -458,6 +460,8 @@ h2.kutu-baslik.sss-baslik {
     transform: translateY(-50%);
     text-align: center;
     line-height: 2;
+    font-size: 16px;
+    font-weight: 700;
 }
 
 /* 2 satırlık SSS: üst çerçeve ile başlık arası (Oxford stili - 2 satır için yeterli boşluk) */
@@ -1610,6 +1614,17 @@ p + .kirmizi-kutu {
     gap: 18px 22px;
 }
 
+/* Yurt dışı üniversite sayfasında 3 rozet: daha dengeli görünüm için alt alta */
+.gri-cerceve-kutu .dahil-rozet-grid:has(>.dahil-rozet-kart:nth-child(3)) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (max-width: 640px) {
+    .gri-cerceve-kutu .dahil-rozet-grid:has(>.dahil-rozet-kart:nth-child(3)) {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Yurt dışı dil okulları sayfasında Global Network kartını grid içinde ortala (masaüstü) */
 @media (min-width: 993px) {
     .dil-okullari-kariyer-kutu .global-network-kart {
@@ -1621,6 +1636,39 @@ p + .kirmizi-kutu {
 .bournemouth-neden-kutu .dahil-rozet-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
 }
+
+/* Yüksek lisans sayfasında 4 rozet için 2x2 düzen kullan */
+.yuksek-lisans-neden-kutu .dahil-rozet-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* Yüksek lisans – başvuru belgeleri rozetlerini alt alta göster */
+.yuksek-lisans-belgeler-kutu .dahil-rozet-grid {
+    grid-template-columns: 1fr;
+}
+
+/* Yüksek lisans – kusursuz başvuru süreci: 3+1 düzen, son çerçeve ortalı */
+.yuksek-lisans-kusursuz-kutu .dahil-rozet-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (min-width: 993px) {
+    .yuksek-lisans-kusursuz-kutu .dahil-rozet-kart:nth-child(1) {
+        grid-column: 1;
+    }
+    .yuksek-lisans-kusursuz-kutu .dahil-rozet-kart:nth-child(2) {
+        grid-column: 2;
+    }
+    .yuksek-lisans-kusursuz-kutu .dahil-rozet-kart:nth-child(3) {
+        grid-column: 3;
+    }
+    .yuksek-lisans-kusursuz-kutu .dahil-rozet-kart:nth-child(4) {
+        grid-column: 2; /* üstteki 2. kartın sütunu */
+        grid-row: 2;    /* ikinci satıra sabitle */
+    }
+}
+
+/* Mülakat Simülasyonları kartını çerçevesiyle birlikte ortala (şimdilik kullanılmıyor) */
 
 @media (max-width: 992px) {
     .dahil-rozet-grid {
@@ -2291,6 +2339,11 @@ p + .kirmizi-kutu {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     margin-top: 25px;
+}
+
+/* Yüksek lisans sayfasında avantaj kartlarını tek sütun, alt alta göster */
+.yuksek-lisans-avantaj-kutu .program-grid {
+    grid-template-columns: 1fr;
 }
 
 .program-kart h3 {
