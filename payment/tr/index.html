@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Global Compass Ã¶deme sayfasÄ± Ã¼zerinden gÃ¼venli bir ÅŸekilde danÄ±ÅŸmanlÄ±k ve eÄŸitim Ã¶demelerinizi gerÃ§ekleÅŸtirin.">
+    <meta name="description" content="Global Compass ödeme sayfası üzerinden güvenli bir şekilde danışmanlık ve eğitim ödemelerinizi gerçekleştirin.">
     <meta name="robots" content="noindex, nofollow">
-    <title>Online Ã–deme | Global Compass</title>
+    <title>Online Ödeme | Global Compass</title>
     <link rel="icon" href="/img/global-compass-favicon.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -168,10 +168,10 @@
     </div>
     <article class="icerik-alani odeme-icerik">
         <div class="odeme-form-kutu">
-            <h1>Online Ã–deme</h1>
+            <h1>Online Ödeme</h1>
             <p class="aciklama">
-                AÅŸaÄŸÄ±daki formu doldurarak Global Compass Ã¼zerinden gÃ¼venli bir ÅŸekilde Ã¶demenizi gerÃ§ekleÅŸtirebilirsiniz.
-                Ã–deme adÄ±mÄ±nda PayTRâ€™in gÃ¼venli Ã¶deme altyapÄ±sÄ±na yÃ¶nlendirileceksiniz.
+                Aşağıdaki formu doldurarak Global Compass üzerinden güvenli bir şekilde ödemenizi gerçekleştirebilirsiniz.
+                Ödeme adımında PayTR’in güvenli ödeme altyapısına yönlendirileceksiniz.
             </p>
             <form id="odeme-formu">
                 <div class="form-satir">
@@ -206,9 +206,9 @@
 
                 <div class="odeme-form-alt">
                     <div id="odeme-hata" class="odeme-hata"></div>
-                    <button type="submit" id="odeme-buton" class="odeme-buton">Ã–demeye GeÃ§</button>
+                    <button type="submit" id="odeme-buton" class="odeme-buton">Ödemeye Geç</button>
                     <p class="odeme-bilgi">
-                        Ã–demeye geÃ§ butonuna tÄ±kladÄ±ÄŸÄ±nÄ±zda bilgileriniz gÃ¼venli bir ÅŸekilde PayTR Ã¶deme altyapÄ±sÄ±na iletilir.
+                        Ödemeye geç butonuna tıkladığınızda bilgileriniz güvenli bir şekilde PayTR ödeme altyapısına iletilir.
                     </p>
                 </div>
             </form>
@@ -221,7 +221,7 @@
                 <a href="/"><img src="/img/global-compass-logo-transparent.png" alt="Global Compass" class="footer-logo-img"></a>
             </div>
             <div class="footer-merkezi-icerik">
-                <p class="footer-adres-metni">KÄ±zÄ±lay mah. ElgÃ¼n sok. TuÄŸaÃ§ Ä°ÅŸhanÄ± 3.Kat No:11 Ã‡ankaya / ANKARA</p>
+                <p class="footer-adres-metni">Kızılay mah. Elgün sok. Tuğaç İşhanı 3.Kat No:11 Çankaya / ANKARA</p>
                 <div class="footer-iletisim-satiri">
                     <a href="tel:+905353977399" class="footer-link-sade">0535 397 73 99</a>
                     <span class="footer-ayrac">|</span>
@@ -229,14 +229,14 @@
                 </div>
             </div>
             <nav class="footer-kvkk-satiri">
-                <a href="/kvkk-aydinlatma-metni/">KVKK AydÄ±nlatma MetĞ½Ğ¸</a>
-                <a href="/kvkk-acik-riza-metni/">KVKK AÃ§Ä±k RÄ±za MetĞ½Ğ¸</a>
-                <a href="/gizlilik-politikasi/">Gizlilik PolitikasÄ±</a>
-                <a href="/cerez-aydinlatma-metni/">Ã‡erez AydÄ±nlatma MetĞ½Ğ¸</a>
+                <a href="/kvkk-aydinlatma-metni/">KVKK Aydınlatma MetĞ½Ğ¸</a>
+                <a href="/kvkk-acik-riza-metni/">KVKK Açık Rıza MetĞ½Ğ¸</a>
+                <a href="/gizlilik-politikasi/">Gizlilik Politikası</a>
+                <a href="/cerez-aydinlatma-metni/">Çerez Aydınlatma MetĞ½Ğ¸</a>
             </nav>
         </div>
         <div class="footer-alt-telif">
-            <p>Global Compass - Yurt DÄ±ÅŸÄ± EÄŸitim DanÄ±ÅŸmanlÄ±ÄŸÄ±</p>
+            <p>Global Compass - Yurt Dışı Eğitim Danışmanlığı</p>
         </div>
     </footer>
 
@@ -262,12 +262,12 @@
             hataKutusu.style.display = 'none';
         }
 
-        // Sayfa yÃ¼klenince URL'den id'yi oku ve sipariÅŸi getir
+        // Sayfa yüklenince URL'den id'yi oku ve siparişi getir
         (function hazirlaSiparis() {
             var params = new URLSearchParams(window.location.search || '');
             var urlId = params.get('id');
             if (!urlId) {
-                gosterHata('GeÃ§ersiz Ã¶deme baÄŸlantÄ±sÄ±.');
+                gosterHata('Geçersiz ödeme bağlantısı.');
                 if (buton) buton.disabled = true;
                 return;
             }
@@ -287,26 +287,26 @@
                     if (!data || typeof data.tutar === 'undefined') {
                         throw new Error('no_amount');
                     }
-                    // 4. tutar deÄŸerini hidden input'a yaz
+                    // 4. tutar değerini hidden input'a yaz
                     if (tutarInput) {
                         tutarInput.value = data.tutar;
                     }
-                    // 5. Ã–denecek Tutar: 45.097,00 TL
+                    // 5. Ödenecek Tutar: 45.097,00 TL
                     if (tutarGorunum) {
                         var sayi = Number(data.tutar);
                         if (!isNaN(sayi)) {
                             var formatted = sayi.toLocaleString('tr-TR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-                            tutarGorunum.textContent = 'Ã–denecek Tutar: ' + formatted + ' TL';
+                            tutarGorunum.textContent = 'Ödenecek Tutar: ' + formatted + ' TL';
                         }
                     }
-                    // SipariÅŸ aÃ§Ä±klamasÄ± (ad) gÃ¶ster
+                    // Sipariş açıklaması (ad) göster
                     if (siparisBilgi && data.ad) {
-                        siparisBilgi.textContent = 'SipariÅŸ: ' + data.ad;
+                        siparisBilgi.textContent = 'Sipariş: ' + data.ad;
                     }
                 })
                 .catch(function(err) {
                     console.error(err);
-                    gosterHata('GeÃ§ersiz Ã¶deme baÄŸlantÄ±sÄ±.');
+                    gosterHata('Geçersiz ödeme bağlantısı.');
                     if (buton) buton.disabled = true;
                 });
         })();
@@ -355,7 +355,7 @@
                 var siparisId = siparisInput ? siparisInput.value.trim() : '';
 
                 if (!ad || !soyad || !email || !telefon || !tutar || !siparisId) {
-                    gosterHata('LÃ¼tfen tÃ¼m alanlarÄ± doldurun.');
+                    gosterHata('Lütfen tüm alanları doldurun.');
                     buton.disabled = false;
                     return;
                 }
@@ -378,20 +378,20 @@
                 })
                 .then(function(res) {
                     if (!res.ok) {
-                        throw new Error('Ã–deme servisine ulaÅŸÄ±lamadÄ±. (' + res.status + ')');
+                        throw new Error('Ödeme servisine ulaşılamadı. (' + res.status + ')');
                     }
                     return res.json();
                 })
                 .then(function(data) {
                     var token = data && (data.token || data.TOKEN || data.paytr_token);
                     if (!token) {
-                        throw new Error('Ã–deme baÅŸlatÄ±lÄ±rken beklenmeyen bir cevap alÄ±ndÄ±.');
+                        throw new Error('Ödeme başlatılırken beklenmeyen bir cevap alındı.');
                     }
                     olusturModal(token);
                 })
                 .catch(function(err) {
                     console.error(err);
-                    gosterHata('Ã–deme baÅŸlatÄ±lÄ±rken bir hata oluÅŸtu: ' + err.message);
+                    gosterHata('Ödeme başlatılırken bir hata oluştu: ' + err.message);
                 })
                 .finally(function() {
                     buton.disabled = false;
@@ -402,5 +402,8 @@
     </script>
 </body>
 </html>
+
+
+
 
 
