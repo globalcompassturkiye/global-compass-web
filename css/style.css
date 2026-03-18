@@ -234,7 +234,7 @@ p {
 }
 
 /* =========================================
-    3.1 KINGS OXFORD SAYFASI ÖZEL STİLLERİ
+    KINGS Education (Oxford / Boston / Bournemouth) - Sayfa Özel Stiller
    ========================================= */
 
 body.kings-oxford-sayfa h2.kings-oxford-kurs-baslik {
@@ -1185,6 +1185,7 @@ h2.kutu-baslik .vurgu-renk {
     font-weight: 700 !important;
 }
 
+/* =================== Yaz Okulları / Immerse Education / Bournemouth Aktiviteler =================== */
 /* Yaz okulları / Immerse Education – sekme (tabs) standardı
    Bournemouth aktiviteler alanı da bu yapıyı kullanır */
 .immerse-yas-tabs-kutu .yas-tabs-kapsayici {
@@ -1597,6 +1598,7 @@ p + .kirmizi-kutu {
     text-transform: none;
 }
 
+/* =================== Yaz Okulları / KINGS Education - Fiyata Dahil Olanlar =================== */
 /* Bournemouth – Fiyata Dahil Olanlar rozet kartları */
 .dahil-kutu {
     padding-bottom: 25px;
@@ -1637,6 +1639,7 @@ p + .kirmizi-kutu {
     grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+/* =================== Yüksek Lisans & MBA - Sayfa Özel (Neden/Belgeler/Kusursuz) =================== */
 /* Yüksek lisans sayfasında 4 rozet için 2x2 düzen kullan */
 .yuksek-lisans-neden-kutu .dahil-rozet-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -3133,6 +3136,7 @@ p + .kirmizi-kutu {
     }
 }
 
+/* =================== Dil Okulları (Londra / Global Network / Konaklama / Programlar) =================== */
 /* =========================================
     LONDRA AVANTAJ KARTLARI
    ========================================= */

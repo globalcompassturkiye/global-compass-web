@@ -4,3 +4,20 @@
     grid-template-columns: 1fr;
     justify-items: center;
 }
+
+/* Lise - Popüler Ülkeler kart düzeni: 2+2 (mobilde 1) */
+.lise-populer-grid-2x2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    align-items: stretch;
+}
+
+.lise-populer-grid-2x2 .dahil-rozet-kart {
+    justify-self: stretch;
+    align-self: stretch;
+}
+
+@media (max-width: 640px) {
+    .lise-populer-grid-2x2 {
+        grid-template-columns: 1fr !important;
+    }
+}
