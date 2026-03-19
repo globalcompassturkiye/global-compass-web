@@ -395,6 +395,7 @@ h2.kutu-baslik.sss-baslik {
     line-height: 2;
     font-size: 16px;
     font-weight: 700;
+    border-radius: 5px 5px 0 0 !important;
 }
 
 /* 2 satırlık SSS: üst çerçeve ile başlık arası (Oxford stili - 2 satır için yeterli boşluk) */
@@ -621,7 +622,7 @@ h2.kutu-baslik .vurgu-renk {
 .isvicre-kamp-icerik h3 {
     font-size: 15.5px;
     font-weight: 700;
-    color: #000080;
+    color: #111827;
     margin: 0 0 6px 0;
 }
 
@@ -1681,7 +1682,7 @@ p + .kirmizi-kutu {
 
 .dahil-rozet-metin {
     grid-column: 1 / -1;
-    font-size: 13.5px;
+    font-size: 15px;
     color: #4b5563;
     margin: 4px 0 0 0;
     line-height: 1.7;
@@ -2776,7 +2777,7 @@ p + .kirmizi-kutu {
 .ana-karsilama-alani {
     width: 100%;
     padding: 25px 0 80px 0;
-    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    background: #ffffff;
     border-bottom: 1px solid #f0f0f0;
 }
 
@@ -2816,11 +2817,15 @@ p + .kirmizi-kutu {
 }
 
 .ana-p {
-    font-size: 18px !important;
-    line-height: 1.8;
+    font-size: 15px !important;
+    line-height: 1.7;
     color: #555;
     margin-bottom: 40px;
     text-align: justify !important;
+}
+
+.ana-karsilama-alani .ana-p {
+    text-align: center !important;
 }
 
 /* Buton Grupları */
@@ -3071,6 +3076,13 @@ p + .kirmizi-kutu {
         padding-top: 25px;
         padding-bottom: 25px; /* üst ve alt padding eşitlendi */
     }
+
+    /* Anasayfa H1 ve vurgu satiri mobilde net 28px olsun */
+    .ana-sayfa .karsilama-icerik .ana-marka-baslik,
+    .ana-sayfa .karsilama-icerik .ana-marka-baslik span {
+        font-size: 28px !important;
+        line-height: 1.4 !important;
+    }
 }
 
 /* =================== Dil Okulları (Londra / Global Network / Konaklama / Programlar) =================== */
@@ -3256,5 +3268,13 @@ p + .kirmizi-kutu {
     .dil-okullari-program-kutu .program-kart:nth-child(5) {
         max-width: none;
     }
+}
+
+/* Global normal metin standardi: tum icerik sayfalarinda 15px */
+article.icerik-alani p,
+article.icerik-alani .kutu-liste li,
+article.icerik-alani .ana-sirali-liste p,
+article.icerik-alani .dahil-rozet-metin {
+    font-size: 15px !important;
 }
 

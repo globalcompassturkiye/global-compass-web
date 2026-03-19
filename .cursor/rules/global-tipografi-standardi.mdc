@@ -1,0 +1,34 @@
+---
+description: Tüm sitede rozet/kart başlık ve metin tipografi standardı
+alwaysApply: true
+---
+
+# Global Tipografi Standardı (Rozet/Kart)
+
+Bu projede içerik kartlarında (özellikle `dahil-rozet-*` yapılarında) dil okulu sayfasındaki tipografi standardı esas alınır.
+
+## Zorunlu değerler
+
+- `h3.dahil-rozet-baslik`
+  - `font-size: 14.5px`
+  - `line-height: 1.4`
+  - `font-weight: 700`
+- `p.dahil-rozet-metin`
+  - `font-size: 15px`
+  - `line-height: 1.7`
+
+## Uygulama kapsamı
+
+- Yeni eklenen tüm rozet/kart bölümlerinde bu değerler kullanılmalı.
+- Farklı sayfalarda aynı tip kart için farklı font-size tanımlama yapılmamalı.
+- Sayfa özel override yazılacaksa önce bu standarda hizalanmalı; zorunlu değilse override eklenmemeli.
+- İçerik sayfalarında normal metin standardı `15px` olmalı:
+  - `article.icerik-alani p`
+  - `article.icerik-alani .kutu-liste li`
+  - `article.icerik-alani .ana-sirali-liste p`
+  - `article.icerik-alani .dahil-rozet-metin`
+
+## Not
+
+- Bu kural rozet/kart içerik tipografisi içindir.
+- `h1`, hero başlıkları veya kampanya alanları bu kuralın dışında değerlendirilebilir.

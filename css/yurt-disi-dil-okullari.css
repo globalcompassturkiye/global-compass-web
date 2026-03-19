@@ -10,50 +10,84 @@
     margin: 35px auto 60px auto;
 }
 
+/* Başlık + ülke butonları tek çerçeve paneli */
+.dil-okullari-secim-paneli {
+    max-width: 1200px;
+    margin: 25px auto 60px auto;
+    padding: 0;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background: #f8fafc;
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
+    overflow: hidden;
+}
+
+.dil-okullari-secim-paneli .kirmizi-kutu {
+    margin: 0;
+    border-radius: 0;
+}
+
+.dil-okullari-secim-paneli .ulke-secim-butonlari {
+    margin: 0;
+    max-width: none;
+    padding: 16px 18px 20px 18px;
+}
+
+/* UK sehir kartlari bu panelde kullanildiginda ayni ic bosluk standardi */
+.dil-okullari-secim-paneli .sehir-kare-yigini {
+    padding: 16px 18px 20px 18px;
+}
+
 .ulke-secim-butonlari .ulke-buton {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
-    padding: 16px 18px;
-    border-radius: 12px;
+    gap: 10px;
+    padding: 10px 25px;
+    border-radius: 30px;
     text-decoration: none;
-    border: 1px solid #e2e8f0;
-    background: linear-gradient(135deg, #f9fafb 0%, #ffffff 45%, #ecfeff 100%);
-    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.06);
-    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+    border: none;
+    background: #2c3e50;
+    box-shadow: none;
+    transition: all 0.3s ease;
 }
 
 .ulke-buton-metin {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 600;
-    color: #0f172a;
+    color: #ffffff;
+    letter-spacing: 0;
 }
 
 .ulke-buton-ok {
     font-size: 18px;
-    opacity: 0.9;
-    transition: transform 0.25s ease;
+    color: #ffffff;
+    transition: transform 0.3s ease;
 }
 
 .ulke-secim-butonlari .ulke-buton:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
-    border-color: #0f766e;
-    background: linear-gradient(135deg, #ecfeff 0%, #e0f2fe 40%, #f9fafb 100%);
+    background: #e74c3c;
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
 }
 
 .ulke-secim-butonlari .ulke-buton:hover .ulke-buton-ok {
-    transform: translateX(4px);
+    transform: translateX(2px);
 }
 
 /* Ülke bazlı hafif renk vurguları (UK & USA) – ana sayfa alt tab tasarımıyla tam uyum için iptal edildi */
 .ulke-buton-uk,
 .ulke-buton-usa {
-    background: linear-gradient(135deg, #f9fafb 0%, #ffffff 45%, #ecfeff 100%);
+    background: #2c3e50;
 }
 
 @media (max-width: 768px) {
+    .dil-okullari-secim-paneli {
+        margin: 20px 0 45px 0;
+        padding: 12px;
+        border-radius: 10px;
+    }
+
     .ulke-secim-butonlari {
         grid-template-columns: 1fr;
         gap: 12px;
@@ -61,10 +95,55 @@
     }
 
     .ulke-secim-butonlari .ulke-buton {
-        padding: 14px 16px;
+        padding: 10px 18px;
     }
 
     .ulke-buton-metin {
         font-size: 14px;
     }
 }
+
+/* Başlık renk standardı: bu sayfada tüm içerik alt başlıkları siyah */
+.dil-okullari-kariyer-kutu .dahil-rozet-baslik,
+.dil-okullari-program-kutu .dahil-rozet-baslik,
+.dil-okullari-konaklama-kutu .konaklama-icerik h3 {
+    color: #111827;
+    font-size: 14.5px;
+    line-height: 1.4;
+    font-weight: 700;
+}
+
+/* Yaz okullarıyla aynı kart standardı: sadece iç kartlar */
+.dil-okullari-kariyer-kutu .dahil-rozet-kart,
+.dil-okullari-program-kutu .dahil-rozet-kart,
+.dil-okullari-konaklama-kutu .konaklama-oge {
+    background: linear-gradient(180deg, #f0fdfa 0%, #f8fafc 100%) !important;
+    border: 1px solid #ccfbf1 !important;
+    box-shadow: 0 4px 12px rgba(13, 148, 136, 0.06) !important;
+}
+
+/* Dil okulları program kartları: 2+2+1, son kart ortalı */
+.dil-okullari-program-kutu .dahil-rozet-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    align-items: stretch;
+}
+
+.dil-okullari-program-kutu .dahil-rozet-grid > .dahil-rozet-kart:nth-child(5) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: min(100%, calc((100% - 18px) / 2));
+}
+
+@media (max-width: 768px) {
+    .dil-okullari-program-kutu .dahil-rozet-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dil-okullari-program-kutu .dahil-rozet-grid > .dahil-rozet-kart:nth-child(5) {
+        grid-column: auto;
+        width: 100%;
+    }
+}
+

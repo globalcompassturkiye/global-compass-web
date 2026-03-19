@@ -1,0 +1,27 @@
+---
+description: H1 sonrası ilk metin başlıksız ve çerçevesiz olmalı
+globs: "**/*.html"
+alwaysApply: false
+---
+
+# H1 Sonrası İlk Metin Kuralı
+
+Bu projede içerik sayfalarında `h1` başlığından sonra gelen ilk açıklama metni sade görünmelidir.
+
+## Zorunlu
+
+- `h1` sonrasındaki ilk açıklama bölümü doğrudan metin (`p`) olarak kullanılmalı.
+- Bu ilk metin için ek bir `h2/h3` başlığı eklenmemeli.
+- Bu ilk metin `gri-cerceve-kutu` veya benzeri çerçeve/kart wrapper içine alınmamalı.
+
+## Kaçınılacak yapı
+
+- `h1` sonrası `div.gri-cerceve-kutu > h2 + p`
+- `h1` sonrası sadece görsel amaçlı kutu/çerçeve içinde metin
+
+## Doğru yapı örneği
+
+```html
+<h1>Sayfa Başlığı</h1>
+<p>H1 sonrasındaki ilk açıklama metni doğrudan ve sade görünür.</p>
+```

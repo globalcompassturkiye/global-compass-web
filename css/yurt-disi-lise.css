@@ -1,8 +1,80 @@
 /* Yurt Dışı Lise sayfasına özel stiller */
 
 .ulke-secim-butonlari.lise-buton-orta {
+    display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
+    gap: 18px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 35px auto 60px auto;
+}
+
+/* Lise butonu: dil okulu sayfasi standartlari */
+.ulke-secim-butonlari.lise-buton-orta .ulke-buton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    border: none;
+    background: #2c3e50;
+    box-shadow: none;
+    transition: all 0.3s ease;
+}
+
+.ulke-secim-butonlari.lise-buton-orta .ulke-buton-metin {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 0;
+}
+
+.ulke-secim-butonlari.lise-buton-orta .ulke-buton-ok {
+    font-size: 18px;
+    color: #ffffff;
+    transition: transform 0.3s ease;
+}
+
+.ulke-secim-butonlari.lise-buton-orta .ulke-buton:hover {
+    background: #e74c3c;
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
+}
+
+.ulke-secim-butonlari.lise-buton-orta .ulke-buton:hover .ulke-buton-ok {
+    transform: translateX(2px);
+}
+
+/* H1 sonrasi ilk aciklama metni boslugu */
+article.icerik-alani > h1 + p {
+    padding-bottom: 25px;
+}
+
+/* Lise sayfasinda rozet basliklari siyah ve standart */
+.lise-neden-grid-1x1 .dahil-rozet-baslik,
+.lise-program-grid-1x1 .dahil-rozet-baslik,
+.lise-populer-grid-2x2 .dahil-rozet-baslik {
+    color: #111827 !important;
+    font-size: 14.5px;
+    line-height: 1.4;
+    font-weight: 700;
+}
+
+/* Neden / Program bolumleri: 1+1+1 dikey standart */
+.lise-neden-grid-1x1,
+.lise-program-grid-1x1 {
+    grid-template-columns: 1fr !important;
+    align-items: stretch;
+}
+
+.lise-neden-grid-1x1 .dahil-rozet-kart,
+.lise-program-grid-1x1 .dahil-rozet-kart {
+    width: 100%;
+    justify-self: stretch;
+    align-self: stretch;
 }
 
 /* Lise - Popüler Ülkeler kart düzeni: 2+2 (mobilde 1) */

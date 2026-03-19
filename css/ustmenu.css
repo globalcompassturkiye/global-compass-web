@@ -75,8 +75,9 @@
 }
 
 .logo img {
-    max-height: 57px; 
-    width: auto;
+    width: 158px;
+    max-height: none;
+    height: auto;
     display: block;
     margin: 0 auto;
     transition: transform 0.3s ease;
@@ -176,7 +177,9 @@ body.ana-sayfa {
 }
 /* Ana sayfa logosu da tüm sayfalarla aynı yüksekliği kullanır */
 .ana-sayfa .logo img {
-    max-height: 57px;
+    width: 158px;
+    max-height: none;
+    height: auto;
 }
 .ana-sayfa .sosyal-medya-alani a:hover {
     transform: scale(1.1);
@@ -213,6 +216,17 @@ body.ana-sayfa {
 }
 
 @media (max-width: 500px) {
+    .logo img {
+        width: 158px !important;
+        max-height: none !important;
+        height: auto !important;
+    }
+
+    .ust-menu,
+    .ana-sayfa .ust-menu {
+        padding-bottom: 2px !important;
+    }
+
     .sosyal-medya-alani img {
         width: 24px;
         height: 24px;
@@ -245,7 +259,7 @@ body.ana-sayfa {
     border-right: 3px solid #ccc;
     /* Sağ-sol boşluk ve satırlar arasında hafif dikey boşluk */
     padding: 0 35px;
-    margin: 4px 0 4px 0; /* üst/alt 4px, sağ/sol 0 */
+    margin: 1px 0; /* dikey boşluğu azalt */
     transition: background-color 0.2s ease;
 }
 .navigasyon > ul > li:last-child {
@@ -276,12 +290,24 @@ body.ana-sayfa {
 .navigasyon > ul > li:has(.aktif) a {
     background-color: transparent;
 }
+
+/* Logo menü öğesi gibi davranmasın (hover alt çizgi/aktif efekt yok) */
+.navigasyon > ul > li.nav-logo-item::after,
+.navigasyon > ul > li.nav-logo-item:hover::after,
+.navigasyon > ul > li.nav-logo-item:has(.aktif)::after {
+    opacity: 0 !important;
+}
+
+.navigasyon > ul > li.nav-logo-item:hover,
+.navigasyon > ul > li.nav-logo-item:has(.aktif) {
+    background-color: transparent !important;
+}
 .navigasyon a {
     font-family: inherit;
     font-size: 16px; /* Tüm breakpointlerde 16px */
     font-weight: 700;
     color: #000080;
-    padding: 12px 18px;
+    padding: 8px 18px;
     border-radius: 0;
     border-bottom: none;
     letter-spacing: 0.02em;
@@ -465,8 +491,8 @@ body.ana-sayfa {
         padding-bottom: 0;
     }
     .navigasyon > ul > li {
-        padding: 0 16px 6px; /* Altta lacivert çizgi için alan bırak */
-        margin: 8px 0; /* Satırlar arası boşluğu artır */
+        padding: 0 16px 4px; /* Altta çizgi alanı daha kompakt */
+        margin: 3px 0; /* Satırlar arası boşluğu azalt */
         /* Tablet geçişinde flex dağıtımı kaldır: öğeler içerik genişliğiyle kalsın. */
         flex: 0 0 auto;
         min-width: 0;
@@ -479,7 +505,7 @@ body.ana-sayfa {
         margin-right: 0;
     }
     .navigasyon > ul > li > a {
-        padding: 10px 14px;
+        padding: 7px 14px;
         font-size: 16px;
         text-align: center;
     }
@@ -514,9 +540,10 @@ body.ana-sayfa {
     /* 500px altı header grid'i şişmesin:
        .ust-alan içinde solda boş bir div var (logo'yu ortalamak için).
        Dar ekranda bunu gizleyip grid'i iki kolona indiriyoruz. */
-    .ust-menu .ust-alan {
+    .ust-menu .ust-alan,
+    .ana-sayfa .ust-menu .ust-alan {
         /* 501-768 ile aynı düşey yükseklik sıçramasın */
-        padding: 16px 0 20px 24px !important; /* top right bottom left */
+        padding: 5px 0 10px 24px !important; /* top right bottom left */
         /* Logo ortalı, sosyal ikonlar sağda kalsın */
         grid-template-columns: 1fr auto 1fr;
     }
@@ -534,7 +561,14 @@ body.ana-sayfa {
         left: 16px;
         right: auto;
         /* 501-768 ile aynı üst boşluk */
-        top: 10px;
+        top: 5px;
+        transform: none;
+    }
+    .ust-menu .nav-toggle {
+        top: 5px;
+        bottom: auto;
+        left: 16px;
+        right: auto;
         transform: none;
     }
     .navigasyon {
@@ -566,7 +600,7 @@ body.ana-sayfa {
         flex-direction: column;
         align-items: stretch;
         width: 100%;
-        padding: 12px 0;
+        padding: 6px 0;
         gap: 0;
     }
     .navigasyon > ul > li {
@@ -628,7 +662,7 @@ body.ana-sayfa {
         max-height: 80vh;
     }
     .navigasyon .submenu a {
-        padding: 10px 24px 10px 36px;
+        padding: 8px 22px 8px 34px;
         font-size: 16px;
         text-align: left;
     }
@@ -647,6 +681,11 @@ body.ana-sayfa {
 }
 
 @media (min-width: 769px) {
+    .logo img,
+    .ana-sayfa .logo img {
+        width: 113px;
+    }
+
     /* Soldaki logo/sosyal barı (HTML içindeki gerçek blok) desktop’ta gizle */
     .ust-menu .ust-alan {
         display: none !important;
@@ -684,18 +723,31 @@ body.ana-sayfa {
     }
 
     .ust-menu .navigasyon > ul::before {
-        content: "";
-        position: relative;
-        flex: 0 0 156px;
-        width: 156px;
-        height: 44px;
-        background: url("/img/global-compass-logo.webp") center center / 118px auto no-repeat;
-        border-right: 2px solid #ccc;
-        pointer-events: none;
+        content: none;
+        display: none;
     }
 
     .ust-menu .navigasyon > ul > li.nav-logo-item {
-        display: none !important;
+        display: flex !important;
+        align-items: center;
+        padding: 0;
+        margin: 0 25px 0 0;
+        border-right: 2px solid #ccc !important;
+    }
+
+    .ust-menu .navigasyon > ul > li.nav-logo-item a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 156px;
+        height: 44px;
+        padding: 0;
+    }
+
+    .ust-menu .navigasyon > ul > li.nav-logo-item img {
+        width: 113px;
+        height: auto;
+        display: block;
     }
 
     /* Menü maddeleri arası düzen */
@@ -717,7 +769,7 @@ body.ana-sayfa {
     }
 }
 
-@media (min-width: 769px) and (max-width: 1200px) {
+@media (min-width: 769px) and (max-width: 1450px) {
     /* Bu aralıkta sosyal ikonları gizle */
     .sabit-ust-alan .ust-menu .ust-alan {
         display: none !important;
@@ -734,16 +786,27 @@ body.ana-sayfa {
         flex-wrap: wrap;
         justify-content: center;
         align-content: center;
-        padding-left: 0;
+        position: relative;
+        padding-left: 151px;
         padding-right: 0;
+        min-height: 56px;
     }
 
-    .ust-menu .navigasyon > ul::before {
-        flex: 0 0 126px;
+    .ust-menu .navigasyon > ul > li.nav-logo-item {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0;
+    }
+
+    .ust-menu .navigasyon > ul > li.nav-logo-item a {
         width: 126px;
         height: 40px;
-        background-size: 96px auto;
-        pointer-events: none;
+    }
+
+    .ust-menu .navigasyon > ul > li.nav-logo-item img {
+        width: 113px;
     }
 
     .ust-menu .navigasyon > ul > li > a,
@@ -753,10 +816,14 @@ body.ana-sayfa {
         letter-spacing: 0;
         white-space: nowrap;
     }
+
+    .ust-menu .navigasyon > ul > li {
+        flex: 0 0 auto;
+    }
 }
 
-@media (min-width: 1201px) {
-    /* 1200px üstü: sosyal ikonlar menünün sağında görün */
+@media (min-width: 1451px) {
+    /* 1450px üstü: sosyal ikonlar menünün sağında görün */
     .sabit-ust-alan .ust-menu .ust-alan {
         display: block !important;
         position: absolute;
@@ -797,6 +864,11 @@ body.ana-sayfa {
         white-space: nowrap;
         letter-spacing: 0;
     }
+
+    /* Desktop'ta logo konumunu hafif sola çek */
+    .ust-menu .navigasyon > ul > li.nav-logo-item {
+        margin-left: -20px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -811,6 +883,10 @@ body.ana-sayfa {
         justify-content: flex-end !important;
         align-items: center !important;
         gap: 12px !important;
+    }
+
+    .ust-menu .navigasyon > ul > li.nav-logo-item {
+        display: none !important;
     }
 }
 
@@ -839,9 +915,10 @@ body.ana-sayfa {
     MOBİL DÜZENLEMELER (768px ALTI)
    ========================================= */
 @media (min-width: 501px) and (max-width: 768px) {
-    .ust-menu {
+    .ust-menu,
+    .ana-sayfa .ust-menu {
         /* 501-768 aralığında üst sabit alan şişmesin */
-        padding-bottom: 0;
+        padding-bottom: 2px !important;
     }
 
     .ust-serit-kapsayici {
@@ -859,13 +936,16 @@ body.ana-sayfa {
 
     /* Logo mobilde masaüstüne göre yaklaşık %25 daha küçük (76px → 57px) */
     .logo img {
-        max-height: 57px !important;
+        width: 158px !important;
+        max-height: none !important;
+        height: auto !important;
     }
 
     /* Logo satırı: 500px ile tutarlı yükseklik */
-    .ust-menu .ust-alan {
-        padding-top: 16px !important;
-        padding-bottom: 20px !important;
+    .ust-menu .ust-alan,
+    .ana-sayfa .ust-menu .ust-alan {
+        padding-top: 5px !important;
+        padding-bottom: 10px !important;
         padding-right: 0 !important;
     }
 
@@ -880,7 +960,14 @@ body.ana-sayfa {
         left: 20px;
         right: auto;
         /* İkon üst boşluğu sabit (10px) */
-        top: 10px;
+        top: 5px;
+        transform: none;
+    }
+    .ust-menu .nav-toggle {
+        top: 5px;
+        bottom: auto;
+        left: 20px;
+        right: auto;
         transform: none;
     }
 
@@ -912,7 +999,7 @@ body.ana-sayfa {
     .navigasyon > ul {
         flex-direction: column;
         align-items: stretch;
-        padding: 12px 0;
+        padding: 6px 0;
         gap: 0;
     }
     .navigasyon > ul > li {
@@ -931,7 +1018,7 @@ body.ana-sayfa {
     }
 
     .navigasyon .nav-list > li > a {
-        padding: 10px 14px;
+        padding: 8px 12px;
         font-size: 16px;
         display: block;
         width: 100%;
@@ -967,7 +1054,7 @@ body.ana-sayfa {
         pointer-events: auto;
     }
     .navigasyon .submenu a {
-        padding: 10px 24px 10px 36px;
+        padding: 8px 22px 8px 34px;
         font-size: 16px;
         text-align: left;
         line-height: 1.2;
@@ -976,3 +1063,4 @@ body.ana-sayfa {
         border-bottom: 1px solid #eee;
     }
 }
+

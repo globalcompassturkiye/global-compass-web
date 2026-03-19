@@ -1,6 +1,818 @@
 /* Yurt Dışı Yaz Okulları sayfasına özel stiller */
 /* Ülke seçim kartları ve program kutuları */
 
+/* Dil okulları sayfası ile uyumlu seçim paneli */
+.yaz-okullari-secim-paneli {
+    max-width: 1200px;
+    margin: 25px auto 60px auto;
+    padding: 0;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background: #f8fafc;
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
+    overflow: hidden;
+}
+
+.yaz-okullari-secim-paneli .kirmizi-kutu {
+    margin: 0;
+    border-radius: 0;
+}
+
+.yaz-okullari-secim-paneli .ulke-secim-butonlari {
+    margin: 0;
+    max-width: none;
+    padding: 16px 18px 20px 18px;
+}
+
+/* UK yaz sayfasi: sehir kartlari panel icinde kullanildiginda ayni ic bosluk */
+.yaz-okullari-secim-paneli .sehir-kare-yigini {
+    padding: 16px 18px 20px 18px;
+}
+
+/* Isvicre sayfasi: okul liste blogu panel icinde kullanildiginda sade kalsin */
+.yaz-okullari-secim-paneli .okul-liste-kapsayici {
+    margin: 0;
+    padding: 16px 18px 20px 18px;
+}
+
+.yaz-okullari-secim-paneli .okul-liste-kapsayici .okul-liste-baslik {
+    display: none;
+}
+
+/* Ulke sayfalari secim paneli: ortak tek sinif standardi */
+.ulke-secim-paneli-ortak .kirmizi-kutu .ust-satir,
+.ulke-secim-paneli-ortak .kirmizi-kutu .alt-satir-lacivert {
+    font-size: 22px;
+}
+
+.ulke-secim-paneli-ortak .kirmizi-kutu {
+    margin: 0;
+    border-radius: 5px 5px 0 0;
+}
+
+.ulke-secim-paneli-ortak .okul-liste-kapsayici {
+    margin-top: 0;
+    padding-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.ulke-secim-paneli-ortak .okul-liste-kapsayici .okul-liste-baslik {
+    display: none;
+}
+
+.isvicre-secim-paneli .kirmizi-kutu .ust-satir,
+.isvicre-secim-paneli .kirmizi-kutu .alt-satir-lacivert {
+    font-size: 22px;
+}
+
+.isvicre-secim-paneli .kirmizi-kutu {
+    margin: 0;
+    border-radius: 5px 5px 0 0;
+}
+
+.isvicre-secim-paneli .okul-liste-kapsayici {
+    margin-top: 0;
+    padding-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.switzerland-yonlendirme-kapsayici {
+    max-width: 1200px;
+    margin: 50px auto 0 auto;
+}
+
+.switzerland-yonlendirme-kapsayici .alt-yonlendirme-alani {
+    margin: 0;
+}
+
+.switzerland-yonlendirme-kapsayici .vurgulu-incele-btn {
+    display: inline-flex;
+    width: fit-content !important;
+    justify-content: flex-start;
+}
+
+/* Isvicre sayfasi: kirmizi bant + form birlesik blok */
+.isvicre-form-bant {
+    margin-bottom: 0;
+    border-radius: 15px 15px 0 0;
+    background-color: #e30613;
+}
+
+.isvicre-form-bant .ust-satir {
+    font-size: 20px;
+    color: #ffffff !important;
+}
+
+/* Isvicre SSS basligi: ust koseler 5px, alt koseler 0 */
+.sss-gri-kutu .kutu-baslik.sss-baslik {
+    border-radius: 5px 5px 0 0;
+}
+
+/* Isvicre secim paneli: okul kartlarinda hover efektini kapat */
+.isvicre-secim-paneli .premium-liste-kart,
+.isvicre-secim-paneli .skyline-stil,
+.isvicre-secim-paneli .incele-btn-minimal,
+.isvicre-secim-paneli .ok-animasyon {
+    transition: none !important;
+}
+
+.isvicre-secim-paneli .premium-liste-kart:hover,
+.isvicre-secim-paneli .skyline-stil:hover {
+    transform: none !important;
+    box-shadow: none !important;
+    border-color: #d1d5db !important;
+    background: #ffffff !important;
+}
+
+.isvicre-secim-paneli .skyline-stil:hover .incele-btn-minimal {
+    color: #444 !important;
+}
+
+.isvicre-secim-paneli .skyline-stil:hover .ok-animasyon {
+    transform: none !important;
+}
+
+.isvicre-secim-paneli .okul-isim-link:hover,
+.isvicre-secim-paneli .incele-btn-minimal:hover,
+.isvicre-secim-paneli .btn-modern-incele:hover {
+    color: inherit !important;
+    text-decoration: none !important;
+    padding-left: 0 !important;
+}
+
+.isvicre-secim-paneli .okul-liste-kapsayici:hover {
+    border-color: #d1d5db !important;
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+.isvicre-secim-paneli .premium-liste-kart:hover .ok-animasyon,
+.isvicre-secim-paneli .skyline-stil:hover .ok-animasyon {
+    transform: none !important;
+}
+
+/* Isvicre secim paneli ic metin boyut standardi */
+.isvicre-secim-paneli .liste-index,
+.isvicre-secim-paneli .okul-isim-link,
+.isvicre-secim-paneli .incele-btn-minimal {
+    font-size: 18px !important;
+}
+
+/* Isvicre program kartlari: dikeyde ortali, ust-alt bosluklar esit */
+.isvicre-secim-paneli .premium-liste-kart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+}
+
+.isvicre-secim-paneli .kart-sol-grup,
+.isvicre-secim-paneli .kart-aksiyon {
+    display: flex;
+    align-items: center;
+}
+
+/* Isvicre SSS basligi: ust koseler 5px, alt koseler 0 */
+.sss-gri-kutu .kutu-baslik.sss-baslik {
+    border-radius: 5px 5px 0 0;
+}
+
+.isvicre-form-bant + .iletisim-form-alani {
+    margin-top: 0 !important;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding-top: 25px;
+}
+
+.isvicre-form-bant + .iletisim-form-alani > p:first-of-type {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/* Londra sayfasi - Isvicre standardi secim paneli */
+.london-secim-paneli .kirmizi-kutu .ust-satir,
+.london-secim-paneli .kirmizi-kutu .alt-satir-lacivert,
+.oxford-secim-paneli .kirmizi-kutu .ust-satir,
+.oxford-secim-paneli .kirmizi-kutu .alt-satir-lacivert,
+.cambridge-secim-paneli .kirmizi-kutu .ust-satir,
+.cambridge-secim-paneli .kirmizi-kutu .alt-satir-lacivert,
+.bournemouth-secim-paneli .kirmizi-kutu .ust-satir,
+.bournemouth-secim-paneli .kirmizi-kutu .alt-satir-lacivert,
+.germany-secim-paneli .kirmizi-kutu .ust-satir,
+.germany-secim-paneli .kirmizi-kutu .alt-satir-lacivert,
+.canada-secim-paneli .kirmizi-kutu .ust-satir,
+.canada-secim-paneli .kirmizi-kutu .alt-satir-lacivert,
+.italy-secim-paneli .kirmizi-kutu .ust-satir,
+.italy-secim-paneli .kirmizi-kutu .alt-satir-lacivert {
+    font-size: 22px;
+}
+
+.london-secim-paneli .kirmizi-kutu,
+.oxford-secim-paneli .kirmizi-kutu,
+.cambridge-secim-paneli .kirmizi-kutu,
+.bournemouth-secim-paneli .kirmizi-kutu,
+.germany-secim-paneli .kirmizi-kutu,
+.canada-secim-paneli .kirmizi-kutu,
+.italy-secim-paneli .kirmizi-kutu {
+    margin: 0;
+    border-radius: 5px 5px 0 0;
+}
+
+.london-secim-paneli .okul-liste-kapsayici,
+.oxford-secim-paneli .okul-liste-kapsayici,
+.cambridge-secim-paneli .okul-liste-kapsayici,
+.bournemouth-secim-paneli .okul-liste-kapsayici,
+.germany-secim-paneli .okul-liste-kapsayici,
+.canada-secim-paneli .okul-liste-kapsayici,
+.italy-secim-paneli .okul-liste-kapsayici {
+    margin-top: 0;
+    padding-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+/* Kanada secim paneli: alt bosluk daha kompakt */
+.canada-secim-paneli .okul-liste-kapsayici {
+    padding-bottom: 8px;
+}
+
+/* Italya secim paneli: okul kart alani ust/alt ic bosluk 25px */
+.italy-secim-paneli .okul-liste-kapsayici {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+}
+
+.italy-secim-paneli .okul-liste-kapsayici:hover {
+    border-color: transparent !important;
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+/* Secim panelindeki sehir kartlarinda hover efektini kapat */
+.yaz-okullari-secim-paneli .kare-kart,
+.yaz-okullari-secim-paneli .kare-kart * {
+    transition: none !important;
+}
+
+.yaz-okullari-secim-paneli .kare-kart:hover {
+    transform: none !important;
+    box-shadow: none !important;
+    border-color: #d1d5db !important;
+    background: #ffffff !important;
+}
+
+.yaz-okullari-secim-paneli .kare-kart:hover .kare-resim img {
+    transform: none !important;
+}
+
+.yaz-okullari-secim-paneli .kare-resim-link:hover img {
+    transform: none !important;
+}
+
+.yaz-okullari-secim-paneli .kare-kart {
+    box-shadow: none !important;
+    border: 1px solid #d1d5db !important;
+    background: #ffffff !important;
+}
+
+.yaz-okullari-secim-paneli .kare-btn {
+    background-color: #000080 !important;
+    color: #ffffff !important;
+    box-shadow: none !important;
+}
+
+.yaz-okullari-secim-paneli .kare-btn:hover {
+    background-color: #000080 !important;
+    color: #ffffff !important;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.london-secim-paneli .okul-liste-kapsayici .okul-liste-baslik,
+.oxford-secim-paneli .okul-liste-kapsayici .okul-liste-baslik,
+.cambridge-secim-paneli .okul-liste-kapsayici .okul-liste-baslik,
+.bournemouth-secim-paneli .okul-liste-kapsayici .okul-liste-baslik,
+.germany-secim-paneli .okul-liste-kapsayici .okul-liste-baslik,
+.canada-secim-paneli .okul-liste-kapsayici .okul-liste-baslik,
+.italy-secim-paneli .okul-liste-kapsayici .okul-liste-baslik {
+    display: none;
+}
+
+.london-secim-paneli .premium-liste-kart,
+.london-secim-paneli .glass-stil,
+.london-secim-paneli .incele-btn-minimal,
+.london-secim-paneli .btn-modern-incele,
+.london-secim-paneli .ok-animasyon,
+.oxford-secim-paneli .premium-liste-kart,
+.oxford-secim-paneli .glass-stil,
+.oxford-secim-paneli .incele-btn-minimal,
+.oxford-secim-paneli .btn-modern-incele,
+.oxford-secim-paneli .ok-animasyon,
+.cambridge-secim-paneli .premium-liste-kart,
+.cambridge-secim-paneli .glass-stil,
+.cambridge-secim-paneli .incele-btn-minimal,
+.cambridge-secim-paneli .btn-modern-incele,
+.cambridge-secim-paneli .ok-animasyon,
+.bournemouth-secim-paneli .premium-liste-kart,
+.bournemouth-secim-paneli .glass-stil,
+.bournemouth-secim-paneli .incele-btn-minimal,
+.bournemouth-secim-paneli .btn-modern-incele,
+.bournemouth-secim-paneli .ok-animasyon {
+    transition: none !important;
+}
+
+.london-secim-paneli .premium-liste-kart:hover,
+.london-secim-paneli .glass-stil:hover,
+.london-secim-paneli .okul-liste-kapsayici:hover,
+.oxford-secim-paneli .premium-liste-kart:hover,
+.oxford-secim-paneli .glass-stil:hover,
+.oxford-secim-paneli .okul-liste-kapsayici:hover,
+.cambridge-secim-paneli .premium-liste-kart:hover,
+.cambridge-secim-paneli .glass-stil:hover,
+.cambridge-secim-paneli .okul-liste-kapsayici:hover,
+.bournemouth-secim-paneli .premium-liste-kart:hover,
+.bournemouth-secim-paneli .glass-stil:hover,
+.bournemouth-secim-paneli .okul-liste-kapsayici:hover {
+    transform: none !important;
+    box-shadow: none !important;
+    border-color: #d1d5db !important;
+    background: #ffffff !important;
+}
+
+.london-secim-paneli .okul-isim-link:hover,
+.london-secim-paneli .incele-btn-minimal:hover,
+.london-secim-paneli .btn-modern-incele:hover,
+.oxford-secim-paneli .okul-isim-link:hover,
+.oxford-secim-paneli .incele-btn-minimal:hover,
+.oxford-secim-paneli .btn-modern-incele:hover,
+.cambridge-secim-paneli .okul-isim-link:hover,
+.cambridge-secim-paneli .incele-btn-minimal:hover,
+.cambridge-secim-paneli .btn-modern-incele:hover,
+.bournemouth-secim-paneli .okul-isim-link:hover,
+.bournemouth-secim-paneli .incele-btn-minimal:hover,
+.bournemouth-secim-paneli .btn-modern-incele:hover {
+    color: inherit !important;
+    text-decoration: none !important;
+    padding-left: 0 !important;
+}
+
+/* UK sehir secim kartlari: link hover'da kirmizi vurgu */
+.london-secim-paneli .btn-modern-incele:hover,
+.oxford-secim-paneli .btn-modern-incele:hover,
+.cambridge-secim-paneli .btn-modern-incele:hover,
+.bournemouth-secim-paneli .btn-modern-incele:hover {
+    color: #e30613 !important;
+}
+
+.london-secim-paneli .btn-modern-incele:hover .ok-animasyon,
+.oxford-secim-paneli .btn-modern-incele:hover .ok-animasyon,
+.cambridge-secim-paneli .btn-modern-incele:hover .ok-animasyon,
+.bournemouth-secim-paneli .btn-modern-incele:hover .ok-animasyon {
+    color: #e30613 !important;
+    transform: translateX(2px);
+}
+
+/* UK sehir secim kartlari: kart uzerine gelince tum satir kirmizi */
+.london-secim-paneli .premium-liste-kart:hover .okul-isim-link,
+.london-secim-paneli .premium-liste-kart:hover .btn-modern-incele,
+.london-secim-paneli .premium-liste-kart:hover .ok-animasyon,
+.oxford-secim-paneli .premium-liste-kart:hover .okul-isim-link,
+.oxford-secim-paneli .premium-liste-kart:hover .btn-modern-incele,
+.oxford-secim-paneli .premium-liste-kart:hover .ok-animasyon,
+.cambridge-secim-paneli .premium-liste-kart:hover .okul-isim-link,
+.cambridge-secim-paneli .premium-liste-kart:hover .btn-modern-incele,
+.cambridge-secim-paneli .premium-liste-kart:hover .ok-animasyon,
+.bournemouth-secim-paneli .premium-liste-kart:hover .okul-isim-link,
+.bournemouth-secim-paneli .premium-liste-kart:hover .btn-modern-incele,
+.bournemouth-secim-paneli .premium-liste-kart:hover .ok-animasyon {
+    color: #e30613 !important;
+}
+
+.london-secim-paneli .premium-liste-kart:hover .liste-index,
+.oxford-secim-paneli .premium-liste-kart:hover .liste-index,
+.cambridge-secim-paneli .premium-liste-kart:hover .liste-index,
+.bournemouth-secim-paneli .premium-liste-kart:hover .liste-index,
+.isvicre-secim-paneli .premium-liste-kart:hover .liste-index {
+    color: #6b7280 !important;
+}
+
+/* #1 etiketi daima duz gri kalsin (hover efekti yok) */
+.london-secim-paneli .liste-index,
+.oxford-secim-paneli .liste-index,
+.cambridge-secim-paneli .liste-index,
+.bournemouth-secim-paneli .liste-index,
+.isvicre-secim-paneli .liste-index {
+    color: #6b7280 !important;
+    transition: none !important;
+    transform: none !important;
+}
+
+
+.london-secim-paneli .liste-index,
+.london-secim-paneli .okul-isim-link,
+.london-secim-paneli .btn-modern-incele,
+.london-secim-paneli .incele-btn-minimal,
+.oxford-secim-paneli .liste-index,
+.oxford-secim-paneli .okul-isim-link,
+.oxford-secim-paneli .btn-modern-incele,
+.oxford-secim-paneli .incele-btn-minimal,
+.cambridge-secim-paneli .liste-index,
+.cambridge-secim-paneli .okul-isim-link,
+.cambridge-secim-paneli .btn-modern-incele,
+.cambridge-secim-paneli .incele-btn-minimal,
+.bournemouth-secim-paneli .liste-index,
+.bournemouth-secim-paneli .okul-isim-link,
+.bournemouth-secim-paneli .btn-modern-incele,
+.bournemouth-secim-paneli .incele-btn-minimal {
+    font-size: 18px !important;
+}
+
+/* Londra sayfasi - form bandi Isvicre standardi */
+.london-form-bant,
+.oxford-form-bant,
+.cambridge-form-bant,
+.bournemouth-form-bant,
+.germany-form-bant,
+.canada-form-bant,
+.italy-form-bant {
+    margin-bottom: 0;
+    border-radius: 15px 15px 0 0;
+    background-color: #e30613;
+}
+
+.london-form-bant .ust-satir,
+.oxford-form-bant .ust-satir,
+.cambridge-form-bant .ust-satir,
+.bournemouth-form-bant .ust-satir,
+.germany-form-bant .ust-satir,
+.canada-form-bant .ust-satir,
+.italy-form-bant .ust-satir {
+    font-size: 20px;
+    color: #ffffff !important;
+}
+
+.london-form-bant + .iletisim-form-alani,
+.oxford-form-bant + .iletisim-form-alani,
+.cambridge-form-bant + .iletisim-form-alani,
+.bournemouth-form-bant + .iletisim-form-alani,
+.germany-form-bant + .iletisim-form-alani,
+.canada-form-bant + .iletisim-form-alani,
+.italy-form-bant + .iletisim-form-alani {
+    margin-top: 0 !important;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding-top: 25px;
+}
+
+.london-form-bant + .iletisim-form-alani > p:first-of-type,
+.oxford-form-bant + .iletisim-form-alani > p:first-of-type,
+.cambridge-form-bant + .iletisim-form-alani > p:first-of-type,
+.bournemouth-form-bant + .iletisim-form-alani > p:first-of-type,
+.germany-form-bant + .iletisim-form-alani > p:first-of-type,
+.canada-form-bant + .iletisim-form-alani > p:first-of-type,
+.italy-form-bant + .iletisim-form-alani > p:first-of-type {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/* Almanya avantajlar: masaustunde 3+2, altta 2 kart ortali */
+.gri-cerceve-kutu .almanya-avantaj-grid-3-2 {
+    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+    gap: 14px;
+}
+
+.almanya-avantaj-grid-3-2 > .dahil-rozet-kart:nth-child(1),
+.almanya-avantaj-grid-3-2 > .dahil-rozet-kart:nth-child(2),
+.almanya-avantaj-grid-3-2 > .dahil-rozet-kart:nth-child(3) {
+    grid-column: span 2;
+}
+
+.almanya-avantaj-grid-3-2 > .dahil-rozet-kart:nth-child(4) {
+    grid-column: 2 / span 2;
+}
+
+.almanya-avantaj-grid-3-2 > .dahil-rozet-kart:nth-child(5) {
+    grid-column: 4 / span 2;
+}
+
+@media (max-width: 992px) {
+    .gri-cerceve-kutu .almanya-avantaj-grid-3-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+    .almanya-avantaj-grid-3-2 > .dahil-rozet-kart:nth-child(4),
+    .almanya-avantaj-grid-3-2 > .dahil-rozet-kart:nth-child(5) {
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .gri-cerceve-kutu .almanya-avantaj-grid-3-2 {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Kanada avantajlar: masaustunde 3+1 (son kart ortali) */
+.gri-cerceve-kutu .canada-avantaj-grid-3-1 {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 14px;
+}
+
+.canada-avantaj-grid-3-1 > .dahil-rozet-kart:nth-child(4) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: min(100%, calc((100% - 28px) / 3));
+}
+
+/* Kanada program sehirleri: 3 cerceve yanyana */
+.canada-program-sehir-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 14px;
+}
+
+.canada-program-sehir-kart {
+    padding: 14px 16px;
+    border: 1px solid #ccfbf1;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #f0fdfa 0%, #f8fafc 100%);
+    box-shadow: 0 4px 12px rgba(13, 148, 136, 0.06);
+}
+
+.canada-program-sehir-kart h3 {
+    margin: 0 0 8px 0;
+    font-size: 14.5px;
+    line-height: 1.4;
+    font-weight: 700;
+    color: #111827;
+}
+
+.canada-program-sehir-kart p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #4b5563;
+}
+
+@media (max-width: 992px) {
+    .gri-cerceve-kutu .canada-avantaj-grid-3-1 {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+    .canada-avantaj-grid-3-1 > .dahil-rozet-kart:nth-child(4) {
+        grid-column: 1 / -1;
+        width: min(100%, calc((100% - 14px) / 2));
+    }
+
+    .canada-program-sehir-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .gri-cerceve-kutu .canada-avantaj-grid-3-1 {
+        grid-template-columns: 1fr !important;
+    }
+    .canada-avantaj-grid-3-1 > .dahil-rozet-kart:nth-child(4) {
+        grid-column: auto;
+        justify-self: stretch;
+        width: 100%;
+    }
+
+    .canada-program-sehir-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Londra program rozetleri: 3 kartta 2+1, 3. kart ortali */
+.london-program-rozet-kutu .london-program-rozet-grid > .dahil-rozet-kart:nth-child(3) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: min(100%, calc((100% - 18px) / 2));
+}
+
+.oxford-program-rozet-kutu .oxford-program-rozet-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.cambridge-program-rozet-kutu .cambridge-program-rozet-grid > .dahil-rozet-kart:nth-child(3) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: min(100%, calc((100% - 18px) / 2));
+}
+
+.bournemouth-program-rozet-kutu .bournemouth-program-rozet-grid > .dahil-rozet-kart:nth-child(3) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: min(100%, calc((100% - 18px) / 2));
+}
+
+.cambridge-neden-kutu .cambridge-neden-rozet-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+/* Global 3-kart -> 2 kolon kuralini Cambridge neden bolumunde ez */
+.gri-cerceve-kutu.cambridge-neden-kutu .dahil-rozet-grid.cambridge-neden-rozet-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+}
+
+/* Cambridge program bolumu: rozet degil, alt alta klasik kart */
+.cambridge-program-dikey-kutu .cambridge-program-dikey-liste {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+}
+
+.cambridge-program-dikey-kutu .cambridge-program-dikey-kart {
+    padding: 14px 16px;
+    border: none;
+    border-left: 4px solid var(--yaz-vurgu);
+    border-radius: 0 10px 10px 0;
+    background: linear-gradient(90deg, rgba(13, 148, 136, 0.06) 0%, #f8fafc 100%);
+    box-shadow: 0 2px 8px rgba(13, 148, 136, 0.05);
+}
+
+.cambridge-program-dikey-kutu .cambridge-program-dikey-kart h3 {
+    margin: 0 0 8px 0;
+    font-size: 14.5px;
+    line-height: 1.4;
+    font-weight: 700;
+    color: #111827;
+}
+
+.cambridge-program-dikey-kutu .cambridge-program-dikey-kart p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #4b5563;
+}
+
+@media (max-width: 768px) {
+    .london-program-rozet-kutu .london-program-rozet-grid > .dahil-rozet-kart:nth-child(3) {
+        grid-column: auto;
+        justify-self: stretch;
+        width: 100%;
+    }
+
+    .oxford-program-rozet-kutu .oxford-program-rozet-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cambridge-program-rozet-kutu .cambridge-program-rozet-grid > .dahil-rozet-kart:nth-child(3) {
+        grid-column: auto;
+        justify-self: stretch;
+        width: 100%;
+    }
+
+    .bournemouth-program-rozet-kutu .bournemouth-program-rozet-grid > .dahil-rozet-kart:nth-child(3) {
+        grid-column: auto;
+        justify-self: stretch;
+        width: 100%;
+    }
+
+    .cambridge-neden-kutu .cambridge-neden-rozet-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Londra sosyal program bolumu: masaustunde 2 kart yan yana */
+.london-sosyal-rozet-kutu .london-sosyal-rozet-grid,
+.oxford-sosyal-rozet-kutu .oxford-sosyal-rozet-grid,
+.bournemouth-sosyal-rozet-kutu .bournemouth-sosyal-rozet-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.london-sosyal-rozet-kutu .london-sosyal-rozet-grid .dahil-rozet-kart,
+.oxford-sosyal-rozet-kutu .oxford-sosyal-rozet-grid .dahil-rozet-kart,
+.bournemouth-sosyal-rozet-kutu .bournemouth-sosyal-rozet-grid .dahil-rozet-kart {
+    height: 100%;
+}
+
+.oxford-sosyal-rozet-kutu .oxford-sosyal-rozet-grid > .dahil-rozet-kart:nth-child(3) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: min(100%, calc((100% - 14px) / 2));
+}
+
+.cambridge-sosyal-rozet-kutu .cambridge-sosyal-rozet-grid > .dahil-rozet-kart:nth-child(3) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: min(100%, calc((100% - 14px) / 2));
+}
+
+@media (max-width: 768px) {
+    .london-sosyal-rozet-kutu .london-sosyal-rozet-grid,
+    .oxford-sosyal-rozet-kutu .oxford-sosyal-rozet-grid,
+    .bournemouth-sosyal-rozet-kutu .bournemouth-sosyal-rozet-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .oxford-sosyal-rozet-kutu .oxford-sosyal-rozet-grid > .dahil-rozet-kart:nth-child(3) {
+        grid-column: auto;
+        justify-self: stretch;
+        width: 100%;
+    }
+
+    .cambridge-sosyal-rozet-kutu .cambridge-sosyal-rozet-grid > .dahil-rozet-kart:nth-child(3) {
+        grid-column: auto;
+        justify-self: stretch;
+        width: 100%;
+    }
+}
+
+/* Isvicre okul listesi link basliklari */
+.yaz-okullari-secim-paneli .okul-liste-kapsayici .okul-isim-link {
+    font-size: 20px;
+}
+
+@media (max-width: 501px) {
+    .yaz-okullari-secim-paneli .okul-liste-kapsayici .okul-isim-link {
+        font-size: 13px;
+    }
+}
+
+
+/* Isvicre kamp bolumu: dil okullari rozet standardi */
+.isvicre-kamp-kutu .isvicre-kamp-rozet-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.isvicre-kamp-kutu .isvicre-kamp-rozet-grid .dahil-rozet-kart {
+    height: 100%;
+}
+
+.isvicre-kamp-kutu .isvicre-kamp-rozet-grid > .dahil-rozet-kart:nth-child(3) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: min(100%, calc((100% - 14px) / 2));
+}
+
+.isvicre-kamp-kutu .isvicre-kamp-rozet-grid .dahil-rozet-baslik {
+    color: #111827 !important;
+}
+
+@media (max-width: 992px) {
+    .isvicre-kamp-kutu .isvicre-kamp-rozet-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .isvicre-kamp-kutu .isvicre-kamp-rozet-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .isvicre-kamp-kutu .isvicre-kamp-rozet-grid > .dahil-rozet-kart:nth-child(3) {
+        grid-column: auto;
+        width: 100%;
+    }
+}
+
+.switzerland-yonlendirme-kapsayici .yonlendirme-karti {
+    margin-top: 0;
+    padding-top: 25px;
+}
+
+.switzerland-yonlendirme-kapsayici .yonlendirme-karti p:first-of-type {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/* UK yaz sayfasi - one cikan sehirler bolumu duzgun kart hiyerarsisi */
+.uk-one-cikan-sehirler-kutu .dahil-rozet-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.uk-one-cikan-sehirler-kutu .dahil-rozet-kart {
+    height: 100%;
+}
+
+.uk-one-cikan-sehirler-kutu .dahil-rozet-baslik {
+    color: #111827 !important;
+}
+
+@media (max-width: 992px) {
+    .uk-one-cikan-sehirler-kutu .dahil-rozet-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .uk-one-cikan-sehirler-kutu .dahil-rozet-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Kural: 2 satırlı başlık kullanan çerçevelerde üst dış boşluk 75px */
 .gri-cerceve-kutu.baslik-iki-satir {
     margin-top: 75px;
@@ -218,91 +1030,216 @@
 
 /* Ülke seçim alanı – modern kart grid tasarımı */
 .ulke-secim-butonlari {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 18px;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    gap: 18px;
     margin: 35px 0 45px 0;
 }
 
 .ulke-secim-butonlari .ulke-buton {
+    flex: 0 1 calc((100% - 36px) / 3);
+    min-width: 260px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    padding: 16px 18px;
-    border-radius: 12px;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 25px;
+    border-radius: 30px;
     text-decoration: none;
-    border: 1px solid #e2e8f0;
-    background: linear-gradient(135deg, #f9fafb 0%, #ffffff 45%, #ecfeff 100%);
-    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.06);
-    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+    border: none;
+    background: #2c3e50;
+    box-shadow: none;
+    transition: all 0.3s ease;
 }
 
 .ulke-buton-metin {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 600;
-    color: #0f172a;
+    color: #ffffff;
 }
 
 .ulke-buton-ok {
     font-size: 18px;
-    opacity: 0.9;
-    transition: transform 0.25s ease;
+    color: #ffffff;
+    transition: transform 0.3s ease;
 }
 
 .ulke-secim-butonlari .ulke-buton:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
-    border-color: #0f766e;
-    background: linear-gradient(135deg, #ecfeff 0%, #e0f2fe 40%, #f9fafb 100%);
+    background: #e74c3c;
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
 }
 
 .ulke-secim-butonlari .ulke-buton:hover .ulke-buton-ok {
-    transform: translateX(4px);
+    transform: translateX(2px);
 }
 
 /* Ülke bazlı hafif renk vurguları */
 .ulke-buton-uk {
-    background: linear-gradient(135deg, #eff6ff 0%, #ffffff 50%, #e0f2fe 100%);
+    background: #2c3e50;
 }
 
 .ulke-buton-almanya {
-    background: linear-gradient(135deg, #fef2f2 0%, #ffffff 50%, #fffbeb 100%);
+    background: #2c3e50;
 }
 
 .ulke-buton-kanada {
-    background: linear-gradient(135deg, #fef2f2 0%, #ffffff 50%, #ffe4e6 100%);
+    background: #2c3e50;
 }
 
 .ulke-buton-isvicre {
-    background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 50%, #dcfce7 100%);
+    background: #2c3e50;
 }
 
 .ulke-buton-italya {
-    background: linear-gradient(135deg, #ecfeff 0%, #ffffff 50%, #e0f2fe 100%);
+    background: #2c3e50;
 }
 
 @media (max-width: 992px) {
     .ulke-secim-butonlari {
+        display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 14px;
         margin: 30px 0 40px 0;
     }
+
+    .ulke-secim-butonlari .ulke-buton {
+        flex: initial;
+        min-width: 0;
+    }
 }
 
 @media (max-width: 768px) {
+    .yaz-okullari-secim-paneli {
+        margin: 20px 0 45px 0;
+        padding: 12px;
+        border-radius: 10px;
+    }
+
     .ulke-secim-butonlari {
         grid-template-columns: 1fr;
         gap: 12px;
         margin: 30px 0 40px 0;
     }
     .ulke-secim-butonlari .ulke-buton {
-        padding: 14px 16px;
+        padding: 10px 18px;
     }
     .ulke-buton-metin {
         font-size: 14px;
     }
+}
+
+/* Yaz okulları ana sayfası: dil okulları ile aynı renk hiyerarşisi */
+.yaz-okullari-destinasyon-kutu .kutu-liste-sirali li {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+}
+
+.yaz-okullari-destinasyon-kutu .kutu-liste-sirali li:hover {
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.1);
+}
+
+.yaz-okullari-destinasyon-kutu .kutu-liste-sirali li strong,
+.yaz-okullari-avantaj-kutu .yaz-konaklama-icerik h3,
+.yaz-okullari-program-kutu .yaz-program-etiket {
+    color: #111827;
+}
+
+.yaz-okullari-avantaj-kutu .yaz-konaklama-oge {
+    background: linear-gradient(90deg, rgba(0, 0, 128, 0.04) 0%, #f8fafc 100%);
+    border-left-color: #000080;
+    box-shadow: 0 2px 8px rgba(0, 0, 128, 0.06);
+}
+
+.yaz-okullari-program-kutu .yaz-program-kart {
+    border-top: 1px solid #e2e8f0 !important;
+}
+
+.yaz-okullari-program-kutu .yaz-program-etiket {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    padding: 0;
+    margin: 0 0 8px 0;
+    margin-left: 0;
+    background: transparent !important;
+    border-radius: 0;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    line-height: 1.4;
+    color: #111827 !important;
+    letter-spacing: 0;
+    text-align: left;
+}
+
+.yaz-okullari-program-kutu .yaz-program-etiket::before {
+    content: "✓";
+    width: 22px;
+    height: 22px;
+    flex: 0 0 22px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #fce7f3;
+    border: 1px solid #f9a8d4;
+    color: #be185d;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.yaz-okullari-program-kutu .yaz-program-etiket::after {
+    content: "";
+}
+
+/* Yaz okulları program kartları: 2+2+1, son kart ortalı */
+.yaz-okullari-program-kutu .dahil-rozet-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    align-items: stretch;
+}
+
+.yaz-okullari-program-kutu .dahil-rozet-grid > .dahil-rozet-kart:nth-child(5) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: min(100%, calc((100% - 18px) / 2));
+}
+
+@media (max-width: 768px) {
+    .yaz-okullari-program-kutu .dahil-rozet-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .yaz-okullari-program-kutu .dahil-rozet-grid > .dahil-rozet-kart:nth-child(5) {
+        grid-column: auto;
+        width: 100%;
+    }
+}
+
+/* İç kart standardı: "Amerika Yaz Okulları" kartıyla aynı arka plan dili */
+.yaz-okullari-destinasyon-kutu .kutu-liste-sirali li,
+.yaz-okullari-avantaj-kutu .yaz-konaklama-oge,
+.yaz-okullari-program-kutu .yaz-program-kart {
+    background: linear-gradient(180deg, #f0fdfa 0%, #f8fafc 100%) !important;
+    border: 1px solid #ccfbf1 !important;
+    box-shadow: 0 4px 12px rgba(13, 148, 136, 0.06) !important;
+}
+
+/* Dil okulları sayfası ile uyum: yaz sayfasındaki yeşil başlıklar siyah */
+.yaz-okullari-destinasyon-kutu .kutu-liste-sirali li strong,
+.yaz-okullari-avantaj-kutu .yaz-konaklama-icerik h3,
+.almanya-avantaj-kart h3,
+.cambridge-neden-kart h3,
+.immerse-detay-kart h3,
+.immerse-program-icerik h3,
+.immerse-akademik-kart h3,
+.yaz-okullari-program-kutu .yaz-program-etiket {
+    color: #111827 !important;
 }
 
 /* Program kutusu → bir sonraki gri kutu (İngiltere şehir kartları sonrası) */
@@ -406,6 +1343,67 @@
     font-size: 13px;
     color: #475569;
     margin-top: 8px;
+}
+
+/* Almanya kamp deneyimi: sol kenar kalin kart modeli */
+.almanya-kamp-deneyimi-kutu .yaz-konaklama-liste {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 25px;
+}
+
+.almanya-kamp-deneyimi-kutu .yaz-konaklama-oge {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 20px;
+    border: none;
+    border-left: 4px solid var(--yaz-vurgu);
+    border-radius: 0 10px 10px 0;
+    background: linear-gradient(90deg, rgba(13, 148, 136, 0.06) 0%, #f8fafc 100%);
+    box-shadow: 0 2px 8px rgba(13, 148, 136, 0.05);
+}
+
+/* Italya program secenekleri: sol kenar kalin klasik model */
+.italy-program-kutu .italy-program-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 25px;
+}
+
+.italy-program-kutu .italy-program-kart {
+    padding: 20px;
+    border: none;
+    border-left: 4px solid var(--yaz-vurgu);
+    border-radius: 0 10px 10px 0;
+    background: linear-gradient(90deg, rgba(13, 148, 136, 0.06) 0%, #f8fafc 100%);
+    box-shadow: 0 2px 8px rgba(13, 148, 136, 0.05);
+}
+
+.italy-program-kutu .italy-program-kart h3 {
+    margin: 0 0 8px 0;
+    font-size: 14.5px;
+    line-height: 1.4;
+    font-weight: 700;
+    color: #111827;
+}
+
+.italy-program-kutu .italy-program-kart p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #4b5563;
+}
+
+/* Italya avantajlar: rozet + ok simgesi */
+.italy-avantaj-kutu .italy-avantaj-rozet-grid .dahil-rozet-ikon {
+    font-size: 13px;
+    font-weight: 700;
+    background: #fce7f3;
+    border: 1px solid #f9a8d4;
+    color: #be185d;
 }
 
 .yaz-okullari-avantaj-kutu .yaz-konaklama-ikon {
@@ -610,14 +1608,18 @@
 }
 
 .yaz-okullari-program-kutu .yaz-program-etiket {
-    display: inline-block;
-    padding: 6px 14px;
-    background: var(--yaz-vurgu-acik);
-    color: #0f766e;
-    font-size: 14px;
-    font-weight: 600;
-    border-radius: 20px;
-    margin-bottom: 12px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0 0 8px 0;
+    background: transparent !important;
+    border-radius: 0;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    line-height: 1.4;
+    color: #111827 !important;
+    letter-spacing: 0;
+    text-align: left;
 }
 
 .yaz-okullari-program-kutu .yaz-program-kart p {
@@ -625,6 +1627,8 @@
     color: #444;
     line-height: 1.55;
     margin: 0;
+    margin-left: 0;
+    text-align: left;
 }
 
 .yaz-okullari-program-kutu .yaz-program-kart:nth-child(5) {

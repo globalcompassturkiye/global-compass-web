@@ -21,6 +21,7 @@
     display: block;
     width: 100%;
     height: auto;
+    border-radius: 5px;
 }
 
 .online-hero-desen {
@@ -59,6 +60,37 @@
     line-height: 1.8;
 }
 
+
+/* Hero dışı standart görünüm: online avantaj başlıkları siyah */
+.online-avantaj-kutu .dahil-rozet-baslik {
+    color: #111827;
+}
+
+.online-avantaj-kutu {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Online avantajlar: masaüstünde 4 kart yan yana */
+.online-avantaj-kutu .dahil-rozet-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+@media (max-width: 1200px) {
+    .online-avantaj-kutu .dahil-rozet-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .online-avantaj-kutu .dahil-rozet-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (min-width: 1201px) {
     /* 1200px dış frame'ler: .icerik-alani iç padding'i (25px) telafi */
     /* Ana sayfa hizmet kartları iç grid'de; global genişletme boşluk/oturmayı bozabiliyor */
@@ -83,6 +115,44 @@
     .icerik-alani .sayfa-hero-gorsel {
         width: calc(100% + 50px) !important;
         max-width: none !important;
+    }
+
+    /* Hero ve hero görseli aynı dış genişlikte kalsın */
+    .icerik-alani .online-hero {
+        width: calc(100% + 50px) !important;
+        max-width: none !important;
+        box-sizing: border-box;
+    }
+
+    /* Hero kaldırıldıktan sonra tüm alt bloklar standart genişlikte kalsın */
+    .icerik-alani .gri-cerceve-kutu,
+    .icerik-alani .kirmizi-kutu,
+    .icerik-alani .iletisim-form-alani,
+    .icerik-alani .okul-liste-kapsayici,
+    .icerik-alani .yonlendirme-karti {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: 100% !important;
+        max-width: 1200px !important;
+        box-sizing: border-box;
+    }
+
+    /* Seçici önceliği nedeniyle online avantaj kutusunu ayrıca sabitle */
+    .icerik-alani .gri-cerceve-kutu.online-avantaj-kutu {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: 100% !important;
+        max-width: 1200px !important;
+        box-sizing: border-box;
+    }
+
+    /* Alt yönlendirme kartı taşma yapmasın, dış çerçeve içinde kalsın */
+    .icerik-alani .okul-liste-kapsayici .yonlendirme-karti {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: 100% !important;
+        max-width: 1200px !important;
+        box-sizing: border-box;
     }
 }
 

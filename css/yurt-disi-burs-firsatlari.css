@@ -75,6 +75,56 @@
     text-transform: capitalize;
 }
 
+/* Standart rozet yapısı: 5 kartta 2+2+1, son kart ortalı */
+.burs-kriter-section .dahil-rozet-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    align-items: stretch;
+    margin-top: 24px;
+}
+
+.burs-kriter-section .dahil-rozet-grid > .dahil-rozet-kart:nth-child(5) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: min(100%, calc((100% - 18px) / 2));
+}
+
+.burs-kriter-section .dahil-rozet-baslik {
+    color: #111827;
+}
+
+.burs-kriter-section .dahil-rozet-kart {
+    background: linear-gradient(180deg, #f0fdfa 0%, #f8fafc 100%);
+    border: 1px solid #ccfbf1;
+    box-shadow: 0 4px 12px rgba(13, 148, 136, 0.06);
+}
+
+/* Burs süreci: standart numaralı rozet kartlar (2+1) */
+.burs-surec-kutu .dahil-rozet-grid {
+    display: grid;
+    grid-template-columns: 1fr !important;
+    gap: 18px;
+    align-items: stretch;
+    margin-top: 24px;
+}
+
+.burs-surec-kutu .dahil-rozet-grid > .dahil-rozet-kart:nth-child(3) {
+    grid-column: auto !important;
+    justify-self: stretch !important;
+    width: 100% !important;
+}
+
+.burs-surec-kutu .dahil-rozet-baslik {
+    color: #111827;
+}
+
+.burs-surec-kutu .dahil-rozet-kart {
+    width: 100% !important;
+    max-width: none !important;
+    justify-self: stretch !important;
+}
+
 /* ---------- KRİTER KARTLARI BLOĞU ---------- */
 .burs-kriter-section {
     margin-top: 40px;
@@ -285,7 +335,7 @@
 .burs-program-kart h3 {
     font-size: 15.5px;
     font-weight: 700;
-    color: #000080;
+    color: #111827;
     margin: 0 0 6px 0;
 }
 
@@ -351,5 +401,14 @@
         padding: 20px 18px;
         flex: 0 0 100%;
         max-width: 100%;
+    }
+
+    .burs-kriter-section .dahil-rozet-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .burs-kriter-section .dahil-rozet-grid > .dahil-rozet-kart:nth-child(5) {
+        grid-column: auto;
+        width: 100%;
     }
 }

@@ -33,9 +33,9 @@
 /* Aktif Sekme Renkleri */
 input:checked + .alt-tab-etiket,
 input:checked + .ana-tab-etiket {
-    background: #000080 !important;
+    background: #e74c3c !important;
     color: #fff !important;
-    border-color: #000080 !important;
+    border-color: transparent !important;
 }
 
 /* =========================================

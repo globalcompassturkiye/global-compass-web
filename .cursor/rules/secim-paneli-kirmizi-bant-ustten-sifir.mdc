@@ -1,0 +1,26 @@
+---
+description: Secim panelinde kirmizi bant ust cerceveye sifir oturmali
+globs: "**/*.{html,css}"
+alwaysApply: false
+---
+
+# Secim Paneli Standarti (Kirmizi Bant Ustten Sifir)
+
+Dil okullari ve yaz okullari gibi secim paneli kullanılan sayfalarda kirmizi bant panelin ust kenarina sifir oturmalidir.
+
+## Zorunlu yapi
+
+- Panel wrapper:
+  - `padding: 0`
+  - `overflow: hidden`
+- Panel icindeki kirmizi bant (`.kirmizi-kutu`):
+  - `margin: 0`
+  - `border-radius: 0`
+- Panel icindeki secim alani:
+  - ic bosluk panel icindeki ilgili bolume verilmeli (buton/grid alanina)
+  - ustte ekstra bosluk birakilmamali
+
+## Uygulama notu
+
+- Kirmizi bant ile panelin ust kenari arasinda bosluk/padding kalmayacak.
+- Icik bolum bosluklari banttan sonra baslatilacak (or. buton/grid icine `padding`).

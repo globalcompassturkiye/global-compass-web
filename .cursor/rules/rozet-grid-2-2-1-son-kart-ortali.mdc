@@ -1,0 +1,30 @@
+---
+description: 5 kartta 2+2+1 düzeninde son kart ortalı olmalı
+globs: "**/*.{css,html}"
+alwaysApply: false
+---
+
+# Rozet Grid 2+2+1 Standartı
+
+`dahil-rozet-grid` içinde **5 kart** varsa düzen `2+2+1` olmalı ve son kart ortalanmalıdır.
+
+## Zorunlu düzen
+
+- Grid: `grid-template-columns: repeat(2, minmax(0, 1fr));`
+- 5. kart:
+  - `grid-column: 1 / -1;`
+  - `justify-self: center;`
+  - genişlik yarım satır referansında olmalı (örn. `width: min(100%, calc((100% - gap) / 2))`)
+
+## Kapsam kuralı
+
+- Global override yazma.
+- Mutlaka sayfa/bölüm bazlı wrapper ile uygula.
+  - Örn: `.dil-okullari-program-kutu .dahil-rozet-grid`
+  - Örn: `.yaz-okullari-program-kutu .dahil-rozet-grid`
+
+## Mobil davranış
+
+- Mobilde tek kolon:
+  - `grid-template-columns: 1fr;`
+  - 5. kart normal akışa dönmeli (`grid-column: auto; width: 100%`)

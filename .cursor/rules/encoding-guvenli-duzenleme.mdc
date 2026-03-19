@@ -1,0 +1,21 @@
+---
+description: Encoding güvenli dosya düzenleme standardı
+alwaysApply: true
+---
+
+# Encoding Güvenli Düzenleme
+
+Bu projede dosya güncellerken Türkçe karakterler (ç, ğ, ı, İ, ö, ş, ü) ve diğer özel karakterler korunmalıdır.
+
+## Zorunlu kurallar
+
+- Dosya encoding'ini değiştirecek toplu komutlar kullanma.
+- İçeriği yeniden encode ederek yazan işlemlerden kaçın.
+- Metin düzenleme sonrası bozulma işaretleri (`�`, `Ã`, `Ä`, `Å`) kontrolü yap.
+- Değişiklik hedefi küçükse sadece hedef satırı/satırları düzenle.
+- Gerekmedikçe tüm dosyayı yeniden yazma.
+
+## Doğrulama
+
+- Düzenleme sonrası etkilenen dosyalarda Türkçe metinlerin doğru göründüğünü kontrol et.
+- `canonical`, `meta`, başlık ve menü metinleri gibi kullanıcıya görünen alanları özellikle doğrula.

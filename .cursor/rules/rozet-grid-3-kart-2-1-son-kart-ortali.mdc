@@ -1,0 +1,28 @@
+---
+description: 3 kartta 2+1 duzeninde 3. kart ortali olmali
+globs: "**/*.{css,html}"
+alwaysApply: false
+---
+
+# Rozet Grid 3 Kart (2+1) Standardı
+
+`dahil-rozet-grid` icinde **3 kart** varsa duzen `2+1` olmali ve 3. kart ortalanmalidir.
+
+## Zorunlu duzen
+
+- Grid: `grid-template-columns: repeat(2, minmax(0, 1fr));`
+- 3. kart:
+  - `grid-column: 1 / -1;`
+  - `justify-self: center;`
+  - yarim satir genisliginde olmali (orn. `width: min(100%, calc((100% - gap) / 2))`)
+
+## Kapsam kurali
+
+- Global override yazma.
+- Sayfa veya bolum wrapper'i ile uygula.
+
+## Mobil davranis
+
+- Mobilde tek kolon:
+  - `grid-template-columns: 1fr;`
+  - 3. kart normal akisina donmeli (`grid-column: auto; width: 100%`)

@@ -1,0 +1,32 @@
+---
+description: Okul listesi (seçim paneli) görünüm ve hover standardı
+globs: "**/*.{html,css}"
+alwaysApply: false
+---
+
+# Okul Listesi Standardı
+
+Bu projede şehir sayfalarındaki okul listeleri `yaz-okullari-secim-paneli` içinde tek bir standartla uygulanır.
+
+## HTML standardı
+
+- Panel: `div.yaz-okullari-secim-paneli`
+- Sayfa özel panel sınıfı: örn. `london-secim-paneli`, `oxford-secim-paneli`, `cambridge-secim-paneli`, `bournemouth-secim-paneli`
+- Liste alanı: `div.okul-liste-kapsayici > section.modern-okul-listesi`
+- Kart yapısı: `div.premium-liste-kart`
+- İç öğeler:
+  - `span.liste-index` (`#1`, `#2`, ...)
+  - `a.okul-isim-link`
+  - `a.btn-modern-incele` + `span.ok-animasyon`
+
+## Görsel/etkileşim standardı
+
+- Kart hover'ı sade kalmalı; agresif gölge/transform kullanılmamalı.
+- Okul adı ve `Programı incele` metni hover'da vurgu (kırmızı) alabilir.
+- `liste-index` (`#1`) hover'da değişmemeli; daima düz gri kalmalı.
+
+## Uygulama kuralı
+
+- Bu davranışlar sayfa özel selector ile uygulanmalı (örn. `.london-secim-paneli ...`).
+- Global `.modern-okul-listesi` kurallarını bozacak geniş kapsamlı override yazılmamalı.
+- Benzer yeni şehir sayfaları eklendiğinde aynı panel sınıfı modeli izlenmeli.

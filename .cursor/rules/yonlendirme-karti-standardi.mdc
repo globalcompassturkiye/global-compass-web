@@ -1,0 +1,39 @@
+---
+description: Yönlendirme kartı (yonlendirme-karti) kullanım standardı
+globs: "**/*.{html,css}"
+alwaysApply: false
+---
+
+# Yönlendirme Kartı Standardı
+
+Bu projede bilgi formu altı veya sayfa sonu CTA alanlarında standart yapı `okul-liste-kapsayici` + `yonlendirme-karti` olmalıdır.
+
+## HTML standardı
+
+- Dış kapsayıcı: `div.okul-liste-kapsayici`
+- Kapsayıcı başlığı: `h2.okul-liste-baslik`
+- İç kart: `div.yonlendirme-karti`
+- Kart içinde:
+  - açıklama metni (`p`)
+  - CTA linki (`a`)
+
+## CSS standardı
+
+- Kart sınıfı: `yonlendirme-karti` (global stil kullanılır, yeni alternatif kart sınıfı türetilmez).
+- Metin üst boşluğu gerekiyorsa kapsayıcıya özel kural ile verilir:
+  - örn. `.sayfa-ozel-kapsayici .yonlendirme-karti { padding-top: 25px; }`
+- İlk paragrafta ekstra boşluk birikmesini engelle:
+  - `p:first-of-type { margin-top: 0; padding-top: 0; }`
+
+## CTA standardı
+
+- CTA metni net olmalı (örn. `Yurt Dışı Dil Okullarını Keşfedin`).
+- Buton yapısı sayfadaki mevcut standarda uygun seçilmelidir:
+  - metin linki (`.kart-link`) veya
+  - buton stili (`.vurgulu-incele-btn` + `.ok-isareti`)
+
+## Kaçınılacaklar
+
+- İç içe ikinci kart çerçevesi üretmek.
+- Aynı blokta tekrar eden ikinci başlık kullanmak.
+- Sayfa özel override ile global `yonlendirme-karti` görünümünü bozmak.

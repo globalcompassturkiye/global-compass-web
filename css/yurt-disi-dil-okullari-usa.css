@@ -1,0 +1,77 @@
+/* Yurt Disi Dil Okullari - USA sayfasina ozel stiller */
+
+.usa-capraz-cerceve-grid {
+    display: grid;
+    gap: 14px;
+    margin-top: 14px;
+    grid-template-columns: 1fr;
+}
+
+.usa-capraz-cerceve-kart {
+    width: 100%;
+    border: 1px solid #ccfbf1;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #f0fdfa 0%, #f8fafc 100%);
+    box-shadow: 0 4px 12px rgba(13, 148, 136, 0.06);
+    padding: 12px 14px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px 12px;
+    align-items: start;
+}
+
+.usa-capraz-cerceve-kart:nth-child(odd),
+.usa-capraz-cerceve-kart:nth-child(even) {
+    justify-self: stretch;
+}
+
+.usa-capraz-cerceve-kart p {
+    margin: 0;
+    grid-column: 2;
+}
+
+@media (max-width: 768px) {
+    .usa-capraz-cerceve-kart {
+        width: 100%;
+        justify-self: stretch !important;
+    }
+}
+
+/* USA avantajlari: masaustunde 3+1 düzen */
+.usa-avantaj-grid-4lu {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.usa-avantaj-grid-4lu .dahil-rozet-kart {
+    height: 100%;
+}
+
+.usa-avantaj-grid-4lu .dahil-rozet-baslik {
+    color: #111827;
+}
+
+@media (min-width: 993px) {
+    /* Global :has(3.kart) -> 2 kolon kuralini ez */
+    .gri-cerceve-kutu .usa-avantaj-grid-4lu,
+    .gri-cerceve-kutu .usa-avantaj-grid-4lu:has(>.dahil-rozet-kart:nth-child(3)) {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    }
+
+    .usa-avantaj-grid-4lu .dahil-rozet-kart:nth-child(4) {
+        grid-column: 1 / -1 !important;
+        justify-self: center !important;
+        width: min(100%, calc((100% - 28px) / 3)) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .usa-avantaj-grid-4lu {
+        grid-template-columns: 1fr;
+    }
+
+    .usa-avantaj-grid-4lu .dahil-rozet-kart:nth-child(4) {
+        grid-column: auto;
+        width: 100%;
+    }
+}

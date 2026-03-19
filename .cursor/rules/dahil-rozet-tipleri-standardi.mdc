@@ -1,0 +1,51 @@
+---
+description: Dahil rozet kartlarında iki standart tip (numaralı / ✓ işaretli)
+globs: "**/*.{html,css}"
+alwaysApply: false
+---
+
+# Dahil Rozet Kart Tipleri Standartı
+
+`dahil-rozet-grid` içindeki kartlar yalnızca aşağıdaki iki tipten biriyle tasarlanmalıdır.
+
+## Tip 1 — Numaralı Kart (1, 2, 3, ...)
+
+### Kullanım
+- Süreç, aşama, sıralı avantaj/özellik anlatımında kullan.
+
+### HTML
+- Kart içinde:
+  - `div.dahil-rozet-ikon` → `1`, `2`, `3` gibi numara
+  - `h3.dahil-rozet-baslik`
+  - `p.dahil-rozet-metin`
+
+### Stil prensibi
+- İkon dairesel rozet olarak görünür.
+- İçerik hiyerarşisi: başlık > metin.
+
+## Tip 2 — ✓ İşaretli Kart
+
+### Kullanım
+- Sırasız fakat eşit önemdeki program/özellik maddelerinde kullan.
+
+### HTML
+- Kart içinde:
+  - `div.dahil-rozet-ikon` → `✓`
+  - `h3.dahil-rozet-baslik`
+  - `p.dahil-rozet-metin`
+
+### Stil prensibi
+- `✓` rozet görünümü numaralı tip ile aynı ailede olmalı (boyut, hizalama, boşluk).
+- Sadece ikon içeriği farklılaşmalı (`numara` vs `✓`).
+
+## Zorunlu tutarlılık kuralları
+
+- Aynı grid/bölüm içinde tek tip kullan (numaralı **veya** ✓ işaretli).
+- Aynı sayfa içinde iki tip kullanılacaksa her bölümde tip net ayrılmalı.
+- Kart yapısı her iki tipte de aynı kalmalı:
+  - `.dahil-rozet-kart` + `.dahil-rozet-ikon` + `.dahil-rozet-baslik` + `.dahil-rozet-metin`
+
+## Kaçınılacak
+
+- Tipleri aynı bölümde rastgele karıştırma.
+- `dahil-rozet-*` dışı farklı heading/ikon yapılarıyla yeni bir üçüncü tip türetme.
