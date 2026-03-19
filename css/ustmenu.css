@@ -9,7 +9,7 @@
 
 .ust-serit {
     background-color: #000080;
-    padding: 10px 0;
+    padding: 3px 0;
     width: 100%;
 }
 
@@ -454,13 +454,14 @@ body.ana-sayfa {
 @media (max-width: 992px) {
     .navigasyon {
         padding: 0 12px 12px 12px;
+        padding-bottom: 0 !important; /* 1000px altı: menü altındaki fazla boşluk kalksın */
     }
     .navigasyon > ul {
         width: 100%;
         /* 992px geçişinde “eşit genişlik / aralıklı” dağılım sıçramasın diye */
         justify-content: center;
         gap: 0;
-        border-bottom: 6px solid transparent;
+        border-bottom: 1px solid transparent; /* 1000px altı menü altında görünen fazla boşluğu azalt */
         padding-bottom: 0;
     }
     .navigasyon > ul > li {
@@ -633,6 +634,204 @@ body.ana-sayfa {
     }
     .navigasyon .submenu li {
         border-bottom: 1px solid #eee;
+    }
+}
+
+/* =========================================
+   GLOBAL ÜST MENÜ (TÜM SAYFALAR) - 769+ / 769-1200 / 1201+
+   (Önceki iyi görünüm: 1200px çerçeve, logo slotu, sosyal ikon sağ yerleşimi)
+   ========================================= */
+
+.ust-menu .sosyal-medya-alani {
+    gap: 12px !important;
+}
+
+@media (min-width: 769px) {
+    /* Soldaki logo/sosyal barı (HTML içindeki gerçek blok) desktop’ta gizle */
+    .ust-menu .ust-alan {
+        display: none !important;
+    }
+
+    /* Ana menü çerçevesi: 1200px sabit */
+    .ust-menu .navigasyon {
+        width: 1200px;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        border: 1px solid #e3e6ef;
+        border-top: 1px solid #e3e6ef;
+        border-radius: 0;
+        box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+        overflow: visible;
+        background: #ffffff;
+        box-sizing: border-box;
+    }
+
+    /* Logo slot (pseudo-element) + menüyü ortalama */
+    .ust-menu .navigasyon > ul {
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        min-height: 64px;
+        width: 100%;
+        box-sizing: border-box;
+        position: relative;
+        padding-left: 0;
+        padding-right: 0;
+        align-content: center;
+    }
+
+    .ust-menu .navigasyon > ul::before {
+        content: "";
+        position: relative;
+        flex: 0 0 156px;
+        width: 156px;
+        height: 44px;
+        background: url("/img/global-compass-logo.webp") center center / 118px auto no-repeat;
+        border-right: 2px solid #ccc;
+        pointer-events: none;
+    }
+
+    .ust-menu .navigasyon > ul > li.nav-logo-item {
+        display: none !important;
+    }
+
+    /* Menü maddeleri arası düzen */
+    .ust-menu .navigasyon > ul > li {
+        border-right: none !important;
+        margin: 0;
+        padding: 0 15px;
+        display: flex;
+        align-items: center;
+    }
+
+    /* İlk menü öğesine sol tarafta ekstra boşluk */
+    .ust-menu .navigasyon > ul > li:first-child {
+        margin-left: 15px; /* ayraç çizgisi ile ilk menü öğesi kutusu arası 15px */
+    }
+
+    .ust-menu .navigasyon > ul > li > a {
+        letter-spacing: 0.01em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    /* Bu aralıkta sosyal ikonları gizle */
+    .sabit-ust-alan .ust-menu .ust-alan {
+        display: none !important;
+    }
+
+    .ust-menu .navigasyon {
+        width: 100%;
+        max-width: none;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .ust-menu .navigasyon > ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .ust-menu .navigasyon > ul::before {
+        flex: 0 0 126px;
+        width: 126px;
+        height: 40px;
+        background-size: 96px auto;
+        pointer-events: none;
+    }
+
+    .ust-menu .navigasyon > ul > li > a,
+    .ust-menu .navigasyon .submenu a {
+        font-size: 13px;
+        padding: 9px 6px;
+        letter-spacing: 0;
+        white-space: nowrap;
+    }
+}
+
+@media (min-width: 1201px) {
+    /* 1200px üstü: sosyal ikonlar menünün sağında görün */
+    .sabit-ust-alan .ust-menu .ust-alan {
+        display: block !important;
+        position: absolute;
+        top: 50%;
+        bottom: auto;
+        right: 16px;
+        transform: translateY(-50%);
+        width: auto;
+        margin: 0;
+        padding: 0 !important;
+        z-index: 1003;
+    }
+
+    .sabit-ust-alan .ust-menu .ust-alan > div:first-child,
+    .sabit-ust-alan .ust-menu .ust-alan .logo {
+        display: none !important;
+    }
+
+    .sabit-ust-alan .ust-menu .ust-alan .sosyal-medya-alani {
+        display: flex !important;
+        justify-content: flex-end !important;
+        align-items: center !important;
+        gap: 12px !important;
+    }
+
+    .ust-menu .navigasyon > ul {
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .ust-menu .navigasyon > ul > li > a,
+    .ust-menu .navigasyon .submenu a {
+        font-size: 12.5px;
+        padding: 9px 5px;
+        white-space: nowrap;
+        letter-spacing: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    /* 768 altı: logo ortalı, sosyal ikonlar sağda */
+    .sabit-ust-alan .ust-menu .ust-alan {
+        display: grid !important;
+        grid-template-columns: 1fr auto 1fr;
+    }
+
+    .sabit-ust-alan .ust-menu .ust-alan .sosyal-medya-alani {
+        display: flex !important;
+        justify-content: flex-end !important;
+        align-items: center !important;
+        gap: 12px !important;
+    }
+}
+
+@media (max-width: 501px) {
+    .ust-serit-kapsayici {
+        justify-content: center;
+    }
+
+    .yardimci-menu ul {
+        gap: 12px;
+        flex-wrap: nowrap;
+        justify-content: center;
+        overflow: hidden;
+        align-items: center;
+    }
+
+    .yardimci-menu a {
+        font-size: 12px !important;
+        line-height: 1 !important;
+        display: inline-block;
+        padding: 0 !important;
     }
 }
 
