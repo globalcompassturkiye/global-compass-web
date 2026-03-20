@@ -1,0 +1,39 @@
+---
+description: 1200px yanyana bilgi-kart ve galeri standardi
+globs: "**/yurt-disi-yaz-okullari/**/*.html"
+alwaysApply: false
+---
+
+# Yanyana Ikili Blok Standardi (1200px)
+
+- Yanyana kurgu gereken bolumlerde tek kapsayici kullan:
+  - Sol: bilgi/icerik karti
+  - Sag: galeri veya gorsel alan
+- Ana kapsayici toplam genisligi `1200px` olacak sekilde ayarlanir:
+  - `width: min(100%, 1200px);`
+  - `margin: ... auto;`
+- Masaustunde iki sutun; mobilde tek sutun:
+  - Desktop: `display: grid; grid-template-columns: ... ...; gap: ...;`
+  - Mobile: `@media (max-width: 992px) { grid-template-columns: 1fr; }`
+- Sol icerik kartlari (or. 4 adet avantaj) gerekirse tek sutunda alt alta akar.
+- Sag galeri, ayni kapsayici icinde konumlanir; gereksiz ekstra cerceve kullanilmaz.
+- Yalnizca sayfaya ozel CSS dosyasinda override yap; ortak CSS dosyalarina sayfa-ozel kural ekleme.
+
+## Ornek CSS Iskeleti
+
+```css
+.ikili-kapsayici {
+  width: min(100%, 1200px);
+  margin: 24px auto 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+@media (max-width: 992px) {
+  .ikili-kapsayici {
+    grid-template-columns: 1fr;
+  }
+}
+```

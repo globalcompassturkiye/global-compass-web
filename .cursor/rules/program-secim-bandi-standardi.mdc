@@ -1,0 +1,32 @@
+---
+description: Program secim bandi (kirmizi bant + #1/#2 liste) ortak yapi standardi
+globs: "**/*.{html,css}"
+alwaysApply: true
+---
+
+# Program Secim Bandi Standardi
+
+Referans ornek: `yurt-disi-yaz-okullari/uk/london/index.html`
+
+Bu blok, bircok sayfada tekrar eden standart yapidir:
+
+- Ustte `kirmizi-kutu`:
+  - `p.ust-satir` (or: "Daha Fazla Bilgi ve Basvuru Icin")
+  - `p.alt-satir-lacivert` (or: "Hangi Programi Tercih Edersiniz?")
+- Altta program listesi:
+  - `div.okul-liste-kapsayici > section.modern-okul-listesi`
+  - Her satir: `div.premium-liste-kart` (+ gerekiyorsa `glass-stil`)
+  - Sol grup: `span.liste-index`, `div.ayrac-dikey`, `a.okul-isim-link`
+  - Sag grup: `a.btn-modern-incele` + `span.ok-animasyon`
+
+## CSS tekrarini azaltma kurali
+
+- Bu blok icin yeni sayfalarda yeni sinif uretme; once ortak siniflari kullan:
+  - `modern-okul-listesi`
+  - `premium-liste-kart`
+  - `okul-isim-link`
+  - `btn-modern-incele`
+  - `ok-animasyon`
+- Ortak gorunum/stil `style.css` ve mevcut ortak CSS dosyalarindan gelsin.
+- Sayfaya ozel stil gerekiyorsa yalnizca dar kapsamli panel sinifi ile override et (or. `.london-secim-paneli ...`).
+- Kopyala-yapistir yeni kart stili yazma; mevcut komponent siniflarini yeniden kullan.

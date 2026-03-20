@@ -1,0 +1,281 @@
+.futbol-alt-baslik { text-align: center; font-size: 18px; font-weight: 700; color: #444; margin-bottom: 20px; }
+.futbol-logo-kapsayici { margin: 0; text-align: center; }
+.futbol-logo { max-width: 220px; height: auto; display: inline-block; }
+.futbol-intro-metin {
+    margin-bottom: 0;
+    padding-bottom: 50px;
+}
+
+.futbol-intro-metin + .futbol-mt-24 {
+    margin-top: 0;
+}
+.futbol-mt-24 { margin-top: 24px; }
+.futbol-mt-45 { margin-top: 45px; }
+.futbol-mt-50 { margin-top: 50px; }
+.futbol-mt-75 { margin-top: 75px; }
+.futbol-mb-24 { margin-bottom: 24px; }
+.futbol-galeri-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 24px; }
+.futbol-galeri-item { aspect-ratio: 4/3; overflow: hidden; border-radius: 8px; }
+.futbol-galeri-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* AC Milan Futbol – Kampın Avantajları kart grid */
+.ac-milan-avantaj-kutu .ac-milan-avantaj-listesi {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 28px;
+}
+
+.ac-milan-avantaj-kutu .ac-milan-avantaj-kart {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px 20px 20px 0;
+    background: linear-gradient(135deg, #fef2f2 0%, #ffffff 30%, #ffffff 100%);
+    border: 1px solid #fecaca;
+    border-left: 4px solid #e30613;
+    border-radius: 0 12px 12px 0;
+    box-shadow: 0 4px 12px rgba(227, 6, 19, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.ac-milan-avantaj-kutu .ac-milan-avantaj-kart:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(227, 6, 19, 0.1);
+    border-color: #e30613;
+}
+
+.ac-milan-avantaj-kutu .ac-milan-avantaj-numara {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #e30613 0%, #b80510 100%);
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 700;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+.ac-milan-avantaj-kutu .ac-milan-avantaj-icerik h3 {
+    margin: 0 0 6px;
+    font-size: 1.08em;
+    font-weight: 700;
+    color: #1a365d;
+    line-height: 1.3;
+}
+
+.ac-milan-avantaj-kutu .ac-milan-avantaj-icerik p {
+    margin: 0;
+    font-size: 14.5px;
+    color: #475569;
+    line-height: 1.5;
+}
+
+/* Numarasız variant (Yatılı Kamp vb.): sıra numarası yok, kartta sol padding */
+.ac-milan-avantaj-kutu .ac-milan-avantaj-numarasiz .ac-milan-avantaj-kart {
+    padding-left: 20px;
+}
+
+/* AC Milan Futbol – Yatılı Kamp (Boarding Camp) grid */
+.yatili-kamp-kutu .yatili-kamp-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 8px;
+}
+
+.yatili-kamp-kutu .yatili-kamp-oge {
+    padding: 18px;
+    background: linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    border-left: 4px solid #e30613;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.yatili-kamp-kutu .yatili-kamp-oge h3 {
+    margin: 0 0 8px;
+    font-size: 1em;
+    font-weight: 700;
+    color: #1a365d;
+}
+
+.yatili-kamp-kutu .yatili-kamp-oge p {
+    margin: 0;
+    font-size: 14px;
+    color: #475569;
+    line-height: 1.5;
+}
+
+/* AC Milan Futbol – Vismara Konum / Tesis Ayrıcalıkları */
+.vismara-konum-kutu .vismara-tesis-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.vismara-konum-kutu .vismara-tesis-oge {
+    padding: 18px;
+    background: linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    border-left: 4px solid #e30613;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.vismara-konum-kutu .vismara-tesis-oge h4 {
+    margin: 0 0 6px;
+    font-size: 1em;
+    font-weight: 700;
+    color: #1a365d;
+}
+
+.vismara-konum-kutu .vismara-tesis-oge p {
+    margin: 0;
+    font-size: 14px;
+    color: #475569;
+    line-height: 1.5;
+}
+
+/* AC Milan Futbol – Milano Gezi Programı (Yatılı Kamp öğrencilerine özel) */
+.milano-gezi-kutu .milano-gezi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.milano-gezi-kutu .milano-gezi-kart {
+    padding: 20px;
+    background: linear-gradient(180deg, #fef2f2 0%, #ffffff 40%);
+    border: 1px solid #fecaca;
+    border-radius: 10px;
+    border-left: 4px solid #e30613;
+    box-shadow: 0 2px 8px rgba(227, 6, 19, 0.06);
+}
+
+.milano-gezi-kutu .milano-gezi-kart h3 {
+    margin: 0 0 10px;
+    font-size: 1.05em;
+    font-weight: 700;
+    color: #1a365d;
+}
+
+.milano-gezi-kutu .milano-gezi-kart p {
+    margin: 0;
+    font-size: 14px;
+    color: #475569;
+    line-height: 1.55;
+}
+.futbol-ikili-kapsayici {
+    width: min(100%, 1200px);
+    margin: 24px auto 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+    gap: 24px;
+    align-items: start;
+}
+.futbol-galeri-kapsayici {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+}
+.futbol-ikili-kapsayici .futbol-galeri-grid {
+    margin-top: 0;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.futbol-ikili-kapsayici .futbol-galeri-item {
+    aspect-ratio: 15/9;
+}
+.futbol-ikili-kapsayici .ac-milan-avantaj-kutu { margin: 0; }
+.futbol-ikili-kapsayici .ac-milan-avantaj-kutu .ac-milan-avantaj-listesi {
+    grid-template-columns: 1fr;
+}
+.futbol-ikili-kapsayici .ac-milan-avantaj-kutu .ac-milan-avantaj-kart { padding: 16px 16px 16px 0; }
+.futbol-ikili-kapsayici .ac-milan-avantaj-kutu .ac-milan-avantaj-numara { width: 34px; height: 34px; margin-left: 16px; font-size: 1em; }
+.futbol-liste-sifir { margin: 0; padding-left: 1.2em; }
+.futbol-vismara-alt-baslik { margin: 0 0 16px; font-size: 1.15em; font-weight: 700; color: #1a365d; }
+.futbol-vismara-tesis-baslik { margin: 0 0 14px; font-size: 1.05em; font-weight: 700; color: #0f172a; }
+
+.futbol-gezi-baslik-satir {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.futbol-gezi-baslik-satir .dahil-rozet-ikon {
+    flex-shrink: 0;
+}
+
+.milano-gezi-kutu .milano-gezi-kart {
+    border-left: 1px solid #fecaca;
+}
+
+.vismara-konum-kutu .vismara-tesis-oge {
+    border-left: 1px solid #e2e8f0;
+}
+
+.vismara-konum-kutu .vismara-tesis-oge h4::before {
+    content: none;
+}
+
+.futbol-tesis-baslik-satir {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.futbol-tesis-baslik-satir .dahil-rozet-ikon {
+    flex-shrink: 0;
+}
+
+@media (max-width: 992px) {
+    .futbol-ikili-kapsayici {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .ac-milan-avantaj-kutu .ac-milan-avantaj-listesi {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+    .ac-milan-avantaj-kutu .ac-milan-avantaj-kart {
+        padding: 16px 16px 16px 0;
+        gap: 14px;
+    }
+    .ac-milan-avantaj-kutu .ac-milan-avantaj-numara {
+        width: 36px;
+        height: 36px;
+        font-size: 1em;
+        margin-left: 16px;
+    }
+
+    .yatili-kamp-kutu .yatili-kamp-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+    .yatili-kamp-kutu .yatili-kamp-oge {
+        padding: 14px;
+    }
+
+    .vismara-konum-kutu .vismara-tesis-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+    .vismara-konum-kutu .vismara-tesis-oge {
+        padding: 14px;
+    }
+
+    .milano-gezi-kutu .milano-gezi-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+    .milano-gezi-kutu .milano-gezi-kart {
+        padding: 16px;
+    }
+}
+

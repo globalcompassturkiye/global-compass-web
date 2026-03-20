@@ -1,0 +1,16 @@
+---
+description: HTML inline style yerine dosya bazli CSS kullanma standardi
+globs: **/*.html
+alwaysApply: true
+---
+
+# HTML-CSS Ayirma Standardi
+
+- HTML dosyalarinda `style=""` kullanma.
+- Sayfaya ozel stilleri ayri bir CSS dosyasina tasi.
+- Sayfaya ozel CSS dosya adi, son klasor adiyla ayni olsun.
+  - Ornek: `/italy/milan/sportech-academy/index.html` icin `sportech-academy.css`
+- Sayfaya ozel CSS dosyasi, ilgili HTML dosyasinda acikca linklenmeli.
+  - Ornek: `<link rel="stylesheet" href="/.../sportech-academy/sportech-academy.css">`
+- Ortak stiller mevcut ortak CSS dosyalarinda kalmali (`/css/...`).
+- Yeni sayfa eklerken once sinif (class) tanimla, sonra CSS'e yaz; inline style ekleme.

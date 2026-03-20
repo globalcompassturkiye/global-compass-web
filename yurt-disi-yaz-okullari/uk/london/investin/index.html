@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
@@ -11,16 +11,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../../../css/style.css">
-    <link rel="stylesheet" href="../../../../css/ustmenu.css">
-    <link rel="stylesheet" href="../../../../css/bread-crumb.css">
-    <link rel="stylesheet" href="../../../../css/sss.css">
-    <link rel="stylesheet" href="../../../../css/form.css">
-    <link rel="stylesheet" href="../../../../css/yonlendirme-kart.css">
-    <link rel="stylesheet" href="../../../../css/footer.css">
-    <link rel="stylesheet" href="../../../../css/yurt-disi-dil-okullari.css">
-    <link rel="stylesheet" href="../../../../css/yurt-disi-yaz-okullari.css">
+<link rel="stylesheet" href="../../../../css/yurt-disi-yaz-okullari.css">
+    <link rel="stylesheet" href="../../../../css/immerse-shared.css">
+    <link rel="stylesheet" href="/css/investin.css">
 </head>
-<body>
+<body class="investin-page">
     <div class="sabit-ust-alan">
         <div class="ust-serit">
             <div class="ust-serit-kapsayici">
@@ -35,8 +30,8 @@
             </div>
         </div>
 
-        <header class="ust-menu" style="background: #fff; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 1000;">
-            <div class="ust-alan" style="max-width: 1400px; margin: 0 auto; padding: 20px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center;">
+        <header class="ust-menu">
+            <div class="ust-alan">
                 <div></div>
                 <div class="logo">
                     <a href="/">
@@ -44,15 +39,15 @@
                     </a>
                 </div>
 
-                <div class="sosyal-medya-alani" style="display: flex; gap: 20px; justify-content: flex-end; align-items: center;">
-                    <a href="https://www.facebook.com/globalcompass.ankara/" target="_blank" style="transition: transform 0.3s ease; background: none;">
-                        <img src="/img/sosyal/facebook.png" alt="Facebook" width="30" height="30" style="display: block;">
+                <div class="sosyal-medya-alani">
+                    <a href="https://www.facebook.com/globalcompass.ankara/" target="_blank">
+                        <img src="/img/sosyal/facebook.png" alt="Facebook" width="30" height="30">
                     </a>
-                    <a href="https://www.instagram.com/globalcompass.turkiye/" target="_blank" style="transition: transform 0.3s ease; background: none;">
-                        <img src="/img/sosyal/instagram.webp" alt="Instagram" width="30" height="30" style="display: block;">
+                    <a href="https://www.instagram.com/globalcompass.turkiye/" target="_blank">
+                        <img src="/img/sosyal/instagram.webp" alt="Instagram" width="30" height="30">
                     </a>
-                    <a href="https://www.youtube.com/@GlobalCompassTurkiye" target="_blank" style="transition: transform 0.3s ease; background: none;">
-                        <img src="/img/sosyal/youtube.png" alt="Youtube" width="30" height="30" style="display: block;">
+                    <a href="https://www.youtube.com/@GlobalCompassTurkiye" target="_blank">
+                        <img src="/img/sosyal/youtube.png" alt="Youtube" width="30" height="30">
                     </a>
                 </div>
             </div>
@@ -122,12 +117,12 @@
             <span class="vurgu-renk">Geleceğin Profesyonelleri İçin Kariyer Odaklı Yaz Programları</span>
         </h1>
 
-        <h2 style="text-align: center; font-size: 18px; font-weight: 700; color: #444; margin-bottom: 20px;">
+        <h2 class="investin-alt-baslik">
             12-18 yaş arası öğrenciler için Kapsamlı Mesleki Deneyim kazandıran yaz programları
         </h2>
 
-        <div class="okul-logo-alani" style="text-align: center; margin-bottom: 24px;">
-            <img src="/img/logo/investin-education.webp" alt="InvestIN Education Logo" style="max-width: 220px; height: auto;" onerror="this.style.display='none'">
+        <div class="okul-logo-alani investin-logo-kapsayici">
+            <img src="/img/logo/investin-education.webp" alt="InvestIN Education Logo" class="investin-logo" onerror="this.classList.add('investin-logo-gizli')">
         </div>
 
         <div class="gri-cerceve-kutu">
@@ -180,7 +175,7 @@
                 <div class="yas-tab-icerikler">
                     <div class="yas-tab-icerik investin-15-18-icerik">
                         <p><strong>15-18 Yaş Arası Geleceğin Profesyonelleri:</strong> Belirli bir mesleğe odaklanmak, üniversite başvurularında öne çıkmak ve Londra'da gerçek iş simülasyonu deneyimi yaşamak isteyen lise öğrencileri için tasarlanmıştır.</p>
-                        <p style="margin-top: 1em;"><strong>Program alanları:</strong></p>
+                        <p class="investin-program-alanlari-baslik"><strong>Program alanları:</strong></p>
                         <ul class="kutu-liste yas-alan-etiketleri">
                             <li>Yatırım Bankacılığı</li>
                             <li>Tıp</li>
@@ -277,7 +272,7 @@
             <h2 class="kutu-baslik">Uluslararası Öğrenciler İçin Öne Çıkanlar</h2>
             <p>Uluslararası öğrencilere, dünyanın en saygın eğitim kurumlarından biri olan UCL (University College London) kampüsünde yaşama, çalışma ve sosyalleşme gibi eşsiz bir fırsat sunuyoruz. Londra'nın merkezinde gerçekleşen bu programlar, öğrencilere yalnızca akademik bilgi değil, aynı zamanda küresel bir vizyon kazandıran en üst düzey iş deneyimini sağlar.</p>
 
-            <h3 style="margin-top: 1.5em;">Programın Öne Çıkan Ayrıcalıkları</h3>
+            <h3 class="investin-ara-baslik">Programın Öne Çıkan Ayrıcalıkları</h3>
             <ul class="kutu-liste">
                 <li><strong>Kampüs Yaşamı:</strong> Öğrenciler, eğitim süresince Londra'nın merkezindeki seçkin üniversite yerleşkelerinde gerçek bir üniversiteli gibi yaşayarak akademik atmosfere erkenden uyum sağlarlar.</li>
                 <li><strong>Küresel Sosyalleşme:</strong> 100'den fazla ülkeden gelen yaşıtlarıyla bir araya gelerek, profesyonel hayatları boyunca sürecek uluslararası bir network kurma şansı elde ederler.</li>
@@ -285,7 +280,7 @@
                 <li><strong>Kişisel Gelişim ve Destek:</strong> Öğrenciler, 7/24 rehberlik (PAL) desteği ve düzenlenen sosyal aktivitelerle hem güvenli hem de ilham verici bir yaz tatili geçirirler.</li>
             </ul>
 
-            <div class="immerse-konaklama-grid investin-one-cikan-grid" style="margin-top: 1.75rem;">
+            <div class="immerse-konaklama-grid investin-one-cikan-grid investin-one-cikan-ust-bosluk">
                 <figure class="immerse-konaklama-kart">
                     <img src="/img/investin/investin1.webp" alt="Kalabalığın arasından sıyrılın - sertifika ve referans mektubu">
                     <figcaption>
@@ -321,7 +316,7 @@
             <h2 class="kutu-baslik">Kampüs Yaşamı ve Konaklama</h2>
             <p>Yurt konaklamalı veya konaklamasız seçeneklerden birini tercih edebilirsiniz. Tüm programlar; UCL (University College London), LSE (London School of Economics) ve Londra Üniversitesi gibi dünyanın en prestijli akademik kurumlarının kampüslerinde, Londra'nın tam merkezinde gerçekleştirilmektedir. Öğrenciler, profesyonel dünyaya hazırlanırken aynı zamanda bu ikonik kampüslerin tarihi dokusunu tanıma şansı yakalarlar.</p>
 
-            <h3 style="margin-top: 1.5em;">Yurt Konaklaması Seçeneği</h3>
+            <h3 class="investin-ara-baslik">Yurt Konaklaması Seçeneği</h3>
             <p>Öğrencilerin üniversite yaşamına tam uyum sağlamaları için özel olarak tasarlanmış yurt konaklamalı pakettir.</p>
             <ul class="kutu-liste">
                 <li><strong>Özel Konfor:</strong> Üniversite yurtlarında, her öğrenciye özel banyolu (en-suite) modern odalar sunulmaktadır.</li>
@@ -548,6 +543,8 @@
 </script>
 </body>
 </html>
+
+
 
 
 

@@ -11,13 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/ustmenu.css">
-    <link rel="stylesheet" href="/css/bread-crumb.css">
-    <link rel="stylesheet" href="/css/form.css">
-    <link rel="stylesheet" href="/css/yonlendirme-kart.css">
-    <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="/css/yurt-disi-dil-okullari.css">
-    <link rel="stylesheet" href="/css/yurt-disi-yaz-okullari.css">
+<link rel="stylesheet" href="/css/yurt-disi-yaz-okullari.css">
+    <link rel="stylesheet" href="/css/chantemerle.css">
 </head>
 <body>
     <div class="sabit-ust-alan">
@@ -34,8 +29,8 @@
             </div>
         </div>
 
-        <header class="ust-menu" style="background: #fff; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 1000;">
-            <div class="ust-alan" style="max-width: 1400px; margin: 0 auto; padding: 20px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center;">
+        <header class="ust-menu">
+            <div class="ust-alan">
                 <div></div>
                 <div class="logo">
                     <a href="/">
@@ -43,15 +38,15 @@
                     </a>
                 </div>
 
-                <div class="sosyal-medya-alani" style="display: flex; gap: 20px; justify-content: flex-end; align-items: center;">
-                    <a href="https://www.facebook.com/globalcompass.ankara/" target="_blank" style="transition: transform 0.3s ease; background: none;">
-                        <img src="/img/sosyal/facebook.png" alt="Facebook" width="30" height="30" style="display: block;">
+                <div class="sosyal-medya-alani">
+                    <a href="https://www.facebook.com/globalcompass.ankara/" target="_blank">
+                        <img src="/img/sosyal/facebook.png" alt="Facebook" width="30" height="30">
                     </a>
-                    <a href="https://www.instagram.com/globalcompass.turkiye/" target="_blank" style="transition: transform 0.3s ease; background: none;">
-                        <img src="/img/sosyal/instagram.webp" alt="Instagram" width="30" height="30" style="display: block;">
+                    <a href="https://www.instagram.com/globalcompass.turkiye/" target="_blank">
+                        <img src="/img/sosyal/instagram.webp" alt="Instagram" width="30" height="30">
                     </a>
-                    <a href="https://www.youtube.com/@GlobalCompassTurkiye" target="_blank" style="transition: transform 0.3s ease; background: none;">
-                        <img src="/img/sosyal/youtube.png" alt="Youtube" width="30" height="30" style="display: block;">
+                    <a href="https://www.youtube.com/@GlobalCompassTurkiye" target="_blank">
+                        <img src="/img/sosyal/youtube.png" alt="Youtube" width="30" height="30">
                     </a>
                 </div>
             </div>
@@ -120,8 +115,8 @@
             <span class="vurgu-renk">Alplerin Kalbinde Butik Bir Eğitim Deneyimi</span>
         </h1>
 
-        <div class="okul-gorsel-alani" style="text-align: center; margin-bottom: 30px;">
-            <img src="/img/chantemerle-photo/chantemerle.webp" alt="Chantemerle İsviçre Yaz Okulu - Kampüs ve manzara" width="1200" height="300" style="max-width: 100%; width: 1200px; height: 300px; object-fit: cover; border-radius: 10px; box-shadow: 0 14px 35px rgba(15, 23, 42, 0.25);">
+        <div class="okul-gorsel-alani chantemerle-gorsel-kapsayici">
+            <img src="/img/chantemerle-photo/chantemerle.webp" alt="Chantemerle İsviçre Yaz Okulu - Kampüs ve manzara" width="1200" height="300" class="chantemerle-gorsel">
         </div>
 
         <div class="gri-cerceve-kutu">
@@ -169,7 +164,7 @@
                 </div>
 
                 <div class="immerse-detay-kart">
-                    <h3>Fiyata Dahil Olanlar <span style="font-weight: 400; font-size: 0.95em;">(Tam Pansiyon İçin)</span></h3>
+                    <h3>Fiyata Dahil Olanlar <span class="chantemerle-alt-not">(Tam Pansiyon İçin)</span></h3>
                     <ul class="kutu-liste">
                         <li>Akademik dersler ve materyaller</li>
                         <li>Tam pansiyon</li>
@@ -205,21 +200,21 @@
 
         <div class="gri-cerceve-kutu">
             <h2 class="kutu-baslik">Örnek Program</h2>
-            <div style="text-align: center;">
-                <img src="/img/chantemerle-photo/gunluk-program.webp" alt="Chantemerle yaz okulu örnek program" style="max-width: 100%; height: auto; border-radius: 8px;">
+            <div class="chantemerle-ornek-kapsayici">
+                <img src="/img/chantemerle-photo/gunluk-program.webp" alt="Chantemerle yaz okulu örnek program" class="chantemerle-ornek-gorsel">
             </div>
         </div>
 
         <div class="gri-cerceve-kutu">
             <h2 class="kutu-baslik">Galeri</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 12px;">
-                <img src="/img/chantemerle-photo/galeri/chantemerle1.webp" alt="Chantemerle İsviçre yaz okulu1" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover;">
-                <img src="/img/chantemerle-photo/galeri/chantemerle2.webp" alt="Chantemerle İsviçre yaz okulu2" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover;">
-                <img src="/img/chantemerle-photo/galeri/chantemerle3.webp" alt="Chantemerle İsviçre yaz okulu3" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover;">
-                <img src="/img/chantemerle-photo/galeri/chantemerle4.webp" alt="Chantemerle İsviçre yaz okulu4" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover;">
-                <img src="/img/chantemerle-photo/galeri/chantemerle5.webp" alt="Chantemerle İsviçre yaz okulu5" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover;">
-                <img src="/img/chantemerle-photo/galeri/chantemerle6.webp" alt="Chantemerle İsviçre yaz okulu6" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover;">
-                <img src="/img/chantemerle-photo/galeri/chantemerle7.webp" alt="Chantemerle İsviçre yaz okulu7" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover;">
+            <div class="chantemerle-galeri-grid">
+                <img src="/img/chantemerle-photo/galeri/chantemerle1.webp" alt="Chantemerle İsviçre yaz okulu1" class="chantemerle-galeri-gorsel">
+                <img src="/img/chantemerle-photo/galeri/chantemerle2.webp" alt="Chantemerle İsviçre yaz okulu2" class="chantemerle-galeri-gorsel">
+                <img src="/img/chantemerle-photo/galeri/chantemerle3.webp" alt="Chantemerle İsviçre yaz okulu3" class="chantemerle-galeri-gorsel">
+                <img src="/img/chantemerle-photo/galeri/chantemerle4.webp" alt="Chantemerle İsviçre yaz okulu4" class="chantemerle-galeri-gorsel">
+                <img src="/img/chantemerle-photo/galeri/chantemerle5.webp" alt="Chantemerle İsviçre yaz okulu5" class="chantemerle-galeri-gorsel">
+                <img src="/img/chantemerle-photo/galeri/chantemerle6.webp" alt="Chantemerle İsviçre yaz okulu6" class="chantemerle-galeri-gorsel">
+                <img src="/img/chantemerle-photo/galeri/chantemerle7.webp" alt="Chantemerle İsviçre yaz okulu7" class="chantemerle-galeri-gorsel">
             </div>
         </div>
 
@@ -366,6 +361,8 @@
 </script>
 </body>
 </html>
+
+
 
 
 

@@ -1,0 +1,199 @@
+.sportech-academy-page .yaz-programlari-kategori-baslik {
+    margin: 28px 0 14px;
+    padding: 12px 16px;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #0f172a;
+    background: linear-gradient(90deg, #f1f5f9 0%, #ffffff 100%);
+    border-radius: 6px;
+}
+
+.sportech-academy-page .yaz-programlari-kategori-baslik:first-of-type {
+    margin-top: 8px;
+}
+
+.sportech-academy-alt-baslik {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.sportech-academy-logo-kapsayici {
+    margin: 16px 0 24px;
+    text-align: center;
+}
+
+.sportech-academy-logo {
+    max-width: 450px;
+    height: auto;
+    display: inline-block;
+}
+
+.sportech-academy-ust-paragraf {
+    padding-top: 0;
+}
+
+.sportech-academy-page .yaz-programlari-icerik {
+    margin-top: 24px;
+}
+
+.sportech-academy-program-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 24px;
+}
+
+.sportech-academy-program-kart {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.sportech-academy-program-baslik {
+    margin: 0 0 12px;
+    font-size: 1.1em;
+    color: #1a365d;
+}
+
+.sportech-academy-liste {
+    margin: 0;
+    padding-left: 1.2em;
+}
+
+.sportech-academy-buton-grup {
+    margin-bottom: 24px;
+    flex-direction: column;
+}
+
+.sportech-program-paneli .sportech-academy-buton-grup {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.sportech-program-paneli .sportech-academy-buton-grup .ulke-buton {
+    flex: 0 0 auto;
+    width: auto;
+    min-width: 0;
+    display: inline-flex;
+    max-width: 320px;
+    padding: 10px 16px;
+    justify-content: space-between;
+}
+
+.sportech-program-paneli .sportech-academy-buton-grup .ulke-buton-metin {
+    white-space: normal;
+    line-height: 1.25;
+    text-align: left;
+}
+
+.sportech-program-paneli .sportech-program-icerik:hover {
+    border-color: transparent;
+    box-shadow: none;
+    transform: none;
+}
+
+.sportech-program-paneli .kirmizi-kutu {
+    margin-bottom: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.sportech-program-paneli .sportech-program-icerik {
+    margin-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.sportech-academy-buton-grup-son {
+    margin-bottom: 0;
+}
+
+.sportech-academy-linksiz-buton {
+    cursor: default;
+}
+
+.sportech-academy-sol-vurgu-blok {
+    margin: 0 0 16px;
+    padding: 12px 14px;
+    background: linear-gradient(90deg, #f1f5f9 0%, #ffffff 100%);
+    border-radius: 6px;
+}
+
+.sportech-academy-sol-vurgu-blok-ikincil {
+    margin-top: 24px;
+}
+
+.sportech-academy-ara-baslik {
+    margin: 0 0 12px;
+    padding: 0;
+    font-size: 1.05em;
+    color: #0f172a;
+}
+
+.sportech-academy-program-icerik-baslik {
+    margin: 16px 0 8px;
+    font-weight: 600;
+}
+
+.sportech-academy-program-icerik-liste {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    align-items: stretch;
+}
+
+.sportech-academy-program-icerik-item {
+    margin-bottom: 0;
+    padding: 14px 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    background: #ffffff;
+    line-height: 1.5;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+    height: 100%;
+}
+
+.sportech-academy-program-icerik-liste .sportech-academy-program-icerik-item::before {
+    content: none;
+}
+
+.sportech-academy-program-icerik-item strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #0f172a;
+    position: relative;
+    padding-left: 14px;
+}
+
+.sportech-academy-program-icerik-item strong::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0.1em;
+    color: #1a365d;
+    font-size: 18px;
+    line-height: 1;
+}
+
+@media (max-width: 992px) {
+    .sportech-academy-program-icerik-liste {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 900px) {
+    .sportech-academy-program-grid {
+        grid-template-columns: 1fr;
+    }
+}

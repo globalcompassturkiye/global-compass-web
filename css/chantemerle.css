@@ -1,0 +1,42 @@
+.chantemerle-gorsel-kapsayici {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.chantemerle-gorsel {
+    max-width: 100%;
+    width: 1200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 14px 35px rgba(15, 23, 42, 0.25);
+}
+
+.chantemerle-alt-not {
+    font-weight: 400;
+    font-size: 0.95em;
+}
+
+.chantemerle-ornek-kapsayici {
+    text-align: center;
+}
+
+.chantemerle-ornek-gorsel {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.chantemerle-galeri-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 12px;
+}
+
+.chantemerle-galeri-gorsel {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}

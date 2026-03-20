@@ -1,0 +1,171 @@
+/* Isvicre yaz okullari sayfasina ozel secim paneli/form ve hover stilleri */
+.isvicre-secim-paneli .kirmizi-kutu .ust-satir,
+.isvicre-secim-paneli .kirmizi-kutu .alt-satir-lacivert {
+    font-size: 22px;
+}
+
+.isvicre-secim-paneli .kirmizi-kutu {
+    margin: 0;
+    border-radius: 5px 5px 0 0;
+}
+
+.isvicre-secim-paneli .okul-liste-kapsayici {
+    margin-top: 0;
+    padding-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.isvicre-form-bant {
+    margin-bottom: 0;
+    border-radius: 15px 15px 0 0;
+    background-color: #e30613;
+}
+
+.isvicre-form-bant .ust-satir {
+    font-size: 20px;
+    color: #ffffff !important;
+}
+
+.isvicre-secim-paneli .premium-liste-kart,
+.isvicre-secim-paneli .skyline-stil,
+.isvicre-secim-paneli .incele-btn-minimal,
+.isvicre-secim-paneli .ok-animasyon {
+    transition: none !important;
+}
+
+.isvicre-secim-paneli .premium-liste-kart:hover,
+.isvicre-secim-paneli .skyline-stil:hover {
+    transform: none !important;
+    box-shadow: none !important;
+    border-color: #d1d5db !important;
+    background: #ffffff !important;
+}
+
+.isvicre-secim-paneli .skyline-stil:hover .incele-btn-minimal {
+    color: #444 !important;
+}
+
+.isvicre-secim-paneli .skyline-stil:hover .ok-animasyon {
+    transform: none !important;
+}
+
+.isvicre-secim-paneli .okul-isim-link:hover,
+.isvicre-secim-paneli .incele-btn-minimal:hover,
+.isvicre-secim-paneli .btn-modern-incele:hover {
+    color: inherit !important;
+    text-decoration: none !important;
+    padding-left: 0 !important;
+}
+
+.isvicre-secim-paneli .okul-liste-kapsayici:hover {
+    border-color: #d1d5db !important;
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+.isvicre-secim-paneli .premium-liste-kart:hover .ok-animasyon,
+.isvicre-secim-paneli .skyline-stil:hover .ok-animasyon {
+    transform: none !important;
+}
+
+.isvicre-secim-paneli .liste-index,
+.isvicre-secim-paneli .okul-isim-link,
+.isvicre-secim-paneli .incele-btn-minimal {
+    font-size: 18px !important;
+}
+
+.isvicre-secim-paneli .premium-liste-kart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+}
+
+.isvicre-secim-paneli .kart-sol-grup,
+.isvicre-secim-paneli .kart-aksiyon {
+    display: flex;
+    align-items: center;
+}
+
+.isvicre-form-bant + .iletisim-form-alani {
+    margin-top: 0 !important;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding-top: 25px;
+}
+
+.isvicre-form-bant + .iletisim-form-alani > p:first-of-type {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.isvicre-secim-paneli .premium-liste-kart:hover .liste-index,
+.isvicre-secim-paneli .liste-index {
+    color: #6b7280 !important;
+    transition: none !important;
+    transform: none !important;
+}
+
+.switzerland-yonlendirme-kapsayici {
+    max-width: 1200px;
+    margin: 50px auto 0 auto;
+}
+
+.switzerland-yonlendirme-kapsayici .alt-yonlendirme-alani {
+    margin: 0;
+}
+
+.switzerland-yonlendirme-kapsayici .vurgulu-incele-btn {
+    display: inline-flex;
+    width: fit-content !important;
+    justify-content: flex-start;
+}
+
+.switzerland-yonlendirme-kapsayici .yonlendirme-karti {
+    margin-top: 0;
+    padding-top: 25px;
+}
+
+.switzerland-yonlendirme-kapsayici .yonlendirme-karti p:first-of-type {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/* Isvicre kamp bolumu */
+.isvicre-kamp-kutu .isvicre-kamp-rozet-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.isvicre-kamp-kutu .isvicre-kamp-rozet-grid .dahil-rozet-kart {
+    height: 100%;
+}
+
+.isvicre-kamp-kutu .isvicre-kamp-rozet-grid > .dahil-rozet-kart:nth-child(3) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: min(100%, calc((100% - 14px) / 2));
+}
+
+.isvicre-kamp-kutu .isvicre-kamp-rozet-grid .dahil-rozet-baslik {
+    color: #111827 !important;
+}
+
+@media (max-width: 992px) {
+    .isvicre-kamp-kutu .isvicre-kamp-rozet-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .isvicre-kamp-kutu .isvicre-kamp-rozet-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .isvicre-kamp-kutu .isvicre-kamp-rozet-grid > .dahil-rozet-kart:nth-child(3) {
+        grid-column: auto;
+        width: 100%;
+    }
+}

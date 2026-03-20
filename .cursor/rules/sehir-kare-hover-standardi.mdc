@@ -1,0 +1,20 @@
+---
+description: Sehir-kare kartlarda UK dil okulu hover standardi
+globs: "**/*.{html,css}"
+alwaysApply: false
+---
+
+# Sehir-Kare Hover Standardi
+
+`sehir-kare-yigini` ve `kare-kart` yapisinda degisiklik yaparken,
+ornek davranis olarak `yurt-disi-dil-okullari/uk/` referans alinmalidir.
+
+- Dis kapsayici (`.okul-liste-kapsayici`) hover efekti almaz.
+- Kartin kendisi (`.kare-kart`) hover'da yukselmez/golge almaz.
+- Gorsel linki (`.kare-resim-link`) hover'da zoom alir (`scale(1.1)`).
+- Buton (`.kare-btn`) hover'da vurgu rengine doner (kirmizi).
+
+## Uygulama ilkesi
+
+- Referans sayfayi bozmamak icin global override yerine once dar kapsamli selector kullan.
+- Sayfa bazli istisna gerekiyorsa ilgili panel sinifi ile scope et (ornek: `.canada-secim-paneli ...`).

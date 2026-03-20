@@ -1,0 +1,123 @@
+/* Italy yaz okullari sayfalarina ozel secim paneli ve form bandi */
+.italy-secim-paneli .kirmizi-kutu .ust-satir,
+.italy-secim-paneli .kirmizi-kutu .alt-satir-lacivert {
+    font-size: 22px;
+}
+
+.italy-secim-paneli .kirmizi-kutu {
+    margin: 0;
+    border-radius: 5px 5px 0 0;
+}
+
+.italy-secim-paneli .okul-liste-kapsayici {
+    margin-top: 0;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+}
+
+.italy-secim-paneli .okul-liste-kapsayici:hover {
+    border-color: transparent !important;
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+.italy-secim-paneli .okul-liste-kapsayici .okul-liste-baslik {
+    display: none;
+}
+
+.italy-form-bant {
+    margin-bottom: 0;
+    border-radius: 15px 15px 0 0;
+    background-color: #e30613;
+}
+
+.italy-form-bant .ust-satir {
+    font-size: 20px;
+    color: #ffffff !important;
+}
+
+.italy-form-bant + .iletisim-form-alani {
+    margin-top: 0 !important;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding-top: 25px;
+}
+
+.italy-form-bant + .iletisim-form-alani > p:first-of-type {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/* Italya program secenekleri */
+.italy-program-kutu .italy-program-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 25px;
+}
+
+.italy-program-kutu .italy-program-kart {
+    padding: 20px;
+    border: none;
+    border-left: 4px solid var(--yaz-vurgu);
+    border-radius: 0 10px 10px 0;
+    background: linear-gradient(90deg, rgba(13, 148, 136, 0.06) 0%, #ffffff 100%);
+    box-shadow: 0 2px 8px rgba(13, 148, 136, 0.05);
+}
+
+.italy-program-kutu .italy-program-kart h3 {
+    margin: 0 0 8px 0;
+    font-size: 14.5px;
+    line-height: 1.4;
+    font-weight: 700;
+    color: #111827;
+}
+
+.italy-program-kutu .italy-program-kart p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #4b5563;
+}
+
+/* Milano sosyal aktiviteler */
+.italy-sosyal-kutu .italy-sosyal-list { gap: 14px; }
+.italy-sosyal-kutu .italy-sosyal-madde {
+    border-top: none;
+    padding: 20px;
+    border-left: 4px solid var(--yaz-vurgu);
+    border-radius: 0 10px 10px 0;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(13, 148, 136, 0.05);
+    gap: 12px;
+}
+.italy-sosyal-kutu .italy-sosyal-ikon { display: none; }
+.italy-sosyal-kutu .italy-sosyal-icerik h3 { color: #111827; }
+
+.italy-avantaj-kutu .italy-avantaj-rozet-grid .dahil-rozet-ikon,
+.milan-avantaj-kutu .milan-avantaj-rozet-grid .dahil-rozet-ikon {
+    font-size: 13px;
+    font-weight: 700;
+    background: #fce7f3;
+    border: 1px solid #f9a8d4;
+    color: #be185d;
+}
+
+.milan-avantaj-kutu .milan-avantaj-rozet-grid > .dahil-rozet-kart:nth-child(5) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: min(100%, calc((100% - 14px) / 2));
+}
+
+@media (max-width: 768px) {
+    .milan-avantaj-kutu .milan-avantaj-rozet-grid > .dahil-rozet-kart:nth-child(5) {
+        grid-column: auto;
+        justify-self: stretch;
+        width: 100%;
+    }
+}
