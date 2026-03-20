@@ -4049,7 +4049,10 @@ body.ana-sayfa {
     }
     .navigasyon.is-open {
         max-height: 90vh;
+        max-height: min(88vh, 100dvh);
+        overflow-x: hidden;
         overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
         opacity: 1;
         visibility: visible;
     }
@@ -4057,7 +4060,7 @@ body.ana-sayfa {
         flex-direction: column;
         align-items: stretch;
         width: 100%;
-        padding: 6px 0;
+        padding: 4px 0;
         gap: 0;
     }
     .navigasyon > ul > li {
@@ -4065,6 +4068,7 @@ body.ana-sayfa {
         padding-right: 0;
         margin-right: 0;
         border-bottom: 1px solid #f0f0f5;
+        min-width: 0;
     }
     .navigasyon > ul > li:last-child {
         border-bottom: none;
@@ -4094,8 +4098,19 @@ body.ana-sayfa {
         line-height: 1.1;
         text-align: left;
     }
+    /* float:right ok ikonu — uzun başlıkta (Yaz Okulları) yükseklik/ taşma bozulmasın */
+    .navigasyon .has-dropdown > a {
+        display: flex !important;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
     .navigasyon .has-dropdown > a::after {
-        float: right;
+        float: none !important;
+        flex-shrink: 0;
+        margin-left: auto;
         transform: rotate(0deg);
     }
     .navigasyon .has-dropdown.submenu-open > a::after {
@@ -4111,8 +4126,8 @@ body.ana-sayfa {
         border-radius: 0;
         max-height: 0;
         overflow: hidden;
-        background: #fafafa;
-        transition: max-height 0.35s ease;
+        background: #f5f6f8;
+        transition: max-height 0.28s ease;
         will-change: max-height;
         /* Genel kuraldaki pointer-events:none — dokunma hedefleri ölür; kapalıyken none kalsın */
         pointer-events: none;
@@ -4121,22 +4136,25 @@ body.ana-sayfa {
         min-width: 0 !important;
         box-sizing: border-box;
     }
+    /* İç scroll yerine tek kaydırma: üst .navigasyon.is-open — çok alt öğede çift kaydırma / sıçrama olmasın */
     .navigasyon .has-dropdown.submenu-open .submenu {
-        max-height: min(75vh, 520px);
+        max-height: 2000px;
         pointer-events: auto;
-        overflow-x: hidden;
-        overflow-y: auto;
-        -webkit-overflow-scrolling: touch;
+        overflow: visible;
     }
     .navigasyon .submenu a {
-        padding: 8px 22px 8px 34px;
-        font-size: 16px;
+        padding: 6px 12px 6px 22px;
+        font-size: 15px;
+        line-height: 1.3;
         text-align: left;
         white-space: normal;
         overflow-wrap: break-word;
     }
     .navigasyon .submenu li {
-        border-bottom: 1px solid #eee;
+        border-bottom: 1px solid #e8e8ec;
+    }
+    .navigasyon .submenu li:last-child {
+        border-bottom: none;
     }
 }
 
@@ -4459,14 +4477,17 @@ body.ana-sayfa {
     }
     .navigasyon.is-open {
         max-height: 90vh;
+        max-height: min(88vh, 100dvh);
+        overflow-x: hidden;
         overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
         opacity: 1;
         visibility: visible;
     }
     .navigasyon > ul {
         flex-direction: column;
         align-items: stretch;
-        padding: 6px 0;
+        padding: 4px 0;
         gap: 0;
     }
     .navigasyon > ul > li {
@@ -4474,6 +4495,7 @@ body.ana-sayfa {
         padding-right: 0;
         margin-right: 0;
         border-bottom: 1px solid #f0f0f5;
+        min-width: 0;
     }
     .navigasyon > ul > li:last-child {
         border-bottom: none;
@@ -4492,8 +4514,18 @@ body.ana-sayfa {
         line-height: 1.2;
         text-align: left;
     }
+    .navigasyon .has-dropdown > a {
+        display: flex !important;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
     .navigasyon .has-dropdown > a::after {
-        float: right;
+        float: none !important;
+        flex-shrink: 0;
+        margin-left: auto;
         transform: rotate(0deg);
     }
     .navigasyon .has-dropdown.submenu-open > a::after {
@@ -4510,24 +4542,29 @@ body.ana-sayfa {
         border-radius: 0;
         max-height: 0;
         overflow: hidden;
-        background: #fafafa;
-        transition: max-height 0.35s ease;
+        background: #f5f6f8;
+        transition: max-height 0.28s ease;
         will-change: max-height;
     }
     .navigasyon .has-dropdown.submenu-open .submenu {
-        max-height: 80vh;
-        /* Tablet hover/transform kuralını iptal edip sıçramayı önle */
+        max-height: 2000px;
         transform: none;
         pointer-events: auto;
+        overflow: visible;
     }
     .navigasyon .submenu a {
-        padding: 8px 22px 8px 34px;
-        font-size: 16px;
+        padding: 6px 12px 6px 22px;
+        font-size: 15px;
         text-align: left;
-        line-height: 1.2;
+        line-height: 1.3;
+        white-space: normal;
+        overflow-wrap: break-word;
     }
     .navigasyon .submenu li {
-        border-bottom: 1px solid #eee;
+        border-bottom: 1px solid #e8e8ec;
+    }
+    .navigasyon .submenu li:last-child {
+        border-bottom: none;
     }
 }
 
