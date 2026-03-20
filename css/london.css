@@ -1,4 +1,21 @@
 /* London yaz okullari sayfasina ozel secim paneli ve form bandi stilleri */
+
+/* Londra dil okullari: h1 alti cercevesiz giris metni */
+.londra-dil-giris {
+    max-width: 1200px;
+    margin: 0 auto 28px auto;
+}
+
+.londra-dil-giris p {
+    font-size: 15px;
+    line-height: 1.75;
+    color: #374151;
+    margin: 0 0 1em 0;
+}
+
+.londra-dil-giris p:last-child {
+    margin-bottom: 0;
+}
 .london-secim-paneli .kirmizi-kutu .ust-satir,
 .london-secim-paneli .kirmizi-kutu .alt-satir-lacivert {
     font-size: 22px;
@@ -124,4 +141,43 @@
     .london-sosyal-rozet-kutu .london-sosyal-rozet-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* Londra dil okullari – Neden Londra: 4 numarali rozet, masaustu 2x2 */
+.londra-neden-kutu .londra-neden-rozet-grid {
+    margin-top: 22px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 22px;
+}
+
+.londra-neden-kutu .londra-neden-rozet-grid .dahil-rozet-kart {
+    height: 100%;
+}
+
+.londra-neden-kutu .londra-neden-rozet-grid .dahil-rozet-baslik {
+    color: #111827;
+}
+
+@media (max-width: 768px) {
+    .londra-neden-kutu .londra-neden-rozet-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Londra yaz — bu dosya en son yüklenir; okul listesi kart aralığı */
+.london-secim-paneli .okul-liste-kapsayici .modern-okul-listesi {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+    display: block !important;
+}
+
+.london-secim-paneli .okul-liste-kapsayici .modern-okul-listesi > .premium-liste-kart ~ .premium-liste-kart {
+    margin-top: 25px !important;
+}
+
+.london-secim-paneli .okul-liste-kapsayici .modern-okul-listesi > .premium-liste-kart {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 0 !important;
 }

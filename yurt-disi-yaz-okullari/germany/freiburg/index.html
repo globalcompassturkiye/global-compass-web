@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/css/style.css">
 <link rel="stylesheet" href="/css/yurt-disi-dil-okullari.css">
     <link rel="stylesheet" href="/css/yurt-disi-yaz-okullari.css">
+    <link rel="stylesheet" href="/css/germany.css">
     <link rel="stylesheet" href="/css/freiburg.css">
 </head>
 <body>
@@ -122,30 +123,32 @@
             <p>Dünyanın "ekolojik başkenti" ünvanına sahip Freiburg’da öğrenciler, sadece dil öğrenmekle kalmaz; aynı zamanda sürdürülebilir yaşam bilincini yerinde gözlemleme fırsatı bulurlar. Freiburg yaz kampları, sabahları verilen profesyonel dil derslerini öğleden sonraları düzenlenen macera dolu doğa aktiviteleri ve kültürel gezilerle kusursuz bir şekilde birleştirir. Bu benzersiz lokasyon, öğrencilerin akademik gelişimlerini desteklerken onlara Kara Ormanlar'ın masalsı manzaraları eşliğinde unutulmaz bir yaz tatili sunar.</p>
         </div>
 
-        <div class="kirmizi-kutu">
-            <p class="ust-satir">Freiburg Yaz Okullarını Keşfedin!</p>
-            <p class="alt-satir-lacivert"></p>
-        </div>
+        <div class="yaz-okullari-secim-paneli ulke-secim-paneli-ortak germany-secim-paneli">
+            <div class="kirmizi-kutu">
+                <p class="ust-satir">Freiburg Yaz Okullarını Keşfedin!</p>
+                <p class="alt-satir-lacivert"></p>
+            </div>
 
-        <div class="okul-liste-kapsayici">
-            <h2 class="okul-liste-baslik">Freiburg Yaz Okulu</h2>
+            <div class="okul-liste-kapsayici">
+                <h2 class="okul-liste-baslik">Freiburg Yaz Okulu</h2>
 
-            <section class="modern-okul-listesi">
-                <div class="premium-liste-kart glass-stil">
-                    <div class="kart-sol-grup">
-                        <span class="liste-index">#1</span>
-                        <div class="ayrac-dikey"></div>
-                        <a href="/yurt-disi-yaz-okullari/germany/freiburg/alpadia/" class="okul-isim-link">
-                            Alpadia Freiburg 13-17 Yaş Arası Yaz Okulu
-                        </a>
+                <section class="modern-okul-listesi">
+                    <div class="premium-liste-kart glass-stil">
+                        <div class="kart-sol-grup">
+                            <span class="liste-index">#1</span>
+                            <div class="ayrac-dikey"></div>
+                            <a href="/yurt-disi-yaz-okullari/germany/freiburg/alpadia/" class="okul-isim-link">
+                                Alpadia Freiburg 13-17 Yaş Arası Yaz Okulu
+                            </a>
+                        </div>
+                        <div class="kart-sag-grup">
+                            <a href="/yurt-disi-yaz-okullari/germany/freiburg/alpadia/" class="btn-modern-incele">
+                                Programı incele <span class="ok-animasyon">→</span>
+                            </a>
+                        </div>
                     </div>
-                    <div class="kart-sag-grup">
-                        <a href="/yurt-disi-yaz-okullari/germany/freiburg/alpadia/" class="btn-modern-incele">
-                            Programı incele <span class="ok-animasyon">→</span>
-                        </a>
-                    </div>
-                </div>
-            </section>
+                </section>
+            </div>
         </div>
 
         <div class="gri-cerceve-kutu">
@@ -245,10 +248,9 @@
         </section>
 
         <div class="okul-liste-kapsayici">
-            <h2 class="okul-liste-baslik">Bu sayfalar da ilginizi çekebilir</h2>
+            <h2 class="okul-liste-baslik">Yurt Dışı Dil Okulları ile Eğitiminizi Destekleyin</h2>
             <section class="alt-yonlendirme-alani">
                 <div class="yonlendirme-karti">
-                    <h2>Yurt Dışı Dil Okulları ile Eğitiminizi Destekleyin</h2>
                     <p>Freiburg yaz okulu deneyiminizi, yıl boyunca devam eden Almanca veya İngilizce dil eğitimi ile desteklemek isterseniz; Almanya ve diğer ülkelerdeki dil okulu programlarımızı inceleyebilirsiniz.</p>
                     <a href="/yurt-disi-dil-okullari/" class="kart-link">Yurt Dışı Dil Okullarını Keşfedin →</a>
                 </div>
@@ -334,7 +336,7 @@
             });
             document.querySelectorAll('.has-dropdown > a').forEach(function(trigger) {
                 trigger.addEventListener('click', function(e) {
-                    if (window.innerWidth <= 500) {
+                    if (window.innerWidth <= 992) {
                         var parent = this.closest('.has-dropdown');
                         if (!parent) return;
                         if (!parent.classList.contains('submenu-open')) {

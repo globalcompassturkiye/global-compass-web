@@ -30,6 +30,59 @@
     display: none;
 }
 
+.italy-secim-paneli .premium-liste-kart,
+.italy-secim-paneli .glass-stil,
+.italy-secim-paneli .incele-btn-minimal,
+.italy-secim-paneli .btn-modern-incele,
+.italy-secim-paneli .ok-animasyon {
+    transition: none !important;
+}
+
+.italy-secim-paneli .premium-liste-kart:hover,
+.italy-secim-paneli .glass-stil:hover {
+    transform: none !important;
+    box-shadow: none !important;
+    border-color: #d1d5db !important;
+    background: #ffffff !important;
+}
+
+.italy-secim-paneli .okul-isim-link:hover,
+.italy-secim-paneli .incele-btn-minimal:hover,
+.italy-secim-paneli .btn-modern-incele:hover {
+    color: inherit !important;
+    text-decoration: none !important;
+    padding-left: 0 !important;
+}
+
+.italy-secim-paneli .btn-modern-incele:hover {
+    color: #e30613 !important;
+}
+
+.italy-secim-paneli .btn-modern-incele:hover .ok-animasyon {
+    color: #e30613 !important;
+    transform: translateX(2px);
+}
+
+.italy-secim-paneli .premium-liste-kart:hover .okul-isim-link,
+.italy-secim-paneli .premium-liste-kart:hover .btn-modern-incele,
+.italy-secim-paneli .premium-liste-kart:hover .ok-animasyon {
+    color: #e30613 !important;
+}
+
+.italy-secim-paneli .premium-liste-kart:hover .liste-index,
+.italy-secim-paneli .liste-index {
+    color: #6b7280 !important;
+    transition: none !important;
+    transform: none !important;
+}
+
+.italy-secim-paneli .liste-index,
+.italy-secim-paneli .okul-isim-link,
+.italy-secim-paneli .btn-modern-incele,
+.italy-secim-paneli .incele-btn-minimal {
+    font-size: 18px !important;
+}
+
 .italy-form-bant {
     margin-bottom: 0;
     border-radius: 15px 15px 0 0;

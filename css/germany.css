@@ -20,6 +20,60 @@
     display: none;
 }
 
+.germany-secim-paneli .premium-liste-kart,
+.germany-secim-paneli .glass-stil,
+.germany-secim-paneli .incele-btn-minimal,
+.germany-secim-paneli .btn-modern-incele,
+.germany-secim-paneli .ok-animasyon {
+    transition: none !important;
+}
+
+.germany-secim-paneli .premium-liste-kart:hover,
+.germany-secim-paneli .glass-stil:hover,
+.germany-secim-paneli .okul-liste-kapsayici:hover {
+    transform: none !important;
+    box-shadow: none !important;
+    border-color: #d1d5db !important;
+    background: #ffffff !important;
+}
+
+.germany-secim-paneli .okul-isim-link:hover,
+.germany-secim-paneli .incele-btn-minimal:hover,
+.germany-secim-paneli .btn-modern-incele:hover {
+    color: inherit !important;
+    text-decoration: none !important;
+    padding-left: 0 !important;
+}
+
+.germany-secim-paneli .btn-modern-incele:hover {
+    color: #e30613 !important;
+}
+
+.germany-secim-paneli .btn-modern-incele:hover .ok-animasyon {
+    color: #e30613 !important;
+    transform: translateX(2px);
+}
+
+.germany-secim-paneli .premium-liste-kart:hover .okul-isim-link,
+.germany-secim-paneli .premium-liste-kart:hover .btn-modern-incele,
+.germany-secim-paneli .premium-liste-kart:hover .ok-animasyon {
+    color: #e30613 !important;
+}
+
+.germany-secim-paneli .premium-liste-kart:hover .liste-index,
+.germany-secim-paneli .liste-index {
+    color: #6b7280 !important;
+    transition: none !important;
+    transform: none !important;
+}
+
+.germany-secim-paneli .liste-index,
+.germany-secim-paneli .okul-isim-link,
+.germany-secim-paneli .btn-modern-incele,
+.germany-secim-paneli .incele-btn-minimal {
+    font-size: 18px !important;
+}
+
 .germany-form-bant {
     margin-bottom: 0;
     border-radius: 15px 15px 0 0;

@@ -11,15 +11,17 @@ Bu projede bilgi formu altı veya sayfa sonu CTA alanlarında standart yapı `ok
 ## HTML standardı
 
 - Dış kapsayıcı: `div.okul-liste-kapsayici`
-- Kapsayıcı başlığı: `h2.okul-liste-baslik`
-- İç kart: `div.yonlendirme-karti`
-- Kart içinde:
+- **Tek ana başlık (mavi bant):** `h2.okul-liste-baslik` — CTA’nın özeti burada (ör. «Toronto Yaz Okullarını Karşılaştırın», «Yurt Dışı Dil Okulları»).
+- `section.alt-yonlendirme-alani` → `div.yonlendirme-karti`
+- Kart içinde **yalnızca**:
   - açıklama metni (`p`)
-  - CTA linki (`a`)
+  - CTA (`a.kart-link` veya `a.vurgulu-incele-btn`)
+- Kart içinde **`h2` yok** (başlık tekrarı yasak). İki ayrı CTA gerekiyorsa iki ayrı `okul-liste-kapsayici` bloğu kullan.
 
 ## CSS standardı
 
 - Kart sınıfı: `yonlendirme-karti` (global stil kullanılır, yeni alternatif kart sınıfı türetilmez).
+- Uzun başlıklar: `css/style.css` içinde `.okul-liste-kapsayici:has(> .alt-yonlendirme-alani) .okul-liste-baslik` (sayfa özelinde tekrar tanımlama).
 - Metin üst boşluğu gerekiyorsa kapsayıcıya özel kural ile verilir:
   - örn. `.sayfa-ozel-kapsayici .yonlendirme-karti { padding-top: 25px; }`
 - İlk paragrafta ekstra boşluk birikmesini engelle:

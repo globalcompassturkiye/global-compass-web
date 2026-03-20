@@ -1,151 +1,87 @@
 /* =========================================
-   HİZMETLERİMİZ SAYFASI - ETKİLEYİCİ TASARIM
+   HİZMETLERİMİZ — ana sayfa ile uyumlu grid + 4 adım
    ========================================= */
 
-/* Sayfa genel */
+/* İçerik alanı — standart 1200px (diğer iç sayfalar gibi) */
 .hizmetlerimiz-sayfa.icerik-alani {
     max-width: 1200px;
-    padding: 0 20px 60px;
+    margin-left: auto;
+    margin-right: auto;
+    /* Yatay boşluk: style.css (.icerik-alani) — sayfa özelinde tekrarlanmaz */
+    padding: 0 0 60px;
 }
 
-/* ---------- HERO BÖLÜMÜ ---------- */
-.hizmet-hero {
-    position: relative;
-    margin: 0 -20px;
-    padding: 55px 30px 60px;
-    background: linear-gradient(135deg, #0a0a2e 0%, #16213e 40%, #1a237e 75%, #000080 100%);
-    border-radius: 20px;
-    overflow: hidden;
-    text-align: center;
+/*
+ * Başlık: ilk satır (Hizmetlerimiz) 33px; alt satır (.vurgu-renk) bölüm h2 ile aynı 26px.
+ * body.sayfa-hizmetlerimiz: global kurallardan net ayrım.
+ */
+body.sayfa-hizmetlerimiz article.icerik-alani.hizmetlerimiz-sayfa > h1.sayfa-ana-baslik {
+    font-size: 33px !important;
+    line-height: 1.4 !important;
 }
 
-.hizmet-hero-desen {
-    position: absolute;
-    inset: 0;
-    background-image: 
-        radial-gradient(circle at 25% 40%, rgba(255,255,255,0.07) 0%, transparent 50%),
-        radial-gradient(circle at 75% 60%, rgba(189,5,5,0.1) 0%, transparent 45%);
-    pointer-events: none;
+body.sayfa-hizmetlerimiz article.icerik-alani.hizmetlerimiz-sayfa > h1.sayfa-ana-baslik > .vurgu-renk {
+    font-size: 26px !important;
+    line-height: 1.35 !important;
 }
 
-.hizmet-hero-baslik {
-    position: relative;
-    font-size: clamp(32px, 5.5vw, 42px) !important;
-    font-weight: 800 !important;
-    color: #ffffff !important;
-    margin: 0 0 20px 0 !important;
-    line-height: 1.2 !important;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    text-shadow: 0 2px 24px rgba(0,0,0,0.25);
+body.sayfa-hizmetlerimiz article.icerik-alani.hizmetlerimiz-sayfa > h1.sayfa-ana-baslik .vurgu-renk {
+    display: inline-block;
+    padding-top: 6px;
 }
 
-.hizmet-hero-cizgi {
-    width: 70px;
-    height: 5px;
-    margin: 0 auto 28px;
-    background: linear-gradient(90deg, #bd0505, #ff6b6b);
-    border-radius: 3px;
+/* Sadece section içi bölüm başlıkları (4 Adım, Eğitim Alanlarımız); okul-liste-baslik / yönlendirme h2 hariç */
+body.sayfa-hizmetlerimiz article.icerik-alani.hizmetlerimiz-sayfa section > h2.hizmet-section-baslik {
+    font-size: 26px !important;
+    line-height: 1.35 !important;
 }
 
-.hizmet-hero-aciklama {
-    position: relative;
-    max-width: 620px;
-    margin: 0 auto !important;
-    font-size: 17px !important;
-    color: rgba(255,255,255,0.95) !important;
-    text-align: center !important;
-    line-height: 1.75 !important;
+/* 768px: style.css h1 { 24px } — bu sayfada ilk satır 33px, vurgu 26px */
+@media screen and (max-width: 768px) {
+    body.sayfa-hizmetlerimiz article.icerik-alani.hizmetlerimiz-sayfa > h1.sayfa-ana-baslik {
+        font-size: 33px !important;
+    }
+
+    body.sayfa-hizmetlerimiz article.icerik-alani.hizmetlerimiz-sayfa > h1.sayfa-ana-baslik > .vurgu-renk {
+        font-size: 26px !important;
+    }
+
+    body.sayfa-hizmetlerimiz article.icerik-alani.hizmetlerimiz-sayfa section > h2.hizmet-section-baslik {
+        font-size: 26px !important;
+    }
 }
 
-/* ---------- BÖLÜM BAŞLIKLARI ---------- */
+/* 501px: global h1 28px — ilk satır 33px; vurgu satırı 26px (h2 ile aynı) */
+@media screen and (max-width: 501px) {
+    body.sayfa-hizmetlerimiz article.icerik-alani.hizmetlerimiz-sayfa > h1.sayfa-ana-baslik {
+        font-size: 33px !important;
+    }
+
+    body.sayfa-hizmetlerimiz article.icerik-alani.hizmetlerimiz-sayfa > h1.sayfa-ana-baslik > .vurgu-renk {
+        font-size: 26px !important;
+    }
+
+    body.sayfa-hizmetlerimiz article.icerik-alani.hizmetlerimiz-sayfa section > h2.hizmet-section-baslik {
+        font-size: 26px !important;
+    }
+}
+
+/* Üst şerit — aktif sayfa (hizmetlerimiz) */
+.yardimci-menu a.aktif {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* Bölüm başlığı — font-size yukarıda 26px !important ile */
 .hizmet-section-baslik {
     text-align: center;
     color: #000080;
-    font-size: 22px;
     font-weight: 700;
     margin-bottom: 36px;
     letter-spacing: -0.3px;
 }
 
-/* ---------- 4 ADIM BÖLÜMÜ ---------- */
-.hizmet-adimlar-section {
-    margin-top: 55px;
-}
-
-.hizmet-adimlar {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: stretch;
-    gap: 0;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.hizmet-adim-kart {
-    flex: 1;
-    min-width: 200px;
-    max-width: 240px;
-    padding: 28px 22px;
-    background: #fff;
-    border: 1px solid #e8ecf4;
-    border-radius: 14px;
-    text-align: center;
-    position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.hizmet-adim-kart:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 36px rgba(0,0,128,0.12);
-}
-
-.hizmet-adim-numarasi {
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    width: 24px;
-    height: 24px;
-    background: linear-gradient(135deg, #bd0505, #dc2626);
-    color: #fff;
-    font-size: 12px;
-    font-weight: 700;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 1;
-}
-
-.hizmet-adim-ikon {
-    font-size: 32px;
-    margin-bottom: 16px;
-}
-
-.hizmet-adim-baslik {
-    display: block;
-    color: #bd0505 !important;
-    font-size: 15px;
-    font-weight: 700;
-    margin-bottom: 8px;
-}
-
-.hizmet-adim-aciklama {
-    display: block;
-    color: #666 !important;
-    font-size: 13px;
-    line-height: 1.5;
-}
-
-/* Adımlar arası çizgi - masaüstünde */
-.hizmet-adim-ayrac {
-    width: 24px;
-    align-self: center;
-    border-top: 2px dashed #cbd5e1;
-}
-
-/* ---------- HİZMET KARTLARI ---------- */
+/* Eski kart tasarımı (emoji + link) — üst kalın şerit yok */
 .hizmet-kartlar-section {
     margin-top: 55px;
 }
@@ -169,29 +105,13 @@
     overflow: hidden;
 }
 
-.hizmet-kart::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, #000080, #1e3a8a);
-    transition: height 0.3s ease;
-}
-
 .hizmet-kart:hover {
     transform: translateY(-6px);
-    box-shadow: 0 14px 40px rgba(0,0,128,0.12);
+    box-shadow: 0 14px 40px rgba(0, 0, 128, 0.12);
 }
 
-.hizmet-kart:hover::before {
-    height: 6px;
-}
-
-/* Burs kartı - vurgulu */
-.hizmet-kart-vurgu::before {
-    background: linear-gradient(90deg, #bd0505, #dc2626);
+.hizmet-kart-vurgu {
+    border-color: #fecaca;
 }
 
 .hizmet-kart-vurgu .hizmet-kart-baslik {
@@ -236,45 +156,89 @@
     transform: translateX(4px);
 }
 
-/* ---------- RESPONSİVE ---------- */
-@media (max-width: 900px) {
-    .hizmet-adimlar {
-        gap: 16px;
-        justify-content: center;
-    }
+/* 4 adım — gri çerçeve içi */
+.hizmet-adimlar-section {
+    margin-top: 55px;
+}
 
-    .hizmet-adim-ayrac {
-        display: none;
-    }
+.hizmetlerimiz-sayfa .hizmet-adimlar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 0;
+    max-width: 1200px;
+    width: 100%;
+    margin: 18px auto 0;
+}
 
-    .hizmet-adim-kart {
-        max-width: none;
-        min-width: 180px;
-    }
+.hizmet-adim-kart {
+    flex: 1;
+    min-width: 200px;
+    max-width: calc((1200px - 72px) / 4);
+    padding: 28px 22px;
+    background: #fff;
+    border: 1px solid #e8ecf4;
+    border-radius: 14px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hizmet-adim-kart:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 36px rgba(0, 0, 128, 0.12);
+}
+
+.hizmet-adim-numarasi {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 24px;
+    height: 24px;
+    background: linear-gradient(135deg, #bd0505, #dc2626);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.hizmet-adim-ikon {
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+
+.hizmet-adim-baslik {
+    display: block;
+    color: #bd0505 !important;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.hizmet-adim-aciklama {
+    display: block;
+    color: #666 !important;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.hizmet-adim-ayrac {
+    width: 24px;
+    align-self: center;
+    border-top: 2px dashed #cbd5e1;
+}
+
+/* Alt yönlendirme */
+.hizmetlerimiz-sayfa .okul-liste-kapsayici {
+    margin-top: 48px;
 }
 
 @media (max-width: 768px) {
-    .hizmet-hero {
-        margin: 0 -20px;
-        padding: 45px 24px 50px;
-        border-radius: 16px;
-    }
-
-    .hizmet-hero-baslik {
-        font-size: 28px !important;
-        letter-spacing: 1px;
-    }
-
-    .hizmet-adimlar {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .hizmet-adim-kart {
-        max-width: 320px;
-        width: 100%;
-    }
-
     .hizmet-kartlar-grid {
         grid-template-columns: 1fr;
         gap: 22px;
@@ -282,5 +246,26 @@
 
     .hizmet-kart {
         padding: 28px 24px;
+    }
+
+    /* Özgüllük: .hizmetlerimiz-sayfa .hizmet-adimlar — aksi halde gap:0 kazanır, dikey boşluk oluşmaz */
+    .hizmetlerimiz-sayfa .hizmet-adimlar {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .hizmetlerimiz-sayfa .hizmet-adim-ayrac {
+        display: none;
+    }
+
+    .hizmetlerimiz-sayfa .hizmet-adim-kart {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: min(400px, 100%);
+        min-width: 0;
+        box-sizing: border-box;
     }
 }

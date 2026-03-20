@@ -1,15 +1,6 @@
 /* Yurt Dışı Dil Okulları sayfasına özel stiller */
 /* Ülke seçim kartları – yaz okulları sayfasıyla aynı tasarım */
 
-.ulke-secim-butonlari {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 18px;
-    justify-content: center;
-    max-width: 1200px;
-    margin: 35px auto 60px auto;
-}
-
 /* Başlık + ülke butonları tek çerçeve paneli */
 .dil-okullari-secim-paneli {
     max-width: 1200px;
@@ -38,60 +29,11 @@
     padding: 16px 18px 20px 18px;
 }
 
-.ulke-secim-butonlari .ulke-buton {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 10px 25px;
-    border-radius: 30px;
-    text-decoration: none;
-    border: none;
-    background: #2c3e50;
-    box-shadow: none;
-    transition: all 0.3s ease;
-}
-
-.ulke-buton-metin {
-    font-size: 14px;
-    font-weight: 600;
-    color: #ffffff;
-    letter-spacing: 0;
-}
-
-.ulke-buton-ok {
-    font-size: 18px;
-    color: #ffffff;
-    transition: transform 0.3s ease;
-}
-
-.ulke-secim-butonlari .ulke-buton:hover {
-    background: #e74c3c;
-    transform: translateX(5px);
-    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
-}
-
-.ulke-secim-butonlari .ulke-buton:hover .ulke-buton-ok {
-    transform: translateX(2px);
-}
-
-/* Ülke bazlı hafif renk vurguları (UK & USA) – ana sayfa alt tab tasarımıyla tam uyum için iptal edildi */
-.ulke-buton-uk,
-.ulke-buton-usa {
-    background: #2c3e50;
-}
-
 @media (max-width: 768px) {
     .dil-okullari-secim-paneli {
         margin: 20px 0 45px 0;
         padding: 12px;
         border-radius: 10px;
-    }
-
-    .ulke-secim-butonlari {
-        grid-template-columns: 1fr;
-        gap: 12px;
-        margin: 30px 0 50px 0;
     }
 
     .ulke-secim-butonlari .ulke-buton {
@@ -145,5 +87,23 @@
         grid-column: auto;
         width: 100%;
     }
+}
+
+/* Seçim paneli okul listesi (dil okulları şehir sayfaları) — style.css sonrası */
+.dil-okullari-secim-paneli .okul-liste-kapsayici .modern-okul-listesi {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+    display: block !important;
+}
+
+.dil-okullari-secim-paneli .okul-liste-kapsayici .modern-okul-listesi > .premium-liste-kart ~ .premium-liste-kart {
+    margin-top: 25px !important;
+}
+
+.dil-okullari-secim-paneli .okul-liste-kapsayici .modern-okul-listesi > .premium-liste-kart {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 0 !important;
 }
 

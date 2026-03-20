@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
@@ -408,10 +408,9 @@
         </section>
 
         <div class="okul-liste-kapsayici">
-            <h2 class="okul-liste-baslik">Bu sayfalarda ilginizi çekebilir</h2>
+            <h2 class="okul-liste-baslik">Yurt Dışı Dil Okulları</h2>
             <section class="alt-yonlendirme-alani">
                 <div class="yonlendirme-karti">
-                    <h2>Yurt Dışı Dil Okulları</h2>
                     <p>Londra yaz okulu deneyiminizi, yıl boyunca devam eden akademik dil eğitimi ile pekiştirmek isterseniz; İngiltere, Amerika ve Avrupa'daki dil okulu programlarımıza göz atabilirsiniz.</p>
                     <a href="/yurt-disi-dil-okullari/" class="kart-link">Dil Okullarını Keşfedin →</a>
                 </div>
@@ -496,7 +495,7 @@
         });
         document.querySelectorAll('.has-dropdown > a').forEach(function(trigger) {
             trigger.addEventListener('click', function(e) {
-                if (window.innerWidth <= 500) {
+                if (window.innerWidth <= 992) {
                     e.preventDefault();
                     var parent = this.closest('.has-dropdown');
                     parent.classList.toggle('submenu-open');

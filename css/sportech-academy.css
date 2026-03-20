@@ -3,7 +3,7 @@
     padding: 12px 16px;
     font-size: 1.2em;
     font-weight: 700;
-    color: #0f172a;
+    color: #111827;
     background: linear-gradient(90deg, #f1f5f9 0%, #ffffff 100%);
     border-radius: 6px;
 }
@@ -16,7 +16,7 @@
     text-align: center;
     font-size: 18px;
     font-weight: 700;
-    color: #444;
+    color: #111827;
     margin-bottom: 20px;
 }
 
@@ -66,32 +66,6 @@
 
 .sportech-academy-buton-grup {
     margin-bottom: 24px;
-    flex-direction: column;
-}
-
-.sportech-program-paneli .sportech-academy-buton-grup {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 12px;
-}
-
-.sportech-program-paneli .sportech-academy-buton-grup .ulke-buton {
-    flex: 0 0 auto;
-    width: auto;
-    min-width: 0;
-    display: inline-flex;
-    max-width: 320px;
-    padding: 10px 16px;
-    justify-content: space-between;
-}
-
-.sportech-program-paneli .sportech-academy-buton-grup .ulke-buton-metin {
-    white-space: normal;
-    line-height: 1.25;
-    text-align: left;
 }
 
 .sportech-program-paneli .sportech-program-icerik:hover {
@@ -116,31 +90,48 @@
     margin-bottom: 0;
 }
 
-.sportech-academy-linksiz-buton {
-    cursor: default;
-}
-
+/* A-Level / Pre-Diploma metin blokları — kalın sol kenar (lise değişim “sol kalın” modeli) */
 .sportech-academy-sol-vurgu-blok {
     margin: 0 0 16px;
-    padding: 12px 14px;
-    background: linear-gradient(90deg, #f1f5f9 0%, #ffffff 100%);
-    border-radius: 6px;
+    padding: 18px 20px 18px 22px;
+    background: linear-gradient(90deg, rgba(0, 0, 128, 0.07) 0%, #ffffff 100%);
+    border-left: 5px solid #000080;
+    border-radius: 0 10px 10px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 128, 0.07);
+}
+
+.sportech-academy-sol-vurgu-blok p {
+    margin: 0 0 12px 0;
+    font-size: 15px;
+    color: #374151;
+    line-height: 1.55;
+}
+
+.sportech-academy-sol-vurgu-blok p:last-child {
+    margin-bottom: 0;
 }
 
 .sportech-academy-sol-vurgu-blok-ikincil {
     margin-top: 24px;
 }
 
+@media (max-width: 640px) {
+    .sportech-academy-sol-vurgu-blok {
+        padding: 16px 14px 16px 18px;
+    }
+}
+
 .sportech-academy-ara-baslik {
     margin: 0 0 12px;
     padding: 0;
     font-size: 1.05em;
-    color: #0f172a;
+    color: #111827;
 }
 
 .sportech-academy-program-icerik-baslik {
     margin: 16px 0 8px;
     font-weight: 600;
+    color: #111827;
 }
 
 .sportech-academy-program-icerik-liste {
@@ -171,7 +162,7 @@
 .sportech-academy-program-icerik-item strong {
     display: block;
     margin-bottom: 6px;
-    color: #0f172a;
+    color: #111827;
     position: relative;
     padding-left: 14px;
 }
@@ -181,9 +172,14 @@
     position: absolute;
     left: 0;
     top: 0.1em;
-    color: #1a365d;
+    color: #111827;
     font-size: 18px;
     line-height: 1;
+}
+
+/* Program detay kartları — global .immerse-detay-kart h3 teal yerine siyah başlık */
+.sportech-academy-page .immerse-detay-kart h3 {
+    color: #111827;
 }
 
 @media (max-width: 992px) {

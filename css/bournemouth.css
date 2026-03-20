@@ -1,4 +1,30 @@
 /* Bournemouth yaz okullari sayfasina ozel secim paneli ve form bandi stilleri */
+
+/* Bournemouth dil okullari: h1 alti cercevesiz giris metni */
+.bournemouth-dil-giris {
+    max-width: 1200px;
+    margin: 0 auto 28px auto;
+}
+
+.bournemouth-dil-giris p {
+    font-size: 15px;
+    line-height: 1.75;
+    color: #374151;
+    margin: 0 0 1em 0;
+}
+
+.bournemouth-dil-giris p:last-child {
+    margin-bottom: 0;
+}
+
+/* Bournemouth dil: Neden bolumu rozet grid */
+.bournemouth-neden-kutu .bournemouth-neden-rozet-grid {
+    margin-top: 18px;
+}
+
+.bournemouth-neden-kutu .bournemouth-neden-rozet-grid .dahil-rozet-baslik {
+    color: #111827;
+}
 .bournemouth-secim-paneli .kirmizi-kutu .ust-satir,
 .bournemouth-secim-paneli .kirmizi-kutu .alt-satir-lacivert { font-size: 22px; }
 .bournemouth-secim-paneli .kirmizi-kutu { margin: 0; border-radius: 5px 5px 0 0; }

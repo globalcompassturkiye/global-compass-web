@@ -241,7 +241,7 @@ article.icerik-alani > h1 + p {
 .icerik-alani.uni-avantaj-bolumu {
     margin-top: 40px;
     /* İç içe icerik-alani nedeniyle oluşan çift gutter'ı kaldır:
-       dıştaki icerik-alani üzerinden sadece tek gutter (15px / 25px) kalsın. */
+       dıştaki icerik-alani üzerinden sadece tek yatay boşluk (style.css) kalsın. */
     padding-left: 0 !important;
     padding-right: 0 !important;
 }
@@ -250,9 +250,9 @@ article.icerik-alani > h1 + p {
    en üst gri çerçeve 50px daha dar görünebiliyor.
    Bu nested section padding'ini kaldırarak dış çerçevelerle aynı hizaya getiriyoruz. */
 /* 501px altı: üniversite sayfasında iç içe icerik-alani kullanan bloklarda
-   sadece en dış katman 15px padding alsın */
+   sadece en dış katman global yatay padding alsın */
 @media (max-width: 501px) {
-    /* Ana article zaten 15px padding alıyor; içteki icerik-alani'lerin
+    /* Ana article zaten style.css gutter alıyor; içteki icerik-alani'lerin
        extra padding eklememesini sağlıyoruz */
     .premium-uni-alani.icerik-alani,
     /* padding artık baz seviyede kapalı */

@@ -1,5 +1,34 @@
 /* Yurt Disi Dil Okullari - USA sayfasina ozel stiller */
 
+.usa-secim-paneli .kirmizi-kutu .ust-satir,
+.usa-secim-paneli .kirmizi-kutu .alt-satir-lacivert { font-size: 22px; }
+.usa-secim-paneli .kirmizi-kutu { margin: 0; border-radius: 5px 5px 0 0; }
+/* İç padding — style.css [class*="-secim-paneli"] ile dengeli (üst/alt 18px) */
+.usa-secim-paneli .okul-liste-kapsayici { margin-top: 0; border-top-left-radius: 0; border-top-right-radius: 0; }
+.usa-secim-paneli .okul-liste-kapsayici .okul-liste-baslik { display: none; }
+.usa-secim-paneli .premium-liste-kart,
+.usa-secim-paneli .glass-stil,
+.usa-secim-paneli .incele-btn-minimal,
+.usa-secim-paneli .btn-modern-incele,
+.usa-secim-paneli .ok-animasyon { transition: none !important; }
+.usa-secim-paneli .premium-liste-kart:hover,
+.usa-secim-paneli .glass-stil:hover,
+.usa-secim-paneli .okul-liste-kapsayici:hover { transform: none !important; box-shadow: none !important; border-color: #d1d5db !important; background: #ffffff !important; }
+.usa-secim-paneli .okul-isim-link:hover,
+.usa-secim-paneli .incele-btn-minimal:hover,
+.usa-secim-paneli .btn-modern-incele:hover { color: inherit !important; text-decoration: none !important; padding-left: 0 !important; }
+.usa-secim-paneli .btn-modern-incele:hover { color: #e30613 !important; }
+.usa-secim-paneli .btn-modern-incele:hover .ok-animasyon { color: #e30613 !important; transform: translateX(2px); }
+.usa-secim-paneli .premium-liste-kart:hover .okul-isim-link,
+.usa-secim-paneli .premium-liste-kart:hover .btn-modern-incele,
+.usa-secim-paneli .premium-liste-kart:hover .ok-animasyon { color: #e30613 !important; }
+.usa-secim-paneli .premium-liste-kart:hover .liste-index,
+.usa-secim-paneli .liste-index { color: #6b7280 !important; transition: none !important; transform: none !important; }
+.usa-secim-paneli .liste-index,
+.usa-secim-paneli .okul-isim-link,
+.usa-secim-paneli .btn-modern-incele,
+.usa-secim-paneli .incele-btn-minimal { font-size: 18px !important; }
+
 .usa-capraz-cerceve-grid {
     display: grid;
     gap: 14px;
@@ -74,4 +103,151 @@
         grid-column: auto;
         width: 100%;
     }
+}
+
+/* USA dil sehir sayfalari — h1 alti cercevesiz giris */
+.usa-sehir-dil-giris {
+    max-width: 1200px;
+    margin: 0 auto 28px auto;
+}
+
+.usa-sehir-dil-giris p {
+    font-size: 15px;
+    line-height: 1.75;
+    color: #374151;
+    margin: 0 0 1em 0;
+}
+
+.usa-sehir-dil-giris p:last-child {
+    margin-bottom: 0;
+}
+
+/* Bilgi istek formu — kirmizi bant + form birlesik (Londra/Oxford ile ayni mantik) */
+.usa-form-bant {
+    margin-bottom: 0;
+    border-radius: 15px 15px 0 0;
+    background-color: #e30613;
+}
+
+.usa-form-bant .ust-satir {
+    font-size: 20px;
+    color: #ffffff !important;
+}
+
+.usa-form-bant + .iletisim-form-alani {
+    margin-top: 0 !important;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding-top: 25px;
+}
+
+.usa-form-bant + .iletisim-form-alani > p:first-of-type {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/* New York dil — Neden: 4 numarali rozet 2x2 */
+.new-york-neden-kutu .new-york-neden-rozet-grid {
+    margin-top: 22px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 22px;
+}
+
+.new-york-neden-kutu .new-york-neden-rozet-grid .dahil-rozet-kart {
+    height: 100%;
+}
+
+.new-york-neden-kutu .new-york-neden-rozet-grid .dahil-rozet-baslik {
+    color: #111827;
+}
+
+@media (max-width: 768px) {
+    .new-york-neden-kutu .new-york-neden-rozet-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Boston dil — Neden: 4 numaralı rozet 2×2 (New York ile aynı mantık) */
+.boston-neden-kutu .boston-neden-rozet-grid {
+    margin-top: 22px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 22px;
+}
+
+.boston-neden-kutu .boston-neden-rozet-grid .dahil-rozet-kart {
+    height: 100%;
+}
+
+.boston-neden-kutu .boston-neden-rozet-grid .dahil-rozet-baslik {
+    color: #111827;
+}
+
+@media (max-width: 768px) {
+    .boston-neden-kutu .boston-neden-rozet-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Los Angeles dil — Neden: 4 rozet alt alta (her satırda 1 çerçeve); global 2 kolon :has kuralını ezer */
+.gri-cerceve-kutu.los-angeles-neden-kutu .dahil-rozet-grid.los-angeles-neden-rozet-grid {
+    margin-top: 22px;
+    grid-template-columns: 1fr;
+    gap: 18px;
+}
+
+/* İki sütunlu grid başlığı sağa itiyordu; kartı blok + üst satırda ikon+başlık yan yana */
+.gri-cerceve-kutu.los-angeles-neden-kutu .los-angeles-neden-rozet-grid .dahil-rozet-kart {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+}
+
+.gri-cerceve-kutu.los-angeles-neden-kutu .los-angeles-rozet-ust {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.gri-cerceve-kutu.los-angeles-neden-kutu .los-angeles-rozet-ust .dahil-rozet-ikon {
+    flex-shrink: 0;
+}
+
+.gri-cerceve-kutu.los-angeles-neden-kutu .los-angeles-rozet-ust .dahil-rozet-baslik {
+    flex: 1;
+    min-width: 0;
+    margin: 0;
+    text-align: left;
+    color: #111827;
+}
+
+.gri-cerceve-kutu.los-angeles-neden-kutu .los-angeles-neden-rozet-grid .dahil-rozet-metin {
+    margin-top: 0;
+}
+
+.gri-cerceve-kutu.los-angeles-neden-kutu .los-angeles-neden-rozet-grid .dahil-rozet-liste {
+    margin: 0;
+    padding-left: 1.15rem;
+    font-size: 15px;
+    color: #4b5563;
+    line-height: 1.65;
+}
+
+/* USA şehir dil sayfaları — bu dosya style.css SONRA; okul listesi kart aralığı */
+.usa-secim-paneli .okul-liste-kapsayici .modern-okul-listesi {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+    display: block !important;
+}
+
+.usa-secim-paneli .okul-liste-kapsayici .modern-okul-listesi > .premium-liste-kart ~ .premium-liste-kart {
+    margin-top: 25px !important;
+}
+
+.usa-secim-paneli .okul-liste-kapsayici .modern-okul-listesi > .premium-liste-kart {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 0 !important;
 }

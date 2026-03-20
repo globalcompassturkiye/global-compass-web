@@ -1,4 +1,82 @@
 /* Oxford yaz okullari sayfasina ozel secim paneli ve form bandi stilleri */
+
+/* Oxford dil okullari: h1 alti cercevesiz giris metni */
+.oxford-dil-giris {
+    max-width: 1200px;
+    margin: 0 auto 28px auto;
+}
+
+.oxford-dil-giris p {
+    font-size: 15px;
+    line-height: 1.75;
+    color: #374151;
+    margin: 0 0 1em 0;
+}
+
+.oxford-dil-giris p:last-child {
+    margin-bottom: 0;
+}
+
+/* Oxford dil — Egitim deneyimi: 4 kart, tum rozetlerde ok (✓) */
+.oxford-egitim-kutu .oxford-egitim-rozet-grid {
+    margin-top: 22px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 22px;
+}
+
+.oxford-egitim-kutu .oxford-egitim-rozet-grid .dahil-rozet-kart {
+    height: 100%;
+}
+
+.oxford-egitim-kutu .oxford-egitim-rozet-grid .dahil-rozet-baslik {
+    color: #111827;
+}
+
+/* Rozet icinde ✓ — sayi yerine tik, hizali */
+.oxford-egitim-kutu .oxford-egitim-rozet-ikon {
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+@media (max-width: 768px) {
+    .oxford-egitim-kutu .oxford-egitim-rozet-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Oxford dil: Neden Oxford — 5 numarali rozet (2+2+1 ortali) */
+.oxford-neden-kutu .oxford-neden-rozet-grid {
+    margin-top: 22px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 22px;
+}
+
+.oxford-neden-kutu .oxford-neden-rozet-grid .dahil-rozet-kart {
+    height: 100%;
+}
+
+.oxford-neden-kutu .oxford-neden-rozet-grid .dahil-rozet-kart:nth-child(5) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: min(100%, calc((100% - 22px) / 2));
+}
+
+.oxford-neden-kutu .oxford-neden-rozet-grid .dahil-rozet-baslik {
+    color: #111827;
+}
+
+@media (max-width: 768px) {
+    .oxford-neden-kutu .oxford-neden-rozet-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .oxford-neden-kutu .oxford-neden-rozet-grid .dahil-rozet-kart:nth-child(5) {
+        grid-column: auto;
+        justify-self: stretch;
+        width: 100%;
+    }
+}
 .oxford-secim-paneli .kirmizi-kutu .ust-satir,
 .oxford-secim-paneli .kirmizi-kutu .alt-satir-lacivert { font-size: 22px; }
 .oxford-secim-paneli .kirmizi-kutu { margin: 0; border-radius: 5px 5px 0 0; }

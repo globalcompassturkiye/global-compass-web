@@ -97,88 +97,6 @@
     padding-top: 25px;
 }
 
-/* Ülke seçim alanı – modern kart grid tasarımı */
-.ulke-secim-butonlari {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 18px;
-    margin: 35px 0 45px 0;
-}
-
-.ulke-secim-butonlari .ulke-buton {
-    flex: 0 1 calc((100% - 36px) / 3);
-    min-width: 260px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 10px 25px;
-    border-radius: 30px;
-    text-decoration: none;
-    border: none;
-    background: #2c3e50;
-    box-shadow: none;
-    transition: all 0.3s ease;
-}
-
-.ulke-buton-metin {
-    font-size: 14px;
-    font-weight: 600;
-    color: #ffffff;
-}
-
-.ulke-buton-ok {
-    font-size: 18px;
-    color: #ffffff;
-    transition: transform 0.3s ease;
-}
-
-.ulke-secim-butonlari .ulke-buton:hover {
-    background: #e74c3c;
-    transform: translateX(5px);
-    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
-}
-
-.ulke-secim-butonlari .ulke-buton:hover .ulke-buton-ok {
-    transform: translateX(2px);
-}
-
-/* Ülke bazlı hafif renk vurguları */
-.ulke-buton-uk {
-    background: #2c3e50;
-}
-
-.ulke-buton-almanya {
-    background: #2c3e50;
-}
-
-.ulke-buton-kanada {
-    background: #2c3e50;
-}
-
-.ulke-buton-isvicre {
-    background: #2c3e50;
-}
-
-.ulke-buton-italya {
-    background: #2c3e50;
-}
-
-@media (max-width: 992px) {
-    .ulke-secim-butonlari {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 14px;
-        margin: 30px 0 40px 0;
-    }
-
-    .ulke-secim-butonlari .ulke-buton {
-        flex: initial;
-        min-width: 0;
-    }
-}
-
 @media (max-width: 768px) {
     .yaz-okullari-secim-paneli {
         margin: 20px 0 45px 0;
@@ -485,4 +403,21 @@
     }
 }
 
+/* --- Seçim paneli okul listesi: style.css sonundaki .modern-okul-listesi tekrarlarından sonra kesin uygulanır --- */
+.yaz-okullari-secim-paneli .okul-liste-kapsayici .modern-okul-listesi {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+    display: block !important;
+}
+
+.yaz-okullari-secim-paneli .okul-liste-kapsayici .modern-okul-listesi > .premium-liste-kart ~ .premium-liste-kart {
+    margin-top: 25px !important;
+}
+
+.yaz-okullari-secim-paneli .okul-liste-kapsayici .modern-okul-listesi > .premium-liste-kart {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 0 !important;
+}
 

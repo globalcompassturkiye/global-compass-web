@@ -21,6 +21,60 @@
     display: none;
 }
 
+.canada-secim-paneli .premium-liste-kart,
+.canada-secim-paneli .glass-stil,
+.canada-secim-paneli .incele-btn-minimal,
+.canada-secim-paneli .btn-modern-incele,
+.canada-secim-paneli .ok-animasyon {
+    transition: none !important;
+}
+
+.canada-secim-paneli .premium-liste-kart:hover,
+.canada-secim-paneli .glass-stil:hover,
+.canada-secim-paneli .okul-liste-kapsayici:hover {
+    transform: none !important;
+    box-shadow: none !important;
+    border-color: #d1d5db !important;
+    background: #ffffff !important;
+}
+
+.canada-secim-paneli .okul-isim-link:hover,
+.canada-secim-paneli .incele-btn-minimal:hover,
+.canada-secim-paneli .btn-modern-incele:hover {
+    color: inherit !important;
+    text-decoration: none !important;
+    padding-left: 0 !important;
+}
+
+.canada-secim-paneli .btn-modern-incele:hover {
+    color: #e30613 !important;
+}
+
+.canada-secim-paneli .btn-modern-incele:hover .ok-animasyon {
+    color: #e30613 !important;
+    transform: translateX(2px);
+}
+
+.canada-secim-paneli .premium-liste-kart:hover .okul-isim-link,
+.canada-secim-paneli .premium-liste-kart:hover .btn-modern-incele,
+.canada-secim-paneli .premium-liste-kart:hover .ok-animasyon {
+    color: #e30613 !important;
+}
+
+.canada-secim-paneli .premium-liste-kart:hover .liste-index,
+.canada-secim-paneli .liste-index {
+    color: #6b7280 !important;
+    transition: none !important;
+    transform: none !important;
+}
+
+.canada-secim-paneli .liste-index,
+.canada-secim-paneli .okul-isim-link,
+.canada-secim-paneli .btn-modern-incele,
+.canada-secim-paneli .incele-btn-minimal {
+    font-size: 18px !important;
+}
+
 .canada-form-bant {
     margin-bottom: 0;
     border-radius: 15px 15px 0 0;

@@ -1,0 +1,118 @@
+---
+description: İçerik sayfalarında radyo tabanlı sekme (yas-tab) alanı HTML ve CSS standardı
+globs: "**/*.{html,css}"
+alwaysApply: false
+---
+
+# Yas-Tab Sekme Alanı Standardı
+
+İçerik sayfalarında (Immerse, program detay, geziler vb.) **JavaScript kullanmadan** çalışan sekme alanı bu yapı ile uygulanır. Referans: `yurt-disi-yaz-okullari/canada/toronto/immerse-education/index.html` (Programa dahil geziler bloğu).
+
+## Teknik
+
+- **Saf CSS**: `input[type="radio"]` + `label[for="..."]` + genel kardeş seçicileri (`~`).
+- Radyolar gizlenir; etiketler sekme butonu gibi davranır.
+
+## HTML iskeleti
+
+Sekme alanı genelde **gri çerçeve** içinde verilir:
+
+```html
+<div class="gri-cerceve-kutu immerse-yas-tabs-kutu">
+    <h2 class="kutu-baslik">Bölüm başlığı</h2>
+
+    <div class="yas-tabs-kapsayici sayfa-konusu-tabs-kapsayici">
+        <!-- name: sayfa başına benzersiz; id: her sekme için benzersiz -->
+        <input type="radio" name="ornek-sekme-grubu" id="ornek-sekme-1" class="yas-tab-input" checked>
+        <input type="radio" name="ornek-sekme-grubu" id="ornek-sekme-2" class="yas-tab-input">
+        <input type="radio" name="ornek-sekme-grubu" id="ornek-sekme-3" class="yas-tab-input">
+
+        <div class="yas-tab-basliklar sayfa-konusu-tab-basliklar">
+            <label for="ornek-sekme-1" class="yas-tab-etiket">Sekme 1</label>
+            <label for="ornek-sekme-2" class="yas-tab-etiket">Sekme 2</label>
+            <label for="ornek-sekme-3" class="yas-tab-etiket">Sekme 3</label>
+        </div>
+
+        <div class="yas-tab-icerikler sayfa-konusu-tab-icerikler">
+            <div class="yas-tab-icerik ornek-sekme-1-icerik">
+                <p>...</p>
+            </div>
+            <div class="yas-tab-icerik ornek-sekme-2-icerik">
+                <p>...</p>
+            </div>
+            <div class="yas-tab-icerik ornek-sekme-3-icerik">
+                <p>...</p>
+            </div>
+        </div>
+    </div>
+</div>
+```
+
+### Zorunlu sınıflar (yeniden üretme)
+
+| Amaç | Sınıf |
+|------|--------|
+| Dış sarmalayıcı (opsiyonel) | `immerse-yas-tabs-kutu` — üst/alt boşluk için `style.css`’te tanımlı |
+| Konteyner | `yas-tabs-kapsayici` |
+| Radyo | `yas-tab-input` |
+| Sekme satırı | `yas-tab-basliklar` |
+| Sekme etiketi | `yas-tab-etiket` |
+| İçerik sarmalayıcı | `yas-tab-icerikler` |
+| Tek panel | `yas-tab-icerik` + **sayfaya özel** ikinci sınıf (`...-icerik`) |
+
+### İsimlendirme
+
+- **`name`**: Aynı sayfada birden fazla sekme grubu varsa **grup başına farklı** olmalı (örn. `toronto-geziler-tabs`, `ornek-program-tabs`).
+- **`id`**: Sayfa genelinde **benzersiz** (örn. `toronto-simgesel`, `ornek-sekme-1`).
+- İçerik panelleri: `yas-tab-icerik` + **tekil** sınıf, genelde `id` ile uyumlu: `toronto-simgesel-icerik`.
+
+### Opsiyonel ek sınıflar
+
+- Konuya göre ikinci sınıf: `geziler-tabs-kapsayici`, `geziler-tab-basliklar`, `geziler-tab-icerikler` — yalnızca semantik/override için; **temel yapı `yas-tab-*` ile aynı kalmalı**.
+
+## CSS kaydı (kritik)
+
+Yeni bir sekme grubu eklendiğinde, **yalnızca HTML yeterli değildir.** Aşağıdaki seçiciler projede **elle** eklenmelidir; aksi halde aktif sekme ve içerik görünmez.
+
+**Dosyalar:** `css/style.css` (yas-tab bölümü, yaklaşık ~1125+) ve Immerse sayfalarında **`immerse-shared.css` yüklüyse** aynı kurallar **`css/immerse-shared.css`** içinde de tutulmalı (çift tanım projede mevcut).
+
+### 1) Aktif sekme etiketi (vurgu)
+
+```css
+#ornek-sekme-1:checked ~ .yas-tab-basliklar label[for="ornek-sekme-1"],
+#ornek-sekme-2:checked ~ .yas-tab-basliklar label[for="ornek-sekme-2"] {
+    /* stil style.css içindeki mevcut .yas-tab-etiket aktif bloğu ile aynı mantık */
+}
+```
+
+### 2) Görünür içerik paneli
+
+```css
+#ornek-sekme-1:checked ~ .yas-tab-icerikler .ornek-sekme-1-icerik,
+#ornek-sekme-2:checked ~ .yas-tab-icerikler .ornek-sekme-2-icerik {
+    display: block; /* veya mevcut kurallarla uyumlu */
+}
+```
+
+Mevcut sayfalardaki tam seçici listesi: `style.css` / `immerse-shared.css` içinde `#toronto-simgesel`, `#yas13-15` vb. örnekler.
+
+## Uygulama kontrol listesi
+
+1. HTML’de `id` / `for` / `name` eşleşmeleri doğru mu?
+2. Her içerik panelinde **hem** `yas-tab-icerik` **hem** benzersiz `...-icerik` sınıfı var mı?
+3. `style.css` (ve gerekirse `immerse-shared.css`) içine **yeni** `#id:checked ~ ...` kuralları eklendi mi?
+4. Aynı sayfada iki sekme grubu kullanılıyorsa `name` değerleri farklı mı?
+
+## Yanlış kullanım
+
+- Yeni sekme için **yeni** genel sınıf adları uydurup (`tab-xyz`) ortak `yas-tab-*` yapısını kopyalamadan kullanmak.
+- CSS kaydı olmadan sadece HTML eklemek.
+- Farklı sayfalarda aynı `id` kullanmak.
+
+## İlişkili dosyalar
+
+- `css/style.css` — `.yas-tab-input`, `.yas-tab-basliklar`, `.yas-tab-etiket`, `.yas-tab-icerikler`, medya sorguları
+- `css/immerse-shared.css` — Immerse program sayfaları için aynı mantık
+- Örnek sayfa: `yurt-disi-yaz-okullari/canada/toronto/immerse-education/index.html`
+
+**Not:** Ana sayfadaki `hizmet-tab-alani` / `tab.css` yapısı **farklı** bir bileşendir; içerik sayfası “yas-tab” standardı ile karıştırılmamalı.

@@ -1,3 +1,12 @@
+/* Londra Immerse sayfası ile uyum (body.immerse-education-page) */
+.immerse-education-page .icerik-alani > p {
+    font-size: 15px;
+    line-height: 1.75;
+    color: #374151;
+    margin: 0 auto 1.25em;
+    max-width: 1200px;
+}
+
 .immerse-alt-baslik {
     text-align: center;
     font-size: 18px;
@@ -18,15 +27,55 @@
 
 .immerse-kampus-kapsayici {
     text-align: center;
-    margin-bottom: 30px;
+    margin: 0 auto 30px;
+    max-width: 1200px;
 }
 
 .immerse-kampus-gorsel {
-    max-width: 900px;
+    display: block;
+    max-width: 1200px;
     width: 100%;
     height: auto;
+    margin: 0 auto;
     border-radius: 10px;
     box-shadow: 0 14px 35px rgba(15, 23, 42, 0.25);
+}
+
+/* Öne çıkan akademik programlar: kalın sol kenar (yaz-konaklama-oge / yaz okulları teması) */
+.toronto-akademik-programlar-kutu .toronto-akademik-sol-kenar-liste {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 18px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.toronto-akademik-programlar-kutu .toronto-akademik-sol-kenar-liste li {
+    position: relative;
+    margin-bottom: 0 !important;
+    padding: 18px 20px 18px 24px;
+    text-align: left;
+    background: linear-gradient(90deg, rgba(13, 148, 136, 0.08) 0%, #ffffff 100%);
+    border-left: 6px solid var(--yaz-vurgu);
+    border-radius: 0 10px 10px 0;
+    box-shadow: 0 2px 8px rgba(13, 148, 136, 0.06);
+}
+
+.toronto-akademik-programlar-kutu .toronto-akademik-sol-kenar-liste li::before {
+    content: none;
+}
+
+.toronto-akademik-programlar-kutu .toronto-akademik-sol-kenar-liste li strong {
+    color: #111827;
+}
+
+/* Konaklama: tek rozet kartı tam genişlik (global dahil-rozet-grid varsayılanı 3 sütun) */
+.immerse-konaklama-kutu .toronto-konaklama-yurt-rozet-grid {
+    grid-template-columns: 1fr;
+    max-width: 1200px;
+    margin: 18px auto 20px;
 }
 
 .toronto-immerse-konaklama-grid {
@@ -36,12 +85,16 @@
 
 .toronto-immerse-program-gorsel-kapsayici {
     text-align: center;
-    margin-top: 14px;
+    margin: 14px auto 0;
+    max-width: 1200px;
 }
 
 .toronto-immerse-program-gorsel {
-    max-width: 100%;
+    display: block;
+    max-width: 1200px;
+    width: 100%;
     height: auto;
+    margin: 0 auto;
     border-radius: 10px;
     box-shadow: 0 12px 30px rgba(15, 23, 42, 0.28);
 }
