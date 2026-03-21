@@ -3813,6 +3813,10 @@ body.ana-sayfa {
     z-index: 100;
     display: flex;
     flex-direction: column;
+    /* .navigasyon ul { gap: 22px } alt menüye de uygulanmasın */
+    gap: 0;
+    row-gap: 0;
+    column-gap: 0;
 }
 /* Açılır menü genişliği: en az ana menü kadar, gerekirse içerik kadar genişler */
 .navigasyon .has-dropdown .submenu {
@@ -4135,6 +4139,9 @@ body.ana-sayfa {
         max-width: 100%;
         min-width: 0 !important;
         box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        gap: 0 !important;
     }
     /* İç scroll yerine tek kaydırma: üst .navigasyon.is-open — çok alt öğede çift kaydırma / sıçrama olmasın */
     .navigasyon .has-dropdown.submenu-open .submenu {
@@ -4142,19 +4149,25 @@ body.ana-sayfa {
         pointer-events: auto;
         overflow: visible;
     }
+    /* 500px altı: alt menü satırları daha sıkı (768–501 aralığına dokunmuyoruz) */
     .navigasyon .submenu a {
-        padding: 6px 12px 6px 22px;
+        padding: 4px 10px 4px 18px;
         font-size: 15px;
-        line-height: 1.3;
+        line-height: 1.25;
         text-align: left;
         white-space: normal;
         overflow-wrap: break-word;
     }
     .navigasyon .submenu li {
+        margin: 0;
+        padding: 0;
         border-bottom: 1px solid #e8e8ec;
     }
     .navigasyon .submenu li:last-child {
         border-bottom: none;
+    }
+    .navigasyon .submenu li:first-child a {
+        padding-top: 2px;
     }
 }
 
