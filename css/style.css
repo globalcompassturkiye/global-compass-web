@@ -4032,15 +4032,18 @@ body.ana-sayfa {
         right: auto;
         transform: none;
     }
+    /* Tam ekran genişliği yerine sol çekmece — hamburger ile hizalı */
     .navigasyon {
         position: absolute;
         top: 100%;
         left: 0;
-        right: 0;
-        /* Açılan menüde ul içeriğini merkeze değil sola taşı */
+        right: auto;
+        width: min(360px, calc(100vw - 20px));
+        max-width: 100%;
+        box-sizing: border-box;
         justify-content: flex-start;
         background: #fff;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        box-shadow: 4px 12px 28px rgba(0, 0, 0, 0.12);
         padding: 0;
         margin: 0;
         max-height: 0;
@@ -4048,7 +4051,9 @@ body.ana-sayfa {
         opacity: 0;
         visibility: hidden;
         transition: max-height 0.3s ease, opacity 0.2s ease, visibility 0.2s ease;
-        border-top: 1px solid #f0f0f5;
+        border: 1px solid #ececf2;
+        border-left: none;
+        border-radius: 0 12px 12px 0;
         z-index: 999;
     }
     .navigasyon.is-open {
@@ -4473,9 +4478,12 @@ body.ana-sayfa {
         position: absolute;
         top: 100%;
         left: 0;
-        right: 0;
+        right: auto;
+        width: min(360px, calc(100vw - 20px));
+        max-width: 100%;
+        box-sizing: border-box;
         background: #fff;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        box-shadow: 4px 12px 28px rgba(0, 0, 0, 0.12);
         padding: 0;
         margin: 0;
         max-height: 0;
@@ -4483,9 +4491,10 @@ body.ana-sayfa {
         opacity: 0;
         visibility: hidden;
         transition: max-height 0.3s ease, opacity 0.2s ease, visibility 0.2s ease;
-        border-top: 1px solid #f0f0f5;
+        border: 1px solid #ececf2;
+        border-left: none;
+        border-radius: 0 12px 12px 0;
         z-index: 999;
-        /* Açılan menüde öğeler ortada kalmasın */
         justify-content: flex-start;
     }
     .navigasyon.is-open {
@@ -4500,6 +4509,7 @@ body.ana-sayfa {
     .navigasyon > ul {
         flex-direction: column;
         align-items: stretch;
+        width: 100%;
         padding: 4px 0;
         gap: 0;
     }
