@@ -1,0 +1,34 @@
+---
+description: Sayfa içeriği değişince JSON-LD şemalarını güncelle
+globs: "**/*.html"
+alwaysApply: false
+---
+
+# JSON-LD ile sayfa içeriği senkronu
+
+Bu projede birçok sayfada `<script type="application/ld+json">` ile yapılandırılmış veri (Organization, WebPage, BreadcrumbList, FAQPage, Course, vb.) bulunur.
+
+## Zorunlu kural
+
+**Sayfadaki görünür metni veya yapıyı değiştirdiğinizde**, aynı bilgiyi taşıyan **JSON-LD bloklarını da aynı düzenlemede güncelleyin.** Eski şema verisi bırakmayın.
+
+## Ne zaman güncellenir?
+
+| İçerik değişikliği | JSON-LD tarafı |
+|-------------------|----------------|
+| Başlık, meta açıklama, `canonical` | `WebPage` / `name` / `description` / `url` uyumu |
+| Breadcrumb veya URL yapısı | `BreadcrumbList` `itemListElement` |
+| Okul/kurum adı, adres, iletişim | `Organization` / `EducationalOrganization` alanları |
+| Fiyat, süre, program adı | `Course`, `Offer`, `AggregateOffer` vb. |
+| SSS soru/cevap metni (`summary`, paragraflar) | `FAQPage` → `mainEntity` içindeki `Question` / `Answer` |
+| Sayfadaki liste/kart sayısı (okullar, şehirler) | `ItemList` veya ilgili şema öğeleri |
+
+## Özel: FAQPage (SSS)
+
+- SSS bölümünde soru eklenirse, çıkarılırsa veya metin değişirse: **`FAQPage.mainEntity`** buna göre güncellenmeli.
+- Google yönergeleri: `name` ve `acceptedAnswer.text`, sayfada **kullanıcıya gösterilen metinle** uyumlu olmalı.
+- Detay: `docs/json-ld-sss-faq.md`
+
+## Kontrol
+
+- Düzenleme sonunda ilgili sayfada `application/ld+json` script(ler)ini tarayıp, değiştirdiğin içerikle **çelişen** alan kalmadığını doğrula.

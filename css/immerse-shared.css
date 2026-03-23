@@ -118,6 +118,10 @@
 
 .immerse-yas-tabs-kutu .yas-tabs-kapsayici {
     margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
 }
 
 .yas-tab-input {
@@ -125,13 +129,20 @@
 }
 
 .yas-tab-basliklar {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     gap: 8px;
     background: #f1f5f9;
-    padding: 6px;
-    border-radius: 999px;
-    margin-bottom: 18px;
+    padding: 10px 12px 12px 12px;
+    border-radius: 14px 14px 0 0;
+    border: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e2e8f0;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
 }
 
 .yas-tab-etiket {
@@ -175,10 +186,12 @@
 }
 
 .yas-tab-icerikler {
-    border-radius: 14px;
+    border-radius: 0 0 14px 14px;
     background: #f9fafb;
     padding: 18px 18px 16px 18px;
     border: 1px solid #e5e7eb;
+    border-top: none;
+    margin-top: 0;
 }
 
 .yas-tab-icerik {
@@ -502,6 +515,36 @@
     line-height: 1.4;
 }
 
+.yas-alan-etiketleri li .alan-en,
+.yas-alan-etiketleri li .alan-tr {
+    display: block;
+}
+
+/* İngilizce / Türkçe iki satır: arada net boşluk */
+.yas-alan-etiketleri li:has(.alan-en) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.yas-alan-etiketleri li .alan-en {
+    font-weight: 600;
+}
+
+.yas-alan-etiketleri li .alan-tr {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #334155;
+}
+
+/* :has destekleyenlerde gap kullanıldığı için çift boşluk olmasın */
+.yas-alan-etiketleri li:has(.alan-en) .alan-tr {
+    margin-top: 0;
+}
+
 .yas-alan-etiketleri li::before {
     content: "";
 }
@@ -537,11 +580,6 @@
 
     .immerse-program-icerik {
         padding: 12px 14px;
-    }
-
-    .yas-tab-basliklar {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        row-gap: 6px;
     }
 
     .yas-tab-etiket {

@@ -98,10 +98,16 @@
 }
 
 @media (max-width: 768px) {
+    /* Başlık bandı (kirmizi-kutu) dış çerçevenin üstüne tam otursun — yan/üst padding yok */
     .yaz-okullari-secim-paneli {
         margin: 20px 0 45px 0;
-        padding: 12px;
+        padding: 0;
         border-radius: 10px;
+    }
+
+    /* Şehir CSS’leri (cambridge.css vb.) 5px veriyor; panel 10px — üst köşe hizası */
+    .yaz-okullari-secim-paneli .kirmizi-kutu {
+        border-radius: 10px 10px 0 0 !important;
     }
 
     .ulke-secim-butonlari {
@@ -419,5 +425,148 @@
     margin-left: 0 !important;
     margin-right: 0 !important;
     margin-bottom: 0 !important;
+}
+
+/* Oxford Royale Cambridge — sol kenar kalın vurgu (giriş paragrafı) */
+body.oxford-royale-cambridge-sayfa .metin-sol-kalin-vurgu {
+    margin: 0 0 22px 0;
+    padding: 16px 18px 16px 20px;
+    border-left: 6px solid #000080;
+    background: #f8fafc;
+    border-radius: 0 10px 10px 0;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+/* Oxford Royale Cambridge: ✓ üçlü satır + yaş sekmeleri — ekstra dış gri çerçeve yok; bloklar 1200px ile hizalı */
+body.oxford-royale-cambridge-sayfa .ora-yaz-1200-blok {
+    max-width: 1200px;
+    margin: 45px auto 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 1200px) {
+    body.oxford-royale-cambridge-sayfa .icerik-alani .ora-yaz-1200-blok {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: 100% !important;
+        max-width: none !important;
+    }
+}
+
+/* Oxford Royale Cambridge — Ulaşım Rehberi tabloları */
+body.oxford-royale-cambridge-sayfa .ora-ulasim-alt-baslik {
+    font-size: 17px;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 28px 0 12px 0;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #0f766e;
+}
+
+body.oxford-royale-cambridge-sayfa .gri-cerceve-kutu .ora-ulasim-alt-baslik:first-of-type {
+    margin-top: 8px;
+}
+
+body.oxford-royale-cambridge-sayfa .ora-ulasim-tablo-ust-metin {
+    margin-bottom: 12px;
+}
+
+body.oxford-royale-cambridge-sayfa .ora-ulasim-tablo-sarici {
+    overflow-x: auto;
+    margin: 12px 0 8px 0;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    background: #ffffff;
+}
+
+body.oxford-royale-cambridge-sayfa .ora-ulasim-tablo {
+    width: 100%;
+    min-width: 280px;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+body.oxford-royale-cambridge-sayfa .ora-ulasim-tablo thead th {
+    background: #0f766e;
+    color: #ffffff;
+    font-weight: 600;
+    text-align: left;
+    padding: 12px 14px;
+    border: 1px solid #0d5f59;
+}
+
+body.oxford-royale-cambridge-sayfa .ora-ulasim-tablo tbody td {
+    padding: 12px 14px;
+    border: 1px solid #e5e7eb;
+    vertical-align: top;
+    color: #334155;
+}
+
+body.oxford-royale-cambridge-sayfa .ora-ulasim-tablo tbody tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+body.oxford-royale-cambridge-sayfa .ora-ulasim-onemli-not {
+    margin-top: 22px;
+    padding: 14px 16px;
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    border-radius: 8px;
+    color: #78350f;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+    body.oxford-royale-cambridge-sayfa .ora-ulasim-tablo {
+        font-size: 13px;
+    }
+
+    body.oxford-royale-cambridge-sayfa .ora-ulasim-tablo thead th,
+    body.oxford-royale-cambridge-sayfa .ora-ulasim-tablo tbody td {
+        padding: 10px 12px;
+    }
+}
+
+/* Program Detayları — 501px üzeri: klasik 2x2 (Süre|Yaşlar / Fiyatlar|Tarihler); Daha Fazla ortada yarım genişlik */
+@media (min-width: 502px) {
+    body.oxford-royale-cambridge-sayfa .ora-daha-fazla-aktivite-kart {
+        grid-column: 1 / -1;
+        justify-self: center;
+        width: min(100%, calc((100% - 18px) / 2));
+        text-align: center;
+    }
+}
+
+@media (max-width: 501px) {
+    /* Oxford Royale Cambridge: tüm rozet kart gridleri mobilde tek sütun */
+    body.oxford-royale-cambridge-sayfa .dahil-rozet-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Sadece üstteki 4 kart (Süre/Yaşlar/Fiyatlar/Tarihler) 2'li kalsın */
+    body.oxford-royale-cambridge-sayfa .ora-ilk-dort-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+
+    /* Fiyatlar / Tarihler: çerçeve ortada, içerik sola dayalı */
+    body.oxford-royale-cambridge-sayfa .ora-fiyatlar-kart,
+    body.oxford-royale-cambridge-sayfa .ora-tarihler-kart {
+        grid-column: 1 / -1;
+        justify-self: center;
+        width: fit-content;
+        max-width: 100%;
+        text-align: left;
+    }
+
+    body.oxford-royale-cambridge-sayfa .ora-daha-fazla-aktivite-kart {
+        width: 100% !important;
+        justify-self: stretch !important;
+        text-align: center;
+    }
 }
 

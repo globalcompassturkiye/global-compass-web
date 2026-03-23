@@ -1,6 +1,10 @@
 /* Cambridge yaz okullari sayfasina ozel secim paneli ve form bandi stilleri */
 .cambridge-secim-paneli .kirmizi-kutu .ust-satir,
-.cambridge-secim-paneli .kirmizi-kutu .alt-satir-lacivert { font-size: 22px; }
+.cambridge-secim-paneli .kirmizi-kutu .alt-satir-lacivert { font-size: 25px; }
+.cambridge-secim-paneli .kirmizi-kutu p.ust-satir::before,
+.cambridge-secim-paneli .kirmizi-kutu p.ust-satir::after {
+    font-size: 24px;
+}
 .cambridge-secim-paneli .kirmizi-kutu { margin: 0; border-radius: 5px 5px 0 0; }
 .cambridge-secim-paneli .okul-liste-kapsayici { margin-top: 0; padding-top: 0; border-top-left-radius: 0; border-top-right-radius: 0; }
 .cambridge-secim-paneli .okul-liste-kapsayici .okul-liste-baslik { display: none; }
@@ -25,7 +29,7 @@
 .cambridge-secim-paneli .liste-index,
 .cambridge-secim-paneli .okul-isim-link,
 .cambridge-secim-paneli .btn-modern-incele,
-.cambridge-secim-paneli .incele-btn-minimal { font-size: 18px !important; }
+.cambridge-secim-paneli .incele-btn-minimal { font-size: 16px !important; }
 .cambridge-form-bant { margin-bottom: 0; border-radius: 15px 15px 0 0; background-color: #e30613; }
 .cambridge-form-bant .ust-satir { font-size: 20px; color: #ffffff !important; }
 .cambridge-form-bant + .iletisim-form-alani { margin-top: 0 !important; border-top-left-radius: 0; border-top-right-radius: 0; padding-top: 25px; }
@@ -37,13 +41,14 @@
     width: min(100%, calc((100% - 18px) / 2));
 }
 
+/* Neden Cambridge: üç çerçeve yan yana değil, alt alta */
 .cambridge-neden-kutu .cambridge-neden-rozet-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: 1fr;
     gap: 14px;
 }
 
 .gri-cerceve-kutu.cambridge-neden-kutu .dahil-rozet-grid.cambridge-neden-rozet-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    grid-template-columns: 1fr !important;
 }
 
 .cambridge-program-dikey-kutu .cambridge-program-dikey-liste {

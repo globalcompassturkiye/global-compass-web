@@ -30,10 +30,15 @@
 }
 
 @media (max-width: 768px) {
+    /* Başlık bandı dış çerçevenin üstüne tam otursun */
     .dil-okullari-secim-paneli {
         margin: 20px 0 45px 0;
-        padding: 12px;
+        padding: 0;
         border-radius: 10px;
+    }
+
+    .dil-okullari-secim-paneli .kirmizi-kutu {
+        border-radius: 10px 10px 0 0;
     }
 
     .ulke-secim-butonlari .ulke-buton {
