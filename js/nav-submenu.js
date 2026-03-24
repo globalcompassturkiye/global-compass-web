@@ -18,6 +18,16 @@
     });
   }
 
+  /** Kapatılırken iç içe açık alt menü sınıflarını da sıfırla */
+  function closeNestedDropdowns(containerLi) {
+    containerLi.querySelectorAll('li.has-dropdown').forEach(function (li) {
+      li.classList.remove('submenu-open');
+    });
+    containerLi.querySelectorAll('li.has-dropdown > a').forEach(function (a) {
+      a.setAttribute('aria-expanded', 'false');
+    });
+  }
+
   function init() {
     var toggle = document.querySelector('.nav-toggle');
     var nav = document.querySelector('.navigasyon');
@@ -48,6 +58,8 @@
           parent.classList.add('submenu-open');
           this.setAttribute('aria-expanded', 'true');
         } else {
+          e.preventDefault();
+          closeNestedDropdowns(parent);
           parent.classList.remove('submenu-open');
           this.setAttribute('aria-expanded', 'false');
         }
