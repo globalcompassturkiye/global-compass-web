@@ -12,16 +12,18 @@ html {
     overflow-x: hidden;
     width: 100%;
     /* Sabit üst menü yüksekliği (header-offset.js --site-header-offset ile güncellenir) */
-    scroll-padding-top: var(--site-header-offset, 120px);
+    scroll-padding-top: var(--site-header-offset, 100px);
 }
 
 body {
     margin: 0 !important;
-    padding: 0 !important;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    /* !important kullanma: header-offset.js .sabit-ust-alan yüksekliğini inline yazar (menü 1/2 satır değişince boşluk uyumlu) */
+    padding-top: 100px;
     width: 100%;
     overflow-x: visible;
-    /* header-offset.js yüklenene kadar içerik üst menünün altında kalsın (yaklaşık) */
-    padding-top: 120px !important;
     font-family: 'Poppins', sans-serif;
     color: #333;
     line-height: 2;
@@ -29,15 +31,24 @@ body {
     display: block;
 }
 
-@media (max-width: 992px) {
+/* Masaüstü: JS yoksa yaklaşık üst boşluk; var(--site-header-offset) ölçümlü */
+@media (min-width: 769px) {
     body {
-        padding-top: 130px !important;
+        padding-top: 122px;
+    }
+
+    html {
+        scroll-padding-top: var(--site-header-offset, 122px);
     }
 }
 
-@media (max-width: 500px) {
+@media (min-width: 993px) {
     body {
-        padding-top: 100px !important;
+        padding-top: 122px;
+    }
+
+    html {
+        scroll-padding-top: var(--site-header-offset, 122px);
     }
 }
 
@@ -67,6 +78,7 @@ strong {
     font-size: 22px;              /* Slogan için ideal boyut */
     color: #000000;               /* Siyah */
     font-weight: 700;             /* Güçlü ve profesyonel bir duruş (Bold) */
+    margin-top: 0;                /* p öğesi; üst boşluk h1 ile hizalı kalsın */
     margin-bottom: 30px;          /* Altındaki içerikle olan mesafe */
     text-align: center;           /* Sloganı sayfada ortalar */
     max-width: 1200px;            /* Metnin çok yayılmasını engeller */
@@ -3040,7 +3052,7 @@ p + .kirmizi-kutu {
 /* --- ANA SAYFA KARŞILAMA (HERO) --- */
 .ana-karsilama-alani {
     width: 100%;
-    padding: 25px 0 80px 0;
+    padding: 25px 0 36px 0;
     background: #ffffff;
     border-bottom: 1px solid #f0f0f0;
 }
@@ -3080,16 +3092,21 @@ p + .kirmizi-kutu {
     font-weight: 400;
 }
 
-.ana-p {
-    font-size: 15px !important;
-    line-height: 1.7;
-    color: #555;
-    margin-bottom: 40px;
-    text-align: justify !important;
+/* Ana sayfa: hizmet kartları bölümü başlığı */
+.ana-karsilama-alt-baslik {
+    font-size: 20px;
+    line-height: 1.45;
+    font-weight: 700;
+    color: #333333;
+    margin: 0 auto 28px;
+    text-align: center;
+    max-width: 1200px;
 }
 
-.ana-karsilama-alani .ana-p {
-    text-align: center !important;
+/* Güven rozetleri: sloganın hemen altında (hero) */
+.ana-karsilama-alani .guven-rozetleri {
+    padding: 8px 0 36px 0;
+    margin-top: 0;
 }
 
 /* Buton Grupları */
@@ -3097,7 +3114,7 @@ p + .kirmizi-kutu {
     display: flex;
     gap: 20px;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 0;
 }
 
 .ana-buton-vurgu {
@@ -3130,13 +3147,11 @@ p + .kirmizi-kutu {
     background: #f0f0f5;
 }
 
-/* Güven Rozetleri */
+/* Güven Rozetleri (ana sayfada .ana-hizmetler-bolumu içinde; üst boşluk bölüm özelinde) */
 .guven-rozetleri {
     display: flex;
     justify-content: center;
     gap: 30px;
-    border-top: 1px solid #eee;
-    padding: 70px 0 20px 0; /* Üst: 70px, Alt: 20px */
 }
 
 .rozet-item {
@@ -3148,7 +3163,7 @@ p + .kirmizi-kutu {
 /* Mobilde Ölçekleme */
 @media (max-width: 768px) {
     .karsilama-icerik h1 { font-size: 28px !important; }
-    .ana-p { text-align: justify !important; }
+    .ana-karsilama-alt-baslik { font-size: 18px; }
     .karsilama-aksiyon { flex-direction: column; }
     .guven-rozetleri { flex-direction: column; gap: 4px; }
     .rozet-item { font-size: 20px; } /* Mobilde 20px */
@@ -3319,26 +3334,26 @@ p + .kirmizi-kutu {
     }
 }
 
-/* Ana sayfa hero alanı – mobilde öğeler arası 50px boşluk */
+/* Ana sayfa hero – mobilde öğeler arası boşluk (buton altı sıkı; hero padding-bottom ek boşluk verir) */
 @media (max-width: 768px) {
     .ana-sayfa .ana-karsilama-alani .ana-marka-baslik,
     .ana-sayfa .ana-karsilama-alani .ana-sayfa-slogan,
-    .ana-sayfa .ana-karsilama-alani .ana-p,
-    .ana-sayfa .ana-karsilama-alani .karsilama-aksiyon,
     .ana-sayfa .ana-karsilama-alani .guven-rozetleri {
         margin-bottom: 50px !important;
     }
-    /* Son bloğun altında ekstra boşluk birikmesin */
-    .ana-sayfa .ana-karsilama-alani .guven-rozetleri {
-        padding-top: 30px; /* üst çizgi boşluğu kalsın */
+    .ana-sayfa .ana-karsilama-alani .karsilama-aksiyon {
+        margin-bottom: 0 !important;
+    }
+    .ana-sayfa .icerik-alani.ana-hizmetler-bolumu .ana-karsilama-alt-baslik {
+        margin-bottom: 50px !important;
     }
 }
 
-/* 501px altı: rozetler altındaki genel paddingi azalt */
+/* 501px altı: hero dikey padding */
 @media (max-width: 501px) {
     .ana-sayfa .ana-karsilama-alani {
         padding-top: 25px;
-        padding-bottom: 25px; /* üst ve alt padding eşitlendi */
+        padding-bottom: 28px;
     }
 
     /* Anasayfa H1 ve vurgu satiri mobilde net 28px olsun */
@@ -3641,7 +3656,7 @@ article.icerik-alani .dahil-rozet-metin {
     width: 100%;
     max-width: 1920px;
     margin: 0 auto;
-    padding: 8px 25px 0 25px;
+    padding: 8px 10px 0 10px;
     display: flex;
     justify-content: center; 
     background: #ffffff;
@@ -3665,15 +3680,13 @@ article.icerik-alani .dahil-rozet-metin {
     text-transform: none;
     letter-spacing: 0.5px;
     padding: 6px 2px 10px 2px;
-    transition: color 0.18s ease, border-color 0.18s ease;
-    border-bottom: 3px solid transparent;
+    transition: color 0.18s ease;
     display: inline-block;
 }
 
 .navigasyon a:hover,
 .navigasyon a.aktif {
     color: #000080;
-    border-bottom-color: #FF0000;
 }
 
 /* =========================================
@@ -3713,8 +3726,8 @@ body.ana-sayfa {
 }
 @media (max-width: 1200px) {
     body.ana-sayfa .ust-menu .navigasyon {
-        padding-left: var(--icerik-yan-gutter) !important;
-        padding-right: var(--icerik-yan-gutter) !important;
+        padding-left: 12px !important;
+        padding-right: 12px !important;
         box-sizing: border-box;
     }
 }
@@ -3801,33 +3814,18 @@ body.ana-sayfa {
     position: relative;
     border-right: 3px solid #ccc;
     /* Sağ-sol boşluk ve satırlar arasında hafif dikey boşluk */
-    padding: 0 35px;
+    padding: 0 18px;
     margin: 1px 0; /* dikey boşluğu azalt */
     transition: background-color 0.2s ease;
 }
 .navigasyon > ul > li:last-child {
     border-right: none;
-    padding-right: 35px;
+    padding-right: 18px;
     margin-right: 0;
-}
-.navigasyon > ul > li::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 6px;
-    background-color: #000080;
-    opacity: 0;
-    transition: opacity 0.2s ease;
 }
 .navigasyon > ul > li:hover,
 .navigasyon > ul > li:has(.aktif) {
     background-color: #ffffff;
-}
-.navigasyon > ul > li:hover::after,
-.navigasyon > ul > li:has(.aktif)::after {
-    opacity: 1;
 }
 .navigasyon > ul > li:hover a,
 .navigasyon > ul > li:has(.aktif) a {
@@ -3835,11 +3833,6 @@ body.ana-sayfa {
 }
 
 /* Logo menü öğesi gibi davranmasın (hover alt çizgi/aktif efekt yok) */
-.navigasyon > ul > li.nav-logo-item::after,
-.navigasyon > ul > li.nav-logo-item:hover::after,
-.navigasyon > ul > li.nav-logo-item:has(.aktif)::after {
-    opacity: 0 !important;
-}
 
 .navigasyon > ul > li.nav-logo-item:hover,
 .navigasyon > ul > li.nav-logo-item:has(.aktif) {
@@ -3850,14 +3843,14 @@ body.ana-sayfa {
     font-size: 16px; /* Tüm breakpointlerde 16px */
     font-weight: 700;
     color: #000080;
-    padding: 8px 18px;
+    padding: 8px 10px;
     border-radius: 0;
     border-bottom: none;
     letter-spacing: 0.02em;
     text-decoration: none;
     display: block;
     max-width: 100%;
-    overflow: hidden; /* Taşmayı engelle, ama ... gösterme */
+    overflow: visible; /* Alt çizgi (border-bottom) kırpılmasın */
     background-color: #ffffff;
     white-space: nowrap;
     transition: color 0.2s ease, background-color 0.2s ease;
@@ -3866,6 +3859,27 @@ body.ana-sayfa {
 .navigasyon a.aktif {
     color: #000080;
 }
+
+/* Üst menü satırı (769+): kalın alt çizgi; .navigasyon a { border:none } üzerine */
+@media (min-width: 769px) {
+    .navigasyon > ul > li:not(.nav-logo-item) {
+        flex-shrink: 0;
+    }
+    .navigasyon > ul > li:not(.nav-logo-item) > a {
+        border-bottom: 4px solid transparent !important;
+        box-shadow: none;
+        transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+    }
+    .navigasyon > ul > li:not(.nav-logo-item) > a:hover,
+    .navigasyon > ul > li:not(.nav-logo-item) > a.aktif {
+        border-bottom-color: #000080 !important;
+        background-color: #ffffff;
+    }
+    .navigasyon > ul > li.nav-logo-item > a {
+        border-bottom: none !important;
+    }
+}
+
 .navigasyon .has-dropdown > a::after {
     content: "";
     display: inline-block;
@@ -3877,7 +3891,7 @@ body.ana-sayfa {
     transition: transform 0.2s ease;
 }
 
-/* --- Dropdown submenu (desktop): tek satırda 1 öğe --- */
+/* --- Dropdown submenu (hamburger dışı): dikey liste (hamburger çekmece ile aynı mantık) --- */
 .navigasyon .submenu {
     list-style: none;
     margin: 0;
@@ -3899,10 +3913,12 @@ body.ana-sayfa {
     z-index: 100;
     display: flex;
     flex-direction: column;
-    /* .navigasyon ul { gap: 22px } alt menüye de uygulanmasın */
+    flex-wrap: nowrap;
     gap: 0;
-    row-gap: 0;
-    column-gap: 0;
+    align-items: stretch;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    padding: 4px 0;
 }
 /* Açılır menü genişliği: en az ana menü kadar, gerekirse içerik kadar genişler */
 .navigasyon .has-dropdown .submenu {
@@ -3934,12 +3950,36 @@ body.ana-sayfa {
     .navigasyon .submenu > li.has-dropdown {
         position: relative;
     }
+    /* İç içe flyout: dikey liste, sağa açılır */
     .navigasyon .submenu > li.has-dropdown > .submenu {
         top: 0;
         left: 100%;
         margin-left: 0;
         min-width: 200px;
         z-index: 110;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 0;
+        row-gap: 0;
+        column-gap: 0;
+        align-items: stretch;
+        justify-content: flex-start;
+        padding: 0;
+    }
+    .navigasyon .submenu > li.has-dropdown > .submenu > li {
+        width: 100%;
+        border-bottom: 1px solid #f5f5f5;
+    }
+    .navigasyon .submenu > li.has-dropdown > .submenu > li:last-child {
+        border-bottom: none;
+    }
+    .navigasyon .submenu > li.has-dropdown > .submenu a {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 6px;
+        width: 100%;
+        max-width: none;
     }
 }
 
@@ -3962,31 +4002,57 @@ body.ana-sayfa {
 }
 .navigasyon .submenu a {
     padding: 10px 16px;
-    border-bottom: none;
+    border-bottom: 4px solid transparent !important;
     font-size: 16px;
     font-weight: 700;
     color: #000080;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 6px;
     width: 100%;
+    max-width: 100%;
     box-sizing: border-box;
     border-radius: 0;
     white-space: nowrap;
     background-color: #ffffff;
-    text-align: center;
-    overflow: visible; /* Uzun metinlerde açılır menü genişlesin, metin kesilmesin */
+    text-align: left;
+    overflow: visible;
+    transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
 }
-.navigasyon .submenu a:hover {
+/* Alt menü satırları: sol başta turuncu ok — daha belirgin tıklanabilir alan */
+.navigasyon .submenu a::before {
+    content: "";
+    flex-shrink: 0;
+    width: 14px;
+    height: 14px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath stroke='%23f05a28' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' d='M9 6l6 6-6 6'/%3E%3C/svg%3E") center / contain no-repeat;
+    opacity: 0.95;
+}
+.navigasyon .submenu a:hover,
+.navigasyon .submenu a.aktif {
     color: #000080;
-    background: #f5f5f5;
-    text-decoration: underline;
+    background: #ffffff;
+    text-decoration: none;
+    border-bottom-color: #000080 !important;
 }
-.navigasyon .submenu li {
-    border-bottom: 1px solid #f5f5f5;
-    width: 100%;
-    flex: 0 0 auto;
+.navigasyon .submenu a:hover::before,
+.navigasyon .submenu a.aktif::before {
+    opacity: 1;
 }
-.navigasyon .submenu li:last-child {
-    border-bottom: none;
+
+/* Dikey açılır menü satır ayırıcıları yalnızca masaüstü (hamburger kurallarıyla çakışmasın) */
+@media (min-width: 769px) {
+    .navigasyon .submenu > li {
+        border-bottom: 1px solid #f0f0f5;
+        width: 100%;
+        flex: 0 0 auto;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+    .navigasyon .submenu > li:last-child {
+        border-bottom: none;
+    }
 }
 
 /* --- Mobile menu toggle (hamburger) --- */
@@ -4188,40 +4254,85 @@ body.ana-sayfa {
         padding: 4px 0;
         gap: 0;
     }
+    /* Masaüstü `padding: 0 18px` / son öğe `padding-right: 18px` — hover’da sıfırlanıp kayma yapmasın diye çekmecede hep sıfır */
     .navigasyon > ul > li {
         border-right: none; /* Çok dar mobilde dikey ayraç yok */
-        padding-right: 0;
-        margin-right: 0;
+        padding: 0;
+        margin: 0;
         border-bottom: 1px solid #f0f0f5;
         min-width: 0;
     }
     .navigasyon > ul > li:last-child {
         border-bottom: none;
-    }
-    .navigasyon > ul > li:last-child:hover,
-    .navigasyon > ul > li:last-child:has(.aktif) {
         padding-right: 0;
-    }
-    .navigasyon > ul > li:hover:not(:first-child),
-    .navigasyon > ul > li:has(.aktif):not(:first-child) {
-        margin-left: 0;
-        padding-left: 0;
+        margin-right: 0;
     }
     .navigasyon .nav-list > li > a {
-        /* 500px altı: Yazı “büyüyor” hissini veren padding'i tablet ile eşitleyelim */
-        padding: 8px 14px;
+        /* Hamburger (768px altı ile aynı): üst/alt 10px, yatay 12px */
+        padding: 10px 12px;
         font-size: 16px;
-        line-height: 1.1;
+        line-height: 1.2;
         display: block;
         text-align: left;
     }
 
     /* DOM'da `.nav-list` yoksa da aynı hizayı koru */
     .navigasyon > ul > li > a {
-        padding: 8px 14px;
+        padding: 10px 12px;
         font-size: 16px;
-        line-height: 1.1;
+        line-height: 1.2;
         text-align: left;
+    }
+
+    /* Üst satır: alt menü satırlarıyla aynı sol turuncu ok (logo hariç) */
+    .navigasyon .nav-list > li:not(.nav-logo-item) > a,
+    .navigasyon > ul > li:not(.nav-logo-item) > a {
+        display: flex !important;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 8px;
+        padding: 10px 12px 10px 12px;
+    }
+    .navigasyon .nav-list > li:not(.nav-logo-item) > a::before,
+    .navigasyon > ul > li:not(.nav-logo-item) > a::before {
+        content: "";
+        flex-shrink: 0;
+        width: 13px;
+        height: 13px;
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath stroke='%23f05a28' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' d='M9 6l6 6-6 6'/%3E%3C/svg%3E") center / contain no-repeat;
+        opacity: 0.95;
+    }
+    .navigasyon .nav-list > li:not(.nav-logo-item) > a:hover::before,
+    .navigasyon .nav-list > li:not(.nav-logo-item) > a:active::before,
+    .navigasyon .nav-list > li:not(.nav-logo-item) > a.aktif::before,
+    .navigasyon > ul > li:not(.nav-logo-item) > a:hover::before,
+    .navigasyon > ul > li:not(.nav-logo-item) > a:active::before,
+    .navigasyon > ul > li:not(.nav-logo-item) > a.aktif::before {
+        opacity: 1;
+    }
+
+    /* Çekmece menü: kalın çizgi metin altında; none↔underline geçişi yerine hep underline + renk (kayma yok) */
+    .navigasyon .nav-list > li:not(.nav-logo-item) > a,
+    .navigasyon > ul > li:not(.nav-logo-item) > a {
+        border-bottom: none !important;
+        box-sizing: border-box;
+        box-shadow: none;
+        text-decoration: underline;
+        text-decoration-color: transparent;
+        text-decoration-thickness: 4px;
+        text-underline-offset: 4px;
+        text-decoration-skip-ink: auto;
+        transition: color 0.2s ease, text-decoration-color 0.2s ease, background-color 0.2s ease;
+    }
+    .navigasyon .nav-list > li:not(.nav-logo-item) > a:hover,
+    .navigasyon .nav-list > li:not(.nav-logo-item) > a:active,
+    .navigasyon .nav-list > li:not(.nav-logo-item) > a.aktif,
+    .navigasyon > ul > li:not(.nav-logo-item) > a:hover,
+    .navigasyon > ul > li:not(.nav-logo-item) > a:active,
+    .navigasyon > ul > li:not(.nav-logo-item) > a.aktif {
+        text-decoration-color: #000080;
+        border-bottom: none !important;
+        background-color: #ffffff;
     }
     /* float:right ok ikonu — uzun başlıkta (Yaz Okulları) yükseklik/ taşma bozulmasın */
     .navigasyon .has-dropdown > a {
@@ -4263,6 +4374,10 @@ body.ana-sayfa {
         margin: 0;
         padding: 0;
         gap: 0 !important;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        justify-content: flex-start;
     }
     /* İç scroll yerine tek kaydırma: üst .navigasyon.is-open — çok alt öğede çift kaydırma / sıçrama olmasın */
     .navigasyon .nav-list > li.has-dropdown.submenu-open > .submenu,
@@ -4276,29 +4391,54 @@ body.ana-sayfa {
         pointer-events: auto;
         overflow: visible;
     }
-    /* 500px altı: alt menü satırları daha sıkı (768–501 aralığına dokunmuyoruz) */
+    /* Alt menü: 501–768 ile aynı padding (üst/alt 10px, sağ 12px, sol 24px girinti) */
     .navigasyon .submenu a {
-        padding: 4px 10px 4px 18px;
+        padding: 10px 12px 10px 24px;
         font-size: 15px;
         line-height: 1.25;
         text-align: left;
         white-space: normal;
         overflow-wrap: break-word;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 8px;
+        width: 100%;
+        max-width: none;
+        border-bottom: none !important;
+        box-sizing: border-box;
+        text-decoration: underline;
+        text-decoration-color: transparent;
+        text-decoration-thickness: 4px;
+        text-underline-offset: 4px;
+        text-decoration-skip-ink: auto;
+        transition: color 0.2s ease, text-decoration-color 0.2s ease, background-color 0.2s ease;
+    }
+    .navigasyon .submenu a:hover,
+    .navigasyon .submenu a:active,
+    .navigasyon .submenu a.aktif {
+        text-decoration: underline;
+        text-decoration-color: #000080;
+        border-bottom: none !important;
+        background-color: #ffffff;
+    }
+    .navigasyon .submenu a::before {
+        width: 13px;
+        height: 13px;
+        margin-top: 2px;
     }
     .navigasyon .submenu li {
         margin: 0;
         padding: 0;
+        width: 100%;
         border-bottom: 1px solid #e8e8ec;
     }
     .navigasyon .submenu li:last-child {
         border-bottom: none;
     }
-    .navigasyon .submenu li:first-child a {
-        padding-top: 2px;
-    }
-    /* İç içe alt menü (ör. İngiltere > şehir): girinti */
+    /* İç içe alt menü (ör. İngiltere > şehir): bir üst seviyeye göre ek girinti */
     .navigasyon .submenu .submenu a {
-        padding-left: 28px;
+        padding-left: 44px;
     }
 }
 
@@ -4360,7 +4500,7 @@ body.ana-sayfa {
         display: flex !important;
         align-items: center;
         padding: 0;
-        margin: 0 25px 0 0;
+        margin: 0 14px 0 0;
         border-right: 2px solid #ccc !important;
     }
 
@@ -4383,18 +4523,28 @@ body.ana-sayfa {
     .ust-menu .navigasyon > ul > li {
         border-right: none !important;
         margin: 0;
-        padding: 0 15px;
+        padding: 0 8px;
         display: flex;
         align-items: center;
+        flex-shrink: 0; /* hover’da flex yeniden hesaplanınca öğe sola sıkışmasın */
     }
 
     /* İlk menü öğesine sol tarafta ekstra boşluk */
     .ust-menu .navigasyon > ul > li:first-child {
-        margin-left: 15px; /* ayraç çizgisi ile ilk menü öğesi kutusu arası 15px */
+        margin-left: 8px;
     }
 
     .ust-menu .navigasyon > ul > li > a {
         letter-spacing: 0.01em;
+    }
+
+    /* Açılır menü linkleri: üst satırla aynı kalın alt çizgi */
+    .ust-menu .navigasyon .submenu a {
+        border-bottom: 4px solid transparent !important;
+    }
+    .ust-menu .navigasyon .submenu a:hover,
+    .ust-menu .navigasyon .submenu a.aktif {
+        border-bottom-color: #000080 !important;
     }
 }
 
@@ -4446,12 +4596,44 @@ body.ana-sayfa {
         white-space: nowrap;
     }
 
+    /* Üst satır: kalın alt çizgi (padding kuralından sonra) */
+    .ust-menu .navigasyon > ul > li:not(.nav-logo-item) > a {
+        border-bottom: 4px solid transparent !important;
+        box-shadow: none;
+    }
+    .ust-menu .navigasyon > ul > li:not(.nav-logo-item) > a:hover,
+    .ust-menu .navigasyon > ul > li:not(.nav-logo-item) > a.aktif {
+        border-bottom-color: #000080 !important;
+    }
+
+    .ust-menu .navigasyon .submenu a {
+        border-bottom: 4px solid transparent !important;
+    }
+    .ust-menu .navigasyon .submenu a:hover,
+    .ust-menu .navigasyon .submenu a.aktif {
+        border-bottom-color: #000080 !important;
+    }
+
+    .ust-menu .navigasyon .submenu a::before {
+        width: 12px;
+        height: 12px;
+    }
+
     .ust-menu .navigasyon > ul > li {
         flex: 0 0 auto;
     }
 }
 
 @media (min-width: 1451px) {
+    /* Üst boşluk: header-offset.js ile uyum (993+ ile aynı yedek) */
+    body {
+        padding-top: 122px;
+    }
+
+    html {
+        scroll-padding-top: var(--site-header-offset, 122px);
+    }
+
     /* 1450px üstü: sosyal ikonlar menünün sağında görün */
     .sabit-ust-alan .ust-menu .ust-alan {
         display: block !important;
@@ -4492,6 +4674,28 @@ body.ana-sayfa {
         padding: 9px 5px;
         white-space: nowrap;
         letter-spacing: 0;
+    }
+
+    .ust-menu .navigasyon > ul > li:not(.nav-logo-item) > a {
+        border-bottom: 4px solid transparent !important;
+        box-shadow: none;
+    }
+    .ust-menu .navigasyon > ul > li:not(.nav-logo-item) > a:hover,
+    .ust-menu .navigasyon > ul > li:not(.nav-logo-item) > a.aktif {
+        border-bottom-color: #000080 !important;
+    }
+
+    .ust-menu .navigasyon .submenu a {
+        border-bottom: 4px solid transparent !important;
+    }
+    .ust-menu .navigasyon .submenu a:hover,
+    .ust-menu .navigasyon .submenu a.aktif {
+        border-bottom-color: #000080 !important;
+    }
+
+    .ust-menu .navigasyon .submenu a::before {
+        width: 11px;
+        height: 11px;
     }
 
     /* Desktop'ta logo konumunu hafif sola çek */
@@ -4641,27 +4845,81 @@ body.ana-sayfa {
     }
     .navigasyon > ul > li {
         border-right: none;
-        padding-right: 0;
-        margin-right: 0;
+        padding: 0;
+        margin: 0;
         border-bottom: 1px solid #f0f0f5;
         min-width: 0;
     }
     .navigasyon > ul > li:last-child {
         border-bottom: none;
-    }
-    .navigasyon > ul > li:hover:not(:first-child),
-    .navigasyon > ul > li:has(.aktif):not(:first-child) {
-        margin-left: 0;
-        padding-left: 0;
+        padding-right: 0;
+        margin-right: 0;
     }
 
     .navigasyon .nav-list > li > a {
-        padding: 8px 12px;
+        padding: 10px 12px;
         font-size: 16px;
         display: block;
         width: 100%;
         line-height: 1.2;
         text-align: left;
+    }
+    .navigasyon > ul > li > a {
+        padding: 10px 12px;
+        font-size: 16px;
+        line-height: 1.2;
+        text-align: left;
+    }
+
+    /* Üst satır: alt menü ile aynı sol turuncu ok (logo hariç) */
+    .navigasyon .nav-list > li:not(.nav-logo-item) > a,
+    .navigasyon > ul > li:not(.nav-logo-item) > a {
+        display: flex !important;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 8px;
+        padding: 10px 12px 10px 12px;
+    }
+    .navigasyon .nav-list > li:not(.nav-logo-item) > a::before,
+    .navigasyon > ul > li:not(.nav-logo-item) > a::before {
+        content: "";
+        flex-shrink: 0;
+        width: 13px;
+        height: 13px;
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath stroke='%23f05a28' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' d='M9 6l6 6-6 6'/%3E%3C/svg%3E") center / contain no-repeat;
+        opacity: 0.95;
+    }
+    .navigasyon .nav-list > li:not(.nav-logo-item) > a:hover::before,
+    .navigasyon .nav-list > li:not(.nav-logo-item) > a:active::before,
+    .navigasyon .nav-list > li:not(.nav-logo-item) > a.aktif::before,
+    .navigasyon > ul > li:not(.nav-logo-item) > a:hover::before,
+    .navigasyon > ul > li:not(.nav-logo-item) > a:active::before,
+    .navigasyon > ul > li:not(.nav-logo-item) > a.aktif::before {
+        opacity: 1;
+    }
+
+    /* Çekmece menü (501–768): kalın çizgi metin altında; hep underline + renk (kayma yok) */
+    .navigasyon .nav-list > li:not(.nav-logo-item) > a,
+    .navigasyon > ul > li:not(.nav-logo-item) > a {
+        border-bottom: none !important;
+        box-sizing: border-box;
+        box-shadow: none;
+        text-decoration: underline;
+        text-decoration-color: transparent;
+        text-decoration-thickness: 4px;
+        text-underline-offset: 4px;
+        text-decoration-skip-ink: auto;
+        transition: color 0.2s ease, text-decoration-color 0.2s ease, background-color 0.2s ease;
+    }
+    .navigasyon .nav-list > li:not(.nav-logo-item) > a:hover,
+    .navigasyon .nav-list > li:not(.nav-logo-item) > a:active,
+    .navigasyon .nav-list > li:not(.nav-logo-item) > a.aktif,
+    .navigasyon > ul > li:not(.nav-logo-item) > a:hover,
+    .navigasyon > ul > li:not(.nav-logo-item) > a:active,
+    .navigasyon > ul > li:not(.nav-logo-item) > a.aktif {
+        text-decoration-color: #000080;
+        border-bottom: none !important;
+        background-color: #ffffff;
     }
     .navigasyon .has-dropdown > a {
         display: flex !important;
@@ -4694,6 +4952,12 @@ body.ana-sayfa {
         background: #f5f6f8;
         transition: max-height 0.28s ease;
         will-change: max-height;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 0;
+        align-items: stretch;
+        justify-content: flex-start;
+        padding: 0;
     }
     .navigasyon .nav-list > li.has-dropdown.submenu-open > .submenu,
     .navigasyon > ul > li.has-dropdown.submenu-open > .submenu {
@@ -4709,21 +4973,49 @@ body.ana-sayfa {
         overflow: visible;
     }
     .navigasyon .submenu a {
-        padding: 6px 12px 6px 22px;
+        padding: 10px 12px 10px 24px;
         font-size: 15px;
         text-align: left;
         line-height: 1.3;
         white-space: normal;
         overflow-wrap: break-word;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 8px;
+        width: 100%;
+        max-width: none;
+        border-bottom: none !important;
+        box-sizing: border-box;
+        text-decoration: underline;
+        text-decoration-color: transparent;
+        text-decoration-thickness: 4px;
+        text-underline-offset: 4px;
+        text-decoration-skip-ink: auto;
+        transition: color 0.2s ease, text-decoration-color 0.2s ease, background-color 0.2s ease;
+    }
+    .navigasyon .submenu a:hover,
+    .navigasyon .submenu a:active,
+    .navigasyon .submenu a.aktif {
+        text-decoration: underline;
+        text-decoration-color: #000080;
+        border-bottom: none !important;
+        background-color: #ffffff;
+    }
+    .navigasyon .submenu a::before {
+        width: 13px;
+        height: 13px;
+        margin-top: 2px;
     }
     .navigasyon .submenu li {
+        width: 100%;
         border-bottom: 1px solid #e8e8ec;
     }
     .navigasyon .submenu li:last-child {
         border-bottom: none;
     }
     .navigasyon .submenu .submenu a {
-        padding-left: 32px;
+        padding-left: 44px;
     }
 }
 
@@ -4912,11 +5204,18 @@ input:checked + .ana-tab-etiket {
     SİTE HARİTASI (MODERN ETİKET TASARIMI)
     Tüm Cihazlar İçin Ortak & Responsive
    ========================================= */
+/* Site haritası: tüm genişliklerde ≤501px “harika” ölçüleri (tek tip) */
 .site-haritasi-yolu {
     width: 100%;
     background-color: #fdfdfd; /* Çok hafif zemin rengi */
     border-bottom: 1px solid #eee;
     margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* article.icerik-alani yan gutter ile breadcrumb padding üst üste binmesin; kenar ↔ home ikonu arası tek ince pay */
@@ -4932,12 +5231,14 @@ input:checked + .ana-tab-etiket {
 .breadcrumb-kutu {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 15px 25px;
+    width: 100%;
+    padding: 10px 6px;
     display: flex;
     flex-wrap: wrap; /* Sığmadığında paket halinde alta geçer */
     align-items: center;
-    gap: 10px;
+    gap: 4px;
     list-style: none;
+    box-sizing: border-box;
 }
 
 /* Metin etiketleri (home ikonu hariç): ince yan pay, uzun başlıklar sarılabilir */
@@ -4950,10 +5251,11 @@ input:checked + .ana-tab-etiket {
     background-color: #f4f6f8;
     color: #000080 !important; /* Senin kurumsal lacivertin */
     text-decoration: none;
-    font-size: 13px;
+    font-size: 11px;
     font-weight: 500;
-    padding: 7px 8px;
-    border-radius: 5px; /* Tam istediğin 5px köşeler */
+    padding: 6px 5px;
+    min-height: 32px;
+    border-radius: 4px;
     border: 1px solid #e0e4e8;
     transition: all 0.3s ease;
     white-space: normal;
@@ -4987,10 +5289,11 @@ input:checked + .ana-tab-etiket {
 .breadcrumb-kutu .ayrac,
 .breadcrumb-kutu .breadcrumb-ayrac {
     color: #abb5be;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1;
     font-weight: bold;
     user-select: none;
+    margin: 0 1px;
 }
 
 /* Ana Sayfa İkon Kutusu — metin etiketleriyle aynı chip; tek satır */
@@ -5006,7 +5309,7 @@ input:checked + .ana-tab-etiket {
     border-radius: 5px;
     border: 1px solid #e0e4e8;
     transition: all 0.3s ease;
-    padding: 6px 8px !important;
+    padding: 5px 6px !important;
     flex-shrink: 0;
     white-space: nowrap;
     box-sizing: border-box;
@@ -5018,36 +5321,24 @@ input:checked + .ana-tab-etiket {
     display: block;
 }
 
-/* -----------------------------------------
-    MOBİL UYUM (768px Altı)
-   ----------------------------------------- */
-@media (max-width: 768px) {
-    .breadcrumb-kutu {
-        padding: 12px 8px;
-        gap: 6px; /* Mobilde daha sıkı dizilim */
-    }
-
-    .breadcrumb-kutu a:not(.ana-sayfa-ikon),
-    .breadcrumb-kutu .su-anki-sayfa {
-        font-size: 12px;
-        padding: 6px 6px;
-    }
-
-    .breadcrumb-kutu .ayrac,
-    .breadcrumb-kutu .breadcrumb-ayrac {
-        font-size: 17px;
-        line-height: 1;
-        margin: 0 2px;
+/* 769px+ — yalnızca şerit boşluğu sıkı; chip boyutları tabanda (768 altı bloğuna dokunma) */
+@media (min-width: 769px) {
+    .site-haritasi-yolu {
+        margin-bottom: 12px;
+        padding-top: 4px;
     }
 }
 
+/* -----------------------------------------
+    MOBİL UYUM (768px Altı) — boşluklar tabanla aynı; sarma / !important düzeni
+   ----------------------------------------- */
 @media (max-width: 768px) {
     .breadcrumb-kutu {
         display: flex !important;
         flex-wrap: wrap !important; /* Kategorinin bittiği mantıklı yerden alta atar */
         align-items: center !important;
-        gap: 6px !important; /* Elemanlar arası dengeli boşluk */
-        padding: 12px 8px !important;
+        gap: 4px !important;
+        padding: 10px 6px !important;
         background: #ffffff !important;
     }
 
@@ -5059,9 +5350,9 @@ input:checked + .ana-tab-etiket {
         justify-content: center;
         flex-wrap: wrap !important;
         background: #f4f6f8; /* Çok hafif profesyonel gri */
-        padding: 6px 6px !important;
-        border-radius: 5px !important; /* Tam istediğin 5px köşeler */
-        font-size: 12px !important;
+        padding: 6px 5px !important;
+        border-radius: 4px !important;
+        font-size: 11px !important;
         font-weight: 500;
         text-decoration: none !important;
         color: #000080 !important; /* Senin lacivertin */
@@ -5070,6 +5361,7 @@ input:checked + .ana-tab-etiket {
         overflow-wrap: anywhere;
         word-wrap: break-word;
         line-height: 1.35;
+        min-height: 32px;
         min-width: 0;
         max-width: 100%;
         box-sizing: border-box;
@@ -5089,15 +5381,15 @@ input:checked + .ana-tab-etiket {
     .breadcrumb-kutu .breadcrumb-ayrac {
         display: inline-block !important;
         color: #abb5be !important;
-        font-size: 17px !important;
+        font-size: 16px !important;
         line-height: 1 !important;
-        margin: 0 2px !important;
+        margin: 0 1px !important;
         font-weight: bold;
     }
 
     /* Ana sayfa ikon kutusu — sol/sağ (özellikle sol) ince pay */
     .breadcrumb-kutu .ana-sayfa-ikon {
-        padding: 6px 8px !important;
+        padding: 5px 6px !important;
         display: flex !important;
         align-items: center;
         justify-content: center;
@@ -5105,43 +5397,6 @@ input:checked + .ana-tab-etiket {
     
     .breadcrumb-kutu .ana-sayfa-ikon img {
         margin: 0 !important;
-    }
-}
-
-/* -----------------------------------------
-    501px Altı: Dar Ekran Optimizasyonu
-   ----------------------------------------- */
-@media (max-width: 501px) {
-    .breadcrumb-kutu {
-        padding: 10px 6px !important;
-        gap: 4px !important;
-    }
-
-    .breadcrumb-kutu a:not(.ana-sayfa-ikon),
-    .breadcrumb-kutu .su-anki-sayfa {
-        font-size: 11px !important;
-        padding: 6px 5px !important;
-        min-height: 32px; /* sarılmış satırlar + dokunma */
-        border-radius: 4px !important;
-        white-space: normal !important;
-        overflow-wrap: anywhere;
-        line-height: 1.35;
-    }
-
-    .breadcrumb-kutu .ayrac,
-    .breadcrumb-kutu .breadcrumb-ayrac {
-        font-size: 16px !important;
-        line-height: 1 !important;
-        margin: 0 1px !important;
-    }
-
-    .breadcrumb-kutu .ana-sayfa-ikon {
-        padding: 5px 6px !important;
-    }
-
-    .breadcrumb-kutu .ana-sayfa-ikon img {
-        width: 18px !important;
-        height: 18px !important;
     }
 }
 
