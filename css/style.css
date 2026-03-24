@@ -2,29 +2,48 @@
     1. GENEL SIFIRLAMA VE TEMEL AYARLAR
    ========================================= */
 * {
-    margin: 50;
-    padding: 50;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-html, body {
-    margin: 0 !important;
-    padding: 0 !important;
+/* overflow-x sadece html'de: body'de birlikte kullanımı position:sticky/fixed ile çakışmayı tetikleyebilir */
+html {
+    overflow-x: hidden;
     width: 100%;
-    overflow-x: hidden; /* Sayfanın sağa sola yalpalamasını kesin engeller */
-}
-
-/* Global yatay iç boşluk: tüm sayfalar — sayfa özel .css dosyasında tekrarlanmaz */
-:root {
-    --icerik-yan-gutter: 25px;
+    /* Sabit üst menü yüksekliği (header-offset.js --site-header-offset ile güncellenir) */
+    scroll-padding-top: var(--site-header-offset, 120px);
 }
 
 body {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+    overflow-x: visible;
+    /* header-offset.js yüklenene kadar içerik üst menünün altında kalsın (yaklaşık) */
+    padding-top: 120px !important;
     font-family: 'Poppins', sans-serif;
     color: #333;
     line-height: 2;
     background-color: #ffffff;
     display: block;
+}
+
+@media (max-width: 992px) {
+    body {
+        padding-top: 130px !important;
+    }
+}
+
+@media (max-width: 500px) {
+    body {
+        padding-top: 100px !important;
+    }
+}
+
+/* Global yatay iç boşluk: tüm sayfalar — sayfa özel .css dosyasında tekrarlanmaz */
+:root {
+    --icerik-yan-gutter: 25px;
 }
 
 strong {
@@ -3530,9 +3549,16 @@ article.icerik-alani .dahil-rozet-metin {
     2. SABİT ÜST ALAN (TOP BAR + ANA MENÜ)
    ========================================= */
 
+/* Üst şerit + ana menü: viewport'a sabit (sticky, overflow veya üst katmanlar yüzünden güvenilir olmadığı için fixed) */
 .sabit-ust-alan {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
     width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .ust-serit {
@@ -3660,7 +3686,8 @@ body.ana-sayfa {
     padding-right: 0 !important;
 }
 .ana-sayfa .sabit-ust-alan {
-    max-width: 1920px;
+    max-width: 100%;
+    width: 100%;
     margin: 0 auto;
     box-shadow: 0 4px 20px rgba(0, 0, 128, 0.08);
     box-sizing: border-box;
@@ -3673,9 +3700,6 @@ body.ana-sayfa {
     border-bottom: 1px solid #eeeeee;
     padding: 0;
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.04);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
 }
 .ana-sayfa .ust-menu .ust-alan {
     max-width: 1920px;
