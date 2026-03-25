@@ -150,7 +150,8 @@ body.ana-sayfa .hizmet-tab-alani .ana-tab-etiket {
 #yaz-isvicre:checked ~ label[for="yaz-isvicre"],
 #yaz-almanya:checked ~ label[for="yaz-almanya"],
 #yaz-kanada:checked ~ label[for="yaz-kanada"],
-#yaz-italya:checked ~ label[for="yaz-italya"] {
+#yaz-italya:checked ~ label[for="yaz-italya"],
+#yaz-amerika:checked ~ label[for="yaz-amerika"] {
     background: #e74c3c !important;
     color: #ffffff !important;
     border-color: transparent !important;
@@ -170,6 +171,7 @@ body.ana-sayfa .hizmet-tab-alani .ana-tab-etiket {
 #yaz-almanya:checked ~ #panel-yaz-almanya,
 #yaz-kanada:checked ~ #panel-yaz-kanada,
 #yaz-italya:checked ~ #panel-yaz-italya,
+#yaz-amerika:checked ~ #panel-yaz-amerika,
 #yas-13-15:checked ~ #panel-yas-13-15,
 #yas-16-18:checked ~ #panel-yas-16-18 {
     display: block !important;

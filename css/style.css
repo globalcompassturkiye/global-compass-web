@@ -5049,7 +5049,8 @@ body.ana-sayfa {
 #yaz-isvicre:checked ~ #panel-yaz-isvicre,
 #yaz-almanya:checked ~ #panel-yaz-almanya,
 #yaz-kanada:checked ~ #panel-yaz-kanada,
-#yaz-italya:checked ~ #panel-yaz-italya {
+#yaz-italya:checked ~ #panel-yaz-italya,
+#yaz-amerika:checked ~ #panel-yaz-amerika {
     display: block !important;
 }
 
