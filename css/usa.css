@@ -1,0 +1,97 @@
+/* Amerika (USA) yaz okulları — sayfaya özel stiller */
+
+/* Öne Çıkan Şehirler — her satırda 2 çerçeve (6 kart: 3 satır x 2) */
+.usa-one-cikan-sehirler-kutu .dahil-rozet-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.usa-one-cikan-sehirler-kutu .dahil-rozet-kart {
+    height: 100%;
+}
+
+.usa-one-cikan-sehirler-kutu .dahil-rozet-ikon {
+    background: rgba(0, 0, 128, 0.08) !important;
+    border-color: rgba(0, 0, 128, 0.28) !important;
+    color: #000080 !important;
+}
+
+.usa-one-cikan-sehirler-kutu .dahil-rozet-baslik {
+    font-weight: 400 !important;
+    color: #000080 !important;
+    letter-spacing: 0.02em;
+    line-height: 1.35;
+    padding-bottom: 8px;
+    margin-bottom: 4px;
+    border-bottom: 2px solid rgba(0, 0, 128, 0.22);
+}
+
+.usa-one-cikan-sehirler-kutu .dahil-rozet-baslik strong {
+    font-weight: 700;
+    color: #111827 !important;
+}
+
+/* Ortak .yaz-okullari-program-kutu kuralı 5. kartı tam genişlikte ortalar (5 kartlı 2+2+1); 6 kartta 5 ve 6 altta yan yana */
+.usa-one-cikan-sehirler-kutu .dahil-rozet-grid > .dahil-rozet-kart:nth-child(5) {
+    grid-column: auto;
+    justify-self: stretch;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .usa-one-cikan-sehirler-kutu .dahil-rozet-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Neden Amerika — kalın lacivert sol kenar + dairesel tick */
+article.icerik-alani #usa-neden-yaz-okulu.yaz-okullari-avantaj-kutu .yaz-konaklama-oge {
+    border: 1px solid #e2e8f0 !important;
+    border-left: 8px solid #000080 !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 128, 0.06) !important;
+    background: linear-gradient(90deg, rgba(0, 0, 128, 0.04) 0%, #ffffff 100%) !important;
+    padding: 22px 24px 24px 26px;
+    gap: 18px;
+    align-items: flex-start;
+}
+
+article.icerik-alani #usa-neden-yaz-okulu.yaz-okullari-avantaj-kutu .yaz-konaklama-ikon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 26px;
+    height: 26px;
+    margin-top: 2px;
+    border-radius: 999px;
+    font-size: 13px !important;
+    font-weight: 700;
+    line-height: 1;
+    color: #000080;
+    background: rgba(0, 0, 128, 0.1);
+    border: 1px solid rgba(0, 0, 128, 0.35);
+}
+
+article.icerik-alani #usa-neden-yaz-okulu.yaz-okullari-avantaj-kutu .yaz-konaklama-icerik h3 {
+    color: #111827 !important;
+}
+
+article.icerik-alani #usa-neden-yaz-okulu.yaz-okullari-avantaj-kutu .yaz-konaklama-icerik p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #374151;
+}
+
+@media (max-width: 501px) {
+    article.icerik-alani #usa-neden-yaz-okulu.yaz-okullari-avantaj-kutu .yaz-konaklama-oge {
+        padding: 18px 18px 20px 20px;
+        border-left-width: 6px !important;
+        gap: 14px;
+    }
+
+    article.icerik-alani #usa-neden-yaz-okulu.yaz-okullari-avantaj-kutu .yaz-konaklama-ikon {
+        width: 24px;
+        height: 24px;
+        font-size: 12px !important;
+    }
+}

@@ -5935,14 +5935,14 @@ h1 .h1-vurgu {
     margin: 0 0 15px 0;
     font-size: 16px;
     font-weight: 700;
-    text-align: center;
+    text-align: left;
 }
 
 .yonlendirme-karti p {
     color: #666;
     font-size: 15px;
     margin: 0;
-    text-align: center;
+    text-align: left;
 }
 
 /* Kart Linki (Butonumsu Görünüm) */
@@ -5988,7 +5988,7 @@ h1 .h1-vurgu {
     text-transform: none;
     box-shadow: none;
     transition: all 0.3s ease;
-    align-self: center;
+    align-self: flex-start;
 }
 
 .yonlendirme-karti .vurgulu-incele-btn:hover,
@@ -6045,7 +6045,7 @@ h1 .h1-vurgu {
     .yonlendirme-karti h2,
     .yonlendirme-karti h3,
     .yonlendirme-karti h4 {
-        text-align: center;
+        text-align: left;
         font-size: 15px;
         line-height: 1.35;
         overflow-wrap: break-word;

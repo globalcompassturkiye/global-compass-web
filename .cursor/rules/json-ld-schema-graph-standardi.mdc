@@ -1,0 +1,48 @@
+---
+description: Schema.org JSON-LD @graph iskeleti (Organization, WebPage, Course, BreadcrumbList, FAQPage)
+globs: "**/*.html"
+alwaysApply: false
+---
+
+# JSON-LD `@graph` standardı
+
+Yeni veya güncellenecek sayfalarda yapılandırılmış veriyi **tek** `<script type="application/ld+json">` içinde **`@context` + `@graph`** ile verin. Referans örnekler: `yurt-disi-yaz-okullari/uk/cambridge/oxford-royale-academy/index.html` (program sayfası), `yurt-disi-yaz-okullari/usa/index.html` (ülke hub + SSS).
+
+## Yerleşim
+
+- Script, mümkünse **`</body>` öncesinde en sonda** (diğer JS’lerden sonra), sayfa başına **tek blok**.
+
+## `@graph` öğe sırası (sabit kimlikler)
+
+1. **Organization** — `@id`: `https://www.globalcompass.com.tr/#organization`  
+   Global Compass: `name`, `url`, `logo`, `email`, `telephone`, `address` (PostalAddress, TR). Sayfadan sayfaya **aynı** kalır.
+
+2. **WebSite** — `@id`: `https://www.globalcompass.com.tr/#website`  
+   `url`, `name`, `publisher` → `#organization`, `inLanguage`: `tr`.
+
+3. **EducationalOrganization** (sayfaya özel) — `@id`: `{sayfa-canonical-url}#...` (kısa slug, örn. `#oxford-royale`, `#amerika-yaz-okullari`)  
+   `name`, `description`, gerekirse `address` (ülke/şehir).
+
+4. **Course** (program/ürün sayfalarında; hub sayfalarında özet kurs) — `@id`: `{canonical}#course`  
+   `name`, `description`, `educationalLevel`, `timeRequired` (ISO 8601 süre, örn. `P2W`), `inLanguage`, `availableLanguage`, `provider` → EducationalOrganization `@id`, `offers` (Offer veya AggregateOffer; fiyat yoksa sadece `url`, `priceCurrency`, `availability`, `seller`), istenirse `hasCourseInstance` (CourseInstance + Place).
+
+5. **WebPage** — `@id`: `{canonical}#webpage`  
+   `url`, `name` (tercihen `<title>` ile uyumlu), `description` (`meta description` ile uyumlu), `inLanguage`: `tr`, `isPartOf` → `#website`, `publisher` → `#organization`, `about` → sayfa EducationalOrganization `@id`, `mainEntity` → `#course` veya sayfa türüne göre ana varlık.
+
+6. **BreadcrumbList** — `@id`: `{canonical}#breadcrumb`  
+   `itemListElement`: sitedeki gerçek hiyerarşi; her `ListItem` `position`, `name`, `item` (tam URL).
+
+7. **FAQPage** (yalnızca sayfada SSS varsa) — `@id`: `{canonical}#faq`  
+   `mainEntity`: `Question` / `acceptedAnswer` metinleri, sayfadaki **görünür** SSS ile birebir uyumlu.
+
+## Uyarlama kuralları
+
+- Tüm mutlak URL’ler **`https://www.globalcompass.com.tr/`** ile başlamalı; sayfa `canonical` ile tutarlı olmalı.
+- `@id` değerleri graph içi referanslarda (`publisher`, `provider`, `about`, `mainEntity`, `seller`) tutarlı kullanılmalı.
+- Program sayfasında fiyat/tarih varsa ORA örneğindeki gibi `AggregateOffer` + `hasCourseInstance` detaylandırılabilir; bilgi yoksa abartılı fiyat/tarih uydurma — Offer’da sadece URL + `availability` + `seller` yeterli olabilir.
+- İçerik veya SSS değişince JSON-LD’yi güncelle: ayrıca bkz. `json-ld-icerik-senkronizasyonu.mdc`.
+
+## JSON geçerliliği
+
+- UTF-8, çift tırnak içinde string; metin içi çift tırnak `\"` ile kaçış.
+- Son öğeden sonra fazladan virgül yok.

@@ -8,6 +8,8 @@ alwaysApply: false
 
 Bu projede birçok sayfada `<script type="application/ld+json">` ile yapılandırılmış veri (Organization, WebPage, BreadcrumbList, FAQPage, Course, vb.) bulunur.
 
+**`@graph` iskeleti ve düğüm sırası** için bkz. `json-ld-schema-graph-standardi.mdc`.
+
 ## Zorunlu kural
 
 **Sayfadaki görünür metni veya yapıyı değiştirdiğinizde**, aynı bilgiyi taşıyan **JSON-LD bloklarını da aynı düzenlemede güncelleyin.** Eski şema verisi bırakmayın.
