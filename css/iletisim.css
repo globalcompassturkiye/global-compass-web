@@ -234,35 +234,11 @@ body.sayfa-iletisim article.icerik-alani.iletisim-sayfa > h1.sayfa-ana-baslik .v
     border-radius: 16px;
 }
 
-/* ---------- BİLGİ İSTEK FORMU: başlık kutuda normal akış (üstte süzmüş etiket yok) ---------- */
+/* ---------- BİLGİ İSTEK FORMU: style.css ile aynı — başlık sr-only (lacivert etiket yok) ---------- */
 .iletisim-sayfa .iletisim-form-alani {
     margin-top: 50px;
     padding: 32px 28px 28px !important;
     max-width: 1200px;
-}
-
-.iletisim-sayfa .iletisim-form-alani h2 {
-    position: static !important;
-    transform: none !important;
-    left: auto !important;
-    top: auto !important;
-    background: transparent !important;
-    color: #000080 !important;
-    font-size: 26px !important;
-    font-weight: 700 !important;
-    margin: 0 0 16px 0 !important;
-    padding: 0 !important;
-    border-radius: 0 !important;
-    text-align: center;
-    max-width: none;
-}
-
-@media (max-width: 501px) {
-    .iletisim-sayfa .iletisim-form-alani h2 {
-        left: auto !important;
-        transform: none !important;
-        font-size: 22px !important;
-    }
 }
 
 /* ---------- SSS: gri çerçeve — başlık içeride normal ---------- */

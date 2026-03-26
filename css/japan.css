@@ -1,0 +1,93 @@
+/* Japonya yaz okulları hub — seçim paneli ve form bandı */
+
+.japan-secim-paneli .kirmizi-kutu .ust-satir,
+.japan-secim-paneli .kirmizi-kutu .alt-satir-lacivert {
+    font-size: 22px;
+}
+
+.japan-secim-paneli .kirmizi-kutu {
+    margin: 0;
+    border-radius: 5px 5px 0 0;
+}
+
+.japan-secim-paneli .japan-yakinda-kutu {
+    margin-top: 0;
+    padding: 22px 20px 26px;
+    border: 1px solid #e5e7eb;
+    border-top: none;
+    border-radius: 0 0 12px 12px;
+    background: #f9fafb;
+}
+
+.japan-secim-paneli .japan-yakinda-kutu p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #374151;
+    text-align: center;
+}
+
+.japan-form-bant {
+    margin-bottom: 0;
+    border-radius: 15px 15px 0 0;
+    background-color: #e30613;
+}
+
+.japan-form-bant .ust-satir {
+    font-size: 20px;
+    color: #ffffff !important;
+}
+
+.japan-form-bant .japan-form-alt-satir {
+    margin-top: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.35;
+    color: #00235d !important; /* .kirmizi-kutu p.alt-satir-lacivert ile aynı lacivert */
+}
+
+.japan-form-bant + .iletisim-form-alani {
+    margin-top: 0 !important;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding-top: 25px;
+}
+
+.japan-form-bant + .iletisim-form-alani > p:first-of-type {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.japan-tercih-bolumu .kutu-baslik + p {
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+/* 5 rozet: flex ile satırlar ortalı; son satırdaki 2 kart (4–5) yan yana ortada */
+.gri-cerceve-kutu.japan-tercih-bolumu .dahil-rozet-grid.japan-tercih-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 18px 22px;
+    margin-top: 6px;
+}
+
+.gri-cerceve-kutu.japan-tercih-bolumu .dahil-rozet-grid.japan-tercih-grid > .dahil-rozet-kart {
+    flex: 1 1 280px;
+    max-width: min(100%, 400px);
+    box-sizing: border-box;
+}
+
+@media (max-width: 992px) {
+    .gri-cerceve-kutu.japan-tercih-bolumu .dahil-rozet-grid.japan-tercih-grid > .dahil-rozet-kart {
+        flex-basis: 260px;
+    }
+}
+
+@media (max-width: 640px) {
+    .gri-cerceve-kutu.japan-tercih-bolumu .dahil-rozet-grid.japan-tercih-grid > .dahil-rozet-kart {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}

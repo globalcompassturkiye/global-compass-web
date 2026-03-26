@@ -1,0 +1,12 @@
+---
+description: Her sayfada tek yönlendirme kartı (alt yönlendirme)
+globs: "**/*.html"
+alwaysApply: true
+---
+
+# Tek Yönlendirme Kartı
+
+- Her sayfada **en fazla bir** `div.yonlendirme-karti` bulunmalıdır.
+- Bu kartta **yalnızca bir** `a.kart-link` olmalıdır: metin **Yurt Dışı Yaz Okullarını Keşfet →**, `href` **`/yurt-disi-yaz-okullari/`**. Başka yönlendirme `kart-link` eklenmez.
+- Ayrı ayrı ikinci/üçüncü `okul-liste-kapsayici` + `yonlendirme-karti` blokları açmayın.
+- Program seçim bandı (`kirmizi-kutu` + `modern-okul-listesi`) içindeki `okul-liste-kapsayici` okul listesidir; bu kural **alt yönlendirme** (`section.alt-yonlendirme-alani` + `div.yonlendirme-karti`) için geçerlidir.

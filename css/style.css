@@ -1446,7 +1446,8 @@ p + .kirmizi-kutu {
 .ulke-buton-almanya,
 .ulke-buton-kanada,
 .ulke-buton-isvicre,
-.ulke-buton-italya {
+.ulke-buton-italya,
+.ulke-buton-japonya {
     background: #2c3e50;
 }
 
@@ -5418,31 +5419,22 @@ input:checked + .ana-tab-etiket {
     position: relative;
     border: 1px solid #d1d1d1;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
-    padding: 70px 25px 25px 25px;
+    padding: 25px 25px 25px 25px;
     max-width: 1200px;
 }
 
+/* Bilgi İstek Formu: lacivert üst etiket kaldırıldı; başlık yalnızca ekran okuyucular için */
 .iletisim-form-alani h2 {
     position: absolute;
-    top: 0;
-    left: 25px;
-    transform: translateY(-50%);
-    background-color: #000080;
-    color: #ffffff;
-    padding: 8px 20px;
-    font-size: 16px;
-    font-weight: 700;
-    border-radius: 4px;
-    margin: 0;
-}
-
-@media (max-width: 501px) {
-    .iletisim-form-alani h2 {
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        font-size: 15px; /* 501px altında h2.kutu-baslik ile aynı boyut */
-    }
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
 }
 
 .iletisim-form-alani > p {
