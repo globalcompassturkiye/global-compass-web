@@ -1,1 +1,23 @@
-/* Sayfa ozel stiller icin ayrildi. */
+/* Yurt dışı yaz okulları hub (/yurt-disi-yaz-okullari/) — 6 ülke: 3+3 ızgara; buton genişliği global max-content */
+
+body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli .ulke-secim-butonlari {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+@media (max-width: 640px) {
+    body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli .ulke-secim-butonlari {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+}
+
+@media (max-width: 500px) {
+    body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli .ulke-secim-butonlari {
+        grid-template-columns: 1fr;
+    }
+}

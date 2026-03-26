@@ -1,8 +1,38 @@
 /**
  * Ana menü: hamburger + ≤992px tıklamalı alt menü.
+ * 1. tıklama: aç | 2. tıklama: kapat (aynı başlığa tekrar basınca).
  * Aynı seviyede (kardeş li.has-dropdown) en fazla biri açık; üst menü kapanınca tüm altlar sıfırlanır.
  */
 (function () {
+  function applyMobileSubmenuLayout(nav) {
+    if (!nav) return;
+    /* Yalnızca hamburger çekmece (CSS: max-width 768px). 769–992 yatay üst menüde inline müdahale yok. */
+    var isHamburgerDrawer = window.innerWidth <= 768;
+    nav.querySelectorAll('.submenu').forEach(function (submenu) {
+      if (isHamburgerDrawer) {
+        submenu.style.position = 'static';
+        submenu.style.left = 'auto';
+        submenu.style.right = 'auto';
+        submenu.style.top = 'auto';
+        submenu.style.margin = '0';
+        submenu.style.width = '100%';
+        submenu.style.maxWidth = '100%';
+        submenu.style.minWidth = '0';
+        submenu.style.transform = 'none';
+      } else {
+        submenu.style.removeProperty('position');
+        submenu.style.removeProperty('left');
+        submenu.style.removeProperty('right');
+        submenu.style.removeProperty('top');
+        submenu.style.removeProperty('margin');
+        submenu.style.removeProperty('width');
+        submenu.style.removeProperty('max-width');
+        submenu.style.removeProperty('min-width');
+        submenu.style.removeProperty('transform');
+      }
+    });
+  }
+
   function closeSiblingDropdowns(activeLi) {
     var ul = activeLi.parentElement;
     if (!ul) return;
@@ -32,11 +62,13 @@
     var toggle = document.querySelector('.nav-toggle');
     var nav = document.querySelector('.navigasyon');
     if (!toggle || !nav) return;
+    applyMobileSubmenuLayout(nav);
 
     toggle.addEventListener('click', function () {
       var open = nav.classList.toggle('is-open');
       toggle.classList.toggle('is-open', open);
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      applyMobileSubmenuLayout(nav);
       if (!open) {
         nav.querySelectorAll('li.has-dropdown').forEach(function (li) {
           li.classList.remove('submenu-open');
@@ -57,13 +89,20 @@
           closeSiblingDropdowns(parent);
           parent.classList.add('submenu-open');
           this.setAttribute('aria-expanded', 'true');
+          applyMobileSubmenuLayout(nav);
         } else {
+          /* 2. tıklamada kapat (ülke hub’a gitme yok); iç içe altlar da sıfırlanır. */
           e.preventDefault();
           closeNestedDropdowns(parent);
           parent.classList.remove('submenu-open');
           this.setAttribute('aria-expanded', 'false');
+          applyMobileSubmenuLayout(nav);
         }
       });
+    });
+
+    window.addEventListener('resize', function () {
+      applyMobileSubmenuLayout(nav);
     });
   }
 

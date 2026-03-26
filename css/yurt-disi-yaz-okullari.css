@@ -117,17 +117,6 @@
         border-radius: 10px 10px 0 0 !important;
     }
 
-    .ulke-secim-butonlari {
-        grid-template-columns: 1fr;
-        gap: 12px;
-        margin: 30px 0 40px 0;
-    }
-    .ulke-secim-butonlari .ulke-buton {
-        padding: 10px 18px;
-    }
-    .ulke-buton-metin {
-        font-size: 14px;
-    }
 }
 
 /* Yaz okulları ana sayfası: dil okulları ile aynı renk hiyerarşisi */
