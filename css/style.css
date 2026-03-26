@@ -5572,7 +5572,16 @@ input:checked + .ana-tab-etiket {
     6. İLETİŞİM FORMU (Gri Çerçeve Uyumlu)
    ========================================= */
 .kirmizi-kutu + .iletisim-form-alani {
-    margin-top: 50px;
+    margin-top: 0;
+    padding-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+/* Kirmizi baslik formdan hemen onceyse iki blok tek parca gibi otursun */
+.kirmizi-kutu:has(+ .iletisim-form-alani) {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 .iletisim-form-alani {
