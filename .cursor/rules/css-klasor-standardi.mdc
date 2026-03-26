@@ -1,0 +1,25 @@
+---
+description: Tüm stil dosyalarının /css klasöründe tutulması ve HTML’den kök yolla bağlanması
+alwaysApply: true
+---
+
+# CSS Klasör Standardı
+
+## Zorunlu kural
+
+- Projedeki **tüm `.css` dosyaları** yalnızca depo kökündeki **`/css`** klasöründe bulunmalıdır.
+- İçerik veya sayfa klasörlerinin içinde (ör. `yurt-disi-dil-okullari/.../sayfa-adi.css`) **yerel `.css` dosyası oluşturulmamalıdır**; sayfaya özel stiller merkezi `/css` altına eklenir.
+
+## Dosya adlandırma
+
+- Ortak / bölüm stilleri: anlamlı tek isim (örn. `bournemouth.css`, `yurt-disi-yaz-okullari.css`).
+- Aynı isim riski varsa (örn. birden fazla `kings-education.css`): **çakışmayı önleyen önek** kullanın (örn. `kings-education-dil-bournemouth.css`, `kings-education-dil-boston-ozel.css`).
+
+## HTML’de bağlama
+
+- Stil dosyaları **`/css/...` kök-yolu** ile linklenmelidir (örn. `<link rel="stylesheet" href="/css/sayfa.css">`).
+- Göreli uzun yol (`../../../../css/...`) yeni sayfalarda kullanılmamalı; mümkün olan her yerde kök yol tercih edilir.
+
+## Not
+
+- Mevcut `html-css-ayirma-standardi` kuralındaki “sayfaya özel CSS dosya adı” ilkesi korunur; dosyanın **fiziksel konumu** her zaman `/css` olmalıdır.

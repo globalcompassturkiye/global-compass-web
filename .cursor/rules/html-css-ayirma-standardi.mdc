@@ -11,6 +11,6 @@ alwaysApply: true
 - Sayfaya ozel CSS dosya adi, son klasor adiyla ayni olsun.
   - Ornek: `/italy/milan/sportech-academy/index.html` icin `sportech-academy.css`
 - Sayfaya ozel CSS dosyasi, ilgili HTML dosyasinda acikca linklenmeli.
-  - Ornek: `<link rel="stylesheet" href="/.../sportech-academy/sportech-academy.css">`
+  - Ornek: `<link rel="stylesheet" href="/css/sportech-academy.css">` (sayfaya ozel dosya da `/css` altindadir.)
 - Ortak stiller mevcut ortak CSS dosyalarinda kalmali (`/css/...`).
 - Yeni sayfa eklerken once sinif (class) tanimla, sonra CSS'e yaz; inline style ekleme.
