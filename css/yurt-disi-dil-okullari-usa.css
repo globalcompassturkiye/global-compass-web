@@ -76,6 +76,13 @@
     height: 100%;
 }
 
+.usa-avantaj-grid-4lu .dahil-rozet-ikon-tick {
+    font-size: 1.05em;
+    font-weight: 700;
+    line-height: 1;
+    color: #e30613;
+}
+
 .usa-avantaj-grid-4lu .dahil-rozet-baslik {
     color: #111827;
 }
@@ -134,6 +141,14 @@
     color: #ffffff !important;
 }
 
+.usa-form-bant .usa-form-alt-satir {
+    margin-top: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.35;
+    color: #ffffff !important;
+}
+
 .usa-form-bant + .iletisim-form-alani {
     margin-top: 0 !important;
     border-top-left-radius: 0;
@@ -159,6 +174,13 @@
 
 .new-york-neden-kutu .new-york-neden-rozet-grid .dahil-rozet-baslik {
     color: #111827;
+}
+
+.new-york-neden-kutu .new-york-neden-rozet-grid .dahil-rozet-ikon-tick {
+    font-size: 1.05em;
+    font-weight: 700;
+    line-height: 1;
+    color: #e30613;
 }
 
 @media (max-width: 768px) {

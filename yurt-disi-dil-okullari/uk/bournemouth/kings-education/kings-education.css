@@ -1,0 +1,57 @@
+/* Kings Education Bournemouth — sayfaya özel (inline style yok) */
+
+body.sayfa-kings-education-bournemouth .kings-bournemouth-hero-alt {
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 25px;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+body.sayfa-kings-education-bournemouth .kings-bournemouth-okul-logo {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+body.sayfa-kings-education-bournemouth .kings-bournemouth-okul-logo img {
+    max-width: 220px;
+    height: auto;
+}
+
+body.sayfa-kings-education-bournemouth .kings-bournemouth-bolum-ust {
+    margin-top: 25px;
+}
+
+body.sayfa-kings-education-bournemouth .kings-bournemouth-kampus-foto {
+    margin-bottom: 25px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+body.sayfa-kings-education-bournemouth .kings-bournemouth-kampus-foto img {
+    width: 100%;
+    max-width: 1200px;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+body.sayfa-kings-education-bournemouth .kings-bournemouth-paragraf-son {
+    margin-bottom: 0;
+}
+
+body.sayfa-kings-education-bournemouth .kings-bournemouth-ielts-nedir-baslik {
+    margin-top: 20px;
+}
+
+body.sayfa-kings-education-bournemouth .kings-bournemouth-akreditasyon-icerik {
+    padding: 20px;
+    text-align: center;
+}
+
+body.sayfa-kings-education-bournemouth .kings-bournemouth-akreditasyon-icerik img {
+    max-width: 100%;
+    height: auto;
+    max-height: 100px;
+}

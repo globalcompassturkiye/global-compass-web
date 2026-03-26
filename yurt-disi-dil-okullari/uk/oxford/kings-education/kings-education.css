@@ -1,0 +1,14 @@
+/* Kings Education Oxford — sayfaya özel (inline style yok) */
+
+body.kings-oxford-sayfa .kings-oxford-teknik-vurgu {
+    color: #bd0505;
+    font-weight: 700;
+}
+
+body.kings-oxford-sayfa .kings-oxford-sosyal-paragraf-son {
+    margin-bottom: 0;
+}
+
+body.kings-oxford-sayfa .kings-oxford-basvuru-bant {
+    margin-top: 25px;
+}

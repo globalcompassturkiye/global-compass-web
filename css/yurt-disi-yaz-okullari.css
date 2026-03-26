@@ -1,6 +1,13 @@
 /* Yurt Dışı Yaz Okulları sayfasına özel stiller */
 /* Ülke seçim kartları ve program kutuları */
 
+/* Rozet ikonunda onay işareti (✓) */
+.yaz-okullari-program-kutu .dahil-rozet-ikon-tick {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1;
+}
+
 /* Dil okulları sayfası ile uyumlu seçim paneli */
 .yaz-okullari-secim-paneli {
     max-width: 1200px;

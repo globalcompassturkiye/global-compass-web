@@ -1,5 +1,12 @@
 /* Yurt Dışı Burs Fırsatları sayfasına özel stiller */
 
+/* Rozet ikonunda onay işareti (✓) — 5 kriter kartları */
+.burs-kriter-section .dahil-rozet-ikon-tick {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1;
+}
+
 .burs-sayfa {
     background: radial-gradient(circle at top left, #f9fafb 0%, #ffffff 55%) no-repeat;
 }

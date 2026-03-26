@@ -1,0 +1,95 @@
+/* KVKK Açık Rıza Metni — sayfa özel düzen */
+
+body.sayfa-kvkk-acik-riza .ust-menu {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+body.sayfa-kvkk-acik-riza .ust-alan {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+}
+
+body.sayfa-kvkk-acik-riza .sosyal-medya-alani {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+body.sayfa-kvkk-acik-riza .sosyal-medya-alani a {
+    transition: transform 0.3s ease;
+    background: none;
+}
+
+body.sayfa-kvkk-acik-riza .sosyal-medya-alani img {
+    display: block;
+}
+
+body.sayfa-kvkk-acik-riza .kvkk-alt-baslik {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #444;
+    margin-top: 8px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+body.sayfa-kvkk-acik-riza .kvkk-metin-kutu {
+    margin-top: 24px;
+}
+
+body.sayfa-kvkk-acik-riza .kvkk-bolum-baslik {
+    margin: 28px 0 10px;
+    font-size: 1.1em;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #1a365d;
+}
+
+body.sayfa-kvkk-acik-riza .kvkk-metin-kutu .kutu-liste {
+    margin: 12px 0;
+}
+
+body.sayfa-kvkk-acik-riza .kvkk-ilgili-metin {
+    margin-top: 16px;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+body.sayfa-kvkk-acik-riza .kvkk-ilgili-metin a {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+body.sayfa-kvkk-acik-riza .riza-onay-satiri {
+    margin: 16px 0;
+}
+
+body.sayfa-kvkk-acik-riza .riza-etiket-baslik {
+    margin: 20px 0 8px;
+    font-weight: 600;
+}
+
+body.sayfa-kvkk-acik-riza .riza-imza-alani {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid #ddd;
+}
+
+body.sayfa-kvkk-acik-riza .riza-imza-alani p {
+    margin: 8px 0;
+}
+
+body.sayfa-kvkk-acik-riza .riza-kutu {
+    display: inline-block;
+    margin-right: 6px;
+    user-select: none;
+}

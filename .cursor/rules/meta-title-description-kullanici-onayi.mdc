@@ -1,0 +1,24 @@
+---
+description: Meta title ve description yalnızca kullanıcının yazdığı metinle değiştirilebilir.
+alwaysApply: true
+---
+
+# Meta başlık ve açıklama (kullanıcı onayı)
+
+## Zorunlu kural
+
+- **`title`** ve **`meta name="description"`** içeriğini, kullanıcı mesajında **açıkça yeni metin yazmadan** kesinlikle değiştirme.
+- Aynı kural, aynı sayfada eşleşen **`og:description`** ve **`twitter:description`** (ve kullanıcı ayrıca yazmadıkça **`og:title`** / **`twitter:title`**) için de geçerlidir; bunlar genelde title/description ile tutarlı olmalıdır — **yine de kullanıcı metin vermeden güncelleme yapma**.
+
+## İstisna yok sayılan durumlar
+
+- “SEO odaklı güncelle” / “meta ekle” gibi genel istekler, **yeni title veya description metni sağlamaz**; bu durumda mevcut title/description’a dokunma.
+- İstersen sohbette **taslak öner**; kullanıcı onaylayıp metni gönderene kadar dosyada değiştirme.
+
+## Yapılabilecekler (title/description dışında)
+
+- `canonical`, `robots`, `og:url`, `og:type`, `og:image`, `author`, yapılandırılmış veri, breadcrumb, `main`/`article`, form, iç bağlantılar vb. — **title ve meta description satırlarına dokunmadan** güncellenebilir.
+
+## Kullanıcı metin verdiğinde
+
+- Yalnızca kullanıcının verdiği ifadeyi kullan; “iyileştirme” veya yeniden yazma yapma (kullanıcı açıkça revizyon istemedikçe).

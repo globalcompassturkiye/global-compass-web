@@ -45,7 +45,7 @@
     }
 }
 
-/* Oxford dil: Neden Oxford — 5 numarali rozet (2+2+1 ortali) */
+/* Oxford dil: Neden Oxford — tik rozetleri (2+2+1 ortali) */
 .oxford-neden-kutu .oxford-neden-rozet-grid {
     margin-top: 22px;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -106,7 +106,15 @@
 .oxford-secim-paneli .incele-btn-minimal { font-size: 18px !important; }
 .oxford-form-bant { margin-bottom: 0; border-radius: 15px 15px 0 0; background-color: #e30613; }
 .oxford-form-bant .ust-satir { font-size: 20px; color: #ffffff !important; }
+.oxford-form-bant .oxford-form-alt-satir {
+    margin-top: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.35;
+    color: #ffffff !important;
+}
 .oxford-form-bant + .iletisim-form-alani { margin-top: 0 !important; border-top-left-radius: 0; border-top-right-radius: 0; padding-top: 25px; }
+.oxford-form-bant + .iletisim-form-alani > h2:first-child { margin-top: 0; padding-top: 0; }
 .oxford-form-bant + .iletisim-form-alani > p:first-of-type { margin-top: 0; padding-top: 0; }
 
 /* Oxford program rozetleri */

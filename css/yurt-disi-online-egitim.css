@@ -10,8 +10,15 @@
     max-width: 1200px;
 }
 
-.gri-cerceve-kutu online-avantaj-kutu {
+.gri-cerceve-kutu.online-avantaj-kutu {
     max-width: 1200px;
+}
+
+/* Rozet ikonunda onay işareti (✓) */
+.online-avantaj-kutu .dahil-rozet-ikon-tick {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1;
 }
 
 .sayfa-hero-gorsel {

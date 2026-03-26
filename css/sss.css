@@ -1,0 +1,135 @@
+/* =========================================
+   SSS (Sıkça Sorulan Sorular) — /sss/
+   ========================================= */
+
+.sss-sayfa.icerik-alani {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 0 60px;
+}
+
+body.sayfa-sss article.icerik-alani.sss-sayfa > h1.sayfa-ana-baslik {
+    font-size: 33px !important;
+    line-height: 1.4 !important;
+}
+
+body.sayfa-sss article.icerik-alani.sss-sayfa > h1.sayfa-ana-baslik > .vurgu-renk {
+    font-size: 26px !important;
+    line-height: 1.35 !important;
+}
+
+body.sayfa-sss article.icerik-alani.sss-sayfa > h1.sayfa-ana-baslik .vurgu-renk {
+    display: inline-block;
+    padding-top: 6px;
+}
+
+@media screen and (max-width: 768px) {
+    body.sayfa-sss article.icerik-alani.sss-sayfa > h1.sayfa-ana-baslik {
+        font-size: 33px !important;
+    }
+
+    body.sayfa-sss article.icerik-alani.sss-sayfa > h1.sayfa-ana-baslik > .vurgu-renk {
+        font-size: 26px !important;
+    }
+}
+
+@media screen and (max-width: 501px) {
+    body.sayfa-sss article.icerik-alani.sss-sayfa > h1.sayfa-ana-baslik {
+        font-size: 33px !important;
+    }
+
+    body.sayfa-sss article.icerik-alani.sss-sayfa > h1.sayfa-ana-baslik > .vurgu-renk {
+        font-size: 26px !important;
+    }
+}
+
+/* Giriş paragrafı */
+.sss-sayfa .sss-sss-giris {
+    text-align: center;
+    color: #555;
+    margin: 0 auto 28px;
+    max-width: 720px;
+}
+
+/* Üst şerit — aktif sayfa */
+.yardimci-menu a.aktif {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* Sosyal alan — header (inline style kaldırıldı) */
+body.sayfa-sss .sosyal-medya-alani {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+body.sayfa-sss .sosyal-medya-alani a {
+    transition: transform 0.3s ease;
+    background: none;
+}
+
+body.sayfa-sss .sosyal-medya-alani a img {
+    display: block;
+}
+
+/* Gri çerçeve SSS kutusu — iletişim sayfası ile uyumlu görünüm */
+.sayfa-sss .sss-sss-kutu {
+    margin-top: 8px;
+}
+
+.sayfa-sss .sss-sss-kutu.gri-cerceve-kutu {
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0, 0, 128, 0.06);
+    max-width: 1200px;
+    padding: 28px 22px 22px !important;
+}
+
+.sayfa-sss .sss-sss-kutu h2.kutu-baslik,
+.sayfa-sss .sss-sss-kutu h2.sss-baslik {
+    position: static !important;
+    transform: none !important;
+    left: auto !important;
+    top: auto !important;
+    display: block !important;
+    flex-direction: unset !important;
+    align-items: unset !important;
+    background: transparent !important;
+    color: #000080 !important;
+    font-size: 26px !important;
+    font-weight: 700 !important;
+    margin: 0 0 20px 0 !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    line-height: 1.35 !important;
+    text-align: center;
+    text-transform: none !important;
+    white-space: normal !important;
+    max-width: none !important;
+}
+
+@media (max-width: 501px) {
+    .sayfa-sss .sss-sss-kutu h2.kutu-baslik,
+    .sayfa-sss .sss-sss-kutu h2.sss-baslik {
+        font-size: 20px !important;
+    }
+}
+
+.sayfa-sss .sss-sss-kutu .sss-alani {
+    padding-top: 0;
+}
+
+/* Alt yönlendirme */
+.sayfa-sss .sss-sss-yonlendirme {
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    .sayfa-sss .sss-sss-kutu.gri-cerceve-kutu {
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}

@@ -32,7 +32,15 @@
 .cambridge-secim-paneli .incele-btn-minimal { font-size: 16px !important; }
 .cambridge-form-bant { margin-bottom: 0; border-radius: 15px 15px 0 0; background-color: #e30613; }
 .cambridge-form-bant .ust-satir { font-size: 20px; color: #ffffff !important; }
+.cambridge-form-bant .cambridge-form-alt-satir {
+    margin-top: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.35;
+    color: #ffffff !important;
+}
 .cambridge-form-bant + .iletisim-form-alani { margin-top: 0 !important; border-top-left-radius: 0; border-top-right-radius: 0; padding-top: 25px; }
+.cambridge-form-bant + .iletisim-form-alani > h2:first-child { margin-top: 0; padding-top: 0; }
 .cambridge-form-bant + .iletisim-form-alani > p:first-of-type { margin-top: 0; padding-top: 0; }
 
 .cambridge-program-rozet-kutu .cambridge-program-rozet-grid > .dahil-rozet-kart:nth-child(3) {

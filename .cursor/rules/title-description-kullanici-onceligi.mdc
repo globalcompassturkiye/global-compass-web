@@ -1,0 +1,10 @@
+---
+description: title ve meta description yalnızca kullanıcı metin verirse güncellenir
+alwaysApply: true
+---
+
+# Başlık ve açıklama (title / description)
+
+- **`title`** ve **`meta name="description"`** içeriklerini **kullanıcı açıkça metin vermedikçe değiştirme** (SEO, standart uyumu veya “iyileştirme” gerekçesiyle bile).
+- Bu alanları güncellemek için kullanıcının mesajında **yeni başlık ve/veya yeni açıklama metni** bulunmalı; aksi halde mevcut değerleri koru.
+- Diğer SEO işleri (canonical, robots, OG/Twitter, JSON-LD, `main`, erişilebilirlik, yol düzeltmeleri vb.) bu kuraldan bağımsız yapılabilir; sadece **`title` ve `description` metinlerine dokunma** kuralı geçerlidir.

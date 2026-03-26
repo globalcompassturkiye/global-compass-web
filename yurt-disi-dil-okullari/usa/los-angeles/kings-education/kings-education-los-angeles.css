@@ -1,0 +1,494 @@
+/* Kings Education Los Angeles — sayfaya özel (inline style yok) */
+
+.sayfa-kings-education .kings-la-giris-paragraf-devam {
+    margin-top: 18px;
+}
+
+.sayfa-kings-education .kings-la-grid-tam-genis {
+    grid-column: 1 / -1;
+}
+
+.sayfa-kings-education .kings-la-mini-baslik-kirmizi {
+    background: #bd0505 !important;
+}
+
+.sayfa-kings-education .kings-la-kampus-olanak-izgara {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.sayfa-kings-education .kings-la-bolum-ust {
+    margin-top: 40px;
+}
+
+.sayfa-kings-education .kings-la-baslik-zemin-lacivert {
+    background: #000080 !important;
+}
+
+.sayfa-kings-education .kings-la-baslik-zemin-kirmizi {
+    background: #bd0505 !important;
+}
+
+.sayfa-kings-education .kings-la-baslik-zemin-turkuaz {
+    background: #00acc1 !important;
+}
+
+.sayfa-kings-education .kings-la-baslik-hollywood {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%) !important;
+    color: #f5e6b8 !important;
+    letter-spacing: 0.5px;
+}
+
+.sayfa-kings-education .kings-la-flex-satir {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.sayfa-kings-education .kings-la-kolon {
+    flex: 1 1 280px;
+    min-width: 260px;
+}
+
+.sayfa-kings-education .kings-la-kolon-genis {
+    flex: 2 1 360px;
+    min-width: 280px;
+}
+
+.sayfa-kings-education .kings-la-paragraf-metin {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #333;
+    margin: 0 0 16px 0;
+}
+
+.sayfa-kings-education .kings-la-paragraf-koyu {
+    color: #1a1a1a;
+}
+
+.sayfa-kings-education .kings-la-ozet-izgara {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
+    margin: 16px 0 20px 0;
+}
+
+.sayfa-kings-education .kings-la-ozet-kutu-acik {
+    background: #f8f9fa;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #e0e0e0;
+}
+
+.sayfa-kings-education .kings-la-ozet-kutu-mavi {
+    background: #e8f0fe;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #c5d9f5;
+}
+
+.sayfa-kings-education .kings-la-ozet-kutu-pembe {
+    background: #fff4f4;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #f5d0d0;
+}
+
+.sayfa-kings-education .kings-la-ozet-kutu-altin {
+    background: #fffdf0;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #e5d5a0;
+}
+
+.sayfa-kings-education .kings-la-ozet-kutu-turkuaz {
+    background: #e0f7fa;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #b2ebf2;
+}
+
+.sayfa-kings-education .kings-la-etiket-ust {
+    display: block;
+    font-size: 11px;
+    color: #666;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.sayfa-kings-education .kings-la-etiket-ust-koyu {
+    display: block;
+    font-size: 11px;
+    color: #1a3a6e;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.sayfa-kings-education .kings-la-etiket-altin {
+    display: block;
+    font-size: 11px;
+    color: #8a6d3b;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.sayfa-kings-education .kings-la-metin-lacivert {
+    color: #000080;
+    font-size: 15px;
+}
+
+.sayfa-kings-education .kings-la-metin-kirmizi {
+    color: #bd0505;
+    font-size: 15px;
+}
+
+.sayfa-kings-education .kings-la-metin-siyah {
+    color: #1a1a1a;
+    font-size: 15px;
+}
+
+.sayfa-kings-education .kings-la-metin-turkuaz {
+    color: #00838f;
+    font-size: 15px;
+}
+
+.sayfa-kings-education .kings-la-etiket-turkuaz {
+    display: block;
+    font-size: 11px;
+    color: #006064;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.sayfa-kings-education .kings-la-yan-panel-kesikli {
+    border: 2px dashed #ddd;
+    border-radius: 8px;
+    padding: 18px;
+    background: #fafafa;
+}
+
+.sayfa-kings-education .kings-la-yan-panel-ic-golge {
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 18px;
+    background: #fff;
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.sayfa-kings-education .kings-la-yan-panel-dis-golge {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 18px;
+    background: #fff;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.sayfa-kings-education .kings-la-yan-panel-dis-golge-hafif {
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
+    padding: 18px;
+    background: #fcfcfc;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.sayfa-kings-education .kings-la-yan-panel-beyaz {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 18px;
+    background: #fff;
+}
+
+.sayfa-kings-education .kings-la-yan-panel-koyu {
+    background: #2a2a2a;
+    border-radius: 8px;
+    padding: 18px;
+    border: 1px solid #444;
+}
+
+.sayfa-kings-education .kings-la-h4-kirmizi {
+    color: #bd0505;
+    margin: 0 0 12px 0;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.sayfa-kings-education .kings-la-h4-kirmizi-kalin {
+    color: #bd0505;
+    margin: 0 0 12px 0;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.sayfa-kings-education .kings-la-h4-lacivert-kalin {
+    color: #000080;
+    margin: 0 0 12px 0;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.sayfa-kings-education .kings-la-h4-turkuaz-kalin {
+    color: #00838f;
+    margin: 0 0 12px 0;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.sayfa-kings-education .kings-la-h4-altin-altcizgi {
+    color: #d4af37;
+    margin: 0 0 15px 0;
+    font-size: 16px;
+    font-weight: 700;
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+}
+
+.sayfa-kings-education .kings-la-liste-sifir {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sayfa-kings-education .kings-la-liste-sifir li {
+    position: relative;
+    padding-left: 0;
+}
+
+.sayfa-kings-education .kings-la-bilgi-satir-mavi {
+    margin-top: 16px;
+    padding: 15px 16px;
+    background: #eef4ff;
+    border-radius: 5px;
+    border-left: 4px solid #000080;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.sayfa-kings-education .kings-la-bilgi-satir-sari {
+    margin-top: 16px;
+    padding: 15px 16px;
+    background: #fffdf0;
+    border-radius: 5px;
+    border-left: 4px solid #c9a227;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.sayfa-kings-education .kings-la-bilgi-satir-yesil {
+    margin-top: 16px;
+    padding: 14px 16px;
+    background: #e8f5e9;
+    border-radius: 5px;
+    border-left: 4px solid #2e7d32;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.sayfa-kings-education .kings-la-bilgi-satir-gri {
+    margin-top: 16px;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 5px;
+    border-left: 4px solid #1a1a1a;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.sayfa-kings-education .kings-la-bilgi-nokta {
+    font-size: 22px;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.sayfa-kings-education .kings-la-bilgi-metin-lacivert {
+    margin: 0;
+    font-size: 14px;
+    color: #1a3a6e;
+    line-height: 1.5;
+}
+
+.sayfa-kings-education .kings-la-bilgi-baslik-sari {
+    margin: 0 0 6px 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: #5c4a00;
+}
+
+.sayfa-kings-education .kings-la-bilgi-alt-sari {
+    margin: 0;
+    font-size: 13px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.sayfa-kings-education .kings-la-bilgi-metin-yesil {
+    margin: 0;
+    font-size: 14px;
+    color: #1b5e20;
+    line-height: 1.5;
+}
+
+.sayfa-kings-education .kings-la-bilgi-metin-gri-kalin {
+    margin: 0;
+    font-size: 13px;
+    color: #444;
+    font-weight: 600;
+}
+
+.sayfa-kings-education .kings-la-sol-cizgi-lacivert {
+    border-left: 5px solid #000080;
+}
+
+.sayfa-kings-education .kings-la-sol-cizgi-kirmizi {
+    border-left: 5px solid #bd0505;
+}
+
+.sayfa-kings-education .kings-la-sol-cizgi-altin {
+    border-left: 5px solid #c9a227;
+}
+
+.sayfa-kings-education .kings-la-golge-yumuşak {
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
+}
+
+.sayfa-kings-education .kings-la-golge-altin {
+    box-shadow: 0 4px 20px rgba(201, 162, 39, 0.15);
+}
+
+.sayfa-kings-education .kings-la-film-icerik-listesi li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #e8e8e8;
+    line-height: 1.5;
+}
+
+.sayfa-kings-education .kings-la-film-icerik-listesi li:last-child {
+    margin-bottom: 0;
+}
+
+.sayfa-kings-education .kings-la-bolum-discovery {
+    margin-top: 50px;
+    border-left: 5px solid #00acc1;
+}
+
+.sayfa-kings-education .kings-la-dahil-bolum {
+    margin-top: 40px;
+    border-top: 5px solid #bd0505;
+}
+
+.sayfa-kings-education .kings-la-dahil-baslik {
+    background: #bd0505 !important;
+    letter-spacing: 1px;
+}
+
+.sayfa-kings-education .kings-la-dahil-giris {
+    margin-bottom: 25px;
+    color: #666;
+    font-style: italic;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.sayfa-kings-education .kings-la-dahil-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.sayfa-kings-education .kings-la-dahil-kart {
+    background: #fcfcfc;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #eee;
+}
+
+.sayfa-kings-education .kings-la-dahil-kart-vurgu {
+    background: #fff9f9;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #ffdada;
+}
+
+.sayfa-kings-education .kings-la-dahil-h4 {
+    color: #000080;
+    margin: 0 0 10px 0;
+    font-size: 15px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sayfa-kings-education .kings-la-dahil-h4-vurgu {
+    color: #bd0505;
+    margin: 0 0 10px 0;
+    font-size: 15px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sayfa-kings-education .kings-la-dahil-madde {
+    font-size: 20px;
+    line-height: 1;
+}
+
+.sayfa-kings-education .kings-la-dahil-metin {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.sayfa-kings-education .kings-la-konaklama-bolum {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.sayfa-kings-education .kings-la-konaklama-bolum .konaklama-ana-baslik {
+    display: block;
+    font-size: 22px;
+    font-weight: 800;
+    color: #000080;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.sayfa-kings-education .konaklama-konteyner.kings-la-konaklama-bolum {
+    padding: 0 var(--icerik-yan-gutter, 15px);
+}
+
+.sayfa-kings-education .kings-la-konaklama-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .sayfa-kings-education .kings-la-konaklama-grid .konaklama-kart:last-child {
+        grid-column: auto;
+        justify-self: stretch;
+        max-width: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .sayfa-kings-education .kings-la-konaklama-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.sayfa-kings-education .kings-la-konaklama-kart-sifir {
+    margin: 0;
+}
+
+.sayfa-kings-education .konaklama-badge.orange {
+    background: #f39c12;
+}

@@ -1,6 +1,15 @@
 /* Yurt Dışı Dil Okulları sayfasına özel stiller */
 /* Ülke seçim kartları – yaz okulları sayfasıyla aynı tasarım */
 
+/* Rozet ikonunda onay işareti (✓) */
+.dil-okullari-kariyer-kutu .dahil-rozet-ikon-tick,
+.dil-okullari-program-kutu .dahil-rozet-ikon-tick,
+.ingiltere-neden-kutu .dahil-rozet-ikon-tick {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1;
+}
+
 /* Başlık + ülke butonları tek çerçeve paneli */
 .dil-okullari-secim-paneli {
     max-width: 1200px;

@@ -1,5 +1,30 @@
 /* Yurt Dışı Yüksek Lisans & MBA sayfasına özel stiller */
 
+/* Rozet ikonunda onay işareti (✓) */
+.yuksek-lisans-neden-kutu .dahil-rozet-ikon-tick,
+.yuksek-lisans-avantaj-kutu .dahil-rozet-ikon-tick {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+/* MBA bölümü — vurgu kutusu (inline style yok) */
+.mba-vurgu-kutu {
+    background: #eef4ff;
+    border: 1px solid rgba(0, 0, 128, 0.15);
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin: 25px 0;
+    border-left: 4px solid #000080;
+}
+
+article.icerik-alani .mba-vurgu-metin {
+    margin: 0;
+    font-size: 15px;
+    color: #333;
+    line-height: 1.6;
+}
+
 /* Başlık renk standardı */
 .yuksek-lisans-avantaj-kutu .program-kart h3,
 .yuksek-lisans-neden-kutu .dahil-rozet-baslik,
