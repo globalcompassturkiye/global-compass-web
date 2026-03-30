@@ -258,19 +258,41 @@
             <input type="radio" name="dil-alt" id="dil-usa" hidden>
             <label for="dil-usa" class="alt-tab-etiket">Amerika</label>
 
+            <input type="radio" name="dil-ing-sehir" id="dil-ing-londra" class="sehir-secim-input" checked hidden>
+            <input type="radio" name="dil-ing-sehir" id="dil-ing-oxford" class="sehir-secim-input" hidden>
+            <input type="radio" name="dil-ing-sehir" id="dil-ing-bournemouth" class="sehir-secim-input" hidden>
+
+            <input type="radio" name="dil-usa-sehir" id="dil-usa-los-angeles" class="sehir-secim-input" checked hidden>
+            <input type="radio" name="dil-usa-sehir" id="dil-usa-new-york" class="sehir-secim-input" hidden>
+            <input type="radio" name="dil-usa-sehir" id="dil-usa-boston" class="sehir-secim-input" hidden>
+
+            <div class="yaz-sehir-satiri" id="dil-sehir-ing">
+                <label for="dil-ing-londra" class="sehir-buton">Londra</label>
+                <label for="dil-ing-oxford" class="sehir-buton">Oxford</label>
+                <label for="dil-ing-bournemouth" class="sehir-buton">Bournemouth</label>
+            </div>
+            <div class="yaz-sehir-satiri" id="dil-sehir-usa">
+                <label for="dil-usa-los-angeles" class="sehir-buton">Los Angeles</label>
+                <label for="dil-usa-new-york" class="sehir-buton">New York</label>
+                <label for="dil-usa-boston" class="sehir-buton">Boston</label>
+            </div>
+
             <div class="alt-panel" id="panel-dil-ing">
                 <div class="tab-ic-icerik">
                     <div class="tab-metin">
-                        <h3>İngiltere Dil Okulları</h3>
+                        <h3 class="sehir-baslik" id="baslik-dil-ing-londra">Londra Dil Okulları</h3>
+                        <h3 class="sehir-baslik" id="baslik-dil-ing-oxford">Oxford Dil Okulları</h3>
+                        <h3 class="sehir-baslik" id="baslik-dil-ing-bournemouth">Bournemouth Dil Okulları</h3>
                         <p>Londra, Cambridge ve Oxford gibi merkezlerde yabancı dil eğitimi.</p>
-                        <ul class="tab-link-listesi">
-                            <li><a href="/yurt-disi-dil-okullari/uk/oxford/kings-education/">Kings Education - Oxford - 16+ Yaş - Dil Okulu</a></li>
+                        <ul class="tab-link-listesi sehir-okul-listesi" id="okul-listesi-dil-ing-londra">
                             <li><a href="/yurt-disi-dil-okullari/uk/london/kings-education/">Kings Education - Londra - 16+ Yaş - Dil Okulu</a></li>
+                        </ul>
+                        <ul class="tab-link-listesi sehir-okul-listesi" id="okul-listesi-dil-ing-oxford">
+                            <li><a href="/yurt-disi-dil-okullari/uk/oxford/kings-education/">Kings Education - Oxford - 16+ Yaş - Dil Okulu</a></li>
+                        </ul>
+                        <ul class="tab-link-listesi sehir-okul-listesi" id="okul-listesi-dil-ing-bournemouth">
                             <li><a href="/yurt-disi-dil-okullari/uk/bournemouth/kings-education/">Kings Education - Bournemouth - +16 Yaş - Dil Okulu</a></li>
                         </ul>
-                    </div>
-                    <div class="tab-aksiyon">
-                        <a href="/yurt-disi-dil-okullari/uk/" class="ana-buton">İngiltere Dil Okullarını Keşfet!</a>
                     </div>
                 </div>
             </div>
@@ -278,16 +300,19 @@
             <div class="alt-panel" id="panel-dil-usa">
                 <div class="tab-ic-icerik">
                     <div class="tab-metin">
-                        <h3>Amerika Dil Okulları</h3>
+                        <h3 class="sehir-baslik" id="baslik-dil-usa-los-angeles">Los Angeles Dil Okulları</h3>
+                        <h3 class="sehir-baslik" id="baslik-dil-usa-new-york">New York Dil Okulları</h3>
+                        <h3 class="sehir-baslik" id="baslik-dil-usa-boston">Boston Dil Okulları</h3>
                         <p>New York, Boston ve San Diego'da Amerikan kültürünü yaşayarak öğrenin.</p>
-                        <ul class="tab-link-listesi">
+                        <ul class="tab-link-listesi sehir-okul-listesi" id="okul-listesi-dil-usa-los-angeles">
                             <li><a href="/yurt-disi-dil-okullari/usa/los-angeles/kings-education/">Kings Education - Los Angeles - +16 Yaş - Dil Okulu</a></li>
+                        </ul>
+                        <ul class="tab-link-listesi sehir-okul-listesi" id="okul-listesi-dil-usa-new-york">
                             <li><a href="/yurt-disi-dil-okullari/usa/new-york/kings-education/">Kings Education - New York - +16 Yaş - Dil Okulu</a></li>
+                        </ul>
+                        <ul class="tab-link-listesi sehir-okul-listesi" id="okul-listesi-dil-usa-boston">
                             <li><a href="/yurt-disi-dil-okullari/usa/boston/kings-education/">Kings Education - Boston - +16 Yaş - Dil Okulu</a></li>
                         </ul>
-                    </div>
-                    <div class="tab-aksiyon">
-                        <a href="/yurt-disi-dil-okullari/usa/" class="ana-buton">Amerika Dil Okullarını Keşfet!</a>
                     </div>
                 </div>
             </div>
@@ -318,20 +343,64 @@
             <input type="radio" name="yaz-alt" id="yaz-amerika" hidden>
             <label for="yaz-amerika" class="alt-tab-etiket">Amerika</label>
 
+            <input type="radio" name="yaz-ing-sehir" id="yaz-ing-londra" class="sehir-secim-input" checked hidden>
+            <input type="radio" name="yaz-ing-sehir" id="yaz-ing-oxford" class="sehir-secim-input" hidden>
+            <input type="radio" name="yaz-ing-sehir" id="yaz-ing-cambridge" class="sehir-secim-input" hidden>
+            <input type="radio" name="yaz-ing-sehir" id="yaz-ing-bournemouth" class="sehir-secim-input" hidden>
+
+            <input type="radio" name="yaz-almanya-sehir" id="yaz-almanya-frankfurt" class="sehir-secim-input" checked hidden>
+            <input type="radio" name="yaz-almanya-sehir" id="yaz-almanya-freiburg" class="sehir-secim-input" hidden>
+
+            <input type="radio" name="yaz-kanada-sehir" id="yaz-kanada-toronto" class="sehir-secim-input" checked hidden>
+            <input type="radio" name="yaz-italya-sehir" id="yaz-italya-milano" class="sehir-secim-input" checked hidden>
+            <input type="radio" name="yaz-japonya-sehir" id="yaz-japonya-tokyo" class="sehir-secim-input" checked hidden>
+            <input type="radio" name="yaz-amerika-sehir" id="yaz-amerika-newyork" class="sehir-secim-input" checked hidden>
+
+            <div class="yaz-sehir-satiri" id="yaz-sehir-ing">
+                <label for="yaz-ing-londra" class="sehir-buton">Londra</label>
+                <label for="yaz-ing-oxford" class="sehir-buton">Oxford</label>
+                <label for="yaz-ing-cambridge" class="sehir-buton">Cambridge</label>
+                <label for="yaz-ing-bournemouth" class="sehir-buton">Bournemouth</label>
+            </div>
+            <div class="yaz-sehir-satiri" id="yaz-sehir-almanya">
+                <label for="yaz-almanya-frankfurt" class="sehir-buton">Frankfurt</label>
+                <label for="yaz-almanya-freiburg" class="sehir-buton">Freiburg</label>
+            </div>
+            <div class="yaz-sehir-satiri" id="yaz-sehir-kanada">
+                <label for="yaz-kanada-toronto" class="sehir-buton">Toronto</label>
+            </div>
+            <div class="yaz-sehir-satiri" id="yaz-sehir-italya">
+                <label for="yaz-italya-milano" class="sehir-buton">Milano</label>
+            </div>
+            <div class="yaz-sehir-satiri" id="yaz-sehir-japonya">
+                <label for="yaz-japonya-tokyo" class="sehir-buton">Tokyo</label>
+            </div>
+            <div class="yaz-sehir-satiri" id="yaz-sehir-amerika">
+                <label for="yaz-amerika-newyork" class="sehir-buton">New York</label>
+            </div>
+
             <div class="alt-panel" id="panel-yaz-ing">
                 <div class="tab-ic-icerik">
                     <div class="tab-metin">
-                        <h3>İngiltere Yaz Okulları</h3>
-                        <ul class="tab-link-listesi">
-                            <li><a href="/yurt-disi-yaz-okullari/uk/cambridge/immerse-education/">Immerse Education Cambridge - 13-18 & 18-30 Yaş - Yaz Okulu</a></li>
-                            <li><a href="/yurt-disi-yaz-okullari/uk/cambridge/oxford-royale-academy/">Oxford Royale Academy Cambridge 12-18 Yaş Arası Yaz Okulu</a></li>
-                            <li><a href="/yurt-disi-yaz-okullari/uk/oxford/immerse-education/">Immerse Education Oxford - 13-15  & 16-18 Yaş - Yaz Okulu</a></li>
+                        <h3 class="sehir-baslik" id="baslik-yaz-ing-londra">Londra Yaz Okulları</h3>
+                        <h3 class="sehir-baslik" id="baslik-yaz-ing-oxford">Oxford Yaz Okulları</h3>
+                        <h3 class="sehir-baslik" id="baslik-yaz-ing-cambridge">Cambridge Yaz Okulları</h3>
+                        <h3 class="sehir-baslik" id="baslik-yaz-ing-bournemouth">Bournemouth Yaz Okulları</h3>
+                        <ul class="tab-link-listesi sehir-okul-listesi" id="okul-listesi-yaz-ing-londra">
                             <li><a href="/yurt-disi-yaz-okullari/uk/london/immerse-education/">Immerse Education Londra - 15-18 Yaş - Yaz Okulu</a></li>
-                            <li><a href="/yurt-disi-yaz-okullari/uk/bournemouth/kings-education/">Kings Education Bournemouth - 12-17 Yaş - Yaz Okulu</a></li>
                             <li><a href="/yurt-disi-yaz-okullari/uk/london/investin/">InvestIN Londra - 12-18 Yaş - Yaz Okulu</a></li>
                         </ul>
+                        <ul class="tab-link-listesi sehir-okul-listesi" id="okul-listesi-yaz-ing-oxford">
+                            <li><a href="/yurt-disi-yaz-okullari/uk/oxford/immerse-education/">Immerse Education Oxford - 13-15  & 16-18 Yaş - Yaz Okulu</a></li>
+                        </ul>
+                        <ul class="tab-link-listesi sehir-okul-listesi" id="okul-listesi-yaz-ing-cambridge">
+                            <li><a href="/yurt-disi-yaz-okullari/uk/cambridge/immerse-education/">Immerse Education Cambridge - 13-18 & 18-30 Yaş - Yaz Okulu</a></li>
+                            <li><a href="/yurt-disi-yaz-okullari/uk/cambridge/oxford-royale-academy/">Oxford Royale Academy Cambridge 12-18 Yaş Arası Yaz Okulu</a></li>
+                        </ul>
+                        <ul class="tab-link-listesi sehir-okul-listesi" id="okul-listesi-yaz-ing-bournemouth">
+                            <li><a href="/yurt-disi-yaz-okullari/uk/bournemouth/kings-education/">Kings Education Bournemouth - 12-17 Yaş - Yaz Okulu</a></li>
+                        </ul>
                     </div>
-                    <div class="tab-aksiyon"><a href="/yurt-disi-yaz-okullari/uk/" class="ana-buton">İngiltere Yaz Okullarını Keşfet!</a></div>
                 </div>
             </div>
 
@@ -344,68 +413,65 @@
                             <li><a href="/yurt-disi-yaz-okullari/switzerland/swiss-education-academy/">Swiss Education Academy - İsviçre- 6-11 & 12-16 Yaş - Yaz Okulu</a></li>
                         </ul>
                     </div>
-                    <div class="tab-aksiyon"><a href="/yurt-disi-yaz-okullari/switzerland/" class="ana-buton">İsviçre Yaz Okullarını Keşfet!</a></div>
                 </div>
             </div>
 
             <div class="alt-panel" id="panel-yaz-almanya">
                 <div class="tab-ic-icerik">
                     <div class="tab-metin">
-                        <h3>Almanya Yaz Kampları</h3>
-                        <ul class="tab-link-listesi">
+                        <h3 class="sehir-baslik" id="baslik-yaz-almanya-frankfurt">Frankfurt Yaz Okulları</h3>
+                        <h3 class="sehir-baslik" id="baslik-yaz-almanya-freiburg">Freiburg Yaz Okulları</h3>
+                        <ul class="tab-link-listesi sehir-okul-listesi" id="okul-listesi-yaz-almanya-frankfurt">
                             <li><a href="/yurt-disi-yaz-okullari/germany/frankfurt/alpadia/">Alpadia - Frankfurt Lahntal - 10-17 Yaş - Yaz Okulu</a></li>
+                        </ul>
+                        <ul class="tab-link-listesi sehir-okul-listesi" id="okul-listesi-yaz-almanya-freiburg">
                             <li><a href="/yurt-disi-yaz-okullari/germany/freiburg/alpadia/">Alpadia - Freiburg - 13-17 Yaş - Yaz Okulu</a></li>
                         </ul>
                     </div>
-                    <div class="tab-aksiyon"><a href="/yurt-disi-yaz-okullari/germany/" class="ana-buton">Almanya Yaz Okullarını Keşfet!</a></div>
                 </div>
             </div>
 
             <div class="alt-panel" id="panel-yaz-kanada">
                 <div class="tab-ic-icerik">
                     <div class="tab-metin">
-                        <h3>Kanada Yaz Okulları</h3>
-                        <ul class="tab-link-listesi">
+                        <h3>Toronto Yaz Okulları</h3>
+                        <ul class="tab-link-listesi sehir-okul-listesi" id="okul-listesi-yaz-kanada-toronto">
                             <li><a href="/yurt-disi-yaz-okullari/canada/toronto/immerse-education/">Immerse Education - Toronto - 15-18 Yaş - Yaz Okulu</a></li>
                         </ul>
                     </div>
-                    <div class="tab-aksiyon"><a href="/yurt-disi-yaz-okullari/canada/" class="ana-buton">Kanada Yaz Okullarını Keşfet!</a></div>
                 </div>
             </div>
 
             <div class="alt-panel" id="panel-yaz-italya">
                 <div class="tab-ic-icerik">
                     <div class="tab-metin">
-                        <h3>İtalya Yaz Kampları</h3>
-                        <ul class="tab-link-listesi">
+                        <h3>Milano Yaz Okulları</h3>
+                        <ul class="tab-link-listesi sehir-okul-listesi" id="okul-listesi-yaz-italya-milano">
                             <li><a href="/yurt-disi-yaz-okullari/italy/milan/sportech-academy/">Sportech Academy - Milano - 8-16 Yaş - AC Milan Academy Elite Futbol Kampı</a></li>
                         </ul>
                     </div>
-                    <div class="tab-aksiyon"><a href="/yurt-disi-yaz-okullari/italy/" class="ana-buton">İtalya Yaz Okullarını Keşfet!</a></div>
                 </div>
             </div>
 
             <div class="alt-panel" id="panel-yaz-japonya">
                 <div class="tab-ic-icerik">
                     <div class="tab-metin">
-                        <h3>Japonya Yaz Okulları</h3>
-                        <ul class="tab-link-listesi">
-                            <li><a href="/yurt-disi-yaz-okullari/japan/">Japonya Yaz Okulları Programlarını İncele</a></li>
+                        <h3>Tokyo Yaz Okulları</h3>
+                        <ul class="tab-link-listesi sehir-okul-listesi" id="okul-listesi-yaz-japonya-tokyo">
+                            <li><a href="/yurt-disi-yaz-okullari/japan/tokyo/immerse-education/">Immerse Education - Tokyo - 15-18 Yaş - Yaz Okulu</a></li>
                         </ul>
                     </div>
-                    <div class="tab-aksiyon"><a href="/yurt-disi-yaz-okullari/japan/" class="ana-buton">Japonya Yaz Okullarını Keşfet!</a></div>
                 </div>
             </div>
 
             <div class="alt-panel" id="panel-yaz-amerika">
                 <div class="tab-ic-icerik">
                     <div class="tab-metin">
-                        <h3>Amerika Yaz Okulları</h3>
-                        <ul class="tab-link-listesi">
+                        <h3>New York Yaz Okulları</h3>
+                        <ul class="tab-link-listesi sehir-okul-listesi" id="okul-listesi-yaz-amerika-newyork">
                             <li><a href="/yurt-disi-yaz-okullari/usa/new-york/oxford-royale-academy/">Oxford Royale Academy - New York - 16-18 Yaş - Yaz Okulu</a></li>
                         </ul>
                     </div>
-                    <div class="tab-aksiyon"><a href="/yurt-disi-yaz-okullari/usa/" class="ana-buton">Amerika Yaz Okullarını Keşfet!</a></div>
                 </div>
             </div>
         </div>
