@@ -4,6 +4,29 @@
  * Aynı seviyede (kardeş li.has-dropdown) en fazla biri açık; üst menü kapanınca tüm altlar sıfırlanır.
  */
 (function () {
+  function initGlobalMobileCtaBar() {
+    if (!document.body) return;
+    if (document.querySelector('.blog-mobil-cta-bar-wrap, .global-mobil-cta-bar-wrap')) return;
+
+    var wrap = document.createElement('div');
+    wrap.className = 'global-mobil-cta-bar-wrap';
+    wrap.setAttribute('role', 'navigation');
+    wrap.setAttribute('aria-label', 'Hızlı iletişim');
+
+    var link = document.createElement('a');
+    link.className = 'global-mobil-cta-bar';
+    link.href = '/iletisim/';
+
+    var text = document.createElement('span');
+    text.className = 'global-mobil-cta-bar-metin';
+    text.textContent = 'Ücretsiz Danışmanlık Al';
+
+    link.appendChild(text);
+    wrap.appendChild(link);
+    document.body.appendChild(wrap);
+    document.body.classList.add('global-mobil-cta-aktif');
+  }
+
   function applyMobileSubmenuLayout(nav) {
     if (!nav) return;
     /* Yalnızca hamburger çekmece (CSS: max-width 768px). 769–992 yatay üst menüde inline müdahale yok. */
@@ -59,6 +82,8 @@
   }
 
   function init() {
+    initGlobalMobileCtaBar();
+
     var toggle = document.querySelector('.nav-toggle');
     var nav = document.querySelector('.navigasyon');
     if (!toggle || !nav) return;
