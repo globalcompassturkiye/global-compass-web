@@ -1,0 +1,235 @@
+/* Ana sayfa — Güncel Rehberler (blog özet kartları) */
+
+.ana-sayfa-blog-ozeti {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2.5rem 0 2.75rem;
+    box-sizing: border-box;
+}
+
+.ana-sayfa-blog-ozeti-inner {
+    background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+    border: 1px solid #e2e8f0;
+    border-radius: 15px;
+    padding: 1.75rem 1.5rem 2rem;
+    box-shadow: 0 12px 40px rgba(15, 23, 42, 0.06);
+}
+
+.ana-sayfa-blog-ozeti-baslik-wrap {
+    text-align: center;
+    margin-bottom: 1.75rem;
+}
+
+.ana-sayfa-blog-ozeti-baslik {
+    font-size: clamp(1.35rem, 3vw, 1.65rem);
+    font-weight: 700;
+    color: #1a2332;
+    line-height: 1.25;
+    margin: 0 0 0.5rem;
+    letter-spacing: -0.02em;
+}
+
+@media (max-width: 501px) {
+    .ana-sayfa-blog-ozeti-baslik {
+        font-size: 22px;
+    }
+}
+
+.ana-sayfa-blog-baslik-lacivert {
+    color: #000080;
+}
+
+.ana-sayfa-blog-baslik-kirmizi {
+    color: #c41e3a;
+}
+
+.ana-sayfa-blog-baslik-ayrac {
+    color: #cbd5e1;
+    font-weight: 400;
+    padding: 0 0.2rem;
+}
+
+.ana-sayfa-blog-ozeti-alt {
+    font-size: 15px;
+    line-height: 1.65;
+    color: #64748b;
+    margin: 0 auto;
+    max-width: 36em;
+}
+
+.ana-sayfa-blog-ozeti-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+}
+
+@media (min-width: 600px) {
+    .ana-sayfa-blog-ozeti-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    .ana-sayfa-blog-ozeti-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.35rem;
+    }
+}
+
+.ana-sayfa-blog-ozeti--eksik .ana-sayfa-blog-ozeti-grid {
+    grid-template-columns: minmax(0, 440px);
+    justify-content: center;
+}
+
+.ana-sayfa-blog-kart {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.ana-sayfa-blog-kart:hover {
+    box-shadow: 0 10px 32px rgba(15, 23, 42, 0.1);
+    transform: translateY(-2px);
+}
+
+.ana-sayfa-blog-kart-gorsel {
+    display: block;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1e3a5f 0%, #0f172a 100%);
+}
+
+.ana-sayfa-blog-kart-gorsel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.ana-sayfa-blog-kart-icerik {
+    padding: 1rem 1.1rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.ana-sayfa-blog-kart-kategori {
+    display: inline-block;
+    align-self: flex-start;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #c41e3a;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+
+.ana-sayfa-blog-kart-kategori:hover {
+    text-decoration: underline;
+    color: #9e1830;
+}
+
+.ana-sayfa-blog-kart-baslik {
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.35;
+    margin: 0 0 0.5rem;
+}
+
+.ana-sayfa-blog-kart-baslik a {
+    color: #0f172a;
+    text-decoration: none;
+}
+
+.ana-sayfa-blog-kart-baslik a:hover {
+    color: #c41e3a;
+}
+
+.ana-sayfa-blog-kart-ozet {
+    font-size: 15px;
+    line-height: 1.65;
+    color: #475569;
+    margin: 0;
+    flex: 1;
+}
+
+.ana-sayfa-blog-ozeti-alt-aksiyon {
+    margin-top: 1.75rem;
+    text-align: center;
+}
+
+.ana-sayfa-blog-ozeti-tum {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    padding: 0.65rem 1.35rem;
+    background: #c41e3a;
+    color: #fff !important;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.ana-sayfa-blog-ozeti-tum:hover {
+    background: #9e1830;
+    transform: translateY(-1px);
+}
+
+.ana-sayfa-blog-ozeti--yukleniyor .ana-sayfa-blog-ozeti-grid {
+    min-height: 120px;
+}
+
+.ana-sayfa-blog-ozeti--yukleniyor .ana-sayfa-blog-ozeti-tum {
+    pointer-events: none;
+    opacity: 0.85;
+}
+
+.ana-sayfa-blog-ozeti--hata .ana-sayfa-blog-ozeti-grid {
+    min-height: 0;
+}
+
+.ana-sayfa-blog-ozeti--hata .ana-sayfa-blog-ozeti-grid:empty::after {
+    content: 'Blog yazıları yüklenemedi. Lütfen Blog sayfasını ziyaret edin.';
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    color: #64748b;
+    padding: 1rem;
+}
+
+.ana-sayfa-blog-ozeti--bos .ana-sayfa-blog-ozeti-grid:empty::after {
+    content: 'Henüz yayınlanmış yazı yok.';
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    color: #64748b;
+}
+
+.ana-sayfa-blog-noscript {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem var(--icerik-yan-gutter, 25px);
+    text-align: center;
+    font-size: 15px;
+}
+
+.ana-sayfa-blog-noscript a {
+    color: #c41e3a;
+    font-weight: 600;
+}
+
+/* Ana sayfa: kart/çerçeve köşeleri tek standart */
+body.ana-sayfa .gri-cerceve-kutu,
+body.ana-sayfa .ana-hizmet-karti,
+body.ana-sayfa .hizmet-tab-alani {
+    border-radius: 15px !important;
+}

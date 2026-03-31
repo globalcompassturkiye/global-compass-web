@@ -1,0 +1,30 @@
+# Netlify: eski ?kategori= sorgularını SEO için 301 ile hiyerarşik URL’lere yönlendirir.
+# (Netlify dışı barındırmada yok sayılır; aynı mantık için bkz. js/blog.js)
+
+[[redirects]]
+  from = "/blog"
+  query = { kategori = "hepsi" }
+  to = "/blog/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/"
+  query = { kategori = "hepsi" }
+  to = "/blog/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog"
+  query = { kategori = ":slug" }
+  to = "/blog/:slug/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/"
+  query = { kategori = ":slug" }
+  to = "/blog/:slug/"
+  status = 301
+  force = true

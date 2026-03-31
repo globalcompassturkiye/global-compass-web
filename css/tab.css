@@ -8,7 +8,7 @@
     width: 100%;
     margin: 25px auto; /* Rozetler ile aradaki dış boşluğu azalttık */
     background: #ffffff;
-    border-radius: 8px;
+    border-radius: 15px;
     padding: 22px 10px 22px; /* yan boşluk azaltıldı */
     border: 1px solid #d1d1d1;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
@@ -35,7 +35,7 @@
 
 /* Ana sayfada tab alanı: daha geniş iç alan, tam beyaz zemin */
 body.ana-sayfa .hizmet-tab-alani {
-    max-width: 1280px !important;
+    max-width: 1200px !important;
     width: 100%;
     margin-left: auto;
     margin-right: auto;

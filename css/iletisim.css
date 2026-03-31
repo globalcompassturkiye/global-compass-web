@@ -49,7 +49,7 @@ body.sayfa-iletisim article.icerik-alani.iletisim-sayfa > h1.sayfa-ana-baslik .v
 
 @media screen and (max-width: 501px) {
     body.sayfa-iletisim article.icerik-alani.iletisim-sayfa > h1.sayfa-ana-baslik {
-        font-size: 33px !important;
+        font-size: 26px !important;
     }
 
     body.sayfa-iletisim article.icerik-alani.iletisim-sayfa > h1.sayfa-ana-baslik > .vurgu-renk {

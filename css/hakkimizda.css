@@ -11,7 +11,7 @@
 }
 
 /*
- * h1: 33px; alt satır (.vurgu-renk): 26px (hizmetlerimiz ile aynı hiyerarşi)
+ * h1: masaüstü/tablet 33px; alt satır (.vurgu-renk) 26px; 501px altı her iki satır 26px
  */
 body.sayfa-hakkimizda article.icerik-alani.hakkimizda-sayfa > h1.sayfa-ana-baslik {
     font-size: 33px !important;
@@ -40,7 +40,7 @@ body.sayfa-hakkimizda article.icerik-alani.hakkimizda-sayfa > h1.sayfa-ana-basli
 
 @media screen and (max-width: 501px) {
     body.sayfa-hakkimizda article.icerik-alani.hakkimizda-sayfa > h1.sayfa-ana-baslik {
-        font-size: 33px !important;
+        font-size: 26px !important;
     }
 
     body.sayfa-hakkimizda article.icerik-alani.hakkimizda-sayfa > h1.sayfa-ana-baslik > .vurgu-renk {

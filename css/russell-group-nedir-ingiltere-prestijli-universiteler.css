@@ -1,0 +1,167 @@
+/* Russell Group blog yazısı — sayfa özel düzen */
+/* H1: blog bölümünde .blog-yazi-ana-baslik (blog.css) — 33px / satır yüksekliği 1.25; ≤501px 26px */
+
+/* H1 altı: Kategori + hap etiket (linksiz) + tarih + okuma — eski buton görünümü, hover yok */
+.russell-blog-alt-meta-satir .blog-kategori-etiketi {
+    margin: 0;
+    flex-shrink: 0;
+    cursor: default;
+}
+
+.russell-blog-kategori-etiketi-statik:hover,
+.russell-blog-kategori-etiketi-statik:focus-visible {
+    background: rgba(196, 30, 58, 0.1);
+    border-color: rgba(196, 30, 58, 0.18);
+    color: #c41e3a;
+    outline: none;
+}
+
+/* Mobil: meta satırı tek satırda (blog-yazi-meta-alt varsayılanı wrap) */
+@media (max-width: 640px) {
+    .russell-blog-alt-meta-satir {
+        flex-wrap: nowrap;
+        gap: 0.15rem 0.3rem;
+        font-size: clamp(0.625rem, 3.1vw, 0.8125rem);
+        line-height: 1.3;
+    }
+
+    .russell-blog-alt-meta-satir .blog-kategori-etiketi {
+        padding: 0.18rem 0.4rem;
+        font-size: clamp(0.5rem, 2.85vw, 0.6875rem);
+        letter-spacing: 0.04em;
+    }
+
+    .russell-blog-alt-meta-satir .blog-yazi-okuma-blok {
+        gap: 0.2rem;
+        flex-shrink: 0;
+    }
+
+    .russell-blog-alt-meta-satir .blog-yazi-okuma-ikon {
+        width: clamp(10px, 3vw, 14px);
+        height: clamp(10px, 3vw, 14px);
+    }
+}
+
+/* Üniversite listesinin altı: metin sütununu kaplayan tam genişlik görsel */
+.blog-rg-metin-tam-gorsel {
+    margin: 1.75rem 0 2rem;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 36px rgba(15, 23, 42, 0.12);
+    background: linear-gradient(135deg, #1e3a5f 0%, #0f172a 100%);
+}
+
+.blog-rg-metin-tam-gorsel img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1200 / 514;
+    object-fit: cover;
+    display: block;
+}
+
+/* Vurgu kutuları */
+.russell-vurgu-kutu {
+    background: linear-gradient(145deg, #fff5f6 0%, #f0f7ff 100%);
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #c41e3a;
+    border-radius: 12px;
+    padding: 1.25rem 1.35rem 1.35rem;
+    margin: 1.5rem 0;
+}
+
+.russell-vurgu-kutu--acik-mavi {
+    background: linear-gradient(145deg, #f0f9ff 0%, #f8fafc 100%);
+    border-left-color: #1e3a5f;
+}
+
+.russell-vurgu-kutu .russell-vurgu-baslik {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.russell-vurgu-kutu .russell-vurgu-baslik .russell-vurgu-ikon {
+    font-size: 1.25rem;
+    line-height: 1;
+}
+
+.russell-vurgu-liste {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.russell-vurgu-liste li {
+    display: flex;
+    gap: 0.65rem;
+    align-items: flex-start;
+    margin-bottom: 0.85rem;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #334155;
+}
+
+.russell-vurgu-liste li:last-child {
+    margin-bottom: 0;
+}
+
+.russell-vurgu-liste .liste-ikon {
+    flex-shrink: 0;
+    width: 1.5rem;
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.russell-vurgu-liste .liste-metin strong {
+    color: #0f172a;
+}
+
+/* 24 üniversite grid */
+.russell-uni-grid-wrap {
+    margin: 1.25rem 0 2rem;
+}
+
+.russell-uni-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+}
+
+@media (min-width: 600px) {
+    .russell-uni-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    .russell-uni-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.russell-uni-hucre {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1e293b;
+    line-height: 1.45;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.russell-uni-hucre:hover {
+    border-color: #cbd5e1;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+}
+

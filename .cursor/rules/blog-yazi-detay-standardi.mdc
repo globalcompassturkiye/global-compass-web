@@ -1,0 +1,84 @@
+---
+description: Blog tek yazı sayfası HTML/CSS/JS yapısı (Russell örneği ile aynı iskelet)
+globs: "**/blog/*/*/index.html"
+alwaysApply: false
+---
+
+# Blog yazı detayı — standart yapı
+
+Referans: `blog/universite/russell-group-nedir-ingiltere-prestijli-universiteler/index.html`  
+URL kalıbı: `/blog/{kategori-slug}/{yazi-slug}/` — dosya: `blog/{kategori-slug}/{yazi-slug}/index.html`
+
+## Head
+
+- Ortak: `style.css`, `blog.css`, sayfaya özel `/css/{yazi-slug}.css` (proje kuralı: tüm CSS `/css` altında, dosya adı slug ile uyumlu).
+- `body`: `sayfa-blog blog-yazi-sayfa-mobil-ux` (mobil yan panel gizlenir, üstte içindekiler + altta sabit CTA çubuğu için).
+- Üst şablon: mevcut site `sabit-ust-alan` + `ust-menu` (diğer sayfalarla aynı nav).
+
+## Ana içerik iskeleti
+
+```html
+<main id="icerik">
+<article class="icerik-alani blog-yazi-detay">
+  <nav class="site-haritasi-yolu" aria-label="Sayfa konumu">
+    <ol class="breadcrumb-kutu breadcrumb-kutu--hiyerarsik">… Ana Sayfa › Blog › {Kategori} › {Yazı başlığı} …</ol>
+  </nav>
+
+  <div class="blog-yazi-tek-sutun blog-yazi-tek-sutun--tam">
+    <header class="blog-yazi-baslik-wrap blog-yazi-baslik-wrap--meta-modern">
+      <h1 class="blog-yazi-ana-baslik">…<br><span class="vurgu-renk">…</span></h1>
+      <p class="blog-yazi-meta-alt">Kategori + etiket + tarih + okuma süresi</p>
+    </header>
+
+    <div class="blog-yazi-layout blog-yazi-layout--yan-panel">
+      <div class="blog-yazi-ana">
+        <div class="blog-yazi-icerik" id="blog-yazi-icerik-alani">
+          <p>… giriş paragrafı …</p>
+          <div class="blog-mobil-icindekiler-wrap">… mobil içindekiler (boş ul, JS doldurur) …</div>
+          <h2 id="…">…</h2>
+          <!-- içerik; aside içindeki h2/h3 TOC’a girmez (blog.js) -->
+        </div>
+      </div>
+      <aside class="blog-yan-panel" aria-label="Yan menü">
+        <nav class="blog-icindekiler-kutu" aria-labelledby="icindekiler-baslik">…</nav>
+        <div class="blog-yan-iletisim-kutu">… Hızlı iletişim …</div>
+      </aside>
+    </div>
+  </div>
+
+  <div class="okul-liste-kapsayici">
+    <h2 class="okul-liste-baslik">…</h2>
+    <section class="alt-yonlendirme-alani">
+      <div class="yonlendirme-karti">
+        <p>…</p>
+        <a href="…" class="kart-link">… →</a>
+      </div>
+    </section>
+  </div>
+</article>
+</main>
+```
+
+## Kurallar
+
+- **H1:** `blog-yazi-ana-baslik`; iki satır için `<br>` + `span.vurgu-renk` (tipografi `blog.css`).
+- **İçindekiler (mobil):** `blog-mobil-icindekiler-wrap`, giriş **ilk paragrafından hemen sonra**, `h2`’lerden önce. İki `ul.blog-icindekiler-liste` (mobil + yan panel) boş bırakılır; `/js/blog.js` doldurur.
+- **TOC kaynağı:** `h2[id]`, `h3[id]` yalnızca `.blog-yazi-icerik` içinde; `aside` içindeki başlıklar hariç. ID’ler manuel veya `data-blog-toc-auto` ile otomatik (bkz. `blog.js`).
+- **Alt yönlendirme:** `yonlendirme-karti-teklik` kuralına uy: tek kart, tek `a.kart-link`; metin ve `href` yazı konusuna göre (üniversite yazısında üniversite hedefi vb.).
+- **Sabit mobil CTA:** `</main>` sonrası, `footer` ile birlikte: `div.blog-mobil-cta-bar-wrap` → `a.blog-mobil-cta-bar` (`/iletisim/`).
+- **Script:** `nav-submenu.js`, `header-offset.js`, `blog.js` (defer) — yazı sayfasında `blog.js` zorunlu.
+- **title / meta description / og:title / og:description:** kullanıcı metni olmadan değiştirilmez (proje meta kuralları). JSON-LD Article + BreadcrumbList güncellenir; `json-ld-*` kurallarına uy.
+
+## Yeni yazıda yapılacaklar özeti
+
+1. `blog/{kategori}/{slug}/index.html` oluştur; yukarıdaki iskeleti kopyala.  
+2. `/css/{slug}.css` ekle ve HTML’de kök yoldan linkle.  
+3. Breadcrumb, kategori etiketi, `okul-liste-baslik` + `kart-link` hedefini konuya göre ayarla.  
+4. `sitemap.xml` ve gerekirse nav güncelle.  
+5. Ana sayfadaki “Güncel Rehberler” için `json/blog-latest.json` içindeki `posts` dizisine `published` (ISO tarih), `href`, `title`, `excerpt`, `category`, `categoryHref`, `image`, `imageAlt` ekle; `ana-sayfa-blog-ozeti.js` en güncel 3 yazıyı bu tarihe göre seçer.
+
+## Ana sayfa blog özeti
+
+- Veri: `json/blog-latest.json` — `posts` dizisi.  
+- Script: `js/ana-sayfa-blog-ozeti.js` (ana `index.html`’de).  
+- Stil: `css/ana-sayfa.css`.

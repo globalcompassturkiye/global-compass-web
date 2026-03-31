@@ -101,16 +101,15 @@ h1 {
     line-height: 1.6;
 }
 
-/* 501px altı: tüm sayfalarda h1 ve içindeki vurgu satırı 28px olsun */
+/* 501px altı: tüm sayfalarda h1 ve içindeki vurgu satırı 26px */
 @media (max-width: 501px) {
     h1 {
-        font-size: 28px !important;
+        font-size: 26px !important;
         line-height: 1.4;
     }
 
-    /* h1 içindeki vurgu satırı da h1 ile aynı boyutta olsun */
     h1 .vurgu-renk {
-        font-size: 28px !important;
+        font-size: 26px !important;
         line-height: inherit;
         display: inline-block;
     }
@@ -134,7 +133,12 @@ h1 {
 /* Ana sayfa – hizmet kartları bölümü (alt grid) */
 .ana-sayfa .icerik-alani.ana-hizmetler-bolumu {
     margin-top: 40px;
-    padding: 0 45px;
+    max-width: 1200px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .ana-sayfa .beceri-grid {
@@ -2365,7 +2369,8 @@ p + .kirmizi-kutu {
         align-items: center;
     }
 
-    h1 { font-size: 24px; margin: 25px 0; }
+    /* h1: tablet 33px — global h1 33px korunur (aşağıdaki font-size kaldırıldı) */
+    h1 { margin: 25px 0; }
     p, .kutu-liste li, .ana-sirali-liste p { font-size: 14px; text-align: justify; }
 
     /* Premium Kartlar Mobilde Dikey */
@@ -3210,9 +3215,9 @@ p + .kirmizi-kutu {
     color: #bd0505;    /* Kırmızı */
 }
 
-/* Mobilde Ölçekleme */
+/* Tablet: ana hero h1 — masaüstü ile aynı 33px */
 @media (max-width: 768px) {
-    .karsilama-icerik h1 { font-size: 28px !important; }
+    .karsilama-icerik h1 { font-size: 33px !important; }
     .ana-karsilama-alt-baslik { font-size: 18px; }
     .karsilama-aksiyon { flex-direction: column; }
     .guven-rozetleri { flex-direction: column; gap: 4px; }
@@ -3256,11 +3261,11 @@ p + .kirmizi-kutu {
     position: relative;
 }
 
-/* Ana Slogan Ayarı */
+/* Ana Slogan Ayarı (üstteki .karsilama-icerik h1 ile uyumlu: 33px standart) */
 .karsilama-icerik h1 {
-    font-size: 42px !important;
+    font-size: 33px !important;
     color: #333;
-    line-height: 2;
+    line-height: 1.35;
     margin-top: 10px;
 }
 
@@ -3294,7 +3299,7 @@ p + .kirmizi-kutu {
 /* Mobil Düzenleme */
 @media (max-width: 768px) {
     .ana-logo-baslik { font-size: 16px !important; flex-direction: column; gap: 5px; }
-    .ana-marka-baslik { font-size: 28px !important; }
+    .ana-marka-baslik { font-size: 33px !important; }
     .vurgu-renk2 { border-left: none; padding-left: 0; }
     .dev-slogan { font-size: 34px !important; }
 }
@@ -3377,10 +3382,10 @@ p + .kirmizi-kutu {
     .durak-noktasi { margin: 0; flex-shrink: 0; }
 }
 
-/* Ana sayfa h1 – mobilde (telefonlarda) kesin 28px olsun */
+/* Ana sayfa h1 – tablet: 33px (masaüstü ile aynı) */
 @media (max-width: 768px) {
     body.ana-sayfa .karsilama-icerik .ana-marka-baslik {
-        font-size: 28px !important;
+        font-size: 33px !important;
     }
 }
 
@@ -3406,10 +3411,10 @@ p + .kirmizi-kutu {
         padding-bottom: 28px;
     }
 
-    /* Anasayfa H1 ve vurgu satiri mobilde net 28px olsun */
+    /* Anasayfa H1 — 501px altı: genel h1 standardı 26px */
     .ana-sayfa .karsilama-icerik .ana-marka-baslik,
     .ana-sayfa .karsilama-icerik .ana-marka-baslik span {
-        font-size: 28px !important;
+        font-size: 26px !important;
         line-height: 1.4 !important;
     }
 }
