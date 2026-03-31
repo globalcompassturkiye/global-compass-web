@@ -3236,8 +3236,8 @@ body.ana-sayfa .guven-rozetleri .rozet-item {
         padding-right: 0 !important;   /* Sağdan boşluk yok */
     }
     .sosyal-medya-alani a {
-        width: 32px;
-        height: 32px;
+        width: 22px;
+        height: 22px;
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -4823,7 +4823,7 @@ body.ana-sayfa {
         display: flex !important;
         justify-content: flex-end !important;
         align-items: center !important;
-        gap: 0 !important;
+        gap: 12px !important;
         padding-right: 0 !important;
     }
 
@@ -4882,7 +4882,7 @@ body.ana-sayfa {
         display: flex !important;
         justify-content: flex-end !important;
         align-items: center !important;
-        gap: 6px !important;
+        gap: 0 !important;
     }
 
     .ust-menu .navigasyon > ul > li.nav-logo-item {
