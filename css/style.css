@@ -4354,7 +4354,7 @@ body.ana-sayfa {
 
     .nav-toggle {
         display: flex;
-        left: 16px;
+        left: 24px;
         right: auto;
         /* 501-768 ile aynı üst boşluk */
         top: 5px;
@@ -4363,7 +4363,7 @@ body.ana-sayfa {
     .ust-menu .nav-toggle {
         top: 5px;
         bottom: auto;
-        left: 16px;
+        left: 24px;
         right: auto;
         transform: none;
     }
@@ -4954,7 +4954,7 @@ body.ana-sayfa {
     /* 768px altı: ana menüyü kapat, hamburger simgesini aç */
     .nav-toggle {
         display: flex;
-        left: 20px;
+        left: 24px;
         right: auto;
         /* İkon üst boşluğu sabit (10px) */
         top: 5px;
@@ -4963,7 +4963,7 @@ body.ana-sayfa {
     .ust-menu .nav-toggle {
         top: 5px;
         bottom: auto;
-        left: 20px;
+        left: 24px;
         right: auto;
         transform: none;
     }
