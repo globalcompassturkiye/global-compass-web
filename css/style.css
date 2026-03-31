@@ -3275,6 +3275,7 @@ body.ana-sayfa .guven-rozetleri .rozet-item {
     .karsilama-icerik h1 { font-size: 33px !important; }
     .ana-karsilama-alt-baslik { font-size: 18px; }
     .karsilama-aksiyon { flex-direction: column; }
+    body.ana-sayfa .karsilama-aksiyon .ana-buton-light { display: none; }
     .guven-rozetleri { flex-direction: column; gap: 4px; }
     .rozet-item { font-size: 22px; }
     .sosyal-medya-alani {

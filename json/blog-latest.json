@@ -2,6 +2,16 @@
   "posts": [
     {
       "published": "2026-03-31",
+      "href": "/blog/lise/ibdp-ve-ibcp-farki-hangisi-daha-iyi/",
+      "title": "IBDP mi IBCP mi? Uluslararası Bakalorya Seçim Rehberi",
+      "excerpt": "IBDP ve IBCP programları arasındaki farkları inceleyin, öğrenciniz için en doğru yurt dışı lise akademik rotasını birlikte belirleyin.",
+      "category": "Lise",
+      "categoryHref": "/blog/lise/",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "published": "2026-03-31",
       "href": "/blog/yuksek-lisans-mba/yurt-disinda-yuksek-lisans-kariyer-sicramasi/",
       "title": "Yurt Dışında Yüksek Lisans: Diploma mı, Kariyer Sıçraması mı?",
       "excerpt": "Yurt dışında yüksek lisans kariyerinizi nasıl değiştirir? Stratejik program seçimi, çalışma izni ve global network rehberimiz.",
