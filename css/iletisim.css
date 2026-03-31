@@ -234,59 +234,25 @@ body.sayfa-iletisim article.icerik-alani.iletisim-sayfa > h1.sayfa-ana-baslik .v
     border-radius: 16px;
 }
 
-/* ---------- BİLGİ İSTEK FORMU: style.css ile aynı — başlık sr-only (lacivert etiket yok) ---------- */
-.iletisim-sayfa .iletisim-form-alani {
+/* ---------- BİLGİ İSTEK FORMU: Tokyo vb. iç sayfalarla aynı — kırmızı bant + .iletisim-form-alani (style.css sr-only h2) ---------- */
+.iletisim-sayfa .ofis-harita-section + .kirmizi-kutu {
     margin-top: 50px;
-    padding: 32px 28px 28px !important;
-    max-width: 1200px;
 }
 
-/* ---------- SSS: gri çerçeve — başlık içeride normal ---------- */
+.iletisim-sayfa .iletisim-form-alani > p:first-of-type {
+    margin-top: 25px;
+}
+
+/* ---------- SSS: gri çerçeve; başlık style.css yüzen lacivert bant (kutu-baslik + sss-baslik) ---------- */
 .iletisim-sayfa .iletisim-sss-kutu {
     margin-top: 55px;
 }
 
+/* SSS: style.css — yüzen lacivert h2.kutu-baslik + gri çerçeve (üniversite vb. ile aynı) */
 .iletisim-sayfa .iletisim-sss-kutu.gri-cerceve-kutu {
     border-radius: 16px;
     box-shadow: 0 4px 24px rgba(0, 0, 128, 0.06);
     max-width: 1200px;
-    padding: 28px 22px 22px !important;
-}
-
-.iletisim-sayfa .iletisim-sss-kutu h2.kutu-baslik,
-.iletisim-sayfa .iletisim-sss-kutu h2.sss-baslik {
-    position: static !important;
-    transform: none !important;
-    left: auto !important;
-    top: auto !important;
-    display: block !important;
-    flex-direction: unset !important;
-    align-items: unset !important;
-    background: transparent !important;
-    color: #000080 !important;
-    font-size: 26px !important;
-    font-weight: 700 !important;
-    margin: 0 0 20px 0 !important;
-    padding: 0 !important;
-    border-radius: 0 !important;
-    line-height: 1.35 !important;
-    text-align: center;
-    text-transform: none !important;
-    white-space: normal !important;
-    max-width: none !important;
-}
-
-@media (max-width: 501px) {
-    .iletisim-sayfa .iletisim-sss-kutu h2.kutu-baslik,
-    .iletisim-sayfa .iletisim-sss-kutu h2.sss-baslik {
-        left: auto !important;
-        transform: none !important;
-        font-size: 20px !important;
-    }
-}
-
-.iletisim-sayfa .iletisim-sss-kutu .sss-alani {
-    padding-top: 0;
 }
 
 /* ---------- RESPONSİVE ---------- */
