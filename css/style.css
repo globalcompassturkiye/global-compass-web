@@ -3232,8 +3232,8 @@ body.ana-sayfa .guven-rozetleri .rozet-item {
         flex-direction: row;           /* Yatay hizala */
         align-items: center;           /* Dikeyde ortala */
         justify-content: flex-end;     /* En sağa yasla */
-        gap: 4px !important;           /* Aradaki boşluk */
-        padding-right: 5px !important; /* Sağdan 5px boşluk */
+        gap: 2px !important;           /* Aradaki boşluk */
+        padding-right: 0 !important;   /* Sağdan boşluk yok */
     }
     .sosyal-medya-alani a {
         width: 32px;
@@ -4349,9 +4349,9 @@ body.ana-sayfa {
     }
 
     .sosyal-medya-alani {
-        gap: 4px;
+        gap: 2px;
         justify-content: flex-end;
-        padding-right: 5px;
+        padding-right: 0;
     }
 
     .nav-toggle {
@@ -4823,8 +4823,8 @@ body.ana-sayfa {
         display: flex !important;
         justify-content: flex-end !important;
         align-items: center !important;
-        gap: 4px !important;
-        padding-right: 5px !important;
+        gap: 2px !important;
+        padding-right: 0 !important;
     }
 
     .ust-menu .navigasyon > ul {
