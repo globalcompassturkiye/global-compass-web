@@ -72,16 +72,16 @@ body.ana-sayfa .hizmet-tab-alani .alt-tab-etiket {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    padding: 8px 25px;
+    padding: 10px 26px;
     font-weight: 600;
     cursor: pointer;
     color: #ffffff;
     background: #2c3e50;
     border: none;
-    border-radius: 0;
+    border-radius: 15px;
     margin: 4px 8px 4px 0;
     text-transform: none;
-    font-size: 14px;
+    font-size: 15px;
     letter-spacing: 0;
     box-shadow: none;
     transition: transform 0.25s ease, box-shadow 0.25s ease,
@@ -94,12 +94,13 @@ body.ana-sayfa .hizmet-tab-alani .alt-tab-etiket {
 body.ana-sayfa .hizmet-tab-alani .ana-tab-etiket {
     margin-top: 0;
     margin-bottom: 0;
+    font-weight: 700;
 }
 
 /* Ana ve alt tab butonları için ortak hover animasyonu */
 body.ana-sayfa .hizmet-tab-alani .ana-tab-etiket:hover,
 body.ana-sayfa .hizmet-tab-alani .alt-tab-etiket:hover {
-    transform: translateX(5px);
+    transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
     background: #e74c3c;
     color: #ffffff;
@@ -112,7 +113,7 @@ body.ana-sayfa #tab-yaz:checked ~ label[for="tab-yaz"] {
     color: #ffffff !important;
     border-color: transparent !important;
     box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
-    transform: translateX(5px);
+    transform: translateY(-1px);
 }
 
 /* 3. Ana Panel Gösterimi */
@@ -125,12 +126,17 @@ body.ana-sayfa #tab-yaz:checked ~ label[for="tab-yaz"] {
     margin-top: 10px;
     padding-top: 10px;
     border-top: 1px solid rgba(148, 163, 184, 0.2);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
 }
 
 /* Alt sekmeler – sadece boyut farkı (daha küçük) */
 body.ana-sayfa .hizmet-tab-alani .alt-tab-etiket {
     padding: 6px 14px;
     font-size: 12px;
+    font-weight: 600;
+    border-radius: 15px;
 }
 
 /* Ana sekme butonları: üst ve alt gri çerçeve ile alt çizgi arasında
@@ -163,6 +169,7 @@ body.ana-sayfa .hizmet-tab-alani .ana-tab-etiket {
     margin-top: 20px;
     margin-bottom: 25px; /* Altında 25px dış boşluk */
     width: 100%;
+    white-space: normal;
 }
 #dil-ing:checked ~ #panel-dil-ing,
 #dil-usa:checked ~ #panel-dil-usa,
@@ -185,6 +192,11 @@ body.ana-sayfa .hizmet-tab-alani .ana-tab-etiket {
     margin-bottom: 14px;
     width: 100%;
     text-align: center;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 4px;
+    padding-top: 10px;
+    border-top: 1px solid #e5e7eb;
 }
 
 #yaz-ing:checked ~ #yaz-sehir-ing,
@@ -194,7 +206,7 @@ body.ana-sayfa .hizmet-tab-alani .ana-tab-etiket {
 #yaz-japonya:checked ~ #yaz-sehir-japonya,
 #yaz-amerika:checked ~ #yaz-sehir-amerika {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     gap: 8px;
 }
@@ -202,9 +214,14 @@ body.ana-sayfa .hizmet-tab-alani .ana-tab-etiket {
 #dil-ing:checked ~ #dil-sehir-ing,
 #dil-usa:checked ~ #dil-sehir-usa {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     gap: 8px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 4px;
+    padding-top: 10px;
+    border-top: 1px solid #e5e7eb;
 }
 
 /* Sehir secimine gore okul listesi filtreleme */
@@ -323,15 +340,17 @@ body.ana-sayfa .hizmet-tab-alani .alt-panel .tab-ic-icerik {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 8px 18px;
+    padding: 6px 12px;
     border: none;
     color: #ffffff;
     background: #2c3e50;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
     line-height: 1.2;
     transition: all 0.3s ease;
+    border-radius: 15px;
+    flex: 0 0 auto;
 }
 
 #yaz-ing-londra:checked ~ #yaz-sehir-ing label[for="yaz-ing-londra"],
@@ -357,7 +376,7 @@ body.ana-sayfa .hizmet-tab-alani .alt-panel .tab-ic-icerik {
 .sehir-buton:hover {
     background: #e74c3c;
     color: #ffffff;
-    transform: translateX(5px);
+    transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
 }
 
@@ -375,8 +394,8 @@ body.ana-sayfa .hizmet-tab-alani .alt-panel .tab-ic-icerik {
        böylece 768 altı ekranda da daha geç alt satıra geçerler */
     .ana-tab-etiket {
         width: auto;
-        padding: 10px 14px;
-        font-size: 13px;
+        padding: 9px 16px;
+        font-size: 14px;
         margin-right: 8px;
         margin-bottom: 8px;
     }
@@ -392,6 +411,54 @@ body.ana-sayfa .hizmet-tab-alani .alt-panel .tab-ic-icerik {
 @media (max-width: 500px) {
     .tab-link-listesi li a {
         font-size: 13px;
+    }
+
+    /* Mobilde sağa taşma yerine butonlar aşağı aksın */
+    body.ana-sayfa .hizmet-tab-alani,
+    .alt-tab-kapsayici,
+    .yaz-sehir-satiri,
+    #dil-ing:checked ~ #dil-sehir-ing,
+    #dil-usa:checked ~ #dil-sehir-usa,
+    #yaz-ing:checked ~ #yaz-sehir-ing,
+    #yaz-almanya:checked ~ #yaz-sehir-almanya,
+    #yaz-kanada:checked ~ #yaz-sehir-kanada,
+    #yaz-italya:checked ~ #yaz-sehir-italya,
+    #yaz-japonya:checked ~ #yaz-sehir-japonya,
+    #yaz-amerika:checked ~ #yaz-sehir-amerika {
+        overflow-x: visible !important;
+        white-space: normal !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+    }
+
+    /* 1) Ana sekmeler - daha büyük ama mobilde sığacak ölçü */
+    body.ana-sayfa .hizmet-tab-alani .ana-tab-etiket {
+        font-size: 13px;
+        padding: 8px 12px;
+        margin: 4px;
+    }
+
+    /* 2) Ülke sekmeleri - daha küçük */
+    body.ana-sayfa .hizmet-tab-alani .alt-tab-etiket {
+        font-size: 11px;
+        padding: 5px 10px;
+        margin: 4px;
+    }
+
+    /* 3) Şehir sekmeleri - en kompakt */
+    .sehir-buton {
+        font-size: 11px;
+        padding: 5px 9px;
+        margin: 3px;
+        flex: 0 1 auto;
+    }
+
+    body.ana-sayfa .hizmet-tab-alani .ana-tab-etiket:hover,
+    body.ana-sayfa .hizmet-tab-alani .alt-tab-etiket:hover,
+    body.ana-sayfa #tab-dil:checked ~ label[for="tab-dil"],
+    body.ana-sayfa #tab-yaz:checked ~ label[for="tab-yaz"],
+    .sehir-buton:hover {
+        transform: none !important;
     }
 }
 

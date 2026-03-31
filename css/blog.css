@@ -30,6 +30,20 @@ body.sayfa-blog-kategori {
     margin-bottom: 0.35rem;
 }
 
+.blog-baslik-lacivert {
+    color: #000080;
+}
+
+.blog-baslik-kirmizi {
+    color: #c41e3a;
+}
+
+.blog-baslik-ayrac {
+    color: #cbd5e1;
+    font-weight: 400;
+    padding: 0 0.2rem;
+}
+
 .blog-sayfa-alt {
     font-size: 1rem;
     color: #5c6b7a;
@@ -254,6 +268,14 @@ body.sayfa-blog:not(.sayfa-blog-kategori) .blog-yazi-grid:has(> article.blog-yaz
     transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
+.blog-kart-tum-link {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    color: inherit;
+    text-decoration: none;
+}
+
 .blog-yazi-karti:hover {
     box-shadow: 0 10px 30px rgba(15, 23, 42, 0.1);
     transform: translateY(-2px);
@@ -303,7 +325,7 @@ body.sayfa-blog .blog-kart-gorsel-link {
 }
 
 .blog-kart-etiket a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .blog-kart-baslik {

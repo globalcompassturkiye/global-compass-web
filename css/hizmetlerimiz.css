@@ -192,7 +192,7 @@ body.sayfa-hizmetlerimiz article.icerik-alani.hizmetlerimiz-sayfa section > h2.h
 .hizmet-adim-numarasi {
     position: absolute;
     top: 12px;
-    right: 12px;
+    left: 12px;
     width: 24px;
     height: 24px;
     background: linear-gradient(135deg, #bd0505, #dc2626);
@@ -209,6 +209,7 @@ body.sayfa-hizmetlerimiz article.icerik-alani.hizmetlerimiz-sayfa section > h2.h
 .hizmet-adim-ikon {
     font-size: 32px;
     margin-bottom: 16px;
+    margin-top: 8px;
 }
 
 .hizmet-adim-baslik {

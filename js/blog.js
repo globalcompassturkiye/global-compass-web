@@ -126,7 +126,43 @@
     initBlogTOC(container);
   }
 
+  function parseCardPublishedTs(card) {
+    var iso = card.getAttribute('data-published') || '';
+    if (!iso) {
+      var t = card.querySelector('time[datetime]');
+      if (t) iso = t.getAttribute('datetime') || '';
+    }
+    if (!iso) return 0;
+    var ts = Date.parse(iso);
+    return isNaN(ts) ? 0 : ts;
+  }
+
+  function initBlogListingSort() {
+    var grids = document.querySelectorAll('.blog-yazi-grid');
+    if (!grids.length) return;
+
+    grids.forEach(function (grid) {
+      var cards = Array.prototype.slice.call(grid.querySelectorAll(':scope > .blog-yazi-karti'));
+      if (cards.length < 2) return;
+
+      var withMeta = cards.map(function (el, idx) {
+        return { el: el, ts: parseCardPublishedTs(el), idx: idx };
+      });
+
+      withMeta.sort(function (a, b) {
+        if (b.ts !== a.ts) return b.ts - a.ts; // yeni -> eski
+        return a.idx - b.idx;
+      });
+
+      withMeta.forEach(function (item) {
+        grid.appendChild(item.el);
+      });
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
+    initBlogListingSort();
+
     var detail = document.querySelector('.blog-yazi-detay');
     if (detail) {
       if (detail.querySelector('.blog-yazi-icerik[data-blog-toc-auto]')) {

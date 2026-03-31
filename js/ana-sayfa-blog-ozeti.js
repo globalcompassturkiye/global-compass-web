@@ -20,6 +20,20 @@
     return isNaN(t) ? 0 : t;
   }
 
+  function formatDateTR(iso) {
+    var ts = parseDate(iso);
+    if (!ts) return '';
+    try {
+      return new Date(ts).toLocaleDateString('tr-TR', {
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric'
+      });
+    } catch (e) {
+      return '';
+    }
+  }
+
   function render(root, posts) {
     var grid = root.querySelector('.ana-sayfa-blog-ozeti-grid');
     if (!grid) return;
@@ -33,41 +47,36 @@
       var img = '';
       if (p.image) {
         img =
-          '<a class="ana-sayfa-blog-kart-gorsel" href="' +
-          escapeHtml(p.href) +
-          '" tabindex="-1" aria-hidden="true">' +
+          '<span class="ana-sayfa-blog-kart-gorsel" aria-hidden="true">' +
           '<img src="' +
           escapeHtml(p.image) +
           '" alt="' +
           escapeHtml(p.imageAlt || '') +
           '" width="400" height="250" loading="lazy" decoding="async" itemprop="image">' +
-          '</a>';
+          '</span>';
       }
       var cat = '';
-      if (p.category && p.categoryHref) {
-        cat =
-          '<a class="ana-sayfa-blog-kart-kategori" href="' +
-          escapeHtml(p.categoryHref) +
-          '">' +
-          escapeHtml(p.category) +
-          '</a>';
-      } else if (p.category) {
+      if (p.category) {
         cat = '<span class="ana-sayfa-blog-kart-kategori">' + escapeHtml(p.category) + '</span>';
       }
       art.innerHTML =
+        '<a class="ana-sayfa-blog-kart-tum-link" href="' +
+        escapeHtml(p.href) +
+        '" itemprop="url">' +
         img +
         '<div class="ana-sayfa-blog-kart-icerik">' +
         cat +
         '<h3 class="ana-sayfa-blog-kart-baslik" itemprop="headline">' +
-        '<a href="' +
-        escapeHtml(p.href) +
-        '" itemprop="url">' +
         escapeHtml(p.title) +
-        '</a></h3>' +
+        '</h3>' +
         '<p class="ana-sayfa-blog-kart-ozet" itemprop="description">' +
         escapeHtml(p.excerpt) +
         '</p>' +
-        '</div>';
+        '<p class="ana-sayfa-blog-kart-meta">' +
+        escapeHtml(formatDateTR(p.published)) +
+        '</p>' +
+        '</div>' +
+        '</a>';
       grid.appendChild(art);
     });
   }
@@ -90,9 +99,6 @@
         if (!top.length) {
           root.classList.add('ana-sayfa-blog-ozeti--bos');
           return;
-        }
-        if (top.length < MAX) {
-          root.classList.add('ana-sayfa-blog-ozeti--eksik');
         }
         root.classList.remove('ana-sayfa-blog-ozeti--yukleniyor');
         render(root, top);

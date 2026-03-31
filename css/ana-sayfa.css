@@ -5,8 +5,12 @@
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    padding: 2.5rem 0 2.75rem;
+    padding: 0 0 2.75rem;
     box-sizing: border-box;
+}
+
+.ana-sayfa-blog-ozeti-wrap {
+    margin-top: 25px;
 }
 
 .ana-sayfa-blog-ozeti-inner {
@@ -56,7 +60,7 @@
     line-height: 1.65;
     color: #64748b;
     margin: 0 auto;
-    max-width: 36em;
+    max-width: 1200px;
 }
 
 .ana-sayfa-blog-ozeti-grid {
@@ -78,11 +82,6 @@
     }
 }
 
-.ana-sayfa-blog-ozeti--eksik .ana-sayfa-blog-ozeti-grid {
-    grid-template-columns: minmax(0, 440px);
-    justify-content: center;
-}
-
 .ana-sayfa-blog-kart {
     display: flex;
     flex-direction: column;
@@ -95,6 +94,14 @@
 .ana-sayfa-blog-kart:hover {
     box-shadow: 0 10px 32px rgba(15, 23, 42, 0.1);
     transform: translateY(-2px);
+}
+
+.ana-sayfa-blog-kart-tum-link {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    color: inherit;
+    text-decoration: none;
 }
 
 .ana-sayfa-blog-kart-gorsel {
@@ -131,7 +138,7 @@
 }
 
 .ana-sayfa-blog-kart-kategori:hover {
-    text-decoration: underline;
+    text-decoration: none;
     color: #9e1830;
 }
 
@@ -141,15 +148,8 @@
     line-height: 1.35;
     margin: 0 0 0.5rem;
 }
-
-.ana-sayfa-blog-kart-baslik a {
-    color: #0f172a;
-    text-decoration: none;
-}
-
-.ana-sayfa-blog-kart-baslik a:hover {
-    color: #c41e3a;
-}
+.ana-sayfa-blog-kart-baslik { color: #0f172a; }
+.ana-sayfa-blog-kart-tum-link:hover .ana-sayfa-blog-kart-baslik { color: #c41e3a; }
 
 .ana-sayfa-blog-kart-ozet {
     font-size: 15px;
@@ -157,6 +157,12 @@
     color: #475569;
     margin: 0;
     flex: 1;
+}
+
+.ana-sayfa-blog-kart-meta {
+    font-size: 0.8rem;
+    color: #94a3b8;
+    margin-top: 0.75rem;
 }
 
 .ana-sayfa-blog-ozeti-alt-aksiyon {
