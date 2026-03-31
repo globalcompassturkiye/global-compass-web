@@ -3232,8 +3232,8 @@ body.ana-sayfa .guven-rozetleri .rozet-item {
         flex-direction: row;           /* Yatay hizala */
         align-items: center;           /* Dikeyde ortala */
         justify-content: flex-end;     /* En sağa yasla */
-        gap: 8px !important;           /* Aradaki boşluk */
-        padding-right: 25px !important;/* Sağdan 25px boşluk */
+        gap: 4px !important;           /* Aradaki boşluk */
+        padding-right: 5px !important; /* Sağdan 5px boşluk */
     }
     .sosyal-medya-alani a {
         width: 32px;
@@ -4349,13 +4349,15 @@ body.ana-sayfa {
     }
 
     .sosyal-medya-alani {
-        gap: 12px;
+        gap: 4px;
+        justify-content: flex-end;
+        padding-right: 5px;
     }
 
     .nav-toggle {
         display: flex;
-        left: auto !important;
-        right: 24px !important;
+        left: 24px;
+        right: auto;
         /* 501-768 ile aynı üst boşluk */
         top: 5px;
         transform: none;
@@ -4363,8 +4365,8 @@ body.ana-sayfa {
     .ust-menu .nav-toggle {
         top: 5px;
         bottom: auto;
-        left: auto !important;
-        right: 24px !important;
+        left: 24px;
+        right: auto;
         transform: none;
     }
     /* Tam ekran genişliği yerine sol çekmece — hamburger ile hizalı */
@@ -4821,7 +4823,8 @@ body.ana-sayfa {
         display: flex !important;
         justify-content: flex-end !important;
         align-items: center !important;
-        gap: 8px !important;
+        gap: 4px !important;
+        padding-right: 5px !important;
     }
 
     .ust-menu .navigasyon > ul {
@@ -4879,7 +4882,7 @@ body.ana-sayfa {
         display: flex !important;
         justify-content: flex-end !important;
         align-items: center !important;
-        gap: 12px !important;
+        gap: 6px !important;
     }
 
     .ust-menu .navigasyon > ul > li.nav-logo-item {
@@ -4954,8 +4957,8 @@ body.ana-sayfa {
     /* 768px altı: ana menüyü kapat, hamburger simgesini aç */
     .nav-toggle {
         display: flex;
-        left: auto !important;
-        right: 24px !important;
+        left: 24px;
+        right: auto;
         /* İkon üst boşluğu sabit (10px) */
         top: 5px;
         transform: none;
@@ -4963,8 +4966,8 @@ body.ana-sayfa {
     .ust-menu .nav-toggle {
         top: 5px;
         bottom: auto;
-        left: auto !important;
-        right: 24px !important;
+        left: 24px;
+        right: auto;
         transform: none;
     }
 
