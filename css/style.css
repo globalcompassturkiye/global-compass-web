@@ -75,7 +75,7 @@ strong {
    ========================================= */
 
 .ana-sayfa-slogan {
-    font-size: 18px;
+    font-size: 22px;
     color: #000000;               /* Siyah */
     font-weight: 700;             /* Güçlü ve profesyonel bir duruş (Bold) */
     margin-top: 0;                /* p öğesi; üst boşluk h1 ile hizalı kalsın */
@@ -3210,7 +3210,7 @@ p + .kirmizi-kutu {
 }
 
 .rozet-item {
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 700;  /* Daha kalın */
     color: #bd0505;    /* Kırmızı */
 }
@@ -3221,7 +3221,7 @@ p + .kirmizi-kutu {
     .ana-karsilama-alt-baslik { font-size: 18px; }
     .karsilama-aksiyon { flex-direction: column; }
     .guven-rozetleri { flex-direction: column; gap: 4px; }
-    .rozet-item { font-size: 18px; }
+    .rozet-item { font-size: 22px; }
     .sosyal-medya-alani {
         flex-direction: row;           /* Yatay hizala */
         align-items: center;           /* Dikeyde ortala */
