@@ -4883,6 +4883,7 @@ body.ana-sayfa {
         justify-content: flex-end !important;
         align-items: center !important;
         gap: 0 !important;
+        margin-right: -6px;
     }
 
     .ust-menu .navigasyon > ul > li.nav-logo-item {
@@ -4893,6 +4894,11 @@ body.ana-sayfa {
 @media (max-width: 501px) {
     .ust-serit-kapsayici {
         justify-content: center;
+    }
+
+    .sabit-ust-alan .ust-menu .ust-alan .sosyal-medya-alani {
+        gap: 2px !important;
+        margin-right: -6px;
     }
 
     .yardimci-menu ul {
