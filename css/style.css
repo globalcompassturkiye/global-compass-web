@@ -3215,6 +3215,12 @@ p + .kirmizi-kutu {
     color: #bd0505;    /* Kırmızı */
 }
 
+/* Ana sayfa hero metinleri — kesin 22px */
+body.ana-sayfa .ana-sayfa-slogan,
+body.ana-sayfa .guven-rozetleri .rozet-item {
+    font-size: 22px !important;
+}
+
 /* Tablet: ana hero h1 — masaüstü ile aynı 33px */
 @media (max-width: 768px) {
     .karsilama-icerik h1 { font-size: 33px !important; }
