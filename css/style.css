@@ -4882,7 +4882,7 @@ body.ana-sayfa {
         display: flex !important;
         justify-content: flex-end !important;
         align-items: center !important;
-        gap: 0 !important;
+        gap: 4px !important;
         margin-right: -6px;
     }
 
@@ -4897,7 +4897,7 @@ body.ana-sayfa {
     }
 
     .sabit-ust-alan .ust-menu .ust-alan .sosyal-medya-alani {
-        gap: 2px !important;
+        gap: 4px !important;
         margin-right: -6px;
     }
 
