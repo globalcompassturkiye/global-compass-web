@@ -2,6 +2,16 @@
   "posts": [
     {
       "published": "2026-03-31",
+      "href": "/blog/lise/isvicre-lise-diplomasi-vs-ib/",
+      "title": "İsviçre Lise Eğitimi İsviçre Lise Diploması mı, IB mi?",
+      "excerpt": "İsviçre'de lise eğitimi: Maturité ve IB farklarını keşfedin. Üniversite kabulünde hangi diploma daha avantajlı?",
+      "category": "Lise",
+      "categoryHref": "/blog/lise/",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "published": "2026-03-31",
       "href": "/blog/lise/ibdp-ve-ibcp-farki-hangisi-daha-iyi/",
       "title": "IBDP mi IBCP mi? Uluslararası Bakalorya Seçim Rehberi",
       "excerpt": "IBDP ve IBCP programları arasındaki farkları inceleyin, öğrenciniz için en doğru yurt dışı lise akademik rotasını birlikte belirleyin.",

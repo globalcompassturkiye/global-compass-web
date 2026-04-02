@@ -37,11 +37,10 @@
     font-size: 16px;
     font-weight: 600;
     line-height: 1.35;
-    color: #ffffff !important;
+    color: #00235d !important;
 }
-.cambridge-form-bant + .iletisim-form-alani { margin-top: 0 !important; border-top-left-radius: 0; border-top-right-radius: 0; padding-top: 25px; }
+.cambridge-form-bant + .iletisim-form-alani { margin-top: 0 !important; border-top-left-radius: 0; border-top-right-radius: 0; padding-top: 0; }
 .cambridge-form-bant + .iletisim-form-alani > h2:first-child { margin-top: 0; padding-top: 0; }
-.cambridge-form-bant + .iletisim-form-alani > p:first-of-type { margin-top: 0; padding-top: 0; }
 
 .cambridge-program-rozet-kutu .cambridge-program-rozet-grid > .dahil-rozet-kart:nth-child(3) {
     grid-column: 1 / -1;

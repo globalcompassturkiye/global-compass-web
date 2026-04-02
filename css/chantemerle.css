@@ -27,16 +27,56 @@
     border-radius: 8px;
 }
 
+/* Galeri: 7 görsel — masaüstünde 4 + 3; alt sıradaki 3 ortada, tüm hücreler aynı boyut */
 .chantemerle-galeri-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(8, minmax(0, 1fr));
     gap: 16px;
     margin-top: 12px;
+    align-items: stretch;
 }
 
 .chantemerle-galeri-gorsel {
+    display: block;
     width: 100%;
+    aspect-ratio: 4 / 3;
     height: auto;
     border-radius: 8px;
     object-fit: cover;
+}
+
+/* İlk 4 görsel: her biri 2 sütun (toplam 8) */
+.chantemerle-galeri-grid .chantemerle-galeri-gorsel:nth-child(-n + 4) {
+    grid-column: span 2;
+}
+
+/* Son 3 görsel: ortada (yanlarda boş sütun) */
+.chantemerle-galeri-grid .chantemerle-galeri-gorsel:nth-child(5) {
+    grid-column: 2 / span 2;
+}
+
+.chantemerle-galeri-grid .chantemerle-galeri-gorsel:nth-child(6) {
+    grid-column: 4 / span 2;
+}
+
+.chantemerle-galeri-grid .chantemerle-galeri-gorsel:nth-child(7) {
+    grid-column: 6 / span 2;
+}
+
+@media (max-width: 768px) {
+    .chantemerle-galeri-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .chantemerle-galeri-grid .chantemerle-galeri-gorsel:nth-child(n) {
+        grid-column: auto;
+    }
+
+    /* Tek başına kalan 7. görseli ortala, genişlik diğerleriyle uyumlu */
+    .chantemerle-galeri-grid .chantemerle-galeri-gorsel:nth-child(7) {
+        grid-column: 1 / -1;
+        justify-self: center;
+        width: min(100%, calc((100% - 12px) / 2));
+    }
 }

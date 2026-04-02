@@ -1,0 +1,260 @@
+/* İsviçre Lise Diploması vs IB — blog yazısı özel düzen */
+
+body.blog-yazi-isvicre-ib article.blog-yazi-detay {
+    font-family: "Poppins", system-ui, sans-serif;
+}
+
+body.blog-yazi-isvicre-ib .blog-yazi-baslik-wrap .blog-yazi-meta-alt {
+    font-family: "Poppins", system-ui, sans-serif;
+}
+
+.isvicre-blog-hero {
+    background: linear-gradient(180deg, #f1f5f9 0%, #e8eef5 100%);
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: clamp(1.25rem, 4vw, 2.25rem) clamp(1rem, 3vw, 2rem);
+    margin-bottom: 1.75rem;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8) inset;
+}
+
+/* H1: diğer blog yazılarıyla aynı — blog.css .blog-yazi-ana-baslik + .vurgu-renk */
+body.blog-yazi-isvicre-ib .blog-yazi-baslik-wrap .blog-yazi-ana-baslik {
+    font-family: "Poppins", system-ui, sans-serif;
+}
+
+.isvicre-blog-hero-lead {
+    font-family: "Poppins", system-ui, sans-serif;
+    font-size: 1.08rem;
+    line-height: 1.75;
+    color: #334155;
+    margin: 0 0 1rem;
+}
+
+.isvicre-blog-hero-lead:last-child {
+    margin-bottom: 0;
+}
+
+/* Karşılaştırma kartları */
+.isvicre-karsilastirma-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(1rem, 3vw, 1.5rem);
+    margin: 1.75rem 0 2rem;
+}
+
+.isvicre-karsilastirma-grid--tek {
+    margin-top: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .isvicre-karsilastirma-grid:not(.isvicre-karsilastirma-grid--tek) {
+        grid-template-columns: 1fr 1fr;
+        align-items: stretch;
+    }
+}
+
+.isvicre-karsilastirma-kart {
+    background: #fff;
+    border: 1px solid #e8ecf1;
+    border-radius: 14px;
+    padding: clamp(1rem, 3vw, 1.35rem) clamp(1rem, 3vw, 1.25rem) 1.25rem;
+    box-shadow: 0 8px 28px rgba(15, 23, 42, 0.06);
+}
+
+.isvicre-karsilastirma-kart--isvicre {
+    border-top: 4px solid #3b82f6;
+}
+
+.isvicre-karsilastirma-kart--ib {
+    border-top: 4px solid #d4a853;
+}
+
+.isvicre-karsilastirma-kart-baslik {
+    font-family: "Poppins", system-ui, sans-serif;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.35;
+    color: #0f172a;
+    margin: 0 0 0.85rem;
+}
+
+.isvicre-onay-liste {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.isvicre-onay-liste li {
+    display: flex;
+    gap: 0.65rem;
+    align-items: flex-start;
+    font-size: 15px;
+    line-height: 1.65;
+    color: #334155;
+    margin-bottom: 0.75rem;
+}
+
+.isvicre-onay-liste li:last-child {
+    margin-bottom: 0;
+}
+
+.isvicre-onay-ikon {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    margin-top: 0.15rem;
+    color: #059669;
+}
+
+.isvicre-karsilastirma-kart--ib .isvicre-onay-ikon {
+    color: #b45309;
+}
+
+/* Satır içi etiket (ör. "Devlet Üniversitelerine Doğrudan Geçiş:") */
+.isvicre-satir-ici-baslik {
+    font-family: "Poppins", system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+}
+
+.isvicre-karsilastirma-kart--isvicre .isvicre-satir-ici-baslik {
+    color: #1e40af;
+}
+
+.isvicre-karsilastirma-kart--ib .isvicre-satir-ici-baslik {
+    color: #a16207;
+}
+
+.isvicre-satir-ici-baslik--strateji {
+    color: #0f172a;
+}
+
+.isvicre-satir-ici-baslik--not {
+    color: #713f12;
+}
+
+/* Önemli not — ince sol çizgi */
+.isvicre-bilgi-notu {
+    margin: 1.5rem 0;
+    padding: 0.85rem 1rem 0.85rem 1rem;
+    border-left: 4px solid #6366f1;
+    background: #fafbfc;
+    border-radius: 0 10px 10px 0;
+}
+
+.isvicre-bilgi-notu--uyari {
+    border-left-color: #ca8a04;
+}
+
+.isvicre-bilgi-notu-baslik {
+    font-family: "Poppins", system-ui, sans-serif;
+    font-size: 14.5px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #1e293b;
+    margin: 0 0 0.4rem;
+}
+
+.isvicre-bilgi-notu p {
+    font-family: "Poppins", system-ui, sans-serif;
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #475569;
+}
+
+/* Strateji / karar matrisi */
+.isvicre-strateji-bolum {
+    margin: 2rem 0 1.5rem;
+}
+
+.isvicre-strateji-baslik {
+    font-family: "Poppins", system-ui, sans-serif;
+    font-size: clamp(1.2rem, 2.5vw, 1.45rem);
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 0.65rem;
+    line-height: 1.3;
+}
+
+.isvicre-strateji-giris {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #475569;
+    margin: 0 0 1.25rem;
+}
+
+.isvicre-strateji-paragraflar p {
+    font-family: "Poppins", system-ui, sans-serif;
+    margin: 0 0 1rem;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #475569;
+}
+
+.isvicre-strateji-paragraflar p:last-child {
+    margin-bottom: 0;
+}
+
+/* Danışman paneli CTA */
+.isvicre-danisman-paneli {
+    margin-top: 2.5rem;
+    padding: clamp(1.35rem, 4vw, 2rem);
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    box-shadow: 0 12px 40px rgba(15, 23, 42, 0.1), 0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+.isvicre-danisman-paneli-baslik {
+    font-family: "Poppins", system-ui, sans-serif;
+    font-size: clamp(1.2rem, 2.5vw, 1.4rem);
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 1rem;
+    line-height: 1.35;
+}
+
+.isvicre-danisman-paneli p {
+    font-size: 15px;
+    line-height: 1.75;
+    color: #475569;
+    margin: 0 0 1rem;
+}
+
+.isvicre-danisman-paneli p:last-of-type {
+    margin-bottom: 0;
+}
+
+.isvicre-danisman-paneli-cta-satiri {
+    margin-top: 1.25rem;
+    padding-top: 1.15rem;
+    border-top: 1px solid #e2e8f0;
+}
+
+.isvicre-danisman-paneli .blog-buton-birincil {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* blog-yazi-icerik tipografisi blog.css’ten gelir; font ailesi article’dan miras alınır */
+
+@media (max-width: 767px) {
+    .isvicre-blog-hero {
+        padding: 1.15rem 1rem;
+        margin-bottom: 1.35rem;
+    }
+
+    .isvicre-karsilastirma-grid {
+        margin: 1.35rem 0 1.5rem;
+    }
+
+    .isvicre-danisman-paneli {
+        margin-top: 2rem;
+        padding: 1.2rem 1rem;
+    }
+}

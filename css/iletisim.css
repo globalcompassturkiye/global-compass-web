@@ -239,10 +239,6 @@ body.sayfa-iletisim article.icerik-alani.iletisim-sayfa > h1.sayfa-ana-baslik .v
     margin-top: 50px;
 }
 
-.iletisim-sayfa .iletisim-form-alani > p:first-of-type {
-    margin-top: 25px;
-}
-
 /* ---------- SSS: gri çerçeve; başlık style.css yüzen lacivert bant (kutu-baslik + sss-baslik) ---------- */
 .iletisim-sayfa .iletisim-sss-kutu {
     margin-top: 55px;

@@ -1,0 +1,203 @@
+/* Adım 2 (style.css bölünmesi): site-haritasi-yolu, breadcrumb-kutu.
+   Tüm sayfalarda style.css ile birlikte yüklenir. */
+
+/* ===== MIGRATED FROM bread-crumb.css ===== */
+/* =========================================
+    SİTE HARİTASI (MODERN ETİKET TASARIMI)
+    Tüm Cihazlar İçin Ortak & Responsive
+   ========================================= */
+/* Site haritası: tüm genişliklerde ≤501px “harika” ölçüleri (tek tip) */
+.site-haritasi-yolu {
+    width: 100%;
+    background-color: #fdfdfd; /* Çok hafif zemin rengi */
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* article.icerik-alani yan gutter ile breadcrumb padding üst üste binmesin; kenar ↔ home ikonu arası tek ince pay */
+@media (max-width: 1200px) {
+    .icerik-alani .site-haritasi-yolu {
+        margin-left: calc(-1 * var(--icerik-yan-gutter));
+        margin-right: calc(-1 * var(--icerik-yan-gutter));
+        width: calc(100% + 2 * var(--icerik-yan-gutter));
+        box-sizing: border-box;
+    }
+}
+
+.breadcrumb-kutu {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 10px 6px;
+    display: flex;
+    flex-wrap: wrap; /* Sığmadığında paket halinde alta geçer */
+    align-items: center;
+    gap: 4px;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/* Metin etiketleri (home ikonu hariç): ince yan pay, uzun başlıklar sarılabilir */
+.breadcrumb-kutu a:not(.ana-sayfa-ikon),
+.breadcrumb-kutu .su-anki-sayfa {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #f4f6f8;
+    color: #000080 !important; /* Senin kurumsal lacivertin */
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 6px 5px;
+    min-height: 32px;
+    border-radius: 4px;
+    border: 1px solid #e0e4e8;
+    transition: all 0.3s ease;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-wrap: break-word;
+    line-height: 1.35;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Masaüstünde Hover Etkisi */
+.breadcrumb-kutu a:hover {
+    background-color: #000080;
+    color: #ffffff !important;
+    border-color: #000080;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,128,0.1);
+}
+
+/* Üzerinde Bulunulan Sayfa Vurgusu */
+.breadcrumb-kutu .su-anki-sayfa {
+    background-color: #000080;
+    color: #ffffff !important;
+    border: 1px solid #000080;
+    cursor: default;
+}
+
+/* Ayraç (› / >) — kutu metninden belirgin şekilde büyük */
+.breadcrumb-kutu .ayrac,
+.breadcrumb-kutu .breadcrumb-ayrac {
+    color: #abb5be;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: bold;
+    user-select: none;
+    margin: 0 1px;
+}
+
+/* Ana Sayfa İkon Kutusu — metin etiketleriyle aynı chip; tek satır */
+.breadcrumb-kutu a.ana-sayfa-ikon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f6f8;
+    color: #000080 !important;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 5px;
+    border: 1px solid #e0e4e8;
+    transition: all 0.3s ease;
+    padding: 5px 6px !important;
+    flex-shrink: 0;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+.breadcrumb-kutu .ana-sayfa-ikon img {
+    width: 18px;
+    height: 18px;
+    display: block;
+}
+
+/* 769px+ — yalnızca şerit boşluğu sıkı; chip boyutları tabanda (768 altı bloğuna dokunma) */
+@media (min-width: 769px) {
+    .site-haritasi-yolu {
+        margin-bottom: 12px;
+        padding-top: 4px;
+    }
+}
+
+/* -----------------------------------------
+    MOBİL UYUM (768px Altı) — boşluklar tabanla aynı; sarma / !important düzeni
+   ----------------------------------------- */
+@media (max-width: 768px) {
+    .breadcrumb-kutu {
+        display: flex !important;
+        flex-wrap: wrap !important; /* Kategorinin bittiği mantıklı yerden alta atar */
+        align-items: center !important;
+        gap: 4px !important;
+        padding: 10px 6px !important;
+        background: #ffffff !important;
+    }
+
+    /* Her bir link ve mevcut sayfa kutusu (home ikonu ayrı) */
+    .breadcrumb-kutu a:not(.ana-sayfa-ikon),
+    .breadcrumb-kutu .su-anki-sayfa {
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap !important;
+        background: #f4f6f8; /* Çok hafif profesyonel gri */
+        padding: 6px 5px !important;
+        border-radius: 4px !important;
+        font-size: 11px !important;
+        font-weight: 500;
+        text-decoration: none !important;
+        color: #000080 !important; /* Senin lacivertin */
+        border: 1px solid #e0e4e8;
+        white-space: normal !important;
+        overflow-wrap: anywhere;
+        word-wrap: break-word;
+        line-height: 1.35;
+        min-height: 32px;
+        min-width: 0;
+        max-width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        transition: all 0.2s ease;
+    }
+
+    /* Üzerinde olduğumuz sayfa vurgusu */
+    .breadcrumb-kutu .su-anki-sayfa {
+        background: #000080 !important;
+        color: #ffffff !important;
+        border: 1px solid #000080;
+    }
+
+    /* Ayraçların (>) tasarımı */
+    .breadcrumb-kutu .ayrac,
+    .breadcrumb-kutu .breadcrumb-ayrac {
+        display: inline-block !important;
+        color: #abb5be !important;
+        font-size: 16px !important;
+        line-height: 1 !important;
+        margin: 0 1px !important;
+        font-weight: bold;
+    }
+
+    /* Ana sayfa ikon kutusu — sol/sağ (özellikle sol) ince pay */
+    .breadcrumb-kutu .ana-sayfa-ikon {
+        padding: 5px 6px !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .breadcrumb-kutu .ana-sayfa-ikon img {
+        margin: 0 !important;
+    }
+}

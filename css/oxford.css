@@ -111,11 +111,10 @@
     font-size: 16px;
     font-weight: 600;
     line-height: 1.35;
-    color: #ffffff !important;
+    color: #00235d !important;
 }
-.oxford-form-bant + .iletisim-form-alani { margin-top: 0 !important; border-top-left-radius: 0; border-top-right-radius: 0; padding-top: 25px; }
+.oxford-form-bant + .iletisim-form-alani { margin-top: 0 !important; border-top-left-radius: 0; border-top-right-radius: 0; padding-top: 0; }
 .oxford-form-bant + .iletisim-form-alani > h2:first-child { margin-top: 0; padding-top: 0; }
-.oxford-form-bant + .iletisim-form-alani > p:first-of-type { margin-top: 0; padding-top: 0; }
 
 /* Oxford program rozetleri */
 .oxford-program-rozet-kutu .oxford-program-rozet-grid {

@@ -1,0 +1,43 @@
+/* Adım 1 (style.css bölünmesi): Yalnızca ana sayfa (index.html).
+   style.css’ten taşındı; tab.css’ten önce yüklensin ki önceki cascade korunsun. */
+
+/* =========================================
+   ANA SAYFA SEKMELİ NAVİGASYON (ÇALIŞAN HALİ)
+   ========================================= */
+
+/* Eski sekmeli navigasyon için temel hizalama – iç padding üstten 25px */
+.hizmet-tab-alani {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 25px 20px 0 20px;
+}
+.hizmet-tab-alani input[type="radio"] { display: none !important; }
+
+/* Ana Panelleri Göster/Gizle */
+.tab-panel { display: none; }
+#tab-dil:checked ~ #panel-dil,
+#tab-yaz:checked ~ #panel-yaz {
+    display: block !important;
+}
+
+/* Alt Panelleri (İç sekmeler) Göster/Gizle */
+.alt-panel { display: none !important; }
+
+#dil-ing:checked ~ #panel-dil-ing,
+#dil-usa:checked ~ #panel-dil-usa,
+#yaz-ing:checked ~ #panel-yaz-ing,
+#yaz-isvicre:checked ~ #panel-yaz-isvicre,
+#yaz-almanya:checked ~ #panel-yaz-almanya,
+#yaz-kanada:checked ~ #panel-yaz-kanada,
+#yaz-italya:checked ~ #panel-yaz-italya,
+#yaz-amerika:checked ~ #panel-yaz-amerika {
+    display: block !important;
+}
+
+/* Aktif Sekme Renkleri */
+input:checked + .alt-tab-etiket,
+input:checked + .ana-tab-etiket {
+    background: #e74c3c !important;
+    color: #fff !important;
+    border-color: transparent !important;
+}

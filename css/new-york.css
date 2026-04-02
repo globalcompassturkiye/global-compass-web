@@ -101,7 +101,8 @@ article.icerik-alani .new-york-bilgi-form-paneli .iletisim-form-alani {
     border: none;
     box-shadow: none;
     border-radius: 0;
-    padding: 22px 22px 24px;
+    /* Üst 25px padding; genel .iletisim-form-alani > p margin-top ile çiftlenmesin */
+    padding: 25px 22px 24px;
 }
 
 article.icerik-alani .new-york-bilgi-form-paneli .iletisim-form-alani > p:first-of-type {

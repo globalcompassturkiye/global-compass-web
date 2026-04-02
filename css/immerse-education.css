@@ -206,11 +206,6 @@
     flex: 0 1 auto;
 }
 
-/* Bilgi formu: giriş paragrafının üstünde 25px (.iletisim-form-alani > p üst margin 0’ını ezer) */
-.iletisim-form-alani > .tokyo-immerse-form-on-metin {
-    margin-top: 25px;
-}
-
 /* Rozet kartı yerleşimi (yaz-okullari-program-kutu ile aynı; 5. kart kuralı olmadan) */
 .immerse-tokyo-branches-kutu .dahil-rozet-kart {
     grid-template-rows: auto auto;

@@ -1,0 +1,203 @@
+/* Adım 4 (style.css bölünmesi): alt yönlendirme alanı, yonlendirme-karti, kart-link.
+   Yalnızca bu blokları kullanan sayfalarda yüklenir; site-iletisim-form veya site-breadcrumb sonrası. */
+
+/* ===== MIGRATED FROM yonlendirme-kart.css ===== */
+/* =========================================
+   7. YÖNLENDİRME KARTLARI
+   ========================================= */
+.alt-yonlendirme-alani { 
+    display: flex; 
+    gap: 30px; 
+    margin: 0 0 60px 0; 
+    flex-wrap: wrap; 
+}
+
+.okul-liste-kapsayici .alt-yonlendirme-alani {
+    margin: 0;
+}
+
+.okul-liste-kapsayici .yonlendirme-karti {
+    border: none;
+    box-shadow: none;
+}
+
+.okul-liste-kapsayici .yonlendirme-karti:hover {
+    transform: none;
+    border-color: transparent;
+    box-shadow: none;
+}
+
+.yonlendirme-karti {
+    flex: 1;
+    min-width: 300px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px; /* Daha modern bir kavis */
+    padding: 25px;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 14px;
+}
+
+/* Bilgi istek formu altındaki tek yönlendirme kartı kırmızı bant ve form ile aynı genişlikte olsun */
+.yonlendirme-karti {
+    max-width: 1200px;
+    margin: 25px auto 0 auto;
+}
+
+/* Hover Efekti: Daha derin gölge ve lacivert vurgu */
+.yonlendirme-karti:hover { 
+    transform: translateY(-8px); 
+    border-color: #000080; 
+    box-shadow: 0 15px 30px rgba(0, 0, 128, 0.08); 
+}
+
+/* Yönlendirme: .okul-liste-baslik genel kuralda h2.kutu-baslik ile zaten eşit; ek başlık override yok */
+
+/* 501px altı: yönlendirme kartı taşmasın */
+@media (max-width: 501px) {
+    .alt-yonlendirme-alani .yonlendirme-karti,
+    .okul-liste-kapsayici:has(> .alt-yonlendirme-alani) .yonlendirme-karti {
+        min-width: 0;
+    }
+}
+
+/* Yönlendirme: bilgi istek formu ile 50px; dış çerçeve .gri-cerceve-kutu ile aynı iç boşluk */
+.okul-liste-kapsayici:has(> .alt-yonlendirme-alani) {
+    margin: 50px auto 25px auto;
+    padding: 40px 25px 15px 25px;
+}
+
+/* Metin: gri çerçeve sol iç kenarından toplam 25px (dış padding tek başına; iç kartta yatay padding yok) */
+.okul-liste-kapsayici:has(> .alt-yonlendirme-alani) .yonlendirme-karti {
+    margin-top: 0 !important;
+    padding: 12px 0 16px 0;
+}
+
+/* Kart içi lacivert başlıklar: gri çerçeve h2.kutu-baslik ile aynı ölçek */
+.yonlendirme-karti h1,
+.yonlendirme-karti h2,
+.yonlendirme-karti h3,
+.yonlendirme-karti h4 {
+    color: #000080;
+    margin: 0 0 15px 0;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.yonlendirme-karti p {
+    color: #666;
+    font-size: 15px;
+    margin: 0;
+    text-align: left;
+}
+
+/* Kart Linki (Butonumsu Görünüm) */
+.kart-link { 
+    display: inline-block; 
+    color: #000080; 
+    text-decoration: none; 
+    font-weight: 700; 
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #eee; /* Varsayılan silik çizgi */
+    transition: 0.3s; 
+    align-self: flex-start; /* Sadece metin kadar yer kaplar */
+}
+
+.kart-link:hover { 
+    color: #FF0000; 
+    border-bottom-color: #FF0000; 
+    padding-left: 5px; /* Hafif sağa kayma efekti */
+}
+
+/* Yönlendirme karti icindeki CTA butonlari:
+   ulke-secim-butonlari ile ayni standarttan yonetilir */
+.yonlendirme-karti .vurgulu-incele-btn,
+.yonlendirme-karti .kart-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: auto;
+    min-width: 260px;
+    padding: 10px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    border: none;
+    background: #2c3e50;
+    color: #ffffff !important;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0;
+    text-transform: none;
+    box-shadow: none;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+}
+
+.yonlendirme-karti .vurgulu-incele-btn:hover,
+.yonlendirme-karti .kart-link:hover {
+    background: #e74c3c;
+    color: #ffffff !important;
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
+    padding-left: 25px; /* eski kart-link hover padding kaymasini sifirlar */
+    border-bottom-color: transparent;
+}
+
+/* MOBİL (501px ALTI) */
+@media (max-width: 768px) {
+    .alt-yonlendirme-alani {
+        margin: 0 0 40px 0;
+        gap: 20px;
+    }
+    .okul-liste-kapsayici .alt-yonlendirme-alani {
+        margin: 0;
+    }
+    
+    .yonlendirme-karti {
+        padding: 25px;
+        min-width: 100%; /* Mobilde tam genişlik */
+    }
+
+    .okul-liste-kapsayici:has(> .alt-yonlendirme-alani) .yonlendirme-karti {
+        padding: 12px 0 16px 0;
+    }
+}
+
+/* 1200px ve üzeri: yönlendirme kartı çerçevesi %100 doldursun */
+@media (min-width: 1201px) {
+    .okul-liste-kapsayici .alt-yonlendirme-alani {
+        width: 100%;
+    }
+
+    .okul-liste-kapsayici .yonlendirme-karti {
+        width: 100% !important;
+        max-width: none !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
+
+/* 501px altı: kart içi başlık — h2.kutu-baslik mobil (15px); yüzen başlık genel .okul-liste-baslik @768 ile aynı */
+@media (max-width: 501px) {
+    .okul-liste-kapsayici .yonlendirme-karti h1,
+    .okul-liste-kapsayici .yonlendirme-karti h2,
+    .okul-liste-kapsayici .yonlendirme-karti h3,
+    .okul-liste-kapsayici .yonlendirme-karti h4,
+    .yonlendirme-karti h1,
+    .yonlendirme-karti h2,
+    .yonlendirme-karti h3,
+    .yonlendirme-karti h4 {
+        text-align: left;
+        font-size: 15px;
+        line-height: 1.35;
+        overflow-wrap: break-word;
+    }
+}
