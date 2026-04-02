@@ -1,3 +1,8 @@
+/*
+  style.css — site geneli (≈6k+ satır). BAKIM: !important çoğunlukla medya/üst menü/yönlendirme
+  çakışmaları içindir; kaldırmak için sayfa özel /css dosyalarında özgüllük artırılmalı.
+  Büyük bloklar “MIGRATED FROM …” ile işaretli; modüler ayırma adaylarıdır (ölü kod değildir).
+*/
 /* =========================================
     1. GENEL SIFIRLAMA VE TEMEL AYARLAR
    ========================================= */
@@ -11,17 +16,18 @@
 html {
     overflow-x: hidden;
     width: 100%;
-    /* Sabit üst menü yüksekliği (header-offset.js --site-header-offset ile güncellenir) */
-    scroll-padding-top: var(--site-header-offset, 100px);
+    /* İlk boyama ile JS ölçümü hizalı kalsın (CLS): varsayılan ≈ gerçek header yüksekliği; header-offset.js sadece --site-header-offset günceller */
+    --site-header-offset: 116px;
+    scroll-padding-top: var(--site-header-offset);
 }
 
 body {
-    margin: 0 !important;
+    margin: 0;
     padding-left: 0;
     padding-right: 0;
     padding-bottom: 0;
-    /* !important kullanma: header-offset.js .sabit-ust-alan yüksekliğini inline yazar (menü 1/2 satır değişince boşluk uyumlu) */
-    padding-top: 100px;
+    /* padding-top: header-offset.js artık yalnızca html --site-header-offset ile ayarlanır (inline body padding yok) */
+    padding-top: var(--site-header-offset);
     width: 100%;
     overflow-x: visible;
     font-family: 'Poppins', sans-serif;
@@ -31,24 +37,11 @@ body {
     display: block;
 }
 
-/* Masaüstü: JS yoksa yaklaşık üst boşluk; var(--site-header-offset) ölçümlü */
+/* Masaüstü: --site-header-offset (eski 993px tekrarı 769px ile birleştirildi) */
 @media (min-width: 769px) {
-    body {
-        padding-top: 122px;
-    }
-
     html {
-        scroll-padding-top: var(--site-header-offset, 122px);
-    }
-}
-
-@media (min-width: 993px) {
-    body {
-        padding-top: 122px;
-    }
-
-    html {
-        scroll-padding-top: var(--site-header-offset, 122px);
+        --site-header-offset: 122px;
+        scroll-padding-top: var(--site-header-offset);
     }
 }
 
@@ -62,12 +55,24 @@ strong {
     font-weight: 700;
 }
 
-.alt-cizgili-baslik, 
 .ana-sirali-liste > li > strong,
 .sss-item summary h3 {
     color: #2c3e50 !important;
     font-size: 28px;
     font-weight: 700;
+}
+
+/* .alt-cizgili-baslik: üst gruptan ayrıldı (alt çizgi + tipografi tek blokta) */
+.alt-cizgili-baslik {
+    color: #2c3e50 !important;
+    font-size: 28px;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-color: #2c3e50;
+    text-decoration-thickness: 1px;
+    display: inline-block;
+    margin-bottom: 5px;
 }
 
 /* =========================================
@@ -1149,16 +1154,6 @@ h2.kutu-baslik .vurgu-renk {
     color: #555;
 }
 
-.alt-cizgili-baslik {
-    text-decoration: underline;
-    text-underline-offset: 6px;
-    text-decoration-color: #2c3e50;
-    text-decoration-thickness: 1px;
-    display: inline-block;
-    margin-bottom: 5px;
-    font-weight: 700 !important;
-}
-
 /* =================== Yaz Okulları / Immerse Education / Bournemouth Aktiviteler =================== */
 /* Yaz okulları / Immerse Education – sekme (tabs) standardı
    Bournemouth aktiviteler alanı da bu yapıyı kullanır */
@@ -2170,7 +2165,7 @@ p + .kirmizi-kutu {
     }
 }
 
-/* Okul liste çerçevesi: aşağıdaki tekrarlayan .modern-okul-listesi (dosya ~2716) padding/margin vermesin */
+/* Okul liste çerçevesi: program seçim bandı içinde .modern-okul-listesi padding/margin sıfır */
 .okul-liste-kapsayici .modern-okul-listesi {
     max-width: 100% !important;
     margin: 0 !important;
@@ -3764,8 +3759,10 @@ article.icerik-alani .dahil-rozet-metin {
 
 .logo img {
     width: 158px;
+    height: 48px;
     max-height: none;
-    height: auto;
+    aspect-ratio: 158 / 48;
+    object-fit: contain;
     display: block;
     margin: 0 auto;
     transition: transform 0.3s ease;
@@ -3855,7 +3852,9 @@ body.ana-sayfa {
 .ana-sayfa .logo img {
     width: 158px;
     max-height: none;
-    height: auto;
+    height: 48px;
+    aspect-ratio: 158 / 48;
+    object-fit: contain;
 }
 .ana-sayfa .sosyal-medya-alani a:hover {
     transform: scale(1.1);
@@ -3895,6 +3894,8 @@ body.ana-sayfa {
     .logo img {
         width: 158px !important;
         max-height: none !important;
+        aspect-ratio: 158 / 48 !important;
+        object-fit: contain;
         height: auto !important;
     }
 
@@ -4670,6 +4671,9 @@ body.ana-sayfa {
     .logo img,
     .ana-sayfa .logo img {
         width: 113px;
+        height: auto;
+        aspect-ratio: 158 / 48;
+        object-fit: contain;
     }
 
     /* Soldaki logo/sosyal barı (HTML içindeki gerçek blok) desktop’ta gizle */
@@ -4732,6 +4736,8 @@ body.ana-sayfa {
     .ust-menu .navigasyon > ul > li.nav-logo-item img {
         width: 113px;
         height: auto;
+        aspect-ratio: 158 / 48;
+        object-fit: contain;
         display: block;
     }
 
@@ -4802,6 +4808,8 @@ body.ana-sayfa {
 
     .ust-menu .navigasyon > ul > li.nav-logo-item img {
         width: 113px;
+        aspect-ratio: 158 / 48;
+        object-fit: contain;
     }
 
     .ust-menu .navigasyon > ul > li > a,
@@ -4841,14 +4849,7 @@ body.ana-sayfa {
 }
 
 @media (min-width: 1451px) {
-    /* Üst boşluk: header-offset.js ile uyum (993+ ile aynı yedek) */
-    body {
-        padding-top: 122px;
-    }
-
-    html {
-        scroll-padding-top: var(--site-header-offset, 122px);
-    }
+    /* html --site-header-offset: 769px+ ile aynı; tekrar yok */
 
     /* 1450px üstü: sosyal ikonlar menünün sağında görün */
     .sabit-ust-alan .ust-menu .ust-alan {
@@ -4990,10 +4991,12 @@ body.ana-sayfa {
         padding: 10px 0;
     }
 
-    /* Logo mobilde masaüstüne göre yaklaşık %25 daha küçük (76px → 57px) */
+    /* Logo: sabit en-boy oranı (görsel yüklenene kadar yerleşim kayması olmasın) */
     .logo img {
         width: 158px !important;
         max-height: none !important;
+        aspect-ratio: 158 / 48 !important;
+        object-fit: contain;
         height: auto !important;
     }
 
@@ -6300,15 +6303,5 @@ h1 .h1-vurgu {
     }
 }
 
-/* === DOSYA SONU: .modern-okul-listesi tekrarları (~2716) bu bloktan ÖNCE; kart aralığı kesin === */
-.okul-liste-kapsayici .modern-okul-listesi {
-    margin: 0 !important;
-    padding: 0 !important;
-    max-width: 100% !important;
-    display: block !important;
-}
-
-.okul-liste-kapsayici .modern-okul-listesi > .premium-liste-kart ~ .premium-liste-kart {
-    margin-top: 25px !important;
-}
+/* BAKIM NOTU: .okul-liste-kapsayici .modern-okul-listesi kuralları yalnızca ~2169 civarında tutulur (dosya sonu tekrarı kaldırıldı). */
 

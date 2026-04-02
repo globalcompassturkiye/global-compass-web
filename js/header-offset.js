@@ -1,7 +1,6 @@
 /**
- * Sabit üst şerit + menü (position: fixed) için body'ye üst boşluk verir.
- * Yükseklik font/responsive değişimlerinde güncellenir.
- * style.css içinde body { padding-top } için !important kullanılmamalı; aksi halde bu ölçüm ezilir.
+ * Sabit üst şerit + menü (position: fixed) için html --site-header-offset güncellenir.
+ * body { padding-top: var(--site-header-offset) } ile tek kaynak; inline body padding yazılmaz (CLS önlemi).
  */
 (function () {
   var resizeObserverAttached = false;
@@ -10,7 +9,6 @@
     var el = document.querySelector('.sabit-ust-alan');
     if (!el) return;
     var h = el.offsetHeight;
-    document.body.style.paddingTop = h + 'px';
     document.documentElement.style.setProperty('--site-header-offset', h + 'px');
   }
 

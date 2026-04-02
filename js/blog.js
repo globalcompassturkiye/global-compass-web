@@ -1,6 +1,11 @@
 /**
  * Global Compass Blog: eski sorgu/hash URL’lerinden pretty URL’e yönlendirme,
  * içindekiler (TOC) ve (isteğe bağlı) otomatik başlık ID.
+ *
+ * Yeni blog yazıları: boş TOC + DOMContentLoaded ile doldurma CLS üretebilir.
+ * `.cursor/rules/blog-yazi-detay-standardi.mdc` — statik `<li>` + başlıklarda `id`;
+ * listede `li` varken bu script TOC’u yeniden yazmaz.
+ * Liste sıralaması: yalnız `.blog-yazi-grid[data-blog-list-sort]` için `data-published`’a göre sıralanır (varsayılan kapalı — CLS).
  */
 (function () {
   'use strict';
@@ -89,6 +94,8 @@
     if (!items.length) return;
 
     navs.forEach(function (nav) {
+      /* Sunucu tarafı statik <li> varsa yeniden yazma (içindekiler yüksekliği sonradan büyümesin — CLS) */
+      if (nav.querySelector('li')) return;
       nav.innerHTML = '';
       items.forEach(function (item) {
         var h = item.el;
@@ -138,7 +145,8 @@
   }
 
   function initBlogListingSort() {
-    var grids = document.querySelectorAll('.blog-yazi-grid');
+    /* Varsayılan: sıralama kapalı (DOMContentLoaded sonrası appendChild CLS üretmesin). Açmak için grid’e data-blog-list-sort ekleyin. */
+    var grids = document.querySelectorAll('.blog-yazi-grid[data-blog-list-sort]');
     if (!grids.length) return;
 
     grids.forEach(function (grid) {

@@ -14,3 +14,4 @@ alwaysApply: true
   - Ornek: `<link rel="stylesheet" href="/css/sportech-academy.css">` (sayfaya ozel dosya da `/css` altindadir.)
 - Ortak stiller mevcut ortak CSS dosyalarinda kalmali (`/css/...`).
 - Yeni sayfa eklerken once sinif (class) tanimla, sonra CSS'e yaz; inline style ekleme.
+- **Üst menü logo (CLS):** `global-compass-logo.webp` header’daki iki kullanımda (`.ust-alan .logo` ve `li.nav-logo-item`) **`width="158" height="48"`** + **`decoding="async"`**; `style.css` zaten `aspect-ratio` ile destekler.

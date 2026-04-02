@@ -1,21 +1,62 @@
 ---
-description: Blog tek yazı sayfası HTML/CSS/JS yapısı (Russell örneği ile aynı iskelet)
-globs: "**/blog/*/*/index.html"
+description: Blog ana liste ve tek yazı sayfası — CLS/performans, TOC, logo, grid sıralama
+globs: "{**/blog/index.html,**/blog/*/*/index.html}"
 alwaysApply: false
 ---
 
-# Blog yazı detayı — standart yapı
+# Blog — ana liste ve yazı detayı
+
+## Blog ana liste (`blog/index.html`, `/blog/`)
+
+- `body`: `sayfa-blog` (mobil yazı CTA / `blog-yazi-sayfa-mobil-ux` **kullanılmaz** — o sınıf yalnızca tek yazı sayfaları içindir).
+- **Logo:** Header’daki iki logo `<img>` için **`width="158" height="48"`** ve **`decoding="async"`** (yazı detayı ile aynı).
+- **Sosyal / OG:** `og:image` varsa `summary_large_image` kullanılıyorsa **`twitter:image`** aynı görsel URL’si ile eklenir (title/description metnine dokunmadan).
+- **`section.blog-yazi-grid`:** `blog.js` tarih sıralaması **varsayılan kapalı** (CLS önlemi). Otomatik sıra için grid’e **`data-blog-list-sort`** ekleyin; aksi halde kartları HTML’de **yeni → eski** tutun.
+- **Kart görselleri:** `width` / `height` + `loading="lazy"` / `decoding="async"` (mevcut 400×250 kalıbı).
+- **Alt yönlendirme:** `yonlendirme-karti-teklik` — tek kart, **Yurt Dışı Üniversite** + **Yurt Dışı Üniversiteleri Keşfet →** → `/yurt-disi-universite/`.
+- Script: `nav-submenu.js`, `header-offset.js`, `blog.js` (defer).
+
+---
+
+## Yazı detayı — standart yapı
 
 Referans: `blog/universite/russell-group-nedir-ingiltere-prestijli-universiteler/index.html`  
 URL kalıbı: `/blog/{kategori-slug}/{yazi-slug}/` — dosya: `blog/{kategori-slug}/{yazi-slug}/index.html`
 
-## Head
+### Head (yazı sayfası)
 
 - Ortak: `style.css`, `blog.css`, sayfaya özel `/css/{yazi-slug}.css` (proje kuralı: tüm CSS `/css` altında, dosya adı slug ile uyumlu).
 - `body`: `sayfa-blog blog-yazi-sayfa-mobil-ux` (mobil yan panel gizlenir, üstte içindekiler + altta sabit CTA çubuğu için).
 - Üst şablon: mevcut site `sabit-ust-alan` + `ust-menu` (diğer sayfalarla aynı nav).
 
-## Ana içerik iskeleti
+### CLS ve performans — yazı detayı (yeni yazılarda zorunlu)
+
+**Amaç:** İçindekilerin veya üst alanın yükleme sonrası büyümesi, logosuz boyut ve boyutsuz görseller **Cumulative Layout Shift (CLS)** üretmesin.
+
+### Üst logo görselleri
+
+- Header’daki iki logo `<img>` (`.ust-alan .logo` ve `li.nav-logo-item` içi) için HTML’de **`width="158" height="48"`** ve **`decoding="async"`** kullan.
+- Ortak stil zaten `aspect-ratio` ile destekler; attribute’lar ilk boyamada yer rezervi sağlar.
+
+### İçindekiler (TOC) — statik, boş liste yok
+
+- **Mobil:** `ul.blog-icindekiler-liste.blog-icindekiler-liste--mobil` ve **yan panel:** `aside .blog-icindekiler-kutu ul.blog-icindekiler-liste` içinde **baştan dolu `<li><a href="#id">…</a></li>`** olmalı.
+- **Boş `<ul></ul>` bırakma** (JS sonradan doldurunca blok büyür → CLS). `blog.js`, listede zaten `li` varsa yeniden yazmaz; boşsa doldurur.
+- İçerikte TOC’da görünmesi gereken her `h2` / `h3` için **aynı `id`** hem başlıkta hem `href="#…"` ile kullanılmalı.
+- **`aside` içindeki `h2` / `h3`** TOC’a **dahil edilmez** (`blog.js`); statik listede de yer verme.
+- Alt seviye başlık (`h3`) satırlarında mobil/yan panelde **`li.blog-icindekiler-alt`** kullan (stil için).
+- **`data-blog-toc-auto` yeni yazılarda kullanma:** JS yükleme sonrası `id` atayıp listeyi doldurur; statik TOC + elle `id` tercih edilir. Eski sayfalarda kalsa bile yeni içerikte **manuel `id` + statik liste** standardına uy.
+
+### Metin ve öne çıkan görseller
+
+- İçerikteki anlamlı `<img>` için HTML’de **`width` ve `height`** (doğru en-boy oranı) ve mümkünse **`loading="lazy"`** + **`decoding="async"`**.
+- `figure` ile kullanılıyorsa yine attribute’lar korunur; sayfa özel CSS’te yalnızca gerekirse `max-width: 100%; height: auto` ile responsive yapılır (inline `style` yok — `html-css-ayirma-standardi`).
+
+### Site geneli (blog dosyasında tekrarlama gerekmez)
+
+- Üst sabit header ofseti: `css/style.css` içindeki `--site-header-offset` + `body { padding-top: var(--site-header-offset) }`; `js/header-offset.js` yalnızca bu değişkeni günceller. Yeni blog sayfasında ekstra inline `padding` yazma.
+
+### Ana içerik iskeleti (yazı detayı)
 
 ```html
 <main id="icerik">
@@ -34,24 +75,38 @@ URL kalıbı: `/blog/{kategori-slug}/{yazi-slug}/` — dosya: `blog/{kategori-sl
       <div class="blog-yazi-ana">
         <div class="blog-yazi-icerik" id="blog-yazi-icerik-alani">
           <p>… giriş paragrafı …</p>
-          <div class="blog-mobil-icindekiler-wrap">… mobil içindekiler (boş ul, JS doldurur) …</div>
-          <h2 id="…">…</h2>
+          <div class="blog-mobil-icindekiler-wrap">
+            <nav class="blog-mobil-icindekiler-duz" aria-labelledby="blog-mobil-icindekiler-baslik">
+              <p class="blog-mobil-icindekiler-duz-baslik" id="blog-mobil-icindekiler-baslik">İçindekiler</p>
+              <ul class="blog-icindekiler-liste blog-icindekiler-liste--mobil">
+                <li><a href="#ornek-bolum">…</a></li>
+                <li class="blog-icindekiler-alt"><a href="#ornek-alt">…</a></li>
+              </ul>
+            </nav>
+          </div>
+          <h2 id="ornek-bolum">…</h2>
           <!-- içerik; aside içindeki h2/h3 TOC’a girmez (blog.js) -->
         </div>
       </div>
       <aside class="blog-yan-panel" aria-label="Yan menü">
-        <nav class="blog-icindekiler-kutu" aria-labelledby="icindekiler-baslik">…</nav>
+        <nav class="blog-icindekiler-kutu" aria-labelledby="icindekiler-baslik">
+          <p class="blog-icindekiler-baslik" id="icindekiler-baslik">İçindekiler</p>
+          <ul class="blog-icindekiler-liste">
+            <li><a href="#ornek-bolum">…</a></li>
+            <li class="blog-icindekiler-alt"><a href="#ornek-alt">…</a></li>
+          </ul>
+        </nav>
         <div class="blog-yan-iletisim-kutu">… Hızlı iletişim …</div>
       </aside>
     </div>
   </div>
 
   <div class="okul-liste-kapsayici">
-    <h2 class="okul-liste-baslik">…</h2>
+    <h2 class="okul-liste-baslik">Yurt Dışı Üniversite</h2>
     <section class="alt-yonlendirme-alani">
       <div class="yonlendirme-karti">
-        <p>…</p>
-        <a href="…" class="kart-link">… →</a>
+        <p>Ülke, program ve başvuru süreçlerinde uzman destek için yurt dışı üniversite danışmanlığı sayfamıza göz atabilirsiniz.</p>
+        <a href="/yurt-disi-universite/" class="kart-link">Yurt Dışı Üniversiteleri Keşfet →</a>
       </div>
     </section>
   </div>
@@ -59,26 +114,30 @@ URL kalıbı: `/blog/{kategori-slug}/{yazi-slug}/` — dosya: `blog/{kategori-sl
 </main>
 ```
 
-## Kurallar
+### Kurallar (yazı detayı)
 
 - **H1:** `blog-yazi-ana-baslik`; iki satır için `<br>` + `span.vurgu-renk` (tipografi `blog.css`).
-- **İçindekiler (mobil):** `blog-mobil-icindekiler-wrap`, giriş **ilk paragrafından hemen sonra**, `h2`’lerden önce. İki `ul.blog-icindekiler-liste` (mobil + yan panel) boş bırakılır; `/js/blog.js` doldurur.
-- **TOC kaynağı:** `h2[id]`, `h3[id]` yalnızca `.blog-yazi-icerik` içinde; `aside` içindeki başlıklar hariç. ID’ler manuel veya `data-blog-toc-auto` ile otomatik (bkz. `blog.js`).
-- **Alt yönlendirme:** `yonlendirme-karti-teklik` kuralına uy: tek kart, tek `a.kart-link`; metin ve `href` yazı konusuna göre (üniversite yazısında üniversite hedefi vb.).
+- **İçindekiler (mobil):** `blog-mobil-icindekiler-wrap`, giriş **ilk paragrafından hemen sonra**, `h2`’lerden önce. Mobil ve yan panel listeleri **aynı sıra ve aynı `href`** ile senkron; yukarıdaki **CLS** bölümüne uy.
+- **TOC kaynağı:** `h2[id]`, `h3[id]` yalnızca `.blog-yazi-icerik` içinde; `aside` içindeki başlıklar hariç.
+- **Alt yönlendirme (blog):** `yonlendirme-karti-teklik` kuralı: **tek** kart, **tek** `a.kart-link`, metin **Yurt Dışı Üniversiteleri Keşfet →**, `href` **`/yurt-disi-universite/`**, `h2.okul-liste-baslik` **Yurt Dışı Üniversite**; dil okulu / yaz okulu linki ekleme.
 - **Sabit mobil CTA:** `</main>` sonrası, `footer` ile birlikte: `div.blog-mobil-cta-bar-wrap` → `a.blog-mobil-cta-bar` (`/iletisim/`).
 - **Script:** `nav-submenu.js`, `header-offset.js`, `blog.js` (defer) — yazı sayfasında `blog.js` zorunlu.
 - **title / meta description / og:title / og:description:** kullanıcı metni olmadan değiştirilmez (proje meta kuralları). JSON-LD Article + BreadcrumbList güncellenir; `json-ld-*` kurallarına uy.
 
-## Yeni yazıda yapılacaklar özeti
+### Yeni yazıda yapılacaklar özeti
 
-1. `blog/{kategori}/{slug}/index.html` oluştur; yukarıdaki iskeleti kopyala.  
-2. `/css/{slug}.css` ekle ve HTML’de kök yoldan linkle.  
-3. Breadcrumb, kategori etiketi, `okul-liste-baslik` + `kart-link` hedefini konuya göre ayarla.  
-4. `sitemap.xml` ve gerekirse nav güncelle.  
-5. Ana sayfadaki “Güncel Rehberler” için `json/blog-latest.json` içindeki `posts` dizisine `published` (ISO tarih), `href`, `title`, `excerpt`, `category`, `categoryHref`, `image`, `imageAlt` ekle; `ana-sayfa-blog-ozeti.js` en güncel 3 yazıyı bu tarihe göre seçer.
+1. `blog/{kategori}/{slug}/index.html` oluştur; yukarıdaki iskeleti kopyala.
+2. `/css/{slug}.css` ekle ve HTML’de kök yoldan linkle.
+3. **Logo:** iki yerde `width="158" height="48"` + `decoding="async"`.
+4. **İçindekiler:** Tüm `h2`/`h3` (aside hariç) için `id` + mobil ve yan panelde **statik** `<li>` listesi; `data-blog-toc-auto` kullanma.
+5. **Görseller:** `width`/`height` (veya tasarım gereği sayfa CSS’inde sabit en-boy oranı).
+6. Breadcrumb, kategori etiketi ve **alt yönlendirme kartını** blog üniversite standardına göre ayarla (`yonlendirme-karti-teklik`).
+7. `sitemap.xml` ve gerekirse nav güncelle.
+8. Ana sayfadaki “Güncel Rehberler” için `json/blog-latest.json` içindeki `posts` dizisine `published` (ISO tarih), `href`, `title`, `excerpt`, `category`, `categoryHref`, `image`, `imageAlt` ekle; `ana-sayfa-blog-ozeti.js` en güncel 3 yazıyı bu tarihe göre seçer.
+9. **`blog/index.html`:** Yeni kart eklerken **`data-published` tarihine göre yeni → eski** sırada tut (sıralama için `data-blog-list-sort` kullanılmıyorsa).
 
-## Ana sayfa blog özeti
+### Ana sayfa blog özeti
 
-- Veri: `json/blog-latest.json` — `posts` dizisi.  
-- Script: `js/ana-sayfa-blog-ozeti.js` (ana `index.html`’de).  
+- Veri: `json/blog-latest.json` — `posts` dizisi.
+- Script: `js/ana-sayfa-blog-ozeti.js` (ana `index.html`’de).
 - Stil: `css/ana-sayfa.css`.
