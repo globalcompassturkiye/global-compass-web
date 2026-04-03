@@ -2087,42 +2087,15 @@ p + .kirmizi-kutu {
     margin: 50px auto 25px auto;
     border: 1px solid #d1d1d1;
     border-radius: 8px;
-    padding: 40px 25px 15px 25px;
+    padding: 24px 25px 15px 25px;
     background-color: #ffffff;
     position: relative;
     transition: all 0.3s ease;
 }
 
-/* Yüzen mavi başlık — h2.kutu-baslik ile aynı ölçü (ör. Cambridge: Sosyal Aktiviteler vs Dil Okulları yönlendirme) */
+/* Yönlendirme / okul listesi bölüm etiketi: artık yüzen lacivert şerit yok (tüm sitede gizli) */
 .okul-liste-baslik {
-    position: absolute;
-    top: 0;
-    left: 25px;
-    transform: translateY(-50%);
-    background-color: #000080;
-    color: #ffffff;
-    padding: 8px 20px;
-    font-size: 16px;
-    font-weight: 700;
-    border-radius: 4px;
-    white-space: normal;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    max-width: 90%;
-    text-transform: capitalize !important;
-    text-align: center;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-@media (max-width: 768px) {
-    .okul-liste-baslik {
-        left: 50% !important;
-        transform: translate(-50%, -50%) !important;
-        width: 90%;
-        text-align: center;
-        font-size: 15px !important;
-    }
+    display: none !important;
 }
 
 /* Okul liste çerçevesi: program seçim bandı içinde .modern-okul-listesi padding/margin sıfır */

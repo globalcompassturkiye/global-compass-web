@@ -54,7 +54,7 @@
     box-shadow: 0 15px 30px rgba(0, 0, 128, 0.08); 
 }
 
-/* Yönlendirme: .okul-liste-baslik genel kuralda h2.kutu-baslik ile zaten eşit; ek başlık override yok */
+/* .okul-liste-baslik: style.css içinde tüm sitede gizli (yüzen lacivert şerit kaldırıldı) */
 
 /* 501px altı: yönlendirme kartı taşmasın */
 @media (max-width: 501px) {
@@ -64,10 +64,10 @@
     }
 }
 
-/* Yönlendirme: bilgi istek formu ile 50px; dış çerçeve .gri-cerceve-kutu ile aynı iç boşluk */
+/* Yönlendirme: bilgi istek formu ile 50px; dış çerçeve .gri-cerceve-kutu ile aynı iç boşluk (üstte yüzen başlık yok) */
 .okul-liste-kapsayici:has(> .alt-yonlendirme-alani) {
     margin: 50px auto 25px auto;
-    padding: 40px 25px 15px 25px;
+    padding: 24px 25px 15px 25px;
 }
 
 /* Metin: gri çerçeve sol iç kenarından toplam 25px (dış padding tek başına; iç kartta yatay padding yok) */
@@ -76,12 +76,12 @@
     padding: 12px 0 16px 0;
 }
 
-/* Kart içi lacivert başlıklar: gri çerçeve h2.kutu-baslik ile aynı ölçek */
+/* Kart içi başlıklar (nadiren kullanılır) — gövde metni rengi */
 .yonlendirme-karti h1,
 .yonlendirme-karti h2,
 .yonlendirme-karti h3,
 .yonlendirme-karti h4 {
-    color: #000080;
+    color: #333333;
     margin: 0 0 15px 0;
     font-size: 16px;
     font-weight: 700;
@@ -95,10 +95,10 @@
     text-align: left;
 }
 
-/* Kart Linki (Butonumsu Görünüm) */
+/* Kart Linki (Butonumsu Görünüm) — aşağıda .yonlendirme-karti .kart-link ile düğüm stiline çekilir */
 .kart-link { 
     display: inline-block; 
-    color: #000080; 
+    color: #333333; 
     text-decoration: none; 
     font-weight: 700; 
     font-size: 20px;
@@ -185,7 +185,7 @@
     }
 }
 
-/* 501px altı: kart içi başlık — h2.kutu-baslik mobil (15px); yüzen başlık genel .okul-liste-baslik @768 ile aynı */
+/* 501px altı: kart içi başlık — h2.kutu-baslik mobil (15px) */
 @media (max-width: 501px) {
     .okul-liste-kapsayici .yonlendirme-karti h1,
     .okul-liste-kapsayici .yonlendirme-karti h2,

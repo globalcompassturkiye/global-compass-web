@@ -650,6 +650,29 @@ body.ana-sayfa {
     transform: translateY(-7px) rotate(-45deg);
 }
 
+/* ≤768px: hamburger simgesi (501px altı dahil aynı boyut — ek küçültme yok) */
+@media (max-width: 768px) {
+    .nav-toggle {
+        width: 56px;
+        height: 56px;
+        padding: 6px;
+        gap: 4px;
+    }
+    .nav-toggle-bar {
+        width: 18px;
+    }
+    .nav-toggle::after {
+        font-size: 9px;
+        margin-top: 2px;
+    }
+    .nav-toggle.is-open .nav-toggle-bar:nth-child(1) {
+        transform: translateY(4px) rotate(45deg);
+    }
+    .nav-toggle.is-open .nav-toggle-bar:nth-child(3) {
+        transform: translateY(-4px) rotate(-45deg);
+    }
+}
+
 /* --- Tablet: menü görünür, alt satır üstteki tüm öğelerin altını kaplar, kalın lacivert çizgi sadece hover/aktifte.
    Bu kırılımda ayraç çizgilerini kaldırıp, satırlar arası boşluk kullanıyoruz. --- */
 @media (max-width: 992px) {
