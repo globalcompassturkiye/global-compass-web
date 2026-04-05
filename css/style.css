@@ -105,6 +105,12 @@ h1 {
     line-height: 1.6;
 }
 
+/* h1 içi vurgu: sayfa özelinde küçültülmedikçe ana başlıkla aynı boyut */
+h1 .vurgu-renk {
+    font-size: inherit;
+    line-height: inherit;
+}
+
 /* 501px altı: tüm sayfalarda h1 ve içindeki vurgu satırı 26px */
 @media (max-width: 501px) {
     h1 {
@@ -116,6 +122,13 @@ h1 {
         font-size: 26px !important;
         line-height: inherit;
         display: inline-block;
+    }
+
+    /* !important 33px kurallarını aşmak: ana sayfa hero */
+    .karsilama-icerik h1,
+    .karsilama-icerik h1 span {
+        font-size: 26px !important;
+        line-height: 1.4 !important;
     }
 }
 

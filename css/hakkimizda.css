@@ -11,7 +11,7 @@
 }
 
 /*
- * h1: masaüstü/tablet 33px; alt satır (.vurgu-renk) 26px; 501px altı her iki satır 26px
+ * h1: 33px (vurgu dahil); 501px altı 26px — site geneli
  */
 body.sayfa-hakkimizda article.icerik-alani.hakkimizda-sayfa > h1.sayfa-ana-baslik {
     font-size: 33px !important;
@@ -19,7 +19,7 @@ body.sayfa-hakkimizda article.icerik-alani.hakkimizda-sayfa > h1.sayfa-ana-basli
 }
 
 body.sayfa-hakkimizda article.icerik-alani.hakkimizda-sayfa > h1.sayfa-ana-baslik > .vurgu-renk {
-    font-size: 26px !important;
+    font-size: 33px !important;
     line-height: 1.35 !important;
 }
 
@@ -34,7 +34,7 @@ body.sayfa-hakkimizda article.icerik-alani.hakkimizda-sayfa > h1.sayfa-ana-basli
     }
 
     body.sayfa-hakkimizda article.icerik-alani.hakkimizda-sayfa > h1.sayfa-ana-baslik > .vurgu-renk {
-        font-size: 26px !important;
+        font-size: 33px !important;
     }
 }
 

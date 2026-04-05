@@ -12,7 +12,7 @@
 }
 
 /*
- * Başlık: masaüstü/tablet ilk satır 33px; .vurgu-renk 26px; 501px altı her iki satır 26px
+ * Başlık: h1 tamamı 33px; 501px altı 26px (site geneli)
  * body.sayfa-hizmetlerimiz: global kurallardan net ayrım.
  */
 body.sayfa-hizmetlerimiz article.icerik-alani.hizmetlerimiz-sayfa > h1.sayfa-ana-baslik {
@@ -21,7 +21,7 @@ body.sayfa-hizmetlerimiz article.icerik-alani.hizmetlerimiz-sayfa > h1.sayfa-ana
 }
 
 body.sayfa-hizmetlerimiz article.icerik-alani.hizmetlerimiz-sayfa > h1.sayfa-ana-baslik > .vurgu-renk {
-    font-size: 26px !important;
+    font-size: 33px !important;
     line-height: 1.35 !important;
 }
 
@@ -36,14 +36,13 @@ body.sayfa-hizmetlerimiz article.icerik-alani.hizmetlerimiz-sayfa section > h2.h
     line-height: 1.35 !important;
 }
 
-/* 768px: style.css h1 { 24px } — bu sayfada ilk satır 33px, vurgu 26px */
 @media screen and (max-width: 768px) {
     body.sayfa-hizmetlerimiz article.icerik-alani.hizmetlerimiz-sayfa > h1.sayfa-ana-baslik {
         font-size: 33px !important;
     }
 
     body.sayfa-hizmetlerimiz article.icerik-alani.hizmetlerimiz-sayfa > h1.sayfa-ana-baslik > .vurgu-renk {
-        font-size: 26px !important;
+        font-size: 33px !important;
     }
 
     body.sayfa-hizmetlerimiz article.icerik-alani.hizmetlerimiz-sayfa section > h2.hizmet-section-baslik {

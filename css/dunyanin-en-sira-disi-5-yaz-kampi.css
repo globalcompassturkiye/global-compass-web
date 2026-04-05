@@ -65,13 +65,13 @@
     text-align: center;
 }
 
-/* Blog yazı ana başlığı ile aynı kurumsal renkler (.blog-yazi-ana-baslik) */
+/* Site geneli h1: 33px; ≤501px 26px (style.css) */
 .blog-yazi-yaz-kampi-mag .yk-mag-hero h1,
 .blog-yazi-yaz-kampi-mag .yk-mag-hero .yk-mag-h1 {
     font-family: "Poppins", sans-serif;
     font-weight: 700;
-    font-size: clamp(1.65rem, 4.2vw, 2.65rem);
-    line-height: 1.18;
+    font-size: 33px;
+    line-height: 1.25;
     color: #000080;
     margin: 0 0 1.25rem;
     letter-spacing: -0.02em;
@@ -80,6 +80,19 @@
 .blog-yazi-yaz-kampi-mag .yk-mag-hero h1 .vurgu-renk,
 .blog-yazi-yaz-kampi-mag .yk-mag-hero .yk-mag-h1 .vurgu-renk {
     color: #bd0505;
+    font-size: inherit;
+}
+
+@media (max-width: 501px) {
+    .blog-yazi-yaz-kampi-mag .yk-mag-hero h1,
+    .blog-yazi-yaz-kampi-mag .yk-mag-hero .yk-mag-h1 {
+        font-size: 26px !important;
+    }
+
+    .blog-yazi-yaz-kampi-mag .yk-mag-hero h1 .vurgu-renk,
+    .blog-yazi-yaz-kampi-mag .yk-mag-hero .yk-mag-h1 .vurgu-renk {
+        font-size: 26px !important;
+    }
 }
 
 /* —— Kamp blokları (numara watermark) —— */

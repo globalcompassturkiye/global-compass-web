@@ -541,6 +541,10 @@ body.sayfa-blog .blog-kart-gorsel-link {
     .blog-yazi-ana-baslik {
         font-size: 26px !important;
     }
+
+    .blog-yazi-ana-baslik .vurgu-renk {
+        font-size: 26px !important;
+    }
 }
 
 .blog-yazi-meta-satir {
