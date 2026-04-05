@@ -1,0 +1,49 @@
+---
+description: Blog yazısı yayın tarihi — gerçek yayın günü; yazı, kartlar, JSON-LD ve sitemap senkronu
+alwaysApply: true
+---
+
+# Blog yayın tarihi standardı
+
+## Yayın günü ne olmalı?
+
+- **Yeni yazı** veya **ilk kez canlıya alınan** içerik: yayın tarihi, **yazının gerçekten yayına girdiği takvim günüdür** (placeholder veya eski sabit tarih bırakılmaz).
+
+**Tarih seçim sırası (önce gelen kazanır):**
+
+1. Kullanıcı **açıkça bir gün** verdiyse → o gün.
+2. Sohbette **“Today’s date” / bugünün tarihi** (`user_info`) varsa → **öncelikle bu** (proje genelinde yetkili takvim günü kabul edilir).
+3. Yukarıdakiler yoksa → aracı ortamda **gerçek günü** kullan: örn. PowerShell `Get-Date -Format "yyyy-MM-dd"` veya `date +%Y-%m-%d`; yeni yayınlanan yazıda **bu** ISO tarihi `datePublished` ve kartlara yazılır.
+
+Geçmişe dönük “tahmini” veya **tüm yazılara aynı rastgele gün** atama yapma.
+
+## Senkronize edilmesi gereken yerler (aynı ISO gün)
+
+Aynı yazı için aşağıdakiler **aynı yayın günü** ile uyumlu olmalı (`YYYY-MM-DD`):
+
+1. **Yazı sayfası** (`blog/.../index.html`):
+   - `<time class="blog-yazi-meta-tarih" datetime="YYYY-MM-DD">` + Türkçe görünen tarih (gün ay yıl).
+   - JSON-LD `Article` içinde `datePublished` (ilk yayın bu gün).
+   - İlk yayında `dateModified` = `datePublished`. Sonradan metin güncellenirse yalnızca `dateModified` yeni güne çekilir; `datePublished` değişmez.
+
+2. **Liste kartları** (`blog/index.html`, `blog/{kategori}/index.html`):
+   - `article.blog-yazi-karti` üzerinde `data-published="YYYY-MM-DD"`.
+   - `p.blog-kart-meta` içindeki okunur tarih aynı güne denk gelmeli.
+
+3. **Sitemap** (`sitemap.xml`):
+   - İlgili yazı URL’si için `<lastmod>YYYY-MM-DD</lastmod>` (yayın veya son içerik güncellemesi günü).
+   - Yazı eklendiğinde veya kart güncellendiğinde ilgili **kategori sayfası** ve gerekiyorsa **ana blog** `lastmod` değerlerini de güncelle.
+
+4. **Ana sayfa son 3 yazı** (`json/blog-latest.json`): Ana sayfa blog özeti bu dosyadan beslenir; yeni yazı ana sayfada görünsün veya sıralama doğru kalsın diye `posts` güncellenmeli. Ayrıntı: `ana-sayfa-blog-ozeti-3-yazi` kuralı.
+
+## Kontrol listesi (yeni blog yazısı tesliminde)
+
+- [ ] Yazı `datetime` / görünür tarih
+- [ ] JSON-LD `datePublished` (+ ilk yayında `dateModified`)
+- [ ] Tüm ilgili `data-published` + `blog-kart-meta`
+- [ ] `sitemap.xml` yazı + kategori (+ gerekirse `/blog/`)
+- [ ] `json/blog-latest.json` (ana sayfa son 3 yazı)
+
+## Diğer kurallarla ilişki
+
+- `title` / `meta description` metinlerini kullanıcı vermeden değiştirme kuralları geçerlidir; bu standart **tarih alanları** içindir.

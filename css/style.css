@@ -2206,9 +2206,17 @@ p + .kirmizi-kutu {
     box-shadow: none;
 }
 
-.okul-liste-kapsayici:hover {
+/* Program listesi olan çerçeve: hover’da lacivert (yalnızca .modern-okul-listesi varken) */
+.okul-liste-kapsayici:has(.modern-okul-listesi):hover {
     border-color: #000080;
     box-shadow: 0 10px 25px rgba(0, 0, 128, 0.10);
+    transform: translateY(-4px);
+}
+
+/* Yalnızca alt yönlendirme (blog vb.): dış çerçeve gri kalsın, hareket aynı */
+.okul-liste-kapsayici:has(> .alt-yonlendirme-alani):not(:has(.modern-okul-listesi)):hover {
+    border-color: #d1d1d1;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
     transform: translateY(-4px);
 }
 

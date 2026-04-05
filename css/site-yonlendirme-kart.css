@@ -47,11 +47,11 @@
     margin: 25px auto 0 auto;
 }
 
-/* Hover Efekti: Daha derin gölge ve lacivert vurgu */
+/* Hover: yukarı hareket + nötr gölge; çerçeve gri kalır (lacivert yok) */
 .yonlendirme-karti:hover { 
     transform: translateY(-8px); 
-    border-color: #000080; 
-    box-shadow: 0 15px 30px rgba(0, 0, 128, 0.08); 
+    border-color: #e0e0e0; 
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08); 
 }
 
 /* .okul-liste-baslik: style.css içinde tüm sitede gizli (yüzen lacivert şerit kaldırıldı) */

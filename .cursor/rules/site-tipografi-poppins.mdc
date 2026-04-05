@@ -1,0 +1,27 @@
+---
+description: Site geneli tek yazı tipi — Poppins; yeni sayfa ve CSS’te başka font ailesi kullanma
+alwaysApply: true
+---
+
+# Site tipografi standardı: Poppins
+
+## Birincil yazı tipi
+
+- Tüm sitede **okunur metin ve arayüz** için tek aile: **`Poppins`**, yedek `sans-serif`.
+- `body` zaten `style.css` içinde `'Poppins', sans-serif` ile tanımlı; yeni içerik bunu **bozmamalı**.
+
+## Yeni sayfa / yeni CSS eklerken
+
+- Sayfaya özel `.css` dosyalarında **`font-family`** için yalnızca **`"Poppins", sans-serif`** veya **`inherit`** kullan.
+- **Kullanma:** Inter, Montserrat, Playfair Display, Georgia (başlık için bile), Roboto, Open Sans vb. ek aile veya Google Fonts’tan ikinci/üçüncü aile yükleme.
+- Gerekli ağırlıklar tek linkte toplansın; örnek:
+  `https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap`
+- Vurgu **font ailesiyle değil**; **font-weight**, boyut, renk ve spacing ile yapılır.
+
+## Mevcut sayfalar
+
+- Eski sayfalarda başka font kalmış olabilir; dokunulmadıkça toplu migrasyon zorunlu değil. **Yeni düzenleme** yapılırken ilgili blok Poppins’e çekilebilir.
+
+## İstisna
+
+- Kullanıcı açıkça farklı bir aile isterse ve metin verirse o sayfa/içerik için uygulanır (genel kuraldan üstün).

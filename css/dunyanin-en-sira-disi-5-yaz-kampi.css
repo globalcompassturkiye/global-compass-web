@@ -1,0 +1,407 @@
+/**
+ * Blog: Dünyanın En Sıra Dışı 5 Yaz Kampı — dergi stili (yalnız bu sayfa)
+ * Tipografi: yalnız Poppins (site standardı)
+ * Renkler: site lacivert #000080 / #00235d, kurumsal kırmızı #bd0505
+ */
+
+.blog-yazi-yaz-kampi-mag .blog-yazi-tek-sutun--tam {
+    max-width: 100%;
+}
+
+.blog-yazi-yaz-kampi-mag .yk-mag-wrap {
+    --yk-lacivert: #000080;
+    --yk-lacivert-soft: #00235d;
+    --yk-kirmizi: #bd0505;
+    --yk-krem: #faf8f5;
+    --yk-duman: #e8eef6;
+    --yk-vurgu: #f4f0eb;
+    font-family: "Poppins", sans-serif;
+}
+
+.blog-yazi-yaz-kampi-mag .yk-mag-wrap p {
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #2d3748;
+    margin: 0 0 1.1em;
+}
+
+/* —— Hero —— */
+.blog-yazi-yaz-kampi-mag .yk-mag-hero {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 2.5rem;
+    margin-left: calc(-1 * var(--icerik-yan-gutter, 25px));
+    /* Sağda yalnızca .blog-yazi-detay padding (25px); çift boşluk oluşmasın */
+    margin-right: 0;
+    padding: clamp(2.5rem, 6vw, 4.5rem) var(--icerik-yan-gutter, 25px) clamp(2rem, 5vw, 3.5rem);
+    border-radius: 0 0 20px 20px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #f0f4ff 0%, #faf5f2 45%, #e8f0fa 100%);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+
+.blog-yazi-yaz-kampi-mag .yk-mag-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle at 20% 30%, rgba(0, 35, 93, 0.06) 0%, transparent 45%),
+        radial-gradient(circle at 80% 70%, rgba(189, 5, 5, 0.05) 0%, transparent 40%),
+        repeating-linear-gradient(
+            -12deg,
+            transparent,
+            transparent 40px,
+            rgba(0, 0, 128, 0.02) 40px,
+            rgba(0, 0, 128, 0.02) 41px
+        );
+    pointer-events: none;
+}
+
+.blog-yazi-yaz-kampi-mag .yk-mag-hero-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 920px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Blog yazı ana başlığı ile aynı kurumsal renkler (.blog-yazi-ana-baslik) */
+.blog-yazi-yaz-kampi-mag .yk-mag-hero h1,
+.blog-yazi-yaz-kampi-mag .yk-mag-hero .yk-mag-h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.65rem, 4.2vw, 2.65rem);
+    line-height: 1.18;
+    color: #000080;
+    margin: 0 0 1.25rem;
+    letter-spacing: -0.02em;
+}
+
+.blog-yazi-yaz-kampi-mag .yk-mag-hero h1 .vurgu-renk,
+.blog-yazi-yaz-kampi-mag .yk-mag-hero .yk-mag-h1 .vurgu-renk {
+    color: #bd0505;
+}
+
+/* —— Kamp blokları (numara watermark) —— */
+.blog-yazi-yaz-kampi-mag .yk-mag-kamp {
+    position: relative;
+    margin: 2.75rem 0;
+    padding: 1.75rem 0 1.5rem;
+    border-bottom: 1px solid rgba(0, 35, 93, 0.08);
+}
+
+.blog-yazi-yaz-kampi-mag .yk-mag-kamp:last-of-type {
+    border-bottom: none;
+}
+
+.blog-yazi-yaz-kampi-mag .yk-mag-kamp-num {
+    position: absolute;
+    left: -0.15em;
+    top: 0.05em;
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(4.5rem, 14vw, 7.5rem);
+    font-weight: 700;
+    line-height: 1;
+    color: var(--yk-lacivert);
+    opacity: 0.12;
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
+}
+
+.blog-yazi-yaz-kampi-mag .yk-mag-kamp-body {
+    position: relative;
+    z-index: 1;
+    padding-left: min(4.5rem, 12vw);
+}
+
+@media (max-width: 600px) {
+    .blog-yazi-yaz-kampi-mag .yk-mag-kamp-body {
+        padding-left: 0;
+    }
+
+    .blog-yazi-yaz-kampi-mag .yk-mag-kamp-num {
+        position: static;
+        display: block;
+        font-size: 3rem;
+        margin-bottom: 0.35rem;
+        opacity: 0.18;
+    }
+}
+
+.blog-yazi-yaz-kampi-mag .yk-mag-kamp-baslik-satir {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.blog-yazi-yaz-kampi-mag .yk-mag-ikon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: linear-gradient(145deg, #fff 0%, var(--yk-duman) 100%);
+    box-shadow: 0 4px 14px rgba(0, 35, 93, 0.1);
+    color: var(--yk-lacivert-soft);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.blog-yazi-yaz-kampi-mag .yk-mag-ikon svg {
+    width: 26px;
+    height: 26px;
+}
+
+.blog-yazi-yaz-kampi-mag .yk-mag-kamp:hover .yk-mag-ikon {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(0, 35, 93, 0.14);
+}
+
+.blog-yazi-yaz-kampi-mag .yk-mag-kamp h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(1.15rem, 2.4vw, 1.45rem);
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--yk-lacivert-soft);
+    margin: 0;
+    flex: 1;
+    min-width: 200px;
+}
+
+/* —— Figure: solda görsele sığan çerçeve, sağda metin (figcaption) —— */
+.blog-yazi-yaz-kampi-mag .yk-mag-fig--yan-duzen {
+    display: grid;
+    grid-template-columns: minmax(0, max-content) minmax(0, 1fr);
+    gap: 1.25rem 1.35rem;
+    align-items: start;
+    margin: 1.35rem 0 1.75rem;
+    max-width: 100%;
+    background: transparent;
+    transition: none;
+}
+
+.blog-yazi-yaz-kampi-mag .yk-mag-fig--yan-duzen:hover {
+    transform: none;
+}
+
+/* Çerçeve yalnızca görsel boyutunda */
+.blog-yazi-yaz-kampi-mag .yk-mag-fig-gorsel-kutusu {
+    width: fit-content;
+    max-width: min(100%, 22rem);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 12px 36px rgba(0, 35, 93, 0.14), 0 2px 8px rgba(0, 0, 0, 0.05);
+    background: #eef1f6;
+    transition: box-shadow 0.35s ease, transform 0.35s ease;
+}
+
+.blog-yazi-yaz-kampi-mag .yk-mag-kamp:hover .yk-mag-fig-gorsel-kutusu {
+    box-shadow: 0 16px 44px rgba(0, 35, 93, 0.18), 0 4px 12px rgba(0, 0, 0, 0.06);
+    transform: translateY(-2px);
+}
+
+.blog-yazi-yaz-kampi-mag .yk-mag-fig-gorsel {
+    display: block;
+    box-sizing: border-box;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    max-height: min(24rem, 58vh);
+    margin: 0;
+    object-fit: contain;
+    object-position: center;
+}
+
+.blog-yazi-yaz-kampi-mag .yk-mag-fig-metin {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    min-width: 0;
+}
+
+.blog-yazi-yaz-kampi-mag .yk-mag-fig-metin .yk-mag-fig-cap {
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #64748b;
+    line-height: 1.45;
+    margin: 0 0 0.65rem;
+    padding: 0;
+    background: transparent;
+}
+
+.blog-yazi-yaz-kampi-mag .yk-mag-fig-metin > p:not(.yk-mag-fig-cap) {
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #2d3748;
+    margin: 0;
+}
+
+@media (max-width: 700px) {
+    .blog-yazi-yaz-kampi-mag .yk-mag-fig--yan-duzen {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .blog-yazi-yaz-kampi-mag .yk-mag-fig-gorsel-kutusu {
+        max-width: 100%;
+        width: fit-content;
+        margin: 0 auto;
+        justify-self: center;
+    }
+
+    .blog-yazi-yaz-kampi-mag .yk-mag-fig-gorsel {
+        max-height: min(20rem, 50vh);
+    }
+
+    .blog-yazi-yaz-kampi-mag .yk-mag-fig-metin {
+        padding-top: 0.15rem;
+    }
+}
+
+/* —— “Neden” özellik kutusu —— */
+.blog-yazi-yaz-kampi-mag .yk-mag-neden {
+    margin: 2.5rem 0 2rem;
+    padding: clamp(1.5rem, 4vw, 2.25rem);
+    border-radius: 16px;
+    background: linear-gradient(160deg, var(--yk-vurgu) 0%, var(--yk-duman) 100%);
+    border: 1px solid rgba(0, 35, 93, 0.08);
+    box-shadow: 0 4px 24px rgba(0, 35, 93, 0.06);
+}
+
+.blog-yazi-yaz-kampi-mag .yk-mag-neden h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--yk-lacivert-soft);
+    margin: 0 0 1rem;
+    line-height: 1.35;
+}
+
+.blog-yazi-yaz-kampi-mag .yk-mag-neden > p {
+    margin-bottom: 1rem;
+}
+
+.blog-yazi-yaz-kampi-mag .yk-mag-neden-liste {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.blog-yazi-yaz-kampi-mag .yk-mag-neden-liste li {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+    margin-bottom: 0.85rem;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    line-height: 1.65;
+    color: #334155;
+}
+
+.blog-yazi-yaz-kampi-mag .yk-mag-neden-liste li:last-child {
+    margin-bottom: 0;
+}
+
+.blog-yazi-yaz-kampi-mag .yk-mag-check {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    margin-top: 0.15em;
+    color: var(--yk-kirmizi);
+}
+
+/* —— Kapanış + CTA —— */
+.blog-yazi-yaz-kampi-mag .yk-mag-kapanis {
+    margin: 1.5rem 0 1rem;
+}
+
+.blog-yazi-yaz-kampi-mag .yk-mag-cta {
+    margin: 2.25rem 0 1rem;
+    padding: clamp(1.75rem, 4vw, 2.5rem);
+    border-radius: 16px;
+    background: linear-gradient(135deg, var(--yk-lacivert-soft) 0%, #0f172a 100%);
+    color: #f1f5f9;
+    text-align: center;
+    box-shadow: 0 16px 48px rgba(0, 35, 93, 0.25);
+}
+
+.blog-yazi-yaz-kampi-mag .yk-mag-cta h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(1.35rem, 3vw, 1.75rem);
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 0.75rem;
+    line-height: 1.3;
+}
+
+.blog-yazi-yaz-kampi-mag .yk-mag-cta p {
+    color: rgba(241, 245, 249, 0.92);
+    max-width: 36em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.35rem;
+}
+
+.blog-yazi-yaz-kampi-mag .yk-mag-cta-buton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.9rem 1.75rem;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;
+    background: var(--yk-kirmizi);
+    border-radius: 999px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 20px rgba(189, 5, 5, 0.45);
+    transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.blog-yazi-yaz-kampi-mag .yk-mag-cta-buton:hover {
+    background: #d10606;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(189, 5, 5, 0.5);
+}
+
+.blog-yazi-yaz-kampi-mag .yk-mag-cta-buton:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 3px;
+}
+
+.blog-yazi-yaz-kampi-mag .yk-mag-cta-buton svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+/* Sayfa gövdesi (breadcrumb, meta, yan panel, içindekiler): tek aile Poppins */
+body.blog-yazi-yaz-kampi-mag .icerik-alani.blog-yazi-detay {
+    font-family: "Poppins", sans-serif;
+}
+
+/* Alt yönlendirme: iki CTA (Dil Okulları / Yaz Okulları) */
+.blog-yazi-yaz-kampi-mag .yonlendirme-karti-cta-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+@media (max-width: 640px) {
+    .blog-yazi-yaz-kampi-mag .yonlendirme-karti--yk-mag-iki-cta .kart-link {
+        min-width: 0;
+        width: 100%;
+        max-width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+}

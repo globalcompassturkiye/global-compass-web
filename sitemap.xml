@@ -384,7 +384,7 @@
 
   <url>
     <loc>https://www.globalcompass.com.tr/blog/</loc>
-    <lastmod>2026-03-31</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -396,13 +396,13 @@
   </url>
   <url>
     <loc>https://www.globalcompass.com.tr/blog/yaz-okullari/</loc>
-    <lastmod>2026-03-31</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://www.globalcompass.com.tr/blog/lise/</loc>
-    <lastmod>2026-03-31</lastmod>
+    <lastmod>2026-04-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.75</priority>
   </url>
@@ -450,25 +450,31 @@
   </url>
   <url>
     <loc>https://www.globalcompass.com.tr/blog/universite/russell-group-nedir-ingiltere-prestijli-universiteler/</loc>
-    <lastmod>2026-03-31</lastmod>
+    <lastmod>2026-04-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
   </url>
   <url>
     <loc>https://www.globalcompass.com.tr/blog/yuksek-lisans-mba/yurt-disinda-yuksek-lisans-kariyer-sicramasi/</loc>
-    <lastmod>2026-03-31</lastmod>
+    <lastmod>2026-04-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
   </url>
   <url>
     <loc>https://www.globalcompass.com.tr/blog/lise/ibdp-ve-ibcp-farki-hangisi-daha-iyi/</loc>
-    <lastmod>2026-03-31</lastmod>
+    <lastmod>2026-04-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
   </url>
   <url>
     <loc>https://www.globalcompass.com.tr/blog/lise/isvicre-lise-diplomasi-vs-ib/</loc>
-    <lastmod>2026-03-31</lastmod>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://www.globalcompass.com.tr/blog/yaz-okullari/dunyanin-en-sira-disi-5-yaz-kampi/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
   </url>

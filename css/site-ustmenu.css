@@ -218,6 +218,21 @@ body.ana-sayfa {
     }
 }
 
+/* 1200px üstü: ikonları mevcut masaüstü boyutunun %80’i (mobil / ≤1200px dokunulmaz) */
+@media (min-width: 1201px) and (max-width: 1920px) {
+    .sosyal-medya-alani img {
+        width: calc((24px + ((100vw - 501px) * 6) / 1419) * 0.8);
+        height: calc((24px + ((100vw - 501px) * 6) / 1419) * 0.8);
+    }
+}
+
+@media (min-width: 1921px) {
+    .sosyal-medya-alani img {
+        width: 24px;
+        height: 24px;
+    }
+}
+
 @media (max-width: 500px) {
     .logo img {
         width: 158px !important;

@@ -1,0 +1,26 @@
+---
+description: Ana sayfada her zaman son yayınlanan 3 blog yazısı; JSON + JS senkronu
+alwaysApply: true
+---
+
+# Ana sayfa blog özeti — son 3 yazı
+
+## Zorunlu davranış
+
+- Ana sayfa (`/index.html`) blog özet bölümünde **her zaman tam olarak 3** blog yazısı gösterilir.
+- Bu üç yazı, **yayın tarihine göre en yeni olanlar**dır (`published` ISO tarihi, yeniden eskiye sıra).
+
+## Uygulama (bu depoda)
+
+- Veri kaynağı: `json/blog-latest.json` içindeki `posts` dizisi.
+- Liste ve sıralama: `js/ana-sayfa-blog-ozeti.js` — `published` alanına göre azalan sıralama, ardından ilk **3** kayıt (`MAX = 3`).
+- Ana sayfa blog kartlarında **görsel kullanılmaz**; `blog-latest.json` ve `ana-sayfa-blog-ozeti.js` buna göre (kategori, başlık, özet, tarih).
+- Yeni blog yazısı eklendiğinde veya ana sayfada görünmesi istenen içerik değiştiğinde **`blog-latest.json` güncellenmelidir**; böylece ana sayfa her zaman gerçekten “son yayınlanan 3” yazıyı yansıtır.
+
+## İlişkili standart
+
+- Yayın tarihi alanları (`published`, kartlar, JSON-LD, sitemap) için `blog-yayin-tarihi-standardi` kuralına uy; ana sayfadaki sıralama bu tarihlere dayanır.
+
+## Dikkat
+
+- Ana sayfadaki yazı sayısını veya “en yeni N” mantığını değiştirmeden önce ürün/ içerik kararı gerekir; kural **3 yazı** ve **en yeni öncelik** olarak kalır.

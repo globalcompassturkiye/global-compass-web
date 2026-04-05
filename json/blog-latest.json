@@ -1,14 +1,20 @@
 {
   "posts": [
     {
-      "published": "2026-03-31",
+      "published": "2026-04-05",
+      "href": "/blog/yaz-okullari/dunyanin-en-sira-disi-5-yaz-kampi/",
+      "title": "Yaz Tatilinden Fazlası: Dünyanın En Sıra Dışı 5 Yaz Kampı",
+      "excerpt": "Yelkenli, yarış mühendisliği, TED, opera ve bebek-ebeveyn kamplarıyla çocuğunuz için unutulmaz ve vizyoner bir yaz rotası.",
+      "category": "Yaz Okulları",
+      "categoryHref": "/blog/yaz-okullari/"
+    },
+    {
+      "published": "2026-04-03",
       "href": "/blog/lise/isvicre-lise-diplomasi-vs-ib/",
       "title": "İsviçre Lise Eğitimi İsviçre Lise Diploması mı, IB mi?",
       "excerpt": "İsviçre'de lise eğitimi: Maturité ve IB farklarını keşfedin. Üniversite kabulünde hangi diploma daha avantajlı?",
       "category": "Lise",
-      "categoryHref": "/blog/lise/",
-      "image": "",
-      "imageAlt": ""
+      "categoryHref": "/blog/lise/"
     },
     {
       "published": "2026-03-31",
@@ -16,9 +22,7 @@
       "title": "IBDP mi IBCP mi? Uluslararası Bakalorya Seçim Rehberi",
       "excerpt": "IBDP ve IBCP programları arasındaki farkları inceleyin, öğrenciniz için en doğru yurt dışı lise akademik rotasını birlikte belirleyin.",
       "category": "Lise",
-      "categoryHref": "/blog/lise/",
-      "image": "",
-      "imageAlt": ""
+      "categoryHref": "/blog/lise/"
     },
     {
       "published": "2026-03-31",
@@ -26,9 +30,7 @@
       "title": "Yurt Dışında Yüksek Lisans: Diploma mı, Kariyer Sıçraması mı?",
       "excerpt": "Yurt dışında yüksek lisans kariyerinizi nasıl değiştirir? Stratejik program seçimi, çalışma izni ve global network rehberimiz.",
       "category": "Yüksek Lisans & MBA",
-      "categoryHref": "/blog/yuksek-lisans-mba/",
-      "image": "",
-      "imageAlt": ""
+      "categoryHref": "/blog/yuksek-lisans-mba/"
     },
     {
       "published": "2026-03-31",
@@ -36,9 +38,7 @@
       "title": "Russell Group Nedir? İngiltere'nin En İyi 24 Üniversitesi",
       "excerpt": "Russell Group üniversiteleri hangileridir? En prestijli 24 okula başvuru, maaş avantajları ve kariyer rehberimizi inceleyin.",
       "category": "Üniversite",
-      "categoryHref": "/blog/universite/",
-      "image": "",
-      "imageAlt": ""
+      "categoryHref": "/blog/universite/"
     }
   ]
 }

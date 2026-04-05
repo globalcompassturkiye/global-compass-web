@@ -1,6 +1,7 @@
 /**
  * Ana sayfa: json/blog-latest.json içinden en güncel 3 blog yazısını listeler.
  * Yeni yazı eklerken: JSON'a kayıt ekleyin; en son yayınlar published ISO tarihine göre seçilir.
+ * Ana sayfa blog kartlarında görsel kullanılmaz (yalnız metin: kategori, başlık, özet, tarih).
  */
 (function () {
   'use strict';
@@ -44,17 +45,6 @@
       art.setAttribute('role', 'listitem');
       art.setAttribute('itemscope', '');
       art.setAttribute('itemtype', 'https://schema.org/BlogPosting');
-      var img = '';
-      if (p.image) {
-        img =
-          '<span class="ana-sayfa-blog-kart-gorsel" aria-hidden="true">' +
-          '<img src="' +
-          escapeHtml(p.image) +
-          '" alt="' +
-          escapeHtml(p.imageAlt || '') +
-          '" width="400" height="250" loading="lazy" decoding="async" itemprop="image">' +
-          '</span>';
-      }
       var cat = '';
       if (p.category) {
         cat = '<span class="ana-sayfa-blog-kart-kategori">' + escapeHtml(p.category) + '</span>';
@@ -63,7 +53,6 @@
         '<a class="ana-sayfa-blog-kart-tum-link" href="' +
         escapeHtml(p.href) +
         '" itemprop="url">' +
-        img +
         '<div class="ana-sayfa-blog-kart-icerik">' +
         cat +
         '<h3 class="ana-sayfa-blog-kart-baslik" itemprop="headline">' +
