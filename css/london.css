@@ -151,11 +151,12 @@
     }
 }
 
-/* Londra dil okullari ? Neden Londra: 4 numarali rozet, masaustu 2x2 */
-.londra-neden-kutu .londra-neden-rozet-grid {
+/* Londra dil okulları — Neden Londra: kartlar alt alta (satır başına bir kart).
+   style.css .gri-cerceve-kutu .dahil-rozet-grid:has(3. kart) 2 sütun verir; bu blok onu ezer. */
+.gri-cerceve-kutu.londra-neden-kutu .dahil-rozet-grid.londra-neden-rozet-grid {
     margin-top: 22px;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 18px 22px;
+    grid-template-columns: 1fr;
+    gap: 18px;
 }
 
 .londra-neden-kutu .londra-neden-rozet-grid .dahil-rozet-kart {
@@ -166,17 +167,16 @@
     color: #111827;
 }
 
-.londra-neden-kutu .dahil-rozet-ikon-tick {
+.londra-neden-kutu .londra-neden-rozet-grid .dahil-rozet-ikon-tick {
     font-size: 1.05em;
     font-weight: 700;
     line-height: 1;
     color: #e30613;
 }
 
-@media (max-width: 768px) {
-    .londra-neden-kutu .londra-neden-rozet-grid {
-        grid-template-columns: 1fr;
-    }
+/* Numaralı başlık + ✓ ikon; çok paragraflı gövde */
+.londra-neden-kutu .londra-neden-rozet-grid .dahil-rozet-metin + .dahil-rozet-metin {
+    margin-top: 0.75rem;
 }
 
 /* Londra yaz ? bu dosya en son y?klenir; okul listesi kart aral??? */
@@ -195,4 +195,22 @@
     margin-left: 0 !important;
     margin-right: 0 !important;
     margin-bottom: 0 !important;
+}
+
+/* Londra dil: alt yönlendirme — Oxford, Bournemouth */
+.sayfa-yurt-disi-dil-okullari-uk-london .yonlendirme-karti-ucl-sehir-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+@media (max-width: 640px) {
+    .sayfa-yurt-disi-dil-okullari-uk-london .yonlendirme-karti--london-ucl-sehir .kart-link {
+        min-width: 0;
+        width: 100%;
+        max-width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
 }

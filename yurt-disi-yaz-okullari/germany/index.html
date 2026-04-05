@@ -54,19 +54,19 @@
                 <div></div>
                 <div class="logo">
                     <a href="/">
-                        <img src="/img/global-compass-logo.webp" alt="Global Compass Logo" width="158" height="48" decoding="async">
+                        <img src="/img/global-compass-logo.webp" alt="Global Compass Logo" width="158" height="48" fetchpriority="high" decoding="sync">
                     </a>
                 </div>
 
                 <div class="sosyal-medya-alani">
                     <a href="https://www.facebook.com/globalcompass.ankara/" target="_blank">
-                        <img src="/img/sosyal/facebook.png" alt="Facebook" width="30" height="30">
+                        <img src="/img/sosyal/facebook.png" alt="Facebook" width="30" height="30" fetchpriority="high" decoding="sync">
                     </a>
                     <a href="https://www.instagram.com/globalcompass.turkiye/" target="_blank">
-                        <img src="/img/sosyal/instagram.webp" alt="Instagram" width="30" height="30">
+                        <img src="/img/sosyal/instagram.webp" alt="Instagram" width="30" height="30" fetchpriority="high" decoding="sync">
                     </a>
                     <a href="https://www.youtube.com/@GlobalCompassTurkiye" target="_blank">
-                        <img src="/img/sosyal/youtube.png" alt="Youtube" width="30" height="30">
+                        <img src="/img/sosyal/youtube.png" alt="Youtube" width="30" height="30" fetchpriority="high" decoding="sync">
                     </a>
                 </div>
             </div>
@@ -78,7 +78,7 @@
             </button>
             <nav class="navigasyon" id="nav-menu" aria-label="Ana menü">
                 <ul class="nav-list">
-                    <li class="nav-logo-item"><a href="/"><img src="/img/global-compass-logo.webp" alt="Global Compass Logo" width="158" height="48" decoding="async"></a></li>
+                    <li class="nav-logo-item"><a href="/"><img src="/img/global-compass-logo.webp" alt="Global Compass Logo" width="158" height="48" fetchpriority="high" decoding="sync"></a></li>
 
                     <li><a href="/">Ana Sayfa</a></li>
                     <li class="has-dropdown">
@@ -170,7 +170,7 @@
         <nav class="site-haritasi-yolu">
             <div class="breadcrumb-kutu">
                 <a href="/" class="ana-sayfa-ikon">
-                    <img src="../../img/home-icon.png" alt="Ana Sayfa" width="22" height="22" decoding="async">
+                    <img src="../../img/home-icon.png" alt="Ana Sayfa" width="22" height="22" loading="lazy" decoding="async">
                 </a>
                 <span class="ayrac">›</span>
                 <a href="/yurt-disi-yaz-okullari/">Yurt Dışı Yaz Okulları</a>
@@ -194,7 +194,7 @@
                 <div class="kare-kart">
                     <a href="/yurt-disi-yaz-okullari/germany/frankfurt/" class="kare-resim-link">
                         <div class="kare-resim">
-                            <img src="../../img/germany-sehir/frankfurt.webp" alt="Frankfurt Yaz Okulları" loading="lazy">
+                            <img src="../../img/germany-sehir/frankfurt.webp" alt="Frankfurt Yaz Okulları" loading="lazy" decoding="async">
                         </div>
                     </a>
                     <a href="/yurt-disi-yaz-okullari/germany/frankfurt/" class="kare-btn">Frankfurt Yaz Okulları</a>
@@ -203,7 +203,7 @@
                 <div class="kare-kart">
                     <a href="/yurt-disi-yaz-okullari/germany/freiburg/" class="kare-resim-link">
                         <div class="kare-resim">
-                            <img src="../../img/germany-sehir/freiburg.webp" alt="Freiburg Yaz Okulları" loading="lazy">
+                            <img src="../../img/germany-sehir/freiburg.webp" alt="Freiburg Yaz Okulları" loading="lazy" decoding="async">
                         </div>
                     </a>
                     <a href="/yurt-disi-yaz-okullari/germany/freiburg/" class="kare-btn">Freiburg Yaz Okulları</a>
@@ -318,7 +318,7 @@
             <h2 class="kutu-baslik">Almanya'da Yaz Okulu Atmosferi</h2>
             <div class="almanya-avantaj-gorsel">
                 <div class="almanya-avantaj-gorsel-sol">
-                    <img src="../../img/germany-sehir/frankfurt.webp" alt="Almanya yaz okulu kampüsü" loading="lazy">
+                    <img src="../../img/germany-sehir/frankfurt.webp" alt="Almanya yaz okulu kampüsü" loading="lazy" decoding="async">
                 </div>
                 <div class="almanya-avantaj-gorsel-sag">
                     <h3>Modern Kampüsler, Tarihi Şehirler</h3>
@@ -396,7 +396,7 @@
 
                 <div class="form-grup">
                     <div class="radyo-grup">
-                        <label><input type="radio" name="kimlik-germany" value="ogrenci"> Öğrenciyim</label>
+                        <label><input type="radio" name="kimlik-germany" value="ogrenci" required> Öğrenciyim</label>
                         <label><input type="radio" name="kimlik-germany" value="veli"> Veliyim</label>
                         <label><input type="radio" name="kimlik-germany" value="diger"> Diğer</label>
                     </div>
@@ -550,7 +550,7 @@
     <footer class="ana-footer">
         <div class="footer-kapsayici-1200">
             <div class="footer-logo-alani">
-                <a href="/"><img src="../../img/global-compass-logo-transparent.png" alt="Global Compass" class="footer-logo-img"></a>
+                <a href="/"><img src="../../img/global-compass-logo-transparent.png" alt="Global Compass" class="footer-logo-img" width="178" height="100" loading="lazy" decoding="async"></a>
             </div>
             <div class="footer-merkezi-icerik">
                 <p class="footer-adres-metni">Kızılay mah. Elgün sok. Tuğaç İşhanı 3.Kat No:11 Çankaya / ANKARA</p>
@@ -573,42 +573,7 @@
     </footer>
 
     <script src="/js/nav-submenu.js" defer></script>
-    <script>
-(function() {
-  var form = document.getElementById('iletisim-formu');
-  if (!form) return;
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    var buton = form.querySelector('button[type="submit"]');
-    if (buton) buton.disabled = true;
-    var payload = {
-      ad: (form.querySelector('[name="ad"]') || {}).value || '',
-      soyad: (form.querySelector('[name="soyad"]') || {}).value || '',
-      email: (form.querySelector('[name="email"]') || {}).value || '',
-      telefon: (form.querySelector('[name="telefon"]') || {}).value || '',
-      kimlik: ((form.querySelector('input[type="radio"][name^="kimlik"]:checked')) || {}).value || '',
-      mesaj: (form.querySelector('[name="mesaj"]') || {}).value || ''
-    };
-    fetch('https://global-compass-paytr.canmuratsubat.workers.dev/iletisim', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
-    })
-    .then(function(res) {
-      if (!res.ok) throw new Error('Hata');
-      form.reset();
-      alert('Mesajınız iletildi, en kısa sürede sizinle iletişime geçeceğiz.');
-    })
-    .catch(function() {
-      alert('Bir hata oluştu, lütfen tekrar deneyin.');
-    })
-    .finally(function() {
-      if (buton) buton.disabled = false;
-    });
-  });
-})();
-
-</script>
+    <script src="/js/iletisim-formu.js" defer></script>
 <script src="/js/header-offset.js" defer></script>
 </body>
 </html>

@@ -185,7 +185,7 @@
     }
 }
 
-/* 501px altı: kart içi başlık — h2.kutu-baslik mobil (15px) */
+/* 501px altı: kart içi başlıklar — boyut hizası @media 768 style.css h2.kutu-baslik ile uyumlu */
 @media (max-width: 501px) {
     .okul-liste-kapsayici .yonlendirme-karti h1,
     .okul-liste-kapsayici .yonlendirme-karti h2,

@@ -642,7 +642,7 @@ body.sayfa-blog .blog-kart-gorsel-link {
     border: 1px solid #e2e8f0;
     border-radius: 12px;
     padding: 1rem 1rem 1.1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 25px;
 }
 
 .blog-icindekiler-baslik {
@@ -877,7 +877,9 @@ body.sayfa-blog .blog-kart-gorsel-link {
     }
 
     .blog-yazi-sayfa-mobil-ux .blog-mobil-icindekiler-wrap {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
         margin: 0 0 1rem;
     }
 

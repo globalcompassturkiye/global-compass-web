@@ -1,4 +1,4 @@
-/*
+﻿/*
   style.css — site geneli (≈6k+ satır). BAKIM: !important çoğunlukla medya/üst menü/yönlendirme
   çakışmaları içindir; kaldırmak için sayfa özel /css dosyalarında özgüllük artırılmalı.
   Büyük bloklar “MIGRATED FROM …” ile işaretli; modüler ayırma adaylarıdır (ölü kod değildir).
@@ -204,10 +204,19 @@ p {
 }
 
 /* Başlığında <br> olan gri kutular: üst bloktan ekstra boşluk
-   (ör. 2 satırlı kutu başlıkları için) */
-.gri-cerceve-kutu:has(h2.kutu-baslik br) {
+   (.baslik-iki-satir ayrı blokta 75px — seçici özgüllüğü için :not kullanılır) */
+.gri-cerceve-kutu:has(h2.kutu-baslik br):not(.baslik-iki-satir) {
     margin-top: 65px;
     padding-top: 50px; /* br olan başlıklarda başlık-metnin iç boşluğunu biraz artır */
+}
+
+/* Yaz okulları kamp sayfaları: .baslik-iki-satir + iki satırlı h2 (Aşama 4 — tek kaynak) */
+.gri-cerceve-kutu.baslik-iki-satir {
+    margin-top: 75px;
+    padding-top: 50px;
+}
+.gri-cerceve-kutu.baslik-iki-satir .kutu-baslik + * {
+    padding-top: 25px;
 }
 
 /* =========================================
@@ -410,6 +419,66 @@ a.ana-hizmet-karti:hover h3 {
     color: #000080 !important;
 }
 
+/* ========================================================================
+   AŞAMA 1 — ENVANTER: h2.kutu-baslik (gri kutuda yüzen lacivert şerit)
+   Tarih: 2026-03-31. Hedef: tek kaynak style.css (yinelenen kurallar
+   sonraki aşamalarda buraya taşınır / diğer dosyalardan silinir).
+   AŞAMA 6: Özet kılavuz bu bloktan hemen sonra, h2.kutu-baslik kuralının üstünde.
+
+   HTML (*.html taraması)
+   - Toplam 312 adet <h2 … class="…kutu-baslik…">, 55 dosyada.
+   - Ek modifier sss-baslik: 37 dosyada (SSS akordeon gri kutusu başlığı);
+     ikinci satır genelde h2 içinde span.sss-alt-satir (bu dosyada
+     h2.kutu-baslik .sss-alt-satir; üç s önekli sınıf adı).
+   - İki satır + <br> deseni: <span class="vurgu-renk"> ile sarılı olmalı.
+
+   AŞAMA 3 (tamam — 2026-03-31):
+   - Repo taraması: `h2.kutu-baslik` içinde `<br>` olan tüm örneklerde ikinci satır
+     `span.vurgu-renk` veya SSS başlığında `span.sss-alt-satir` (üç s önekli, `h2.kutu-baslik .sss-alt-satir`);
+     uyumsuz örnek yok.
+   - Ödeme sayfaları: inline `<head>` `<style>` ve logo alanındaki `style=""` kaldırıldı;
+     `/css/site-odeme.css`.
+
+   KURAL AYIRIMI — Bu blok h2 ile sınırlıdır:
+   - h2.kutu-baslik = lacivert arka plan, beyaz metin (gri çerçeve bağlamı).
+   - Aşağıdaki genel .kutu-baslik (kampüs paneli; bu dosyada “3. Çizgi Üstü”
+     bloğu) = beyaz
+     zemin, lacivert metin; yüzen şerit bileşeni DEĞİLDİR.
+
+   AŞAMA 2 (tamam): h2.kutu-baslik.sss-baslik ve h2.kutu-baslik .sss-alt-satir
+   bu dosyada; css/sss.css’te yalnızca SSS gri kutu boşlukları / akordeon / sayfa-sss
+   özel düzeni kaldı.
+   AŞAMA 4 (uygulandı — 2026-03-31): `h2.kutu-baslik` içinde `<br>` olan tüm ilgili
+   `gri-cerceve-kutu` kapsayıcılarında `baslik-iki-satir` sınıfı açıkça kullanılıyor
+   (19 kutu / 13 HTML dosyası; önceden yalnızca 5 kutuda vardı). Boşluk kuralları bu
+   dosyada; `css/sss.css` içinde çift SSS gri kutu tek blok; iletisim / yönlendirme-kart
+   yorumları sade.
+   Çapraz bakış (h2 şeridi dışı):
+   - css/site-yonlendirme-kart.css … yorum
+   - css/iletisim.css … yorum
+   İlişkili ama farklı seçici (h2 değil veya alt bağlam):
+   - css/yurt-disi-universite.css … .uni-avantaj-grid .kutu-baslik
+   - css/japan.css … .japan-tercih-bolumu .kutu-baslik + p
+   - css/kings-education-dil-*.css … .kings-mini-kutu-baslik
+
+   AŞAMA 5 (tamam — repo doğrulaması, 2026-03-31):
+   - Temsil yollar: /yurt-disi-dil-okullari/, /yurt-disi-universite/, /iletisim/,
+     /sss/, /yurt-disi-yaz-okullari/japan/tokyo/immerse-education/ — yüzen h2 +
+     SSS span / iki satır vurgu-renk yapısı tutarlı.
+   - Üniversite: .uni-avantaj-grid içinde .kutu-baslik yok (h2 grid kardeşi üstte);
+     yurt-disi-universite.css seçicisi global h2.kutu-baslik ile çakışmıyor.
+   - japan-tercih-bolumu .kutu-baslik + p: rozet bölümü bağlamı; yüzen şerit ailesi değil.
+   Yayım öncesi manuel: bu sayfalar + bir Kings sayfası, masaüstü ve ≤768px spot kontrol.
+   ======================================================================== */
+
+/* AŞAMA 6 — Kılavuz (yeni sayfa / düzenleme):
+   • Yüzen lacivert şerit başlık: h2.kutu-baslik (+ gerekiyorsa h2.kutu-baslik.sss-baslik).
+   • İkinci satır kırmızı: <br> sonrası span.vurgu-renk veya SSS’te h2 içindeki
+     span (sınıf: üç “s” + “-alt-satir”, bu dosyada h2.kutu-baslik .sss-alt-satir).
+   • Aynı görünüm için başka .css dosyasında padding, radius veya font tekrarlamayın;
+     SSS gri kutu boşlukları ve akordeon: css/sss.css. Kampüs paneli .kutu-baslik
+     (h2 değil) ayrı ailedir — “3. Çizgi Üstü Kurumsal Başlık” bloğu. */
+
 h2.kutu-baslik {
     position: absolute;
     top: 0;
@@ -429,12 +498,32 @@ h2.kutu-baslik {
     text-align: center;
 }
 
+/* SSS / iki satırlı yüzen başlık (modifier) — Aşama 2 tek kaynak */
+h2.kutu-baslik.sss-baslik {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 2;
+    padding: 5px 20px;
+    border-radius: 5px;
+}
 
-/* 2 satırlı h2: 1. satır beyaz (h2 rengi), 2. satır kırmızı – ikinci satır <br> sonrası span.vurgu-renk ile sarılmalı */
-h2.kutu-baslik .vurgu-renk {
+/* 2 satırlı h2: 1. satır beyaz (h2 rengi), 2. satır kırmızı — <br> sonrası
+   span.vurgu-renk; SSS bloklarında span.sss-alt-satir (sınıf adı: üç s + -alt-satir) */
+h2.kutu-baslik .vurgu-renk,
+h2.kutu-baslik .sss-alt-satir {
     color: #bd0505 !important;
+}
+
+h2.kutu-baslik .vurgu-renk {
     display: inline-block;
     font-size: inherit; /* Başlıkla aynı font boyutunu koru */
+}
+
+h2.kutu-baslik .sss-alt-satir {
+    display: block;
+    margin-top: 4px;
+    font-size: 0.95em;
 }
 
 .kutu-liste {
@@ -2220,22 +2309,7 @@ p + .kirmizi-kutu {
     transform: translateY(-4px);
 }
 
-/* 768px altı: seçim paneli dış çerçeve veriyor — içteki okul-liste-kapsayici çift çerçeve yapmasın */
-@media (max-width: 768px) {
-    [class*="-secim-paneli"] .okul-liste-kapsayici,
-    .yaz-okullari-secim-paneli .okul-liste-kapsayici {
-        border: none !important;
-        box-shadow: none !important;
-        background: transparent !important;
-    }
-
-    [class*="-secim-paneli"] .okul-liste-kapsayici:hover,
-    .yaz-okullari-secim-paneli .okul-liste-kapsayici:hover {
-        border: none !important;
-        box-shadow: none !important;
-        transform: none !important;
-    }
-}
+/* 768px altında da okul listesi kutusu çerçevesi korunur (varsayılan .okul-liste-kapsayici border/background) */
 
 /* 501px altı: Oxford okul listesinde #1'in sol boşluğunu azalt */
 @media (max-width: 501px) {
@@ -2327,8 +2401,7 @@ p + .kirmizi-kutu {
         padding: 40px var(--icerik-yan-gutter) 15px var(--icerik-yan-gutter);
     }
 
-    /* Başlığında <br> olan gri kutular:
-       mobilde de ekstra üst boşluk uygula */
+    /* Başlığında <br> olan gri kutular (tümü; .baslik-iki-satir dahil) */
     .gri-cerceve-kutu:has(h2.kutu-baslik br) {
         margin-top: 65px !important;
         padding-top: 50px !important;
@@ -2526,7 +2599,10 @@ p + .kirmizi-kutu {
     margin-bottom: 30px;
 }
 
-/* 3. Çizgi Üstü Kurumsal Başlık (Sentence Case) */
+/* 3. Çizgi Üstü Kurumsal Başlık (Sentence Case)
+   AŞAMA 1 — Bu seçici h2.kutu-baslik değildir: kampüs çerçevesinde beyaz
+   zemin üzerinde lacivert metin. Yüzen lacivert şerit başlık için yukarıdaki
+   h2.kutu-baslik envanter bloğuna bakın. */
 .kutu-baslik {
     position: absolute;
     top: -15px; 
@@ -3163,17 +3239,39 @@ p + .kirmizi-kutu {
 }
 
 .ana-buton-light {
+    display: inline-block;
+    box-sizing: border-box;
     border: 2px solid #000080;
     color: #000080;
     padding: 14px 40px;
     border-radius: 8px;
     text-decoration: none;
     font-weight: 700;
-    transition: 0.3s;
+    cursor: pointer;
+    background-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+button.ana-buton-light {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: 1.25;
+    -webkit-appearance: none;
+    appearance: none;
 }
 
 .ana-buton-light:hover {
-    background: #f0f0f5;
+    background-color: #f0f0f5;
+}
+
+.ana-buton-light:focus {
+    outline: none;
+}
+
+.ana-buton-light:focus-visible {
+    outline: 2px solid #000080;
+    outline-offset: 3px;
 }
 
 /* Güven Rozetleri (ana sayfada .ana-hizmetler-bolumu içinde; üst boşluk bölüm özelinde) */
@@ -3617,7 +3715,7 @@ article.icerik-alani .dahil-rozet-metin {
 
 
 
-/* SSS ortak stiller: /css/sss.css (akordeon, sss-baslik, arama/kategori; ilgili sayfalarda yüklenir) */
+/* SSS: /css/sss.css (akordeon, gri kutu boşlukları, arama/kategori; h2.kutu-baslik.sss-baslik → style.css Aşama 2) */
 
 /* Yönlendirme kartı: /css/site-yonlendirme-kart.css (yalnızca .yonlendirme-karti / .alt-yonlendirme-alani olan sayfalar) */
 

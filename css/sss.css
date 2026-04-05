@@ -138,29 +138,14 @@ body.sayfa-sss .sosyal-medya-alani a img {
    Site geneli SSS (style.css ile birleştirildi — adım 5)
    ========================================= */
 
+/* h2.kutu-baslik.sss-baslik görünümü → style.css (Aşama 2 tek kaynak) */
+
 /* .sss-item summary h3 — küçük boyut aşağıdaki akordeon bloğunda (inherit) */
 
-h2.kutu-baslik.sss-baslik {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    left: 25px;
-    transform: translateY(-50%);
-    text-align: center;
-    line-height: 2;
-    font-size: 16px;
-    font-weight: 700;
-    border-radius: 5px 5px 0 0 !important;
-}
-
-/* 2 satırlık SSS: üst çerçeve ile başlık arası (Oxford stili - 2 satır için yeterli boşluk) */
+/* SSS gri kutusu: üst iç/dış boşluk (h2 şeridi → style.css Aşama 2) */
 .gri-cerceve-kutu:has(.sss-baslik),
 .sss-gri-kutu {
     padding-top: 75px;
-}
-/* SSS çerçevesi ile üstteki bölüm çerçevesi arasında ek 25px boşluk – tüm SSS sayfalarında */
-.gri-cerceve-kutu:has(.sss-baslik),
-.sss-gri-kutu {
     margin-top: 75px;
 }
 
@@ -173,12 +158,7 @@ h2.kutu-baslik.sss-baslik {
     margin-top: 0 !important;
 }
 
-h2.kutu-baslik .sss-alt-satir {
-    display: block;
-    margin-top: 4px;
-    font-size: 0.95em;
-    color: #bd0505 !important;
-}
+/* h2.kutu-baslik .sss-alt-satir → style.css (Aşama 2) */
 /* ===== MIGRATED FROM sss.css ===== */
 /* =========================================
     SSS SAYFASI – H1 İKİNCİ SATIR VURGUSU
@@ -416,17 +396,11 @@ h1 .h1-vurgu {
         font-size: 10px;
     }
 }
-/* --- style.css mobil bloktan taşındı (adım 5): SSS gri kutu + sss-baslik --- */
+/* SSS gri kutu üst boşlukları (768px); h2.kutu-baslik mobil → style.css */
 @media screen and (max-width: 768px) {
     .gri-cerceve-kutu:has(.sss-baslik),
     .sss-gri-kutu {
         padding-top: 75px !important;
         margin-top: 75px !important;
-    }
-    h2.kutu-baslik.sss-baslik {
-        left: 50% !important;
-        transform: translate(-50%, -50%) !important;
-        text-align: center;
-        align-items: center;
     }
 }

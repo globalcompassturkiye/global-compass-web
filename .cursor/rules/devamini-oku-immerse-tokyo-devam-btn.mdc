@@ -1,0 +1,24 @@
+---
+description: "Devamını Oku" kontrolü için tek sınıf standardı (immerse-tokyo-devam-btn)
+alwaysApply: true
+---
+
+# Devamını Oku — `immerse-tokyo-devam-btn`
+
+Referans: `/yurt-disi-yaz-okullari/japan/tokyo/immerse-education/` (branş kartları).
+
+## Zorunlu sınıf
+
+- **Görünür kontrol** `button.immerse-tokyo-devam-btn` (tercih); gerekirse `details > summary` aynı sınıfla.
+- Aynı görünüm için **yeni sayfa özel sınıf üretme** (ör. `*-devam-ozet`, `*-read-more`); stil `immerse-shared.css` içindeki bu sınıftan gelsin.
+
+## HTML kalıpları
+
+1. **Standart sıra** (Tokyo branş / tam aç-kapa): `div.immerse-tokyo-rozet-govde` → `div.immerse-tokyo-rozet-accordion-metin` (içerik) → `button.immerse-tokyo-devam-btn` (metin **altında**; açıkken "Daha az göster" da butonda). İç span: `immerse-tokyo-devam-ac` / `immerse-tokyo-devam-kapa`.
+2. **Önizleme (~%25)**: `immerse-tokyo-branches-readmore.js` + `.immerse-tokyo-branches-kutu` (Tokyo).
+3. **İkili senkron** (Kings FCE/CAE): `data-kings-cambridge-sync` + `/js/kings-cambridge-devam-sync.js`.
+
+## Stil kaynağı
+
+- Ortak görünüm: **`/css/immerse-shared.css`** (`.immerse-tokyo-devam-btn`, `summary` için marker sıfırlama).
+- Tokyo branş kutusuna özgü önizleme/gradient: **`/css/immerse-education.css`** (`.immerse-tokyo-branches-kutu …`).

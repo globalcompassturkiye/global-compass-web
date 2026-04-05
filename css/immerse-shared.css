@@ -553,6 +553,11 @@
     content: "";
 }
 
+/* article genel 15px !important kuralını aş (etiket “buton” boyutu — Immerse + Kings vb.) */
+article.icerik-alani ul.kutu-liste.yas-alan-etiketleri li {
+    font-size: 13px !important;
+}
+
 @media (max-width: 992px) {
     .gri-cerceve-kutu.cift-satir-baslik-kutu {
         margin-top: 105px;
@@ -642,4 +647,40 @@
         font-size: 12px;
         padding: 5px 14px;
     }
+
+    article.icerik-alani ul.kutu-liste.yas-alan-etiketleri li {
+        font-size: 12px !important;
+    }
+}
+
+/* Devamını Oku — Tokyo immerse branş kartları (button) + site geneli (summary/details vb.)
+   İç metin toggle: .immerse-tokyo-devam-ac / .immerse-tokyo-devam-kapa (immerse-tokyo-branches-readmore.js) */
+.immerse-tokyo-devam-btn {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 4px 0;
+    border: none;
+    background: none;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #e30613;
+    cursor: pointer;
+    text-align: left;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.immerse-tokyo-devam-btn:focus-visible {
+    outline: 2px solid #00235d;
+    outline-offset: 2px;
+}
+
+summary.immerse-tokyo-devam-btn {
+    list-style: none;
+}
+
+summary.immerse-tokyo-devam-btn::-webkit-details-marker {
+    display: none;
 }

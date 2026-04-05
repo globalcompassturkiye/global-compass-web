@@ -68,11 +68,6 @@
     display: none;
 }
 
-/* Isvicre SSS basligi: ust koseler 5px, alt koseler 0 */
-.sss-gri-kutu .kutu-baslik.sss-baslik {
-    border-radius: 5px 5px 0 0;
-}
-
 /* Okul listesi kartlari: tek renk (gradyan kapali) */
 .ulke-secim-paneli-ortak .premium-liste-kart,
 .ulke-secim-paneli-ortak .glass-stil {
@@ -90,18 +85,6 @@
     .yaz-okullari-secim-paneli .okul-liste-kapsayici .okul-isim-link {
         font-size: 13px;
     }
-}
-
-
-
-/* Kural: 2 satırlı başlık kullanan çerçevelerde üst dış boşluk 75px */
-.gri-cerceve-kutu.baslik-iki-satir {
-    margin-top: 75px;
-}
-
-/* Kural: 2 satırlı başlıktan sonra metin başlangıcına 25px boşluk */
-.gri-cerceve-kutu.baslik-iki-satir .kutu-baslik + * {
-    padding-top: 25px;
 }
 
 @media (max-width: 768px) {

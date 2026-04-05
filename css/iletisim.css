@@ -239,12 +239,11 @@ body.sayfa-iletisim article.icerik-alani.iletisim-sayfa > h1.sayfa-ana-baslik .v
     margin-top: 50px;
 }
 
-/* ---------- SSS: gri çerçeve; başlık style.css yüzen lacivert bant (kutu-baslik + sss-baslik) ---------- */
+/* SSS: h2.kutu-baslik / sss-baslik → style.css; burada yalnızca iletişim sayfası kutu düzeni */
 .iletisim-sayfa .iletisim-sss-kutu {
     margin-top: 55px;
 }
 
-/* SSS: style.css — yüzen lacivert h2.kutu-baslik + gri çerçeve (üniversite vb. ile aynı) */
 .iletisim-sayfa .iletisim-sss-kutu.gri-cerceve-kutu {
     border-radius: 16px;
     box-shadow: 0 4px 24px rgba(0, 0, 128, 0.06);

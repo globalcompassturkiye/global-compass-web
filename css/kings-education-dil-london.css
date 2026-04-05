@@ -7,6 +7,16 @@
     font-weight: 600;
 }
 
+/* h1 + alt başlık + logo: sol sütun (.blog-yazi-ana) içinde */
+.sayfa-kings-education .blog-yazi-ana > .kings-london-hero-sol {
+    max-width: none;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
 .sayfa-kings-education .kings-okul-logo-alani {
     text-align: center;
     margin-bottom: 25px;
@@ -17,23 +27,140 @@
     height: auto;
 }
 
-.sayfa-kings-education .kings-paragraf-son {
+/* Başlıksız, çerçevesiz giriş (logo / h1 altı) */
+.sayfa-kings-education .kings-giris-metni {
+    margin-top: 8px;
+    margin-bottom: 24px;
+}
+
+.sayfa-kings-education .kings-giris-metni p:last-child {
     margin-bottom: 0;
 }
 
-.sayfa-kings-education .kings-kampus-foto {
-    margin-bottom: 35px;
-    overflow: hidden;
+/* Kampüs: görsel üstte çerçeve genişliğinde (yanlarda 25px), etiketler altta ortada */
+.sayfa-kings-education .kings-kampus-olani-satir {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 10px;
+    align-items: stretch;
+}
+
+.sayfa-kings-education .kings-kampus-olani-foto {
+    min-width: 0;
+    max-width: none;
+    box-sizing: border-box;
+    margin-left: -25px;
+    margin-right: -25px;
+    width: calc(100% + 50px);
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.sayfa-kings-education .kings-kampus-olani-foto img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
     border-radius: 8px;
 }
 
-.sayfa-kings-education .kings-kampus-foto img {
+.sayfa-kings-education .kings-kampus-olani-sol {
+    min-width: 0;
+    display: flex;
+    justify-content: center;
     width: 100%;
-    max-width: 1200px;
-    height: 300px;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto;
+}
+
+.sayfa-kings-education .kings-kampus-olani-sol .yas-alan-etiketleri {
+    justify-content: center;
+    margin-top: 0 !important;
+    width: 100%;
+    max-width: 100%;
+    gap: 12px;
+}
+
+.sayfa-kings-education .kings-kampus-olani-sol .yas-alan-etiketleri li {
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px 22px;
+    flex: 0 1 240px;
+    max-width: 280px;
+    line-height: 1.45;
+}
+
+article.icerik-alani .kings-kampus-olani-sol ul.kutu-liste.yas-alan-etiketleri li {
+    font-size: 15px !important;
+}
+
+@media (max-width: 768px) {
+    .sayfa-kings-education .kings-kampus-olani-sol .yas-alan-etiketleri li {
+        font-size: 14px;
+        padding: 9px 18px;
+        flex: 1 1 auto;
+        max-width: min(320px, 100%);
+    }
+
+    article.icerik-alani .kings-kampus-olani-sol ul.kutu-liste.yas-alan-etiketleri li {
+        font-size: 14px !important;
+    }
+}
+
+/* Program detayı kartları: Tokyo Immerse immerse-detay-kart + liste (Öne Çıkanlar) düzeni */
+.sayfa-kings-education .gri-cerceve-kutu.immerse-detay-kutu {
+    margin-top: 40px;
+}
+
+/* Dil becerileri: üç küçük kart tek gri çerçeve içinde (.immerse-detay-kutu dışında) */
+.sayfa-kings-education .kings-london-dil-beceri-kapsayici .kings-london-beceri-ic-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 25px;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .sayfa-kings-education .kings-london-dil-beceri-kapsayici .immerse-detay-kart {
+        max-width: none;
+        width: 100%;
+    }
+}
+
+.sayfa-kings-education .immerse-detay-kart.kings-london-detay-liste-kart {
+    text-align: left;
+}
+
+.sayfa-kings-education .immerse-detay-kart.kings-london-detay-liste-kart .kutu-liste {
+    list-style: disc outside;
+    padding-left: 1.35em;
+    margin: 8px 0 0 0;
+    text-align: left;
+}
+
+.sayfa-kings-education .immerse-detay-kart.kings-london-detay-liste-kart .kutu-liste li {
+    padding-left: 0 !important;
+    margin-bottom: 8px;
+    text-align: left;
+    font-size: 14.5px !important;
+    line-height: 1.6;
+}
+
+.sayfa-kings-education .immerse-detay-kart.kings-london-detay-liste-kart .kutu-liste li:last-child {
+    margin-bottom: 0;
+}
+
+.sayfa-kings-education .immerse-detay-kart.kings-london-detay-liste-kart .kutu-liste li::before {
+    content: none !important;
+    display: none !important;
+}
+
+/* Kısa metin kartları: article genel 15px p kuralını Immerse kart tipografisine çek */
+.sayfa-kings-education .immerse-detay-kart > p {
+    font-size: 14.5px !important;
+    color: #444;
+    margin: 0;
+    line-height: 1.6;
 }
 
 .sayfa-kings-education .kings-kutu-ust-bosluk {
@@ -47,63 +174,33 @@
     margin-top: 20px;
 }
 
-.sayfa-kings-education .kings-beceri-ust-bolum {
-    margin-top: 50px;
-}
-
-.sayfa-kings-education .kings-beceri-ana-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    background: #fff;
-    padding: 10px;
-}
-
-.sayfa-kings-education .kings-mini-kutu {
-    margin: 25px 15px;
-    padding-top: 45px;
-    border-color: #ddd;
-}
-
-.sayfa-kings-education .kings-mini-kutu-baslik {
-    background: #000080 !important;
-    font-size: 14px;
-    text-transform: uppercase;
-}
-
-.sayfa-kings-education .kings-bilgi-grid-bolum {
-    margin-top: 40px;
-}
-
-.sayfa-kings-education .kings-bilgi-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    background: #fff;
-    gap: 10px;
-}
-
-.sayfa-kings-education .kings-mini-kutu-sik {
-    margin: 20px 10px;
-    padding-top: 45px;
-    border-color: #ddd;
-}
-
-.sayfa-kings-education .kings-liste-etiket {
-    display: block;
-    color: #000080;
-    margin-bottom: 2px;
-}
-
 .sayfa-kings-education .kings-teknik-vurgu {
     color: #bd0505;
     font-weight: 700;
 }
 
-.sayfa-kings-education .kings-teknik-kutu-gradyan {
-    background: linear-gradient(90deg, #fff4f4 0%, #fff 100%);
+/* Genel İngilizce kutusu — alt highlight */
+.sayfa-kings-education .kings-genel-ing-vurgu-kutu {
+    margin-top: 28px;
+    padding: 18px 22px;
+    border-radius: 0 10px 10px 0;
+    border: 1px solid rgba(189, 5, 5, 0.2);
     border-left: 4px solid #bd0505;
-    padding: 18px 20px;
-    border-radius: 0 8px 8px 0;
-    margin-bottom: 25px;
+    background: linear-gradient(90deg, #fff5f5 0%, #ffffff 55%);
+    box-shadow: 0 4px 14px rgba(189, 5, 5, 0.1);
+}
+
+.sayfa-kings-education .kings-genel-ing-vurgu-kutu p {
+    margin: 0;
+    font-size: 15px !important;
+    line-height: 1.65;
+    color: #1f2937;
+    font-weight: 500;
+}
+
+.sayfa-kings-education .kings-genel-ing-vurgu-kutu strong {
+    color: #000080;
+    font-weight: 700;
 }
 
 .sayfa-kings-education .kings-alinti-kutu {
@@ -146,9 +243,18 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
-.sayfa-kings-education .kings-ayricalik-kart-madde {
-    font-size: 24px;
-    line-height: 1;
+.sayfa-kings-education .kings-ayricalik-kart .dahil-rozet-ikon {
+    flex-shrink: 0;
+}
+
+/* Üstte 3 çerçeve; 4. kart (Seçmeli Dersler) tek satırda — çerçeveyi yatayda ortala (tick solda kalır) */
+@media (min-width: 992px) {
+    .sayfa-kings-education .kings-ayricaliklar-grid > .kings-ayricalik-kart:nth-child(4) {
+        grid-column: 1 / -1;
+        justify-self: center;
+        width: 100%;
+        max-width: calc((100% - 32px) / 3);
+    }
 }
 
 .sayfa-kings-education .kings-ayricalik-kart-baslik {
@@ -163,47 +269,87 @@
     line-height: 1.4;
 }
 
-.sayfa-kings-education .kings-ielts-2kol {
+/* IELTS: iki sütun standart gri çerçeve + rozet tik (.dahil-rozet-ikon) */
+.sayfa-kings-education .kings-ielts-gri-ikili {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px;
-    margin: 25px 0;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap: 24px;
+    margin: 24px 0;
 }
 
-.sayfa-kings-education .kings-ielts-kart {
-    border: 2px solid #000080;
-    padding: 24px;
-    border-radius: 10px;
-    background: linear-gradient(180deg, #ffffff 0%, #fff 100%);
-    box-shadow: 0 4px 12px rgba(0, 0, 128, 0.08);
+.sayfa-kings-education .kings-ielts-gri-ikili .gri-cerceve-kutu.kings-ielts-gri-kutu {
+    margin-top: 0;
+    padding: 22px 25px 20px 25px;
 }
 
-.sayfa-kings-education .kings-ielts-kart-baslik {
-    color: #000080;
-    margin: 0 0 12px 0;
-    font-size: 16px;
+.sayfa-kings-education .kings-ielts-gri-icerik,
+.sayfa-kings-education .kings-dahil-gri-icerik {
     display: flex;
-    align-items: center;
-    gap: 8px;
+    align-items: flex-start;
+    gap: 14px;
 }
 
-.sayfa-kings-education .kings-ielts-kart-madde {
-    font-size: 22px;
+.sayfa-kings-education .kings-ielts-gri-icerik .dahil-rozet-ikon,
+.sayfa-kings-education .kings-dahil-gri-icerik .dahil-rozet-ikon {
+    flex-shrink: 0;
 }
 
-.sayfa-kings-education .kings-ielts-kart-metin {
-    font-size: 14px;
+/* Fiyata dahil: üst/alt boşluklu bölüm — yatayda ekstra padding yok; gri kutular diğer .gri-cerceve-kutu ile aynı genişlik */
+.sayfa-kings-education article.icerik-alani .dahil-olanlar-konteyner {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    max-width: none;
+    width: 100%;
+}
+
+.sayfa-kings-education .kings-london-dahil-gri-dikey {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* İlk gri çerçeve (Hoşgeldiniz vb.) üstü: tek 25px — global .dahil-olanlar padding-top ile çiftlenmesin */
+    margin-top: 25px;
+    width: 100%;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Global .gri-cerceve-kutu: max-width 1200px + margin auto; 1200px altı medyada .icerik-alani kuralı ile tam genişlik */
+.sayfa-kings-education .kings-london-dahil-gri-dikey .gri-cerceve-kutu.kings-dahil-gri-item {
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 22px 25px 20px 25px;
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
+}
+
+.sayfa-kings-education .kings-london-dahil-gri-dikey .dahil-rozet-baslik {
+    color: #000080;
+}
+
+.sayfa-kings-education .kings-london-dahil-gri-dikey .dahil-rozet-metin {
+    margin-top: 8px;
+}
+
+.sayfa-kings-education .kings-ielts-gri-baslik {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000080;
+    line-height: 1.3;
+}
+
+.sayfa-kings-education .kings-ielts-gri-icerik p {
     margin: 0;
-    color: #444;
-    line-height: 1.5;
 }
 
-.sayfa-kings-education .kings-teknik-mavi-bant {
-    background: #eef4ff;
-    border-left: 4px solid #000080;
-    padding: 18px 20px;
-    border-radius: 0 8px 8px 0;
-    margin: 25px 0;
+@media (max-width: 768px) {
+    .sayfa-kings-education .kings-ielts-gri-ikili {
+        grid-template-columns: 1fr;
+    }
 }
 
 .sayfa-kings-education .kings-ielts-nedir-kutu {
@@ -258,45 +404,136 @@
     line-height: 1.5;
 }
 
-.sayfa-kings-education .kings-cambridge-grid {
+/* Cambridge FCE / CAE: standart gri çerçeve (.gri-cerceve-kutu) yan yana */
+.sayfa-kings-education .kings-cambridge-gri-ikili {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    margin: 25px 0;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: 24px;
+    margin-top: 24px;
 }
 
-.sayfa-kings-education .kings-cambridge-kart {
-    border: 2px solid #000080;
-    padding: 24px;
-    border-radius: 10px;
-    background: linear-gradient(180deg, #ffffff 0%, #fff 100%);
-    box-shadow: 0 4px 12px rgba(0, 0, 128, 0.08);
+.sayfa-kings-education .kings-cambridge-gri-ikili .gri-cerceve-kutu {
+    margin-top: 0;
+    padding-top: 22px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    height: 100%;
 }
 
-.sayfa-kings-education .kings-cambridge-kart h4 {
-    color: #000080;
-    margin: 0 0 12px 0;
-    font-size: 16px;
+/* Başlık + giriş metni üstte; boşluk kartın altına itilir — Devamını Oku iki sütunda aynı hizada */
+.sayfa-kings-education .kings-cambridge-kart-ust {
+    flex: 1 1 auto;
+    min-height: 0;
 }
 
-.sayfa-kings-education .kings-cambridge-kart p.kings-cam-metin-ana {
-    font-size: 14px;
-    color: #444;
-    line-height: 1.5;
+/* FCE/CAE: başlık çerçeve içinde, yüzen şerit yok; standart siyah metin */
+.sayfa-kings-education .kings-cambridge-gri-ikili .gri-cerceve-kutu h3.kings-cambridge-ic-baslik {
+    position: static;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: 0 0 14px 0;
+    padding: 0;
+    max-width: none;
+    background: transparent;
+    color: #111;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.35;
+    text-align: left;
+    text-transform: none !important;
+    letter-spacing: normal;
+    border-radius: 0;
+}
+
+.sayfa-kings-education .kings-cambridge-kart-ust > p {
     margin: 0 0 10px 0;
+    font-size: 15px;
+    line-height: 1.65;
+    color: #374151;
 }
 
-.sayfa-kings-education .kings-cambridge-kart p.kings-cam-metin-ek {
-    font-size: 13px;
-    color: #555;
-    line-height: 1.5;
-    margin: 0;
+.sayfa-kings-education .kings-cambridge-kart-ust > p:last-child {
+    margin-bottom: 0;
 }
 
-.sayfa-kings-education .kings-konaklama-tam-genislik {
+/* Tokyo ile aynı sınıflar: .immerse-tokyo-rozet-govde + metin + .immerse-tokyo-devam-btn (metnin altında) */
+.sayfa-kings-education .kings-cambridge-gri-ikili .immerse-tokyo-rozet-govde {
+    flex: 0 0 auto;
+    min-width: 0;
+}
+
+.sayfa-kings-education .kings-cambridge-gri-ikili .immerse-tokyo-rozet-accordion-metin:not([hidden]) {
+    padding-top: 8px;
+}
+
+.sayfa-kings-education .kings-cambridge-gri-ikili .immerse-tokyo-rozet-accordion-metin p {
+    margin: 0 0 10px 0;
+    font-size: 15px;
+    line-height: 1.65;
+    color: #374151;
+}
+
+.sayfa-kings-education .kings-cambridge-gri-ikili .immerse-tokyo-rozet-accordion-metin p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .sayfa-kings-education .kings-cambridge-gri-ikili {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Konaklama: 2+2 grid (iki sütun); Homestay aynı sütun genişliğinde, satırda ortalı */
+.sayfa-kings-education .gri-cerceve-kutu.kings-london-konaklama-kutu .immerse-detay-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    justify-content: stretch;
+    align-items: stretch;
+}
+
+.sayfa-kings-education .gri-cerceve-kutu.kings-london-konaklama-kutu .immerse-detay-kart:not(.kings-london-konaklama-tam-genislik) {
+    max-width: none;
+    width: auto;
+    min-width: 0;
+}
+
+.sayfa-kings-education .gri-cerceve-kutu.kings-london-konaklama-kutu {
+    margin-top: 45px;
+}
+
+.sayfa-kings-education .kings-london-konaklama-giris {
+    margin: 0 0 8px 0;
+    font-size: 15px !important;
+    line-height: 1.65;
+    color: #374151;
+}
+
+.sayfa-kings-education .kings-london-konaklama-kart h3 {
+    margin-top: 0;
+}
+
+.sayfa-kings-education .immerse-detay-kart.kings-london-konaklama-tam-genislik {
     grid-column: 1 / -1;
+    /* İki sütun + 20px gap ile tek kart genişliği: (100% - 20px) / 2 */
+    width: calc(50% - 10px);
+    max-width: 100%;
     justify-self: center;
-    max-width: 400px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .sayfa-kings-education .gri-cerceve-kutu.kings-london-konaklama-kutu .immerse-detay-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sayfa-kings-education .gri-cerceve-kutu.kings-london-konaklama-kutu .immerse-detay-kart {
+        max-width: none;
+        width: 100%;
+    }
 }
 
 .sayfa-kings-education .kings-akreditasyon-bolum {
@@ -323,4 +560,57 @@
 
 .sayfa-kings-education .kings-form-bant-ust {
     margin-top: 25px;
+}
+
+/* Blog tarzı içindekiler: ana sütun ~1200 − yan panel; mobilde akış içi TOC */
+@media (min-width: 1180px) {
+    .sayfa-kings-education .kings-london-toc-outer.blog-yazi-tek-sutun--tam .blog-yazi-layout--yan-panel {
+        grid-template-columns: minmax(0, 1fr) minmax(260px, 300px);
+        gap: 1.5rem;
+        justify-content: space-between;
+        align-items: start;
+    }
+
+    .sayfa-kings-education .kings-london-toc-outer .blog-yazi-layout--yan-panel .blog-yazi-ana {
+        max-width: none;
+    }
+
+    /* blog.css: .blog-yan-panel max-height + overflow-y:auto uzun yazılarda iç kaydırma için;
+       Kings sayfasında içerik kısa; gereksiz sağ kaydırma çubuğunu kaldır */
+    .sayfa-kings-education .kings-london-toc-outer .blog-yan-panel {
+        max-height: none;
+        overflow-y: visible;
+    }
+}
+
+.sayfa-kings-education .kings-london-toc-outer .blog-mobil-icindekiler-wrap {
+    display: none;
+}
+
+@media (max-width: 1179px) {
+    .sayfa-kings-education .kings-london-toc-outer .blog-yan-panel {
+        display: none !important;
+    }
+
+    .sayfa-kings-education .kings-london-toc-outer .blog-mobil-icindekiler-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+}
+
+@media (min-width: 1180px) {
+    .sayfa-kings-education .kings-london-toc-outer .blog-mobil-icindekiler-wrap {
+        display: none !important;
+    }
+}
+
+.sayfa-kings-education .kings-london-toc-outer .blog-yazi-ana h2[id].kutu-baslik,
+.sayfa-kings-education .kings-london-toc-outer .blog-yazi-ana h3[id].kutu-baslik,
+.sayfa-kings-education .kings-london-toc-outer .blog-yazi-ana section[id] {
+    scroll-margin-top: calc(var(--site-header-offset, 122px) + 0.75rem);
+}
+
+.sayfa-kings-education .kings-london-toc-outer #kings-kurs-secenekleri {
+    scroll-margin-top: calc(var(--site-header-offset, 122px) + 0.75rem);
 }

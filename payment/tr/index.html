@@ -14,154 +14,12 @@
     <link rel="stylesheet" href="/css/site-ustmenu.css">
     <link rel="stylesheet" href="/css/site-footer.css">
     <link rel="stylesheet" href="/css/site-breadcrumb.css">
-<style>
-        .odeme-icerik {
-            max-width: 800px;
-            margin: 40px auto 60px auto;
-        }
-        .odeme-form-kutu {
-            border: 1px solid #d1d1d1;
-            border-radius: 8px;
-            padding: 30px 25px 25px;
-            background: #ffffff;
-            box-shadow: 0 4px 10px rgba(15, 23, 42, 0.04);
-        }
-        .odeme-form-kutu h1 {
-            font-size: 26px;
-            margin: 0 0 10px 0;
-            color: #000080;
-            text-align: left;
-        }
-        .odeme-form-kutu p.aciklama {
-            font-size: 14px;
-            color: #4b5563;
-            margin-bottom: 20px;
-        }
-        .odeme-form-kutu .form-satir {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-bottom: 12px;
-        }
-        .odeme-form-kutu .form-satir input {
-            flex: 1 1 calc(50% - 6px);
-        }
-        .odeme-form-kutu .form-grup {
-            margin-bottom: 12px;
-        }
-        .odeme-form-kutu label {
-            display: block;
-            font-size: 13px;
-            font-weight: 600;
-            color: #111827;
-            margin-bottom: 4px;
-        }
-        .odeme-form-kutu input[type="text"],
-        .odeme-form-kutu input[type="email"],
-        .odeme-form-kutu input[type="tel"],
-        .odeme-form-kutu input[type="number"] {
-            width: 100%;
-            padding: 10px 12px;
-            border-radius: 6px;
-            border: 1px solid #d1d5db;
-            font-size: 14px;
-            box-sizing: border-box;
-        }
-        .odeme-form-kutu input[readonly] {
-            background-color: #f9fafb;
-        }
-        .odeme-form-alt {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-top: 10px;
-        }
-        .odeme-hata {
-            display: none;
-            font-size: 13px;
-            color: #b91c1c;
-            background: #fef2f2;
-            border: 1px solid #fecaca;
-            border-radius: 6px;
-            padding: 8px 10px;
-        }
-        .odeme-bilgi {
-            font-size: 12px;
-            color: #6b7280;
-        }
-        .odeme-buton {
-            align-self: flex-start;
-            background-color: #000080;
-            color: #ffffff;
-            border: none;
-            border-radius: 6px;
-            padding: 12px 28px;
-            font-size: 15px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: background 0.2s ease, transform 0.1s ease;
-        }
-        .odeme-buton:disabled {
-            opacity: 0.6;
-            cursor: default;
-        }
-        .odeme-buton:not(:disabled):hover {
-            background-color: #bd0505;
-            transform: translateY(-1px);
-        }
-        .odeme-modal-kaplama {
-            position: fixed;
-            inset: 0;
-            background: rgba(15, 23, 42, 0.75);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 9999;
-        }
-        .odeme-modal-icerik {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            max-width: 100%;
-            max-height: 100%;
-            background: #000;
-        }
-        .odeme-modal-iframe {
-            border: none;
-            width: 100%;
-            height: 100%;
-        }
-        .odeme-modal-kapat {
-            position: absolute;
-            top: 12px;
-            right: 16px;
-            z-index: 10000;
-            background: rgba(15, 23, 42, 0.85);
-            color: #fff;
-            border: none;
-            border-radius: 999px;
-            padding: 6px 12px;
-            font-size: 13px;
-            cursor: pointer;
-        }
-        @media (max-width: 768px) {
-            .odeme-form-kutu h1 {
-                font-size: 22px;
-            }
-            .odeme-form-kutu .form-satir input {
-                flex: 1 1 100%;
-            }
-            .odeme-buton {
-                width: 100%;
-                text-align: center;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="/css/site-odeme.css">
 </head>
 <body>
-    <div style="max-width: 800px; margin: 30px auto 10px auto; text-align: center;">
+    <div class="odeme-ust-logo-kapsayici">
         <a href="/">
-            <img src="/img/global-compass-logo.webp" alt="Global Compass Logo" style="max-height: 72px; width: auto;">
+            <img src="/img/global-compass-logo.webp" alt="Global Compass Logo" class="odeme-ust-logo-img" width="158" height="48" fetchpriority="high" decoding="sync">
         </a>
     </div>
     <article class="icerik-alani odeme-icerik">
@@ -216,7 +74,7 @@
     <footer class="ana-footer">
         <div class="footer-kapsayici-1200">
             <div class="footer-logo-alani">
-                <a href="/"><img src="/img/global-compass-logo-transparent.png" alt="Global Compass" class="footer-logo-img"></a>
+                <a href="/"><img src="/img/global-compass-logo-transparent.png" alt="Global Compass" class="footer-logo-img" width="178" height="100" loading="lazy" decoding="async"></a>
             </div>
             <div class="footer-merkezi-icerik">
                 <p class="footer-adres-metni">Kızılay mah. Elgün sok. Tuğaç İşhanı 3.Kat No:11 Çankaya / ANKARA</p>
@@ -227,10 +85,10 @@
                 </div>
             </div>
             <nav class="footer-kvkk-satiri">
-                <a href="/kvkk-aydinlatma-metni/">KVKK Aydınlatma MetĞ½Ğ¸</a>
-                <a href="/kvkk-acik-riza-metni/">KVKK Açık Rıza MetĞ½Ğ¸</a>
+                <a href="/kvkk-aydinlatma-metni/">KVKK Aydınlatma Metni</a>
+                <a href="/kvkk-acik-riza-metni/">KVKK Açık Rıza Metni</a>
                 <a href="/gizlilik-politikasi/">Gizlilik Politikası</a>
-                <a href="/cerez-aydinlatma-metni/">Çerez Aydınlatma MetĞ½Ğ¸</a>
+                <a href="/cerez-aydinlatma-metni/">Çerez Aydınlatma Metni</a>
             </nav>
         </div>
         <div class="footer-alt-telif">
@@ -238,166 +96,7 @@
         </div>
     </footer>
 
-    <script>
-    (function() {
-        var form = document.getElementById('odeme-formu');
-        var hataKutusu = document.getElementById('odeme-hata');
-        var buton = document.getElementById('odeme-buton');
-        var tutarInput = document.getElementById('tutar');
-        var siparisInput = document.getElementById('siparis-id');
-        var siparisBilgi = document.getElementById('siparis-bilgi');
-        var tutarGorunum = document.getElementById('tutar-gorunum');
-
-        function gosterHata(mesaj) {
-            if (!hataKutusu) return;
-            hataKutusu.textContent = mesaj;
-            hataKutusu.style.display = 'block';
-        }
-
-        function temizleHata() {
-            if (!hataKutusu) return;
-            hataKutusu.textContent = '';
-            hataKutusu.style.display = 'none';
-        }
-
-        // Sayfa yüklenince URL'den id'yi oku ve siparişi getir
-        (function hazirlaSiparis() {
-            var params = new URLSearchParams(window.location.search || '');
-            var urlId = params.get('id');
-            if (!urlId) {
-                gosterHata('Geçersiz ödeme bağlantısı.');
-                if (buton) buton.disabled = true;
-                return;
-            }
-
-            if (siparisInput) {
-                siparisInput.value = urlId;
-            }
-
-            fetch('https://global-compass-paytr.canmuratsubat.workers.dev/siparis?id=' + encodeURIComponent(urlId))
-                .then(function(res) {
-                    if (!res.ok) {
-                        throw new Error('fetch_failed');
-                    }
-                    return res.json();
-                })
-                .then(function(data) {
-                    if (!data || typeof data.tutar === 'undefined') {
-                        throw new Error('no_amount');
-                    }
-                    // 4. tutar değerini hidden input'a yaz
-                    if (tutarInput) {
-                        tutarInput.value = data.tutar;
-                    }
-                    // 5. Ödenecek Tutar: 45.097,00 TL
-                    if (tutarGorunum) {
-                        var sayi = Number(data.tutar);
-                        if (!isNaN(sayi)) {
-                            var formatted = sayi.toLocaleString('tr-TR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-                            tutarGorunum.textContent = 'Ödenecek Tutar: ' + formatted + ' TL';
-                        }
-                    }
-                    // Sipariş açıklaması (ad) göster
-                    if (siparisBilgi && data.ad) {
-                        siparisBilgi.textContent = 'Sipariş: ' + data.ad;
-                    }
-                })
-                .catch(function(err) {
-                    console.error(err);
-                    gosterHata('Geçersiz ödeme bağlantısı.');
-                    if (buton) buton.disabled = true;
-                });
-        })();
-
-        function olusturModal(token) {
-            var kaplama = document.createElement('div');
-            kaplama.className = 'odeme-modal-kaplama';
-
-            var icerik = document.createElement('div');
-            icerik.className = 'odeme-modal-icerik';
-
-            var kapat = document.createElement('button');
-            kapat.className = 'odeme-modal-kapat';
-            kapat.type = 'button';
-            kapat.textContent = 'Kapat';
-            kapat.addEventListener('click', function() {
-                document.body.removeChild(kaplama);
-            });
-
-            var iframe = document.createElement('iframe');
-            iframe.className = 'odeme-modal-iframe';
-            iframe.src = 'https://www.paytr.com/odeme/guvenli/' + encodeURIComponent(token);
-            iframe.setAttribute('frameborder', '0');
-            iframe.setAttribute('scrolling', 'auto');
-            iframe.setAttribute('allowfullscreen', 'true');
-
-            icerik.appendChild(kapat);
-            icerik.appendChild(iframe);
-            kaplama.appendChild(icerik);
-            document.body.appendChild(kaplama);
-        }
-
-        if (form) {
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                temizleHata();
-
-                if (!buton) return;
-                buton.disabled = true;
-
-                var ad = document.getElementById('ad').value.trim();
-                var soyad = document.getElementById('soyad').value.trim();
-                var email = document.getElementById('email').value.trim();
-                var telefon = document.getElementById('telefon').value.trim();
-                var tutar = tutarInput ? tutarInput.value.trim() : '';
-                var siparisId = siparisInput ? siparisInput.value.trim() : '';
-
-                if (!ad || !soyad || !email || !telefon || !tutar || !siparisId) {
-                    gosterHata('Lütfen tüm alanları doldurun.');
-                    buton.disabled = false;
-                    return;
-                }
-
-                var payload = {
-                    ad: ad,
-                    soyad: soyad,
-                    email: email,
-                    telefon: telefon,
-                    tutar: tutar,
-                    siparis_id: siparisId
-                };
-
-                fetch('https://global-compass-paytr.canmuratsubat.workers.dev', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(payload)
-                })
-                .then(function(res) {
-                    if (!res.ok) {
-                        throw new Error('Ödeme servisine ulaşılamadı. (' + res.status + ')');
-                    }
-                    return res.json();
-                })
-                .then(function(data) {
-                    var token = data && (data.token || data.TOKEN || data.paytr_token);
-                    if (!token) {
-                        throw new Error('Ödeme başlatılırken beklenmeyen bir cevap alındı.');
-                    }
-                    olusturModal(token);
-                })
-                .catch(function(err) {
-                    console.error(err);
-                    gosterHata('Ödeme başlatılırken bir hata oluştu: ' + err.message);
-                })
-                .finally(function() {
-                    buton.disabled = false;
-                });
-            });
-        }
-    })();
-    </script>
+    <script src="/js/odeme-formu.js" defer></script>
 </body>
 </html>
 

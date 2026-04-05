@@ -54,19 +54,19 @@
                 <div></div>
                 <div class="logo">
                     <a href="/">
-                        <img src="/img/global-compass-logo.webp" alt="Global Compass Logo" width="158" height="48" decoding="async">
+                        <img src="/img/global-compass-logo.webp" alt="Global Compass Logo" width="158" height="48" fetchpriority="high" decoding="sync">
                     </a>
                 </div>
 
                 <div class="sosyal-medya-alani">
                     <a href="https://www.facebook.com/globalcompass.ankara/" target="_blank">
-                        <img src="/img/sosyal/facebook.png" alt="Facebook" width="30" height="30">
+                        <img src="/img/sosyal/facebook.png" alt="Facebook" width="30" height="30" fetchpriority="high" decoding="sync">
                     </a>
                     <a href="https://www.instagram.com/globalcompass.turkiye/" target="_blank">
-                        <img src="/img/sosyal/instagram.webp" alt="Instagram" width="30" height="30">
+                        <img src="/img/sosyal/instagram.webp" alt="Instagram" width="30" height="30" fetchpriority="high" decoding="sync">
                     </a>
                     <a href="https://www.youtube.com/@GlobalCompassTurkiye" target="_blank">
-                        <img src="/img/sosyal/youtube.png" alt="Youtube" width="30" height="30">
+                        <img src="/img/sosyal/youtube.png" alt="Youtube" width="30" height="30" fetchpriority="high" decoding="sync">
                     </a>
                 </div>
             </div>
@@ -78,7 +78,7 @@
             </button>
             <nav class="navigasyon" id="nav-menu" aria-label="Ana menü">
                 <ul class="nav-list">
-                    <li class="nav-logo-item"><a href="/"><img src="/img/global-compass-logo.webp" alt="Global Compass Logo" width="158" height="48" decoding="async"></a></li>
+                    <li class="nav-logo-item"><a href="/"><img src="/img/global-compass-logo.webp" alt="Global Compass Logo" width="158" height="48" fetchpriority="high" decoding="sync"></a></li>
 
                     <li><a href="/">Ana Sayfa</a></li>
                     <li class="has-dropdown">
@@ -170,7 +170,7 @@
         <nav class="site-haritasi-yolu">
             <div class="breadcrumb-kutu">
                 <a href="/" class="ana-sayfa-ikon">
-                    <img src="/img/home-icon.png" alt="Ana Sayfa" width="22" height="22" decoding="async">
+                    <img src="/img/home-icon.png" alt="Ana Sayfa" width="22" height="22" loading="lazy" decoding="async">
                 </a>
                 <span class="ayrac">›</span>
                 <a href="/yurt-disi-yaz-okullari/">Yurt Dışı Yaz Okulları</a>
@@ -187,10 +187,10 @@
             <span class="vurgu-renk">Spor, Kariyer ve Entegrasyon Programı Yaz Okulu</span>
         </h1>
         <h2 class="sportech-academy-alt-baslik">İtalya'da 8-18 yaş arası öğrenciler için spor, kariyer ve entegrasyon odaklı yaz programları (11 Program)</h2>
-        <p class="sportech-academy-logo-kapsayici"><img src="/img/logo/sportech-academy.webp" alt="Sportech Academy Logo" class="sportech-academy-logo"></p>
+        <p class="sportech-academy-logo-kapsayici"><img src="/img/logo/sportech-academy.webp" alt="Sportech Academy Logo" class="sportech-academy-logo" loading="lazy" decoding="async"></p>
         <p>Milano'nun kalbinde yer alan Sportech Academy, <strong>8-18 yaş arası gençler için</strong> spor ve kariyer odaklı yoğunlaştırılmış bir yaz okulu programıdır. İtalya'nın moda, tasarım ve futbol alanındaki küresel liderliğinden ilham alan program; öğrencilere <strong>AC Milan</strong>'ın kırmızı-siyahlı mirasına ve profesyonel spor kültürüne doğrudan erişim imkanı sunar. <strong>AC Milan</strong> ile kurulan stratejik ortaklık sayesinde eğitim, inovasyon ve sporu bir arada yaşatan benzersiz bir deneyim sunuluyor. Tamamen İngilizce yürütülen <strong>A-Level hazırlık ve entegrasyon programları</strong>, 50'den fazla ülkeden gelen öğrencilerle gerçek bir uluslararası akademik ortam oluşturuyor.</p>
 
-        <div class="gri-cerceve-kutu">
+        <div class="gri-cerceve-kutu baslik-iki-satir">
             <h2 class="kutu-baslik">Sportech Academy:<br><span class="vurgu-renk">Milano'da Spor ve Kariyer Odaklı Yaz Okulu</span></h2>
             <div class="sportech-academy-program-grid">
                 <div class="sportech-academy-program-kart">
@@ -402,7 +402,7 @@
 
                 <div class="form-grup">
                     <div class="radyo-grup">
-                        <label><input type="radio" name="kimlik-sportech-milan" value="ogrenci"> Öğrenciyim</label>
+                        <label><input type="radio" name="kimlik-sportech-milan" value="ogrenci" required> Öğrenciyim</label>
                         <label><input type="radio" name="kimlik-sportech-milan" value="veli"> Veliyim</label>
                         <label><input type="radio" name="kimlik-sportech-milan" value="diger"> Diğer</label>
                     </div>
@@ -436,7 +436,7 @@
     <footer class="ana-footer">
         <div class="footer-kapsayici-1200">
             <div class="footer-logo-alani">
-                <a href="/"><img src="/img/global-compass-logo-transparent.png" alt="Global Compass" class="footer-logo-img"></a>
+                <a href="/"><img src="/img/global-compass-logo-transparent.png" alt="Global Compass" class="footer-logo-img" width="178" height="100" loading="lazy" decoding="async"></a>
             </div>
             <div class="footer-merkezi-icerik">
                 <p class="footer-adres-metni">Kızılay mah. Elgün sok. Tuğaç İşhanı 3.Kat No:11 Çankaya / ANKARA</p>
@@ -459,42 +459,7 @@
     </footer>
 
     <script src="/js/nav-submenu.js" defer></script>
-    <script>
-(function() {
-  var form = document.getElementById('iletisim-formu');
-  if (!form) return;
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    var buton = form.querySelector('button[type="submit"]');
-    if (buton) buton.disabled = true;
-    var payload = {
-      ad: (form.querySelector('[name="ad"]') || {}).value || '',
-      soyad: (form.querySelector('[name="soyad"]') || {}).value || '',
-      email: (form.querySelector('[name="email"]') || {}).value || '',
-      telefon: (form.querySelector('[name="telefon"]') || {}).value || '',
-      kimlik: ((form.querySelector('input[type="radio"][name^="kimlik"]:checked')) || {}).value || '',
-      mesaj: (form.querySelector('[name="mesaj"]') || {}).value || ''
-    };
-    fetch('https://global-compass-paytr.canmuratsubat.workers.dev/iletisim', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
-    })
-    .then(function(res) {
-      if (!res.ok) throw new Error('Hata');
-      form.reset();
-      alert('Mesajınız iletildi, en kısa sürede sizinle iletişime geçeceğiz.');
-    })
-    .catch(function() {
-      alert('Bir hata oluştu, lütfen tekrar deneyin.');
-    })
-    .finally(function() {
-      if (buton) buton.disabled = false;
-    });
-  });
-})();
-
-</script>
+    <script src="/js/iletisim-formu.js" defer></script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",

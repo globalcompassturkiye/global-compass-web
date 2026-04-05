@@ -52,19 +52,19 @@
                 <div></div>
                 <div class="logo">
                     <a href="/">
-                        <img src="/img/global-compass-logo.webp" alt="Global Compass Logo" width="158" height="48" decoding="async">
+                        <img src="/img/global-compass-logo.webp" alt="Global Compass Logo" width="158" height="48" fetchpriority="high" decoding="sync">
                     </a>
                 </div>
 
                 <div class="sosyal-medya-alani">
                     <a href="https://www.facebook.com/globalcompass.ankara/" target="_blank" rel="noopener noreferrer">
-                        <img src="/img/sosyal/facebook.png" alt="Facebook" width="30" height="30">
+                        <img src="/img/sosyal/facebook.png" alt="Facebook" width="30" height="30" fetchpriority="high" decoding="sync">
                     </a>
                     <a href="https://www.instagram.com/globalcompass.turkiye/" target="_blank" rel="noopener noreferrer">
-                        <img src="/img/sosyal/instagram.webp" alt="Instagram" width="30" height="30">
+                        <img src="/img/sosyal/instagram.webp" alt="Instagram" width="30" height="30" fetchpriority="high" decoding="sync">
                     </a>
                     <a href="https://www.youtube.com/@GlobalCompassTurkiye" target="_blank" rel="noopener noreferrer">
-                        <img src="/img/sosyal/youtube.png" alt="Youtube" width="30" height="30">
+                        <img src="/img/sosyal/youtube.png" alt="Youtube" width="30" height="30" fetchpriority="high" decoding="sync">
                     </a>
                 </div>
             </div>
@@ -76,7 +76,7 @@
             </button>
             <nav class="navigasyon" id="nav-menu" aria-label="Ana menü">
                 <ul class="nav-list">
-                    <li class="nav-logo-item"><a href="/"><img src="/img/global-compass-logo.webp" alt="Global Compass Logo" width="158" height="48" decoding="async"></a></li>
+                    <li class="nav-logo-item"><a href="/"><img src="/img/global-compass-logo.webp" alt="Global Compass Logo" width="158" height="48" fetchpriority="high" decoding="sync"></a></li>
 
                     <li><a href="/">Ana Sayfa</a></li>
                     <li class="has-dropdown">
@@ -169,7 +169,7 @@
         <nav class="site-haritasi-yolu" aria-label="Sayfa konumu">
             <div class="breadcrumb-kutu">
                 <a href="/" class="ana-sayfa-ikon">
-                    <img src="/img/home-icon.png" alt="Ana Sayfa" width="22" height="22" decoding="async">
+                    <img src="/img/home-icon.png" alt="Ana Sayfa" width="22" height="22" loading="lazy" decoding="async">
                 </a>
                 <span class="ayrac">›</span>
                 <span class="su-anki-sayfa">İletişim</span>
@@ -177,12 +177,12 @@
         </nav>
 
         <h1 class="sayfa-ana-baslik">İletişim<br>
-            <span class="vurgu-renk">Eğitim yolculuğunuz için buradayız</span>
+            <span class="vurgu-renk">Bize Nasıl Ulaşabilirsiniz?</span>
         </h1>
         <p class="iletisim-intro">Yurt dışında dil okulu, lise, üniversite, yüksek lisans veya yaz okulu hayallerinizi gerçeğe dönüştürmek için profesyonel destek almaya hazır mısınız?</p>
 
         <section class="iletisim-yontem-section">
-            <h2 class="iletisim-section-baslik">Bize Nasıl Ulaşabilirsiniz?</h2>
+            <h2 class="iletisim-section-baslik">Eğitim yolculuğunuz için buradayız</h2>
             <div class="iletisim-kartlar">
                 <div class="iletisim-kart iletisim-kart-ofis">
                     <div class="iletisim-kart-ikon">📍</div>
@@ -238,7 +238,7 @@
                 </div>
                 <div class="form-grup">
                     <div class="radyo-grup">
-                        <label><input type="radio" name="kimlik" value="ogrenci"> Öğrenciyim</label>
+                        <label><input type="radio" name="kimlik" value="ogrenci" required> Öğrenciyim</label>
                         <label><input type="radio" name="kimlik" value="veli"> Veliyim</label>
                         <label><input type="radio" name="kimlik" value="diger"> Diğer</label>
                     </div>
@@ -254,40 +254,7 @@
                     <button type="submit" class="form-buton-kucuk">Gönder</button>
                 </div>
             </form>
-            <script>
-document.getElementById('iletisim-formu').addEventListener('submit', function(e) {
-  e.preventDefault();
-  var form = e.target;
-  var buton = form.querySelector('button[type="submit"]');
-  buton.disabled = true;
-
-  var payload = {
-    ad: form.querySelector('[name="ad"]').value.trim(),
-    soyad: form.querySelector('[name="soyad"]').value.trim(),
-    email: form.querySelector('[name="email"]').value.trim(),
-    telefon: form.querySelector('[name="telefon"]').value.trim(),
-    kimlik: (form.querySelector('[name="kimlik"]:checked') || {}).value || '',
-    mesaj: form.querySelector('[name="mesaj"]').value.trim()
-  };
-
-  fetch('https://global-compass-paytr.canmuratsubat.workers.dev/iletisim', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(payload)
-  })
-  .then(function(res) {
-    if (!res.ok) throw new Error('Hata');
-    form.reset();
-    alert('Mesajınız iletildi, en kısa sürede sizinle iletişime geçeceğiz.');
-  })
-  .catch(function() {
-    alert('Bir hata oluştu, lütfen tekrar deneyin.');
-  })
-  .finally(function() {
-    buton.disabled = false;
-  });
-});
-            </script>
+            <script src="/js/iletisim-formu.js" defer></script>
         </section>
 
         <div class="gri-cerceve-kutu iletisim-sss-kutu">
@@ -319,7 +286,7 @@ document.getElementById('iletisim-formu').addEventListener('submit', function(e)
     <footer class="ana-footer">
         <div class="footer-kapsayici-1200">
             <div class="footer-logo-alani">
-                <a href="/"><img src="/img/global-compass-logo-transparent.png" alt="Global Compass" class="footer-logo-img"></a>
+                <a href="/"><img src="/img/global-compass-logo-transparent.png" alt="Global Compass" class="footer-logo-img" width="178" height="100" loading="lazy" decoding="async"></a>
             </div>
             <div class="footer-merkezi-icerik">
                 <p class="footer-adres-metni">Kızılay mah. Elgün sok. Tuğaç İşhanı 3.Kat No:11 Çankaya / ANKARA</p>

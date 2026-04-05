@@ -55,19 +55,19 @@
                 <div></div>
                 <div class="logo">
                     <a href="/">
-                        <img src="/img/global-compass-logo.webp" alt="Global Compass Logo" width="158" height="48" decoding="async">
+                        <img src="/img/global-compass-logo.webp" alt="Global Compass Logo" width="158" height="48" fetchpriority="high" decoding="sync">
                     </a>
                 </div>
 
                 <div class="sosyal-medya-alani">
                     <a href="https://www.facebook.com/globalcompass.ankara/" target="_blank" rel="noopener noreferrer">
-                        <img src="/img/sosyal/facebook.png" alt="Facebook" width="30" height="30">
+                        <img src="/img/sosyal/facebook.png" alt="Facebook" width="30" height="30" fetchpriority="high" decoding="sync">
                     </a>
                     <a href="https://www.instagram.com/globalcompass.turkiye/" target="_blank" rel="noopener noreferrer">
-                        <img src="/img/sosyal/instagram.webp" alt="Instagram" width="30" height="30">
+                        <img src="/img/sosyal/instagram.webp" alt="Instagram" width="30" height="30" fetchpriority="high" decoding="sync">
                     </a>
                     <a href="https://www.youtube.com/@GlobalCompassTurkiye" target="_blank" rel="noopener noreferrer">
-                        <img src="/img/sosyal/youtube.png" alt="Youtube" width="30" height="30">
+                        <img src="/img/sosyal/youtube.png" alt="Youtube" width="30" height="30" fetchpriority="high" decoding="sync">
                     </a>
                 </div>
             </div>
@@ -79,7 +79,7 @@
             </button>
             <nav class="navigasyon" id="nav-menu" aria-label="Ana menü">
                 <ul class="nav-list">
-                    <li class="nav-logo-item"><a href="/"><img src="/img/global-compass-logo.webp" alt="Global Compass Logo" width="158" height="48" decoding="async"></a></li>
+                    <li class="nav-logo-item"><a href="/"><img src="/img/global-compass-logo.webp" alt="Global Compass Logo" width="158" height="48" fetchpriority="high" decoding="sync"></a></li>
 
                     <li><a href="/">Ana Sayfa</a></li>
                     <li class="has-dropdown">
@@ -172,7 +172,7 @@
         <nav class="site-haritasi-yolu" aria-label="Sayfa konumu">
             <div class="breadcrumb-kutu">
                 <a href="/" class="ana-sayfa-ikon">
-                    <img src="/img/home-icon.png" alt="Ana Sayfa" width="22" height="22" decoding="async">
+                    <img src="/img/home-icon.png" alt="Ana Sayfa" width="22" height="22" loading="lazy" decoding="async">
                 </a>
                 <span class="ayrac">›</span>
                 <a href="/yurt-disi-yaz-okullari/">Yurt Dışı Yaz Okulları</a>
@@ -195,7 +195,7 @@
 
         <p>Bilimin ve fikirlerin modern dünyayı şekillendirdiği bu tarihi atmosferde öğrenciler, üniversite kampüsü içinde konaklayarak gerçek bir Cambridge öğrencisinin yaşam tarzını deneyimliyor. Bu programla gençlerimize yalnızca üst düzey bir eğitim değil; özgüvenlerini artıracak, küresel bir vizyon kazandıracak ve gelecek kariyer hedeflerine ışık tutacak prestijli bir üniversite öncesi hazırlık deneyimi sunuluyor.</p>
 
-        <div class="gri-cerceve-kutu">
+        <div class="gri-cerceve-kutu baslik-iki-satir">
             <h2 class="kutu-baslik">Oxford Royale Academy Cambridge<br><span class="vurgu-renk">Program Detayları</span></h2>
             <div class="dahil-rozet-grid ora-ilk-dort-grid">
                 <article class="dahil-rozet-kart">
@@ -252,7 +252,7 @@
             </div>
         </div>
 
-        <div class="gri-cerceve-kutu immerse-yas-tabs-kutu">
+        <div class="gri-cerceve-kutu baslik-iki-satir immerse-yas-tabs-kutu">
             <h2 class="kutu-baslik">Oxford Royale Cambridge<br><span class="vurgu-renk">Tüm Programlar</span></h2>
             <div class="yas-tabs-kapsayici">
                 <input type="radio" name="ora-yas-tab" id="yas15-18" class="yas-tab-input" checked>
@@ -351,7 +351,7 @@
             </div>
         </div>
 
-        <div class="gri-cerceve-kutu">
+        <div class="gri-cerceve-kutu baslik-iki-satir">
             <h2 class="kutu-baslik">Cambridge Yaz Okulu<br><span class="vurgu-renk">Ulaşım Rehberi</span></h2>
             <p>Oxford Royale, öğrencilerin kampüse güvenli ve konforlu bir şekilde ulaşması için her türlü detayı planlamıştır. Çocuğunuzun yolculuğunu huzur içinde başlatmanız için sunduğumuz seçenekler aşağıdadır:</p>
 
@@ -449,7 +449,7 @@
 
                 <div class="form-grup">
                     <div class="radyo-grup">
-                        <label><input type="radio" name="kimlik" value="ogrenci"> Öğrenciyim</label>
+                        <label><input type="radio" name="kimlik" value="ogrenci" required> Öğrenciyim</label>
                         <label><input type="radio" name="kimlik" value="veli"> Veliyim</label>
                         <label><input type="radio" name="kimlik" value="diger"> Diğer</label>
                     </div>
@@ -484,7 +484,7 @@
     <footer class="ana-footer">
         <div class="footer-kapsayici-1200">
             <div class="footer-logo-alani">
-                <a href="/"><img src="/img/global-compass-logo-transparent.png" alt="Global Compass Logo" class="footer-logo-img"></a>
+                <a href="/"><img src="/img/global-compass-logo-transparent.png" alt="Global Compass Logo" class="footer-logo-img" width="178" height="100" loading="lazy" decoding="async"></a>
             </div>
             <div class="footer-merkezi-icerik">
                 <p class="footer-adres-metni">Kızılay mah. Elgün sok. Tuğaç İşhanı 3.Kat No:11 Çankaya / ANKARA</p>
@@ -507,42 +507,7 @@
     </footer>
 
     <script src="/js/nav-submenu.js" defer></script>
-    <script>
-(function() {
-  var form = document.getElementById('iletisim-formu');
-  if (!form) return;
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    var buton = form.querySelector('button[type="submit"]');
-    if (buton) buton.disabled = true;
-    var payload = {
-      ad: (form.querySelector('[name="ad"]') || {}).value || '',
-      soyad: (form.querySelector('[name="soyad"]') || {}).value || '',
-      email: (form.querySelector('[name="email"]') || {}).value || '',
-      telefon: (form.querySelector('[name="telefon"]') || {}).value || '',
-      kimlik: ((form.querySelector('input[name="kimlik"]:checked')) || {}).value || '',
-      mesaj: (form.querySelector('[name="mesaj"]') || {}).value || ''
-    };
-    fetch('https://global-compass-paytr.canmuratsubat.workers.dev/iletisim', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
-    })
-    .then(function(res) {
-      if (!res.ok) throw new Error('Hata');
-      form.reset();
-      alert('Mesajınız iletildi, en kısa sürede sizinle iletişime geçeceğiz.');
-    })
-    .catch(function() {
-      alert('Bir hata oluştu, lütfen tekrar deneyin.');
-    })
-    .finally(function() {
-      if (buton) buton.disabled = false;
-    });
-  });
-})();
-
-</script>
+    <script src="/js/iletisim-formu.js" defer></script>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
