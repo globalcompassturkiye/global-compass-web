@@ -390,9 +390,15 @@
 
   <url>
     <loc>https://www.globalcompass.com.tr/blog/</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-04-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.globalcompass.com.tr/blog/uluslararasi-sinav-rehberi/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
   </url>
   <url>
     <loc>https://www.globalcompass.com.tr/blog/dil-okullari/</loc>
@@ -481,6 +487,12 @@
   <url>
     <loc>https://www.globalcompass.com.tr/blog/yaz-okullari/dunyanin-en-sira-disi-5-yaz-kampi/</loc>
     <lastmod>2026-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://www.globalcompass.com.tr/blog/uluslararasi-sinav-rehberi/ielts-hazirlik-rehberi-ve-ucretsiz-deneme-sinavi/</loc>
+    <lastmod>2026-04-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
   </url>

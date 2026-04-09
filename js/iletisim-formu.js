@@ -211,6 +211,20 @@
     return r && r.value ? r.value : '';
   }
 
+  function pageH1Text() {
+    var h1 = document.querySelector('h1');
+    if (!h1) return '';
+    return (h1.textContent || '').replace(/\s+/g, ' ').trim();
+  }
+
+  function messageWithPageContext(form) {
+    var mesaj = valField(form, 'mesaj');
+    var h1 = pageH1Text();
+    if (!h1) return mesaj;
+    if (!mesaj) return '[Sayfa H1] ' + h1;
+    return '[Sayfa H1] ' + h1 + '\n\n' + mesaj;
+  }
+
   function bind() {
     var form = document.getElementById('iletisim-formu');
     if (!form) return;
@@ -256,7 +270,8 @@
         email: valField(form, 'email'),
         telefon: valField(form, 'telefon'),
         kimlik: kimlikValue(form),
-        mesaj: valField(form, 'mesaj')
+        mesaj: messageWithPageContext(form),
+        h1: pageH1Text()
       };
       fetch(ENDPOINT, {
         method: 'POST',

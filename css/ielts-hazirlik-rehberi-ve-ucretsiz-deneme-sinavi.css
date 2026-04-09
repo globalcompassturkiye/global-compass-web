@@ -1,0 +1,138 @@
+.ielts-blog-yazi {
+    max-width: 980px;
+}
+
+.ielts-blog-yazi .blog-yazi-baslik-wrap {
+    text-align: center;
+}
+
+.ielts-blog-yazi .blog-yazi-baslik-wrap h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    line-height: 1.25;
+    margin: 0.4rem 0 1rem;
+}
+
+.ielts-blog-yazi h1 .ielts-h1-alt-satir {
+    color: #bd0505;
+}
+
+.ielts-hero {
+    background: linear-gradient(135deg, #f4f7ff 0%, #ffffff 100%);
+    border: 1px solid #d8e1ff;
+    border-radius: 18px;
+    padding: 1.25rem;
+    margin-bottom: 1.4rem;
+    min-height: 180px;
+}
+
+.ielts-blog-yazi #ielts-giris.ielts-hero {
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    margin-bottom: 1rem;
+    min-height: 0;
+}
+
+.ielts-bolum-kartlari {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0.9rem;
+    margin: 1.1rem 0 1.5rem;
+}
+
+.ielts-bolum-kart {
+    border: 1px solid #e3e8f4;
+    border-radius: 14px;
+    background: #fff;
+    padding: 1rem;
+    min-height: 170px;
+    box-shadow: 0 6px 20px rgba(10, 24, 73, 0.06);
+}
+
+.ielts-bolum-kart h3 {
+    margin: 0 0 0.55rem;
+    font-size: 1.02rem;
+    line-height: 1.35;
+}
+
+.ielts-bolum-kart p {
+    margin: 0;
+}
+
+.ielts-bolum-kartlari .ielts-bolum-kart:last-child {
+    grid-column: 2;
+}
+
+.ielts-cta {
+    margin-top: 1.5rem;
+    padding: 0.65rem 0 0;
+    border: 1px solid #0b2a6e;
+    border-radius: 14px;
+    overflow: hidden;
+    background: linear-gradient(155deg, #0e2f76 0%, #173d94 100%);
+    color: #fff;
+    min-height: 220px;
+}
+
+.ielts-cta h2,
+.ielts-cta p {
+    color: #fff;
+}
+
+.ielts-cta > h2,
+.ielts-cta > p {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.ielts-cta > h2 {
+    margin-top: 0;
+    margin-bottom: 0.55rem;
+}
+
+.ielts-cta .iletisim-form-alani.ielts-dar-form {
+    max-width: none;
+    width: 100%;
+    margin: 0;
+    padding-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.ielts-cta .iletisim-form-alani.ielts-dar-form > p {
+    margin-top: 14px;
+}
+
+.ielts-cta .iletisim-form-alani.ielts-dar-form,
+.ielts-cta .iletisim-form-alani.ielts-dar-form h3,
+.ielts-cta .iletisim-form-alani.ielts-dar-form p,
+.ielts-cta .iletisim-form-alani.ielts-dar-form label,
+.ielts-cta .iletisim-form-alani.ielts-dar-form .kvkk-link {
+    color: #1f2937;
+}
+
+.ielts-cta-buton {
+    display: inline-block;
+    margin-top: 0.7rem;
+    background: #f04a23;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    min-height: 44px;
+}
+
+.blog-mobil-cta-bar-wrap {
+    min-height: 76px;
+}
+
+.blog-mobil-cta-bar {
+    min-height: 56px;
+}
