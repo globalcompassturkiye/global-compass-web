@@ -1,5 +1,10 @@
 /* Kings Education Oxford — sayfaya özel (inline style yok) */
 
+/* Başlıksız çerçevesiz giriş: h2 altında boşluk (eski gri kutu margin-top ile uyumlu) */
+body.kings-oxford-sayfa .blog-yazi-ana > .kings-giris-metni {
+    margin-top: 25px;
+}
+
 body.kings-oxford-sayfa .kings-oxford-teknik-vurgu {
     color: #bd0505;
     font-weight: 700;
@@ -11,4 +16,13 @@ body.kings-oxford-sayfa .kings-oxford-sosyal-paragraf-son {
 
 body.kings-oxford-sayfa .kings-oxford-basvuru-bant {
     margin-top: 25px;
+}
+
+/* Akreditasyon: önceki blokla arada toplam 50px (fiyata dahil alt padding kaldırıldı) */
+body.kings-oxford-sayfa .icerik-alani.dahil-olanlar-konteyner {
+    padding-bottom: 0;
+}
+
+body.kings-oxford-sayfa .kings-oxford-akreditasyon-bolumu {
+    margin-top: 50px;
 }

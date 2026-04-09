@@ -1,5 +1,5 @@
 /* Ortak Immerse / tab / geziler / konaklama bileşenleri */
-.immerse-detay-kart h3,
+/* Program özet kartları: Kings / SBC / style.css ile aynı teal (#0f766e) */
 .immerse-program-icerik h3,
 .immerse-akademik-kart h3 {
     color: #111827 !important;
@@ -27,6 +27,7 @@
     font-size: 16px;
     font-weight: 700;
     margin: 0 0 8px 0;
+    color: #0f766e !important;
 }
 
 .immerse-detay-kart p {

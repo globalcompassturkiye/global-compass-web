@@ -1,6 +1,7 @@
 /* Kings Education Bournemouth — sayfaya özel (inline style yok) */
 
-body.sayfa-kings-education-bournemouth .kings-bournemouth-hero-alt {
+/* H1 altı h2 — Oxford (body.kings-oxford-sayfa) ile aynı ortalama */
+body.sayfa-kings-education-bournemouth h2.kings-oxford-kurs-baslik {
     text-align: center;
     margin-top: 20px;
     padding-bottom: 25px;
@@ -8,14 +9,8 @@ body.sayfa-kings-education-bournemouth .kings-bournemouth-hero-alt {
     font-weight: 600;
 }
 
-body.sayfa-kings-education-bournemouth .kings-bournemouth-okul-logo {
-    text-align: center;
-    margin-bottom: 25px;
-}
-
-body.sayfa-kings-education-bournemouth .kings-bournemouth-okul-logo img {
-    max-width: 220px;
-    height: auto;
+body.sayfa-kings-education-bournemouth .blog-yazi-ana > .kings-giris-metni {
+    margin-top: 25px;
 }
 
 body.sayfa-kings-education-bournemouth .kings-bournemouth-bolum-ust {
@@ -45,13 +40,38 @@ body.sayfa-kings-education-bournemouth .kings-bournemouth-ielts-nedir-baslik {
     margin-top: 20px;
 }
 
-body.sayfa-kings-education-bournemouth .kings-bournemouth-akreditasyon-icerik {
+/* Fiyata dahil: Oxford ile aynı blok; giriş paragrafı kırmızı bant ile grid arasında */
+body.sayfa-kings-education-bournemouth .dahil-olanlar-konteyner .kings-bournemouth-dahil-giris {
+    margin: 18px auto 0;
+    max-width: 1200px;
+    padding: 0 25px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+body.sayfa-kings-education-bournemouth .dahil-olanlar-konteyner .kings-bournemouth-dahil-giris + .kings-london-dahil-gri-dikey {
+    margin-top: 20px;
+}
+
+body.sayfa-kings-education-bournemouth .icerik-alani.dahil-olanlar-konteyner {
+    padding-bottom: 0;
+}
+
+body.sayfa-kings-education-bournemouth .kings-bournemouth-akreditasyon-bolumu {
+    margin-top: 50px;
+}
+
+body.sayfa-kings-education-bournemouth .kings-oxford-akreditasyon-gorsel {
     padding: 20px;
     text-align: center;
 }
 
-body.sayfa-kings-education-bournemouth .kings-bournemouth-akreditasyon-icerik img {
+body.sayfa-kings-education-bournemouth .kings-oxford-akreditasyon-img {
     max-width: 100%;
     height: auto;
     max-height: 100px;
+}
+
+body.sayfa-kings-education-bournemouth .kings-oxford-basvuru-bant {
+    margin-top: 25px;
 }

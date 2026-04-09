@@ -119,6 +119,47 @@
     color: #111827;
 }
 
+/* Yaz okulları: standart teal CTA (program sekmeleri / vurgu rengi #0f766e ile uyumlu) */
+a.yaz-standart-yesil-buton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    padding: 0.65rem 1.25rem;
+    background: #0f766e;
+    color: #fff !important;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    transition: background 0.2s ease, transform 0.15s ease;
+    border: none;
+    box-sizing: border-box;
+}
+
+a.yaz-standart-yesil-buton:hover {
+    background: #0d5f59;
+    color: #fff !important;
+    transform: translateY(-1px);
+}
+
+a.yaz-standart-yesil-buton:focus-visible {
+    outline: 3px solid rgba(15, 118, 110, 0.45);
+    outline-offset: 2px;
+}
+
+a.yaz-standart-yesil-buton--blok {
+    display: flex;
+    width: 100%;
+}
+
+/* Yan panel / mobil: blog.css .blog-yan-iletisim-buton ile display çakışmasını önle */
+a.yaz-standart-yesil-buton.blog-yan-iletisim-buton {
+    display: flex;
+    width: 100%;
+}
+
 .yaz-okullari-avantaj-kutu .yaz-konaklama-oge {
     background: linear-gradient(90deg, rgba(0, 0, 128, 0.04) 0%, #ffffff 100%);
     border-left-color: #000080;
