@@ -177,8 +177,9 @@
     transform: translateY(-1px);
 }
 
+/* CLS: 3 kart (mobil sütun / tablet 2 sütun) yüklenene kadar yer — site-cls-rezerv.css değişkeni */
 .ana-sayfa-blog-ozeti--yukleniyor .ana-sayfa-blog-ozeti-grid {
-    min-height: 120px;
+    min-height: var(--site-ana-sayfa-blog-ozeti-yukleniyor-min, 22rem);
 }
 
 .ana-sayfa-blog-ozeti--yukleniyor .ana-sayfa-blog-ozeti-tum {

@@ -1,0 +1,44 @@
+/**
+ * site-cls-rezerv.css — Cumulative Layout Shift (CLS) azaltma
+ *
+ * 1) Mobil sabit CTA: body alt boşluğu, JS ile çubuk eklenmeden ÖNCE aynı değerde rezerve edilir
+ *    (önceden yalnızca .global-mobil-cta-aktif ile geliyordu → ilk boyamada kayma).
+ * 2) Dinamik içerik: fetch/innerHTML ile dolan bölgelere .site-cls-dinamik-slot* sınıfları ile min-height.
+ *
+ * style.css bu dosyayı @import ile yükler; ek HTML link gerekmez.
+ * İstisna: body.blog-yazi-sayfa-mobil-ux — kendi CTA + padding (blog.css); çift boşluk olmaması için hariç.
+ */
+
+:root {
+    /* Sabit mobil CTA şeridi + güvenli alan (style.css .global-mobil-cta-bar ile aynı mantık) */
+    --site-mobil-cta-bar-reserve: 3.35rem;
+
+    /* Ana sayfa: blog-latest.json yüklenene kadar 3 kart yüksekliğine yakın rezerv */
+    --site-ana-sayfa-blog-ozeti-yukleniyor-min: 22rem;
+
+    /* Genel dinamik slot (ihtiyaç halinde HTML’de kullanın) */
+    --site-dinamik-slot-kucuk: 8rem;
+    --site-dinamik-slot-orta: 12rem;
+    --site-dinamik-slot-buyuk: 24rem;
+}
+
+/* ≤1179px: global mobil CTA görünür alanı — JS beklemeden */
+@media (max-width: 1179px) {
+    body:not(.blog-yazi-sayfa-mobil-ux) {
+        padding-bottom: calc(var(--site-mobil-cta-bar-reserve) + env(safe-area-inset-bottom, 0px));
+    }
+}
+
+/* Fetch / script ile doldurulacak kapsayıcılar için yer tutucu */
+.site-cls-dinamik-slot {
+    min-height: var(--site-dinamik-slot-orta);
+    box-sizing: border-box;
+}
+
+.site-cls-dinamik-slot--kucuk {
+    min-height: var(--site-dinamik-slot-kucuk);
+}
+
+.site-cls-dinamik-slot--buyuk {
+    min-height: var(--site-dinamik-slot-buyuk);
+}

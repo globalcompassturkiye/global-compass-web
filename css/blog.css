@@ -888,7 +888,7 @@ body.sayfa-blog .blog-kart-gorsel-link {
     }
 
     .blog-yazi-sayfa-mobil-ux {
-        padding-bottom: calc(3.35rem + env(safe-area-inset-bottom, 0px));
+        padding-bottom: calc(var(--site-mobil-cta-bar-reserve, 3.35rem) + env(safe-area-inset-bottom, 0px));
     }
 
     .blog-yazi-sayfa-mobil-ux .blog-mobil-cta-bar-wrap {

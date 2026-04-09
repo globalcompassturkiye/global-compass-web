@@ -1,11 +1,35 @@
+/* Şehir kartı: style.css’te sabit 312px, görsel 300px + buton 50px sığmıyordu (overflow ile buton kesiliyordu) */
+body.sayfa-yurt-disi-yaz-okullari-uk .yaz-okullari-secim-paneli .kare-kart {
+    height: auto;
+    min-height: 352px;
+}
+
+/* Görsel yüklenene kadar gri dolgu; min-height:0 flex içinde taşmayı önler */
+body.sayfa-yurt-disi-yaz-okullari-uk .yaz-okullari-secim-paneli .kare-resim {
+    background-color: #f1f5f9;
+    min-height: 0;
+}
+
+body.sayfa-yurt-disi-yaz-okullari-uk .yaz-okullari-secim-paneli .kare-resim-link {
+    display: block;
+    height: 100%;
+    min-height: 0;
+}
+
+body.sayfa-yurt-disi-yaz-okullari-uk .yaz-okullari-secim-paneli .kare-resim img {
+    aspect-ratio: 288 / 300;
+}
+
 /* UK yaz okullari sayfasina ozel one cikan sehirler bolumu */
 .uk-one-cikan-sehirler-kutu .dahil-rozet-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 14px;
 }
 
+/* Rozet kartları: grid satırında eşit yükseklik + küçük CLS için alt sınır */
 .uk-one-cikan-sehirler-kutu .dahil-rozet-kart {
     height: 100%;
+    min-height: 9.5rem;
 }
 
 .uk-one-cikan-sehirler-kutu .dahil-rozet-baslik {

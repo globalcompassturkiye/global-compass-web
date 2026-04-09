@@ -24,7 +24,6 @@
     link.appendChild(text);
     wrap.appendChild(link);
     document.body.appendChild(wrap);
-    document.body.classList.add('global-mobil-cta-aktif');
   }
 
   function applyMobileSubmenuLayout(nav) {

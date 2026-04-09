@@ -1,4 +1,6 @@
-﻿/*
+﻿@import url("site-cls-rezerv.css");
+
+/*
   style.css — site geneli (≈6k+ satır). BAKIM: !important çoğunlukla medya/üst menü/yönlendirme
   çakışmaları içindir; kaldırmak için sayfa özel /css dosyalarında özgüllük artırılmalı.
   Büyük bloklar “MIGRATED FROM …” ile işaretli; modüler ayırma adaylarıdır (ölü kod değildir).
@@ -2237,9 +2239,7 @@ p + .kirmizi-kutu {
 }
 
 @media (max-width: 1179px) {
-    body.global-mobil-cta-aktif {
-        padding-bottom: calc(3.35rem + env(safe-area-inset-bottom, 0px));
-    }
+    /* body padding-bottom: site-cls-rezerv.css (JS beklemeden rezerv) */
 
     .global-mobil-cta-bar-wrap {
         display: block;
