@@ -1,6 +1,6 @@
 /* Summer Boarding Courses Canford — sayfaya özel (inline style yok); içerik eklendikçe genişletilebilir */
 
-/* ≤501px: içindekiler + hızlı iletişim, giriş (metin + görsel) bloğunun hemen altında; yan panelde tekrar gösterme */
+/* ≤501px: içindekiler + hızlı iletişim, giriş metin bloğunun hemen altında; yan panelde tekrar gösterme */
 @media (max-width: 501px) {
     body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .kings-london-toc-outer .blog-mobil-icindekiler-wrap.sbc-canford-mobil-icindekiler-giris-alti {
         display: flex !important;
@@ -19,31 +19,60 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     overflow: visible;
 }
 
+/* h1 altı alt başlık */
+body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-giris-alt-baslik {
+    margin: 0.65rem 0 1rem 0;
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(1.05rem, 2.4vw, 1.3rem);
+    font-weight: 600;
+    line-height: 1.4;
+    color: #334155;
+    text-align: center;
+}
+
 /* Çerçevesiz giriş: Kings dil sayfasındaki .kings-giris-metni boşluğu ile uyum */
 body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .blog-yazi-ana > .sbc-canford-giris-metni {
     margin-top: 25px;
 }
 
-/* CLS: giriş görseli — yükleme öncesi 16:9 slot (1200×675 ile uyumlu) */
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-giris-gorsel {
-    position: relative;
-    margin-top: 24px;
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    border-radius: 12px;
-    overflow: hidden;
-    border: 1px solid #e5e7eb;
-    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
-    background: #f1f5f9;
+body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .blog-yazi-ana > .sbc-canford-giris-alt-baslik + .sbc-canford-giris-metni {
+    margin-top: 0;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-giris-gorsel img {
-    position: absolute;
-    inset: 0;
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+/* Global Compass — girişte dikkat çekici avantaj kutusu */
+body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-giris-global-compass-vurgu {
+    margin-top: 1.35rem;
+    padding: 1rem 1.15rem 1.1rem 1.1rem;
+    border-radius: 0 14px 14px 0;
+    border: 1px solid rgba(196, 30, 58, 0.22);
+    border-left: 5px solid #c41e3a;
+    background: linear-gradient(135deg, #fef7f8 0%, #f8fafc 55%, #f1f5f9 100%);
+    box-shadow: 0 6px 22px rgba(15, 23, 42, 0.07);
+    box-sizing: border-box;
+}
+
+body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-giris-vurgu-etiket {
+    margin: 0 0 0.45rem 0;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    line-height: 1.35;
+    color: #c41e3a;
+}
+
+body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-giris-vurgu-metin {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #1e293b;
+}
+
+body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-giris-vurgu-metin strong {
+    color: #000080;
+    font-weight: 700;
 }
 
 body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .blog-yazi-ana > .sbc-canford-program-bolumu {
@@ -63,10 +92,42 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     box-sizing: border-box;
 }
 
-/* Üst blok + Tesis İmkanları: aynı satır genişliği */
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-program-bolumu .immerse-detay-kutu .immerse-detay-grid > .sbc-canford-detay-ust-iki-sutun,
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-program-bolumu .immerse-detay-kutu .immerse-detay-grid > .sbc-canford-tesisler-kart,
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-program-bolumu .immerse-detay-kutu .immerse-detay-grid > .sbc-canford-etkinlikler-kart {
+/* Üst blok (Program detayları kartları): tam genişlik */
+body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-program-bolumu .immerse-detay-kutu .immerse-detay-grid > .sbc-canford-detay-ust-iki-sutun {
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+/* Tesis + Etkinlikler (SSS üstü): aynı grid genişliği */
+body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-tesis-etkinlik-bolumu {
+    margin-top: 32px;
+}
+
+body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-tesis-etkinlik-bolumu .sbc-canford-tesisler-kart > h3,
+body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-tesis-etkinlik-bolumu .sbc-canford-etkinlikler-kart > h3 {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.35;
+    margin: 0 0 12px 0;
+    color: #111827 !important;
+}
+
+body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-tesis-etkinlik-bolumu .immerse-detay-kutu .immerse-detay-grid {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 22px;
+    justify-content: flex-start;
+    align-content: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-tesis-etkinlik-bolumu .immerse-detay-kutu .immerse-detay-grid > .sbc-canford-tesisler-kart,
+body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-tesis-etkinlik-bolumu .immerse-detay-kutu .immerse-detay-grid > .sbc-canford-etkinlikler-kart {
     flex: 0 0 100%;
     width: 100%;
     max-width: 100%;
