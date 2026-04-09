@@ -22,6 +22,7 @@
 }
 
 .sayfa-kings-education .kings-kampus-foto {
+    margin-top: 25px;
     margin-bottom: 35px;
     overflow: hidden;
     border-radius: 8px;
@@ -51,40 +52,110 @@
     margin-top: 50px;
 }
 
+/* Dil becerileri: yanyana 3 çerçeve (dar sütunda auto-fit 2’ye düşmesin) */
 .sayfa-kings-education .kings-beceri-ana-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr;
+    gap: 16px;
+    align-items: stretch;
     background: #fff;
     padding: 10px;
 }
 
+@media (min-width: 900px) {
+    .sayfa-kings-education .kings-beceri-ana-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+.sayfa-kings-education .kings-beceri-ana-grid .kings-mini-kutu {
+    margin: 0;
+    min-width: 0;
+}
+
 .sayfa-kings-education .kings-mini-kutu {
     margin: 25px 15px;
-    padding-top: 45px;
+    padding: 18px 18px 16px;
     border-color: #ddd;
 }
 
-.sayfa-kings-education .kings-mini-kutu-baslik {
-    background: #000080 !important;
-    font-size: 14px;
-    text-transform: uppercase;
+/* Çerçeve içi kart başlığı (yüzen lacivert şerit yerine) */
+.sayfa-kings-education .kings-mini-kutu > h3.kutu-baslik.kings-mini-kutu-baslik,
+.sayfa-kings-education .kings-mini-kutu-sik > h3.kutu-baslik.kings-mini-kutu-baslik {
+    position: static;
+    transform: none;
+    left: auto;
+    top: auto;
+    margin: 0 0 14px 0;
+    padding: 0 0 10px 0;
+    background: transparent !important;
+    color: #000080 !important;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 0;
+    border-bottom: 2px solid #000080;
+    text-align: left;
+    text-transform: none;
+    max-width: none;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    letter-spacing: normal;
+    line-height: 1.35;
+}
+
+.sayfa-kings-education .kings-mini-kutu-sik {
+    margin: 20px 10px;
+    padding: 18px 18px 16px;
+    border-color: #ddd;
+}
+
+.sayfa-kings-education .kings-mini-kutu-sik > h3.kutu-baslik.kings-la-mini-baslik-kirmizi {
+    position: static;
+    transform: none;
+    left: auto;
+    top: auto;
+    margin: 0 0 14px 0;
+    padding: 0 0 10px 0;
+    background: transparent !important;
+    color: #bd0505 !important;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 0;
+    border-bottom: 2px solid #bd0505;
+    text-align: left;
+    text-transform: none;
+    max-width: none;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    letter-spacing: normal;
+    line-height: 1.35;
 }
 
 .sayfa-kings-education .kings-bilgi-grid-bolum {
     margin-top: 40px;
 }
 
+/* İlk iki kart yan yana; Program Süreleri ayrı satırda ortalanmış çerçeve */
 .sayfa-kings-education .kings-bilgi-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr;
     background: #fff;
     gap: 10px;
 }
 
-.sayfa-kings-education .kings-mini-kutu-sik {
-    margin: 20px 10px;
-    padding-top: 45px;
-    border-color: #ddd;
+@media (min-width: 700px) {
+    .sayfa-kings-education .kings-bilgi-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.sayfa-kings-education .kings-bilgi-grid .kings-la-program-sureleri-kutu {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: min(100%, 640px);
+    margin: 20px auto;
 }
 
 .sayfa-kings-education .kings-liste-etiket {

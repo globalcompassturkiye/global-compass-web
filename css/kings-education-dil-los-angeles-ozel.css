@@ -4,12 +4,47 @@
     margin-top: 18px;
 }
 
-.sayfa-kings-education .kings-la-grid-tam-genis {
-    grid-column: 1 / -1;
+/* Hollywood giriş: dört özet maddesi — kart ızgarası */
+body.sayfa-kings-education-los-angeles .kings-la-hollywood-ozet-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 20px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.sayfa-kings-education .kings-la-mini-baslik-kirmizi {
-    background: #bd0505 !important;
+body.sayfa-kings-education-los-angeles .kings-la-hollywood-ozet-kart {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 14px 16px 16px 18px;
+    background: #f8fafc;
+    border: none;
+    border-left: 5px solid #000080;
+    border-radius: 0 8px 8px 0;
+    box-shadow: none;
+    box-sizing: border-box;
+    min-width: 0;
+}
+
+body.sayfa-kings-education-los-angeles .kings-la-hollywood-ozet-kart .dahil-rozet-baslik {
+    color: #000080 !important;
+    margin: 0 0 8px 0;
+}
+
+body.sayfa-kings-education-los-angeles .kings-la-hollywood-ozet-kart .dahil-rozet-metin {
+    margin: 0;
+    color: #334155;
+}
+
+@media (max-width: 639px) {
+    body.sayfa-kings-education-los-angeles .kings-la-hollywood-ozet-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.sayfa-kings-education .kings-la-grid-tam-genis {
+    grid-column: 1 / -1;
 }
 
 .sayfa-kings-education .kings-la-kampus-olanak-izgara {
@@ -244,15 +279,45 @@
     padding-bottom: 10px;
 }
 
-.sayfa-kings-education .kings-la-liste-sifir {
+/* .kutu-liste global ■ ::before ile çakışmayı gider; disk ile tek satır madde */
+body.sayfa-kings-education-los-angeles .kutu-liste.kings-la-liste-sifir:not(.kings-la-film-icerik-listesi) {
+    margin: 0;
+    list-style: disc;
+    padding-left: 1.35em;
+}
+
+body.sayfa-kings-education-los-angeles .kutu-liste.kings-la-liste-sifir:not(.kings-la-film-icerik-listesi) li {
+    position: relative;
+    padding-left: 0;
+    display: list-item;
+}
+
+body.sayfa-kings-education-los-angeles .kutu-liste.kings-la-liste-sifir:not(.kings-la-film-icerik-listesi) li::before {
+    content: none !important;
+    display: none !important;
+}
+
+/* Film programı yan paneli (koyu zemin): açık renk madde — global ■ kapatıldı */
+body.sayfa-kings-education-los-angeles .kutu-liste.kings-la-liste-sifir.kings-la-film-icerik-listesi {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-.sayfa-kings-education .kings-la-liste-sifir li {
+body.sayfa-kings-education-los-angeles .kutu-liste.kings-la-film-icerik-listesi li {
     position: relative;
-    padding-left: 0;
+    padding-left: 1.15em;
+}
+
+body.sayfa-kings-education-los-angeles .kutu-liste.kings-la-film-icerik-listesi li::before {
+    content: "\2022" !important;
+    display: block !important;
+    position: absolute;
+    left: 0;
+    top: 0.4em;
+    color: #e8d48a;
+    font-size: 0.55rem;
+    line-height: 1;
 }
 
 .sayfa-kings-education .kings-la-bilgi-satir-mavi {
@@ -446,6 +511,17 @@
     margin: 0;
 }
 
+.sayfa-kings-education .kings-la-dahil-grid .kings-la-dahil-kart-ortali {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: min(100%, 640px);
+    text-align: left;
+}
+
+.sayfa-kings-education .kings-la-dahil-grid .kings-la-dahil-kart-ortali .kings-la-dahil-h4 {
+    justify-content: flex-start;
+}
+
 .sayfa-kings-education .kings-la-konaklama-bolum {
     margin-top: 40px;
     margin-bottom: 40px;
@@ -491,4 +567,39 @@
 
 .sayfa-kings-education .konaklama-badge.orange {
     background: #f39c12;
+}
+
+/* Konaklama kartları: ul varsayılan girinti * sıfırlaması ile madde kaybolmaması — disk */
+body.sayfa-kings-education-los-angeles .kings-la-konaklama-bolum .konaklama-liste {
+    list-style: disc;
+    padding-left: 1.35em;
+    margin: 0;
+}
+
+body.sayfa-kings-education-los-angeles .kings-la-konaklama-bolum .konaklama-liste li {
+    margin-bottom: 8px;
+    padding-left: 0;
+    display: list-item;
+}
+
+body.sayfa-kings-education-los-angeles .kings-la-konaklama-bolum .konaklama-liste li:last-child {
+    margin-bottom: 0;
+}
+
+/* Blog düzeni (Summer Boarding Canford / Kings Bournemouth iskeleti): yan panel + mobil içindekiler */
+@media (max-width: 501px) {
+    body.sayfa-kings-education-los-angeles .kings-london-toc-outer .blog-mobil-icindekiler-wrap.kings-la-mobil-icindekiler-giris-alti {
+        display: flex !important;
+        flex-direction: column;
+        gap: 25px;
+        margin: 18px 0 1rem;
+    }
+
+    body.sayfa-kings-education-los-angeles .kings-london-toc-outer .blog-yan-panel {
+        display: none !important;
+    }
+}
+
+body.sayfa-kings-education-los-angeles .blog-yazi-layout--yan-panel .blog-yazi-ana {
+    overflow: visible;
 }

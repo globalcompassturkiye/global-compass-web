@@ -636,8 +636,6 @@ body.sayfa-blog .blog-kart-gorsel-link {
     .blog-yan-panel {
         margin-left: 0;
         margin-right: 0;
-        max-height: calc(100vh - var(--site-header-offset, 122px) - 2rem);
-        overflow-y: auto;
     }
 }
 
