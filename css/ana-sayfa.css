@@ -263,15 +263,16 @@ body.ana-sayfa .ana-tab-cerceve-ust-bant-baslik {
     }
 }
 
-/* Hub kart ızgarası: satırdaki en yüksek karta göre tüm hücreleri germeyip kartı içeriğe sıkıştır */
+/* Hub kart ızgarası: satırda aynı yükseklik (grid varsayılanı align-items: stretch) */
 body.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap,
 body.sayfa-hizmetlerimiz .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap {
-    align-items: start;
+    align-items: stretch;
 }
 
-/* Ana sayfa / hizmetlerimiz — dil hub ile aynı panel; kartlarda çok satırlı metin */
+/* Ana sayfa / hizmetlerimiz — dil hub ile aynı panel; kartlarda çok satırlı metin; grid satırında tam yükseklik */
 body.ana-sayfa a.yaz-okullari-ulke-kart,
 body.sayfa-hizmetlerimiz a.yaz-okullari-ulke-kart {
+    height: 100%;
     min-height: 0;
     justify-content: flex-start;
     align-items: stretch;
@@ -315,7 +316,8 @@ body.ana-sayfa .ana-hizmet-hub-kart-metin {
 }
 
 body.sayfa-hizmetlerimiz .ana-hizmet-hub-kart-metin {
-    text-align: left;
+    text-align: justify;
+    text-align-last: left;
 }
 
 body.ana-sayfa .dil-okullari-secim-paneli {

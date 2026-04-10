@@ -81,13 +81,20 @@ body.sayfa-hizmetlerimiz .hizmetlerimiz-egitim-alanlari .hizmetlerimiz-hub-kart-
     user-select: none;
 }
 
+/* Giriş paragrafı ve form üstü açıklama — iki yana yaslı (kırmızı bant metinleri hariç) */
+body.sayfa-hizmetlerimiz article.hizmetlerimiz-sayfa > p {
+    text-align: justify;
+    text-align-last: left;
+}
+
+body.sayfa-hizmetlerimiz article.hizmetlerimiz-sayfa .iletisim-form-alani > p {
+    text-align: justify;
+    text-align-last: left;
+}
+
 /* Hub çerçevesi: alttaki gereksiz iç boşluk (12px) yok; kartlar satırda eşit boya uzamasın */
 body.sayfa-hizmetlerimiz .hizmetlerimiz-egitim-alanlari .dil-okullari-secim-paneli {
     padding-bottom: 0;
-}
-
-body.sayfa-hizmetlerimiz .hizmetlerimiz-egitim-alanlari .yaz-okullari-ulke-kart-wrap {
-    align-items: start;
 }
 
 @media (max-width: 768px) {
