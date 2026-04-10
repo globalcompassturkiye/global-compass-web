@@ -490,6 +490,7 @@ a.ana-hizmet-karti:hover h3 {
    • Yüzen lacivert şerit başlık: h2.kutu-baslik (+ gerekiyorsa h2.kutu-baslik.sss-baslik).
    • İkinci satır kırmızı: <br> sonrası span.vurgu-renk veya SSS’te h2 içindeki
      span (sınıf: üç “s” + “-alt-satir”, bu dosyada h2.kutu-baslik .sss-alt-satir).
+   • İki satırda 1. satır metni sola; vurgulu 2. satır ortada (bkz. :has(br) ve .sss-alt-satir).
    • Aynı görünüm için başka .css dosyasında padding, radius veya font tekrarlamayın;
      SSS gri kutu boşlukları ve akordeon: css/sss.css. Kampüs paneli .kutu-baslik
      (h2 değil) ayrı ailedir — “3. Çizgi Üstü Kurumsal Başlık” bloğu. */
@@ -539,6 +540,34 @@ h2.kutu-baslik .sss-alt-satir {
     display: block;
     margin-top: 4px;
     font-size: 0.95em;
+}
+
+/* İki satırlı lacivert şerit (gri çerçeve h2): 1. satır sola; 2. satır vurgu ortada — tüm site */
+h2.kutu-baslik:has(br) {
+    text-align: left;
+}
+
+h2.kutu-baslik:has(br) .vurgu-renk {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+h2.kutu-baslik:has(br) .sss-alt-satir {
+    text-align: center;
+}
+
+/* SSS kutusu: <br> yok; üst metin + .sss-alt-satir ile iki satır */
+h2.kutu-baslik.sss-baslik:has(.sss-alt-satir) {
+    align-items: flex-start;
+    text-align: left;
+}
+
+h2.kutu-baslik.sss-baslik:has(.sss-alt-satir) .sss-alt-satir {
+    align-self: center;
+    text-align: center;
+    width: 100%;
 }
 
 .kutu-liste {
@@ -1130,21 +1159,39 @@ h2.kutu-baslik .sss-alt-satir {
     }
 }
 
-/* Frankfurt yaz okulları – kurumsal avantaj kartları */
+/* Frankfurt yaz okulları – kurumsal avantaj kartları (2+2 grid) */
 .frankfurt-avantaj-kutu .frankfurt-avantaj-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 20px;
     margin-top: 20px;
 }
 
+@media (min-width: 769px) {
+    .frankfurt-avantaj-kutu .frankfurt-avantaj-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
 .frankfurt-avantaj-kart {
+    min-width: 0;
     border-radius: 14px;
     border: 1px solid #e5e7eb;
     background: linear-gradient(135deg, #ffffff 0%, #ffffff 50%, #eff6ff 100%);
     padding: 18px 16px 16px;
     box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+.frankfurt-avantaj-baslik-satir {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.frankfurt-avantaj-baslik-satir .frankfurt-avantaj-ikon {
+    flex-shrink: 0;
+    margin-top: 1px;
 }
 
 .frankfurt-avantaj-ikon {
@@ -1155,15 +1202,20 @@ h2.kutu-baslik .sss-alt-satir {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
-    margin-bottom: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #000080;
+    line-height: 1;
 }
 
-.frankfurt-avantaj-kart h3 {
-    margin: 0 0 6px 0;
+.frankfurt-avantaj-baslik-satir h3 {
+    margin: 0;
+    flex: 1;
+    min-width: 0;
     font-size: 15.5px;
     font-weight: 700;
     color: #000080;
+    line-height: 1.35;
 }
 
 .frankfurt-avantaj-kart p {
@@ -1171,12 +1223,6 @@ h2.kutu-baslik .sss-alt-satir {
     font-size: 14.5px;
     color: #444;
     line-height: 1.7;
-}
-
-@media (min-width: 769px) {
-    .frankfurt-avantaj-kart {
-        flex: 0 1 280px;
-    }
 }
 
 @media (max-width: 992px) {
@@ -2427,6 +2473,18 @@ p + .kirmizi-kutu {
         width: 90%;
         text-align: center;
         font-size: 15px !important;
+    }
+
+    h2.kutu-baslik:has(br) {
+        text-align: left !important;
+    }
+
+    h2.kutu-baslik:has(br) .vurgu-renk {
+        text-align: center;
+    }
+
+    h2.kutu-baslik.sss-baslik:has(.sss-alt-satir) {
+        text-align: left !important;
     }
 
     /* h1: tablet 33px — global h1 33px korunur (aşağıdaki font-size kaldırıldı) */

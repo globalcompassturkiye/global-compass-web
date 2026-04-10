@@ -1,5 +1,5 @@
 /* Yurt Dışı Dil Okulları sayfasına özel stiller */
-/* Ülke seçim kartları – yaz okulları sayfasıyla aynı tasarım */
+/* Ülke seçim kartları: /css/yurt-disi-yaz-okullari-index.css (hub kart ızgarası) */
 
 /* Rozet ikonunda onay işareti (✓) */
 .dil-okullari-kariyer-kutu .dahil-rozet-ikon-tick,
@@ -16,7 +16,7 @@
     margin: 25px auto 60px auto;
     padding: 0;
     border: 1px solid #e5e7eb;
-    border-radius: 12px;
+    border-radius: 15px 15px 12px 12px;
     background: #ffffff;
     box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
     overflow: hidden;
@@ -24,13 +24,13 @@
 
 .dil-okullari-secim-paneli .kirmizi-kutu {
     margin: 0;
-    border-radius: 0;
+    border-radius: 15px 15px 0 0;
 }
 
-.dil-okullari-secim-paneli .ulke-secim-butonlari {
+.dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap {
     margin: 0;
     max-width: none;
-    padding: 16px 18px 20px 18px;
+    padding: 0;
 }
 
 /* UK sehir kartlari bu panelde kullanildiginda ayni ic bosluk standardi */
@@ -43,11 +43,11 @@
     .dil-okullari-secim-paneli {
         margin: 20px 0 45px 0;
         padding: 0;
-        border-radius: 10px;
+        border-radius: 15px 15px 10px 10px;
     }
 
     .dil-okullari-secim-paneli .kirmizi-kutu {
-        border-radius: 10px 10px 0 0;
+        border-radius: 15px 15px 0 0;
     }
 
 }

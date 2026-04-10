@@ -20,6 +20,7 @@
 .hizmet-tab-alani,
 .hizmet-tab-alani .ana-tab-etiket,
 .hizmet-tab-alani .alt-tab-etiket,
+.hizmet-tab-alani .sehir-buton,
 .hizmet-tab-alani .tab-ic-icerik,
 .hizmet-tab-alani .ana-buton {
     background-image: none !important;
@@ -67,7 +68,8 @@ body.ana-sayfa .hizmet-tab-alani {
 /* 2. Ana sayfa hizmet tab alanındaki tüm butonlar için ortak stil
    (ana sekmeler + alt sekmeler) – sadece ana sayfada geçerli */
 body.ana-sayfa .hizmet-tab-alani .ana-tab-etiket,
-body.ana-sayfa .hizmet-tab-alani .alt-tab-etiket {
+body.ana-sayfa .hizmet-tab-alani .alt-tab-etiket,
+body.ana-sayfa .hizmet-tab-alani .sehir-buton {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -88,6 +90,7 @@ body.ana-sayfa .hizmet-tab-alani .alt-tab-etiket {
                 background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
     white-space: nowrap;
     text-align: center;
+    text-decoration: none;
 }
 
 /* Ana butonların üst/alt boşluğunu gri çizgiye göre ortala */
@@ -99,7 +102,8 @@ body.ana-sayfa .hizmet-tab-alani .ana-tab-etiket {
 
 /* Ana ve alt tab butonları için ortak hover animasyonu */
 body.ana-sayfa .hizmet-tab-alani .ana-tab-etiket:hover,
-body.ana-sayfa .hizmet-tab-alani .alt-tab-etiket:hover {
+body.ana-sayfa .hizmet-tab-alani .alt-tab-etiket:hover,
+body.ana-sayfa .hizmet-tab-alani .sehir-buton:hover {
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
     background: #e74c3c;
@@ -131,12 +135,14 @@ body.ana-sayfa #tab-yaz:checked ~ label[for="tab-yaz"] {
     white-space: nowrap;
 }
 
-/* Alt sekmeler – sadece boyut farkı (daha küçük) */
-body.ana-sayfa .hizmet-tab-alani .alt-tab-etiket {
-    padding: 6px 14px;
-    font-size: 12px;
+/* Alt sekmeler + şehir butonları — ülke ile şehir aynı ölçü */
+body.ana-sayfa .hizmet-tab-alani .alt-tab-etiket,
+body.ana-sayfa .hizmet-tab-alani .sehir-buton {
+    padding: 8px 18px;
+    font-size: 14px;
     font-weight: 600;
     border-radius: 15px;
+    line-height: normal;
 }
 
 /* Ana sekme butonları: üst ve alt gri çerçeve ile alt çizgi arasında
@@ -373,6 +379,7 @@ body.ana-sayfa .hizmet-tab-alani .alt-panel .tab-ic-icerik {
     color: #ffffff;
 }
 
+/* Şehir hover: ana sayfada üstteki ortak kural; diğer sayfalarda yerel stil */
 .sehir-buton:hover {
     background: #e74c3c;
     color: #ffffff;
@@ -438,14 +445,14 @@ body.ana-sayfa .hizmet-tab-alani .alt-panel .tab-ic-icerik {
         margin: 4px;
     }
 
-    /* 2) Ülke sekmeleri - daha küçük */
+    /* 2) Ülke sekmeleri */
     body.ana-sayfa .hizmet-tab-alani .alt-tab-etiket {
-        font-size: 11px;
-        padding: 5px 10px;
+        font-size: 12px;
+        padding: 6px 12px;
         margin: 4px;
     }
 
-    /* 3) Şehir sekmeleri - en kompakt */
+    /* 3) Şehir sekmeleri — ana sayfada ülke ile aynı; diğer sayfalarda kompakt */
     .sehir-buton {
         font-size: 11px;
         padding: 5px 9px;
@@ -453,8 +460,15 @@ body.ana-sayfa .hizmet-tab-alani .alt-panel .tab-ic-icerik {
         flex: 0 1 auto;
     }
 
+    body.ana-sayfa .hizmet-tab-alani .sehir-buton {
+        font-size: 12px;
+        padding: 6px 12px;
+        margin: 4px;
+    }
+
     body.ana-sayfa .hizmet-tab-alani .ana-tab-etiket:hover,
     body.ana-sayfa .hizmet-tab-alani .alt-tab-etiket:hover,
+    body.ana-sayfa .hizmet-tab-alani .sehir-buton:hover,
     body.ana-sayfa #tab-dil:checked ~ label[for="tab-dil"],
     body.ana-sayfa #tab-yaz:checked ~ label[for="tab-yaz"],
     .sehir-buton:hover {
@@ -472,6 +486,7 @@ body.ana-sayfa .hizmet-tab-alani .alt-panel,
 body.ana-sayfa .hizmet-tab-alani .tab-ic-icerik,
 body.ana-sayfa .hizmet-tab-alani .ana-tab-etiket,
 body.ana-sayfa .hizmet-tab-alani .alt-tab-etiket,
+body.ana-sayfa .hizmet-tab-alani .sehir-buton,
 body.ana-sayfa .hizmet-tab-alani .ana-buton {
     background-image: none !important;
 }

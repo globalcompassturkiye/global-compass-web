@@ -1,0 +1,65 @@
+---
+description: Kings Education dil okulu sayfaları — NY ile hizalı iskelet, grid/çerçeve, dahil/konaklama CSS
+globs: "{**/yurt-disi-dil-okullari/**/*.html,/css/kings-education*.css}"
+alwaysApply: false
+---
+
+# Kings Education — dil okulu sayfa standardı
+
+**HTML iskelet ağacı (içeriksiz şablon, kapanış sırası):** `kings-education-dil-iskelet-html.mdc` — canlı örnek: **`yurt-disi-dil-okullari/usa/boston/kings-education/index.html`**.
+
+Referans iskelet ve bloklar: **`/yurt-disi-dil-okullari/usa/new-york/kings-education/`** (güncellenen şehir sayfaları aynı DOM/CSS kalıplarına çekilir).  
+**`title` / `meta description`:** Kullanıcı metin vermedikçe değiştirilmez (`meta-title-description-kullanici-onayi`).
+
+## HTML iskeleti
+
+- **`blog.css`** linkli olsun; ana içerik: `main` → `article.icerik-alani` → `div.blog-yazi-tek-sutun.blog-yazi-tek-sutun--tam.kings-london-toc-outer` → `div.blog-yazi-layout.blog-yazi-layout--yan-panel` → `div.blog-yazi-ana` (hero, bloklar, programlar, dahil, konaklama, akreditasyon).
+- **Breadcrumb:** `ol.breadcrumb-kutu.breadcrumb-kutu--hiyerarsik` (hiyerarşik liste), ilgili şehir URL’leri.
+- **Mobil içindekiler:** `div.blog-mobil-icindekiler-wrap` içinde `nav.blog-mobil-icindekiler-duz` + `blog-yan-iletisim-kutu` (hızlı iletişim); `details` tabanlı eski kalıp yerine bu düzen tercih edilir. **`max-width: 1179px` altında** bu blok DOM’da **giriş metninin (`#…-giris-kampus` veya ana giriş paragrafları) hemen ardından** olmalı — kampüs fotoğrafı / sonraki bölümlerden önce; `blog.css` mobil akışı buna göre tasarlanmıştır.
+- **Masaüstü:** `aside.blog-yan-panel` — içindekiler listesi + aynı hızlı iletişim; `blog-yazi-ana` bittikten sonra, dış sarmalayıcıları kapatmadan önce.
+- **Form bandı + bilgi formu + ilgili sayfalar:** İki sütun layout **dışında** ama `article` içinde (NY sırası).
+- **`body`:** `sayfa-kings-education sayfa-kings-education-{şehir} blog-yazi-sayfa-mobil-ux` (şehir sınıfı hedefli CSS için).
+- **Bölüm `id` / anchor öneki:** Şehre özgü tutarlı önek (ör. `kings-bos-*`, `kings-ny-*`) — `h1`/`h2` program başlıkları, `#...-dil-ozet`, `#...-kurs-programlari`, `#...-dahil`, `#...-konaklama`, `#...-akreditasyon`, form `h2` + `aria-labelledby`.
+- **Alt yönlendirme:** `yonlendirme-karti-teklik` — blog **değil** dil sayfası: tek kart, **`/yurt-disi-dil-okullari/`**, metin **Yurt Dışı Dil Okullarını Keşfet →** (yaz okulları linki kullanılmaz).
+- **Form:** `section.iletisim-form-alani` + `aria-labelledby`; `h2` sabit `id` (ör. `...-bilgi-form-baslik`); radyo gruplarında **`name` sayfaya özel** (`kimlik_*` ile başlayıp benzersiz) — `iletisim-formu.js` `name^="kimlik"` ile uyumlu.
+- **Logo:** Header’da iki logo `width="158" height="48"` + **`decoding="async"`**.
+
+## CSS dosya konumu ve sıra
+
+- Sayfa özel stiller yalnızca **`/css`** altında: `kings-education-dil-{şehir}.css`, `kings-education-dil-{şehir}-ozel.css`.
+- Ortak Kings/LA kalıpları için sıraya **`kings-education-dil-los-angeles.css`** + **`kings-education-dil-los-angeles-ozel.css`** eklenebilir (mevcut sayfada olduğu gibi).
+- **`kings-education-dil-los-angeles-ozel`** içindeki **`kings-la-dahil-bolum`** kuralı bazen **kalın üst kenar** (`border-top` 5px) getirir; şehir sayfasında gri kutu standardına dönmek için **`kings-education-dil-{şehir}-layout.css`** ile override edilir (aşağıda).
+
+## Dil özeti — beceri üçlüsü (`kings-beceri-ana-grid`)
+
+- Grid: mobilde **tek sütun**; **`min-width: 900px`** (viewport) ile **`grid-template-columns: repeat(3, minmax(0, 1fr))`**, **`gap: 16px`**, **`align-items: stretch`**.
+- **`.kings-beceri-ana-grid .kings-mini-kutu`:** `margin: 0`, `min-width: 0`, uygun **`padding`** (ör. 18px); `auto-fit` / `minmax(300px)` ile 2’ye düşürmeyin.
+- Üç kutu başlıkları: Temel / Çalışma / Kişisel ve Kültürel beceriler — `h3.kings-mini-kutu-baslik`, liste `kutu-liste`.
+
+## Bilgi özeti grid (`kings-bilgi-grid`)
+
+- **`min-width: 700px`:** iki sütun `repeat(2, minmax(0, 1fr))`.
+- **`kings-la-program-sureleri-kutu`:** `grid-column: 1 / -1`, `justify-self: center`, **`max-width: calc((100% - 10px) / 2)`** (üst satırdaki tek kart genişliği, ortalı).
+- **`kings-la-grid-tam-genis`** (kampüs imkânları vb.): tam satır — `los-angeles-ozel` içinde `grid-column: 1 / -1` korunur.
+
+## Kurs fiyatına dahil (`kings-la-dahil-bolum`)
+
+- Ortak LA özel dosyadaki **kalın kırmızı üst kenar**, sayfa standardında **`gri-cerceve-kutu` ile aynı çerçeve** olmalıdır: şehir **`layout`** CSS’inde örn. **`border: 1px solid #d1d1d1`** (`style.css` `.gri-cerceve-kutu` ile uyumlu).
+- İki sütun dahil kart grid’i: `kings-*-dahil-grid-2kol` + breakpoint ile iki kolon (Boston layout örneği).
+
+## Konaklama (`kings-la-konaklama-bolum` + `kings-bos-*-konaklama` vb.)
+
+- **Boston (örnek):** Üç kutu — **üstte 2 yan yana, altta 3. ortada**; **üç çerçevenin genişliği aynı** (alttaki kutunun genişliği = üst satırdaki bir sütun): `grid-template-columns: repeat(2, minmax(0, 1fr))` + **`nth-child(3)`**: `grid-column: 1 / -1`, `justify-self: center`, **`max-width: calc((100% - gap) / 2)`** (`kings-education-dil-boston-layout.css`).
+- Üç seçenek **tamamen alt alta** istenirse: yalnızca **`grid-template-columns: 1fr`** (medya sorgusunda çoklu sütun ekleme).
+- **Yan boşluk 25px:** **`section#kings-{önek}-konaklama.konaklama-konteyner.kings-la-konaklama-bolum`** üzerinde **`padding-left` / `padding-right: 25px`** (ortak gutter’ın üzerine yazılır).
+
+## Güncelleme kontrol listesi (yeni şehir / sayfa revizyonu)
+
+- [ ] NY ile aynı **article / blog-yazi / aside / form** sırası  
+- [ ] Breadcrumb `ol` + mobil + masaüstü TOC anchor’ları  
+- [ ] `kings-beceri-ana-grid` üçlü + `kings-bilgi-grid` + program süreleri ortalı  
+- [ ] `kings-la-dahil-bolum` çerçeve rengi/kalınlığı gri standart  
+- [ ] Konaklama: sütun davranışı + istenen **25px** yan padding  
+- [ ] Form `aria-labelledby` + benzersiz radyo `name`  
+- [ ] Alt yönlendirme: dil okulları tek link  
+- [ ] Gerekirse **`kings-education-dil-{şehir}-layout.css`** oluştur / linkle (404 olmasın)

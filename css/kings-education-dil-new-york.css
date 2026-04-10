@@ -51,40 +51,119 @@
     margin-top: 50px;
 }
 
+/* Dil becerileri: yanyana 3 çerçeve (dar sütunda auto-fit 2’ye düşmesin) */
 .sayfa-kings-education .kings-beceri-ana-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr;
+    gap: 16px;
+    align-items: stretch;
     background: #fff;
     padding: 10px;
 }
 
+@media (min-width: 900px) {
+    .sayfa-kings-education .kings-beceri-ana-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+.sayfa-kings-education .kings-beceri-ana-grid .kings-mini-kutu {
+    margin: 0;
+    min-width: 0;
+}
+
 .sayfa-kings-education .kings-mini-kutu {
     margin: 25px 15px;
-    padding-top: 45px;
+    padding: 18px 18px 16px;
     border-color: #ddd;
 }
 
-.sayfa-kings-education .kings-mini-kutu-baslik {
-    background: #000080 !important;
-    font-size: 14px;
-    text-transform: uppercase;
+/* Çerçeve içi kart başlığı (yüzen lacivert şerit yerine) */
+.sayfa-kings-education .kings-mini-kutu > h3.kutu-baslik.kings-mini-kutu-baslik,
+.sayfa-kings-education .kings-mini-kutu-sik > h3.kutu-baslik.kings-mini-kutu-baslik {
+    position: static;
+    transform: none;
+    left: auto;
+    top: auto;
+    margin: 0 0 14px 0;
+    padding: 0 0 10px 0;
+    background: transparent !important;
+    color: #000080 !important;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 0;
+    border-bottom: 2px solid #000080;
+    text-align: left;
+    text-transform: none;
+    max-width: none;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    letter-spacing: normal;
+    line-height: 1.35;
+}
+
+.sayfa-kings-education .kings-mini-kutu-sik {
+    margin: 20px 10px;
+    padding: 18px 18px 16px;
+    border-color: #ddd;
+}
+
+.sayfa-kings-education .kings-mini-kutu-sik > h3.kutu-baslik.kings-la-mini-baslik-kirmizi {
+    position: static;
+    transform: none;
+    left: auto;
+    top: auto;
+    margin: 0 0 14px 0;
+    padding: 0 0 10px 0;
+    background: transparent !important;
+    color: #bd0505 !important;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 0;
+    border-bottom: 2px solid #bd0505;
+    text-align: left;
+    text-transform: none;
+    max-width: none;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    letter-spacing: normal;
+    line-height: 1.35;
 }
 
 .sayfa-kings-education .kings-bilgi-grid-bolum {
     margin-top: 40px;
 }
 
+/* İlk iki kart yan yana; Program Süreleri üsttekilerden birinin genişliğinde ve ortalı */
 .sayfa-kings-education .kings-bilgi-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr;
     background: #fff;
     gap: 10px;
 }
 
-.sayfa-kings-education .kings-mini-kutu-sik {
+@media (min-width: 700px) {
+    .sayfa-kings-education .kings-bilgi-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.sayfa-kings-education .kings-bilgi-grid .kings-la-program-sureleri-kutu {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 100%;
+    max-width: 100%;
     margin: 20px 10px;
-    padding-top: 45px;
-    border-color: #ddd;
+    box-sizing: border-box;
+}
+
+@media (min-width: 700px) {
+    .sayfa-kings-education .kings-bilgi-grid .kings-la-program-sureleri-kutu {
+        /* 2 sütun + gap:10px → tek kart genişliği = (100% − gap) / 2 */
+        max-width: calc((100% - 10px) / 2);
+    }
 }
 
 .sayfa-kings-education .kings-liste-etiket {
@@ -321,23 +400,86 @@
     max-height: 100px;
 }
 
+/* New York — Akreditasyon: metin yatayda yalnızca 25px (gri kutu + içerik çift padding olmasın) */
+body.sayfa-kings-education-new-york #kings-ny-akreditasyon .gri-cerceve-kutu {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+body.sayfa-kings-education-new-york #kings-ny-akreditasyon .kings-akreditasyon-icerik {
+    padding: 20px 0;
+}
+
 .sayfa-kings-education .kings-form-bant-ust {
     margin-top: 25px;
 }
 
-/* Kings New York — ek blok aralıkları (inline style kaldırıldı) */
-.sayfa-kings-education .kings-ny-kampus-ara-bolum {
-    margin-top: 60px;
-}
-
-.sayfa-kings-education .kings-ny-paragraf-alt-bosluk {
-    margin-bottom: 30px;
-}
-
-.sayfa-kings-education .kings-ny-deneyim-ust {
-    margin-top: 40px;
-}
-
 .sayfa-kings-education .usa-form-bant.kings-form-bant-ust {
     margin-top: 25px;
+}
+
+/* New York — program kutuları: diğer gri çerçevelerle aynı 1px #d1d1d1 sol kenar */
+body.sayfa-kings-education-new-york .kings-la-sol-cizgi-lacivert,
+body.sayfa-kings-education-new-york .kings-la-sol-cizgi-kirmizi,
+body.sayfa-kings-education-new-york .kings-la-sol-cizgi-altin,
+body.sayfa-kings-education-new-york .kings-la-bolum-discovery {
+    border-left: 1px solid #d1d1d1;
+}
+
+/* New York — "Kurs Fiyatına Dahil Olan Hizmetler": kalın kırmızı üst şerit yok, diğer gri kutular gibi */
+body.sayfa-kings-education-new-york .kings-la-dahil-bolum {
+    border-top: 1px solid #d1d1d1;
+}
+
+/* New York — dahil hizmetler: 6 kart, her satırda 2 */
+body.sayfa-kings-education-new-york .kings-ny-dahil-grid-2kol {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media (min-width: 700px) {
+    body.sayfa-kings-education-new-york .kings-ny-dahil-grid-2kol {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+body.sayfa-kings-education-new-york .kings-la-dahil-bolum .kings-ny-dahil-tick {
+    color: #198754;
+    font-weight: 700;
+}
+
+/* Konaklama bölüm başlığı — kırmızı bant; tam metin yalnızca ekran okuyucu (h2) */
+body.sayfa-kings-education-new-york #kings-ny-konaklama {
+    position: relative;
+}
+
+body.sayfa-kings-education-new-york .kings-ny-konaklama-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+body.sayfa-kings-education-new-york .kings-ny-konaklama-bant {
+    margin-top: 0;
+}
+
+body.sayfa-kings-education-new-york #kings-ny-konaklama .konaklama-giris {
+    margin-top: 25px;
+}
+
+/* Konaklama — bilgi grid ile aynı iskelet (gri-cerceve + mini-kutu-sik + kutu-liste) */
+body.sayfa-kings-education-new-york .kings-ny-konaklama-bilgi-iskelet .gri-cerceve-kutu.kings-mini-kutu-sik {
+    margin-top: 0;
+}
+
+body.sayfa-kings-education-new-york .kings-ny-konaklama-bilgi-iskelet .kutu-liste li {
+    font-size: 15px;
+    line-height: 1.7;
 }

@@ -227,3 +227,70 @@ body.ana-sayfa .ana-hizmet-karti,
 body.ana-sayfa .hizmet-tab-alani {
     border-radius: 15px !important;
 }
+
+/* Ana sayfa 6 hizmet kartı — Kings LA “Temel Beceriler” başlık düzeni + büyük harf (.sayfa-kings-education yok; burada) */
+body.ana-sayfa .beceri-grid a.ana-hizmet-karti {
+    padding: 18px 18px 16px;
+    border-color: #ddd;
+}
+
+body.ana-sayfa .beceri-grid a.ana-hizmet-karti > h3.kutu-baslik.kings-mini-kutu-baslik {
+    position: static;
+    transform: none;
+    left: auto;
+    top: auto;
+    margin: 0 0 14px 0;
+    padding: 0 0 10px 0;
+    background: transparent !important;
+    color: #000080 !important;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 0;
+    border-bottom: 2px solid #000080;
+    text-align: left;
+    text-transform: uppercase;
+    max-width: none;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    letter-spacing: normal;
+    line-height: 1.35;
+}
+
+@media (max-width: 768px) {
+    /* style.css genel kart padding’i (!important) bu ölçüyü ezmesin */
+    body.ana-sayfa .beceri-grid a.ana-hizmet-karti {
+        padding: 18px 18px 16px !important;
+    }
+}
+
+/* Ana sayfa hero: h1 — slogan — güven rozetleri arası dar ve eşit boşluk */
+body.ana-sayfa {
+    --ana-hero-metin-araligi: 12px;
+}
+
+body.ana-sayfa .karsilama-icerik > h1.ana-marka-baslik {
+    margin: 0 !important;
+}
+
+body.ana-sayfa .karsilama-icerik > p.ana-sayfa-slogan {
+    margin: var(--ana-hero-metin-araligi) 0 0 !important;
+}
+
+body.ana-sayfa .ana-karsilama-alani .guven-rozetleri {
+    margin: var(--ana-hero-metin-araligi) 0 0 !important;
+    padding: 0 !important;
+}
+
+body.ana-sayfa .karsilama-icerik > .karsilama-aksiyon {
+    margin-top: 28px;
+}
+
+@media (max-width: 768px) {
+    /* style.css: hero öğelerine verilen 50px alt margin kaldırılsın; üstte eşit aralık kalsın */
+    body.ana-sayfa .ana-karsilama-alani .ana-marka-baslik,
+    body.ana-sayfa .ana-karsilama-alani .ana-sayfa-slogan,
+    body.ana-sayfa .ana-karsilama-alani .guven-rozetleri {
+        margin-bottom: 0 !important;
+    }
+}

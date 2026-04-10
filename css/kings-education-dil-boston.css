@@ -51,11 +51,26 @@
     margin-top: 50px;
 }
 
+/* Dil becerileri: yanyana 3 çerçeve (dar sütunda tek sütun; geniş ekranda 3 kolon) */
 .sayfa-kings-education .kings-beceri-ana-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr;
+    gap: 16px;
+    align-items: stretch;
     background: #fff;
     padding: 10px;
+}
+
+@media (min-width: 900px) {
+    .sayfa-kings-education .kings-beceri-ana-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+.sayfa-kings-education .kings-beceri-ana-grid .kings-mini-kutu {
+    margin: 0;
+    min-width: 0;
+    padding: 18px 18px 16px;
 }
 
 .sayfa-kings-education .kings-mini-kutu {
@@ -74,11 +89,34 @@
     margin-top: 40px;
 }
 
+/* İlk iki kart yan yana; Program Süreleri üsttekilerden birinin genişliğinde ve ortalı */
 .sayfa-kings-education .kings-bilgi-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr;
     background: #fff;
     gap: 10px;
+}
+
+@media (min-width: 700px) {
+    .sayfa-kings-education .kings-bilgi-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.sayfa-kings-education .kings-bilgi-grid .kings-la-program-sureleri-kutu {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 100%;
+    max-width: 100%;
+    margin: 20px 10px;
+    box-sizing: border-box;
+}
+
+@media (min-width: 700px) {
+    .sayfa-kings-education .kings-bilgi-grid .kings-la-program-sureleri-kutu {
+        /* 2 sütun + gap:10px → tek kart genişliği = (100% − gap) / 2 */
+        max-width: calc((100% - 10px) / 2);
+    }
 }
 
 .sayfa-kings-education .kings-mini-kutu-sik {

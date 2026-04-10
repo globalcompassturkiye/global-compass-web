@@ -20,6 +20,7 @@
     <meta name="twitter:description" content="İsviçre Chantemerle Uluslararası Yaz Okulu ile tanışın! 6-16 yaş arası İngilizce, Fransızca ve Almanca dil kampları, spor akademileri ve 2026 fiyatları">
     <meta name="twitter:image" content="https://www.globalcompass.com.tr/img/global-compass-logo.webp">
     <link rel="icon" href="/img/global-compass-favicon.png" type="image/png">
+    <link rel="preload" as="image" href="/img/chantemerle-photo/chantemerle.webp" fetchpriority="high">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -29,10 +30,11 @@
     <link rel="stylesheet" href="/css/site-breadcrumb.css">
     <link rel="stylesheet" href="/css/site-iletisim-form.css">
     <link rel="stylesheet" href="/css/site-yonlendirme-kart.css">
-<link rel="stylesheet" href="/css/yurt-disi-yaz-okullari.css">
+    <link rel="stylesheet" href="/css/blog.css">
+    <link rel="stylesheet" href="/css/yurt-disi-yaz-okullari.css">
     <link rel="stylesheet" href="/css/chantemerle.css">
 </head>
-<body>
+<body class="sayfa-chantemerle blog-yazi-sayfa-mobil-ux">
     <div class="sabit-ust-alan">
         <div class="ust-serit">
             <div class="ust-serit-kapsayici">
@@ -53,7 +55,7 @@
                 <div></div>
                 <div class="logo">
                     <a href="/">
-                        <img src="/img/global-compass-logo.webp" alt="Global Compass Logo" width="158" height="48" fetchpriority="high" decoding="sync">
+                        <img src="/img/global-compass-logo.webp" alt="Global Compass Logo" width="158" height="48" fetchpriority="high" decoding="async">
                     </a>
                 </div>
 
@@ -77,7 +79,7 @@
             </button>
             <nav class="navigasyon" id="nav-menu" aria-label="Ana menü">
                 <ul class="nav-list">
-                    <li class="nav-logo-item"><a href="/"><img src="/img/global-compass-logo.webp" alt="Global Compass Logo" width="158" height="48" fetchpriority="high" decoding="sync"></a></li>
+                    <li class="nav-logo-item"><a href="/"><img src="/img/global-compass-logo.webp" alt="Global Compass Logo" width="158" height="48" fetchpriority="high" decoding="async"></a></li>
 
                     <li><a href="/">Ana Sayfa</a></li>
                     <li class="has-dropdown">
@@ -165,45 +167,71 @@
         </header>
     </div>
 
-    <article class="icerik-alani">
-        <nav class="site-haritasi-yolu">
-            <div class="breadcrumb-kutu">
-                <a href="/" class="ana-sayfa-ikon">
-                    <img src="/img/home-icon.png" alt="Ana Sayfa" width="22" height="22" loading="lazy" decoding="async">
-                </a>
-                <span class="ayrac">›</span>
-                <a href="/yurt-disi-yaz-okullari/">Yurt Dışı Yaz Okulları</a>
-                <span class="ayrac">›</span>
-                <a href="/yurt-disi-yaz-okullari/switzerland/">İsviçre Yaz Okulları</a>
-                <span class="ayrac">›</span>
-                <span class="su-anki-sayfa">Chantemerle Yaz Okulu</span>
-            </div>
+    <main id="icerik">
+    <article class="icerik-alani blog-yazi-detay">
+        <nav class="site-haritasi-yolu" aria-label="Sayfa konumu">
+            <ol class="breadcrumb-kutu breadcrumb-kutu--hiyerarsik">
+                <li class="breadcrumb-oge"><a href="/">Ana Sayfa</a></li>
+                <li class="breadcrumb-oge breadcrumb-oge--ayrac" aria-hidden="true"><span class="ayrac">›</span></li>
+                <li class="breadcrumb-oge"><a href="/yurt-disi-yaz-okullari/">Yurt Dışı Yaz Okulları</a></li>
+                <li class="breadcrumb-oge breadcrumb-oge--ayrac" aria-hidden="true"><span class="ayrac">›</span></li>
+                <li class="breadcrumb-oge"><a href="/yurt-disi-yaz-okullari/switzerland/">İsviçre Yaz Okulları</a></li>
+                <li class="breadcrumb-oge breadcrumb-oge--ayrac" aria-hidden="true"><span class="ayrac">›</span></li>
+                <li class="breadcrumb-oge"><span class="su-anki-sayfa">Chantemerle Yaz Okulu</span></li>
+            </ol>
         </nav>
 
-        <h1>İsviçre Chantemerle Yaz Okulu:<br>
-            <span class="vurgu-renk">Alplerin Kalbinde Butik Bir Eğitim Deneyimi</span>
+        <div class="blog-yazi-tek-sutun blog-yazi-tek-sutun--tam kings-london-toc-outer">
+        <div class="blog-yazi-layout blog-yazi-layout--yan-panel">
+        <div class="blog-yazi-ana">
+
+        <h1 id="chantemerle-giris">İsviçre Chantemerle Yaz Okulu:<br>
+            <span class="vurgu-renk">Alpler’de Butik Eğitim</span>
         </h1>
 
-        <div class="okul-gorsel-alani chantemerle-gorsel-kapsayici">
-            <img src="/img/chantemerle-photo/chantemerle.webp" alt="Chantemerle İsviçre Yaz Okulu - Kampüs ve manzara" width="1200" height="300" class="chantemerle-gorsel" fetchpriority="high" decoding="sync">
-        </div>
-
-        <div class="gri-cerceve-kutu">
-            <h2 class="kutu-baslik">60 Yıllık Deneyimle İsviçre'de Uluslararası Yaz Okulu: Chantemerle Yaz Kampı 2026</h2>
+        <div class="chantemerle-giris-metni" id="chantemerle-giris-metni">
             <p>İsviçre Alpleri ve Cenevre Gölü'nün eşsiz manzarasında, 60 yılı aşkın köklü geçmişiyle Chantemerle Uluslararası Yaz Okulu, çocuğunuzun geleceğini şekillendiren benzersiz bir yaz kampı deneyimi sunuyor.</p>
             <p>6-11 yaş ve 12-16 yaş gruplarına özel olarak tasarlanan Chantemerle Yaz Kampı, butik okul yapısı sayesinde her öğrenciye kişiselleştirilmiş akademik destek ve sosyal gelişim imkanı sağlıyor. İsviçre yaz okulu programımızda yalnızca Fransızca, Almanca ve İngilizce dil eğitimi değil; liderlik becerileri, doğayla bağ kurma ve teknoloji dengesi de ön planda tutuluyor.</p>
-            <p><strong>2026 yaz okulu programı kapsamında sunulanlar:</strong></p>
-            <ul class="kutu-liste">
-                <li>Europa-Park gezisi</li>
-                <li>Profesyonel spor akademileri</li>
-                <li>Dünya standartlarında uluslararası eğitim kalitesi</li>
-            </ul>
+
+            <div class="chantemerle-program-ozet-kutu" role="region" aria-label="2026 programında öne çıkanlar">
+                <p class="dahil-rozet-baslik chantemerle-program-ozet-baslik">2026 yaz okulu programı kapsamında sunulanlar</p>
+                <ul class="chantemerle-program-ozet-liste">
+                    <li>Europa-Park gezisi</li>
+                    <li>Profesyonel spor akademileri</li>
+                    <li>Dünya standartlarında uluslararası eğitim kalitesi</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="blog-mobil-icindekiler-wrap chantemerle-mobil-icindekiler-giris-alti">
+            <nav class="blog-mobil-icindekiler-duz" aria-labelledby="chantemerle-mobil-icindekiler-baslik">
+                <p class="blog-mobil-icindekiler-duz-baslik" id="chantemerle-mobil-icindekiler-baslik">İçindekiler</p>
+                <ul class="blog-icindekiler-liste blog-icindekiler-liste--mobil">
+                    <li><a href="#chantemerle-giris">Giriş</a></li>
+                    <li><a href="#chantemerle-giris-metni">Giriş metni</a></li>
+                    <li><a href="#chantemerle-program-detaylari">Program detayları</a></li>
+                    <li><a href="#chantemerle-deneyim">Eğitim deneyimi</a></li>
+                    <li><a href="#chantemerle-ornek-program">Örnek program</a></li>
+                    <li><a href="#chantemerle-galeri">Galeri</a></li>
+                    <li><a href="#chantemerle-bilgi-form-baslik">Bilgi istek formu</a></li>
+                </ul>
+            </nav>
+            <div class="blog-yan-iletisim-kutu">
+                <p class="blog-yan-iletisim-baslik">Hızlı iletişim</p>
+                <a href="tel:+905353977399" class="blog-yan-iletisim-tel">0535 397 73 99</a>
+                <a href="mailto:info@globalcompass.com.tr" class="blog-yan-iletisim-mail">info@globalcompass.com.tr</a>
+                <a href="/iletisim/" class="yaz-standart-yesil-buton blog-yan-iletisim-buton">Ücretsiz Danışmanlık Al</a>
+            </div>
+        </div>
+
+        <div class="okul-gorsel-alani chantemerle-gorsel-kapsayici">
+            <img src="/img/chantemerle-photo/chantemerle.webp" alt="Chantemerle İsviçre Yaz Okulu - Kampüs ve manzara" width="1200" height="300" class="chantemerle-gorsel" fetchpriority="high" decoding="async">
         </div>
 
         <div class="gri-cerceve-kutu immerse-detay-kutu">
-            <h2 class="kutu-baslik">Chantemerle 2026 Program Detayları</h2>
+            <h2 class="kutu-baslik" id="chantemerle-program-detaylari">Chantemerle 2026 Program Detayları</h2>
 
-            <div class="immerse-detay-grid">
+            <div class="immerse-detay-grid chantemerle-detay-grid-3lu">
                 <div class="immerse-detay-kart">
                     <h3>Tarihler</h3>
                     <p>28 Haziran – 2 Ağustos 2026</p>
@@ -233,7 +261,7 @@
                 </div>
 
                 <div class="immerse-detay-kart">
-                    <h3>Fiyata Dahil Olanlar <span class="chantemerle-alt-not">(Tam Pansiyon İçin)</span></h3>
+                    <h3>Fiyata Dahil Olanlar</h3>
                     <ul class="kutu-liste">
                         <li>Akademik dersler ve materyaller</li>
                         <li>Tam pansiyon</li>
@@ -252,39 +280,78 @@
                     </ul>
                 </div>
 
-                <div class="immerse-detay-kart">
+                <div class="immerse-detay-kart chantemerle-detay-kart--tam-satir">
                     <h3>Gündüz Kampı Seçeneği</h3>
                     <p>Yatılı değildir; yarım ve tam günlük seçenekler vardır. Fiyat hakkında iletişime geçiniz.</p>
                 </div>
             </div>
         </div>
 
-        <div class="gri-cerceve-kutu">
-            <h2 class="kutu-baslik">İsviçre Eğitim Geleneği: 60 Yıllık Chantemerle Yaz Okulu Tecrübesi:</h2>
-            <p><strong>Yaz Kampında 60 Yıllık İsviçre Deneyimi</strong><br>1966 yılında kurulan Chantemerle Uluslararası Yaz Okulu, İsviçre eğitim geleneğinin özünü yansıtır: geleneksel, kişiselleştirilmiş ve verimli. Yüksek akademik standartlarıyla tanınan İsviçre yaz kampımız, dengeli yaşam, geleneksel değerler ve çalışma kültürünü bir arada sunar.</p>
-            <p><strong>Öğrenin, Keşfedin ve Eğlenin: Kapsamlı Yaz Okulu Programı</strong><br>Dil eğitimi (İngilizce, Fransızca, Almanca), akademik destek (matematik, fizik) ve kişisel gelişimi spor, kültür ve eğlence aktiviteleriyle birleştiren kapsamlı İsviçre yaz okulu programımız, çocuğunuza unutulmaz anılar ve ömür boyu sürecek dostluklar kazandırır.</p>
-            <p><strong>Uluslararası Yaz Kampı: Dünyadan Öğrencilerle Tanışın</strong><br>Dünyanın dört bir yanından gelen öğrencilerle tanışın, ömür boyu sürecek dostluklar kurun. Ortak etkinlikler, iş birliği projeleri ve kültürel değişimlerle katılımcılar yalnızca birbirlerinden öğrenmekle kalmaz; küresel farkındalık ve ekip çalışması becerileri geliştirerek kamp deneyiminin çok ötesinde kalıcı ilişkiler oluşturur.</p>
-            <p><strong>Butik Yatılı Okul:</strong><br>Chantemerle Yaz Kampı, butik yapısıyla öne çıkar: yalnızca 65 öğrencilik küçük kişiselleştirilmiş akademik ve sosyal destek sunar, sıcak bir aile ortamı sağlar. Ekran süresini bilinçli sınırlayarak öğrencileri spor, sanat ve açık hava etkinliklerine yönlendirir; çocuklarda dijital denge ve sağlıklı gelişimi destekleriz.</p>
+        <div class="gri-cerceve-kutu chantemerle-deneyim-ana" id="chantemerle-deneyim">
+            <div class="chantemerle-sol-kenar-cerceve">
+                <h3 class="dahil-rozet-baslik">Yaz Kampında 60 Yıllık İsviçre Deneyimi</h3>
+                <p class="dahil-rozet-metin">1966 yılında kurulan Chantemerle Uluslararası Yaz Okulu, İsviçre eğitim geleneğinin özünü yansıtır: geleneksel, kişiselleştirilmiş ve verimli. Yüksek akademik standartlarıyla tanınan İsviçre yaz kampımız, dengeli yaşam, geleneksel değerler ve çalışma kültürünü bir arada sunar.</p>
+            </div>
+
+            <div class="chantemerle-sol-kenar-cerceve">
+                <h3 class="dahil-rozet-baslik">Öğrenin, Keşfedin ve Eğlenin: Kapsamlı Yaz Okulu Programı</h3>
+                <p class="dahil-rozet-metin">Dil eğitimi (İngilizce, Fransızca, Almanca), akademik destek (matematik, fizik) ve kişisel gelişimi spor, kültür ve eğlence aktiviteleriyle birleştiren kapsamlı İsviçre yaz okulu programımız, çocuğunuza unutulmaz anılar ve ömür boyu sürecek dostluklar kazandırır.</p>
+            </div>
+
+            <div class="chantemerle-sol-kenar-cerceve">
+                <h3 class="dahil-rozet-baslik">Uluslararası Yaz Kampı: Dünyadan Öğrencilerle Tanışın</h3>
+                <p class="dahil-rozet-metin">Dünyanın dört bir yanından gelen öğrencilerle tanışın, ömür boyu sürecek dostluklar kurun. Ortak etkinlikler, iş birliği projeleri ve kültürel değişimlerle katılımcılar yalnızca birbirlerinden öğrenmekle kalmaz; küresel farkındalık ve ekip çalışması becerileri geliştirerek kamp deneyiminin çok ötesinde kalıcı ilişkiler oluşturur.</p>
+            </div>
+
+            <div class="chantemerle-sol-kenar-cerceve">
+                <h3 class="dahil-rozet-baslik">Butik Yatılı Okul</h3>
+                <p class="dahil-rozet-metin">Chantemerle Yaz Kampı, butik yapısıyla öne çıkar: yalnızca 65 öğrencilik küçük kişiselleştirilmiş akademik ve sosyal destek sunar, sıcak bir aile ortamı sağlar. Ekran süresini bilinçli sınırlayarak öğrencileri spor, sanat ve açık hava etkinliklerine yönlendirir; çocuklarda dijital denge ve sağlıklı gelişimi destekleriz.</p>
+            </div>
         </div>
 
         <div class="gri-cerceve-kutu">
-            <h2 class="kutu-baslik">Örnek Program</h2>
+            <h2 class="kutu-baslik" id="chantemerle-ornek-program">Örnek Program</h2>
             <div class="chantemerle-ornek-kapsayici">
                 <img src="/img/chantemerle-photo/gunluk-program.webp" alt="Chantemerle yaz okulu örnek program" class="chantemerle-ornek-gorsel" loading="lazy" decoding="async">
             </div>
         </div>
 
         <div class="gri-cerceve-kutu">
-            <h2 class="kutu-baslik">Galeri</h2>
+            <h2 class="kutu-baslik" id="chantemerle-galeri">Galeri</h2>
             <div class="chantemerle-galeri-grid">
-                <img src="/img/chantemerle-photo/galeri/chantemerle1.webp" alt="Chantemerle İsviçre yaz okulu1" class="chantemerle-galeri-gorsel" loading="lazy" decoding="async">
-                <img src="/img/chantemerle-photo/galeri/chantemerle2.webp" alt="Chantemerle İsviçre yaz okulu2" class="chantemerle-galeri-gorsel" loading="lazy" decoding="async">
-                <img src="/img/chantemerle-photo/galeri/chantemerle3.webp" alt="Chantemerle İsviçre yaz okulu3" class="chantemerle-galeri-gorsel" loading="lazy" decoding="async">
-                <img src="/img/chantemerle-photo/galeri/chantemerle4.webp" alt="Chantemerle İsviçre yaz okulu4" class="chantemerle-galeri-gorsel" loading="lazy" decoding="async">
-                <img src="/img/chantemerle-photo/galeri/chantemerle5.webp" alt="Chantemerle İsviçre yaz okulu5" class="chantemerle-galeri-gorsel" loading="lazy" decoding="async">
-                <img src="/img/chantemerle-photo/galeri/chantemerle6.webp" alt="Chantemerle İsviçre yaz okulu6" class="chantemerle-galeri-gorsel" loading="lazy" decoding="async">
-                <img src="/img/chantemerle-photo/galeri/chantemerle7.webp" alt="Chantemerle İsviçre yaz okulu7" class="chantemerle-galeri-gorsel" loading="lazy" decoding="async">
+                <img src="/img/chantemerle-photo/galeri/chantemerle1.webp" alt="Chantemerle yaz kampı kampüsü ve İsviçre Alpleri manzarası" class="chantemerle-galeri-gorsel" loading="lazy" decoding="async">
+                <img src="/img/chantemerle-photo/galeri/chantemerle2.webp" alt="Sınıf içinde dil veya akademik etkinlik sırasında öğrenciler" class="chantemerle-galeri-gorsel" loading="lazy" decoding="async">
+                <img src="/img/chantemerle-photo/galeri/chantemerle3.webp" alt="Açık havada spor veya takım oyunu etkinliği" class="chantemerle-galeri-gorsel" loading="lazy" decoding="async">
+                <img src="/img/chantemerle-photo/galeri/chantemerle4.webp" alt="Uluslararası öğrencilerle grup halinde sosyal program" class="chantemerle-galeri-gorsel" loading="lazy" decoding="async">
+                <img src="/img/chantemerle-photo/galeri/chantemerle5.webp" alt="Doğa veya göl kıyısında outdoor aktivite ve gezi" class="chantemerle-galeri-gorsel" loading="lazy" decoding="async">
+                <img src="/img/chantemerle-photo/galeri/chantemerle6.webp" alt="Yemek veya serbest zaman için kampüs ortak alanı" class="chantemerle-galeri-gorsel" loading="lazy" decoding="async">
+                <img src="/img/chantemerle-photo/galeri/chantemerle7.webp" alt="Kamp akşamı veya kapanış etkinliğinde öğrenciler bir arada" class="chantemerle-galeri-gorsel" loading="lazy" decoding="async">
             </div>
+        </div>
+
+        </div>
+
+        <aside class="blog-yan-panel" aria-label="İçindekiler ve hızlı iletişim">
+            <nav class="blog-icindekiler-kutu" aria-labelledby="chantemerle-masaustu-icindekiler-baslik">
+                <p class="blog-icindekiler-baslik" id="chantemerle-masaustu-icindekiler-baslik">İçindekiler</p>
+                <ul class="blog-icindekiler-liste">
+                    <li><a href="#chantemerle-giris">Giriş</a></li>
+                    <li><a href="#chantemerle-giris-metni">Giriş metni</a></li>
+                    <li><a href="#chantemerle-program-detaylari">Program detayları</a></li>
+                    <li><a href="#chantemerle-deneyim">Eğitim deneyimi</a></li>
+                    <li><a href="#chantemerle-ornek-program">Örnek program</a></li>
+                    <li><a href="#chantemerle-galeri">Galeri</a></li>
+                    <li><a href="#chantemerle-bilgi-form-baslik">Bilgi istek formu</a></li>
+                </ul>
+            </nav>
+            <div class="blog-yan-iletisim-kutu">
+                <p class="blog-yan-iletisim-baslik">Hızlı iletişim</p>
+                <a href="tel:+905353977399" class="blog-yan-iletisim-tel">0535 397 73 99</a>
+                <a href="mailto:info@globalcompass.com.tr" class="blog-yan-iletisim-mail">info@globalcompass.com.tr</a>
+                <a href="/iletisim/" class="yaz-standart-yesil-buton blog-yan-iletisim-buton">Ücretsiz Danışmanlık Al</a>
+            </div>
+        </aside>
+        </div>
         </div>
 
         <div class="kirmizi-kutu">
@@ -292,8 +359,8 @@
             <p class="alt-satir-lacivert">Bilgi İstek Formu</p>
         </div>
 
-        <section class="iletisim-form-alani">
-            <h2>Bilgi İstek Formu</h2>
+        <section class="iletisim-form-alani" aria-labelledby="chantemerle-bilgi-form-baslik">
+            <h2 id="chantemerle-bilgi-form-baslik">Bilgi İstek Formu</h2>
             <p>Chantemerle yaz okulu programları hakkında detaylı bilgi almak, yaş grubuna göre seçenekleri ve 2026 kayıt sürecini öğrenmek için formu doldurabilirsiniz.</p>
             <form action="#" method="POST" id="iletisim-formu">
                 <div class="form-satir">
@@ -320,7 +387,7 @@
                     <div class="kvkk-alani">
                         <input type="checkbox" id="kvkk-onay-chantemerle" required>
                         <label for="kvkk-onay-chantemerle">
-                            <a href="#" class="kvkk-link">KVKK Aydınlatma Metnini</a> Okudum*
+                            <a href="/kvkk-aydinlatma-metni/" class="kvkk-link">KVKK Aydınlatma Metnini</a> Okudum*
                         </label>
                     </div>
                     <button type="submit" class="form-buton-kucuk">Gönder</button>
@@ -329,15 +396,16 @@
         </section>
 
         <div class="okul-liste-kapsayici">
-            <h2 class="okul-liste-baslik">Yurt Dışı Yaz Okulları</h2>
+            <h2 class="okul-liste-baslik">İlgili Sayfalar</h2>
             <section class="alt-yonlendirme-alani">
                 <div class="yonlendirme-karti">
                     <p>Ülke ve şehir seçenekleriyle tüm yurt dışı yaz okulu programlarına genel sayfamızdan ulaşabilirsiniz.</p>
                     <a href="/yurt-disi-yaz-okullari/" class="kart-link">Yurt Dışı Yaz Okullarını Keşfet →</a>
                 </div>
-</section>
+            </section>
         </div>
     </article>
+    </main>
 
     <footer class="ana-footer">
         <div class="footer-kapsayici-1200">

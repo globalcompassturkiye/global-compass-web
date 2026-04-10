@@ -1,23 +1,352 @@
-/* Yurt dışı yaz okulları hub (/yurt-disi-yaz-okullari/) — 6 ülke: 3+3 ızgara; buton genişliği global max-content */
+/* Hub ülke kartları: yaz/dil ana sayfalar + dil İngiltere/Amerika + yaz ülke şehir seçimi — gap yok, köşe 0 */
 
-body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli .ulke-secim-butonlari {
+/* Dış çerçeve: yalnızca alt sol / alt sağ köşe düz; kart gölgeleri kesilmesin */
+body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli,
+body.sayfa-yurt-disi-yaz-okullari-uk .yaz-okullari-secim-paneli,
+body.sayfa-yurt-disi-yaz-okullari-germany .yaz-okullari-secim-paneli,
+body.sayfa-yurt-disi-yaz-okullari-canada .yaz-okullari-secim-paneli,
+body.sayfa-yurt-disi-yaz-okullari-italy .yaz-okullari-secim-paneli,
+body.sayfa-yurt-disi-yaz-okullari-japan .yaz-okullari-secim-paneli,
+body.sayfa-yurt-disi-yaz-okullari-usa .yaz-okullari-secim-paneli,
+body.sayfa-yurt-disi-dil-okullari .dil-okullari-secim-paneli,
+body.sayfa-yurt-disi-dil-okullari-uk .dil-okullari-secim-paneli,
+body.sayfa-yurt-disi-dil-okullari-usa .dil-okullari-secim-paneli {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    overflow: visible;
+}
+
+body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap,
+body.sayfa-yurt-disi-yaz-okullari-uk .yaz-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap,
+body.sayfa-yurt-disi-yaz-okullari-germany .yaz-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap,
+body.sayfa-yurt-disi-yaz-okullari-canada .yaz-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap,
+body.sayfa-yurt-disi-yaz-okullari-italy .yaz-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap,
+body.sayfa-yurt-disi-yaz-okullari-japan .yaz-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap,
+body.sayfa-yurt-disi-yaz-okullari-usa .yaz-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap,
+body.sayfa-yurt-disi-dil-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap,
+body.sayfa-yurt-disi-dil-okullari-uk .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap,
+body.sayfa-yurt-disi-dil-okullari-usa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap {
+    padding: 0;
+}
+
+body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-ulke-kart-wrap,
+body.sayfa-yurt-disi-yaz-okullari-uk .yaz-okullari-ulke-kart-wrap,
+body.sayfa-yurt-disi-yaz-okullari-germany .yaz-okullari-ulke-kart-wrap,
+body.sayfa-yurt-disi-yaz-okullari-canada .yaz-okullari-ulke-kart-wrap,
+body.sayfa-yurt-disi-yaz-okullari-italy .yaz-okullari-ulke-kart-wrap,
+body.sayfa-yurt-disi-yaz-okullari-japan .yaz-okullari-ulke-kart-wrap,
+body.sayfa-yurt-disi-yaz-okullari-usa .yaz-okullari-ulke-kart-wrap,
+body.sayfa-yurt-disi-dil-okullari .yaz-okullari-ulke-kart-wrap,
+body.sayfa-yurt-disi-dil-okullari-uk .yaz-okullari-ulke-kart-wrap,
+body.sayfa-yurt-disi-dil-okullari-usa .yaz-okullari-ulke-kart-wrap {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 18px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    overflow: visible;
+}
+
+@media (min-width: 768px) {
+    body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-ulke-kart-wrap {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1440px) {
+    body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-ulke-kart-wrap {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+}
+
+/* Dil hub: yalnızca iki ülke — tüm kırılımlarda 2 sütun */
+body.sayfa-yurt-disi-dil-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* Dil İngiltere / Amerika: üç şehir — mobilde 2, tablet+ 3 sütun */
+body.sayfa-yurt-disi-dil-okullari-uk .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap,
+body.sayfa-yurt-disi-dil-okullari-usa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (min-width: 768px) {
+    body.sayfa-yurt-disi-dil-okullari-uk .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap,
+    body.sayfa-yurt-disi-dil-okullari-usa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* Yaz ülke şehir seçimi — İngiltere dört şehir: mobil 2, tablet+ 4 sütun */
+body.sayfa-yurt-disi-yaz-okullari-uk .yaz-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (min-width: 768px) {
+    body.sayfa-yurt-disi-yaz-okullari-uk .yaz-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+/* Almanya iki şehir — her kırılımda 2 sütun */
+body.sayfa-yurt-disi-yaz-okullari-germany .yaz-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* Tek şehir (Kanada, İtalya, Japonya, Amerika) — ortalanmış tek sütun */
+body.sayfa-yurt-disi-yaz-okullari-canada .yaz-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap,
+body.sayfa-yurt-disi-yaz-okullari-italy .yaz-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap,
+body.sayfa-yurt-disi-yaz-okullari-japan .yaz-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap,
+body.sayfa-yurt-disi-yaz-okullari-usa .yaz-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap {
+    grid-template-columns: 1fr;
+    max-width: min(100%, 420px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body.sayfa-yurt-disi-yaz-okullari a.yaz-okullari-ulke-kart,
+body.sayfa-yurt-disi-yaz-okullari-uk a.yaz-okullari-ulke-kart,
+body.sayfa-yurt-disi-yaz-okullari-germany a.yaz-okullari-ulke-kart,
+body.sayfa-yurt-disi-yaz-okullari-canada a.yaz-okullari-ulke-kart,
+body.sayfa-yurt-disi-yaz-okullari-italy a.yaz-okullari-ulke-kart,
+body.sayfa-yurt-disi-yaz-okullari-japan a.yaz-okullari-ulke-kart,
+body.sayfa-yurt-disi-yaz-okullari-usa a.yaz-okullari-ulke-kart,
+body.sayfa-yurt-disi-dil-okullari a.yaz-okullari-ulke-kart,
+body.sayfa-yurt-disi-dil-okullari-uk a.yaz-okullari-ulke-kart,
+body.sayfa-yurt-disi-dil-okullari-usa a.yaz-okullari-ulke-kart {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
     justify-content: center;
-    justify-items: center;
+    min-height: 128px;
+    padding: 1.1rem 1rem 1.15rem;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    background: #ffffff;
+    border: none;
+    border-radius: 0;
+    box-shadow:
+        0 2px 6px rgba(15, 23, 42, 0.07),
+        0 10px 24px rgba(15, 23, 42, 0.1);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background-color 0.3s ease;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family: "Poppins", sans-serif;
+}
+
+body.sayfa-yurt-disi-dil-okullari-uk a.yaz-okullari-ulke-kart,
+body.sayfa-yurt-disi-dil-okullari-usa a.yaz-okullari-ulke-kart,
+body.sayfa-yurt-disi-yaz-okullari-uk a.yaz-okullari-ulke-kart,
+body.sayfa-yurt-disi-yaz-okullari-germany a.yaz-okullari-ulke-kart,
+body.sayfa-yurt-disi-yaz-okullari-canada a.yaz-okullari-ulke-kart,
+body.sayfa-yurt-disi-yaz-okullari-italy a.yaz-okullari-ulke-kart,
+body.sayfa-yurt-disi-yaz-okullari-japan a.yaz-okullari-ulke-kart,
+body.sayfa-yurt-disi-yaz-okullari-usa a.yaz-okullari-ulke-kart {
+    min-height: 0;
+    padding: 0 0 0.95rem;
+    justify-content: flex-start;
+}
+
+body.sayfa-yurt-disi-yaz-okullari a.yaz-okullari-ulke-kart:hover,
+body.sayfa-yurt-disi-yaz-okullari-uk a.yaz-okullari-ulke-kart:hover,
+body.sayfa-yurt-disi-yaz-okullari-germany a.yaz-okullari-ulke-kart:hover,
+body.sayfa-yurt-disi-yaz-okullari-canada a.yaz-okullari-ulke-kart:hover,
+body.sayfa-yurt-disi-yaz-okullari-italy a.yaz-okullari-ulke-kart:hover,
+body.sayfa-yurt-disi-yaz-okullari-japan a.yaz-okullari-ulke-kart:hover,
+body.sayfa-yurt-disi-yaz-okullari-usa a.yaz-okullari-ulke-kart:hover,
+body.sayfa-yurt-disi-dil-okullari a.yaz-okullari-ulke-kart:hover,
+body.sayfa-yurt-disi-dil-okullari-uk a.yaz-okullari-ulke-kart:hover,
+body.sayfa-yurt-disi-dil-okullari-usa a.yaz-okullari-ulke-kart:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 6px 14px rgba(15, 23, 42, 0.1),
+        0 18px 40px rgba(15, 23, 42, 0.16);
+    background: #fafbfc;
+    z-index: 1;
+}
+
+body.sayfa-yurt-disi-yaz-okullari a.yaz-okullari-ulke-kart:focus-visible,
+body.sayfa-yurt-disi-yaz-okullari-uk a.yaz-okullari-ulke-kart:focus-visible,
+body.sayfa-yurt-disi-yaz-okullari-germany a.yaz-okullari-ulke-kart:focus-visible,
+body.sayfa-yurt-disi-yaz-okullari-canada a.yaz-okullari-ulke-kart:focus-visible,
+body.sayfa-yurt-disi-yaz-okullari-italy a.yaz-okullari-ulke-kart:focus-visible,
+body.sayfa-yurt-disi-yaz-okullari-japan a.yaz-okullari-ulke-kart:focus-visible,
+body.sayfa-yurt-disi-yaz-okullari-usa a.yaz-okullari-ulke-kart:focus-visible,
+body.sayfa-yurt-disi-dil-okullari a.yaz-okullari-ulke-kart:focus-visible,
+body.sayfa-yurt-disi-dil-okullari-uk a.yaz-okullari-ulke-kart:focus-visible,
+body.sayfa-yurt-disi-dil-okullari-usa a.yaz-okullari-ulke-kart:focus-visible {
+    outline: 3px solid rgba(0, 0, 128, 0.35);
+    outline-offset: 2px;
+}
+
+body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-ulke-kart-icerik,
+body.sayfa-yurt-disi-yaz-okullari-uk .yaz-okullari-ulke-kart-icerik,
+body.sayfa-yurt-disi-yaz-okullari-germany .yaz-okullari-ulke-kart-icerik,
+body.sayfa-yurt-disi-yaz-okullari-canada .yaz-okullari-ulke-kart-icerik,
+body.sayfa-yurt-disi-yaz-okullari-italy .yaz-okullari-ulke-kart-icerik,
+body.sayfa-yurt-disi-yaz-okullari-japan .yaz-okullari-ulke-kart-icerik,
+body.sayfa-yurt-disi-yaz-okullari-usa .yaz-okullari-ulke-kart-icerik,
+body.sayfa-yurt-disi-dil-okullari .yaz-okullari-ulke-kart-icerik,
+body.sayfa-yurt-disi-dil-okullari-uk .yaz-okullari-ulke-kart-icerik,
+body.sayfa-yurt-disi-dil-okullari-usa .yaz-okullari-ulke-kart-icerik {
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    flex: 1;
+    min-width: 0;
 }
 
-@media (max-width: 640px) {
-    body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli .ulke-secim-butonlari {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px;
+body.sayfa-yurt-disi-dil-okullari-uk .yaz-okullari-ulke-kart-icerik,
+body.sayfa-yurt-disi-dil-okullari-usa .yaz-okullari-ulke-kart-icerik,
+body.sayfa-yurt-disi-yaz-okullari-uk .yaz-okullari-ulke-kart-icerik,
+body.sayfa-yurt-disi-yaz-okullari-germany .yaz-okullari-ulke-kart-icerik,
+body.sayfa-yurt-disi-yaz-okullari-canada .yaz-okullari-ulke-kart-icerik,
+body.sayfa-yurt-disi-yaz-okullari-italy .yaz-okullari-ulke-kart-icerik,
+body.sayfa-yurt-disi-yaz-okullari-japan .yaz-okullari-ulke-kart-icerik,
+body.sayfa-yurt-disi-yaz-okullari-usa .yaz-okullari-ulke-kart-icerik {
+    width: 100%;
+    padding: 0 0.65rem;
+    gap: 0.65rem;
+}
+
+/* Inline SVG bayraklar (emoji Windows’ta görünmediği için) */
+body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-ulke-kart-bayrak,
+body.sayfa-yurt-disi-yaz-okullari-uk .yaz-okullari-ulke-kart-bayrak,
+body.sayfa-yurt-disi-yaz-okullari-germany .yaz-okullari-ulke-kart-bayrak,
+body.sayfa-yurt-disi-yaz-okullari-canada .yaz-okullari-ulke-kart-bayrak,
+body.sayfa-yurt-disi-yaz-okullari-italy .yaz-okullari-ulke-kart-bayrak,
+body.sayfa-yurt-disi-yaz-okullari-japan .yaz-okullari-ulke-kart-bayrak,
+body.sayfa-yurt-disi-yaz-okullari-usa .yaz-okullari-ulke-kart-bayrak,
+body.sayfa-yurt-disi-dil-okullari .yaz-okullari-ulke-kart-bayrak,
+body.sayfa-yurt-disi-dil-okullari-uk .yaz-okullari-ulke-kart-bayrak,
+body.sayfa-yurt-disi-dil-okullari-usa .yaz-okullari-ulke-kart-bayrak {
+    display: block;
+    width: 100%;
+    max-width: 48px;
+    margin: 0 auto;
+    line-height: 0;
+    user-select: none;
+    transition: transform 0.3s ease;
+}
+
+body.sayfa-yurt-disi-dil-okullari-uk .yaz-okullari-ulke-kart-bayrak,
+body.sayfa-yurt-disi-dil-okullari-usa .yaz-okullari-ulke-kart-bayrak,
+body.sayfa-yurt-disi-yaz-okullari-uk .yaz-okullari-ulke-kart-bayrak,
+body.sayfa-yurt-disi-yaz-okullari-germany .yaz-okullari-ulke-kart-bayrak,
+body.sayfa-yurt-disi-yaz-okullari-canada .yaz-okullari-ulke-kart-bayrak,
+body.sayfa-yurt-disi-yaz-okullari-italy .yaz-okullari-ulke-kart-bayrak,
+body.sayfa-yurt-disi-yaz-okullari-japan .yaz-okullari-ulke-kart-bayrak,
+body.sayfa-yurt-disi-yaz-okullari-usa .yaz-okullari-ulke-kart-bayrak {
+    max-width: none;
+    width: calc(100% + 1.3rem);
+    margin: 0 -0.65rem;
+}
+
+body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-ulke-kart-bayrak .yaz-okullari-ulke-kart-svg,
+body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-ulke-kart-bayrak svg,
+body.sayfa-yurt-disi-dil-okullari .yaz-okullari-ulke-kart-bayrak .yaz-okullari-ulke-kart-svg,
+body.sayfa-yurt-disi-dil-okullari .yaz-okullari-ulke-kart-bayrak svg {
+    display: block;
+    width: 44px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+body.sayfa-yurt-disi-dil-okullari-uk .yaz-okullari-ulke-kart-bayrak img,
+body.sayfa-yurt-disi-dil-okullari-usa .yaz-okullari-ulke-kart-bayrak img,
+body.sayfa-yurt-disi-yaz-okullari-uk .yaz-okullari-ulke-kart-bayrak img,
+body.sayfa-yurt-disi-yaz-okullari-germany .yaz-okullari-ulke-kart-bayrak img,
+body.sayfa-yurt-disi-yaz-okullari-canada .yaz-okullari-ulke-kart-bayrak img,
+body.sayfa-yurt-disi-yaz-okullari-italy .yaz-okullari-ulke-kart-bayrak img,
+body.sayfa-yurt-disi-yaz-okullari-japan .yaz-okullari-ulke-kart-bayrak img,
+body.sayfa-yurt-disi-yaz-okullari-usa .yaz-okullari-ulke-kart-bayrak img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0;
+}
+
+@media (min-width: 768px) {
+    body.sayfa-yurt-disi-dil-okullari-uk .yaz-okullari-ulke-kart-bayrak img,
+    body.sayfa-yurt-disi-dil-okullari-usa .yaz-okullari-ulke-kart-bayrak img,
+    body.sayfa-yurt-disi-yaz-okullari-uk .yaz-okullari-ulke-kart-bayrak img,
+    body.sayfa-yurt-disi-yaz-okullari-germany .yaz-okullari-ulke-kart-bayrak img,
+    body.sayfa-yurt-disi-yaz-okullari-canada .yaz-okullari-ulke-kart-bayrak img,
+    body.sayfa-yurt-disi-yaz-okullari-italy .yaz-okullari-ulke-kart-bayrak img,
+    body.sayfa-yurt-disi-yaz-okullari-japan .yaz-okullari-ulke-kart-bayrak img,
+    body.sayfa-yurt-disi-yaz-okullari-usa .yaz-okullari-ulke-kart-bayrak img {
+        height: 240px;
     }
 }
 
-@media (max-width: 500px) {
-    body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli .ulke-secim-butonlari {
-        grid-template-columns: 1fr;
+@media (min-width: 1200px) {
+    body.sayfa-yurt-disi-dil-okullari-uk .yaz-okullari-ulke-kart-bayrak img,
+    body.sayfa-yurt-disi-dil-okullari-usa .yaz-okullari-ulke-kart-bayrak img,
+    body.sayfa-yurt-disi-yaz-okullari-uk .yaz-okullari-ulke-kart-bayrak img,
+    body.sayfa-yurt-disi-yaz-okullari-germany .yaz-okullari-ulke-kart-bayrak img,
+    body.sayfa-yurt-disi-yaz-okullari-canada .yaz-okullari-ulke-kart-bayrak img,
+    body.sayfa-yurt-disi-yaz-okullari-italy .yaz-okullari-ulke-kart-bayrak img,
+    body.sayfa-yurt-disi-yaz-okullari-japan .yaz-okullari-ulke-kart-bayrak img,
+    body.sayfa-yurt-disi-yaz-okullari-usa .yaz-okullari-ulke-kart-bayrak img {
+        height: 280px;
     }
+}
+
+body.sayfa-yurt-disi-yaz-okullari a.yaz-okullari-ulke-kart:hover .yaz-okullari-ulke-kart-bayrak,
+body.sayfa-yurt-disi-dil-okullari a.yaz-okullari-ulke-kart:hover .yaz-okullari-ulke-kart-bayrak {
+    transform: scale(1.04);
+}
+
+body.sayfa-yurt-disi-dil-okullari-uk a.yaz-okullari-ulke-kart:hover .yaz-okullari-ulke-kart-bayrak,
+body.sayfa-yurt-disi-dil-okullari-usa a.yaz-okullari-ulke-kart:hover .yaz-okullari-ulke-kart-bayrak,
+body.sayfa-yurt-disi-yaz-okullari-uk a.yaz-okullari-ulke-kart:hover .yaz-okullari-ulke-kart-bayrak,
+body.sayfa-yurt-disi-yaz-okullari-germany a.yaz-okullari-ulke-kart:hover .yaz-okullari-ulke-kart-bayrak,
+body.sayfa-yurt-disi-yaz-okullari-canada a.yaz-okullari-ulke-kart:hover .yaz-okullari-ulke-kart-bayrak,
+body.sayfa-yurt-disi-yaz-okullari-italy a.yaz-okullari-ulke-kart:hover .yaz-okullari-ulke-kart-bayrak,
+body.sayfa-yurt-disi-yaz-okullari-japan a.yaz-okullari-ulke-kart:hover .yaz-okullari-ulke-kart-bayrak,
+body.sayfa-yurt-disi-yaz-okullari-usa a.yaz-okullari-ulke-kart:hover .yaz-okullari-ulke-kart-bayrak {
+    transform: none;
+}
+
+body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-ulke-kart-baslik,
+body.sayfa-yurt-disi-yaz-okullari-uk .yaz-okullari-ulke-kart-baslik,
+body.sayfa-yurt-disi-yaz-okullari-germany .yaz-okullari-ulke-kart-baslik,
+body.sayfa-yurt-disi-yaz-okullari-canada .yaz-okullari-ulke-kart-baslik,
+body.sayfa-yurt-disi-yaz-okullari-italy .yaz-okullari-ulke-kart-baslik,
+body.sayfa-yurt-disi-yaz-okullari-japan .yaz-okullari-ulke-kart-baslik,
+body.sayfa-yurt-disi-yaz-okullari-usa .yaz-okullari-ulke-kart-baslik,
+body.sayfa-yurt-disi-dil-okullari .yaz-okullari-ulke-kart-baslik,
+body.sayfa-yurt-disi-dil-okullari-uk .yaz-okullari-ulke-kart-baslik,
+body.sayfa-yurt-disi-dil-okullari-usa .yaz-okullari-ulke-kart-baslik {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    line-height: 1.35;
+    color: #334155;
+    letter-spacing: 0.02em;
+}
+
+body.sayfa-yurt-disi-yaz-okullari a.yaz-okullari-ulke-kart:hover .yaz-okullari-ulke-kart-baslik,
+body.sayfa-yurt-disi-yaz-okullari-uk a.yaz-okullari-ulke-kart:hover .yaz-okullari-ulke-kart-baslik,
+body.sayfa-yurt-disi-yaz-okullari-germany a.yaz-okullari-ulke-kart:hover .yaz-okullari-ulke-kart-baslik,
+body.sayfa-yurt-disi-yaz-okullari-canada a.yaz-okullari-ulke-kart:hover .yaz-okullari-ulke-kart-baslik,
+body.sayfa-yurt-disi-yaz-okullari-italy a.yaz-okullari-ulke-kart:hover .yaz-okullari-ulke-kart-baslik,
+body.sayfa-yurt-disi-yaz-okullari-japan a.yaz-okullari-ulke-kart:hover .yaz-okullari-ulke-kart-baslik,
+body.sayfa-yurt-disi-yaz-okullari-usa a.yaz-okullari-ulke-kart:hover .yaz-okullari-ulke-kart-baslik,
+body.sayfa-yurt-disi-dil-okullari a.yaz-okullari-ulke-kart:hover .yaz-okullari-ulke-kart-baslik,
+body.sayfa-yurt-disi-dil-okullari-uk a.yaz-okullari-ulke-kart:hover .yaz-okullari-ulke-kart-baslik,
+body.sayfa-yurt-disi-dil-okullari-usa a.yaz-okullari-ulke-kart:hover .yaz-okullari-ulke-kart-baslik {
+    color: #0f172a;
 }

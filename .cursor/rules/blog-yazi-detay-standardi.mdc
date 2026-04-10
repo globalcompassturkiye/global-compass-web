@@ -118,6 +118,7 @@ URL kalıbı: `/blog/{kategori-slug}/{yazi-slug}/` — dosya: `blog/{kategori-sl
 
 - **H1:** `blog-yazi-ana-baslik`; iki satır için `<br>` + `span.vurgu-renk` (tipografi `blog.css`).
 - **İçindekiler (mobil):** `blog-mobil-icindekiler-wrap`, giriş **ilk paragrafından hemen sonra**, `h2`’lerden önce. Mobil ve yan panel listeleri **aynı sıra ve aynı `href`** ile senkron; yukarıdaki **CLS** bölümüne uy.
+- **Yurt dışı program sayfası** (`blog-yazi-sayfa-mobil-ux` + hero / üst blok): giriş metni ile mobil içindekiler sırası için **`blog-mobil-icindekiler-program-sayfasi-dom`** kuralına uy (içindekiler, büyük görsel ve ana bölümlerden önce).
 - **TOC kaynağı:** `h2[id]`, `h3[id]` yalnızca `.blog-yazi-icerik` içinde; `aside` içindeki başlıklar hariç.
 - **Alt yönlendirme (blog):** `yonlendirme-karti-teklik` kuralı: **tek** kart, **tek** `a.kart-link`, metin **Yurt Dışı Üniversiteleri Keşfet →**, `href` **`/yurt-disi-universite/`**, `h2.okul-liste-baslik` **Yurt Dışı Üniversite**; dil okulu / yaz okulu linki ekleme.
 - **Sabit mobil CTA:** `</main>` sonrası, `footer` ile birlikte: `div.blog-mobil-cta-bar-wrap` → `a.blog-mobil-cta-bar` (`/iletisim/`).

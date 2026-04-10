@@ -1,0 +1,34 @@
+---
+description: blog-yazi-sayfa-mobil-ux program sayfalarında mobil içindekiler DOM sırası (giriş metni altı)
+globs: "**/yurt-disi-*/**/*.html"
+alwaysApply: false
+---
+
+# Mobil içindekiler — DOM sırası (program / içerik sayfaları)
+
+## Zorunlu davranış
+
+`body.blog-yazi-sayfa-mobil-ux` olan ve `div.blog-mobil-icindekiler-wrap` kullanan sayfalarda (ör. yurt dışı yaz okulu, dil okulu program detayı):
+
+- **`blog-mobil-icindekiler-wrap`** (içinde `nav.blog-mobil-icindekiler-duz` + isteniyorsa `div.blog-yan-iletisim-kutu`), **giriş metin bloğunun hemen ardından** yer almalıdır (ör. `.chantemerle-giris-metni` veya giriş paragraflarının bittiği kapsayıcı).
+- **Büyük hero görseli**, üstte yer kaplayan kartlar veya ana **`h2`** ile açılan bölümler **bu bloktan sonra** gelmelidir.
+
+## Neden
+
+`blog.css` içinde **`max-width: 1179px`** iken yan panel gizlenir; mobil içindekiler + hızlı iletişim görünür. İçindekiler DOM’da giriş metninin altında değilse, dar genişlikte veya satır kırılan düzenlerde blok **üst metinden uzakta** (ör. hero görselinin altında) kalır; kullanıcı içindekileri girişle ilişkilendiremez.
+
+## Referans breakpoint
+
+- İki sütun + masaüstü yan panel: **`min-width: 1180px`** (`.blog-yazi-layout--yan-panel`).
+- Tek sütun + mobil içindekiler görünür: **`max-width: 1179px`**.
+
+## Örnek sıra (Chantemerle)
+
+`yurt-disi-yaz-okullari/switzerland/chantemerle/index.html`:
+
+1. `h1`
+2. Giriş metni kapsayıcısı (ör. `#chantemerle-giris-metni`)
+3. **`blog-mobil-icindekiler-wrap`**
+4. Hero görseli ve devamı
+
+Masaüstünde (`≥1180px`) `blog-mobil-icindekiler-wrap` yine gizlidir; içindekiler `aside.blog-yan-panel` içindedir — DOM sırası mobil/tablet için kritiktir.

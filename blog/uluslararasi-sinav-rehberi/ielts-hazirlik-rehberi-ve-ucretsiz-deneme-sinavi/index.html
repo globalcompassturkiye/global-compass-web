@@ -310,15 +310,54 @@
       "@context": "https://schema.org",
       "@graph": [
         {
+          "@type": "Organization",
+          "@id": "https://www.globalcompass.com.tr/#organization",
+          "name": "Global Compass Danışmanlık Limited Şirketi",
+          "url": "https://www.globalcompass.com.tr/",
+          "logo": { "@type": "ImageObject", "url": "https://www.globalcompass.com.tr/img/global-compass-logo.webp" }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.globalcompass.com.tr/#website",
+          "url": "https://www.globalcompass.com.tr/",
+          "name": "Global Compass",
+          "publisher": { "@id": "https://www.globalcompass.com.tr/#organization" },
+          "inLanguage": "tr-TR"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.globalcompass.com.tr/blog/uluslararasi-sinav-rehberi/ielts-hazirlik-rehberi-ve-ucretsiz-deneme-sinavi/#webpage",
+          "url": "https://www.globalcompass.com.tr/blog/uluslararasi-sinav-rehberi/ielts-hazirlik-rehberi-ve-ucretsiz-deneme-sinavi/",
+          "name": "IELTS Hazırlık Rehberi ve Ücretsiz Deneme Sınavı Fırsatı",
+          "description": "IELTS hazırlık rehberi, ücretsiz deneme sınavı fırsatı ve yurt dışı üniversite hedefi için adım adım stratejik yol haritası.",
+          "isPartOf": { "@id": "https://www.globalcompass.com.tr/#website" },
+          "publisher": { "@id": "https://www.globalcompass.com.tr/#organization" },
+          "inLanguage": "tr-TR"
+        },
+        {
           "@type": "Article",
           "@id": "https://www.globalcompass.com.tr/blog/uluslararasi-sinav-rehberi/ielts-hazirlik-rehberi-ve-ucretsiz-deneme-sinavi/#article",
           "headline": "IELTS Hazırlık Rehberi ve Ücretsiz Deneme Sınavı Fırsatı",
           "description": "IELTS hazırlık rehberi, ücretsiz deneme sınavı fırsatı ve yurt dışı üniversite hedefi için adım adım stratejik yol haritası.",
+          "keywords": ["IELTS hazırlık", "IELTS deneme sınavı", "Uluslararası sınav rehberi"],
           "datePublished": "2026-04-09",
           "dateModified": "2026-04-09",
-          "author": { "@type": "Organization", "name": "Global Compass Danışmanlık Limited Şirketi" },
-          "publisher": { "@type": "Organization", "name": "Global Compass Danışmanlık Limited Şirketi" },
-          "mainEntityOfPage": "https://www.globalcompass.com.tr/blog/uluslararasi-sinav-rehberi/ielts-hazirlik-rehberi-ve-ucretsiz-deneme-sinavi/"
+          "author": { "@type": "Organization", "name": "Global Compass Danışmanlık Limited Şirketi", "url": "https://www.globalcompass.com.tr/" },
+          "publisher": { "@id": "https://www.globalcompass.com.tr/#organization" },
+          "image": "https://www.globalcompass.com.tr/img/global-compass-logo.webp",
+          "inLanguage": "tr-TR",
+          "isPartOf": { "@id": "https://www.globalcompass.com.tr/blog/uluslararasi-sinav-rehberi/ielts-hazirlik-rehberi-ve-ucretsiz-deneme-sinavi/#webpage" },
+          "mainEntityOfPage": { "@id": "https://www.globalcompass.com.tr/blog/uluslararasi-sinav-rehberi/ielts-hazirlik-rehberi-ve-ucretsiz-deneme-sinavi/#webpage" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.globalcompass.com.tr/blog/uluslararasi-sinav-rehberi/ielts-hazirlik-rehberi-ve-ucretsiz-deneme-sinavi/#breadcrumb",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://www.globalcompass.com.tr/" },
+            { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.globalcompass.com.tr/blog/" },
+            { "@type": "ListItem", "position": 3, "name": "Uluslararası Sınav Rehberi", "item": "https://www.globalcompass.com.tr/blog/uluslararasi-sinav-rehberi/" },
+            { "@type": "ListItem", "position": 4, "name": "IELTS Hazırlık Rehberi ve Ücretsiz Deneme Sınavı Fırsatı", "item": "https://www.globalcompass.com.tr/blog/uluslararasi-sinav-rehberi/ielts-hazirlik-rehberi-ve-ucretsiz-deneme-sinavi/" }
+          ]
         }
       ]
     }

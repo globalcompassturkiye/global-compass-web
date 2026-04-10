@@ -1,12 +1,127 @@
+.alpadia-tanitim-giris { margin: 0 0 1.25rem; }
+.alpadia-tanitim-giris > p:first-child { margin-top: 0; }
 .alpadia-logo-kapsayici { margin: 16px 0 24px; text-align: center; }
 .alpadia-logo { max-width: 220px; height: auto; display: inline-block; }
-.alpadia-kampus-kapsayici { margin-top: 24px; }
+.alpadia-kampus-kapsayici { margin-top: 25px; }
 .alpadia-kampus-gorsel { width: 100%; max-width: 900px; height: auto; border-radius: 10px; display: block; margin: 0 auto; }
-.alpadia-ol-liste { list-style: decimal; padding-left: 1.4em; margin: 0; }
-.alpadia-li-mb16 { margin-bottom: 16px; }
-.alpadia-li-mb0 { margin-bottom: 0; }
-.alpadia-mt24 { margin-top: 24px; }
+/* Neden bu okul: 2×2 rozet kartı (✓) */
+body.sayfa-alpadia-frankfurt .alpadia-neden-kutu .dahil-rozet-baslik {
+    line-height: 1.4;
+}
+body.sayfa-alpadia-frankfurt .alpadia-neden-kutu .alpadia-neden-rozet-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+@media (max-width: 640px) {
+    body.sayfa-alpadia-frankfurt .alpadia-neden-kutu .alpadia-neden-rozet-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* Blok üstü boşluk: 25px (galeri vb.) */
+.alpadia-mt24,
+.alpadia-mt12 { margin-top: 25px; }
+
+/* İki satırlı başlık: başlık–metin arası yalnızca style.css’teki 25px padding; ek margin yok */
+body.sayfa-alpadia-frankfurt .gri-cerceve-kutu.baslik-iki-satir .kutu-baslik + p {
+    margin-top: 0;
+}
+
+/* Proje başlığı (iki satır + uzun): genel 25px yerine biraz sıkı üst boşluk */
+body.sayfa-alpadia-frankfurt .gri-cerceve-kutu.baslik-iki-satir h2#alpadia-frankfurt-proje + p {
+    padding-top: 16px;
+}
+
+/* Premium+ Tenis: başlık ile paragraf arası üst boşluk 25px */
+body.sayfa-alpadia-frankfurt .gri-cerceve-kutu.baslik-iki-satir h2#alpadia-frankfurt-tenis + p {
+    padding-top: 25px;
+    margin-top: 0;
+}
+
 .alpadia-h3-ozel { margin: 20px 0 12px; font-size: 1.1em; color: #1a365d; }
+
+/* .alpadia-h3-ozel üstteki shorthand’tan sonra: iki satırlı başlıktan sonraki h3’te üst margin yok (25px yalnızca .kutu-baslik + * padding) */
+body.sayfa-alpadia-frankfurt .gri-cerceve-kutu.baslik-iki-satir .kutu-baslik + h3.alpadia-h3-ozel {
+    margin-top: 0;
+}
 .alpadia-galeri-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-.alpadia-mt12 { margin-top: 12px; }
 .alpadia-galeri-gorsel { width: 100%; height: 200px; border-radius: 8px; object-fit: cover; }
+
+/* Program detayı kart başlıkları: siyah metin + alt çizgi */
+body.sayfa-alpadia-frankfurt .immerse-detay-kutu .immerse-detay-kart h3 {
+    color: #000000;
+    border-bottom: 1px solid #d1d5db;
+    padding-bottom: 10px;
+    margin: 0 0 12px 0;
+}
+
+/* Program detayı: 3 + 3 + 2 (yan yana yarım) + 1 tam satır — 6 sütunlu ızgara */
+body.sayfa-alpadia-frankfurt .immerse-detay-kutu .immerse-detay-grid.alpadia-program-detay-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+    align-items: stretch;
+}
+
+body.sayfa-alpadia-frankfurt .immerse-detay-kutu .alpadia-program-detay-grid .immerse-detay-kart {
+    max-width: none;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+/* İlk 6 kart: her biri 2 sütun → satır başına 3 kutu */
+body.sayfa-alpadia-frankfurt .immerse-detay-kutu .alpadia-program-detay-grid .immerse-detay-kart:nth-child(-n+6) {
+    grid-column: span 2;
+}
+
+/* Satır 3: iki kart sol ve sağ yarı (3+3 sütun) */
+body.sayfa-alpadia-frankfurt .immerse-detay-kutu .alpadia-program-detay-grid .immerse-detay-kart:nth-child(7) {
+    grid-column: 1 / span 3;
+}
+
+body.sayfa-alpadia-frankfurt .immerse-detay-kutu .alpadia-program-detay-grid .immerse-detay-kart:nth-child(8) {
+    grid-column: 4 / span 3;
+}
+
+/* Tarihler: tüm satır */
+body.sayfa-alpadia-frankfurt .immerse-detay-kutu .alpadia-program-detay-grid .immerse-detay-kart.alpadia-tarihler-tam-satir {
+    grid-column: 1 / -1;
+}
+
+body.sayfa-alpadia-frankfurt .immerse-detay-kart.alpadia-tarihler-tam-satir > h3 + p {
+    margin-bottom: 25px;
+}
+
+@media (max-width: 768px) {
+    body.sayfa-alpadia-frankfurt .immerse-detay-kutu .immerse-detay-grid.alpadia-program-detay-grid {
+        grid-template-columns: 1fr;
+    }
+
+    body.sayfa-alpadia-frankfurt .immerse-detay-kutu .alpadia-program-detay-grid .immerse-detay-kart:nth-child(-n+6) {
+        grid-column: auto;
+    }
+
+    body.sayfa-alpadia-frankfurt .immerse-detay-kutu .alpadia-program-detay-grid .immerse-detay-kart:nth-child(7),
+    body.sayfa-alpadia-frankfurt .immerse-detay-kutu .alpadia-program-detay-grid .immerse-detay-kart:nth-child(8),
+    body.sayfa-alpadia-frankfurt .immerse-detay-kutu .alpadia-program-detay-grid .immerse-detay-kart.alpadia-tarihler-tam-satir {
+        grid-column: auto;
+    }
+}
+
+/* Blog iki sütun + mobil içindekiler (Chantemerle / program sayfası iskeleti) */
+@media (max-width: 501px) {
+    body.sayfa-alpadia-frankfurt .kings-london-toc-outer .blog-mobil-icindekiler-wrap.alpadia-frankfurt-mobil-icindekiler-giris-alti {
+        display: flex !important;
+        flex-direction: column;
+        gap: 25px;
+        margin: 18px 0 1rem;
+    }
+
+    body.sayfa-alpadia-frankfurt .kings-london-toc-outer .blog-yan-panel {
+        display: none !important;
+    }
+}
+
+body.sayfa-alpadia-frankfurt .blog-yazi-layout--yan-panel .blog-yazi-ana {
+    overflow: visible;
+}

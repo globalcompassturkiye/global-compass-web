@@ -1,0 +1,139 @@
+---
+description: Kings Education dil okulu — HTML iskelet ağacı (içerik yok; Boston referanslı şablon)
+globs: "{**/yurt-disi-dil-okullari/**/kings-education/index.html,/css/kings-education*.css}"
+alwaysApply: false
+---
+
+# Kings Education dil sayfası — HTML iskelet şablonu
+
+**Canlı referans (içerik dolu):** `yurt-disi-dil-okullari/usa/boston/kings-education/index.html`  
+**Amaç:** Aynı yapıyı başka şehir/Kings sayfalarında tekrarlamak; aşağıda yalnızca **iskelet** (metin/kopya yok).  
+**Önek / `id`:** Şehre göre tutarlı bir önek kullanın (ör. `kings-bos-*`, `kings-ny-*`). Aşağıda yer tutucu: **`{ÖNEK}`**.
+
+İlgili stil ve davranış kuralları: `kings-education-dil-sayfa-standardi.mdc`.
+
+---
+
+## Head — CSS sırası (Kings USA + blog düzeni)
+
+Örnek sıra (şehir adlarını değiştirin):
+
+1. `style.css`, `site-ustmenu.css`, `site-footer.css`, `site-breadcrumb.css`, `site-iletisim-form.css`, `site-yonlendirme-kart.css`
+2. **`blog.css`** (yan panel + mobil içindekiler için zorunlu)
+3. `yurt-disi-dil-okullari.css`, `yurt-disi-dil-okullari-usa.css`
+4. `kings-education-dil-los-angeles.css`, `kings-education-dil-los-angeles-ozel.css` (ortak Kings bileşenleri)
+5. `kings-education-dil-{şehir}.css`, `kings-education-dil-{şehir}-ozel.css`
+6. İstenirse: **`kings-education-dil-{şehir}-layout.css`** (LA özeldeki border vb. override; dosya HTML’de linklenmeli)
+
+---
+
+## Body
+
+```html
+<body class="sayfa-kings-education sayfa-kings-education-{şehir} blog-yazi-sayfa-mobil-ux">
+```
+
+- Üst alan: mevcut site **`sabit-ust-alan`** + **`ust-menu`** (diğer sayfalarla aynı; logo `width="158" height="48"`, **`decoding="async"`**).
+
+---
+
+## Ana içerik — zorunlu kapanış sırası
+
+`main` → `article` → **önce** blog sütunları → **sonra** form bandı + form + yönlendirme (**hepsi `article` içinde**).
+
+```
+<main id="icerik">
+<article class="icerik-alani blog-yazi-detay">
+
+<nav class="site-haritasi-yolu" aria-label="Sayfa konumu">
+  <ol class="breadcrumb-kutu breadcrumb-kutu--hiyerarsik"> … </ol>
+</nav>
+
+<div class="blog-yazi-tek-sutun blog-yazi-tek-sutun--tam kings-london-toc-outer">
+<div class="blog-yazi-layout blog-yazi-layout--yan-panel">
+<div class="blog-yazi-ana">
+
+  <!-- A) Hero -->
+  <h1 id="{ÖNEK}-giris"> … </h1>
+  <h2 class="kings-hero-alt-baslik" id="{ÖNEK}-giris-alt-baslik"> … </h2>
+  <div class="okul-logo-alani kings-okul-logo-alani"> … </div>
+
+  <!-- B) Giriş metni -->
+  <section class="icerik-alani" id="{ÖNEK}-giris-kampus"> … paragraflar … </section>
+
+  <!-- C) Mobil içindekiler: giriş metninin HEMEN ardından (1180px altında görünür) -->
+  <div class="blog-mobil-icindekiler-wrap kings-la-mobil-icindekiler-giris-alti">
+    <nav class="blog-mobil-icindekiler-duz" aria-labelledby="{ÖNEK}-mobil-icindekiler-baslik"> … </nav>
+    <div class="blog-yan-iletisim-kutu"> … </div>
+  </div>
+
+  <!-- D) İçerik blokları (sıra içerik planına göre): örn. kampüs kutuları, foto, … -->
+
+  <!-- E) Dil özeti (tek sarmalayıcı id) -->
+  <div id="{ÖNEK}-dil-ozet">
+    <section class="icerik-alani kings-beceri-ust-bolum"> … beceri grid … </section>
+    <section class="icerik-alani kings-bilgi-grid-bolum">
+      <div class="beceri-grid kings-bilgi-grid"> … </div>
+    </section>
+  </div>
+
+  <!-- F) Program bandı -->
+  <div class="kirmizi-kutu" id="{ÖNEK}-kurs-programlari"> … </div>
+
+  <!-- G) Program bölümleri: her biri section.icerik-alani > .kurs-detay-kutu, h2’de program id -->
+
+  <!-- H) Dahil -->
+  <div class="gri-cerceve-kutu kings-la-dahil-bolum" id="{ÖNEK}-dahil"> … </div>
+
+  <!-- I) Konaklama -->
+  <section class="icerik-alani konaklama-konteyner kings-la-konaklama-bolum"
+           id="{ÖNEK}-konaklama"
+           aria-labelledby="{ÖNEK}-konaklama-baslik"> … </section>
+
+  <!-- J) Akreditasyon -->
+  <section class="icerik-alani kings-akreditasyon-bolum" id="{ÖNEK}-akreditasyon"> … </section>
+
+</div><!-- /.blog-yazi-ana -->
+
+<aside class="blog-yan-panel" aria-label="İçindekiler ve hızlı iletişim">
+  <nav class="blog-icindekiler-kutu" aria-labelledby="{ÖNEK}-masaustu-icindekiler-baslik"> … </nav>
+  <div class="blog-yan-iletisim-kutu"> … </div>
+</aside>
+
+</div><!-- /.blog-yazi-layout -->
+</div><!-- /.blog-yazi-tek-sutun -->
+
+<!-- K) Form bandı + form + ilgili sayfalar: iki sütun dışında, article içinde -->
+<div class="kirmizi-kutu usa-form-bant kings-form-bant-ust"> … </div>
+<section class="iletisim-form-alani" aria-labelledby="{ÖNEK}-bilgi-form-baslik">
+  <h2 id="{ÖNEK}-bilgi-form-baslik"> … </h2>
+  <form …> … radyo name benzersiz … </form>
+</section>
+<div class="okul-liste-kapsayici">
+  <h2 class="okul-liste-baslik">İlgili Sayfalar</h2>
+  <section class="alt-yonlendirme-alani">
+    <div class="yonlendirme-karti"> … tek kart-link dil okulları … </div>
+  </section>
+</div>
+
+</article>
+</main>
+```
+
+---
+
+## Alt bilgi ve script
+
+- **`footer.ana-footer`:** site standart footer.
+- **JSON-LD:** `@graph` içinde Organization, WebSite, WebPage, BreadcrumbList (sayfa URL’sine göre); içerik onaylı alanlarla uyumlu.
+- **Script sırası (Boston örneği):** `nav-submenu.js`, `iletisim-formu.js`, `header-offset.js` (defer). Bu sayfa tipinde **`blog.js` zorunlu değil** (içindekiler statik anchor).
+
+---
+
+## Yeni sayfada kopyalarken kontrol
+
+- [ ] `blog.css` + **`blog-yazi-layout--yan-panel`** + **`blog-yazi-sayfa-mobil-ux`**
+- [ ] Mobil TOC **giriş paragraflarından hemen sonra**
+- [ ] **`</div>` blog-yazi-ana** → **`aside`** → **2× `</div>`** (layout + tek-sutun) → form bloğu
+- [ ] Form **`aria-labelledby`** + **`h2` id**; radyo **`name`** sayfaya özel
+- [ ] Şehir **`layout.css`** linki varsa dosya **`/css`** altında ve 404 yok

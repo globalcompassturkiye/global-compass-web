@@ -1,0 +1,85 @@
+/* Kings Education Boston — New York ile hizalı iskelet (dahil 2 sütun, konaklama sr-only, 3 kolon grid) */
+
+/* Ortak .kings-la-dahil-bolum kuralındaki kalın üst kenarı yerine, diğer kenarlarla aynı ince çerçeve */
+body.sayfa-kings-education-boston .kings-la-dahil-bolum {
+    border: 1px solid #d1d1d1;
+}
+
+body.sayfa-kings-education-boston .kings-bos-dahil-grid-2kol {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media (min-width: 700px) {
+    body.sayfa-kings-education-boston .kings-bos-dahil-grid-2kol {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+body.sayfa-kings-education-boston .kings-la-dahil-bolum .kings-bos-dahil-tick {
+    color: #198754;
+    font-weight: 700;
+}
+
+body.sayfa-kings-education-boston #kings-bos-konaklama {
+    position: relative;
+}
+
+body.sayfa-kings-education-boston .kings-bos-konaklama-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+body.sayfa-kings-education-boston .kings-bos-konaklama-bant {
+    margin-top: 0;
+}
+
+/* Konaklama bölümü: yan boşluk 25px (ortak LA kuralındaki 15px yerine) */
+body.sayfa-kings-education-boston .konaklama-konteyner.kings-la-konaklama-bolum#kings-bos-konaklama {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+body.sayfa-kings-education-boston #kings-bos-konaklama .konaklama-giris {
+    margin-top: 25px;
+}
+
+body.sayfa-kings-education-boston .kings-bos-konaklama-bilgi-iskelet .gri-cerceve-kutu.kings-mini-kutu-sik {
+    margin-top: 0;
+}
+
+body.sayfa-kings-education-boston .kings-bos-konaklama-bilgi-iskelet .kutu-liste li {
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* Boston konaklama: mobilde alt alta; geniş ekranda üstte 2 yan yana, altta 3. ortada — üçü aynı genişlik */
+body.sayfa-kings-education-boston .kings-bos-konaklama-bilgi-iskelet.kings-la-konaklama-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    body.sayfa-kings-education-boston .kings-bos-konaklama-bilgi-iskelet.kings-la-konaklama-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Aile Yanı Konaklama: tam satır, ortada; genişlik = üstteki tek kutunun sütun genişliği */
+    body.sayfa-kings-education-boston .kings-bos-konaklama-bilgi-iskelet.kings-la-konaklama-grid .gri-cerceve-kutu.kings-mini-kutu-sik:nth-child(3) {
+        grid-column: 1 / -1;
+        justify-self: center;
+        width: 100%;
+        max-width: calc((100% - 20px) / 2);
+        box-sizing: border-box;
+    }
+}

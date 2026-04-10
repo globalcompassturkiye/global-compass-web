@@ -1,3 +1,162 @@
+/* Blog iki sütun + mobil içindekiler — HTML’de blok giriş metninin hemen altında (blog-mobil-icindekiler-program-sayfasi-dom) */
+@media (max-width: 501px) {
+    body.sayfa-chantemerle .kings-london-toc-outer .blog-mobil-icindekiler-wrap.chantemerle-mobil-icindekiler-giris-alti {
+        display: flex !important;
+        flex-direction: column;
+        gap: 25px;
+        margin: 18px 0 1rem;
+    }
+
+    body.sayfa-chantemerle .kings-london-toc-outer .blog-yan-panel {
+        display: none !important;
+    }
+}
+
+body.sayfa-chantemerle .blog-yazi-layout--yan-panel .blog-yazi-ana {
+    overflow: visible;
+}
+
+/* Çerçevesiz giriş metni (eski gri kutu içeriği) */
+body.sayfa-chantemerle .chantemerle-giris-metni {
+    margin: 0 0 1.25rem;
+}
+
+body.sayfa-chantemerle .chantemerle-giris-metni > p:first-child {
+    margin-top: 0;
+}
+
+/* 2026 program özeti — yalnız bu blok vurgulu (kurumsal kırmızı + hafif gradyan) */
+body.sayfa-chantemerle .chantemerle-program-ozet-kutu {
+    margin: 1rem 0 0;
+    padding: 1rem 1.1rem 1.05rem 1.15rem;
+    border-radius: 10px;
+    border: 1px solid rgba(189, 5, 5, 0.18);
+    border-left: 5px solid #bd0505;
+    background: linear-gradient(145deg, #fff5f5 0%, #ffffff 42%, #f8fafc 100%);
+    box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08), 0 0 0 1px rgba(255, 255, 255, 0.8) inset;
+}
+
+body.sayfa-chantemerle .chantemerle-program-ozet-baslik {
+    margin: 0;
+    color: #991b1b;
+    letter-spacing: 0.01em;
+    line-height: 1.4;
+}
+
+body.sayfa-chantemerle .chantemerle-program-ozet-liste {
+    list-style: none;
+    margin: 0.65rem 0 0;
+    padding: 0;
+    display: grid;
+    gap: 0.45rem;
+}
+
+/* Mobil / dar: dikey liste + kırmızı nokta işareti */
+body.sayfa-chantemerle .chantemerle-program-ozet-liste li {
+    position: relative;
+    padding: 0.35rem 0 0.35rem 1.45rem;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    line-height: 1.55;
+    color: #1f2937;
+}
+
+body.sayfa-chantemerle .chantemerle-program-ozet-liste li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.62rem;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #bd0505;
+    box-shadow: 0 0 0 2px rgba(189, 5, 5, 0.2);
+}
+
+/* Geniş: üç mini kart yan yana, nokta gizli */
+@media (min-width: 640px) {
+    body.sayfa-chantemerle .chantemerle-program-ozet-liste {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.65rem;
+    }
+
+    body.sayfa-chantemerle .chantemerle-program-ozet-liste li {
+        padding: 0.55rem 0.5rem;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.92);
+        border: 1px solid rgba(189, 5, 5, 0.1);
+        box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+    }
+
+    body.sayfa-chantemerle .chantemerle-program-ozet-liste li::before {
+        display: none;
+    }
+}
+
+/* Mobil: giriş metni daha kompakt — hero görseli metnin altında; LCP ve üst kısım dengelemesi */
+@media (max-width: 768px) {
+    body.sayfa-chantemerle .chantemerle-giris-metni {
+        margin-bottom: 0.75rem;
+    }
+
+    body.sayfa-chantemerle .chantemerle-giris-metni p {
+        margin-bottom: 0.6rem;
+        line-height: 1.6;
+    }
+
+    body.sayfa-chantemerle .chantemerle-giris-metni p:last-of-type {
+        margin-bottom: 0.45rem;
+    }
+
+    body.sayfa-chantemerle .chantemerle-program-ozet-kutu {
+        margin-top: 0.65rem;
+        padding: 0.85rem 0.95rem;
+    }
+
+    body.sayfa-chantemerle .chantemerle-program-ozet-liste {
+        gap: 0.35rem;
+    }
+
+    body.sayfa-chantemerle .chantemerle-program-ozet-liste li {
+        line-height: 1.5;
+    }
+
+    body.sayfa-chantemerle .chantemerle-gorsel-kapsayici {
+        margin-bottom: 20px;
+    }
+
+    /* Görsel yüksekliği mobilde düşürülür; metin + görsel daha az dikey kaydırma */
+    body.sayfa-chantemerle .chantemerle-gorsel {
+        width: 100%;
+        height: clamp(160px, 46vw, 220px);
+        object-fit: cover;
+    }
+}
+
+/* Eğitim deneyimi: sol kenarı kalın çerçeveli alt bloklar (global tipografi: dahil-rozet-*) */
+body.sayfa-chantemerle .chantemerle-sol-kenar-cerceve {
+    border: 1px solid #e2e8f0;
+    border-left: 5px solid var(--ana-lacivert, #1e3a5f);
+    border-radius: 8px;
+    padding: 1rem 1.1rem 1rem 1.15rem;
+    margin-top: 0.85rem;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+}
+
+body.sayfa-chantemerle .chantemerle-deneyim-ana > .chantemerle-sol-kenar-cerceve:first-child {
+    margin-top: 0;
+}
+
+body.sayfa-chantemerle .chantemerle-sol-kenar-cerceve .dahil-rozet-baslik {
+    line-height: 1.4;
+}
+
+body.sayfa-chantemerle .chantemerle-sol-kenar-cerceve .dahil-rozet-metin {
+    grid-column: unset;
+    margin-top: 0.45rem;
+}
+
 .chantemerle-gorsel-kapsayici {
     text-align: center;
     margin-bottom: 30px;
@@ -12,9 +171,47 @@
     box-shadow: 0 14px 35px rgba(15, 23, 42, 0.25);
 }
 
-.chantemerle-alt-not {
-    font-weight: 400;
-    font-size: 0.95em;
+/* Program detayları: masaüstünde her satırda 3 çerçeve (.immerse-detay-kart) */
+body.sayfa-chantemerle .immerse-detay-kutu .chantemerle-detay-grid-3lu {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+    width: 100%;
+    justify-items: stretch;
+    align-items: stretch;
+}
+
+body.sayfa-chantemerle .immerse-detay-kutu .chantemerle-detay-grid-3lu .immerse-detay-kart {
+    max-width: none;
+    width: auto;
+    flex: none;
+    min-width: 0;
+}
+
+body.sayfa-chantemerle .immerse-detay-kutu .chantemerle-detay-grid-3lu .chantemerle-detay-kart--tam-satir {
+    grid-column: 1 / -1;
+}
+
+body.sayfa-chantemerle .immerse-detay-kutu .chantemerle-detay-grid-3lu .immerse-detay-kart .kutu-liste li {
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+@media (max-width: 1023px) {
+    body.sayfa-chantemerle .immerse-detay-kutu .chantemerle-detay-grid-3lu {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 560px) {
+    body.sayfa-chantemerle .immerse-detay-kutu .chantemerle-detay-grid-3lu {
+        grid-template-columns: 1fr;
+    }
+
+    body.sayfa-chantemerle .immerse-detay-kutu .chantemerle-detay-grid-3lu .chantemerle-detay-kart--tam-satir {
+        grid-column: auto;
+    }
 }
 
 .chantemerle-ornek-kapsayici {
