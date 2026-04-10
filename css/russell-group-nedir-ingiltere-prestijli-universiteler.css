@@ -1,5 +1,5 @@
 /* Russell Group blog yazısı — sayfa özel düzen */
-/* H1: blog bölümünde .blog-yazi-ana-baslik (blog.css) — 33px / satır yüksekliği 1.25; ≤501px 26px */
+/* H1: blog bölümünde .blog-yazi-ana-baslik (blog.css) — style.css --h1-font-size; satır yüksekliği 1.25 */
 
 /* H1 altı: Kategori + hap etiket (linksiz) + tarih + okuma — eski buton görünümü, hover yok */
 .russell-blog-alt-meta-satir .blog-kategori-etiketi {

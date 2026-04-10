@@ -12,16 +12,15 @@
 }
 
 /*
- * Başlık: h1 tamamı 33px; 501px altı 26px (site geneli)
- * body.sayfa-hizmetlerimiz: global kurallardan net ayrım.
+ * Başlık h1: style.css :root --h1-font-size (28px–33px ölçek)
  */
 body.sayfa-hizmetlerimiz article.icerik-alani.hizmetlerimiz-sayfa > h1.sayfa-ana-baslik {
-    font-size: 33px !important;
+    font-size: var(--h1-font-size) !important;
     line-height: 1.4 !important;
 }
 
 body.sayfa-hizmetlerimiz article.icerik-alani.hizmetlerimiz-sayfa > h1.sayfa-ana-baslik > .vurgu-renk {
-    font-size: 33px !important;
+    font-size: var(--h1-font-size) !important;
     line-height: 1.35 !important;
 }
 
@@ -37,28 +36,12 @@ body.sayfa-hizmetlerimiz article.icerik-alani.hizmetlerimiz-sayfa section > h2.h
 }
 
 @media screen and (max-width: 768px) {
-    body.sayfa-hizmetlerimiz article.icerik-alani.hizmetlerimiz-sayfa > h1.sayfa-ana-baslik {
-        font-size: 33px !important;
-    }
-
-    body.sayfa-hizmetlerimiz article.icerik-alani.hizmetlerimiz-sayfa > h1.sayfa-ana-baslik > .vurgu-renk {
-        font-size: 33px !important;
-    }
-
     body.sayfa-hizmetlerimiz article.icerik-alani.hizmetlerimiz-sayfa section > h2.hizmet-section-baslik {
         font-size: 26px !important;
     }
 }
 
 @media screen and (max-width: 501px) {
-    body.sayfa-hizmetlerimiz article.icerik-alani.hizmetlerimiz-sayfa > h1.sayfa-ana-baslik {
-        font-size: 26px !important;
-    }
-
-    body.sayfa-hizmetlerimiz article.icerik-alani.hizmetlerimiz-sayfa > h1.sayfa-ana-baslik > .vurgu-renk {
-        font-size: 26px !important;
-    }
-
     body.sayfa-hizmetlerimiz article.icerik-alani.hizmetlerimiz-sayfa section > h2.hizmet-section-baslik {
         font-size: 26px !important;
     }

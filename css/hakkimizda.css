@@ -10,16 +10,14 @@
     padding: 0 0 60px;
 }
 
-/*
- * h1: 33px (vurgu dahil); 501px altı 26px — site geneli
- */
+/* h1: style.css --h1-font-size (28px–33px) */
 body.sayfa-hakkimizda article.icerik-alani.hakkimizda-sayfa > h1.sayfa-ana-baslik {
-    font-size: 33px !important;
+    font-size: var(--h1-font-size) !important;
     line-height: 1.4 !important;
 }
 
 body.sayfa-hakkimizda article.icerik-alani.hakkimizda-sayfa > h1.sayfa-ana-baslik > .vurgu-renk {
-    font-size: 33px !important;
+    font-size: var(--h1-font-size) !important;
     line-height: 1.35 !important;
 }
 
@@ -28,25 +26,6 @@ body.sayfa-hakkimizda article.icerik-alani.hakkimizda-sayfa > h1.sayfa-ana-basli
     padding-top: 6px;
 }
 
-@media screen and (max-width: 768px) {
-    body.sayfa-hakkimizda article.icerik-alani.hakkimizda-sayfa > h1.sayfa-ana-baslik {
-        font-size: 33px !important;
-    }
-
-    body.sayfa-hakkimizda article.icerik-alani.hakkimizda-sayfa > h1.sayfa-ana-baslik > .vurgu-renk {
-        font-size: 33px !important;
-    }
-}
-
-@media screen and (max-width: 501px) {
-    body.sayfa-hakkimizda article.icerik-alani.hakkimizda-sayfa > h1.sayfa-ana-baslik {
-        font-size: 26px !important;
-    }
-
-    body.sayfa-hakkimizda article.icerik-alani.hakkimizda-sayfa > h1.sayfa-ana-baslik > .vurgu-renk {
-        font-size: 26px !important;
-    }
-}
 
 /* Gri kutu içi bölüm başlıkları (h3 yerine h2 — erişilebilir hiyerarşi) */
 .hakkimizda-sayfa .hakkimizda-icerik-kutu .hakkimizda-section-baslik {

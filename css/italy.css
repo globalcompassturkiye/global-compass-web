@@ -163,3 +163,8 @@
         width: 100%;
     }
 }
+
+/* İtalya ülke sayfası — Milano şehir kartı: görsel üstten kesilmesin (cover + center yerine üst hizalama) */
+body.sayfa-yurt-disi-yaz-okullari-italy .yaz-okullari-ulke-kart[href*="italy/milan"] .yaz-okullari-ulke-kart-bayrak img {
+    object-position: center top;
+}

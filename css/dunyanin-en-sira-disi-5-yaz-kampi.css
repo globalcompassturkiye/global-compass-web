@@ -65,12 +65,12 @@
     text-align: center;
 }
 
-/* Site geneli h1: 33px; ≤501px 26px (style.css) */
+/* Hero başlık: style.css --h1-font-size */
 .blog-yazi-yaz-kampi-mag .yk-mag-hero h1,
 .blog-yazi-yaz-kampi-mag .yk-mag-hero .yk-mag-h1 {
     font-family: "Poppins", sans-serif;
     font-weight: 700;
-    font-size: 33px;
+    font-size: var(--h1-font-size);
     line-height: 1.25;
     color: #000080;
     margin: 0 0 1.25rem;
@@ -86,12 +86,12 @@
 @media (max-width: 501px) {
     .blog-yazi-yaz-kampi-mag .yk-mag-hero h1,
     .blog-yazi-yaz-kampi-mag .yk-mag-hero .yk-mag-h1 {
-        font-size: 26px !important;
+        font-size: var(--h1-font-size) !important;
     }
 
     .blog-yazi-yaz-kampi-mag .yk-mag-hero h1 .vurgu-renk,
     .blog-yazi-yaz-kampi-mag .yk-mag-hero .yk-mag-h1 .vurgu-renk {
-        font-size: 26px !important;
+        font-size: inherit !important;
     }
 }
 

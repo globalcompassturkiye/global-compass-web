@@ -10,38 +10,18 @@
 }
 
 body.sayfa-sss article.icerik-alani.sss-sayfa > h1.sayfa-ana-baslik {
-    font-size: 33px !important;
+    font-size: var(--h1-font-size) !important;
     line-height: 1.4 !important;
 }
 
 body.sayfa-sss article.icerik-alani.sss-sayfa > h1.sayfa-ana-baslik > .vurgu-renk {
-    font-size: 33px !important;
+    font-size: var(--h1-font-size) !important;
     line-height: 1.35 !important;
 }
 
 body.sayfa-sss article.icerik-alani.sss-sayfa > h1.sayfa-ana-baslik .vurgu-renk {
     display: inline-block;
     padding-top: 6px;
-}
-
-@media screen and (max-width: 768px) {
-    body.sayfa-sss article.icerik-alani.sss-sayfa > h1.sayfa-ana-baslik {
-        font-size: 33px !important;
-    }
-
-    body.sayfa-sss article.icerik-alani.sss-sayfa > h1.sayfa-ana-baslik > .vurgu-renk {
-        font-size: 33px !important;
-    }
-}
-
-@media screen and (max-width: 501px) {
-    body.sayfa-sss article.icerik-alani.sss-sayfa > h1.sayfa-ana-baslik {
-        font-size: 26px !important;
-    }
-
-    body.sayfa-sss article.icerik-alani.sss-sayfa > h1.sayfa-ana-baslik > .vurgu-renk {
-        font-size: 26px !important;
-    }
 }
 
 /* Giriş paragrafı */

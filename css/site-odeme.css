@@ -25,7 +25,7 @@
 }
 
 .odeme-form-kutu h1 {
-    font-size: 33px;
+    font-size: var(--h1-font-size);
     margin: 0 0 10px 0;
     color: #000080;
     text-align: left;
@@ -162,7 +162,7 @@
 
 @media (max-width: 501px) {
     .odeme-form-kutu h1 {
-        font-size: 26px !important;
+        font-size: var(--h1-font-size) !important;
     }
 }
 

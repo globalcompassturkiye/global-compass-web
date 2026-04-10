@@ -525,7 +525,7 @@ body.sayfa-blog .blog-kart-gorsel-link {
 }
 
 .blog-yazi-ana-baslik {
-    font-size: 33px;
+    font-size: var(--h1-font-size);
     font-weight: 700;
     color: #000080;
     line-height: 1.25;
@@ -539,11 +539,11 @@ body.sayfa-blog .blog-kart-gorsel-link {
 
 @media (max-width: 501px) {
     .blog-yazi-ana-baslik {
-        font-size: 26px !important;
+        font-size: var(--h1-font-size) !important;
     }
 
     .blog-yazi-ana-baslik .vurgu-renk {
-        font-size: 26px !important;
+        font-size: inherit !important;
     }
 }
 
