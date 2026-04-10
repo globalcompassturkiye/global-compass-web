@@ -1476,15 +1476,18 @@ p + .kirmizi-kutu {
 }
 
 /*
- * Kırmızı bant başlık: ≤500px → 15px; geniş ekranda en fazla 21px; arası @media ile ölçekli.
+ * Kırmızı bant başlık: ≤500px → 15px; geniş ekranda en fazla 19px; arası @media ile ölçekli.
  * article.icerik-alani öneki: dosya sonundaki `article.icerik-alani p { font-size: 15px !important; }` kuralını aşmak için (aksi halde geniş/dar hep 15px kalır).
  */
 .kirmizi-kutu :is(p, h1, h2, h3),
 article.icerik-alani .kirmizi-kutu :is(p, h1, h2, h3),
+body.ana-sayfa article.icerik-alani .kirmizi-kutu :is(p, h1, h2, h3),
 .ana-tab-cerceve-ust-bant-baslik,
 article.icerik-alani .ana-tab-cerceve-ust-bant-baslik,
+body.ana-sayfa article.icerik-alani .ana-tab-cerceve-ust-bant-baslik,
 .ana-sayfa-blog-ozeti-kirmizi-bant .ana-sayfa-blog-ozeti-baslik,
-article.icerik-alani .ana-sayfa-blog-ozeti-kirmizi-bant .ana-sayfa-blog-ozeti-baslik {
+article.icerik-alani .ana-sayfa-blog-ozeti-kirmizi-bant .ana-sayfa-blog-ozeti-baslik,
+body.ana-sayfa article.icerik-alani .ana-sayfa-blog-ozeti-kirmizi-bant .ana-sayfa-blog-ozeti-baslik {
     font-size: 15px !important;
 }
 
@@ -1507,7 +1510,9 @@ article.icerik-alani .ana-sayfa-blog-ozeti-kirmizi-bant .ana-sayfa-blog-ozeti-ba
 .kirmizi-kutu p.ust-satir::before,
 .kirmizi-kutu p.ust-satir::after,
 article.icerik-alani .kirmizi-kutu p.ust-satir::before,
-article.icerik-alani .kirmizi-kutu p.ust-satir::after {
+article.icerik-alani .kirmizi-kutu p.ust-satir::after,
+body.ana-sayfa article.icerik-alani .kirmizi-kutu p.ust-satir::before,
+body.ana-sayfa article.icerik-alani .kirmizi-kutu p.ust-satir::after {
     content: "▼";
     font-size: 15px !important;
     line-height: 1;
@@ -1528,20 +1533,26 @@ article.icerik-alani .kirmizi-kutu p.ust-satir::after {
 @media (min-width: 501px) {
     .kirmizi-kutu :is(p, h1, h2, h3),
     article.icerik-alani .kirmizi-kutu :is(p, h1, h2, h3),
+    body.ana-sayfa article.icerik-alani .kirmizi-kutu :is(p, h1, h2, h3),
     .ana-tab-cerceve-ust-bant-baslik,
     article.icerik-alani .ana-tab-cerceve-ust-bant-baslik,
+    body.ana-sayfa article.icerik-alani .ana-tab-cerceve-ust-bant-baslik,
     .ana-sayfa-blog-ozeti-kirmizi-bant .ana-sayfa-blog-ozeti-baslik,
-    article.icerik-alani .ana-sayfa-blog-ozeti-kirmizi-bant .ana-sayfa-blog-ozeti-baslik {
+    article.icerik-alani .ana-sayfa-blog-ozeti-kirmizi-bant .ana-sayfa-blog-ozeti-baslik,
+    body.ana-sayfa article.icerik-alani .ana-sayfa-blog-ozeti-kirmizi-bant .ana-sayfa-blog-ozeti-baslik {
         font-size: 16px !important;
     }
     .kirmizi-kutu p.ust-satir::before,
     .kirmizi-kutu p.ust-satir::after,
     article.icerik-alani .kirmizi-kutu p.ust-satir::before,
-    article.icerik-alani .kirmizi-kutu p.ust-satir::after {
+    article.icerik-alani .kirmizi-kutu p.ust-satir::after,
+    body.ana-sayfa article.icerik-alani .kirmizi-kutu p.ust-satir::before,
+    body.ana-sayfa article.icerik-alani .kirmizi-kutu p.ust-satir::after {
         font-size: 16px !important;
     }
     .beceri-kirmizi-bant,
-    article.icerik-alani .beceri-kirmizi-bant {
+    article.icerik-alani .beceri-kirmizi-bant,
+    body.ana-sayfa article.icerik-alani .beceri-kirmizi-bant {
         font-size: 16px !important;
     }
 }
@@ -1549,20 +1560,26 @@ article.icerik-alani .kirmizi-kutu p.ust-satir::after {
 @media (min-width: 768px) {
     .kirmizi-kutu :is(p, h1, h2, h3),
     article.icerik-alani .kirmizi-kutu :is(p, h1, h2, h3),
+    body.ana-sayfa article.icerik-alani .kirmizi-kutu :is(p, h1, h2, h3),
     .ana-tab-cerceve-ust-bant-baslik,
     article.icerik-alani .ana-tab-cerceve-ust-bant-baslik,
+    body.ana-sayfa article.icerik-alani .ana-tab-cerceve-ust-bant-baslik,
     .ana-sayfa-blog-ozeti-kirmizi-bant .ana-sayfa-blog-ozeti-baslik,
-    article.icerik-alani .ana-sayfa-blog-ozeti-kirmizi-bant .ana-sayfa-blog-ozeti-baslik {
+    article.icerik-alani .ana-sayfa-blog-ozeti-kirmizi-bant .ana-sayfa-blog-ozeti-baslik,
+    body.ana-sayfa article.icerik-alani .ana-sayfa-blog-ozeti-kirmizi-bant .ana-sayfa-blog-ozeti-baslik {
         font-size: 17px !important;
     }
     .kirmizi-kutu p.ust-satir::before,
     .kirmizi-kutu p.ust-satir::after,
     article.icerik-alani .kirmizi-kutu p.ust-satir::before,
-    article.icerik-alani .kirmizi-kutu p.ust-satir::after {
+    article.icerik-alani .kirmizi-kutu p.ust-satir::after,
+    body.ana-sayfa article.icerik-alani .kirmizi-kutu p.ust-satir::before,
+    body.ana-sayfa article.icerik-alani .kirmizi-kutu p.ust-satir::after {
         font-size: 17px !important;
     }
     .beceri-kirmizi-bant,
-    article.icerik-alani .beceri-kirmizi-bant {
+    article.icerik-alani .beceri-kirmizi-bant,
+    body.ana-sayfa article.icerik-alani .beceri-kirmizi-bant {
         font-size: 17px !important;
     }
 }
@@ -1570,20 +1587,26 @@ article.icerik-alani .kirmizi-kutu p.ust-satir::after {
 @media (min-width: 1024px) {
     .kirmizi-kutu :is(p, h1, h2, h3),
     article.icerik-alani .kirmizi-kutu :is(p, h1, h2, h3),
+    body.ana-sayfa article.icerik-alani .kirmizi-kutu :is(p, h1, h2, h3),
     .ana-tab-cerceve-ust-bant-baslik,
     article.icerik-alani .ana-tab-cerceve-ust-bant-baslik,
+    body.ana-sayfa article.icerik-alani .ana-tab-cerceve-ust-bant-baslik,
     .ana-sayfa-blog-ozeti-kirmizi-bant .ana-sayfa-blog-ozeti-baslik,
-    article.icerik-alani .ana-sayfa-blog-ozeti-kirmizi-bant .ana-sayfa-blog-ozeti-baslik {
+    article.icerik-alani .ana-sayfa-blog-ozeti-kirmizi-bant .ana-sayfa-blog-ozeti-baslik,
+    body.ana-sayfa article.icerik-alani .ana-sayfa-blog-ozeti-kirmizi-bant .ana-sayfa-blog-ozeti-baslik {
         font-size: 18px !important;
     }
     .kirmizi-kutu p.ust-satir::before,
     .kirmizi-kutu p.ust-satir::after,
     article.icerik-alani .kirmizi-kutu p.ust-satir::before,
-    article.icerik-alani .kirmizi-kutu p.ust-satir::after {
+    article.icerik-alani .kirmizi-kutu p.ust-satir::after,
+    body.ana-sayfa article.icerik-alani .kirmizi-kutu p.ust-satir::before,
+    body.ana-sayfa article.icerik-alani .kirmizi-kutu p.ust-satir::after {
         font-size: 18px !important;
     }
     .beceri-kirmizi-bant,
-    article.icerik-alani .beceri-kirmizi-bant {
+    article.icerik-alani .beceri-kirmizi-bant,
+    body.ana-sayfa article.icerik-alani .beceri-kirmizi-bant {
         font-size: 18px !important;
     }
 }
@@ -1591,63 +1614,27 @@ article.icerik-alani .kirmizi-kutu p.ust-satir::after {
 @media (min-width: 1280px) {
     .kirmizi-kutu :is(p, h1, h2, h3),
     article.icerik-alani .kirmizi-kutu :is(p, h1, h2, h3),
+    body.ana-sayfa article.icerik-alani .kirmizi-kutu :is(p, h1, h2, h3),
     .ana-tab-cerceve-ust-bant-baslik,
     article.icerik-alani .ana-tab-cerceve-ust-bant-baslik,
+    body.ana-sayfa article.icerik-alani .ana-tab-cerceve-ust-bant-baslik,
     .ana-sayfa-blog-ozeti-kirmizi-bant .ana-sayfa-blog-ozeti-baslik,
-    article.icerik-alani .ana-sayfa-blog-ozeti-kirmizi-bant .ana-sayfa-blog-ozeti-baslik {
+    article.icerik-alani .ana-sayfa-blog-ozeti-kirmizi-bant .ana-sayfa-blog-ozeti-baslik,
+    body.ana-sayfa article.icerik-alani .ana-sayfa-blog-ozeti-kirmizi-bant .ana-sayfa-blog-ozeti-baslik {
         font-size: 19px !important;
     }
     .kirmizi-kutu p.ust-satir::before,
     .kirmizi-kutu p.ust-satir::after,
     article.icerik-alani .kirmizi-kutu p.ust-satir::before,
-    article.icerik-alani .kirmizi-kutu p.ust-satir::after {
+    article.icerik-alani .kirmizi-kutu p.ust-satir::after,
+    body.ana-sayfa article.icerik-alani .kirmizi-kutu p.ust-satir::before,
+    body.ana-sayfa article.icerik-alani .kirmizi-kutu p.ust-satir::after {
         font-size: 19px !important;
     }
     .beceri-kirmizi-bant,
-    article.icerik-alani .beceri-kirmizi-bant {
+    article.icerik-alani .beceri-kirmizi-bant,
+    body.ana-sayfa article.icerik-alani .beceri-kirmizi-bant {
         font-size: 19px !important;
-    }
-}
-
-@media (min-width: 1536px) {
-    .kirmizi-kutu :is(p, h1, h2, h3),
-    article.icerik-alani .kirmizi-kutu :is(p, h1, h2, h3),
-    .ana-tab-cerceve-ust-bant-baslik,
-    article.icerik-alani .ana-tab-cerceve-ust-bant-baslik,
-    .ana-sayfa-blog-ozeti-kirmizi-bant .ana-sayfa-blog-ozeti-baslik,
-    article.icerik-alani .ana-sayfa-blog-ozeti-kirmizi-bant .ana-sayfa-blog-ozeti-baslik {
-        font-size: 20px !important;
-    }
-    .kirmizi-kutu p.ust-satir::before,
-    .kirmizi-kutu p.ust-satir::after,
-    article.icerik-alani .kirmizi-kutu p.ust-satir::before,
-    article.icerik-alani .kirmizi-kutu p.ust-satir::after {
-        font-size: 20px !important;
-    }
-    .beceri-kirmizi-bant,
-    article.icerik-alani .beceri-kirmizi-bant {
-        font-size: 20px !important;
-    }
-}
-
-@media (min-width: 1760px) {
-    .kirmizi-kutu :is(p, h1, h2, h3),
-    article.icerik-alani .kirmizi-kutu :is(p, h1, h2, h3),
-    .ana-tab-cerceve-ust-bant-baslik,
-    article.icerik-alani .ana-tab-cerceve-ust-bant-baslik,
-    .ana-sayfa-blog-ozeti-kirmizi-bant .ana-sayfa-blog-ozeti-baslik,
-    article.icerik-alani .ana-sayfa-blog-ozeti-kirmizi-bant .ana-sayfa-blog-ozeti-baslik {
-        font-size: 21px !important;
-    }
-    .kirmizi-kutu p.ust-satir::before,
-    .kirmizi-kutu p.ust-satir::after,
-    article.icerik-alani .kirmizi-kutu p.ust-satir::before,
-    article.icerik-alani .kirmizi-kutu p.ust-satir::after {
-        font-size: 21px !important;
-    }
-    .beceri-kirmizi-bant,
-    article.icerik-alani .beceri-kirmizi-bant {
-        font-size: 21px !important;
     }
 }
 

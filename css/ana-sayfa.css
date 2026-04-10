@@ -255,7 +255,7 @@ body.ana-sayfa .ana-tab-cerceve-ust-bant-baslik {
     text-align: center;
 }
 
-/* Kırmızı bant başlık boyutu: style.css (@media 15px–21px) */
+/* Kırmızı bant başlık boyutu: style.css (@media 15px–19px) */
 
 @media (max-width: 768px) {
     body.ana-sayfa .hizmet-tab-alani {
