@@ -32,8 +32,6 @@
     line-height: 1;
     color: #e30613;
 }
-.bournemouth-secim-paneli .kirmizi-kutu .ust-satir,
-.bournemouth-secim-paneli .kirmizi-kutu .alt-satir-lacivert { font-size: 22px; }
 .bournemouth-secim-paneli .kirmizi-kutu { margin: 0; border-radius: 5px 5px 0 0; }
 .bournemouth-secim-paneli .okul-liste-kapsayici { margin-top: 0; padding-top: 0; border-top-left-radius: 0; border-top-right-radius: 0; }
 .bournemouth-secim-paneli .okul-liste-kapsayici .okul-liste-baslik { display: none; }
@@ -59,8 +57,8 @@
 .bournemouth-secim-paneli .okul-isim-link,
 .bournemouth-secim-paneli .btn-modern-incele,
 .bournemouth-secim-paneli .incele-btn-minimal { font-size: 18px !important; }
-.bournemouth-form-bant { margin-bottom: 0; border-radius: 15px 15px 0 0; background-color: #e30613; }
-.bournemouth-form-bant .ust-satir { font-size: 20px; color: #ffffff !important; }
+.bournemouth-form-bant { margin-bottom: 0; border-radius: 5px 5px 0 0; background-color: #e30613; }
+.bournemouth-form-bant .ust-satir { color: #ffffff !important; }
 .bournemouth-form-bant .bournemouth-form-alt-satir {
     margin-top: 6px;
     font-size: 16px;

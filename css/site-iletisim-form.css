@@ -14,6 +14,8 @@
 
 /* Kirmizi baslik formdan hemen onceyse iki blok tek parca gibi otursun */
 .kirmizi-kutu:has(+ .iletisim-form-alani) {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }
@@ -29,14 +31,16 @@
     width: 100%;
     text-align: center;
     font-weight: 700;
-    font-size: 17px;
     line-height: 1.2;
 }
 
 .iletisim-form-alani {
     background: #e8f4f8;
     margin: 25px auto 25px auto;
-    border-radius: 8px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
     box-sizing: border-box;
     position: relative;
     border: 1px solid #d1d1d1;

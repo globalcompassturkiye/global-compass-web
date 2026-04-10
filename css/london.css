@@ -16,11 +16,6 @@
 .londra-dil-giris p:last-child {
     margin-bottom: 0;
 }
-.london-secim-paneli .kirmizi-kutu .ust-satir,
-.london-secim-paneli .kirmizi-kutu .alt-satir-lacivert {
-    font-size: 22px;
-}
-
 .london-secim-paneli .kirmizi-kutu {
     margin: 0;
     border-radius: 5px 5px 0 0;
@@ -93,12 +88,11 @@
 
 .london-form-bant {
     margin-bottom: 0;
-    border-radius: 15px 15px 0 0;
+    border-radius: 5px 5px 0 0;
     background-color: #e30613;
 }
 
 .london-form-bant .ust-satir {
-    font-size: 20px;
     color: #ffffff !important;
 }
 

@@ -1,11 +1,6 @@
 /* New York yaz okulları — sayfaya özel stiller */
 
 /* Okul listesi — Londra (london-secim-paneli) ile aynı seçim paneli / hover standardı */
-.new-york-secim-paneli .kirmizi-kutu .ust-satir,
-.new-york-secim-paneli .kirmizi-kutu .alt-satir-lacivert {
-    font-size: 22px;
-}
-
 .new-york-secim-paneli .kirmizi-kutu {
     margin: 0;
     border-radius: 5px 5px 0 0;

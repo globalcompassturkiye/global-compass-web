@@ -1,9 +1,4 @@
 /* Germany yaz okullari sayfalarina ozel secim paneli ve form bandi */
-.germany-secim-paneli .kirmizi-kutu .ust-satir,
-.germany-secim-paneli .kirmizi-kutu .alt-satir-lacivert {
-    font-size: 22px;
-}
-
 .germany-secim-paneli .kirmizi-kutu {
     margin: 0;
     border-radius: 5px 5px 0 0;
@@ -76,12 +71,11 @@
 
 .germany-form-bant {
     margin-bottom: 0;
-    border-radius: 15px 15px 0 0;
+    border-radius: 5px 5px 0 0;
     background-color: #e30613;
 }
 
 .germany-form-bant .ust-satir {
-    font-size: 20px;
     color: #ffffff !important;
 }
 

@@ -16,50 +16,48 @@
 .ana-sayfa-blog-ozeti-inner {
     background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
     border: 1px solid #e2e8f0;
-    border-radius: 15px;
-    padding: 1.75rem 1.5rem 2rem;
+    border-radius: 5px 5px 0 0;
+    padding: 0;
+    overflow: hidden;
     box-shadow: 0 12px 40px rgba(15, 23, 42, 0.06);
+}
+
+.ana-sayfa-blog-ozeti-kirmizi-bant {
+    background-color: #e30613;
+    background-image: none;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
 }
 
 .ana-sayfa-blog-ozeti-baslik-wrap {
     text-align: center;
-    margin-bottom: 1.75rem;
+    margin: 0;
+    width: 100%;
 }
 
+.ana-sayfa-blog-ozeti-govde {
+    padding: 1.75rem 1.5rem 2rem;
+}
+
+/* Bu sınıf yalnızca kırmızı şeritteki Blog h2’de kullanılır; font-size clamp kullanılmaz (üst sınır ~26px görünümü veriyordu). Boyut: style.css kırmızı bant @media. */
 .ana-sayfa-blog-ozeti-baslik {
-    font-size: clamp(1.35rem, 3vw, 1.65rem);
     font-weight: 700;
     color: #1a2332;
     line-height: 1.25;
-    margin: 0 0 0.5rem;
+    margin: 0;
     letter-spacing: -0.02em;
 }
 
-@media (max-width: 501px) {
-    .ana-sayfa-blog-ozeti-baslik {
-        font-size: 22px;
-    }
-}
-
-.ana-sayfa-blog-baslik-lacivert {
-    color: #000080;
-}
-
-.ana-sayfa-blog-baslik-kirmizi {
-    color: #c41e3a;
-}
-
-.ana-sayfa-blog-baslik-ayrac {
-    color: #cbd5e1;
-    font-weight: 400;
-    padding: 0 0.2rem;
+/* Kırmızı banttaki blog başlığı: beyaz */
+.ana-sayfa-blog-ozeti-kirmizi-bant .ana-sayfa-blog-ozeti-baslik {
+    color: #ffffff !important;
 }
 
 .ana-sayfa-blog-ozeti-alt {
     font-size: 15px;
     line-height: 1.65;
     color: #64748b;
-    margin: 0 auto;
+    margin: 0 auto 25px auto;
     max-width: 1200px;
 }
 
@@ -221,47 +219,107 @@
     font-weight: 600;
 }
 
-/* Ana sayfa: kart/çerçeve köşeleri tek standart */
-body.ana-sayfa .gri-cerceve-kutu,
-body.ana-sayfa .ana-hizmet-karti,
+/* Ana sayfa: sekme alanı köşeleri + üst kırmızı bant (çerçeve üst iç kenarına sıfır); alt köşeler düz */
 body.ana-sayfa .hizmet-tab-alani {
-    border-radius: 15px !important;
+    border-radius: 5px 5px 0 0 !important;
+    padding-top: 0 !important;
 }
 
-/* Ana sayfa 6 hizmet kartı — Kings LA “Temel Beceriler” başlık düzeni + büyük harf (.sayfa-kings-education yok; burada) */
-body.ana-sayfa .beceri-grid a.ana-hizmet-karti {
-    padding: 18px 18px 16px;
-    border-color: #ddd;
+/* Tek satırlı kırmızı bantlar (sekme navigasyon + blog başlığı): aynı padding ve yükseklik */
+body.ana-sayfa .ana-tab-cerceve-ust-bant,
+body.ana-sayfa .ana-sayfa-blog-ozeti-kirmizi-bant {
+    padding: 14px 16px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
 }
 
-body.ana-sayfa .beceri-grid a.ana-hizmet-karti > h3.kutu-baslik.kings-mini-kutu-baslik {
-    position: static;
-    transform: none;
-    left: auto;
-    top: auto;
-    margin: 0 0 14px 0;
-    padding: 0 0 10px 0;
-    background: transparent !important;
-    color: #000080 !important;
-    font-size: 15px;
+body.ana-sayfa .ana-tab-cerceve-ust-bant {
+    width: calc(100% + 20px);
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: 14px;
+    background-color: #e30613 !important;
+    background-image: none !important;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+}
+
+body.ana-sayfa .ana-tab-cerceve-ust-bant-baslik {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
     font-weight: 700;
-    border-radius: 0;
-    border-bottom: 2px solid #000080;
-    text-align: left;
-    text-transform: uppercase;
-    max-width: none;
-    white-space: normal;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    letter-spacing: normal;
-    line-height: 1.35;
+    color: #ffffff;
+    text-align: center;
 }
+
+/* Kırmızı bant başlık boyutu: style.css (@media 15px–21px) */
 
 @media (max-width: 768px) {
-    /* style.css genel kart padding’i (!important) bu ölçüyü ezmesin */
-    body.ana-sayfa .beceri-grid a.ana-hizmet-karti {
-        padding: 18px 18px 16px !important;
+    body.ana-sayfa .hizmet-tab-alani {
+        padding-top: 0 !important;
     }
+}
+
+/* Hub kart ızgarası: satırdaki en yüksek karta göre tüm hücreleri germeyip kartı içeriğe sıkıştır */
+body.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap,
+body.sayfa-hizmetlerimiz .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap {
+    align-items: start;
+}
+
+/* Ana sayfa / hizmetlerimiz — dil hub ile aynı panel; kartlarda çok satırlı metin */
+body.ana-sayfa a.yaz-okullari-ulke-kart,
+body.sayfa-hizmetlerimiz a.yaz-okullari-ulke-kart {
+    min-height: 0;
+    justify-content: flex-start;
+    align-items: stretch;
+    text-align: left;
+    padding: 1.1rem 1rem 1.15rem;
+}
+
+body.ana-sayfa .yaz-okullari-ulke-kart-icerik,
+body.sayfa-hizmetlerimiz .yaz-okullari-ulke-kart-icerik {
+    align-items: stretch;
+    justify-content: flex-start;
+    text-align: left;
+    gap: 0.65rem;
+    /* Grid’de eşit yükseklikte hücrede flex:1 içeriği gereksiz yere uzatıp alt boşluk bırakmasın */
+    flex: 0 1 auto;
+    min-height: 0;
+}
+
+body.ana-sayfa .yaz-okullari-ulke-kart-baslik,
+body.sayfa-hizmetlerimiz .yaz-okullari-ulke-kart-baslik {
+    font-size: 15px;
+    line-height: 1.35;
+    width: 100%;
+    white-space: normal;
+    text-align: left;
+}
+
+body.ana-sayfa .ana-hizmet-hub-kart-metin,
+body.sayfa-hizmetlerimiz .ana-hizmet-hub-kart-metin {
+    font-size: 15px;
+    line-height: 1.65;
+    font-weight: 400;
+    color: #475569;
+    margin: 0;
+}
+
+/* Ana sayfa hub kartları: gövde iki yana yaslı; başlık yukarıda sola yaslı */
+body.ana-sayfa .ana-hizmet-hub-kart-metin {
+    text-align: justify;
+    text-align-last: left;
+}
+
+body.sayfa-hizmetlerimiz .ana-hizmet-hub-kart-metin {
+    text-align: left;
+}
+
+body.ana-sayfa .dil-okullari-secim-paneli {
+    padding-bottom: 0;
 }
 
 /* Ana sayfa hero: h1 — slogan — güven rozetleri arası dar ve eşit boşluk */
@@ -294,3 +352,4 @@ body.ana-sayfa .karsilama-icerik > .karsilama-aksiyon {
         margin-bottom: 0 !important;
     }
 }
+

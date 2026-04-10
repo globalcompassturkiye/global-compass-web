@@ -77,8 +77,6 @@
         width: 100%;
     }
 }
-.oxford-secim-paneli .kirmizi-kutu .ust-satir,
-.oxford-secim-paneli .kirmizi-kutu .alt-satir-lacivert { font-size: 22px; }
 .oxford-secim-paneli .kirmizi-kutu { margin: 0; border-radius: 5px 5px 0 0; }
 .oxford-secim-paneli .okul-liste-kapsayici { margin-top: 0; padding-top: 0; border-top-left-radius: 0; border-top-right-radius: 0; }
 .oxford-secim-paneli .okul-liste-kapsayici .okul-liste-baslik { display: none; }
@@ -104,8 +102,8 @@
 .oxford-secim-paneli .okul-isim-link,
 .oxford-secim-paneli .btn-modern-incele,
 .oxford-secim-paneli .incele-btn-minimal { font-size: 18px !important; }
-.oxford-form-bant { margin-bottom: 0; border-radius: 15px 15px 0 0; background-color: #e30613; }
-.oxford-form-bant .ust-satir { font-size: 20px; color: #ffffff !important; }
+.oxford-form-bant { margin-bottom: 0; border-radius: 5px 5px 0 0; background-color: #e30613; }
+.oxford-form-bant .ust-satir { color: #ffffff !important; }
 .oxford-form-bant .oxford-form-alt-satir {
     margin-top: 6px;
     font-size: 16px;

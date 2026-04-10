@@ -1,9 +1,4 @@
 /* Canada yaz okullari sayfalarina ozel secim paneli ve form bandi */
-.canada-secim-paneli .kirmizi-kutu .ust-satir,
-.canada-secim-paneli .kirmizi-kutu .alt-satir-lacivert {
-    font-size: 22px;
-}
-
 .canada-secim-paneli .kirmizi-kutu {
     margin: 0;
     border-radius: 5px 5px 0 0;
@@ -77,12 +72,11 @@
 
 .canada-form-bant {
     margin-bottom: 0;
-    border-radius: 15px 15px 0 0;
+    border-radius: 5px 5px 0 0;
     background-color: #e30613;
 }
 
 .canada-form-bant .ust-satir {
-    font-size: 20px;
     color: #ffffff !important;
 }
 

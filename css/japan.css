@@ -1,10 +1,5 @@
 /* Japonya yaz okulları hub — seçim paneli ve form bandı */
 
-.japan-secim-paneli .kirmizi-kutu .ust-satir,
-.japan-secim-paneli .kirmizi-kutu .alt-satir-lacivert {
-    font-size: 22px;
-}
-
 .japan-secim-paneli .kirmizi-kutu {
     margin: 0;
     border-radius: 5px 5px 0 0;
@@ -29,12 +24,11 @@
 
 .japan-form-bant {
     margin-bottom: 0;
-    border-radius: 15px 15px 0 0;
+    border-radius: 5px 5px 0 0;
     background-color: #e30613;
 }
 
 .japan-form-bant .ust-satir {
-    font-size: 20px;
     color: #ffffff !important;
 }
 

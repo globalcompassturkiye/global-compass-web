@@ -23,7 +23,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.css?v=20260410">
     <link rel="stylesheet" href="/css/site-ustmenu.css">
     <link rel="stylesheet" href="/css/site-footer.css">
     <link rel="stylesheet" href="/css/site-breadcrumb.css">
@@ -31,6 +31,8 @@
     <link rel="stylesheet" href="/css/site-yonlendirme-kart.css">
     <link rel="stylesheet" href="/css/sss.css">
     <link rel="stylesheet" href="/css/yurt-disi-lise.css">
+    <link rel="stylesheet" href="/css/yurt-disi-dil-okullari.css">
+    <link rel="stylesheet" href="/css/yurt-disi-yaz-okullari-index.css">
 </head>
 <body class="sayfa-yurt-disi-lise">
     <div class="sabit-ust-alan">
@@ -182,15 +184,22 @@
 
         <p>Çocuğunuzun eğitim hayatındaki en kritik dönemlerden biri olan lise yıllarını, uluslararası bir ortamda geçirmesi ona sadece dil becerisi değil; vizyoner bir bakış açısı ve dünya vatandaşlığı kazandırır. Global Compass olarak biz, Amerika’dan İngiltere’ye, Kanada’dan Avrupa’ya kadar dünyanın en saygın eğitim sistemlerine sahip ülkelerinde, öğrencinin karakterine ve hedeflerine en uygun lise yerleştirmelerini yapıyoruz.</p>
 
-<div class="kirmizi-kutu">
-    <p class="ust-satir">Daha Fazla Bilgi ve Başvuru İçin</p>
-</div>
+        <div class="dil-okullari-secim-paneli">
+            <div class="kirmizi-kutu">
+                <p class="ust-satir">Yurt Dışı Lise Programlarını Keşfedin!</p>
+                <p class="alt-satir-lacivert">Hangi Programı Tercih Edersiniz?</p>
+            </div>
 
-        <div class="buton-alani ulke-secim-butonlari lise-buton-orta">
-            <a href="/yurt-disi-lise/degisim-programlari/" class="ulke-buton ulke-buton-uk">
-                <span class="ulke-buton-metin">Lise Değişim Programları</span>
-                <span class="ulke-buton-ok">→</span>
-            </a>
+            <nav class="yaz-okullari-ulke-kart-wrap" aria-label="Lise programları">
+                <a href="/yurt-disi-lise/degisim-programlari/" class="yaz-okullari-ulke-kart">
+                    <span class="yaz-okullari-ulke-kart-icerik">
+                        <span class="yaz-okullari-ulke-kart-bayrak" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="44" height="44" class="yaz-okullari-ulke-kart-svg" focusable="false" aria-hidden="true"><path fill="#000080" d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3zm0 13.09L5.17 14.2 12 17l6.83-2.8L12 16.09zM5 13.62v4.38c0 .85.5 1.61 1.28 1.95l5.2 2.26c.44.19.94.19 1.38 0l5.2-2.26c.78-.34 1.28-1.1 1.28-1.95v-4.38l-6.4 2.78c-.44.19-.94.19-1.38 0L5 13.62z"/></svg>
+                        </span>
+                        <span class="yaz-okullari-ulke-kart-baslik">Lise Değişim Programları</span>
+                    </span>
+                </a>
+            </nav>
         </div>
 
         <div class="gri-cerceve-kutu">
@@ -303,7 +312,7 @@
     <p class="alt-satir-lacivert">Bilgi İstek Formu</p>
 </div>
 
-        <section class="iletisim-form-alani">
+        <section class="iletisim-form-alani" id="bilgi-istek">
             <h2>Bilgi İstek Formu</h2>
             <p>İngiltere, Amerika, Kanada ve Avrupa’daki en prestijli yatılı liseler ile değişim programlarının; güncel fiyatları, burs fırsatları, başvuru şartları, hakkında detaylı bilgi almak için bilgi istek formunu doldurmanız yeterlidir. Uzman danışmanlarımız, bütçenize ve hedeflerinize en uygun yurt dışı lise fiyatları ile size özel bir eğitim planı hazırlamak için hemen sizinle iletişime geçecektir.</p>
             <form action="#" method="POST" id="iletisim-formu">
@@ -331,10 +340,10 @@
                     <div class="kvkk-alani">
                         <input type="checkbox" id="kvkk-onay-lise" required>
                         <label for="kvkk-onay-lise">
-                            <a href="#" class="kvkk-link">KVKK Aydınlatma Metnini</a> Okudum*
+                            <a href="/kvkk-aydinlatma-metni/" class="kvkk-link">KVKK Aydınlatma Metnini</a> Okudum*
                         </label>
                     </div>
-                    <button type="submit" class="form-buton-kucuk">Fiyat Teklifi Al</button>
+                    <button type="submit" class="form-buton-kucuk">Gönder</button>
                 </div>
             </form>
         </section>

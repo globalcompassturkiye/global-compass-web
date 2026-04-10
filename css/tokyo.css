@@ -1,10 +1,6 @@
 /* Tokyo yaz okullari sayfasi ozel stilleri */
 
 /* Okul listesi — Londra (london-secim-paneli) ile aynı seçim paneli / hover standardı */
-.tokyo-secim-paneli .kirmizi-kutu .ust-satir {
-    font-size: 22px;
-}
-
 .tokyo-secim-paneli .kirmizi-kutu {
     margin: 0;
     border-radius: 5px 5px 0 0;

@@ -92,6 +92,12 @@
     margin-bottom: 0.55rem;
 }
 
+.ielts-cta .kirmizi-kutu {
+    margin: 1rem 0 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
 .ielts-cta .iletisim-form-alani.ielts-dar-form {
     max-width: none;
     width: 100%;
@@ -110,6 +116,7 @@
 }
 
 .ielts-cta .iletisim-form-alani.ielts-dar-form,
+.ielts-cta .iletisim-form-alani.ielts-dar-form h2,
 .ielts-cta .iletisim-form-alani.ielts-dar-form h3,
 .ielts-cta .iletisim-form-alani.ielts-dar-form p,
 .ielts-cta .iletisim-form-alani.ielts-dar-form label,
