@@ -83,7 +83,7 @@ alwaysApply: false
   <!-- G) Program bölümleri: her biri section.icerik-alani > .kurs-detay-kutu, h2’de program id -->
 
   <!-- H) Dahil -->
-  <div class="gri-cerceve-kutu kings-la-dahil-bolum" id="{ÖNEK}-dahil"> … </div>
+  <div class="cerceve-kutu kings-la-dahil-bolum" id="{ÖNEK}-dahil"> … </div>
 
   <!-- I) Konaklama -->
   <section class="icerik-alani konaklama-konteyner kings-la-konaklama-bolum"

@@ -294,7 +294,7 @@ Her sayfada şu CSS dosyaları yüklenmelidir:
 ```
 
 ## CSS SINIFLARI (Hazır Kullanılabilir)
-- `.gri-cerceve-kutu` — gri kenarlıklı kutu
+- `.cerceve-kutu` — gri kenarlıklı kutu
 - `.ana-hizmet-karti` — hizmet kartı
 - `.beceri-grid` — grid düzeni
 - `.ana-buton` — ana buton (lacivert)
@@ -340,7 +340,7 @@ Her sayfada şu CSS dosyaları yüklenmelidir:
 2. H1 başlık + vurgu span
 3. H2 alt başlık
 4. Okul logosu (varsa): `<div class="okul-logo-alani">`
-5. İçerik bölümleri: `<div class="gri-cerceve-kutu">` içinde
+5. İçerik bölümleri: `<div class="cerceve-kutu">` içinde
 6. Kırmızı bant ayırıcı: `<div class="kirmizi-kutu"><p class="ust-satir">Başlık</p></div>`
 7. Beceri grid: `<section class="icerik-alani kings-oxford-vurgulu-tablo">`
 8. Dahil olanlar: `<section class="icerik-alani dahil-olanlar-konteyner">`
@@ -361,7 +361,7 @@ Her sayfada şu CSS dosyaları yüklenmelidir:
 <section class="icerik-alani kings-oxford-vurgulu-tablo">
     <div class="beceri-kirmizi-bant">Bölüm Başlığı</div>
     <div class="beceri-grid kings-oxford-beceri-grid">
-        <div class="gri-cerceve-kutu kings-oxford-beceri-kutu">
+        <div class="cerceve-kutu kings-oxford-beceri-kutu">
             <h2 class="kutu-baslik kings-oxford-beceri-baslik">Başlık</h2>
             <ul class="kutu-liste">
                 <li>...</li>
@@ -374,7 +374,7 @@ Her sayfada şu CSS dosyaları yüklenmelidir:
 ### Kurs Detay Kutusu
 ```html
 <section class="icerik-alani">
-    <div class="gri-cerceve-kutu kurs-detay-kutu">
+    <div class="cerceve-kutu kurs-detay-kutu">
         <h2 class="kutu-baslik">Kurs Adı</h2>
         <div class="kurs-icerik-esnek">
             <div class="kurs-teknik-bilgi">
@@ -418,7 +418,7 @@ Her sayfada şu CSS dosyaları yüklenmelidir:
 
 ### Yönlendirme Kartı
 ```html
-<div class="gri-cerceve-kutu">
+<div class="cerceve-kutu">
     <h2 class="kutu-baslik">Diğer Popüler Eğitim Rotaları</h2>
     <div class="okul-satiri-vurgulu">
         <div class="satir-sol">
@@ -483,14 +483,14 @@ Her sayfada şu CSS dosyaları yüklenmelidir:
 - h1: font-weight: 800, font-size: 33px, color: #000080, text-align: center
 - strong: color: #000000, font-weight: 700
 - Max içerik genişliği: 1150px (.icerik-alani)
-- Gri kutu max genişliği: 1100px (.gri-cerceve-kutu)
+- Gri kutu max genişliği: 1100px (.cerceve-kutu)
 
 ## HAZIR BİLEŞENLER
 
 ### Avantaj Kartları
 ```html
 <!-- Londra/Oxford/Bournemouth neden kutusu -->
-<div class="gri-cerceve-kutu londra-neden-kutu">
+<div class="cerceve-kutu londra-neden-kutu">
     <h2 class="kutu-baslik">Başlık</h2>
     <div class="avantaj-grid">
         <div class="avantaj-kart">
@@ -503,7 +503,7 @@ Her sayfada şu CSS dosyaları yüklenmelidir:
 
 ### Sekme (Tab) Yapısı
 ```html
-<div class="immerse-yas-tabs-kutu gri-cerceve-kutu">
+<div class="immerse-yas-tabs-kutu cerceve-kutu">
     <h2 class="kutu-baslik">Başlık</h2>
     <div class="yas-tabs-kapsayici">
         <input type="radio" class="yas-tab-input" id="tab1" name="tabs" checked>
@@ -519,11 +519,11 @@ Her sayfada şu CSS dosyaları yüklenmelidir:
 
 ### Rozet Kartlar (Dahil Olanlar)
 ```html
-<div class="dahil-rozet-grid">
-    <div class="dahil-rozet-kart">
-        <div class="dahil-rozet-ikon">✓</div>
-        <p class="dahil-rozet-baslik">Başlık</p>
-        <p class="dahil-rozet-metin">Açıklama</p>
+<div class="rozet-grid">
+    <div class="rozet-kart">
+        <div class="rozet-ikon">✓</div>
+        <p class="rozet-baslik">Başlık</p>
+        <p class="rozet-metin">Açıklama</p>
     </div>
 </div>
 ```
@@ -560,7 +560,7 @@ Her sayfada şu CSS dosyaları yüklenmelidir:
 
 ### Zaman Çizelgesi (Toronto Stili)
 ```html
-<div class="gri-cerceve-kutu toronto-neler-kutu">
+<div class="cerceve-kutu toronto-neler-kutu">
     <h2 class="kutu-baslik">Başlık</h2>
     <div class="toronto-neler-zaman-cizelgesi">
         <div class="toronto-neler-adim">
@@ -573,7 +573,7 @@ Her sayfada şu CSS dosyaları yüklenmelidir:
 
 ### Program Seçenekleri Grid
 ```html
-<div class="gri-cerceve-kutu dil-okullari-program-kutu">
+<div class="cerceve-kutu dil-okullari-program-kutu">
     <h2 class="kutu-baslik">Başlık</h2>
     <div class="program-grid">
         <div class="program-kart">
@@ -586,7 +586,7 @@ Her sayfada şu CSS dosyaları yüklenmelidir:
 
 ### Konaklama Listesi (Dil Okulu Stili)
 ```html
-<div class="gri-cerceve-kutu dil-okullari-konaklama-kutu">
+<div class="cerceve-kutu dil-okullari-konaklama-kutu">
     <h2 class="kutu-baslik">Başlık</h2>
     <div class="konaklama-liste">
         <div class="konaklama-oge">
@@ -805,11 +805,11 @@ Her sayfada şu CSS dosyaları yüklenmelidir:
 - `.okul-liste-baslik` → Çerçeve üst etiketi
 
 ### Rozet Kartları (Dahil Olanlar)
-- `.dahil-rozet-grid` → 3 sütunlu rozet grid
-- `.dahil-rozet-kart` → Tek rozet kartı (2 sütunlu iç grid)
-- `.dahil-rozet-ikon` → Kırmızı yuvarlak ikon
-- `.dahil-rozet-baslik` → Koyu başlık
-- `.dahil-rozet-metin` → Açıklama metni
+- `.rozet-grid` → 3 sütunlu rozet grid
+- `.rozet-kart` → Tek rozet kartı (2 sütunlu iç grid)
+- `.rozet-ikon` → Kırmızı yuvarlak ikon
+- `.rozet-baslik` → Koyu başlık
+- `.rozet-metin` → Açıklama metni
 - `.dijital-kart` → Orta sütuna hizalanan özel kart
 
 ## GENEL KURALLAR

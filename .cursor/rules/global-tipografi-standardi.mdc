@@ -9,11 +9,11 @@ Bu projede içerik kartlarında (özellikle `dahil-rozet-*` yapılarında) dil o
 
 ## Zorunlu değerler
 
-- `h3.dahil-rozet-baslik`
+- `h3.rozet-baslik`
   - `font-size: 14.5px`
   - `line-height: 1.4`
   - `font-weight: 700`
-- `p.dahil-rozet-metin`
+- `p.rozet-metin`
   - `font-size: 15px`
   - `line-height: 1.7`
 
@@ -26,7 +26,7 @@ Bu projede içerik kartlarında (özellikle `dahil-rozet-*` yapılarında) dil o
   - `article.icerik-alani p`
   - `article.icerik-alani .kutu-liste li`
   - `article.icerik-alani .ana-sirali-liste p`
-  - `article.icerik-alani .dahil-rozet-metin`
+  - `article.icerik-alani .rozet-metin`
 
 ## Not
 

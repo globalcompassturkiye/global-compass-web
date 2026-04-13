@@ -7,7 +7,7 @@ Sayfada **Sıkça Sorulan Sorular** blokları olduğunda (`.sss-alani`, `.sss-ku
 Projede tipik yapı:
 
 ```html
-<div class="gri-cerceve-kutu">
+<div class="cerceve-kutu">
             <h2 class="kutu-baslik sss-baslik">…<span class="…">Sıkça Sorulan Sorular (SSS)</span></h2>
             <div class="sss-alani">
                 <details class="sss-item">

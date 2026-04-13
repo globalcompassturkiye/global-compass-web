@@ -8,14 +8,15 @@ alwaysApply: false
 
 ## Zorunlu davranış
 
-`body.blog-yazi-sayfa-mobil-ux` olan ve `div.blog-mobil-icindekiler-wrap` kullanan sayfalarda (ör. yurt dışı yaz okulu, dil okulu program detayı):
+`body.blog-yazi-sayfa-mobil-ux` olan ve `div.blog-mobil-icindekiler-wrap` kullanan sayfalarda (ör. yurt dışı yaz okulu, dil okulu program detayı, ilgili blog yazıları):
 
-- **`blog-mobil-icindekiler-wrap`** (içinde `nav.blog-mobil-icindekiler-duz` + isteniyorsa `div.blog-yan-iletisim-kutu`), **giriş metin bloğunun hemen ardından** yer almalıdır (ör. `.chantemerle-giris-metni` veya giriş paragraflarının bittiği kapsayıcı).
-- **Büyük hero görseli**, üstte yer kaplayan kartlar veya ana **`h2`** ile açılan bölümler **bu bloktan sonra** gelmelidir.
+- Sayfadaki **giriş metni** (veya şablondaki tanıtım / hero öncesi intro bloğu) **önce** gelir.
+- **`blog-mobil-icindekiler-wrap`** (içinde `nav.blog-mobil-icindekiler-duz` + aynı yapıda tekrarlanan `div.blog-yan-iletisim-kutu`), bu giriş bloğunun **hemen ardından** gelir (aynı üst içerik akışında). **`blog-yan-iletisim-kutu`** yalnızca **`min-width: 1180px`** iken görünür (`blog.css`); dar ekranda gizlenir, mobilde yalnızca içindekiler `nav` görünür.
+- Ana **`h1`** girişten önce kalır; mobil/tablet kırılımında tek sütunda sıra: **`h1` → giriş → içindekiler →** devam içeriği.
 
 ## Neden
 
-`blog.css` içinde **`max-width: 1179px`** iken yan panel gizlenir; mobil içindekiler + hızlı iletişim görünür. İçindekiler DOM’da giriş metninin altında değilse, dar genişlikte veya satır kırılan düzenlerde blok **üst metinden uzakta** (ör. hero görselinin altında) kalır; kullanıcı içindekileri girişle ilişkilendiremez.
+`blog.css` içinde **`max-width: 1179px`** iken yan panel gizlenir; mobil içindekiler görünür (hızlı iletişim kutusu yalnızca geniş ekranda). İçindekileri giriş metninden sonra konumlandırmak, okuyucunun önce bağlamı (giriş) görmesini ve ardından menüyü bulmasını sağlar.
 
 ## Referans breakpoint
 
@@ -32,3 +33,14 @@ alwaysApply: false
 4. Hero görseli ve devamı
 
 Masaüstünde (`≥1180px`) `blog-mobil-icindekiler-wrap` yine gizlidir; içindekiler `aside.blog-yan-panel` içindedir — DOM sırası mobil/tablet için kritiktir.
+
+## Şablon notları
+
+- `id` önce `class` sonra gelebilir: `<div id="..." class="blog-mobil-icindekiler-wrap ...">`.
+- ABD Kings (Boston / LA / NY) gibi sayfalarda giriş; sırasıyla `kings-bos-giris-kampus`, `kings-la-hollywood-giris`, `kings-ny-msv-giris` gibi bloklarla biter; içindekiler bu bloğun ardından gelir.
+
+## Sabit “içindekilere dön” oku (mobil)
+
+- **`</body>` hemen öncesi:** `a.blog-mobil-icindekiler-sabit-cap` + içte `span.blog-mobil-icindekiler-sabit-cap-ok` (↑); `href`, mobil içindekiler sarmalayıcısının `id` değerine gider. Varsayılan sarmalayıcı **`id="blog-mobil-icindekiler-hedef"`**; özel sayfa (ör. Tokyo) mevcut `id` korunabilir.
+- **Görünüm:** `blog.css` — `body:has(.blog-mobil-icindekiler-wrap)`, yalnızca **`max-width: 1179px`**. Dikeyde **`top: min(50vh + 2rem, …)`** + **`translateY(-50%)`** (ekran ortasının biraz altı); alt sabit CTA (`blog-mobil-cta-bar-wrap`) varsa `min()` içindeki üst sınır sıkılaştırılır.
+- **Üstte gizli:** Sayfa **`scrollY ≤ ~120px`** iken ok görünmez; aşağı kaydırılınca `header-offset.js` **`body.blog-icindekiler-sabit-ok-goster`** ekler (`blog.css` ile görünür).

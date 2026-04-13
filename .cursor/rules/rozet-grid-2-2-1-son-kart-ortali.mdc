@@ -6,7 +6,7 @@ alwaysApply: false
 
 # Rozet Grid 2+2+1 Standartı
 
-`dahil-rozet-grid` içinde **5 kart** varsa düzen `2+2+1` olmalı ve son kart ortalanmalıdır.
+`rozet-grid` içinde **5 kart** varsa düzen `2+2+1` olmalı ve son kart ortalanmalıdır.
 
 ## Zorunlu düzen
 
@@ -20,8 +20,8 @@ alwaysApply: false
 
 - Global override yazma.
 - Mutlaka sayfa/bölüm bazlı wrapper ile uygula.
-  - Örn: `.dil-okullari-program-kutu .dahil-rozet-grid`
-  - Örn: `.yaz-okullari-program-kutu .dahil-rozet-grid`
+  - Örn: `.dil-okullari-program-kutu .rozet-grid`
+  - Örn: `.yaz-okullari-program-kutu .rozet-grid`
 
 ## Mobil davranış
 

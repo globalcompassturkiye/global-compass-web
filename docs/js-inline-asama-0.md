@@ -174,7 +174,7 @@ Aşağıdaki **Aşama 3** ve **Aşama 4** başlıkları **CSS/HTML** (başlık s
 
 ## Aşama 4 — CSS/HTML (uygulandı — 2026-03-31)
 
-- **`baslik-iki-satir`:** `h2.kutu-baslik` içinde `<br>` + `span.vurgu-renk` kullanan tüm ilgili **`gri-cerceve-kutu`** kapsayıcılarına `baslik-iki-satir` eklendi (toplam **19** kutu, **13** HTML dosyası; daha önce yalnızca Frankfurt Alpadia, Sportech ve Immerse Cambridge’deki **5** kutuda vardı).
-- **Stil kaynağı:** `css/style.css` içindeki `.gri-cerceve-kutu.baslik-iki-satir` ve `.kutu-baslik + *` kuralları geçerli; `:has(h2.kutu-baslik br):not(.baslik-iki-satir)` yedek seçici yeni iki satırlı kutularda artık devreye girmez. SSS gri kutuları **`/css/sss.css`** ile uyumlu kalır.
+- **`baslik-iki-satir`:** `h2.kutu-baslik` içinde `<br>` + `span.vurgu-renk` kullanan tüm ilgili **`cerceve-kutu`** kapsayıcılarına `baslik-iki-satir` eklendi (toplam **19** kutu, **13** HTML dosyası; daha önce yalnızca Frankfurt Alpadia, Sportech ve Immerse Cambridge’deki **5** kutuda vardı).
+- **Stil kaynağı:** `css/style.css` içindeki `.cerceve-kutu.baslik-iki-satir` ve `.kutu-baslik + *` kuralları geçerli; `:has(h2.kutu-baslik br):not(.baslik-iki-satir)` yedek seçici yeni iki satırlı kutularda artık devreye girmez. SSS gri kutuları **`/css/sss.css`** ile uyumlu kalır.
 - **`title` / `meta description` / JSON-LD** değiştirilmedi.
 

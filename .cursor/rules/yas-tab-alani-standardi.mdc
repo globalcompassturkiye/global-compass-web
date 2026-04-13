@@ -18,7 +18,7 @@ alwaysApply: false
 Sekme alanı genelde **gri çerçeve** içinde verilir:
 
 ```html
-<div class="gri-cerceve-kutu immerse-yas-tabs-kutu">
+<div class="cerceve-kutu immerse-yas-tabs-kutu">
     <h2 class="kutu-baslik">Bölüm başlığı</h2>
 
     <div class="yas-tabs-kapsayici sayfa-konusu-tabs-kapsayici">

@@ -12,11 +12,11 @@ Bu projede içerik sayfalarında `h1` başlığından sonra gelen ilk açıklama
 
 - `h1` sonrasındaki ilk açıklama bölümü doğrudan metin (`p`) olarak kullanılmalı.
 - Bu ilk metin için ek bir `h2/h3` başlığı eklenmemeli.
-- Bu ilk metin `gri-cerceve-kutu` veya benzeri çerçeve/kart wrapper içine alınmamalı.
+- Bu ilk metin `cerceve-kutu` veya benzeri çerçeve/kart wrapper içine alınmamalı.
 
 ## Kaçınılacak yapı
 
-- `h1` sonrası `div.gri-cerceve-kutu > h2 + p`
+- `h1` sonrası `div.cerceve-kutu > h2 + p`
 - `h1` sonrası sadece görsel amaçlı kutu/çerçeve içinde metin
 
 ## Doğru yapı örneği

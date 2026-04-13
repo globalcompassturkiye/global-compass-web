@@ -6,11 +6,11 @@ alwaysApply: false
 
 # Rozet Grid Yerleşim Kuralı (2+1 / 2+2 / 3+1)
 
-`dahil-rozet-grid` içinde yer alan `.dahil-rozet-kart` kart düzenlerini **içeriğin durumuna göre** şu şablonlarla uygula:
+`rozet-grid` içinde yer alan `.rozet-kart` kart düzenlerini **içeriğin durumuna göre** şu şablonlarla uygula:
 
 ## Öncelik: Diğer sayfaları bozma
-- Tüm sitenin genelini etkileyecek şekilde `.dahil-rozet-grid` veya `.dahil-rozet-kart` için “genel” override yazma.
-- Mutlaka sayfaya/section'a özel bir parent wrapper kullan (örn: `.<sayfa-ozel-class> .dahil-rozet-grid ...`).
+- Tüm sitenin genelini etkileyecek şekilde `.rozet-grid` veya `.rozet-kart` için “genel” override yazma.
+- Mutlaka sayfaya/section'a özel bir parent wrapper kullan (örn: `.<sayfa-ozel-class> .rozet-grid ...`).
 - Mevcut pratik: `yurt-disi-universite` için `ulke-egitim-grid-2-2-1`, `yuksek-lisans-kusursuz-kutu` gibi spesifik wrapper sınıflar.
 
 ## Equal height (çerçeveler eşit boy)
@@ -24,12 +24,12 @@ Kart sayısı 3 ise (1-2 üst satır, 3 altta ortalı):
 
 Örnek:
 ```css
-.<wrapper> .dahil-rozet-grid {
+.<wrapper> .rozet-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: stretch;
 }
-.<wrapper> .dahil-rozet-grid > .dahil-rozet-kart:nth-child(3) {
+.<wrapper> .rozet-grid > .rozet-kart:nth-child(3) {
   grid-column: 1 / -1;
   justify-self: center;
 }
@@ -42,7 +42,7 @@ Kart sayısı 4 ise ve 2x2 isteniyorsa:
 
 Örnek:
 ```css
-.<wrapper> .dahil-rozet-grid {
+.<wrapper> .rozet-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: stretch;
@@ -56,12 +56,12 @@ Kart sayısı 4 ise ama “4. kart 2. kartın altında, ortalı” isteniyorsa:
 
 Örnek:
 ```css
-.<wrapper> .dahil-rozet-grid {
+.<wrapper> .rozet-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: stretch;
 }
-.<wrapper> .dahil-rozet-grid > .dahil-rozet-kart:nth-child(4) {
+.<wrapper> .rozet-grid > .rozet-kart:nth-child(4) {
   grid-column: 2;
   grid-row: 2;
   justify-self: center;

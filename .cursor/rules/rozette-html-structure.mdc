@@ -4,14 +4,14 @@ globs: '**/*.html'
 alwaysApply: false
 ---
 
-# Dahil-rozet-kart Yapı Standardı
+# rozet-kart Yapı Standardı
 
 ## HTML hiyerarşi
-- `.dahil-rozet-grid` doğrudan altında `article.dahil-rozet-kart` kartları olsun (kartların içine başka grid kurma ihtiyacı yoksa kurma).
+- `.rozet-grid` doğrudan altında `article.rozet-kart` kartları olsun (kartların içine başka grid kurma ihtiyacı yoksa kurma).
 - Her kart içinde sırasıyla:
-  - `div.dahil-rozet-ikon` (numara/ikon)
-  - `h3.dahil-rozet-baslik`
-  - `p.dahil-rozet-metin` (veya sayfada kullanılan liste/kart metni)
+  - `div.rozet-ikon` (numara/ikon)
+  - `h3.rozet-baslik`
+  - `p.rozet-metin` (veya sayfada kullanılan liste/kart metni)
 
 ## Layout özel class
 - `2+1 / 2+2 / 3+1` gibi yerleşimler için “parent wrapper class” ekle:
@@ -19,6 +19,6 @@ alwaysApply: false
 - Bu class CSS override’leri sadece o bölüme uygular.
 
 ## Bozmamak için
-- Aynı `.dahil-rozet-grid` altında kart sayısını (3/4/5) değiştirdikten sonra ilgili layout seçimini güncelle.
-- Sayfa genelindeki `.dahil-rozet-kart` stilini bozacak “genel” değişikliklerden kaçın.
+- Aynı `.rozet-grid` altında kart sayısını (3/4/5) değiştirdikten sonra ilgili layout seçimini güncelle.
+- Sayfa genelindeki `.rozet-kart` stilini bozacak “genel” değişikliklerden kaçın.
 

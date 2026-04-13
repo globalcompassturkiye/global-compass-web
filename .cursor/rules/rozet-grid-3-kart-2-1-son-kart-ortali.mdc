@@ -6,7 +6,7 @@ alwaysApply: false
 
 # Rozet Grid 3 Kart (2+1) Standardı
 
-`dahil-rozet-grid` icinde **3 kart** varsa duzen `2+1` olmali ve 3. kart ortalanmalidir.
+`rozet-grid` icinde **3 kart** varsa duzen `2+1` olmali ve 3. kart ortalanmalidir.
 
 ## Zorunlu duzen
 

@@ -6,7 +6,7 @@ alwaysApply: false
 
 # Dahil Rozet Kart Tipleri Standartı
 
-`dahil-rozet-grid` içindeki kartlar yalnızca aşağıdaki iki tipten biriyle tasarlanmalıdır.
+`rozet-grid` içindeki kartlar yalnızca aşağıdaki iki tipten biriyle tasarlanmalıdır.
 
 ## Tip 1 — Numaralı Kart (1, 2, 3, ...)
 
@@ -15,9 +15,9 @@ alwaysApply: false
 
 ### HTML
 - Kart içinde:
-  - `div.dahil-rozet-ikon` → `1`, `2`, `3` gibi numara
-  - `h3.dahil-rozet-baslik`
-  - `p.dahil-rozet-metin`
+  - `div.rozet-ikon` → `1`, `2`, `3` gibi numara
+  - `h3.rozet-baslik`
+  - `p.rozet-metin`
 
 ### Stil prensibi
 - İkon dairesel rozet olarak görünür.
@@ -30,9 +30,9 @@ alwaysApply: false
 
 ### HTML
 - Kart içinde:
-  - `div.dahil-rozet-ikon` → `✓`
-  - `h3.dahil-rozet-baslik`
-  - `p.dahil-rozet-metin`
+  - `div.rozet-ikon` → `✓`
+  - `h3.rozet-baslik`
+  - `p.rozet-metin`
 
 ### Stil prensibi
 - `✓` rozet görünümü numaralı tip ile aynı ailede olmalı (boyut, hizalama, boşluk).
@@ -43,7 +43,7 @@ alwaysApply: false
 - Aynı grid/bölüm içinde tek tip kullan (numaralı **veya** ✓ işaretli).
 - Aynı sayfa içinde iki tip kullanılacaksa her bölümde tip net ayrılmalı.
 - Kart yapısı her iki tipte de aynı kalmalı:
-  - `.dahil-rozet-kart` + `.dahil-rozet-ikon` + `.dahil-rozet-baslik` + `.dahil-rozet-metin`
+  - `.rozet-kart` + `.rozet-ikon` + `.rozet-baslik` + `.rozet-metin`
 
 ## Kaçınılacak
 

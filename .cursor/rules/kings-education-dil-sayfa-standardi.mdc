@@ -15,7 +15,7 @@ Referans iskelet ve bloklar: **`/yurt-disi-dil-okullari/usa/new-york/kings-educa
 
 - **`blog.css`** linkli olsun; ana içerik: `main` → `article.icerik-alani` → `div.blog-yazi-tek-sutun.blog-yazi-tek-sutun--tam.kings-london-toc-outer` → `div.blog-yazi-layout.blog-yazi-layout--yan-panel` → `div.blog-yazi-ana` (hero, bloklar, programlar, dahil, konaklama, akreditasyon).
 - **Breadcrumb:** `ol.breadcrumb-kutu.breadcrumb-kutu--hiyerarsik` (hiyerarşik liste), ilgili şehir URL’leri.
-- **Mobil içindekiler:** `div.blog-mobil-icindekiler-wrap` içinde `nav.blog-mobil-icindekiler-duz` + `blog-yan-iletisim-kutu` (hızlı iletişim); `details` tabanlı eski kalıp yerine bu düzen tercih edilir. **`max-width: 1179px` altında** bu blok DOM’da **giriş metninin (`#…-giris-kampus` veya ana giriş paragrafları) hemen ardından** olmalı — kampüs fotoğrafı / sonraki bölümlerden önce; `blog.css` mobil akışı buna göre tasarlanmıştır.
+- **Mobil içindekiler:** `div.blog-mobil-icindekiler-wrap` içinde `nav.blog-mobil-icindekiler-duz` + `blog-yan-iletisim-kutu` (DOM’da aynı sarmalayıcıda kalır; **`blog-yan-iletisim-kutu` yalnızca `min-width: 1180px` iken görünür**, dar ekranda `blog.css` ile gizlenir); `details` tabanlı eski kalıp yerine bu düzen tercih edilir. **`max-width: 1179px` altında** bu blok DOM’da **giriş metninin (`#…-giris-kampus` veya ana giriş paragrafları) hemen ardından** olmalı — kampüs fotoğrafı / sonraki bölümlerden önce; `blog.css` mobil akışı buna göre tasarlanmıştır.
 - **Masaüstü:** `aside.blog-yan-panel` — içindekiler listesi + aynı hızlı iletişim; `blog-yazi-ana` bittikten sonra, dış sarmalayıcıları kapatmadan önce.
 - **Form bandı + bilgi formu + ilgili sayfalar:** İki sütun layout **dışında** ama `article` içinde (NY sırası).
 - **`body`:** `sayfa-kings-education sayfa-kings-education-{şehir} blog-yazi-sayfa-mobil-ux` (şehir sınıfı hedefli CSS için).
@@ -44,7 +44,7 @@ Referans iskelet ve bloklar: **`/yurt-disi-dil-okullari/usa/new-york/kings-educa
 
 ## Kurs fiyatına dahil (`kings-la-dahil-bolum`)
 
-- Ortak LA özel dosyadaki **kalın kırmızı üst kenar**, sayfa standardında **`gri-cerceve-kutu` ile aynı çerçeve** olmalıdır: şehir **`layout`** CSS’inde örn. **`border: 1px solid #d1d1d1`** (`style.css` `.gri-cerceve-kutu` ile uyumlu).
+- Ortak LA özel dosyadaki **kalın kırmızı üst kenar**, sayfa standardında **`cerceve-kutu` ile aynı çerçeve** olmalıdır: şehir **`layout`** CSS’inde örn. **`border: 1px solid #d1d1d1`** (`style.css` `.cerceve-kutu` ile uyumlu).
 - İki sütun dahil kart grid’i: `kings-*-dahil-grid-2kol` + breakpoint ile iki kolon (Boston layout örneği).
 
 ## Konaklama (`kings-la-konaklama-bolum` + `kings-bos-*-konaklama` vb.)
