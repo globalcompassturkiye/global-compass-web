@@ -6,11 +6,12 @@
     text-align: center;
 }
 
-.ielts-blog-yazi .blog-yazi-baslik-wrap h1 {
+.ielts-blog-yazi .blog-yazi-icerik > h1 {
     font-family: "Poppins", sans-serif;
     font-size: var(--h1-font-size);
     line-height: 1.25;
-    margin: 0.4rem 0 1rem;
+    margin: 0.4rem 0 0.65rem;
+    text-align: center;
 }
 
 .ielts-blog-yazi h1 .ielts-h1-alt-satir {
@@ -20,6 +21,7 @@
 .ielts-hero {
     background: linear-gradient(135deg, #f4f7ff 0%, #ffffff 100%);
     border: 0 solid transparent;
+    border-radius: 15px;
     padding: 1.25rem;
     margin-bottom: 1.4rem;
     min-height: 180px;
@@ -28,7 +30,7 @@
 .ielts-blog-yazi #ielts-giris.ielts-hero {
     background: transparent;
     border: 0;
-    padding: 0;
+    padding: 0 25px 0 0;
     margin-bottom: 1rem;
     min-height: 0;
 }
@@ -42,6 +44,7 @@
 
 .ielts-bolum-kart {
     border: 0 solid transparent;
+    border-radius: 15px;
     background: #fff;
     padding: 1rem;
     min-height: 170px;
@@ -66,6 +69,7 @@
     margin-top: 1.5rem;
     padding: 0.65rem 0 0;
     border: 0 solid transparent;
+    border-radius: 15px;
     overflow: hidden;
     background: linear-gradient(155deg, #0e2f76 0%, #173d94 100%);
     color: #fff;

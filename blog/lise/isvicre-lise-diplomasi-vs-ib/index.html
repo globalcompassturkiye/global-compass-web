@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="/css/site-breadcrumb.css">
     <link rel="stylesheet" href="/css/site-yonlendirme-kart.css">
     <link rel="stylesheet" href="/css/blog.css">
+    <link rel="stylesheet" href="/css/site-iletisim-form.css">
     <link rel="stylesheet" href="/css/isvicre-lise-diplomasi-vs-ib.css">
 </head>
 <body class="sayfa-blog blog-yazi-sayfa-mobil-ux blog-yazi-isvicre-ib">
@@ -184,16 +185,11 @@
         </nav>
 
         <div class="blog-yazi-tek-sutun blog-yazi-tek-sutun--tam">
+            <div class="blog-yazi-layout blog-yazi-layout--yan-panel">
+                <div class="blog-yazi-ana">
+                    <div class="blog-yazi-icerik" id="blog-yazi-icerik-alani">
             <header class="blog-yazi-baslik-wrap blog-yazi-baslik-wrap--meta-modern">
                 <h1 id="isvicre-hero-baslik" class="blog-yazi-ana-baslik">İsviçre'de Lise Eğitimi: <span class="vurgu-renk">İsviçre Lise Diploması mı, IB mi?</span></h1>
-
-
-
-
-
-
-
-
                 <p class="blog-yazi-meta-alt">
                     <span>Kategori:</span>
                     <a class="blog-kategori-etiketi" href="/blog/lise/">LİSE</a>
@@ -206,10 +202,6 @@
                     </span>
                 </p>
             </header>
-
-            <div class="blog-yazi-layout blog-yazi-layout--yan-panel">
-                <div class="blog-yazi-ana">
-                    <div class="blog-yazi-icerik" id="blog-yazi-icerik-alani">
                         <section class="isvicre-blog-hero" aria-label="Giriş">
                             <p class="isvicre-blog-hero-lead">Yurt dışında lise eğitimi söz konusu olduğunda İsviçre, hem akademik disiplini hem de çok dilli yapısıyla ebeveynlerin ilk tercihlerinden biri. Ancak İsviçre'de eğitim alacak bir öğrenci için en kritik karar; okul seçimi kadar, diploma sistemi seçimidir. Ebeveynlerin en sık sorduğu soru ise net: &quot;İsviçre diploması mı (Maturité/Abitur) yoksa International Baccalaureate (IB) mi?&quot;</p>
                             <p class="isvicre-blog-hero-lead">Bu yazımızda, her iki sistemin avantajlarını ve hangi akademik hedeflere hizmet ettiğini detaylandırıyoruz.</p>
@@ -234,6 +226,7 @@
                                     <li><a href="#onemli-not-metin">Önemli Not</a></li>
                                     <li><a href="#hangi-sistemi-secmelisiniz-baslik">Hangi Sistemi Seçmelisiniz? Eğitim Stratejinizi Belirleyin</a></li>
                                     <li><a href="#global-compass-kapanis">Global Compass ile Doğru Eğitim Stratejisini Oluşturun</a></li>
+                                    <li><a href="#bilgi-istek">Bilgi İstek Formu</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -303,6 +296,40 @@
                             <p>İsviçre'de lise eğitimi, bir öğrencine sunulabilecek en değerli yatırımlardan biridir. Ancak bu süreçte öğrenciyi bir sisteme zorla dahil etmek yerine, onun akademik hedeflerine ve karakterine en uygun yolu belirlemek başarının anahtarıdır.</p>
                             <p>Global Compass olarak, İsviçre'nin karmaşık eğitim haritasında aileniz ve öğrenciniz için en doğru rotayı çiziyoruz. Diplomalardan okul seçimlerine, başvuru süreçlerinden kariyer planlamasına kadar her adımda profesyonel danışmanlığımızla yanınızdayız. Unutmayın; ortaöğretim sadece bir lise hayatından ibaret değildir; dünya çapında bir üniversite ve kariyer sistemine giriş noktasıdır.</p>
                         </section>
+
+                        <section class="iletisim-form-alani" id="bilgi-istek" aria-labelledby="blog-bilgi-form-baslik-isvicre">
+                            <div class="kirmizi-kutu">
+                                <h2 class="bilgi-form-bant-baslik" id="blog-bilgi-form-baslik-isvicre"><span class="ust-satir">Daha Fazla Bilgi ve Başvuru İçin</span><span class="alt-satir-lacivert">Bilgi İstek Formu</span></h2>
+                            </div>
+                            <p>İsviçre lise eğitimi, IB ve okul seçimi hakkında bilgi almak için formu doldurmanız yeterlidir. Uzman danışmanlarımız en kısa sürede sizinle iletişime geçecektir.</p>
+                            <form id="iletisim-formu" action="#" method="POST">
+                                <div class="form-satir">
+                                    <input type="text" name="ad" placeholder="Adınız" required>
+                                    <input type="text" name="soyad" placeholder="Soyadınız" required>
+                                </div>
+                                <div class="form-satir">
+                                    <input type="tel" name="telefon" placeholder="Telefon*" required>
+                                    <input type="email" name="email" placeholder="E-Posta*" required>
+                                </div>
+                                <div class="form-grup">
+                                    <div class="radyo-grup">
+                                        <label><input type="radio" name="kimlik" value="ogrenci" required> Öğrenciyim</label>
+                                        <label><input type="radio" name="kimlik" value="veli"> Veliyim</label>
+                                        <label><input type="radio" name="kimlik" value="diger"> Diğer</label>
+                                    </div>
+                                </div>
+                                <textarea name="mesaj" placeholder="Merak Ettikleriniz*" rows="4" required></textarea>
+                                <div class="kvkk-satir">
+                                    <div class="kvkk-alani">
+                                        <input type="checkbox" id="kvkk-onay-blog-isvicre" required>
+                                        <label for="kvkk-onay-blog-isvicre">
+                                            <a href="/kvkk-aydinlatma-metni/" class="kvkk-link">KVKK Aydınlatma Metnini</a> Okudum*
+                                        </label>
+                                    </div>
+                                    <button type="submit" class="form-buton-kucuk">Gönder</button>
+                                </div>
+                            </form>
+                        </section>
                     </div>
                 </div>
 
@@ -317,6 +344,7 @@
                             <li><a href="#onemli-not-metin">Önemli Not</a></li>
                             <li><a href="#hangi-sistemi-secmelisiniz-baslik">Hangi Sistemi Seçmelisiniz? Eğitim Stratejinizi Belirleyin</a></li>
                             <li><a href="#global-compass-kapanis">Global Compass ile Doğru Eğitim Stratejisini Oluşturun</a></li>
+                            <li><a href="#bilgi-istek">Bilgi İstek Formu</a></li>
                         </ul>
                     </nav>
                     <div class="blog-yan-iletisim-kutu">
@@ -432,6 +460,7 @@
     <script src="/js/nav-submenu.js" defer></script>
     <script src="/js/header-offset.js" defer></script>
     <script src="/js/blog.js" defer></script>
+    <script src="/js/iletisim-formu.js" defer></script>
 
     <a href="#blog-mobil-icindekiler-hedef" class="blog-mobil-icindekiler-sabit-cap" aria-label="İçindekiler bölümüne git"><span class="blog-mobil-icindekiler-sabit-cap-ok" aria-hidden="true">↑</span></a>
 </body>

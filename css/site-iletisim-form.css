@@ -514,7 +514,7 @@ article.icerik-alani .new-york-bilgi-form-paneli .iletisim-form-alani > p:first-
     margin-top: 0;
 }
 
-/* Blog / IELTS CTA: dar sütun form */
+/* Blog / IELTS: dar sütun form (CTA içinde veya sol sütun sonunda) */
 .ielts-cta .iletisim-form-alani.ielts-dar-form {
     max-width: none;
     width: 100%;
@@ -524,7 +524,19 @@ article.icerik-alani .new-york-bilgi-form-paneli .iletisim-form-alani > p:first-
     border-right: 0;
 }
 
-.ielts-cta .iletisim-form-alani.ielts-dar-form > p {
+.blog-yazi-icerik .iletisim-form-alani.ielts-dar-form {
+    max-width: none;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    padding-top: var(--bilgi-istek-form-metin-ust-bosluk, 25px);
+    border-left: 0;
+    border-right: 0;
+}
+
+.ielts-cta .iletisim-form-alani.ielts-dar-form > p,
+.blog-yazi-icerik .iletisim-form-alani.ielts-dar-form > p {
     margin-top: 0;
 }
 
@@ -533,7 +545,13 @@ article.icerik-alani .new-york-bilgi-form-paneli .iletisim-form-alani > p:first-
 .ielts-cta .iletisim-form-alani.ielts-dar-form h3,
 .ielts-cta .iletisim-form-alani.ielts-dar-form p,
 .ielts-cta .iletisim-form-alani.ielts-dar-form label,
-.ielts-cta .iletisim-form-alani.ielts-dar-form .kvkk-link {
+.ielts-cta .iletisim-form-alani.ielts-dar-form .kvkk-link,
+.blog-yazi-icerik .iletisim-form-alani.ielts-dar-form,
+.blog-yazi-icerik .iletisim-form-alani.ielts-dar-form h2,
+.blog-yazi-icerik .iletisim-form-alani.ielts-dar-form h3,
+.blog-yazi-icerik .iletisim-form-alani.ielts-dar-form p,
+.blog-yazi-icerik .iletisim-form-alani.ielts-dar-form label,
+.blog-yazi-icerik .iletisim-form-alani.ielts-dar-form .kvkk-link {
     color: #1f2937;
 }
 

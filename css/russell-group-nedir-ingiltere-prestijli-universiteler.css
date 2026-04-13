@@ -49,6 +49,7 @@
     width: 100%;
     max-width: 100%;
     overflow: hidden;
+    border-radius: 15px;
     box-shadow: 0 10px 36px rgba(15, 23, 42, 0.12);
     background: linear-gradient(135deg, #1e3a5f 0%, #0f172a 100%);
 }
@@ -66,6 +67,7 @@
     background: linear-gradient(145deg, #fff5f6 0%, #f0f7ff 100%);
     border: 0 solid transparent;
     border-left: 4px solid #c41e3a;
+    border-radius: 15px;
     padding: 1.25rem 1.35rem 1.35rem;
     margin: 1.5rem 0;
 }
@@ -148,6 +150,7 @@
 .russell-uni-hucre {
     background: #fff;
     border: 0 solid transparent;
+    border-radius: 15px;
     padding: 0.75rem 1rem;
     font-size: 14px;
     font-weight: 500;
