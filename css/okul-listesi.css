@@ -1,0 +1,364 @@
+/* Panel kabuğu */
+.okul-listesi-secim-paneli {
+    max-width: 1200px;
+    margin: 25px auto 60px auto;
+    padding: 0;
+    border: 0 solid transparent;
+    border-top: none;
+    background: transparent !important;
+    box-shadow: none !important;
+    overflow: hidden;
+}
+
+/* Liste çerçevesi + seçim paneli içi */
+.okul-listesi-secim-paneli .okul-listesi-okul-liste-kapsayici {
+    margin: 0;
+    padding: 18px 25px !important;
+}
+
+.okul-listesi-okul-liste-kapsayici {
+    max-width: 1200px;
+    margin: 50px auto 25px auto;
+    box-sizing: border-box;
+    border: 1px solid var(--site-kart-kenar);
+    border-radius: 15px;
+    box-shadow: var(--site-kart-golge);
+    padding: 24px 25px 15px 25px;
+    background-color: #ffffff;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.okul-listesi-secim-paneli .okul-listesi-okul-liste-kapsayici {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.okul-listesi-okul-liste-kapsayici:has(.okul-listesi-modern-okul-listesi):hover {
+    border-color: #000080;
+    box-shadow: var(--site-kart-golge-hover);
+    transform: translateY(-4px);
+}
+
+.okul-listesi-secim-paneli .okul-listesi-okul-liste-kapsayici:hover {
+    transform: none !important;
+    box-shadow: var(--site-kart-golge) !important;
+    border-color: var(--site-kart-kenar) !important;
+    background: #ffffff !important;
+}
+
+/* Program başlığı */
+.okul-listesi-secim-paneli .okul-listesi-okul-liste-kapsayici > .okul-listesi-program-secim-hub-baslik {
+    margin: 0 0 18px;
+    padding: 0 0 16px;
+    border-bottom: 1px solid #e2e8f0;
+    text-align: center;
+}
+
+.okul-listesi-program-secim-hub-baslik .okul-listesi-alt-satir-lacivert {
+    margin: 10px 0 0;
+    font-size: clamp(1.05rem, 2.1vw, 1.3rem);
+    font-weight: 700;
+    color: #000080;
+    line-height: 1.35;
+}
+
+.okul-listesi-program-secim-hub-baslik > .okul-listesi-alt-satir-lacivert:first-child {
+    margin-top: 0;
+}
+
+/* Bölüm + satırlar */
+.okul-listesi-okul-liste-kapsayici .okul-listesi-modern-okul-listesi {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+}
+
+.okul-listesi-secim-paneli .okul-listesi-okul-liste-kapsayici .okul-listesi-modern-okul-listesi {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+    display: block !important;
+}
+
+.okul-listesi-modern-okul-listesi {
+    max-width: 1200px !important;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.okul-listesi-okul-liste-kapsayici .okul-listesi-premium-liste-kart {
+    border: none;
+    box-shadow: none;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.okul-listesi-okul-liste-kapsayici .okul-listesi-modern-okul-listesi > .okul-listesi-premium-liste-kart ~ .okul-listesi-premium-liste-kart {
+    margin-top: 25px !important;
+}
+
+.okul-listesi-secim-paneli .okul-listesi-okul-liste-kapsayici .okul-listesi-modern-okul-listesi > .okul-listesi-premium-liste-kart ~ .okul-listesi-premium-liste-kart {
+    margin-top: 25px !important;
+}
+
+.okul-listesi-secim-paneli .okul-listesi-okul-liste-kapsayici .okul-listesi-modern-okul-listesi > .okul-listesi-premium-liste-kart {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.okul-listesi-okul-liste-kapsayici .okul-listesi-premium-liste-kart:hover {
+    transform: none;
+    border-color: transparent;
+    box-shadow: none;
+}
+
+.okul-listesi-okul-liste-kapsayici .okul-listesi-modern-okul-listesi .okul-listesi-premium-liste-kart,
+.okul-listesi-okul-liste-kapsayici .okul-listesi-modern-okul-listesi .okul-listesi-premium-liste-kart.okul-listesi-glass-stil {
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+}
+
+.okul-listesi-okul-liste-kapsayici .okul-listesi-modern-okul-listesi .okul-listesi-premium-liste-kart:hover,
+.okul-listesi-okul-liste-kapsayici .okul-listesi-modern-okul-listesi .okul-listesi-premium-liste-kart.okul-listesi-glass-stil:hover {
+    transform: none !important;
+    box-shadow: none !important;
+    border-color: transparent !important;
+    background: transparent !important;
+}
+
+.okul-listesi-premium-liste-kart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    border: 0 solid transparent;
+    padding: 20px 20px;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+.okul-listesi-premium-liste-kart:hover {
+    transform: translateX(10px);
+    border-color: #000080;
+    box-shadow: 0 10px 30px rgba(0, 0, 128, 0.08);
+}
+
+.okul-listesi-secim-paneli .okul-listesi-premium-liste-kart,
+.okul-listesi-secim-paneli .okul-listesi-glass-stil,
+.okul-listesi-secim-paneli .okul-listesi-btn-modern-incele,
+.okul-listesi-secim-paneli .okul-listesi-ok-animasyon {
+    transition: none !important;
+}
+
+.okul-listesi-secim-paneli .okul-listesi-premium-liste-kart:hover,
+.okul-listesi-secim-paneli .okul-listesi-glass-stil:hover {
+    transform: none !important;
+    box-shadow: none !important;
+    border-color: transparent !important;
+    background: transparent !important;
+}
+
+/* Sol / sağ gruplar, ayraç, numara */
+.okul-listesi-kart-sol-grup {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    min-width: 0;
+}
+
+.okul-listesi-kart-sag-grup {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.okul-listesi-liste-index {
+    font-size: 24px;
+    font-weight: 900;
+    color: #e0e0e0;
+    margin-right: 8px;
+}
+
+.okul-listesi-ayrac-dikey {
+    width: 1px;
+    height: 30px;
+    background: #eee;
+}
+
+/* Okul adı + buton + ok */
+.okul-listesi-okul-isim-link {
+    text-decoration: none;
+    color: #000080 !important;
+    font-size: 15px;
+    font-weight: 700;
+    transition: 0.3s;
+    text-align: left;
+}
+
+.okul-listesi-okul-isim-link:hover {
+    color: #bd0505 !important;
+}
+
+.okul-listesi-secim-paneli .okul-listesi-okul-liste-kapsayici .okul-listesi-okul-isim-link {
+    font-size: 20px;
+}
+
+.okul-listesi-okul-liste-kapsayici .okul-listesi-okul-isim-link {
+    font-size: 13px;
+}
+
+.okul-listesi-btn-modern-incele {
+    text-decoration: none;
+    color: #000080;
+    font-weight: 700;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.okul-listesi-btn-modern-incele:hover {
+    color: #bd0505;
+}
+
+.okul-listesi-ok-animasyon {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.okul-listesi-premium-liste-kart:hover .okul-listesi-ok-animasyon {
+    transform: translateX(5px);
+}
+
+/* Hub satır vurgusu */
+.okul-listesi-secim-paneli .okul-listesi-liste-index,
+.okul-listesi-secim-paneli .okul-listesi-okul-isim-link,
+.okul-listesi-secim-paneli .okul-listesi-btn-modern-incele {
+    font-size: 18px !important;
+}
+
+.okul-listesi-secim-paneli .okul-listesi-okul-isim-link:hover,
+.okul-listesi-secim-paneli .okul-listesi-btn-modern-incele:hover {
+    color: inherit !important;
+    text-decoration: none !important;
+    padding-left: 0 !important;
+}
+
+.okul-listesi-secim-paneli .okul-listesi-btn-modern-incele:hover {
+    color: #e30613 !important;
+}
+
+.okul-listesi-secim-paneli .okul-listesi-btn-modern-incele:hover .okul-listesi-ok-animasyon {
+    color: #e30613 !important;
+    transform: translateX(2px);
+}
+
+.okul-listesi-secim-paneli .okul-listesi-premium-liste-kart:hover .okul-listesi-okul-isim-link,
+.okul-listesi-secim-paneli .okul-listesi-premium-liste-kart:hover .okul-listesi-btn-modern-incele,
+.okul-listesi-secim-paneli .okul-listesi-premium-liste-kart:hover .okul-listesi-ok-animasyon {
+    color: #e30613 !important;
+}
+
+.okul-listesi-secim-paneli .okul-listesi-premium-liste-kart:hover .okul-listesi-liste-index,
+.okul-listesi-secim-paneli .okul-listesi-liste-index {
+    color: #6b7280 !important;
+    transition: none !important;
+    transform: none !important;
+}
+
+/* --- Mobil --- */
+
+@media (max-width: 768px) {
+    .okul-listesi-secim-paneli {
+        margin: 20px 0 45px 0;
+        padding: 0;
+    }
+
+    .okul-listesi-modern-okul-listesi {
+        padding-left: var(--icerik-yan-gutter) !important;
+        padding-right: var(--icerik-yan-gutter) !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .okul-listesi-okul-liste-kapsayici {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .okul-listesi-premium-liste-kart {
+        padding: 15px 15px 15px 5px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        text-align: left;
+        gap: 12px;
+    }
+
+    .okul-listesi-kart-sol-grup {
+        flex: 1;
+    }
+
+    .okul-listesi-okul-isim-link {
+        font-size: 15px;
+    }
+
+    .okul-listesi-okul-liste-kapsayici .okul-listesi-kart-sag-grup,
+    .okul-listesi-modern-okul-listesi .okul-listesi-kart-sag-grup {
+        display: none !important;
+    }
+}
+
+@media (max-width: 501px) {
+    .okul-listesi-secim-paneli .okul-listesi-okul-liste-kapsayici .okul-listesi-okul-isim-link {
+        font-size: 13px;
+    }
+
+    .okul-listesi-okul-liste-kapsayici {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .okul-listesi-okul-liste-kapsayici .okul-listesi-premium-liste-kart {
+        padding-left: 10px;
+    }
+
+    .okul-listesi-okul-liste-kapsayici .okul-listesi-premium-liste-kart,
+    .okul-listesi-modern-okul-listesi .okul-listesi-premium-liste-kart {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        justify-content: flex-start !important;
+        gap: 12px;
+        padding: 14px 14px !important;
+    }
+
+    .okul-listesi-okul-liste-kapsayici .okul-listesi-kart-sol-grup,
+    .okul-listesi-modern-okul-listesi .okul-listesi-kart-sol-grup {
+        width: 100%;
+        min-width: 0;
+        align-items: flex-start;
+    }
+
+    .okul-listesi-okul-liste-kapsayici .okul-listesi-okul-isim-link,
+    .okul-listesi-modern-okul-listesi .okul-listesi-okul-isim-link {
+        font-size: 13px !important;
+        line-height: 1.45;
+    }
+
+    .okul-listesi-okul-liste-kapsayici .okul-listesi-liste-index,
+    .okul-listesi-modern-okul-listesi .okul-listesi-liste-index {
+        font-size: 20px;
+    }
+}

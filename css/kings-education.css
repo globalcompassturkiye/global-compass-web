@@ -8,7 +8,6 @@
     max-width: 1200px;
     height: 300px;
     object-fit: cover;
-    border-radius: 8px;
 }
 
 /* Kings Bournemouth - 9'lu fotoğraf galerisi */
@@ -21,9 +20,8 @@
 
 .kings-galeri-oge {
     margin: 0;
-    border-radius: 12px;
     overflow: hidden;
-    border: 1px solid #e5e7eb;
+    border: 0 solid transparent;
     background: #f9fafb;
 }
 

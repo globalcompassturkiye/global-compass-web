@@ -1,21 +1,7 @@
-/* London yaz okullari sayfasina ozel secim paneli ve form bandi stilleri */
+/* Londra dil okulları hub + ortak “Londra neden” blokları.
+   Yaz Londra program listesi: yurt-disi-yaz-okullari.css (.london-secim-paneli) */
 
-/* Londra dil okullari: h1 alti cercevesiz giris metni */
-.londra-dil-giris {
-    max-width: 1200px;
-    margin: 0 auto 28px auto;
-}
-
-.londra-dil-giris p {
-    font-size: 15px;
-    line-height: 1.75;
-    color: #374151;
-    margin: 0 0 1em 0;
-}
-
-.londra-dil-giris p:last-child {
-    margin-bottom: 0;
-}
+/* Londra dil: program listesi satırları (yaz hub ile aynı görünüm; yalnızca dil sayfası london.css yükler) */
 .london-secim-paneli .kirmizi-kutu {
     margin: 0;
     border-radius: 5px 5px 0 0;
@@ -24,12 +10,6 @@
 .london-secim-paneli .okul-liste-kapsayici {
     margin-top: 0;
     padding-top: 0;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-}
-
-.london-secim-paneli .okul-liste-kapsayici .okul-liste-baslik {
-    display: none;
 }
 
 .london-secim-paneli .premium-liste-kart,
@@ -41,11 +21,17 @@
 }
 
 .london-secim-paneli .premium-liste-kart:hover,
-.london-secim-paneli .glass-stil:hover,
-.london-secim-paneli .okul-liste-kapsayici:hover {
+.london-secim-paneli .glass-stil:hover {
     transform: none !important;
     box-shadow: none !important;
-    border-color: #d1d5db !important;
+    border-color: transparent !important;
+    background: transparent !important;
+}
+
+.london-secim-paneli .okul-liste-kapsayici:hover {
+    transform: none !important;
+    box-shadow: var(--site-kart-golge) !important;
+    border-color: var(--site-kart-kenar) !important;
     background: #ffffff !important;
 }
 
@@ -86,94 +72,6 @@
     font-size: 18px !important;
 }
 
-.london-form-bant {
-    margin-bottom: 0;
-    border-radius: 5px 5px 0 0;
-    background-color: #e30613;
-}
-
-.london-form-bant .ust-satir {
-    color: #ffffff !important;
-}
-
-.london-form-bant .london-form-alt-satir {
-    margin-top: 6px;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 1.35;
-    color: #00235d !important;
-}
-
-.london-form-bant + .iletisim-form-alani {
-    margin-top: 0 !important;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    padding-top: 0;
-}
-
-.london-form-bant + .iletisim-form-alani > h2:first-child {
-    margin-top: 0;
-    padding-top: 0;
-}
-
-/* Londra program rozetleri: 3 kartta 2+1, 3. kart ortali */
-.london-program-rozet-kutu .london-program-rozet-grid > .dahil-rozet-kart:nth-child(3) {
-    grid-column: 1 / -1;
-    justify-self: center;
-    width: min(100%, calc((100% - 18px) / 2));
-}
-
-/* Londra sosyal program bolumu: masaustunde 2 kart yan yana */
-.london-sosyal-rozet-kutu .london-sosyal-rozet-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 14px;
-}
-
-.london-sosyal-rozet-kutu .london-sosyal-rozet-grid .dahil-rozet-kart {
-    height: 100%;
-}
-
-@media (max-width: 768px) {
-    .london-program-rozet-kutu .london-program-rozet-grid > .dahil-rozet-kart:nth-child(3) {
-        grid-column: auto;
-        justify-self: stretch;
-        width: 100%;
-    }
-
-    .london-sosyal-rozet-kutu .london-sosyal-rozet-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Londra dil okulları — Neden Londra: kartlar alt alta (satır başına bir kart).
-   style.css .gri-cerceve-kutu .dahil-rozet-grid:has(3. kart) 2 sütun verir; bu blok onu ezer. */
-.gri-cerceve-kutu.londra-neden-kutu .dahil-rozet-grid.londra-neden-rozet-grid {
-    margin-top: 22px;
-    grid-template-columns: 1fr;
-    gap: 18px;
-}
-
-.londra-neden-kutu .londra-neden-rozet-grid .dahil-rozet-kart {
-    height: 100%;
-}
-
-.londra-neden-kutu .londra-neden-rozet-grid .dahil-rozet-baslik {
-    color: #111827;
-}
-
-.londra-neden-kutu .londra-neden-rozet-grid .dahil-rozet-ikon-tick {
-    font-size: 1.05em;
-    font-weight: 700;
-    line-height: 1;
-    color: #e30613;
-}
-
-/* Numaralı başlık + ✓ ikon; çok paragraflı gövde */
-.londra-neden-kutu .londra-neden-rozet-grid .dahil-rozet-metin + .dahil-rozet-metin {
-    margin-top: 0.75rem;
-}
-
-/* Londra yaz ? bu dosya en son y?klenir; okul listesi kart aral??? */
 .london-secim-paneli .okul-liste-kapsayici .modern-okul-listesi {
     margin: 0 !important;
     padding: 0 !important;
@@ -189,6 +87,51 @@
     margin-left: 0 !important;
     margin-right: 0 !important;
     margin-bottom: 0 !important;
+}
+
+/* Londra dil okulları: h1 altı çerçevesiz giriş metni */
+.londra-dil-giris {
+    max-width: 1200px;
+    margin: 0 auto 28px auto;
+}
+
+.londra-dil-giris p {
+    font-size: 15px;
+    line-height: 1.75;
+    color: #374151;
+    margin: 0 0 1em 0;
+}
+
+.londra-dil-giris p:last-child {
+    margin-bottom: 0;
+}
+
+/* Londra dil okulları — Neden Londra: kartlar alt alta (satır başına bir kart).
+   style.css .cerceve-kutu .rozet-grid:has(3. kart) 2 sütun verir; bu blok onu ezer. */
+.cerceve-kutu.londra-neden-kutu .rozet-grid.londra-neden-rozet-grid {
+    margin-top: 22px;
+    grid-template-columns: 1fr;
+    gap: 18px;
+}
+
+.londra-neden-kutu .londra-neden-rozet-grid .rozet-kart {
+    height: 100%;
+}
+
+.londra-neden-kutu .londra-neden-rozet-grid .rozet-baslik {
+    color: #111827;
+}
+
+.londra-neden-kutu .londra-neden-rozet-grid .rozet-ikon-tick {
+    font-size: 1.05em;
+    font-weight: 700;
+    line-height: 1;
+    color: #e30613;
+}
+
+/* Numaralı başlık + ✓ ikon; çok paragraflı gövde */
+.londra-neden-kutu .londra-neden-rozet-grid .rozet-metin + .rozet-metin {
+    margin-top: 0.75rem;
 }
 
 /* Londra dil: alt yönlendirme — Oxford, Bournemouth */

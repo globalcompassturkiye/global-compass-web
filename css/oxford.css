@@ -24,11 +24,11 @@
     gap: 18px 22px;
 }
 
-.oxford-egitim-kutu .oxford-egitim-rozet-grid .dahil-rozet-kart {
+.oxford-egitim-kutu .oxford-egitim-rozet-grid .rozet-kart {
     height: 100%;
 }
 
-.oxford-egitim-kutu .oxford-egitim-rozet-grid .dahil-rozet-baslik {
+.oxford-egitim-kutu .oxford-egitim-rozet-grid .rozet-baslik {
     color: #111827;
 }
 
@@ -52,17 +52,17 @@
     gap: 18px 22px;
 }
 
-.oxford-neden-kutu .oxford-neden-rozet-grid .dahil-rozet-kart {
+.oxford-neden-kutu .oxford-neden-rozet-grid .rozet-kart {
     height: 100%;
 }
 
-.oxford-neden-kutu .oxford-neden-rozet-grid .dahil-rozet-kart:nth-child(5) {
+.oxford-neden-kutu .oxford-neden-rozet-grid .rozet-kart:nth-child(5) {
     grid-column: 1 / -1;
     justify-self: center;
     width: min(100%, calc((100% - 22px) / 2));
 }
 
-.oxford-neden-kutu .oxford-neden-rozet-grid .dahil-rozet-baslik {
+.oxford-neden-kutu .oxford-neden-rozet-grid .rozet-baslik {
     color: #111827;
 }
 
@@ -71,23 +71,22 @@
         grid-template-columns: 1fr;
     }
 
-    .oxford-neden-kutu .oxford-neden-rozet-grid .dahil-rozet-kart:nth-child(5) {
+    .oxford-neden-kutu .oxford-neden-rozet-grid .rozet-kart:nth-child(5) {
         grid-column: auto;
         justify-self: stretch;
         width: 100%;
     }
 }
 .oxford-secim-paneli .kirmizi-kutu { margin: 0; border-radius: 5px 5px 0 0; }
-.oxford-secim-paneli .okul-liste-kapsayici { margin-top: 0; padding-top: 0; border-top-left-radius: 0; border-top-right-radius: 0; }
-.oxford-secim-paneli .okul-liste-kapsayici .okul-liste-baslik { display: none; }
+.oxford-secim-paneli .okul-liste-kapsayici { margin-top: 0; padding-top: 0; }
 .oxford-secim-paneli .premium-liste-kart,
 .oxford-secim-paneli .glass-stil,
 .oxford-secim-paneli .incele-btn-minimal,
 .oxford-secim-paneli .btn-modern-incele,
 .oxford-secim-paneli .ok-animasyon { transition: none !important; }
 .oxford-secim-paneli .premium-liste-kart:hover,
-.oxford-secim-paneli .glass-stil:hover,
-.oxford-secim-paneli .okul-liste-kapsayici:hover { transform: none !important; box-shadow: none !important; border-color: #d1d5db !important; background: #ffffff !important; }
+.oxford-secim-paneli .glass-stil:hover { transform: none !important; box-shadow: none !important; border-color: transparent !important; background: transparent !important; }
+.oxford-secim-paneli .okul-liste-kapsayici:hover { transform: none !important; box-shadow: var(--site-kart-golge) !important; border-color: var(--site-kart-kenar) !important; background: #ffffff !important; }
 .oxford-secim-paneli .okul-isim-link:hover,
 .oxford-secim-paneli .incele-btn-minimal:hover,
 .oxford-secim-paneli .btn-modern-incele:hover { color: inherit !important; text-decoration: none !important; padding-left: 0 !important; }
@@ -111,9 +110,6 @@
     line-height: 1.35;
     color: #00235d !important;
 }
-.oxford-form-bant + .iletisim-form-alani { margin-top: 0 !important; border-top-left-radius: 0; border-top-right-radius: 0; padding-top: 0; }
-.oxford-form-bant + .iletisim-form-alani > h2:first-child { margin-top: 0; padding-top: 0; }
-
 /* Oxford program rozetleri */
 .oxford-program-rozet-kutu .oxford-program-rozet-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -126,11 +122,11 @@
     gap: 14px;
 }
 
-.oxford-sosyal-rozet-kutu .oxford-sosyal-rozet-grid .dahil-rozet-kart {
+.oxford-sosyal-rozet-kutu .oxford-sosyal-rozet-grid .rozet-kart {
     height: 100%;
 }
 
-.oxford-sosyal-rozet-kutu .oxford-sosyal-rozet-grid > .dahil-rozet-kart:nth-child(3) {
+.oxford-sosyal-rozet-kutu .oxford-sosyal-rozet-grid > .rozet-kart:nth-child(3) {
     grid-column: 1 / -1;
     justify-self: center;
     width: min(100%, calc((100% - 14px) / 2));
@@ -169,7 +165,7 @@
         grid-template-columns: 1fr;
     }
 
-    .oxford-sosyal-rozet-kutu .oxford-sosyal-rozet-grid > .dahil-rozet-kart:nth-child(3) {
+    .oxford-sosyal-rozet-kutu .oxford-sosyal-rozet-grid > .rozet-kart:nth-child(3) {
         grid-column: auto;
         justify-self: stretch;
         width: 100%;

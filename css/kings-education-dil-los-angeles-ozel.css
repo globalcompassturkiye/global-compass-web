@@ -23,20 +23,19 @@ body.sayfa-kings-education-new-york .kings-la-hollywood-ozet-kart {
     background: #f8fafc;
     border: none;
     border-left: 5px solid #000080;
-    border-radius: 0 8px 8px 0;
     box-shadow: none;
     box-sizing: border-box;
     min-width: 0;
 }
 
-body.sayfa-kings-education-los-angeles .kings-la-hollywood-ozet-kart .dahil-rozet-baslik,
-body.sayfa-kings-education-new-york .kings-la-hollywood-ozet-kart .dahil-rozet-baslik {
+body.sayfa-kings-education-los-angeles .kings-la-hollywood-ozet-kart .rozet-baslik,
+body.sayfa-kings-education-new-york .kings-la-hollywood-ozet-kart .rozet-baslik {
     color: #000080 !important;
     margin: 0 0 8px 0;
 }
 
-body.sayfa-kings-education-los-angeles .kings-la-hollywood-ozet-kart .dahil-rozet-metin,
-body.sayfa-kings-education-new-york .kings-la-hollywood-ozet-kart .dahil-rozet-metin {
+body.sayfa-kings-education-los-angeles .kings-la-hollywood-ozet-kart .rozet-metin,
+body.sayfa-kings-education-new-york .kings-la-hollywood-ozet-kart .rozet-metin {
     margin: 0;
     color: #334155;
 }
@@ -118,36 +117,31 @@ body.sayfa-kings-education-new-york .kings-la-hollywood-ozet-kart .dahil-rozet-m
 .sayfa-kings-education .kings-la-ozet-kutu-acik {
     background: #f8f9fa;
     padding: 12px;
-    border-radius: 5px;
-    border: 1px solid #e0e0e0;
+    border: 0 solid transparent;
 }
 
 .sayfa-kings-education .kings-la-ozet-kutu-mavi {
     background: #e8f0fe;
     padding: 12px;
-    border-radius: 5px;
-    border: 1px solid #c5d9f5;
+    border: 0 solid transparent;
 }
 
 .sayfa-kings-education .kings-la-ozet-kutu-pembe {
     background: #fff4f4;
     padding: 12px;
-    border-radius: 5px;
-    border: 1px solid #f5d0d0;
+    border: 0 solid transparent;
 }
 
 .sayfa-kings-education .kings-la-ozet-kutu-altin {
     background: #fffdf0;
     padding: 12px;
-    border-radius: 5px;
-    border: 1px solid #e5d5a0;
+    border: 0 solid transparent;
 }
 
 .sayfa-kings-education .kings-la-ozet-kutu-turkuaz {
     background: #e0f7fa;
     padding: 12px;
-    border-radius: 5px;
-    border: 1px solid #b2ebf2;
+    border: 0 solid transparent;
 }
 
 .sayfa-kings-education .kings-la-etiket-ust {
@@ -204,47 +198,41 @@ body.sayfa-kings-education-new-york .kings-la-hollywood-ozet-kart .dahil-rozet-m
 
 .sayfa-kings-education .kings-la-yan-panel-kesikli {
     border: 2px dashed #ddd;
-    border-radius: 8px;
     padding: 18px;
     background: #fafafa;
 }
 
 .sayfa-kings-education .kings-la-yan-panel-ic-golge {
-    border: 1px solid #e5e5e5;
-    border-radius: 8px;
+    border: 0 solid transparent;
     padding: 18px;
     background: #fff;
     box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.06);
 }
 
 .sayfa-kings-education .kings-la-yan-panel-dis-golge {
-    border: 1px solid #eee;
-    border-radius: 8px;
+    border: 0 solid transparent;
     padding: 18px;
     background: #fff;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
 }
 
 .sayfa-kings-education .kings-la-yan-panel-dis-golge-hafif {
-    border: 1px solid #e8e8e8;
-    border-radius: 8px;
+    border: 0 solid transparent;
     padding: 18px;
     background: #fcfcfc;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .sayfa-kings-education .kings-la-yan-panel-beyaz {
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    border: 0 solid transparent;
     padding: 18px;
     background: #fff;
 }
 
 .sayfa-kings-education .kings-la-yan-panel-koyu {
     background: #2a2a2a;
-    border-radius: 8px;
     padding: 18px;
-    border: 1px solid #444;
+    border: 0 solid transparent;
 }
 
 .sayfa-kings-education .kings-la-h4-kirmizi {
@@ -335,7 +323,6 @@ body.sayfa-kings-education-new-york .kutu-liste.kings-la-film-icerik-listesi li:
     margin-top: 16px;
     padding: 15px 16px;
     background: #eef4ff;
-    border-radius: 5px;
     border-left: 4px solid #000080;
     display: flex;
     align-items: flex-start;
@@ -346,7 +333,6 @@ body.sayfa-kings-education-new-york .kutu-liste.kings-la-film-icerik-listesi li:
     margin-top: 16px;
     padding: 15px 16px;
     background: #fffdf0;
-    border-radius: 5px;
     border-left: 4px solid #c9a227;
     display: flex;
     align-items: flex-start;
@@ -357,7 +343,6 @@ body.sayfa-kings-education-new-york .kutu-liste.kings-la-film-icerik-listesi li:
     margin-top: 16px;
     padding: 14px 16px;
     background: #e8f5e9;
-    border-radius: 5px;
     border-left: 4px solid #2e7d32;
     display: flex;
     align-items: center;
@@ -368,7 +353,6 @@ body.sayfa-kings-education-new-york .kutu-liste.kings-la-film-icerik-listesi li:
     margin-top: 16px;
     padding: 15px;
     background: #f9f9f9;
-    border-radius: 5px;
     border-left: 4px solid #1a1a1a;
     display: flex;
     align-items: center;
@@ -479,15 +463,13 @@ body.sayfa-kings-education-new-york .kutu-liste.kings-la-film-icerik-listesi li:
 .sayfa-kings-education .kings-la-dahil-kart {
     background: #fcfcfc;
     padding: 20px;
-    border-radius: 5px;
-    border: 1px solid #eee;
+    border: 0 solid transparent;
 }
 
 .sayfa-kings-education .kings-la-dahil-kart-vurgu {
     background: #fff9f9;
     padding: 20px;
-    border-radius: 5px;
-    border: 1px solid #ffdada;
+    border: 0 solid transparent;
 }
 
 .sayfa-kings-education .kings-la-dahil-h4 {

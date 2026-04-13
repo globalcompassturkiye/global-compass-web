@@ -3,18 +3,11 @@
 /* Okul listesi — Londra (london-secim-paneli) ile aynı seçim paneli / hover standardı */
 .new-york-secim-paneli .kirmizi-kutu {
     margin: 0;
-    border-radius: 5px 5px 0 0;
 }
 
 .new-york-secim-paneli .okul-liste-kapsayici {
     margin-top: 0;
     padding-top: 0;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-}
-
-.new-york-secim-paneli .okul-liste-kapsayici .okul-liste-baslik {
-    display: none;
 }
 
 .new-york-secim-paneli .premium-liste-kart,
@@ -25,11 +18,17 @@
 }
 
 .new-york-secim-paneli .premium-liste-kart:hover,
-.new-york-secim-paneli .glass-stil:hover,
-.new-york-secim-paneli .okul-liste-kapsayici:hover {
+.new-york-secim-paneli .glass-stil:hover {
     transform: none !important;
     box-shadow: none !important;
-    border-color: #d1d5db !important;
+    border-color: transparent !important;
+    background: transparent !important;
+}
+
+.new-york-secim-paneli .okul-liste-kapsayici:hover {
+    transform: none !important;
+    box-shadow: var(--site-kart-golge) !important;
+    border-color: var(--site-kart-kenar) !important;
     background: #ffffff !important;
 }
 
@@ -85,29 +84,10 @@
     margin-bottom: 0 !important;
 }
 
-/* Bilgi istek formu: yaz-okullari-secim-paneli ile birleşik; arka plan style.css .iletisim-form-alani (#e8f4f8) */
-article.icerik-alani .new-york-bilgi-form-paneli {
-    margin-top: 50px;
-}
-
-article.icerik-alani .new-york-bilgi-form-paneli .iletisim-form-alani {
-    margin: 0 !important;
-    max-width: none;
-    border: none;
-    box-shadow: none;
-    border-radius: 0;
-    /* Üst 25px padding; genel .iletisim-form-alani > p margin-top ile çiftlenmesin */
-    padding: 25px 22px 24px;
-}
-
-article.icerik-alani .new-york-bilgi-form-paneli .iletisim-form-alani > p:first-of-type {
-    margin-top: 0;
-}
-
 /* Neden New York — kalın lacivert sol kenar (USA #usa-neden-yaz-okulu ile aynı dil) */
-article.icerik-alani #new-york-neden-yaz.yaz-okullari-avantaj-kutu .yaz-konaklama-oge {
-    border: 1px solid #e2e8f0 !important;
-    border-left: 8px solid #000080 !important;
+article.icerik-alani #new-york-neden-yaz.icerik-kutusu .yaz-konaklama-oge {
+    border: 0 solid transparent !important;
+    border-left: 0 solid transparent !important;
     box-shadow: 0 2px 8px rgba(0, 0, 128, 0.06) !important;
     background: linear-gradient(90deg, rgba(0, 0, 128, 0.04) 0%, #ffffff 100%) !important;
     padding: 22px 24px 24px 26px;
@@ -115,7 +95,7 @@ article.icerik-alani #new-york-neden-yaz.yaz-okullari-avantaj-kutu .yaz-konaklam
     align-items: flex-start;
 }
 
-article.icerik-alani #new-york-neden-yaz.yaz-okullari-avantaj-kutu .yaz-konaklama-ikon {
+article.icerik-alani #new-york-neden-yaz.icerik-kutusu .yaz-konaklama-ikon {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -123,33 +103,32 @@ article.icerik-alani #new-york-neden-yaz.yaz-okullari-avantaj-kutu .yaz-konaklam
     width: 26px;
     height: 26px;
     margin-top: 2px;
-    border-radius: 999px;
     font-size: 13px !important;
     font-weight: 700;
     line-height: 1;
     color: #000080;
     background: rgba(0, 0, 128, 0.1);
-    border: 1px solid rgba(0, 0, 128, 0.35);
+    border: 0 solid transparent;
 }
 
-article.icerik-alani #new-york-neden-yaz.yaz-okullari-avantaj-kutu .yaz-konaklama-icerik h3 {
+article.icerik-alani #new-york-neden-yaz.icerik-kutusu .yaz-konaklama-icerik h3 {
     color: #111827 !important;
 }
 
-article.icerik-alani #new-york-neden-yaz.yaz-okullari-avantaj-kutu .yaz-konaklama-icerik p {
+article.icerik-alani #new-york-neden-yaz.icerik-kutusu .yaz-konaklama-icerik p {
     font-size: 15px;
     line-height: 1.7;
     color: #374151;
 }
 
 @media (max-width: 501px) {
-    article.icerik-alani #new-york-neden-yaz.yaz-okullari-avantaj-kutu .yaz-konaklama-oge {
+    article.icerik-alani #new-york-neden-yaz.icerik-kutusu .yaz-konaklama-oge {
         padding: 18px 18px 20px 20px;
-        border-left-width: 6px !important;
+        border-left-width: 0 !important;
         gap: 14px;
     }
 
-    article.icerik-alani #new-york-neden-yaz.yaz-okullari-avantaj-kutu .yaz-konaklama-ikon {
+    article.icerik-alani #new-york-neden-yaz.icerik-kutusu .yaz-konaklama-ikon {
         width: 24px;
         height: 24px;
         font-size: 12px !important;

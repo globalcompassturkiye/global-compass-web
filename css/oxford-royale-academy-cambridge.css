@@ -21,7 +21,7 @@
     margin-top: 18px;
 }
 
-.oxford-royale-cambridge-sayfa .ora-yaz-1200-blok .dahil-rozet-grid {
+.oxford-royale-cambridge-sayfa .ora-yaz-1200-blok .rozet-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 18px;
@@ -33,14 +33,14 @@
     gap: 18px;
 }
 
-.oxford-royale-cambridge-sayfa .ora-clare-kart-genis.dahil-rozet-kart {
+.oxford-royale-cambridge-sayfa .ora-clare-kart-genis.rozet-kart {
     grid-column: 1 / -1;
     justify-self: center;
     width: min(100%, calc((100% - 18px) / 2));
 }
 
 @media (max-width: 900px) {
-    .oxford-royale-cambridge-sayfa .ora-yaz-1200-blok .dahil-rozet-grid {
+    .oxford-royale-cambridge-sayfa .ora-yaz-1200-blok .rozet-grid {
         grid-template-columns: 1fr;
     }
 }
@@ -52,7 +52,7 @@
         grid-template-columns: 1fr;
     }
 
-    .oxford-royale-cambridge-sayfa .ora-clare-kart-genis.dahil-rozet-kart {
+    .oxford-royale-cambridge-sayfa .ora-clare-kart-genis.rozet-kart {
         width: 100%;
         justify-self: stretch;
     }

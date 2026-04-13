@@ -8,21 +8,13 @@
     margin-top: 0;
     padding-top: 6px;
     padding-bottom: 6px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    border: none !important;
-    box-shadow: none !important;
-    background: transparent !important;
 }
 
 .italy-secim-paneli .okul-liste-kapsayici:hover {
-    border-color: transparent !important;
-    box-shadow: none !important;
     transform: none !important;
-}
-
-.italy-secim-paneli .okul-liste-kapsayici .okul-liste-baslik {
-    display: none;
+    box-shadow: var(--site-kart-golge) !important;
+    border-color: var(--site-kart-kenar) !important;
+    background: #ffffff !important;
 }
 
 .italy-secim-paneli .premium-liste-kart,
@@ -37,8 +29,8 @@
 .italy-secim-paneli .glass-stil:hover {
     transform: none !important;
     box-shadow: none !important;
-    border-color: #d1d5db !important;
-    background: #ffffff !important;
+    border-color: transparent !important;
+    background: transparent !important;
 }
 
 .italy-secim-paneli .okul-isim-link:hover,
@@ -88,13 +80,6 @@
     color: #ffffff !important;
 }
 
-.italy-form-bant + .iletisim-form-alani {
-    margin-top: 0 !important;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    padding-top: 0;
-}
-
 /* Italya program secenekleri */
 .italy-program-kutu .italy-program-grid {
     display: grid;
@@ -141,8 +126,8 @@
 .italy-sosyal-kutu .italy-sosyal-ikon { display: none; }
 .italy-sosyal-kutu .italy-sosyal-icerik h3 { color: #111827; }
 
-.italy-avantaj-kutu .italy-avantaj-rozet-grid .dahil-rozet-ikon,
-.milan-avantaj-kutu .milan-avantaj-rozet-grid .dahil-rozet-ikon {
+.italy-avantaj-kutu .italy-avantaj-rozet-grid .rozet-ikon,
+.milan-avantaj-kutu .milan-avantaj-rozet-grid .rozet-ikon {
     font-size: 13px;
     font-weight: 700;
     background: #fce7f3;
@@ -150,14 +135,14 @@
     color: #be185d;
 }
 
-.milan-avantaj-kutu .milan-avantaj-rozet-grid > .dahil-rozet-kart:nth-child(5) {
+.milan-avantaj-kutu .milan-avantaj-rozet-grid > .rozet-kart:nth-child(5) {
     grid-column: 1 / -1;
     justify-self: center;
     width: min(100%, calc((100% - 14px) / 2));
 }
 
 @media (max-width: 768px) {
-    .milan-avantaj-kutu .milan-avantaj-rozet-grid > .dahil-rozet-kart:nth-child(5) {
+    .milan-avantaj-kutu .milan-avantaj-rozet-grid > .rozet-kart:nth-child(5) {
         grid-column: auto;
         justify-self: stretch;
         width: 100%;

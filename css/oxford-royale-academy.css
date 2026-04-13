@@ -18,15 +18,15 @@
     margin-top: 18px;
 }
 
-/* İkon yok: .dahil-rozet-kart varsayılan 2 sütunlu grid başlığı yan sütuna itiyor; başlık üstte, liste altta */
-.oxford-royale-ny-sayfa .ora-ny-detay-grid-2-son .dahil-rozet-kart {
+/* İkon yok: .rozet-kart varsayılan 2 sütunlu grid başlığı yan sütuna itiyor; başlık üstte, liste altta */
+.oxford-royale-ny-sayfa .ora-ny-detay-grid-2-son .rozet-kart {
     display: flex;
     flex-direction: column;
     align-items: stretch;
     gap: 10px;
 }
 
-.oxford-royale-ny-sayfa .ora-ny-detay-grid-2-son .dahil-rozet-baslik {
+.oxford-royale-ny-sayfa .ora-ny-detay-grid-2-son .rozet-baslik {
     width: 100%;
 }
 
@@ -39,7 +39,7 @@
     margin-top: 18px;
 }
 
-.oxford-royale-ny-sayfa .ora-ny-ekstralar-kart.dahil-rozet-kart {
+.oxford-royale-ny-sayfa .ora-ny-ekstralar-kart.rozet-kart {
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -58,7 +58,7 @@
     width: 100%;
 }
 
-/* Akademik Deneyim, Kampüs Hayatı, Ekstralar listeleri — tik (dahil-rozet-ikon ile uyumlu) */
+/* Akademik Deneyim, Kampüs Hayatı, Ekstralar listeleri — tik (rozet-ikon ile uyumlu) */
 .oxford-royale-ny-sayfa .ora-ny-kart-liste,
 .oxford-royale-ny-sayfa .ora-ny-ekstralar-liste {
     list-style: none;

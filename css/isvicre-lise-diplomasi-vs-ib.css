@@ -10,8 +10,7 @@ body.blog-yazi-isvicre-ib .blog-yazi-baslik-wrap .blog-yazi-meta-alt {
 
 .isvicre-blog-hero {
     background: linear-gradient(180deg, #f1f5f9 0%, #e8eef5 100%);
-    border: 1px solid #e2e8f0;
-    border-radius: 16px;
+    border: 0 solid transparent;
     padding: clamp(1.25rem, 4vw, 2.25rem) clamp(1rem, 3vw, 2rem);
     margin-bottom: 1.75rem;
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8) inset;
@@ -56,8 +55,7 @@ body.blog-yazi-isvicre-ib .blog-yazi-baslik-wrap .blog-yazi-ana-baslik {
 
 .isvicre-karsilastirma-kart {
     background: #fff;
-    border: 1px solid #e8ecf1;
-    border-radius: 14px;
+    border: 0 solid transparent;
     padding: clamp(1rem, 3vw, 1.35rem) clamp(1rem, 3vw, 1.25rem) 1.25rem;
     box-shadow: 0 8px 28px rgba(15, 23, 42, 0.06);
 }
@@ -142,7 +140,6 @@ body.blog-yazi-isvicre-ib .blog-yazi-baslik-wrap .blog-yazi-ana-baslik {
     padding: 0.85rem 1rem 0.85rem 1rem;
     border-left: 4px solid #6366f1;
     background: #fafbfc;
-    border-radius: 0 10px 10px 0;
 }
 
 .isvicre-bilgi-notu--uyari {
@@ -204,8 +201,7 @@ body.blog-yazi-isvicre-ib .blog-yazi-baslik-wrap .blog-yazi-ana-baslik {
     margin-top: 2.5rem;
     padding: clamp(1.35rem, 4vw, 2rem);
     background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
-    border: 1px solid #e2e8f0;
-    border-radius: 16px;
+    border: 0 solid transparent;
     box-shadow: 0 12px 40px rgba(15, 23, 42, 0.1), 0 2px 8px rgba(15, 23, 42, 0.04);
 }
 

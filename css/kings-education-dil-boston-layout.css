@@ -2,7 +2,7 @@
 
 /* Ortak .kings-la-dahil-bolum kuralındaki kalın üst kenarı yerine, diğer kenarlarla aynı ince çerçeve */
 body.sayfa-kings-education-boston .kings-la-dahil-bolum {
-    border: 1px solid #d1d1d1;
+    border: 0 solid transparent;
 }
 
 body.sayfa-kings-education-boston .kings-bos-dahil-grid-2kol {
@@ -52,7 +52,7 @@ body.sayfa-kings-education-boston #kings-bos-konaklama .konaklama-giris {
     margin-top: 25px;
 }
 
-body.sayfa-kings-education-boston .kings-bos-konaklama-bilgi-iskelet .gri-cerceve-kutu.kings-mini-kutu-sik {
+body.sayfa-kings-education-boston .kings-bos-konaklama-bilgi-iskelet .cerceve-kutu.kings-mini-kutu-sik {
     margin-top: 0;
 }
 
@@ -75,7 +75,7 @@ body.sayfa-kings-education-boston .kings-bos-konaklama-bilgi-iskelet.kings-la-ko
     }
 
     /* Aile Yanı Konaklama: tam satır, ortada; genişlik = üstteki tek kutunun sütun genişliği */
-    body.sayfa-kings-education-boston .kings-bos-konaklama-bilgi-iskelet.kings-la-konaklama-grid .gri-cerceve-kutu.kings-mini-kutu-sik:nth-child(3) {
+    body.sayfa-kings-education-boston .kings-bos-konaklama-bilgi-iskelet.kings-la-konaklama-grid .cerceve-kutu.kings-mini-kutu-sik:nth-child(3) {
         grid-column: 1 / -1;
         justify-self: center;
         width: 100%;

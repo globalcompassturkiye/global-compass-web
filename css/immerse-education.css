@@ -18,7 +18,6 @@
     text-align: center;
     margin-bottom: 16px !important;
     padding: 14px 18px;
-    border-radius: 10px;
     box-shadow: 0 2px 14px rgba(15, 23, 42, 0.07);
     background: linear-gradient(
         125deg,
@@ -34,24 +33,24 @@
 }
 
 /* Giriş — iki kategori: standart dahil-rozet (ikon + başlık + gövde; branş kartlarıyla aynı düzen) */
-.immerse-tokyo-giris-kategori-grid.dahil-rozet-grid {
+.immerse-tokyo-giris-kategori-grid.rozet-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 20px;
 }
 
-.immerse-tokyo-giris-kategori-grid .dahil-rozet-kart {
+.immerse-tokyo-giris-kategori-grid .rozet-kart {
     grid-template-rows: auto auto;
     column-gap: 18px;
     row-gap: 10px;
 }
 
-.immerse-tokyo-giris-kategori-grid .dahil-rozet-ikon {
+.immerse-tokyo-giris-kategori-grid .rozet-ikon {
     grid-column: 1;
     grid-row: 1;
     align-self: start;
 }
 
-.immerse-tokyo-giris-kategori-grid .dahil-rozet-baslik {
+.immerse-tokyo-giris-kategori-grid .rozet-baslik {
     grid-column: 2;
     grid-row: 1;
     font-size: 14.5px;
@@ -65,7 +64,7 @@
     min-width: 0;
 }
 
-.immerse-tokyo-giris-kategori-grid .immerse-tokyo-rozet-govde .dahil-rozet-metin {
+.immerse-tokyo-giris-kategori-grid .immerse-tokyo-rozet-govde .rozet-metin {
     grid-column: auto;
     grid-row: auto;
     margin: 0 0 10px 0;
@@ -98,17 +97,16 @@
 
 /* 501px altı: Akademik / Kariyer kartları üst üste, her biri ayrı çerçeve; gövde tam genişlik */
 @media (max-width: 501px) {
-    .immerse-tokyo-giris-kategori-grid.dahil-rozet-grid {
+    .immerse-tokyo-giris-kategori-grid.rozet-grid {
         display: flex !important;
         flex-direction: column;
         gap: 22px;
     }
 
-    .immerse-tokyo-giris-kategori-grid .dahil-rozet-kart {
+    .immerse-tokyo-giris-kategori-grid .rozet-kart {
         margin: 0;
         padding: 18px 16px 16px;
-        border: 1px solid #cbd5e1;
-        border-radius: 12px;
+        border: 0 solid transparent;
         background: #ffffff;
         box-shadow: 0 2px 10px rgba(15, 23, 42, 0.07);
         width: 100%;
@@ -120,13 +118,13 @@
         column-gap: 12px;
     }
 
-    .immerse-tokyo-giris-kategori-grid .dahil-rozet-ikon {
+    .immerse-tokyo-giris-kategori-grid .rozet-ikon {
         grid-column: 1;
         grid-row: 1;
         align-self: center;
     }
 
-    .immerse-tokyo-giris-kategori-grid .dahil-rozet-baslik {
+    .immerse-tokyo-giris-kategori-grid .rozet-baslik {
         grid-column: 2;
         grid-row: 1;
         align-self: center;
@@ -207,19 +205,19 @@
 }
 
 /* Rozet kartı yerleşimi (yaz-okullari-program-kutu ile aynı; 5. kart kuralı olmadan) */
-.immerse-tokyo-branches-kutu .dahil-rozet-kart {
+.immerse-tokyo-branches-kutu .rozet-kart {
     grid-template-rows: auto auto;
     column-gap: 18px;
     row-gap: 10px;
 }
 
-.immerse-tokyo-branches-kutu .dahil-rozet-ikon {
+.immerse-tokyo-branches-kutu .rozet-ikon {
     grid-column: 1;
     grid-row: 1;
     align-self: start;
 }
 
-.immerse-tokyo-branches-kutu .dahil-rozet-baslik {
+.immerse-tokyo-branches-kutu .rozet-baslik {
     grid-column: 2;
     grid-row: 1;
     font-size: 14.5px;
@@ -227,7 +225,7 @@
     font-weight: 700;
 }
 
-.immerse-tokyo-branches-kutu .dahil-rozet-kart > .dahil-rozet-metin {
+.immerse-tokyo-branches-kutu .rozet-kart > .rozet-metin {
     grid-column: 2;
     grid-row: 2;
     font-size: 15px;
@@ -240,13 +238,13 @@
     min-width: 0;
 }
 
-.immerse-tokyo-branches-kutu .immerse-tokyo-rozet-govde .dahil-rozet-metin {
+.immerse-tokyo-branches-kutu .immerse-tokyo-rozet-govde .rozet-metin {
     grid-column: auto;
     grid-row: auto;
     margin: 0 0 12px 0;
 }
 
-.immerse-tokyo-branches-kutu .immerse-tokyo-rozet-govde .dahil-rozet-metin:last-of-type {
+.immerse-tokyo-branches-kutu .immerse-tokyo-rozet-govde .rozet-metin:last-of-type {
     margin-bottom: 8px;
 }
 
@@ -291,20 +289,30 @@
 /* Devamını Oku — görünüm immerse-shared.css (.immerse-tokyo-devam-btn) */
 
 /* 10 branş kartı: 2 sütun; style.css gri-cerceve :has(3.kart) kuralını ezer */
-.gri-cerceve-kutu.immerse-tokyo-branches-kutu .dahil-rozet-grid:has(> .dahil-rozet-kart:nth-child(3)) {
+.cerceve-kutu.immerse-tokyo-branches-kutu .rozet-grid:has(> .rozet-kart:nth-child(3)) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 /* İki haneli rozet numarası (10) */
-.immerse-tokyo-branches-kutu .dahil-rozet-ikon.immerse-tokyo-rozet-ikon-iki-hane {
+.immerse-tokyo-branches-kutu .rozet-ikon.immerse-tokyo-rozet-ikon-iki-hane {
     min-width: 36px;
     width: auto;
     padding: 0 6px;
     box-sizing: border-box;
+    border-radius: 999px; /* geniş kutu: kapsül (style.css .rozet-ikon daire %50 ile elips olmasın) */
 }
 
 @media (max-width: 640px) {
-    .gri-cerceve-kutu.immerse-tokyo-branches-kutu .dahil-rozet-grid:has(> .dahil-rozet-kart:nth-child(3)) {
+    .cerceve-kutu.immerse-tokyo-branches-kutu .rozet-grid:has(> .rozet-kart:nth-child(3)) {
         grid-template-columns: 1fr;
     }
+}
+
+/* Sabit “İçindekiler” bağlantısı: üst menü altında hizalı kaydırma */
+body.sayfa-yurt-disi-yaz-okullari-japan-tokyo-immerse-education #tokyo-immerse-mobil-icindekiler-kutu {
+    scroll-margin-top: calc(var(--site-header-offset, 122px) + 0.5rem);
+}
+
+body.sayfa-yurt-disi-yaz-okullari-japan-tokyo-immerse-education #tokyo-immerse-masaustu-icindekiler-baslik {
+    scroll-margin-top: calc(var(--site-header-offset, 122px) + 0.5rem);
 }

@@ -62,20 +62,17 @@
     align-items: flex-start;
     gap: 20px;
     padding: 24px 24px 24px 20px;
-    border-radius: 0;
 }
 
 .investin-kimler-oge-1 {
     background: rgba(15, 118, 110, 0.06);
-    border-radius: 12px 12px 0 0;
-    border: 1px solid rgba(15, 118, 110, 0.15);
+    border: 0 solid transparent;
     border-bottom: none;
 }
 
 .investin-kimler-oge-2 {
     background: #ffffff;
-    border-radius: 0 0 12px 12px;
-    border: 1px solid #e2e8f0;
+    border: 0 solid transparent;
 }
 
 .investin-kimler-numara {
@@ -89,7 +86,6 @@
     font-weight: 800;
     color: #fff;
     background: #0f766e;
-    border-radius: 50%;
     line-height: 1;
 }
 
