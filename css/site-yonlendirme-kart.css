@@ -53,7 +53,8 @@
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08); 
 }
 
-/* .okul-liste-baslik: style.css — yalnızca .okul-liste-kapsayici içindeki başlık görünür (bilgi formu h2 ile uyumlu) */
+/* .okul-liste-baslik: style.css — yalnızca .okul-liste-kapsayici içindeki başlık görünür (bilgi formu h2 ile uyumlu).
+   Yönlendirme kartı üstü: h2’ye .yonlendirme-karti-baslik — tek satır, rozet başlığı boyutu, span.vurgu-renk tek satırda (global h2 .vurgu-renk block satırını override eder). */
 
 /* 501px altı: yönlendirme kartı taşmasın */
 @media (max-width: 501px) {
@@ -63,10 +64,11 @@
     }
 }
 
-/* Yönlendirme: bilgi istek formu ile 50px; üstte .okul-liste-baslik liste çerçevesi içinde */
+/* Yönlendirme: bilgi istek formu ile 50px; üstte .okul-liste-baslik liste çerçevesi içinde (köşeler style.css ile 15px) */
 .okul-liste-kapsayici:has(> .alt-yonlendirme-alani) {
     margin: 50px auto 25px auto;
     padding: 24px 25px 15px 25px;
+    border-radius: 15px;
 }
 
 /* Metin: gri çerçeve sol iç kenarından toplam 25px (dış padding tek başına; iç kartta yatay padding yok) */

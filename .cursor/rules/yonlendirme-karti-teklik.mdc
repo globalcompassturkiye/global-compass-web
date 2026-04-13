@@ -7,8 +7,8 @@ alwaysApply: true
 # Tek Yönlendirme Kartı
 
 - Her sayfada **en fazla bir** `div.yonlendirme-karti` bulunmalıdır.
-- **Blog** sayfalarında (`/blog/...`) bu kartta **yalnızca bir** `a.kart-link` olmalıdır: metin **Yurt Dışı Üniversiteleri Keşfet →**, `href` **`/yurt-disi-universite/`**. Üst başlık `h2.okul-liste-baslik`: **Yurt Dışı Üniversite**; kart paragrafı üniversite danışmanlığına uygun olmalıdır. Başka yönlendirme `kart-link` eklenmez.
-- **İstisna:** `blog/yaz-okullari/dunyanin-en-sira-disi-5-yaz-kampi/` yazısında konuya uygun olarak **iki** `a.kart-link` kullanılabilir: **Dil Okulları** (`/yurt-disi-dil-okullari/`) ve **Yaz Okulları** (`/yurt-disi-yaz-okullari/`); `h2.okul-liste-baslik` **Dil ve Yaz Okulları**. Diğer blog yazılarında tek üniversite linki kuralı geçerlidir.
+- **Blog** sayfalarında (`/blog/...`) bu kartta **yalnızca bir** `a.kart-link` olmalıdır: metin **Yurt Dışı Üniversiteleri Keşfet →**, `href` **`/yurt-disi-universite/`**. Üst başlık `h2.okul-liste-baslik.yonlendirme-karti-baslik`: **Yurt Dışı Üniversite**; kart paragrafı üniversite danışmanlığına uygun olmalıdır. Başka yönlendirme `kart-link` eklenmez.
+- **İstisna:** `blog/yaz-okullari/dunyanin-en-sira-disi-5-yaz-kampi/` yazısında konuya uygun olarak **iki** `a.kart-link` kullanılabilir: **Dil Okulları** (`/yurt-disi-dil-okullari/`) ve **Yaz Okulları** (`/yurt-disi-yaz-okullari/`); `h2.okul-liste-baslik.yonlendirme-karti-baslik` **Dil ve Yaz Okulları**. Diğer blog yazılarında tek üniversite linki kuralı geçerlidir.
 - Blog dışı sayfalarda mevcut **yaz okulları** yönlendirme metni ve `href` (`/yurt-disi-yaz-okullari/`) korunur; bu kural blog alt yönlendirmesi için güncellenmiştir.
 - Ayrı ayrı ikinci/üçüncü `okul-liste-kapsayici` + `yonlendirme-karti` blokları açmayın.
 - Program seçim bandı (`kirmizi-kutu` + `modern-okul-listesi`) içindeki `okul-liste-kapsayici` okul listesidir; bu kural **alt yönlendirme** (`section.alt-yonlendirme-alani` + `div.yonlendirme-karti`) için geçerlidir.

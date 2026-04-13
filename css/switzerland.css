@@ -68,19 +68,22 @@
     color: #e30613 !important;
 }
 
-.isvicre-secim-paneli .liste-index,
+/* style.css .germany-secim-paneli ile aynı hiyerarşi: numara 18px, okul adı + İncele 15px */
+.isvicre-secim-paneli .liste-index {
+    font-size: 18px !important;
+}
+
 .isvicre-secim-paneli .okul-isim-link,
 .isvicre-secim-paneli .incele-btn-minimal,
 .isvicre-secim-paneli .btn-modern-incele {
-    font-size: 18px !important;
+    font-size: 15px !important;
 }
 
 .isvicre-secim-paneli .premium-liste-kart {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 16px !important;
-    padding-bottom: 16px !important;
+    padding: 0 16px !important;
 }
 
 .isvicre-secim-paneli .kart-sol-grup,
@@ -130,6 +133,7 @@
 
 .isvicre-kamp-kutu .isvicre-kamp-rozet-grid .rozet-kart {
     height: 100%;
+    border-radius: 15px;
 }
 
 .isvicre-kamp-kutu .isvicre-kamp-rozet-grid > .rozet-kart:nth-child(3) {
@@ -164,11 +168,14 @@
     margin: 0 !important;
     padding: 0 !important;
     max-width: 100% !important;
-    display: block !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    row-gap: 12px !important;
+    column-gap: 0 !important;
 }
 
 .isvicre-secim-paneli .okul-liste-kapsayici .modern-okul-listesi > .premium-liste-kart ~ .premium-liste-kart {
-    margin-top: 25px !important;
+    margin-top: 0 !important;
 }
 
 .isvicre-secim-paneli .okul-liste-kapsayici .modern-okul-listesi > .premium-liste-kart {

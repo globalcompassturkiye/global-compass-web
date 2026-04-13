@@ -96,6 +96,12 @@ section.iletisim-form-alani .kirmizi-kutu[class*="basvuru-bant"] {
     text-align: center;
 }
 
+/* Form üst bandı kartın dış genişliğini tam doldursun */
+.iletisim-form-alani > .kirmizi-kutu:first-child {
+    margin-left: -28px;
+    margin-right: -28px;
+}
+
 section.iletisim-form-alani .kirmizi-kutu[class*="-form-bant"] {
     margin-top: 0;
     margin-bottom: 16px;
@@ -125,6 +131,16 @@ section.iletisim-form-alani .kirmizi-kutu[class*="basvuru-bant"] .ust-satir {
     margin: 0;
 }
 
+/* H2 + span standardinda 1. satir görünürlüğünü garanti et */
+.iletisim-form-alani .kirmizi-kutu > h2.bilgi-form-bant-baslik > .ust-satir {
+    color: #64748b !important;
+}
+
+article.icerik-alani section.iletisim-form-alani .kirmizi-kutu > h2.bilgi-form-bant-baslik > .ust-satir,
+article.icerik-alani .iletisim-form-alani .kirmizi-kutu > h2.bilgi-form-bant-baslik > .ust-satir {
+    color: #64748b !important;
+}
+
 .iletisim-form-alani > .kirmizi-kutu > p.alt-satir-lacivert,
 .iletisim-form-alani > .kirmizi-kutu > p.alt-satir,
 .iletisim-form-alani .kirmizi-kutu h2.bilgi-form-bant-baslik > span:not(.ust-satir),
@@ -137,6 +153,11 @@ section.iletisim-form-alani .kirmizi-kutu[class*="basvuru-bant"] p.alt-satir {
     font-size: clamp(17px, 2.4vw, 20px);
     font-weight: 700;
     margin-top: 10px !important;
+}
+
+/* H2 + span standardinda 2. satir görünürlüğünü garanti et */
+.iletisim-form-alani .kirmizi-kutu > h2.bilgi-form-bant-baslik > .alt-satir-lacivert {
+    color: #000080 !important;
 }
 
 /* Giriş paragrafı (banttan sonra) */
@@ -518,7 +539,7 @@ article.icerik-alani .new-york-bilgi-form-paneli .iletisim-form-alani > p:first-
 
 /* Formdan hemen sonra tek yönlendirme kartı: üst margin birikmez */
 .iletisim-form-alani + .okul-liste-kapsayici:has(> .alt-yonlendirme-alani) {
-    margin-top: 0 !important;
+    margin-top: 25px !important;
 }
 
 /* Online eğitim: geniş ekranda içerik genişliği ile hizalı form */
@@ -530,4 +551,9 @@ article.icerik-alani .new-york-bilgi-form-paneli .iletisim-form-alani > p:first-
         max-width: 1200px !important;
         box-sizing: border-box;
     }
+}
+
+/* Hizmetlerimiz: gri kart çerçevesi köşeleri site geneli 16px yerine 15px */
+body.sayfa-hizmetlerimiz .iletisim-form-alani {
+    border-radius: 15px;
 }

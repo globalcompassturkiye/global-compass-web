@@ -41,6 +41,7 @@
     gap: 4px;
     list-style: none;
     box-sizing: border-box;
+    border-radius: 5px;
 }
 
 /* Metin etiketleri (home ikonu hariç): ince yan pay, uzun başlıklar sarılabilir */
@@ -67,6 +68,7 @@
     max-width: 100%;
     box-sizing: border-box;
     text-align: center;
+    border-radius: 5px;
 }
 
 /* Masaüstünde Hover Etkisi */
@@ -113,6 +115,7 @@
     flex-shrink: 0;
     white-space: nowrap;
     box-sizing: border-box;
+    border-radius: 5px;
 }
 
 .breadcrumb-kutu .ana-sayfa-ikon img {
@@ -140,6 +143,7 @@
         gap: 4px !important;
         padding: 10px 6px !important;
         background: #ffffff !important;
+        border-radius: 5px !important;
     }
 
     /* Her bir link ve mevcut sayfa kutusu (home ikonu ayrı) */
@@ -166,6 +170,7 @@
         box-sizing: border-box;
         text-align: center;
         transition: all 0.2s ease;
+        border-radius: 5px !important;
     }
 
     /* Üzerinde olduğumuz sayfa vurgusu */
@@ -192,6 +197,7 @@
         display: flex !important;
         align-items: center;
         justify-content: center;
+        border-radius: 5px !important;
     }
     
     .breadcrumb-kutu .ana-sayfa-ikon img {

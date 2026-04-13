@@ -39,25 +39,35 @@
 .yaz-okullari-secim-paneli .okul-liste-kapsayici > .program-secim-hub-baslik {
     margin: 0 0 18px;
     padding: 0 0 16px;
-    border-bottom: 1px solid #e2e8f0;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.65);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
 }
 
 .yaz-okullari-secim-paneli .program-secim-hub-baslik .ust-satir {
     margin: 0;
-    font-size: 11px;
+    font-size: clamp(14px, 0.75vw + 12px, 20px);
     font-weight: 600;
-    letter-spacing: 0.07em;
-    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    text-transform: none;
     color: #64748b;
+    text-align: center !important;
 }
 
 .yaz-okullari-secim-paneli .program-secim-hub-baslik .alt-satir-lacivert {
-    margin: 10px 0 0;
-    font-size: clamp(1.05rem, 2.1vw, 1.3rem);
+    margin: 0;
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
     font-weight: 700;
     color: #000080;
-    line-height: 1.35;
+    line-height: 1.3;
+    text-align: center !important;
+}
+
+.yaz-okullari-secim-paneli .program-secim-hub-baslik .alt-satir-lacivert .vurgu-renk {
+    color: #bd0505 !important;
 }
 
 .yaz-okullari-secim-paneli .program-secim-hub-baslik > .alt-satir-lacivert:first-child {
@@ -65,12 +75,13 @@
 }
 
 .yaz-okullari-secim-paneli .program-secim-hub-baslik--tek-satir .ust-satir {
-    font-size: clamp(1.05rem, 2.1vw, 1.28rem);
+    font-size: clamp(1.15rem, 2.4vw, 1.45rem);
     font-weight: 700;
     color: #000080;
     letter-spacing: -0.02em;
     text-transform: none;
-    line-height: 1.35;
+    line-height: 1.3;
+    text-align: center !important;
 }
 
 .ulke-secim-paneli-ortak .kirmizi-kutu {
@@ -180,11 +191,14 @@
     margin: 0 !important;
     padding: 0 !important;
     max-width: 100% !important;
-    display: block !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    row-gap: 12px !important;
+    column-gap: 0 !important;
 }
 
 .london-secim-paneli .okul-liste-kapsayici .modern-okul-listesi > .premium-liste-kart ~ .premium-liste-kart {
-    margin-top: 25px !important;
+    margin-top: 0 !important;
 }
 
 .london-secim-paneli .okul-liste-kapsayici .modern-okul-listesi > .premium-liste-kart {
@@ -305,31 +319,6 @@ a.yaz-standart-yesil-buton.blog-yan-iletisim-buton {
 
 .yaz-okullari-program-kutu .yaz-program-etiket::after {
     content: "";
-}
-
-/* Yaz okulları program kartları: 2+2+1, son kart ortalı */
-.yaz-okullari-program-kutu .rozet-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 18px;
-    align-items: stretch;
-}
-
-.yaz-okullari-program-kutu .rozet-grid > .rozet-kart:nth-child(5) {
-    grid-column: 1 / -1;
-    justify-self: center;
-    width: min(100%, calc((100% - 18px) / 2));
-}
-
-@media (max-width: 768px) {
-    .yaz-okullari-program-kutu .rozet-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .yaz-okullari-program-kutu .rozet-grid > .rozet-kart:nth-child(5) {
-        grid-column: auto;
-        width: 100%;
-    }
 }
 
 /* İç kart standardı: "Amerika Yaz Okulları" kartıyla aynı arka plan dili */
@@ -531,11 +520,14 @@ a.yaz-standart-yesil-buton.blog-yan-iletisim-buton {
     margin: 0 !important;
     padding: 0 !important;
     max-width: 100% !important;
-    display: block !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    row-gap: 12px !important;
+    column-gap: 0 !important;
 }
 
 .yaz-okullari-secim-paneli .okul-liste-kapsayici .modern-okul-listesi > .premium-liste-kart ~ .premium-liste-kart {
-    margin-top: 25px !important;
+    margin-top: 0 !important;
 }
 
 .yaz-okullari-secim-paneli .okul-liste-kapsayici .modern-okul-listesi > .premium-liste-kart {
@@ -684,45 +676,6 @@ body.oxford-royale-cambridge-sayfa .ora-ulasim-onemli-not {
     }
 }
 
-/* ---------- UK Londra yaz hub — icerik-kutusu-grid + dikey / yatay-1 … yatay-5 ---------- */
-article.icerik-alani .rozet-grid.icerik-kutusu-grid {
-    gap: 14px;
-    margin-top: 0;
-}
-
-article.icerik-alani .rozet-grid.icerik-kutusu-grid.dikey,
-article.icerik-alani .rozet-grid.icerik-kutusu-grid.yatay-1 {
-    grid-template-columns: 1fr;
-}
-
-article.icerik-alani .rozet-grid.icerik-kutusu-grid.yatay-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-article.icerik-alani .rozet-grid.icerik-kutusu-grid.yatay-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-article.icerik-alani .rozet-grid.icerik-kutusu-grid.yatay-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-article.icerik-alani .rozet-grid.icerik-kutusu-grid.yatay-5 {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-}
-
-.icerik-kutusu .rozet-grid.icerik-kutusu-grid.dikey .rozet-kart {
-    border-radius: 15px;
-}
-
-.icerik-kutusu .rozet-grid.icerik-kutusu-grid.yatay-2 .rozet-kart {
-    border-radius: 15px;
-}
-
-.icerik-kutusu .rozet-grid.icerik-kutusu-grid.yatay-3 .rozet-kart {
-    border-radius: 15px;
-}
-
 .london-program-rozet-kutu .rozet-grid.icerik-kutusu-grid.yatay-3 > .rozet-kart:nth-child(3) {
     grid-column: 1 / -1;
     justify-self: center;
@@ -747,15 +700,6 @@ article.icerik-alani .rozet-grid.icerik-kutusu-grid.yatay-5 {
 
     .london-icerik-grid-pilot-kutu .rozet-grid.icerik-kutusu-grid.yatay-4,
     .london-icerik-grid-pilot-kutu .rozet-grid.icerik-kutusu-grid.yatay-5 {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 640px) {
-    article.icerik-alani .rozet-grid.icerik-kutusu-grid.yatay-2,
-    article.icerik-alani .rozet-grid.icerik-kutusu-grid.yatay-3,
-    article.icerik-alani .rozet-grid.icerik-kutusu-grid.yatay-4,
-    article.icerik-alani .rozet-grid.icerik-kutusu-grid.yatay-5 {
         grid-template-columns: 1fr;
     }
 }

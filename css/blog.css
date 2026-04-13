@@ -54,6 +54,7 @@
     gap: 1.25rem;
     background: linear-gradient(135deg, #ffffff 0%, #f0f4f8 100%);
     border: 0 solid transparent;
+    border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 12px 40px rgba(15, 23, 42, 0.08);
 }
@@ -147,6 +148,7 @@
     font-weight: 600;
     font-size: 0.95rem;
     text-decoration: none;
+    border-radius: 15px;
     transition: background 0.2s ease, transform 0.15s ease;
 }
 
@@ -189,6 +191,7 @@ a.blog-filtre-sekmesi {
     font-weight: 500;
     padding: 0.5rem 0.9rem;
     cursor: pointer;
+    border-radius: 15px;
     transition: border-color 0.2s, background 0.2s, color 0.2s;
     text-decoration: none;
     display: inline-block;
@@ -256,6 +259,7 @@ body.sayfa-blog:not(.sayfa-blog-kategori) .blog-yazi-grid:has(> article.blog-yaz
     flex-direction: column;
     background: #fff;
     border: 0 solid transparent;
+    border-radius: 15px;
     overflow: hidden;
     transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
@@ -357,6 +361,7 @@ body.sayfa-blog .blog-kart-gorsel-link {
     background: linear-gradient(145deg, #1e3a5f 0%, #0f172a 100%);
     color: #f1f5f9;
     text-align: center;
+    border-radius: 15px;
 }
 
 .blog-cta-baslik {
@@ -388,6 +393,7 @@ body.sayfa-blog .blog-kart-gorsel-link {
     background: transparent;
     color: #fff !important;
     border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
     font-weight: 600;
     text-decoration: none;
 }

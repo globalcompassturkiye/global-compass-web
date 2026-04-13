@@ -1,16 +1,24 @@
-// worker.js - En Güncel ve Birleştirilmiş Versiyon (PayTR + 410 Yönlendirmeleri)
-
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
     const pathname = url.pathname;
 
-    // 1. ADIM: 410 GONE - Silinen Sayfalar Listesi (Tam Liste)
+    // 1. ADIM: 410 GONE - Silinen Sayfalar Listesi
     const expiredPaths = [
+      "/yurtdisi-yaz-okullari/ingiltere/cambridge",
+      "/yabanci-dil-okullari/amerika/new-york",
+      "/yabanci-dil-okullari/amerika/boston/kings-education-bos",
+      "/yabanci-dil-okullari/ingiltere-dil-okullari",
+      "/yabanci-dil-okullari/amerika",
+      "/ingiltere-yaz-okullari/immerse-education-13-15-yas/immerse-economics-13-15",
+      "/yurt-disinda-yuksek-lisans-mba",
+      "/yabanci-dil-okullari/amerika/los-angeles/kings-education-la",
+      "/almanya-yaz-okullari",
+      "/yurt-disinda-lise",
       "/yurtdisi-yaz-okullari/ingiltere",
       "/ingiltere-yaz-okullari/immerse-education-cambridge-yaz-okulu/history",
-      "/yabanci-dil-okullari/amerika/los-angeles/kings-education-los-angeles-ingilizce-dil-okulu",
       "/ingiltere-yaz-okullari/immerse-education-cambridge-yaz-okulu/nanotechnology",
+      "/yabanci-dil-okullari/amerika/los-angeles/kings-education-los-angeles-ingilizce-dil-okulu",
       "/yabanci-dil-okullari/amerika-dil-okullari/newyork-dil-okullari/kings-education-newyork",
       "/yuksek-lisans-mba",
       "/ingiltere-yaz-okullari/immerse-education-oxford-yaz-okulu-1",
@@ -125,8 +133,12 @@ export default {
       "/blog/felsted-summer-camp"
     ];
 
-    // 410 Kontrolü (Listenin sonundaki "/" işaretini de kontrol eder)
-    if (expiredPaths.includes(pathname) || expiredPaths.includes(pathname + "/")) {
+    // URL sonundaki "/" işaretini dikkate almadan kontrol et
+    const normalizedPath = pathname.endsWith('/') && pathname.length > 1 
+      ? pathname.slice(0, -1) 
+      : pathname;
+
+    if (expiredPaths.includes(normalizedPath) || expiredPaths.includes(pathname)) {
       return new Response("Bu sayfa kalıcı olarak kaldırılmıştır (410 Gone).", {
         status: 410,
         statusText: "Gone",
@@ -143,10 +155,9 @@ export default {
       return fetch(new Request(newUrl, request));
     }
 
-    // 3. ADIM: NORMAL AKIŞ VE CACHE AYARLARI
+    // 3. ADIM: NORMAL AKIŞ VE CACHE KONTROLÜ
     const response = await env.ASSETS.fetch(request);
     const newResponse = new Response(response.body, response);
-    
     newResponse.headers.set("Cache-Control", "no-cache, no-store, must-revalidate");
     
     return newResponse;
