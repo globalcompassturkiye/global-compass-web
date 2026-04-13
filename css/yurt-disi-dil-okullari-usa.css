@@ -2,16 +2,15 @@
 
 .usa-secim-paneli .kirmizi-kutu { margin: 0; border-radius: 5px 5px 0 0; }
 /* İç padding — style.css [class*="-secim-paneli"] ile dengeli (üst/alt 18px) */
-.usa-secim-paneli .okul-liste-kapsayici { margin-top: 0; border-top-left-radius: 0; border-top-right-radius: 0; }
-.usa-secim-paneli .okul-liste-kapsayici .okul-liste-baslik { display: none; }
+.usa-secim-paneli .okul-liste-kapsayici { margin-top: 0; }
 .usa-secim-paneli .premium-liste-kart,
 .usa-secim-paneli .glass-stil,
 .usa-secim-paneli .incele-btn-minimal,
 .usa-secim-paneli .btn-modern-incele,
 .usa-secim-paneli .ok-animasyon { transition: none !important; }
 .usa-secim-paneli .premium-liste-kart:hover,
-.usa-secim-paneli .glass-stil:hover,
-.usa-secim-paneli .okul-liste-kapsayici:hover { transform: none !important; box-shadow: none !important; border-color: #d1d5db !important; background: #ffffff !important; }
+.usa-secim-paneli .glass-stil:hover { transform: none !important; box-shadow: none !important; border-color: transparent !important; background: transparent !important; }
+.usa-secim-paneli .okul-liste-kapsayici:hover { transform: none !important; box-shadow: var(--site-kart-golge) !important; border-color: var(--site-kart-kenar) !important; background: #ffffff !important; }
 .usa-secim-paneli .okul-isim-link:hover,
 .usa-secim-paneli .incele-btn-minimal:hover,
 .usa-secim-paneli .btn-modern-incele:hover { color: inherit !important; text-decoration: none !important; padding-left: 0 !important; }
@@ -70,29 +69,29 @@
     gap: 14px;
 }
 
-.usa-avantaj-grid-4lu .dahil-rozet-kart {
+.usa-avantaj-grid-4lu .rozet-kart {
     height: 100%;
 }
 
-.usa-avantaj-grid-4lu .dahil-rozet-ikon-tick {
+.usa-avantaj-grid-4lu .rozet-ikon-tick {
     font-size: 1.05em;
     font-weight: 700;
     line-height: 1;
     color: #e30613;
 }
 
-.usa-avantaj-grid-4lu .dahil-rozet-baslik {
+.usa-avantaj-grid-4lu .rozet-baslik {
     color: #111827;
 }
 
 @media (min-width: 993px) {
     /* Global :has(3.kart) -> 2 kolon kuralini ez */
-    .gri-cerceve-kutu .usa-avantaj-grid-4lu,
-    .gri-cerceve-kutu .usa-avantaj-grid-4lu:has(>.dahil-rozet-kart:nth-child(3)) {
+    .cerceve-kutu .usa-avantaj-grid-4lu,
+    .cerceve-kutu .usa-avantaj-grid-4lu:has(>.rozet-kart:nth-child(3)) {
         grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
     }
 
-    .usa-avantaj-grid-4lu .dahil-rozet-kart:nth-child(4) {
+    .usa-avantaj-grid-4lu .rozet-kart:nth-child(4) {
         grid-column: 1 / -1 !important;
         justify-self: center !important;
         width: min(100%, calc((100% - 28px) / 3)) !important;
@@ -104,7 +103,7 @@
         grid-template-columns: 1fr;
     }
 
-    .usa-avantaj-grid-4lu .dahil-rozet-kart:nth-child(4) {
+    .usa-avantaj-grid-4lu .rozet-kart:nth-child(4) {
         grid-column: auto;
         width: 100%;
     }
@@ -146,13 +145,6 @@
     color: #ffffff !important;
 }
 
-.usa-form-bant + .iletisim-form-alani {
-    margin-top: 0 !important;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    padding-top: 0;
-}
-
 /* New York dil — Neden: 4 numarali rozet 2x2 */
 .new-york-neden-kutu .new-york-neden-rozet-grid {
     margin-top: 22px;
@@ -160,15 +152,15 @@
     gap: 18px 22px;
 }
 
-.new-york-neden-kutu .new-york-neden-rozet-grid .dahil-rozet-kart {
+.new-york-neden-kutu .new-york-neden-rozet-grid .rozet-kart {
     height: 100%;
 }
 
-.new-york-neden-kutu .new-york-neden-rozet-grid .dahil-rozet-baslik {
+.new-york-neden-kutu .new-york-neden-rozet-grid .rozet-baslik {
     color: #111827;
 }
 
-.new-york-neden-kutu .new-york-neden-rozet-grid .dahil-rozet-ikon-tick {
+.new-york-neden-kutu .new-york-neden-rozet-grid .rozet-ikon-tick {
     font-size: 1.05em;
     font-weight: 700;
     line-height: 1;
@@ -188,11 +180,11 @@
     gap: 18px 22px;
 }
 
-.boston-neden-kutu .boston-neden-rozet-grid .dahil-rozet-kart {
+.boston-neden-kutu .boston-neden-rozet-grid .rozet-kart {
     height: 100%;
 }
 
-.boston-neden-kutu .boston-neden-rozet-grid .dahil-rozet-baslik {
+.boston-neden-kutu .boston-neden-rozet-grid .rozet-baslik {
     color: #111827;
 }
 
@@ -203,32 +195,32 @@
 }
 
 /* Los Angeles dil — Neden: 4 rozet alt alta (her satırda 1 çerçeve); global 2 kolon :has kuralını ezer */
-.gri-cerceve-kutu.los-angeles-neden-kutu .dahil-rozet-grid.los-angeles-neden-rozet-grid {
+.cerceve-kutu.los-angeles-neden-kutu .rozet-grid.los-angeles-neden-rozet-grid {
     margin-top: 22px;
     grid-template-columns: 1fr;
     gap: 18px;
 }
 
 /* İki sütunlu grid başlığı sağa itiyordu; kartı blok + üst satırda ikon+başlık yan yana */
-.gri-cerceve-kutu.los-angeles-neden-kutu .los-angeles-neden-rozet-grid .dahil-rozet-kart {
+.cerceve-kutu.los-angeles-neden-kutu .los-angeles-neden-rozet-grid .rozet-kart {
     display: flex;
     flex-direction: column;
     align-items: stretch;
     gap: 10px;
 }
 
-.gri-cerceve-kutu.los-angeles-neden-kutu .los-angeles-rozet-ust {
+.cerceve-kutu.los-angeles-neden-kutu .los-angeles-rozet-ust {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     gap: 12px;
 }
 
-.gri-cerceve-kutu.los-angeles-neden-kutu .los-angeles-rozet-ust .dahil-rozet-ikon {
+.cerceve-kutu.los-angeles-neden-kutu .los-angeles-rozet-ust .rozet-ikon {
     flex-shrink: 0;
 }
 
-.gri-cerceve-kutu.los-angeles-neden-kutu .los-angeles-rozet-ust .dahil-rozet-baslik {
+.cerceve-kutu.los-angeles-neden-kutu .los-angeles-rozet-ust .rozet-baslik {
     flex: 1;
     min-width: 0;
     margin: 0;
@@ -236,11 +228,11 @@
     color: #111827;
 }
 
-.gri-cerceve-kutu.los-angeles-neden-kutu .los-angeles-neden-rozet-grid .dahil-rozet-metin {
+.cerceve-kutu.los-angeles-neden-kutu .los-angeles-neden-rozet-grid .rozet-metin {
     margin-top: 0;
 }
 
-.gri-cerceve-kutu.los-angeles-neden-kutu .los-angeles-neden-rozet-grid .dahil-rozet-liste {
+.cerceve-kutu.los-angeles-neden-kutu .los-angeles-neden-rozet-grid .dahil-rozet-liste {
     margin: 0;
     padding-left: 1.15rem;
     font-size: 15px;

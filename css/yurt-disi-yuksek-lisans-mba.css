@@ -1,8 +1,8 @@
 /* Yurt Dışı Yüksek Lisans & MBA sayfasına özel stiller */
 
 /* Rozet ikonunda onay işareti (✓) */
-.yuksek-lisans-neden-kutu .dahil-rozet-ikon-tick,
-.yuksek-lisans-avantaj-kutu .dahil-rozet-ikon-tick {
+.yuksek-lisans-neden-kutu .rozet-ikon-tick,
+.yuksek-lisans-avantaj-kutu .rozet-ikon-tick {
     font-size: 17px;
     font-weight: 700;
     line-height: 1;
@@ -11,8 +11,7 @@
 /* MBA bölümü — vurgu kutusu (inline style yok) */
 .mba-vurgu-kutu {
     background: #eef4ff;
-    border: 1px solid rgba(0, 0, 128, 0.15);
-    border-radius: 10px;
+    border: 0 solid transparent;
     padding: 20px 24px;
     margin: 25px 0;
     border-left: 4px solid #000080;
@@ -27,15 +26,15 @@ article.icerik-alani .mba-vurgu-metin {
 
 /* Başlık renk standardı */
 .yuksek-lisans-avantaj-kutu .program-kart h3,
-.yuksek-lisans-neden-kutu .dahil-rozet-baslik,
-.yuksek-lisans-belgeler-kutu .dahil-rozet-baslik,
-.yuksek-lisans-kusursuz-kutu .dahil-rozet-baslik {
+.yuksek-lisans-neden-kutu .rozet-baslik,
+.yuksek-lisans-belgeler-kutu .rozet-baslik,
+.yuksek-lisans-kusursuz-kutu .rozet-baslik {
     color: #111827;
 }
 
 /* 4 kartlı bölümlerde 2+2 düzen */
-.yuksek-lisans-neden-kutu .dahil-rozet-grid,
-.yuksek-lisans-kusursuz-kutu .dahil-rozet-grid {
+.yuksek-lisans-neden-kutu .rozet-grid,
+.yuksek-lisans-kusursuz-kutu .rozet-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 18px;
@@ -43,28 +42,28 @@ article.icerik-alani .mba-vurgu-metin {
 }
 
 /* Avantajlar bölümü: 3 kartta 2+1 düzen, son kart ortalı */
-.yuksek-lisans-avantaj-kutu .dahil-rozet-grid {
+.yuksek-lisans-avantaj-kutu .rozet-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 18px;
     align-items: stretch;
 }
 
-.yuksek-lisans-avantaj-kutu .dahil-rozet-grid > .dahil-rozet-kart:nth-child(3) {
+.yuksek-lisans-avantaj-kutu .rozet-grid > .rozet-kart:nth-child(3) {
     grid-column: 1 / -1;
     justify-self: center;
     width: min(100%, calc((100% - 18px) / 2));
 }
 
 /* Kusursuz başvuru süreci: kartlar alt alta (1+1+1+1) */
-.yuksek-lisans-kusursuz-kutu .dahil-rozet-grid {
+.yuksek-lisans-kusursuz-kutu .rozet-grid {
     grid-template-columns: 1fr !important;
     display: grid !important;
     gap: 18px !important;
     align-items: stretch !important;
 }
 
-.yuksek-lisans-kusursuz-kutu .dahil-rozet-grid > .dahil-rozet-kart {
+.yuksek-lisans-kusursuz-kutu .rozet-grid > .rozet-kart {
     grid-column: 1 / -1 !important;
     grid-row: auto !important;
     width: 100% !important;
@@ -73,42 +72,42 @@ article.icerik-alani .mba-vurgu-metin {
     align-self: stretch !important;
 }
 
-.yuksek-lisans-kusursuz-kutu .dahil-rozet-kart:nth-child(1),
-.yuksek-lisans-kusursuz-kutu .dahil-rozet-kart:nth-child(2),
-.yuksek-lisans-kusursuz-kutu .dahil-rozet-kart:nth-child(3),
-.yuksek-lisans-kusursuz-kutu .dahil-rozet-kart:nth-child(4) {
+.yuksek-lisans-kusursuz-kutu .rozet-kart:nth-child(1),
+.yuksek-lisans-kusursuz-kutu .rozet-kart:nth-child(2),
+.yuksek-lisans-kusursuz-kutu .rozet-kart:nth-child(3),
+.yuksek-lisans-kusursuz-kutu .rozet-kart:nth-child(4) {
     grid-column: 1 / -1 !important;
     grid-row: auto !important;
 }
 
 /* 5 kartlı bölümde 2+2+1, son kart ortalı */
-.yuksek-lisans-belgeler-kutu .dahil-rozet-grid {
+.yuksek-lisans-belgeler-kutu .rozet-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 18px;
     align-items: stretch;
 }
 
-.yuksek-lisans-belgeler-kutu .dahil-rozet-grid > .dahil-rozet-kart:nth-child(5) {
+.yuksek-lisans-belgeler-kutu .rozet-grid > .rozet-kart:nth-child(5) {
     grid-column: 1 / -1;
     justify-self: center;
     width: min(100%, calc((100% - 18px) / 2));
 }
 
 @media (max-width: 768px) {
-    .yuksek-lisans-avantaj-kutu .dahil-rozet-grid,
-    .yuksek-lisans-neden-kutu .dahil-rozet-grid,
-    .yuksek-lisans-kusursuz-kutu .dahil-rozet-grid,
-    .yuksek-lisans-belgeler-kutu .dahil-rozet-grid {
+    .yuksek-lisans-avantaj-kutu .rozet-grid,
+    .yuksek-lisans-neden-kutu .rozet-grid,
+    .yuksek-lisans-kusursuz-kutu .rozet-grid,
+    .yuksek-lisans-belgeler-kutu .rozet-grid {
         grid-template-columns: 1fr;
     }
 
-    .yuksek-lisans-avantaj-kutu .dahil-rozet-grid > .dahil-rozet-kart:nth-child(3) {
+    .yuksek-lisans-avantaj-kutu .rozet-grid > .rozet-kart:nth-child(3) {
         grid-column: auto;
         width: 100%;
     }
 
-    .yuksek-lisans-belgeler-kutu .dahil-rozet-grid > .dahil-rozet-kart:nth-child(5) {
+    .yuksek-lisans-belgeler-kutu .rozet-grid > .rozet-kart:nth-child(5) {
         grid-column: auto;
         width: 100%;
     }

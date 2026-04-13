@@ -1,4 +1,4 @@
-/* Bournemouth yaz okullari sayfasina ozel secim paneli ve form bandi stilleri */
+/* Bournemouth: dil okulları + yaz okulları sayfaları; yaz program listesi okul-listesi.css */
 
 /* Bournemouth dil okullari: h1 alti cercevesiz giris metni */
 .bournemouth-dil-giris {
@@ -22,27 +22,28 @@
     margin-top: 18px;
 }
 
-.bournemouth-neden-kutu .bournemouth-neden-rozet-grid .dahil-rozet-baslik {
+.bournemouth-neden-kutu .bournemouth-neden-rozet-grid .rozet-baslik {
     color: #111827;
 }
 
-.bournemouth-neden-kutu .dahil-rozet-ikon-tick {
+.bournemouth-neden-kutu .rozet-ikon-tick {
     font-size: 1.05em;
     font-weight: 700;
     line-height: 1;
     color: #e30613;
 }
+
+/* Dil okulları Bournemouth: yaz-okullari-secim-paneli + bournemouth-secim-paneli (kırmızı kutu + liste; okul-listesi.css kullanılmaz) */
 .bournemouth-secim-paneli .kirmizi-kutu { margin: 0; border-radius: 5px 5px 0 0; }
-.bournemouth-secim-paneli .okul-liste-kapsayici { margin-top: 0; padding-top: 0; border-top-left-radius: 0; border-top-right-radius: 0; }
-.bournemouth-secim-paneli .okul-liste-kapsayici .okul-liste-baslik { display: none; }
+.bournemouth-secim-paneli .okul-liste-kapsayici { margin-top: 0; padding-top: 0; }
 .bournemouth-secim-paneli .premium-liste-kart,
 .bournemouth-secim-paneli .glass-stil,
 .bournemouth-secim-paneli .incele-btn-minimal,
 .bournemouth-secim-paneli .btn-modern-incele,
 .bournemouth-secim-paneli .ok-animasyon { transition: none !important; }
 .bournemouth-secim-paneli .premium-liste-kart:hover,
-.bournemouth-secim-paneli .glass-stil:hover,
-.bournemouth-secim-paneli .okul-liste-kapsayici:hover { transform: none !important; box-shadow: none !important; border-color: #d1d5db !important; background: #ffffff !important; }
+.bournemouth-secim-paneli .glass-stil:hover { transform: none !important; box-shadow: none !important; border-color: transparent !important; background: transparent !important; }
+.bournemouth-secim-paneli .okul-liste-kapsayici:hover { transform: none !important; box-shadow: var(--site-kart-golge) !important; border-color: var(--site-kart-kenar) !important; background: #ffffff !important; }
 .bournemouth-secim-paneli .okul-isim-link:hover,
 .bournemouth-secim-paneli .incele-btn-minimal:hover,
 .bournemouth-secim-paneli .btn-modern-incele:hover { color: inherit !important; text-decoration: none !important; padding-left: 0 !important; }
@@ -57,6 +58,7 @@
 .bournemouth-secim-paneli .okul-isim-link,
 .bournemouth-secim-paneli .btn-modern-incele,
 .bournemouth-secim-paneli .incele-btn-minimal { font-size: 18px !important; }
+
 .bournemouth-form-bant { margin-bottom: 0; border-radius: 5px 5px 0 0; background-color: #e30613; }
 .bournemouth-form-bant .ust-satir { color: #ffffff !important; }
 .bournemouth-form-bant .bournemouth-form-alt-satir {
@@ -66,9 +68,7 @@
     line-height: 1.35;
     color: #00235d !important;
 }
-.bournemouth-form-bant + .iletisim-form-alani { margin-top: 0 !important; border-top-left-radius: 0; border-top-right-radius: 0; padding-top: 0; }
-
-.bournemouth-program-rozet-kutu .bournemouth-program-rozet-grid > .dahil-rozet-kart:nth-child(3) {
+.bournemouth-program-rozet-kutu .bournemouth-program-rozet-grid > .rozet-kart:nth-child(3) {
     grid-column: 1 / -1;
     justify-self: center;
     width: min(100%, calc((100% - 18px) / 2));
@@ -79,12 +79,12 @@
     gap: 14px;
 }
 
-.bournemouth-sosyal-rozet-kutu .bournemouth-sosyal-rozet-grid .dahil-rozet-kart {
+.bournemouth-sosyal-rozet-kutu .bournemouth-sosyal-rozet-grid .rozet-kart {
     height: 100%;
 }
 
 @media (max-width: 768px) {
-    .bournemouth-program-rozet-kutu .bournemouth-program-rozet-grid > .dahil-rozet-kart:nth-child(3) {
+    .bournemouth-program-rozet-kutu .bournemouth-program-rozet-grid > .rozet-kart:nth-child(3) {
         grid-column: auto;
         justify-self: stretch;
         width: 100%;

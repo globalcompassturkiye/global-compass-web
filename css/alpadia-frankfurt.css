@@ -3,9 +3,9 @@
 .alpadia-logo-kapsayici { margin: 16px 0 24px; text-align: center; }
 .alpadia-logo { max-width: 220px; height: auto; display: inline-block; }
 .alpadia-kampus-kapsayici { margin-top: 25px; }
-.alpadia-kampus-gorsel { width: 100%; max-width: 900px; height: auto; border-radius: 10px; display: block; margin: 0 auto; }
+.alpadia-kampus-gorsel { width: 100%; max-width: 900px; height: auto; display: block; margin: 0 auto; }
 /* Neden bu okul: 2×2 rozet kartı (✓) */
-body.sayfa-alpadia-frankfurt .alpadia-neden-kutu .dahil-rozet-baslik {
+body.sayfa-alpadia-frankfurt .alpadia-neden-kutu .rozet-baslik {
     line-height: 1.4;
 }
 body.sayfa-alpadia-frankfurt .alpadia-neden-kutu .alpadia-neden-rozet-grid {
@@ -20,30 +20,24 @@ body.sayfa-alpadia-frankfurt .alpadia-neden-kutu .alpadia-neden-rozet-grid {
 .alpadia-mt24,
 .alpadia-mt12 { margin-top: 25px; }
 
-/* İki satırlı başlık: başlık–metin arası yalnızca style.css’teki 25px padding; ek margin yok */
-body.sayfa-alpadia-frankfurt .gri-cerceve-kutu.baslik-iki-satir .kutu-baslik + p {
+/* İki satırlı başlık: başlık–metin arası boşluk style.css h2.gri-cerceve-baslik margin-bottom (25px); ek margin yok */
+body.sayfa-alpadia-frankfurt .cerceve-kutu.baslik-iki-satir .gri-cerceve-baslik + p {
     margin-top: 0;
 }
 
-/* Proje başlığı (iki satır + uzun): genel 25px yerine biraz sıkı üst boşluk */
-body.sayfa-alpadia-frankfurt .gri-cerceve-kutu.baslik-iki-satir h2#alpadia-frankfurt-proje + p {
+/* Proje başlığı (iki satır + uzun): genel 25px’e ek olarak biraz sıkı ek boşluk */
+body.sayfa-alpadia-frankfurt .cerceve-kutu.baslik-iki-satir h2#alpadia-frankfurt-proje + p {
     padding-top: 16px;
-}
-
-/* Premium+ Tenis: başlık ile paragraf arası üst boşluk 25px */
-body.sayfa-alpadia-frankfurt .gri-cerceve-kutu.baslik-iki-satir h2#alpadia-frankfurt-tenis + p {
-    padding-top: 25px;
-    margin-top: 0;
 }
 
 .alpadia-h3-ozel { margin: 20px 0 12px; font-size: 1.1em; color: #1a365d; }
 
-/* .alpadia-h3-ozel üstteki shorthand’tan sonra: iki satırlı başlıktan sonraki h3’te üst margin yok (25px yalnızca .kutu-baslik + * padding) */
-body.sayfa-alpadia-frankfurt .gri-cerceve-kutu.baslik-iki-satir .kutu-baslik + h3.alpadia-h3-ozel {
+/* .alpadia-h3-ozel üstteki shorthand’tan sonra: iki satırlı başlıktan sonraki h3’te üst margin yok */
+body.sayfa-alpadia-frankfurt .cerceve-kutu.baslik-iki-satir .gri-cerceve-baslik + h3.alpadia-h3-ozel {
     margin-top: 0;
 }
 .alpadia-galeri-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-.alpadia-galeri-gorsel { width: 100%; height: 200px; border-radius: 8px; object-fit: cover; }
+.alpadia-galeri-gorsel { width: 100%; height: 200px; object-fit: cover; }
 
 /* Program detayı kart başlıkları: siyah metin + alt çizgi */
 body.sayfa-alpadia-frankfurt .immerse-detay-kutu .immerse-detay-kart h3 {

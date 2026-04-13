@@ -5,7 +5,6 @@
     font-weight: 700;
     color: #111827;
     background: linear-gradient(90deg, #f1f5f9 0%, #ffffff 100%);
-    border-radius: 6px;
 }
 
 .sportech-academy-page .yaz-programlari-kategori-baslik:first-of-type {
@@ -47,14 +46,10 @@
 
 .sportech-program-paneli .kirmizi-kutu {
     margin-bottom: 0;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
 }
 
 .sportech-program-paneli .sportech-program-icerik {
     margin-top: 0;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
 }
 
 /* Ülke kartı grid’i (yurt-disi-yaz-okullari-index.css) — kategori blokları arası boşluk */
@@ -79,7 +74,6 @@ body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .sportech-program-icerik
     color: inherit;
     background: #f1f5f9;
     border: none;
-    border-radius: 0;
     box-shadow:
         0 2px 6px rgba(15, 23, 42, 0.06),
         0 8px 20px rgba(15, 23, 42, 0.08);
@@ -104,7 +98,6 @@ body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .sportech-program-icerik
     padding: 18px 20px 18px 22px;
     background: linear-gradient(90deg, rgba(0, 0, 128, 0.07) 0%, #ffffff 100%);
     border-left: 5px solid #000080;
-    border-radius: 0 10px 10px 0;
     box-shadow: 0 2px 10px rgba(0, 0, 128, 0.07);
 }
 
@@ -155,8 +148,7 @@ body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .sportech-program-icerik
 .sportech-academy-program-icerik-item {
     margin-bottom: 0;
     padding: 14px 16px;
-    border: 1px solid #e2e8f0;
-    border-radius: 10px;
+    border: 0 solid transparent;
     background: #ffffff;
     line-height: 1.5;
     box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);

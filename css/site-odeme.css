@@ -17,8 +17,7 @@
 }
 
 .odeme-form-kutu {
-    border: 1px solid #d1d1d1;
-    border-radius: 8px;
+    border: 0 solid transparent;
     padding: 30px 25px 25px;
     background: #ffffff;
     box-shadow: 0 4px 10px rgba(15, 23, 42, 0.04);
@@ -66,8 +65,7 @@
 .odeme-form-kutu input[type="number"] {
     width: 100%;
     padding: 10px 12px;
-    border-radius: 6px;
-    border: 1px solid #d1d5db;
+    border: 0 solid transparent;
     font-size: 14px;
     box-sizing: border-box;
 }
@@ -88,8 +86,7 @@
     font-size: 13px;
     color: #b91c1c;
     background: #fef2f2;
-    border: 1px solid #fecaca;
-    border-radius: 6px;
+    border: 0 solid transparent;
     padding: 8px 10px;
 }
 
@@ -103,7 +100,6 @@
     background-color: #000080;
     color: #ffffff;
     border: none;
-    border-radius: 6px;
     padding: 12px 28px;
     font-size: 15px;
     font-weight: 700;
@@ -154,7 +150,6 @@
     background: rgba(15, 23, 42, 0.85);
     color: #fff;
     border: none;
-    border-radius: 999px;
     padding: 6px 12px;
     font-size: 13px;
     cursor: pointer;

@@ -43,8 +43,7 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
 body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-giris-global-compass-vurgu {
     margin-top: 1.35rem;
     padding: 1rem 1.15rem 1.1rem 1.1rem;
-    border-radius: 0 14px 14px 0;
-    border: 1px solid rgba(196, 30, 58, 0.22);
+    border: 0 solid transparent;
     border-left: 5px solid #c41e3a;
     background: linear-gradient(135deg, #fef7f8 0%, #f8fafc 55%, #f1f5f9 100%);
     box-shadow: 0 6px 22px rgba(15, 23, 42, 0.07);
@@ -199,9 +198,8 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     height: auto;
     aspect-ratio: 4 / 3;
     object-fit: cover;
-    border-radius: 10px;
     display: block;
-    border: 1px solid #e2e8f0;
+    border: 0 solid transparent;
     box-sizing: border-box;
 }
 
@@ -237,8 +235,7 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     align-items: stretch;
     gap: 0;
     background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
+    border: 0 solid transparent;
     padding: 0;
     overflow: hidden;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
@@ -422,9 +419,8 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     font-weight: 500;
     color: #0f172a;
     background: linear-gradient(135deg, #ecfdf5 0%, #f9fafb 100%);
-    border-radius: 5px;
     padding: 8px 18px;
-    border: 1px solid #a7f3d0;
+    border: 0 solid transparent;
     box-shadow: 0 2px 6px rgba(15, 23, 42, 0.06);
     display: inline-flex;
     align-items: center;
@@ -493,10 +489,9 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     flex-direction: column;
     min-width: 0;
     background: #ffffff;
-    border-radius: 16px;
     padding: 24px 22px 22px;
     box-shadow: 0 4px 24px rgba(15, 23, 42, 0.08);
-    border: 1px solid rgba(226, 232, 240, 0.9);
+    border: 0 solid transparent;
     transition: transform 0.22s ease, box-shadow 0.22s ease;
     font-family: "Poppins", sans-serif;
 }
@@ -536,7 +531,6 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     color: #1e40af;
     background: rgba(30, 64, 175, 0.08);
     padding: 6px 12px;
-    border-radius: 999px;
     margin-bottom: 14px;
 }
 
@@ -555,7 +549,6 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     justify-content: center;
     width: 36px;
     height: 36px;
-    border-radius: 50%;
     font-family: "Poppins", sans-serif;
     font-size: 15px;
     font-weight: 700;
@@ -563,7 +556,7 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     color: #ffffff;
     background: linear-gradient(145deg, #1e40af 0%, #000080 52%, #0f172a 100%);
     box-shadow: 0 2px 10px rgba(0, 0, 128, 0.35);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 0 solid transparent;
     margin-top: 2px;
 }
 
@@ -653,11 +646,11 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     overflow: visible;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-spor-akademileri-bolumu .gri-cerceve-kutu {
+body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-spor-akademileri-bolumu .cerceve-kutu {
     overflow: visible;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-spor-akademileri-bolumu .gri-cerceve-kutu .kutu-baslik .sbc-spor-akademi-baslik-ek {
+body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-spor-akademileri-bolumu .cerceve-kutu .gri-cerceve-baslik .sbc-spor-akademi-baslik-ek {
     display: inline;
     font-weight: 600;
     font-size: clamp(0.82em, 2.6vw, 0.95em);
@@ -687,8 +680,7 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     flex-direction: row;
     align-items: stretch;
     background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 14px;
+    border: 0 solid transparent;
     padding: 0;
     box-shadow: 0 2px 12px rgba(15, 23, 42, 0.06);
     box-sizing: border-box;
@@ -870,8 +862,7 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    border-radius: 12px;
-    border: 1px solid #e2e8f0;
+    border: 0 solid transparent;
     background: #fafafa;
 }
 

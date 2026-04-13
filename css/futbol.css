@@ -15,7 +15,7 @@
 .futbol-mt-75 { margin-top: 75px; }
 .futbol-mb-24 { margin-bottom: 24px; }
 .futbol-galeri-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 24px; }
-.futbol-galeri-item { aspect-ratio: 4/3; overflow: hidden; border-radius: 8px; }
+.futbol-galeri-item { aspect-ratio: 4/3; overflow: hidden; }
 .futbol-galeri-img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
 /* AC Milan Futbol – Kampın Avantajları kart grid */
@@ -32,9 +32,8 @@
     gap: 16px;
     padding: 20px 20px 20px 0;
     background: linear-gradient(135deg, #fef2f2 0%, #ffffff 30%, #ffffff 100%);
-    border: 1px solid #fecaca;
-    border-left: 4px solid #e30613;
-    border-radius: 0 12px 12px 0;
+    border: 0 solid transparent;
+    border-left: 0 solid transparent;
     box-shadow: 0 4px 12px rgba(227, 6, 19, 0.06);
     transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
@@ -42,7 +41,7 @@
 .ac-milan-avantaj-kutu .ac-milan-avantaj-kart:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(227, 6, 19, 0.1);
-    border-color: #e30613;
+    border-color: transparent;
 }
 
 .ac-milan-avantaj-kutu .ac-milan-avantaj-numara {
@@ -56,7 +55,6 @@
     color: #fff;
     font-size: 1.1em;
     font-weight: 700;
-    border-radius: 50%;
     margin-left: 20px;
 }
 
@@ -91,9 +89,8 @@
 .yatili-kamp-kutu .yatili-kamp-oge {
     padding: 18px;
     background: linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
-    border: 1px solid #e2e8f0;
-    border-radius: 10px;
-    border-left: 4px solid #e30613;
+    border: 0 solid transparent;
+    border-left: 0 solid transparent;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
@@ -121,9 +118,8 @@
 .vismara-konum-kutu .vismara-tesis-oge {
     padding: 18px;
     background: linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
-    border: 1px solid #e2e8f0;
-    border-radius: 10px;
-    border-left: 4px solid #e30613;
+    border: 0 solid transparent;
+    border-left: 0 solid transparent;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
@@ -151,9 +147,8 @@
 .milano-gezi-kutu .milano-gezi-kart {
     padding: 20px;
     background: linear-gradient(180deg, #fef2f2 0%, #ffffff 40%);
-    border: 1px solid #fecaca;
-    border-radius: 10px;
-    border-left: 4px solid #e30613;
+    border: 0 solid transparent;
+    border-left: 0 solid transparent;
     box-shadow: 0 2px 8px rgba(227, 6, 19, 0.06);
 }
 
@@ -206,16 +201,16 @@
     gap: 10px;
 }
 
-.futbol-gezi-baslik-satir .dahil-rozet-ikon {
+.futbol-gezi-baslik-satir .rozet-ikon {
     flex-shrink: 0;
 }
 
 .milano-gezi-kutu .milano-gezi-kart {
-    border-left: 1px solid #fecaca;
+    border-left: 0 solid transparent;
 }
 
 .vismara-konum-kutu .vismara-tesis-oge {
-    border-left: 1px solid #e2e8f0;
+    border-left: 0 solid transparent;
 }
 
 .vismara-konum-kutu .vismara-tesis-oge h4::before {
@@ -228,7 +223,7 @@
     gap: 8px;
 }
 
-.futbol-tesis-baslik-satir .dahil-rozet-ikon {
+.futbol-tesis-baslik-satir .rozet-ikon {
     flex-shrink: 0;
 }
 

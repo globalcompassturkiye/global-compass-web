@@ -17,7 +17,7 @@
 .alpadia-freiburg-kampus-gorsel-wrap .alpadia-kampus-kapsayici {
     margin: 0;
 }
-.alpadia-kampus-gorsel { width: 100%; max-width: 900px; height: auto; border-radius: 10px; display: block; margin: 0 auto; }
+.alpadia-kampus-gorsel { width: 100%; max-width: 900px; height: auto; display: block; margin: 0 auto; }
 .alpadia-ul-sade { list-style: none; padding-left: 0; }
 .alpadia-li-mb14 { margin-bottom: 14px; }
 .alpadia-li-mb0 { margin-bottom: 0; }
@@ -36,9 +36,8 @@ body.sayfa-alpadia-freiburg .alpadia-program-icerik-kart {
     margin: 0;
     padding: 1rem 1.1rem 1.05rem 1.15rem;
     background: #ffffff;
-    border: 1px solid #e2e8f0;
+    border: 0 solid transparent;
     border-left: 6px solid #1e3a8a;
-    border-radius: 0 10px 10px 0;
     box-sizing: border-box;
 }
 
@@ -60,7 +59,7 @@ body.sayfa-alpadia-freiburg p.alpadia-program-icerik-kart-metin {
 .alpadia-galeri-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
 .alpadia-mt24 { margin-top: 24px; }
 .alpadia-mt12 { margin-top: 12px; }
-.alpadia-galeri-gorsel { width: 100%; height: 200px; border-radius: 8px; object-fit: cover; }
+.alpadia-galeri-gorsel { width: 100%; height: 200px; object-fit: cover; }
 
 /* 768px altı: konaklama ve galeri — satırda 2 görsel, kalanlar alta sarar (4 sütun yerine 2) */
 @media (max-width: 767px) {

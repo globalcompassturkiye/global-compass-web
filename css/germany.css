@@ -7,12 +7,6 @@
 .germany-secim-paneli .okul-liste-kapsayici {
     margin-top: 0;
     padding-top: 0;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-}
-
-.germany-secim-paneli .okul-liste-kapsayici .okul-liste-baslik {
-    display: none;
 }
 
 .germany-secim-paneli .premium-liste-kart,
@@ -24,11 +18,17 @@
 }
 
 .germany-secim-paneli .premium-liste-kart:hover,
-.germany-secim-paneli .glass-stil:hover,
-.germany-secim-paneli .okul-liste-kapsayici:hover {
+.germany-secim-paneli .glass-stil:hover {
     transform: none !important;
     box-shadow: none !important;
-    border-color: #d1d5db !important;
+    border-color: transparent !important;
+    background: transparent !important;
+}
+
+.germany-secim-paneli .okul-liste-kapsayici:hover {
+    transform: none !important;
+    box-shadow: var(--site-kart-golge) !important;
+    border-color: var(--site-kart-kenar) !important;
     background: #ffffff !important;
 }
 
@@ -79,30 +79,23 @@
     color: #ffffff !important;
 }
 
-.germany-form-bant + .iletisim-form-alani {
-    margin-top: 0 !important;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    padding-top: 0;
-}
-
 /* Almanya avantajlar: masaustunde 3+2, altta 2 kart ortali */
-.gri-cerceve-kutu .almanya-avantaj-grid-3-2 {
+.cerceve-kutu .almanya-avantaj-grid-3-2 {
     grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
     gap: 14px;
 }
 
-.almanya-avantaj-grid-3-2 > .dahil-rozet-kart:nth-child(1),
-.almanya-avantaj-grid-3-2 > .dahil-rozet-kart:nth-child(2),
-.almanya-avantaj-grid-3-2 > .dahil-rozet-kart:nth-child(3) {
+.almanya-avantaj-grid-3-2 > .rozet-kart:nth-child(1),
+.almanya-avantaj-grid-3-2 > .rozet-kart:nth-child(2),
+.almanya-avantaj-grid-3-2 > .rozet-kart:nth-child(3) {
     grid-column: span 2;
 }
 
-.almanya-avantaj-grid-3-2 > .dahil-rozet-kart:nth-child(4) {
+.almanya-avantaj-grid-3-2 > .rozet-kart:nth-child(4) {
     grid-column: 2 / span 2;
 }
 
-.almanya-avantaj-grid-3-2 > .dahil-rozet-kart:nth-child(5) {
+.almanya-avantaj-grid-3-2 > .rozet-kart:nth-child(5) {
     grid-column: 4 / span 2;
 }
 
@@ -278,17 +271,17 @@
 }
 
 @media (max-width: 992px) {
-    .gri-cerceve-kutu .almanya-avantaj-grid-3-2 {
+    .cerceve-kutu .almanya-avantaj-grid-3-2 {
         grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     }
-    .almanya-avantaj-grid-3-2 > .dahil-rozet-kart:nth-child(4),
-    .almanya-avantaj-grid-3-2 > .dahil-rozet-kart:nth-child(5) {
+    .almanya-avantaj-grid-3-2 > .rozet-kart:nth-child(4),
+    .almanya-avantaj-grid-3-2 > .rozet-kart:nth-child(5) {
         grid-column: auto;
     }
 }
 
 @media (max-width: 768px) {
-    .gri-cerceve-kutu .almanya-avantaj-grid-3-2 {
+    .cerceve-kutu .almanya-avantaj-grid-3-2 {
         grid-template-columns: 1fr !important;
     }
 

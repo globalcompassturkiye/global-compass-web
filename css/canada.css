@@ -7,13 +7,7 @@
 .canada-secim-paneli .okul-liste-kapsayici {
     margin-top: 0;
     padding-top: 0;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
     padding-bottom: 8px;
-}
-
-.canada-secim-paneli .okul-liste-kapsayici .okul-liste-baslik {
-    display: none;
 }
 
 .canada-secim-paneli .premium-liste-kart,
@@ -25,11 +19,17 @@
 }
 
 .canada-secim-paneli .premium-liste-kart:hover,
-.canada-secim-paneli .glass-stil:hover,
-.canada-secim-paneli .okul-liste-kapsayici:hover {
+.canada-secim-paneli .glass-stil:hover {
     transform: none !important;
     box-shadow: none !important;
-    border-color: #d1d5db !important;
+    border-color: transparent !important;
+    background: transparent !important;
+}
+
+.canada-secim-paneli .okul-liste-kapsayici:hover {
+    transform: none !important;
+    box-shadow: var(--site-kart-golge) !important;
+    border-color: var(--site-kart-kenar) !important;
     background: #ffffff !important;
 }
 
@@ -80,20 +80,13 @@
     color: #ffffff !important;
 }
 
-.canada-form-bant + .iletisim-form-alani {
-    margin-top: 0 !important;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    padding-top: 0;
-}
-
 /* Kanada avantajlar: masaustunde 3+1 (son kart ortali) */
-.gri-cerceve-kutu .canada-avantaj-grid-3-1 {
+.cerceve-kutu .canada-avantaj-grid-3-1 {
     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
     gap: 14px;
 }
 
-.canada-avantaj-grid-3-1 > .dahil-rozet-kart:nth-child(4) {
+.canada-avantaj-grid-3-1 > .rozet-kart:nth-child(4) {
     grid-column: 1 / -1;
     justify-self: center;
     width: min(100%, calc((100% - 28px) / 3));
@@ -131,10 +124,10 @@
 }
 
 @media (max-width: 992px) {
-    .gri-cerceve-kutu .canada-avantaj-grid-3-1 {
+    .cerceve-kutu .canada-avantaj-grid-3-1 {
         grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     }
-    .canada-avantaj-grid-3-1 > .dahil-rozet-kart:nth-child(4) {
+    .canada-avantaj-grid-3-1 > .rozet-kart:nth-child(4) {
         grid-column: 1 / -1;
         width: min(100%, calc((100% - 14px) / 2));
     }
@@ -145,10 +138,10 @@
 }
 
 @media (max-width: 768px) {
-    .gri-cerceve-kutu .canada-avantaj-grid-3-1 {
+    .cerceve-kutu .canada-avantaj-grid-3-1 {
         grid-template-columns: 1fr !important;
     }
-    .canada-avantaj-grid-3-1 > .dahil-rozet-kart:nth-child(4) {
+    .canada-avantaj-grid-3-1 > .rozet-kart:nth-child(4) {
         grid-column: auto;
         justify-self: stretch;
         width: 100%;

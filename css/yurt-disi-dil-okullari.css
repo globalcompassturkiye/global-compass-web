@@ -2,30 +2,29 @@
 /* Ülke seçim kartları: /css/yurt-disi-yaz-okullari-index.css (hub kart ızgarası) */
 
 /* Rozet ikonunda onay işareti (✓) */
-.dil-okullari-kariyer-kutu .dahil-rozet-ikon-tick,
-.dil-okullari-program-kutu .dahil-rozet-ikon-tick,
-.ingiltere-neden-kutu .dahil-rozet-ikon-tick {
+.dil-okullari-kariyer-kutu .rozet-ikon-tick,
+.dil-okullari-program-kutu .rozet-ikon-tick,
+.ingiltere-neden-kutu .rozet-ikon-tick {
     font-size: 17px;
     font-weight: 700;
     line-height: 1;
 }
 
-/* Başlık + ülke butonları tek çerçeve paneli */
+/* Başlık + ülke/hizmet hub — çerçevesiz panel (ana sayfa, dil hub, lise, hizmetlerimiz vb.) */
 .dil-okullari-secim-paneli {
     max-width: 1200px;
     margin: 25px auto 60px auto;
     padding: 0 0 12px 0;
-    border: 1px solid #e5e7eb;
+    border: 0 solid transparent;
     border-top: none;
-    border-radius: 5px 5px 12px 12px;
-    background: #ffffff;
-    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
-    overflow: hidden;
+    background: transparent !important;
+    box-shadow: none !important;
+    /* Kart gölgelerinin kesilmemesi (altta yapay “çerçeve çizgisi” oluşmasın) */
+    overflow: visible;
 }
 
 .dil-okullari-secim-paneli .kirmizi-kutu {
     margin: 0;
-    border-radius: 5px 5px 0 0;
     position: relative;
     z-index: 2;
 }
@@ -37,7 +36,7 @@
     position: relative;
     z-index: 1;
     border-top: none;
-    overflow: hidden;
+    overflow: visible;
 }
 
 /* UK sehir kartlari bu panelde kullanildiginda ayni ic bosluk standardi */
@@ -50,18 +49,15 @@
     .dil-okullari-secim-paneli {
         margin: 20px 0 45px 0;
         padding: 0 0 12px 0;
-        border-radius: 5px 5px 10px 10px;
     }
 
-    .dil-okullari-secim-paneli .kirmizi-kutu {
-        border-radius: 5px 5px 0 0;
-    }
+    .dil-okullari-secim-paneli .kirmizi-kutu { }
 
 }
 
 /* Başlık renk standardı: bu sayfada tüm içerik alt başlıkları siyah */
-.dil-okullari-kariyer-kutu .dahil-rozet-baslik,
-.dil-okullari-program-kutu .dahil-rozet-baslik,
+.dil-okullari-kariyer-kutu .rozet-baslik,
+.dil-okullari-program-kutu .rozet-baslik,
 .dil-okullari-konaklama-kutu .konaklama-icerik h3 {
     color: #111827;
     font-size: 14.5px;
@@ -70,34 +66,34 @@
 }
 
 /* Yaz okullarıyla aynı kart standardı: sadece iç kartlar */
-.dil-okullari-kariyer-kutu .dahil-rozet-kart,
-.dil-okullari-program-kutu .dahil-rozet-kart,
+.dil-okullari-kariyer-kutu .rozet-kart,
+.dil-okullari-program-kutu .rozet-kart,
 .dil-okullari-konaklama-kutu .konaklama-oge {
-    background: linear-gradient(180deg, #f0fdfa 0%, #ffffff 100%) !important;
-    border: 1px solid #ccfbf1 !important;
-    box-shadow: 0 4px 12px rgba(13, 148, 136, 0.06) !important;
+    background: #ffffff !important;
+    border: 0 solid transparent !important;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06) !important;
 }
 
 /* Dil okulları program kartları: 2+2+1, son kart ortalı */
-.dil-okullari-program-kutu .dahil-rozet-grid {
+.dil-okullari-program-kutu .rozet-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 18px;
     align-items: stretch;
 }
 
-.dil-okullari-program-kutu .dahil-rozet-grid > .dahil-rozet-kart:nth-child(5) {
+.dil-okullari-program-kutu .rozet-grid > .rozet-kart:nth-child(5) {
     grid-column: 1 / -1;
     justify-self: center;
     width: min(100%, calc((100% - 18px) / 2));
 }
 
 @media (max-width: 768px) {
-    .dil-okullari-program-kutu .dahil-rozet-grid {
+    .dil-okullari-program-kutu .rozet-grid {
         grid-template-columns: 1fr;
     }
 
-    .dil-okullari-program-kutu .dahil-rozet-grid > .dahil-rozet-kart:nth-child(5) {
+    .dil-okullari-program-kutu .rozet-grid > .rozet-kart:nth-child(5) {
         grid-column: auto;
         width: 100%;
     }

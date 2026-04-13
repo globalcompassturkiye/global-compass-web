@@ -8,8 +8,7 @@
 }
 
 .frankfurt-dil-program-bolumu .frankfurt-dil-program-kart {
-    border-radius: 14px;
-    border: 1px solid #e5e7eb;
+    border: 0 solid transparent;
     background: linear-gradient(135deg, #ffffff 0%, #ffffff 50%, #f8fafc 100%);
     padding: 18px 16px 16px;
     box-shadow: 0 6px 20px rgba(15, 23, 42, 0.07);
@@ -63,7 +62,6 @@
     box-sizing: border-box;
     background: transparent;
     border: none;
-    border-radius: 0;
 }
 
 .frankfurt-dil-program-bolumu .frankfurt-metod-uc-yan-yana > .frankfurt-dil-program-ic-kart {
@@ -75,8 +73,7 @@
 .frankfurt-dil-program-bolumu .frankfurt-dil-program-metod-kapsayici .frankfurt-dil-program-ic-kart {
     min-width: 0;
     box-sizing: border-box;
-    border-radius: 12px;
-    border: 1px solid #dbeafe;
+    border: 0 solid transparent;
     background: #ffffff;
     padding: 14px 12px 12px;
     box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
@@ -135,8 +132,7 @@
 }
 
 .frankfurt-sosyal-kultur-bolumu .frankfurt-sosyal-kultur-kart {
-    border-radius: 14px;
-    border: 1px solid #e5e7eb;
+    border: 0 solid transparent;
     border-left: 6px solid #000080;
     background: linear-gradient(135deg, #ffffff 0%, #ffffff 50%, #f8fafc 100%);
     padding: 18px 16px 16px 14px;

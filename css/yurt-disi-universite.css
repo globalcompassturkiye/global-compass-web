@@ -26,9 +26,8 @@ article.icerik-alani > h1 + p {
 .mühürlü-cerceve {
     flex: 1;
     position: relative;
-    border: 1px solid var(--gri-cerceve);
+    border: 0 solid transparent;
     padding: 45px 25px 30px 25px;
-    border-radius: 10px;
     background-color: #ffffff;
     transition: all 0.3s ease;
 }
@@ -43,7 +42,6 @@ article.icerik-alani > h1 + p {
     padding: 10px 25px;
     font-size: 16px;
     font-weight: 700;
-    border-radius: 50px;
     white-space: nowrap;
     border: 3px solid #ffffff;
     box-shadow: 0 4px 12px rgba(0, 0, 128, 0.15);
@@ -75,7 +73,8 @@ article.icerik-alani > h1 + p {
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
-    background: #ffffff;
+    /* Kartlar beyaz; boşluklarda sayfa zemini (#f8fafc) görünsün (tüm gridi beyaz boyama) */
+    background: var(--sayfa-zemin);
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
@@ -94,55 +93,55 @@ article.icerik-alani > h1 + p {
 }
 
 /* Neden üniversite — rozet ikonunda numara yerine onay işareti */
-.uni-avantaj-main-kutu .dahil-rozet-ikon-tick {
+.uni-avantaj-main-kutu .rozet-ikon-tick {
     font-size: 17px;
     font-weight: 700;
     line-height: 1;
 }
 
-/* Neden üniversite: 3 çerçeve yan yana (global .gri-cerceve-kutu :has(3) → 2 sütun kuralını geçersiz kılar) */
+/* Neden üniversite: 3 çerçeve yan yana (global .cerceve-kutu :has(3) → 2 sütun kuralını geçersiz kılar) */
 @media (min-width: 993px) {
-    .uni-avantaj-main-kutu.gri-cerceve-kutu .dahil-rozet-grid.uni-avantaj-grid {
+    .uni-avantaj-main-kutu.cerceve-kutu .rozet-grid.uni-avantaj-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-        gap: 18px 20px;
+        gap: 18px 22px;
         align-items: stretch;
     }
 
-    .uni-avantaj-main-kutu .dahil-rozet-grid.uni-avantaj-grid > .dahil-rozet-kart {
+    .uni-avantaj-main-kutu .rozet-grid.uni-avantaj-grid > .rozet-kart {
         height: 100%;
         min-height: 0;
     }
 }
 
 @media (max-width: 992px) {
-    .uni-avantaj-main-kutu .dahil-rozet-grid.uni-avantaj-grid {
+    .uni-avantaj-main-kutu .rozet-grid.uni-avantaj-grid {
         grid-template-columns: 1fr !important;
     }
 
-    .uni-avantaj-main-kutu .dahil-rozet-grid.uni-avantaj-grid > .dahil-rozet-kart {
+    .uni-avantaj-main-kutu .rozet-grid.uni-avantaj-grid > .rozet-kart {
         width: 100% !important;
     }
 }
 
 /* Rozet tipografisi: proje standardı */
-.uni-avantaj-main-kutu .dahil-rozet-baslik,
-.ulke-egitim-grid-2-2-1 .dahil-rozet-baslik,
-.uni-adimlar-kutu .dahil-rozet-baslik {
+.uni-avantaj-main-kutu .rozet-baslik,
+.ulke-egitim-grid-2-2-1 .rozet-baslik,
+.uni-adimlar-kutu .rozet-baslik {
     font-size: 14.5px !important;
     line-height: 1.4;
     font-weight: 700;
     color: #111827 !important;
 }
 
-.uni-avantaj-main-kutu .dahil-rozet-metin,
-.ulke-egitim-grid-2-2-1 .dahil-rozet-metin,
-.uni-adimlar-kutu .dahil-rozet-metin {
+.uni-avantaj-main-kutu .rozet-metin,
+.ulke-egitim-grid-2-2-1 .rozet-metin,
+.uni-adimlar-kutu .rozet-metin {
     font-size: 15px !important;
     line-height: 1.7;
     color: #4b5563;
 }
 
-.uni-avantaj-grid .gri-cerceve-kutu {
+.uni-avantaj-grid .cerceve-kutu {
     margin: 20px 0;
     padding-top: 45px;
     border-color: #dddddd;
@@ -176,13 +175,13 @@ article.icerik-alani > h1 + p {
 
 /* Üç sütunlu düzende tüm kartlar eşit genişlik */
 .uni-avantaj-grid > .immerse-detay-kart:nth-child(3),
-.uni-avantaj-grid > .dahil-rozet-kart:nth-child(3) {
+.uni-avantaj-grid > .rozet-kart:nth-child(3) {
     grid-column: auto;
     justify-self: stretch;
 }
 
-/* Kart içi madde listesi — .dahil-rozet-metin gibi tam genişlik; .kutu-liste ■ madde stilleri style.css’ten */
-.uni-avantaj-main-kutu .dahil-rozet-kart .uni-avantaj-madde-liste {
+/* Kart içi madde listesi — .rozet-metin gibi tam genişlik; .kutu-liste ■ madde stilleri style.css’ten */
+.uni-avantaj-main-kutu .rozet-kart .uni-avantaj-madde-liste {
     grid-column: 1 / -1;
     margin: 4px 0 0 0 !important;
 }
@@ -200,11 +199,11 @@ article.icerik-alani > h1 + p {
 }
 
 /* Bu sayfada rozet kartlar standart hizada kalsın */
-.dahil-rozet-grid {
+.rozet-grid {
     justify-items: stretch;
 }
 
-.dahil-rozet-kart {
+.rozet-kart {
     justify-self: stretch;
 }
 
@@ -216,7 +215,7 @@ article.icerik-alani > h1 + p {
     gap: 14px;
 }
 
-.ulke-egitim-grid-2-2-1 > .dahil-rozet-kart:nth-child(5) {
+.ulke-egitim-grid-2-2-1 > .rozet-kart:nth-child(5) {
     grid-column: auto;
     grid-row: auto;
     justify-self: stretch;
@@ -225,12 +224,12 @@ article.icerik-alani > h1 + p {
 
 /* Başlık renk standardı */
 .uni-avantaj-main-kutu .immerse-detay-kart h3,
-.dahil-rozet-baslik,
+.rozet-baslik,
 .program-kart h3 {
     color: #111827;
 }
 
-.ulke-egitim-grid-2-2-1 > .dahil-rozet-kart {
+.ulke-egitim-grid-2-2-1 > .rozet-kart {
     align-self: stretch;
     height: 100%;
     justify-self: stretch;
@@ -240,29 +239,29 @@ article.icerik-alani > h1 + p {
     .ulke-egitim-grid-2-2-1 {
         grid-template-columns: 1fr !important;
     }
-    .ulke-egitim-grid-2-2-1 > .dahil-rozet-kart:nth-child(5) {
+    .ulke-egitim-grid-2-2-1 > .rozet-kart:nth-child(5) {
         grid-column: auto;
     }
 }
 
 /* "Global Compass İle Adım Adım Üniversite Başvurusu" bölümünde 3. kartı (Vize...) altta ortala */
-.uni-adimlar-kutu .dahil-rozet-kart:nth-child(3) {
+.uni-adimlar-kutu .rozet-kart:nth-child(3) {
     grid-column: 1 / -1;
     justify-self: center;
     width: min(100%, calc((100% - 22px) / 2));
 }
 
-.uni-adimlar-kutu .dahil-rozet-grid {
+.uni-adimlar-kutu .rozet-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     align-items: stretch;
 }
 
 @media (max-width: 992px) {
-    .uni-adimlar-kutu .dahil-rozet-grid {
+    .uni-adimlar-kutu .rozet-grid {
         grid-template-columns: 1fr;
     }
 
-    .uni-adimlar-kutu .dahil-rozet-kart:nth-child(3) {
+    .uni-adimlar-kutu .rozet-kart:nth-child(3) {
         grid-column: auto;
         width: 100%;
     }

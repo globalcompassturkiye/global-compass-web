@@ -1,20 +1,15 @@
 /* Yurt Dışı Burs Fırsatları sayfasına özel stiller */
 
+/* H1 sonrası ilk açıklama metni alt boşluğu (yurt-disi-universite.css ile aynı ritim) */
+body.sayfa-yurt-disi-burs-firsatlari article.icerik-alani > h1 + p {
+    padding-bottom: 25px;
+}
+
 /* Rozet ikonunda onay işareti (✓) — 5 kriter kartları */
-.burs-kriter-section .dahil-rozet-ikon-tick {
+.burs-kriter-section .rozet-ikon-tick {
     font-size: 17px;
     font-weight: 700;
     line-height: 1;
-}
-
-.burs-sayfa {
-    background: radial-gradient(circle at top left, #f9fafb 0%, #ffffff 55%) no-repeat;
-}
-
-/* Sayfa başlığı altındaki giriş paragrafı — alt boşluk */
-.burs-sayfa > h1.sayfa-ana-baslik + p {
-    padding-bottom: 50px;
-    margin-bottom: 0;
 }
 
 /* ---------- BÖLÜM BAŞLIĞI ---------- */
@@ -29,7 +24,7 @@
 }
 
 /* Standart rozet yapısı: 5 kartta 2+2+1, son kart ortalı */
-.burs-kriter-section .dahil-rozet-grid {
+.burs-kriter-section .rozet-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 18px;
@@ -37,24 +32,24 @@
     margin-top: 24px;
 }
 
-.burs-kriter-section .dahil-rozet-grid > .dahil-rozet-kart:nth-child(5) {
+.burs-kriter-section .rozet-grid > .rozet-kart:nth-child(5) {
     grid-column: 1 / -1;
     justify-self: center;
     width: min(100%, calc((100% - 18px) / 2));
 }
 
-.burs-kriter-section .dahil-rozet-baslik {
+.burs-kriter-section .rozet-baslik {
     color: #111827;
 }
 
-.burs-kriter-section .dahil-rozet-kart {
-    background: linear-gradient(180deg, #f0fdfa 0%, #ffffff 100%);
-    border: 1px solid #ccfbf1;
-    box-shadow: 0 4px 12px rgba(13, 148, 136, 0.06);
+.burs-kriter-section .rozet-kart {
+    background: #ffffff;
+    border: 0 solid transparent;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
 }
 
 /* Burs süreci: standart numaralı rozet kartlar (2+1) */
-.burs-surec-kutu .dahil-rozet-grid {
+.burs-surec-kutu .rozet-grid {
     display: grid;
     grid-template-columns: 1fr !important;
     gap: 18px;
@@ -62,17 +57,17 @@
     margin-top: 24px;
 }
 
-.burs-surec-kutu .dahil-rozet-grid > .dahil-rozet-kart:nth-child(3) {
+.burs-surec-kutu .rozet-grid > .rozet-kart:nth-child(3) {
     grid-column: auto !important;
     justify-self: stretch !important;
     width: 100% !important;
 }
 
-.burs-surec-kutu .dahil-rozet-baslik {
+.burs-surec-kutu .rozet-baslik {
     color: #111827;
 }
 
-.burs-surec-kutu .dahil-rozet-kart {
+.burs-surec-kutu .rozet-kart {
     width: 100% !important;
     max-width: none !important;
     justify-self: stretch !important;
@@ -82,10 +77,18 @@
 .burs-kriter-section {
     margin-top: 28px;
     padding: 28px 22px 32px;
-    border-radius: 18px;
-    background: linear-gradient(135deg, #f9fafb 0%, #ffffff 40%, #eef2ff 100%);
-    border: 1px solid #e2e8f0;
+    background: var(--sayfa-zemin, #f8fafc);
+    border: 0 solid transparent;
     box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+/* Hub ilk blok: üst boşluk birikmesin (.uni-avantaj-main-kutu ile aynı) */
+.burs-kriter-main-kutu {
+    max-width: 1200px;
+}
+
+.burs-kriter-main-kutu.burs-kriter-section {
+    margin-top: 0;
 }
 
 .burs-kriter-grid {
@@ -97,8 +100,7 @@
 
 .burs-kart {
     background: #ffffff;
-    border-radius: 14px;
-    border: 1px solid #e2e8f0;
+    border: 0 solid transparent;
     padding: 22px 20px 20px;
     box-shadow: 0 6px 20px rgba(0,0,128,0.06);
     position: relative;
@@ -122,7 +124,7 @@
 .burs-kart:hover {
     transform: translateY(-4px);
     box-shadow: 0 12px 32px rgba(0,0,128,0.15);
-    border-color: #cbd5f5;
+    border-color: transparent;
 }
 
 .burs-kart:hover::before {
@@ -148,19 +150,12 @@
     margin: 0 !important;
 }
 
-/* ---------- GENEL İÇERİK KUTULARI (ALT BÖLÜMLER) ---------- */
-.burs-sayfa .gri-cerceve-kutu {
-    border-radius: 16px;
-    box-shadow: 0 6px 22px rgba(0,0,128,0.06);
-    border-color: #e5e7eb;
-    background: radial-gradient(circle at top left, #f9fafb 0%, #ffffff 55%);
-}
-
-.burs-sayfa .gri-cerceve-kutu p {
+/* İçerik kutularındaki paragraflar (hub şeffaf dış çerçeve; kartlar kendi zeminiyle) */
+body.sayfa-yurt-disi-burs-firsatlari article.icerik-alani .cerceve-kutu p {
     text-align: left;
 }
 
-.burs-sayfa .kutu-liste-sirali {
+body.sayfa-yurt-disi-burs-firsatlari .kutu-liste-sirali {
     list-style: none;
     padding: 0;
     margin: 24px 0 0 0;
@@ -168,20 +163,19 @@
     gap: 16px;
 }
 
-.burs-sayfa .kutu-liste-sirali li {
-    background: #f9fafb;
-    border-radius: 12px;
+body.sayfa-yurt-disi-burs-firsatlari .kutu-liste-sirali li {
+    background: var(--sayfa-zemin, #f8fafc);
     padding: 14px 16px;
-    border: 1px solid #e5e7eb;
+    border: 0 solid transparent;
 }
 
-.burs-sayfa .kutu-liste-sirali p {
+body.sayfa-yurt-disi-burs-firsatlari .kutu-liste-sirali p {
     margin: 0 0 4px 0 !important;
     font-weight: 700;
     color: #000080 !important;
 }
 
-.burs-sayfa .kutu-liste-sirali span {
+body.sayfa-yurt-disi-burs-firsatlari .kutu-liste-sirali span {
     font-size: 14px;
     color: #444;
     line-height: 1.6;
@@ -201,10 +195,9 @@
 .burs-sure-adimlar li {
     counter-increment: burs-adim;
     position: relative;
-    background: #f9fafb;
-    border-radius: 12px;
+    background: var(--sayfa-zemin, #f8fafc);
     padding: 14px 16px 14px 64px;
-    border: 1px solid #e5e7eb;
+    border: 0 solid transparent;
 }
 
 .burs-sure-adimlar li::before {
@@ -215,7 +208,6 @@
     transform: translateY(-50%);
     width: 32px;
     height: 32px;
-    border-radius: 999px;
     background: linear-gradient(135deg, #000080, #1e3a8a);
     color: #ffffff;
     display: inline-flex;
@@ -250,21 +242,12 @@
 
 .burs-program-kart {
     background: #ffffff;
-    border-radius: 14px;
-    border: 1px solid #e2e8f0;
+    border: 0 solid transparent;
     padding: 18px 18px 16px;
     box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
     position: relative;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-.burs-program-kart::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at top left, rgba(255,255,255,0.4), transparent 55%);
-    pointer-events: none;
 }
 
 .burs-program-kart:hover {
@@ -285,7 +268,6 @@
     height: auto;
     aspect-ratio: 3 / 2;
     object-fit: cover;
-    border-radius: 6px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 .burs-program-ikon-iki img {
@@ -325,7 +307,6 @@
     transform: translateY(-50%);
     width: 30px;
     height: 30px;
-    border-radius: 999px;
     background: linear-gradient(135deg, #000080, #1e3a8a);
     color: #ffffff;
     display: inline-flex;
@@ -353,11 +334,11 @@
         max-width: 100%;
     }
 
-    .burs-kriter-section .dahil-rozet-grid {
+    .burs-kriter-section .rozet-grid {
         grid-template-columns: 1fr;
     }
 
-    .burs-kriter-section .dahil-rozet-grid > .dahil-rozet-kart:nth-child(5) {
+    .burs-kriter-section .rozet-grid > .rozet-kart:nth-child(5) {
         grid-column: auto;
         width: 100%;
     }

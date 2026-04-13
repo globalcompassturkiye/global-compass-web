@@ -7,11 +7,10 @@
     max-width: 1200px;
     width: 100%;
     margin: 25px auto; /* Rozetler ile aradaki dış boşluğu azalttık */
-    background: #ffffff;
-    border-radius: 15px;
+    background: transparent;
     padding: 22px 10px 22px; /* yan boşluk azaltıldı */
-    border: 1px solid #d1d1d1;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    border: 0 solid transparent;
+    box-shadow: none;
     position: relative;
     overflow: hidden;
 }
@@ -26,9 +25,15 @@
     background-image: none !important;
 }
 
-/* Tüm breakpointlerde tab çerçeve zeminleri beyaz kalsın */
-.hizmet-tab-alani,
-.hizmet-tab-alani .tab-panel,
+/* Dış konteyner + tab-panel şeffaf (ülke/şehir butonları sayfa zeminde); okul listesi kutusu beyaz */
+.hizmet-tab-alani {
+    background-color: transparent !important;
+}
+
+.hizmet-tab-alani .tab-panel {
+    background-color: transparent !important;
+}
+
 .hizmet-tab-alani .alt-panel,
 .hizmet-tab-alani .tab-ic-icerik {
     background-color: #ffffff !important;
@@ -41,10 +46,10 @@ body.ana-sayfa .hizmet-tab-alani {
     margin-left: auto;
     margin-right: auto;
     box-sizing: border-box;
-    background: #ffffff !important;
+    background: transparent !important;
     background-image: none !important;
     box-shadow: none !important;
-    border: 1px solid #e5e7eb;
+    border: 0 solid transparent;
     padding-left: 10px !important;
     padding-right: 10px !important;
 }
@@ -80,12 +85,11 @@ body.ana-sayfa .hizmet-tab-alani .sehir-buton {
     color: #ffffff;
     background: #2c3e50;
     border: none;
-    border-radius: 15px;
     margin: 4px 8px 4px 0;
     text-transform: none;
     font-size: 15px;
     letter-spacing: 0;
-    box-shadow: none;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.2);
     transition: transform 0.25s ease, box-shadow 0.25s ease,
                 background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
     white-space: nowrap;
@@ -129,7 +133,7 @@ body.ana-sayfa #tab-yaz:checked ~ label[for="tab-yaz"] {
 .alt-tab-kapsayici {
     margin-top: 10px;
     padding-top: 10px;
-    border-top: 1px solid rgba(148, 163, 184, 0.2);
+    border-top: none;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     white-space: nowrap;
@@ -141,7 +145,6 @@ body.ana-sayfa .hizmet-tab-alani .sehir-buton {
     padding: 8px 18px;
     font-size: 14px;
     font-weight: 600;
-    border-radius: 15px;
     line-height: normal;
 }
 
@@ -281,14 +284,12 @@ body.ana-sayfa .hizmet-tab-alani .ana-tab-etiket {
     gap: 30px;
     background: #ffffff;
     padding: 24px 26px 25px 26px; /* alt padding 25px */
-    border-radius: 14px;
     box-shadow: 0 14px 32px rgba(15, 23, 42, 0.08);
     animation: fadeIn 0.4s ease;
 }
 
 /* Alt paneller içindeki çerçevenin köşeleri 0px olsun; gölge yok — tam beyaz blok */
 .alt-panel .tab-ic-icerik {
-    border-radius: 0;
     padding: 0 !important;
     box-shadow: none !important;
     background: #ffffff !important;
@@ -324,11 +325,10 @@ body.ana-sayfa .hizmet-tab-alani .alt-panel .tab-ic-icerik {
     background: #2c3e50;
     color: #fff;
     text-decoration: none;
-    border-radius: 0;
     font-weight: 600;
     font-size: 14px;
     border: none;
-    box-shadow: none;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.2);
     transition: all 0.3s ease; text-align: center;
 }
 .ana-buton:hover { background: #e74c3c; color: #fff; transform: translateX(5px); box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3); }
@@ -354,8 +354,8 @@ body.ana-sayfa .hizmet-tab-alani .alt-panel .tab-ic-icerik {
     font-size: 12px;
     font-weight: 600;
     line-height: 1.2;
+    box-shadow: 0 2px 6px rgba(15, 23, 42, 0.2);
     transition: all 0.3s ease;
-    border-radius: 15px;
     flex: 0 0 auto;
 }
 
@@ -491,10 +491,13 @@ body.ana-sayfa .hizmet-tab-alani .ana-buton {
     background-image: none !important;
 }
 
-/* Tab alaninin tum zemin katmanlari tamamen beyaz olsun */
+/* Ana sayfa: ülke/şehir şeritleri şeffaf; okul özet kutuları beyaz */
 body.ana-sayfa .hizmet-tab-alani,
 body.ana-sayfa .hizmet-tab-alani .tab-panel,
-body.ana-sayfa .hizmet-tab-alani .alt-tab-kapsayici,
+body.ana-sayfa .hizmet-tab-alani .alt-tab-kapsayici {
+    background-color: transparent !important;
+}
+
 body.ana-sayfa .hizmet-tab-alani .alt-panel,
 body.ana-sayfa .hizmet-tab-alani .tab-ic-icerik,
 body.ana-sayfa .hizmet-tab-alani .tab-metin {

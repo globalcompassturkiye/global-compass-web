@@ -1,4 +1,5 @@
-/* Hub ülke kartları: yaz/dil ana sayfalar + dil İngiltere/Amerika + yaz ülke şehir seçimi — gap yok, köşe 0 */
+/* Hub ülke kartları: yaz/dil ana sayfalar + dil İngiltere/Amerika + yaz ülke şehir seçimi — gap yok, köşe 0.
+   Dış seçim paneli çerçevesiz (şeffaf); kartlar beyaz + gölge; hover’da güçlü gölge + hafif kalkma. */
 
 /* Dış çerçeve: yalnızca alt sol / alt sağ köşe düz; kart gölgeleri kesilmesin (yaz okulları hub) */
 body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli,
@@ -8,25 +9,16 @@ body.sayfa-yurt-disi-yaz-okullari-canada .yaz-okullari-secim-paneli,
 body.sayfa-yurt-disi-yaz-okullari-italy .yaz-okullari-secim-paneli,
 body.sayfa-yurt-disi-yaz-okullari-japan .yaz-okullari-secim-paneli,
 body.sayfa-yurt-disi-yaz-okullari-usa .yaz-okullari-secim-paneli {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
     overflow: visible;
 }
 
-/*
- * dil-okullari-secim-paneli bu dosyada overflow:visible ile EZİLMEZ:
- * yurt-disi-dil-okullari.css içinde overflow:hidden kalır; kart gölgesi kırmızı bandın
- * üzerine taşmaz (gri çizgi).
- */
+/* Dil seçim paneli: yurt-disi-dil-okullari.css içinde overflow:visible; kart gölgesi kesilmez. */
 body.ana-sayfa .dil-okullari-secim-paneli,
 body.sayfa-hizmetlerimiz .dil-okullari-secim-paneli,
 body.sayfa-yurt-disi-lise .dil-okullari-secim-paneli,
 body.sayfa-yurt-disi-dil-okullari .dil-okullari-secim-paneli,
 body.sayfa-yurt-disi-dil-okullari-uk .dil-okullari-secim-paneli,
-body.sayfa-yurt-disi-dil-okullari-usa .dil-okullari-secim-paneli {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-}
+body.sayfa-yurt-disi-dil-okullari-usa .dil-okullari-secim-paneli { }
 
 body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap,
 body.sayfa-yurt-disi-yaz-okullari-uk .yaz-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap,
@@ -79,9 +71,26 @@ body.sayfa-yurt-disi-dil-okullari-usa .yaz-okullari-ulke-kart-wrap {
     }
 }
 
-/* Dil hub: yalnızca iki ülke — tüm kırılımlarda 2 sütun */
+/* Dil hub: iki ülke — yaz ana hub ile aynı hücre genişliği (panel 1200px, kart alanı 22px yan padding:
+   (1200-44)/4 ≈ 289px; (1200-44)/6 ≈ 192px); ortalanır */
 body.sayfa-yurt-disi-dil-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0;
+    justify-content: center;
+    /* Üstteki ortak blokta padding:0; yaz hub ile aynı kart alanı iç boşluğu */
+    padding: 20px 22px 24px 22px;
+}
+
+@media (min-width: 768px) {
+    body.sayfa-yurt-disi-dil-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap {
+        grid-template-columns: repeat(2, minmax(0, 289px));
+    }
+}
+
+@media (min-width: 1440px) {
+    body.sayfa-yurt-disi-dil-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap {
+        grid-template-columns: repeat(2, minmax(0, 192px));
+    }
 }
 
 /* Ana sayfa / hizmetlerimiz — 6 hizmet kartı; mobil 1, tablet 2, masaüstü 3 sütun */
@@ -177,7 +186,6 @@ body.sayfa-yurt-disi-dil-okullari-usa a.yaz-okullari-ulke-kart {
     color: inherit;
     background: #ffffff;
     border: none;
-    border-radius: 0;
     box-shadow:
         0 2px 6px rgba(15, 23, 42, 0.07),
         0 10px 24px rgba(15, 23, 42, 0.1);
@@ -320,7 +328,6 @@ body.sayfa-yurt-disi-dil-okullari .yaz-okullari-ulke-kart-bayrak svg {
     width: 44px;
     max-width: 100%;
     height: auto;
-    border-radius: 0;
     box-shadow: none;
 }
 
@@ -337,7 +344,6 @@ body.sayfa-yurt-disi-yaz-okullari-usa .yaz-okullari-ulke-kart-bayrak img {
     height: 200px;
     object-fit: cover;
     object-position: center;
-    border-radius: 0;
 }
 
 @media (min-width: 768px) {

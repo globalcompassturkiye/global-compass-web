@@ -3,18 +3,11 @@
 /* Okul listesi — Londra (london-secim-paneli) ile aynı seçim paneli / hover standardı */
 .tokyo-secim-paneli .kirmizi-kutu {
     margin: 0;
-    border-radius: 5px 5px 0 0;
 }
 
 .tokyo-secim-paneli .okul-liste-kapsayici {
     margin-top: 0;
     padding-top: 0;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-}
-
-.tokyo-secim-paneli .okul-liste-kapsayici .okul-liste-baslik {
-    display: none;
 }
 
 .tokyo-secim-paneli .premium-liste-kart,
@@ -25,11 +18,17 @@
 }
 
 .tokyo-secim-paneli .premium-liste-kart:hover,
-.tokyo-secim-paneli .glass-stil:hover,
-.tokyo-secim-paneli .okul-liste-kapsayici:hover {
+.tokyo-secim-paneli .glass-stil:hover {
     transform: none !important;
     box-shadow: none !important;
-    border-color: #d1d5db !important;
+    border-color: transparent !important;
+    background: transparent !important;
+}
+
+.tokyo-secim-paneli .okul-liste-kapsayici:hover {
+    transform: none !important;
+    box-shadow: var(--site-kart-golge) !important;
+    border-color: var(--site-kart-kenar) !important;
     background: #ffffff !important;
 }
 

@@ -29,8 +29,7 @@ body.sayfa-chantemerle .chantemerle-giris-metni > p:first-child {
 body.sayfa-chantemerle .chantemerle-program-ozet-kutu {
     margin: 1rem 0 0;
     padding: 1rem 1.1rem 1.05rem 1.15rem;
-    border-radius: 10px;
-    border: 1px solid rgba(189, 5, 5, 0.18);
+    border: 0 solid transparent;
     border-left: 5px solid #bd0505;
     background: linear-gradient(145deg, #fff5f5 0%, #ffffff 42%, #f8fafc 100%);
     box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08), 0 0 0 1px rgba(255, 255, 255, 0.8) inset;
@@ -68,7 +67,6 @@ body.sayfa-chantemerle .chantemerle-program-ozet-liste li::before {
     top: 0.62rem;
     width: 7px;
     height: 7px;
-    border-radius: 50%;
     background: #bd0505;
     box-shadow: 0 0 0 2px rgba(189, 5, 5, 0.2);
 }
@@ -82,9 +80,8 @@ body.sayfa-chantemerle .chantemerle-program-ozet-liste li::before {
 
     body.sayfa-chantemerle .chantemerle-program-ozet-liste li {
         padding: 0.55rem 0.5rem;
-        border-radius: 8px;
         background: rgba(255, 255, 255, 0.92);
-        border: 1px solid rgba(189, 5, 5, 0.1);
+        border: 0 solid transparent;
         box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
     }
 
@@ -135,9 +132,8 @@ body.sayfa-chantemerle .chantemerle-program-ozet-liste li::before {
 
 /* Eğitim deneyimi: sol kenarı kalın çerçeveli alt bloklar (global tipografi: dahil-rozet-*) */
 body.sayfa-chantemerle .chantemerle-sol-kenar-cerceve {
-    border: 1px solid #e2e8f0;
+    border: 0 solid transparent;
     border-left: 5px solid var(--ana-lacivert, #1e3a5f);
-    border-radius: 8px;
     padding: 1rem 1.1rem 1rem 1.15rem;
     margin-top: 0.85rem;
     background: #fff;
@@ -148,11 +144,11 @@ body.sayfa-chantemerle .chantemerle-deneyim-ana > .chantemerle-sol-kenar-cerceve
     margin-top: 0;
 }
 
-body.sayfa-chantemerle .chantemerle-sol-kenar-cerceve .dahil-rozet-baslik {
+body.sayfa-chantemerle .chantemerle-sol-kenar-cerceve .rozet-baslik {
     line-height: 1.4;
 }
 
-body.sayfa-chantemerle .chantemerle-sol-kenar-cerceve .dahil-rozet-metin {
+body.sayfa-chantemerle .chantemerle-sol-kenar-cerceve .rozet-metin {
     grid-column: unset;
     margin-top: 0.45rem;
 }
@@ -167,7 +163,6 @@ body.sayfa-chantemerle .chantemerle-sol-kenar-cerceve .dahil-rozet-metin {
     width: 1200px;
     height: 300px;
     object-fit: cover;
-    border-radius: 10px;
     box-shadow: 0 14px 35px rgba(15, 23, 42, 0.25);
 }
 
@@ -221,7 +216,6 @@ body.sayfa-chantemerle .immerse-detay-kutu .chantemerle-detay-grid-3lu .immerse-
 .chantemerle-ornek-gorsel {
     max-width: 100%;
     height: auto;
-    border-radius: 8px;
 }
 
 /* Galeri: 7 görsel — masaüstünde 4 + 3; alt sıradaki 3 ortada, tüm hücreler aynı boyut */
@@ -238,7 +232,6 @@ body.sayfa-chantemerle .immerse-detay-kutu .chantemerle-detay-grid-3lu .immerse-
     width: 100%;
     aspect-ratio: 4 / 3;
     height: auto;
-    border-radius: 8px;
     object-fit: cover;
 }
 

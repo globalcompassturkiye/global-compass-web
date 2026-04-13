@@ -17,11 +17,16 @@ body.sayfa-sss article.icerik-alani.sss-sayfa > h1.sayfa-ana-baslik {
 body.sayfa-sss article.icerik-alani.sss-sayfa > h1.sayfa-ana-baslik > .vurgu-renk {
     font-size: var(--h1-font-size) !important;
     line-height: 1.35 !important;
+    color: #bd0505 !important;
 }
 
 body.sayfa-sss article.icerik-alani.sss-sayfa > h1.sayfa-ana-baslik .vurgu-renk {
-    display: inline-block;
-    padding-top: 6px;
+    display: block;
+    margin-top: 0.35em;
+    padding-top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    color: #bd0505;
 }
 
 /* Giriş paragrafı */
@@ -60,40 +65,23 @@ body.sayfa-sss .sosyal-medya-alani a img {
     margin-top: 8px;
 }
 
-.sayfa-sss .sss-sss-kutu.gri-cerceve-kutu {
-    border-radius: 16px;
+.sayfa-sss .sss-sss-kutu.cerceve-kutu {
     box-shadow: 0 4px 24px rgba(0, 0, 128, 0.06);
     max-width: 1200px;
     padding: 28px 22px 22px !important;
 }
 
-.sayfa-sss .sss-sss-kutu h2.kutu-baslik,
+.sayfa-sss .sss-sss-kutu h2:is(.gri-cerceve-baslik, .sayfa-bolum-basligi),
 .sayfa-sss .sss-sss-kutu h2.sss-baslik {
-    position: static !important;
-    transform: none !important;
-    left: auto !important;
-    top: auto !important;
-    display: block !important;
-    flex-direction: unset !important;
-    align-items: unset !important;
-    background: transparent !important;
-    color: #000080 !important;
-    font-size: 26px !important;
-    font-weight: 700 !important;
-    margin: 0 0 20px 0 !important;
-    padding: 0 !important;
-    border-radius: 0 !important;
-    line-height: 1.35 !important;
-    text-align: center;
-    text-transform: none !important;
-    white-space: normal !important;
-    max-width: none !important;
+    text-align: center !important;
+    color: #0f172a !important;
+    margin: 0 0 15px 0 !important;
 }
 
 @media (max-width: 501px) {
-    .sayfa-sss .sss-sss-kutu h2.kutu-baslik,
+    .sayfa-sss .sss-sss-kutu h2:is(.gri-cerceve-baslik, .sayfa-bolum-basligi),
     .sayfa-sss .sss-sss-kutu h2.sss-baslik {
-        font-size: 20px !important;
+        font-size: 1.25rem !important;
     }
 }
 
@@ -107,7 +95,7 @@ body.sayfa-sss .sosyal-medya-alani a img {
 }
 
 @media (max-width: 768px) {
-    .sayfa-sss .sss-sss-kutu.gri-cerceve-kutu {
+    .sayfa-sss .sss-sss-kutu.cerceve-kutu {
         width: 100% !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
@@ -118,15 +106,15 @@ body.sayfa-sss .sosyal-medya-alani a img {
    Site geneli SSS (style.css ile birleştirildi — adım 5)
    ========================================= */
 
-/* h2.kutu-baslik.sss-baslik görünümü → style.css (Aşama 2 tek kaynak) */
+/* h2.gri-cerceve-baslik / sayfa-bolum-basligi + .sss-alt-satir → style.css (Aşama 2 tek kaynak) */
 
 /* .sss-item summary h3 — küçük boyut aşağıdaki akordeon bloğunda (inherit) */
 
-/* SSS gri kutusu: üst iç/dış boşluk (h2 şeridi → style.css Aşama 2) */
-.gri-cerceve-kutu:has(.sss-baslik),
+/* SSS gri kutusu: üst boşluk (düz h2; style.css gri çerçeve ile uyumlu) */
+.cerceve-kutu:has(.sss-baslik),
 .sss-gri-kutu {
-    padding-top: 75px;
-    margin-top: 75px;
+    padding-top: 1.25rem;
+    margin-top: 45px;
 }
 
 /* SSS başlığı ile 1. soru arası - tek kaynak (diğer etkenler sıfır) */
@@ -138,7 +126,7 @@ body.sayfa-sss .sosyal-medya-alani a img {
     margin-top: 0 !important;
 }
 
-/* h2.kutu-baslik .sss-alt-satir → style.css (Aşama 2) */
+/* h2 .sss-alt-satir → style.css (Aşama 2) */
 /* ===== MIGRATED FROM sss.css ===== */
 /* =========================================
     SSS SAYFASI – H1 İKİNCİ SATIR VURGUSU
@@ -167,8 +155,7 @@ h1 .h1-vurgu {
     padding: 12px 16px;
     font-size: 16px;
     font-family: inherit;
-    border: 1px solid #d1d1d1;
-    border-radius: 8px;
+    border: 0 solid transparent;
     background: #fff;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
@@ -191,8 +178,7 @@ h1 .h1-vurgu {
     display: block;
     padding: 24px;
     background: #f8f9fa;
-    border: 1px solid #e0e4e8;
-    border-radius: 10px;
+    border: 0 solid transparent;
     text-decoration: none;
     color: inherit;
     transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
@@ -259,11 +245,10 @@ h1 .h1-vurgu {
 
 /* Ana Kutu Yapısı */
 .sss-item {
-    border: 1px solid #d1d1d1;
-    border-radius: 5px;
+    border: 0 solid transparent;
     margin-bottom: 12px;
     padding: 12px 15px;
-    background: #fff;
+    background: #ffffff;
 }
 
 /* Soru (Summary) Ayarları */
@@ -278,6 +263,7 @@ h1 .h1-vurgu {
     font-size: 16px;
     font-weight: 700;
     color: #000000;
+    background-color: #ffffff;
 }
 
 /* Bazı sayfalarda summary içinde kullanılan h3 başlıklarını küçült ve hizala */
@@ -317,10 +303,14 @@ h1 .h1-vurgu {
     font-size: 15px;
     border-top: 1px solid #f4f4f4; 
     margin-top: 10px;
-    background: #eef2ff;
-    border-radius: 8px;
+    background: #ffffff;
     padding-left: 12px;
     padding-right: 12px;
+}
+
+/* Cevap kutusu (.sss-icerik): tüm içerik için arka plan beyaz */
+.sss-icerik {
+    background: #ffffff;
 }
 
 /* =========================================
@@ -376,11 +366,11 @@ h1 .h1-vurgu {
         font-size: 10px;
     }
 }
-/* SSS gri kutu üst boşlukları (768px); h2.kutu-baslik mobil → style.css */
+/* SSS gri kutu üst boşlukları (768px); h2 bölüm başlığı mobil → style.css */
 @media screen and (max-width: 768px) {
-    .gri-cerceve-kutu:has(.sss-baslik),
+    .cerceve-kutu:has(.sss-baslik),
     .sss-gri-kutu {
-        padding-top: 75px !important;
-        margin-top: 75px !important;
+        padding-top: 1.25rem !important;
+        margin-top: 45px !important;
     }
 }

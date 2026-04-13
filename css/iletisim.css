@@ -214,17 +214,12 @@ body.sayfa-iletisim article.icerik-alani.iletisim-sayfa > h1.sayfa-ana-baslik .v
     border-radius: 16px;
 }
 
-/* ---------- BİLGİ İSTEK FORMU: Tokyo vb. iç sayfalarla aynı — kırmızı bant + .iletisim-form-alani (style.css sr-only h2) ---------- */
-.iletisim-sayfa .ofis-harita-section + .kirmizi-kutu {
-    margin-top: 50px;
-}
-
 /* SSS: h2.kutu-baslik / sss-baslik → style.css; burada yalnızca iletişim sayfası kutu düzeni */
 .iletisim-sayfa .iletisim-sss-kutu {
     margin-top: 55px;
 }
 
-.iletisim-sayfa .iletisim-sss-kutu.gri-cerceve-kutu {
+.iletisim-sayfa .iletisim-sss-kutu.cerceve-kutu {
     border-radius: 16px;
     box-shadow: 0 4px 24px rgba(0, 0, 128, 0.06);
     max-width: 1200px;
@@ -259,14 +254,13 @@ body.sayfa-iletisim article.icerik-alani.iletisim-sayfa > h1.sayfa-ana-baslik .v
     }
 
     .iletisim-kartlar,
-    .ofis-harita-kutu,
-    .iletisim-form-alani {
+    .ofis-harita-kutu {
         width: 100% !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
     }
 
-    .iletisim-sss-kutu.gri-cerceve-kutu {
+    .iletisim-sss-kutu.cerceve-kutu {
         width: 100% !important;
         margin-left: 0 !important;
         margin-right: 0 !important;

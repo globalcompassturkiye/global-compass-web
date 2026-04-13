@@ -25,7 +25,6 @@
     margin-top: 25px;
     margin-bottom: 35px;
     overflow: hidden;
-    border-radius: 8px;
 }
 
 .sayfa-kings-education .kings-kampus-foto img {
@@ -92,7 +91,6 @@
     color: #000080 !important;
     font-size: 15px;
     font-weight: 700;
-    border-radius: 0;
     border-bottom: 2px solid #000080;
     text-align: left;
     text-transform: none;
@@ -121,7 +119,6 @@
     color: #bd0505 !important;
     font-size: 15px;
     font-weight: 700;
-    border-radius: 0;
     border-bottom: 2px solid #bd0505;
     text-align: left;
     text-transform: none;
@@ -173,14 +170,12 @@
     background: linear-gradient(90deg, #fff4f4 0%, #fff 100%);
     border-left: 4px solid #bd0505;
     padding: 18px 20px;
-    border-radius: 0 8px 8px 0;
     margin-bottom: 25px;
 }
 
 .sayfa-kings-education .kings-alinti-kutu {
     background: #eef4ff;
-    border: 1px solid rgba(0, 0, 128, 0.15);
-    border-radius: 10px;
+    border: 0 solid transparent;
     padding: 20px 24px;
     margin: 25px 0;
     border-left: 4px solid #000080;
@@ -208,9 +203,8 @@
 
 .sayfa-kings-education .kings-ayricalik-kart {
     background: #fff;
-    border: 1px solid #e5e7eb;
+    border: 0 solid transparent;
     padding: 18px;
-    border-radius: 8px;
     display: flex;
     align-items: flex-start;
     gap: 12px;
@@ -244,7 +238,6 @@
 .sayfa-kings-education .kings-ielts-kart {
     border: 2px solid #000080;
     padding: 24px;
-    border-radius: 10px;
     background: linear-gradient(180deg, #ffffff 0%, #fff 100%);
     box-shadow: 0 4px 12px rgba(0, 0, 128, 0.08);
 }
@@ -273,13 +266,11 @@
     background: #eef4ff;
     border-left: 4px solid #000080;
     padding: 18px 20px;
-    border-radius: 0 8px 8px 0;
     margin: 25px 0;
 }
 
 .sayfa-kings-education .kings-ielts-nedir-kutu {
     background: #f0f2f5;
-    border-radius: 8px;
     padding: 20px 24px;
     margin: 25px 0;
     border-left: 4px solid #000080;
@@ -302,7 +293,6 @@
     background: linear-gradient(135deg, #fff4f4 0%, #fff 100%);
     border: 2px solid #bd0505;
     padding: 22px 24px;
-    border-radius: 10px;
     margin-top: 25px;
 }
 
@@ -339,7 +329,6 @@
 .sayfa-kings-education .kings-cambridge-kart {
     border: 2px solid #000080;
     padding: 24px;
-    border-radius: 10px;
     background: linear-gradient(180deg, #ffffff 0%, #fff 100%);
     box-shadow: 0 4px 12px rgba(0, 0, 128, 0.08);
 }

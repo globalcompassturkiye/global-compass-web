@@ -1,9 +1,5 @@
-/* Global Compass — Blog bölümü (ana sayfa, kategori, yazı detay) */
-
-body.sayfa-blog,
-body.sayfa-blog-kategori {
-    background-color: #f8fafc;
-}
+/* Global Compass — Blog bölümü (ana sayfa, kategori, yazı detay)
+   Sayfa zemini: style.css --sayfa-zemin / body (#f8fafc) */
 
 .blog-ana-sayfa,
 .blog-kategori-sayfa,
@@ -57,8 +53,7 @@ body.sayfa-blog-kategori {
     grid-template-columns: 1fr;
     gap: 1.25rem;
     background: linear-gradient(135deg, #ffffff 0%, #f0f4f8 100%);
-    border: 1px solid #e2e8f0;
-    border-radius: 16px;
+    border: 0 solid transparent;
     overflow: hidden;
     box-shadow: 0 12px 40px rgba(15, 23, 42, 0.08);
 }
@@ -151,7 +146,6 @@ body.sayfa-blog-kategori {
     color: #fff !important;
     font-weight: 600;
     font-size: 0.95rem;
-    border-radius: 8px;
     text-decoration: none;
     transition: background 0.2s ease, transform 0.15s ease;
 }
@@ -187,14 +181,13 @@ body.sayfa-blog-kategori {
 button.blog-filtre-sekmesi,
 a.blog-filtre-sekmesi {
     appearance: none;
-    border: 1px solid #cbd5e1;
+    border: 0 solid transparent;
     background: #fff;
     color: #334155;
     font-family: inherit;
     font-size: 0.875rem;
     font-weight: 500;
     padding: 0.5rem 0.9rem;
-    border-radius: 999px;
     cursor: pointer;
     transition: border-color 0.2s, background 0.2s, color 0.2s;
     text-decoration: none;
@@ -262,8 +255,7 @@ body.sayfa-blog:not(.sayfa-blog-kategori) .blog-yazi-grid:has(> article.blog-yaz
     display: flex;
     flex-direction: column;
     background: #fff;
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
+    border: 0 solid transparent;
     overflow: hidden;
     transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
@@ -363,7 +355,6 @@ body.sayfa-blog .blog-kart-gorsel-link {
     margin-top: 3rem;
     padding: 2rem 1.5rem;
     background: linear-gradient(145deg, #1e3a5f 0%, #0f172a 100%);
-    border-radius: 16px;
     color: #f1f5f9;
     text-align: center;
 }
@@ -398,7 +389,6 @@ body.sayfa-blog .blog-kart-gorsel-link {
     color: #fff !important;
     border: 2px solid rgba(255, 255, 255, 0.5);
     font-weight: 600;
-    border-radius: 8px;
     text-decoration: none;
 }
 
@@ -428,13 +418,26 @@ body.sayfa-blog .blog-kart-gorsel-link {
     min-width: 0;
 }
 
+/* Ana yazı sütununda “dış” gri çerçeve: çift kutu görünmez (Tokyo Immerse ile aynı).
+   - Doğrudan .blog-yazi-ana çocuğu (Immerse / Alpadia vb.)
+   - section.icerik-alani içinde birinci seviye (Kings, SBC Canford vb.); böylece
+     section > .cerceve-kutu içindeki iç içe .cerceve-kutu (IELTS ikili vb.) seçilmez. */
+.blog-yazi-ana > .cerceve-kutu,
+.blog-yazi-ana > section.icerik-alani > .cerceve-kutu {
+    border: none !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+    padding-top: 1.25rem !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
 .blog-yazi-layout--yan-panel .blog-yazi-ana {
     max-width: 850px;
 }
 
 .blog-yazi-kapak-gorsel {
     margin-bottom: 1.25rem;
-    border-radius: 12px;
     overflow: hidden;
 }
 
@@ -465,8 +468,7 @@ body.sayfa-blog .blog-kart-gorsel-link {
     text-decoration: none;
     color: #c41e3a;
     background: rgba(196, 30, 58, 0.1);
-    border: 1px solid rgba(196, 30, 58, 0.18);
-    border-radius: 9999px;
+    border: 0 solid transparent;
     transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
@@ -535,6 +537,10 @@ body.sayfa-blog .blog-kart-gorsel-link {
 
 .blog-yazi-ana-baslik .vurgu-renk {
     color: #bd0505;
+    display: block;
+    margin-top: 0.35em;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 @media (max-width: 501px) {
@@ -555,8 +561,7 @@ body.sayfa-blog .blog-kart-gorsel-link {
 /* Yapay zeka özeti */
 .blog-ai-ozet-kutu {
     background: #eff6ff;
-    border: 1px solid #bfdbfe;
-    border-radius: 12px;
+    border: 0 solid transparent;
     padding: 1rem 1.15rem 1.1rem;
     margin-bottom: 1.75rem;
 }
@@ -641,8 +646,7 @@ body.sayfa-blog .blog-kart-gorsel-link {
 
 .blog-icindekiler-kutu {
     background: #fff;
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
+    border: 0 solid transparent;
     padding: 1rem 1rem 1.1rem;
     margin-bottom: 25px;
 }
@@ -685,8 +689,7 @@ body.sayfa-blog .blog-kart-gorsel-link {
 /* İlgili programlar */
 .blog-ilgili-programlar {
     background: #fffbeb;
-    border: 1px solid #fde68a;
-    border-radius: 12px;
+    border: 0 solid transparent;
     padding: 1rem 1rem 1.1rem;
 }
 
@@ -786,8 +789,7 @@ body.sayfa-blog .blog-kart-gorsel-link {
 /* Hızlı iletişim (yan panel) */
 .blog-yan-iletisim-kutu {
     background: #fff;
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
+    border: 0 solid transparent;
     padding: 1.1rem 1rem 1.15rem;
     margin-bottom: 1rem;
 }
@@ -825,12 +827,18 @@ body.sayfa-blog .blog-kart-gorsel-link {
     box-sizing: border-box;
 }
 
+/* Hızlı iletişim yalnızca geniş ekran (yan panel); mobil içindekiler sarmasındaki kutu dahil */
+@media (max-width: 1179px) {
+    .blog-yan-iletisim-kutu {
+        display: none !important;
+    }
+}
+
 /* Öne çıkan hizmet kartı (yan panel) */
 .blog-yan-hizmet-karti {
     display: block;
     background: #fff;
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
+    border: 0 solid transparent;
     overflow: hidden;
     text-decoration: none;
     color: inherit;
@@ -878,11 +886,12 @@ body.sayfa-blog .blog-kart-gorsel-link {
         display: none !important;
     }
 
+    /* Giriş metni blokundan sonra (tek sütunda); üstte nefes, altta içerik ayrımı */
     .blog-yazi-sayfa-mobil-ux .blog-mobil-icindekiler-wrap {
         display: flex;
         flex-direction: column;
         gap: 25px;
-        margin: 0 0 1rem;
+        margin: 0.75rem 0 1rem;
     }
 
     .blog-yazi-sayfa-mobil-ux {
@@ -931,8 +940,7 @@ body.sayfa-blog .blog-kart-gorsel-link {
 /* Mobil: DOM’da içerik akışına göre (ör. giriş paragrafından sonra); görünüm yan paneldeki .blog-icindekiler-kutu ile aynı */
 .blog-mobil-icindekiler-duz {
     background: #fff;
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
+    border: 0 solid transparent;
     padding: 1rem 1rem 1.1rem;
     margin-bottom: 0;
     box-sizing: border-box;
@@ -976,6 +984,93 @@ body.sayfa-blog .blog-kart-gorsel-link {
     padding-left: 0.75rem;
     border-left: 2px solid #e2e8f0;
     margin-top: 0;
+}
+
+/* Mobil: sabit yukarı ok — içindekiler sarmalayıcısına (id hedefi sayfada; Kings/blog şablonları :has ile) */
+.blog-mobil-icindekiler-sabit-cap {
+    display: none;
+}
+
+@media (max-width: 1179px) {
+    body:has(.blog-mobil-icindekiler-wrap) .blog-mobil-icindekiler-sabit-cap {
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        right: 0;
+        /* Görünüm ortasının hafif altı; çok kısa ekranda / alt CTA ile çakışmayı min() ile sınırla */
+        top: min(calc(50vh + 2rem), calc(100vh - 7.5rem - env(safe-area-inset-bottom, 0px)));
+        bottom: auto;
+        transform: translateY(-50%);
+        z-index: 998;
+        min-width: 48px;
+        min-height: 52px;
+        padding: 0.5rem 0.42rem;
+        border: 0 solid transparent;
+        border-right: none;
+        border-left: 3px solid #c41e3a;
+        background: linear-gradient(165deg, #243d63 0%, #1e3a5f 42%, #0f172a 100%);
+        color: #f8fafc !important;
+        text-decoration: none !important;
+        font-family: "Poppins", sans-serif;
+        line-height: 1;
+        box-shadow:
+            -6px 6px 22px rgba(15, 23, 42, 0.28),
+            inset 0 1px 0 rgba(255, 255, 255, 0.08);
+        /* Sayfa üstteyken gizli; kaydırınca JS ile body sınıfı */
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        -webkit-tap-highlight-color: transparent;
+        transition:
+            opacity 0.22s ease,
+            visibility 0.22s ease,
+            filter 0.2s ease,
+            box-shadow 0.2s ease,
+            border-color 0.2s ease;
+    }
+
+    body.blog-icindekiler-sabit-ok-goster:has(.blog-mobil-icindekiler-wrap) .blog-mobil-icindekiler-sabit-cap {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    /* Sabit alt CTA çubuğu: oku daha yukarı tavanla */
+    body:has(.blog-mobil-icindekiler-wrap):has(.blog-mobil-cta-bar-wrap) .blog-mobil-icindekiler-sabit-cap {
+        top: min(calc(50vh + 2rem), calc(100vh - 9.5rem - env(safe-area-inset-bottom, 0px)));
+    }
+
+    body:has(.blog-mobil-icindekiler-wrap) .blog-mobil-icindekiler-sabit-cap-ok {
+        display: block;
+        font-size: 1.85rem;
+        font-weight: 800;
+        line-height: 1;
+        color: #fde047;
+        text-shadow:
+            0 0 12px rgba(250, 204, 21, 0.45),
+            0 2px 4px rgba(0, 0, 0, 0.4);
+        transform: translateY(-1px);
+    }
+
+    body:has(.blog-mobil-icindekiler-wrap) .blog-mobil-icindekiler-sabit-cap:hover .blog-mobil-icindekiler-sabit-cap-ok,
+    body:has(.blog-mobil-icindekiler-wrap) .blog-mobil-icindekiler-sabit-cap:focus-visible .blog-mobil-icindekiler-sabit-cap-ok {
+        color: #fef08a;
+        text-shadow:
+            0 0 14px rgba(254, 240, 138, 0.55),
+            0 2px 4px rgba(0, 0, 0, 0.35);
+    }
+
+    body:has(.blog-mobil-icindekiler-wrap) .blog-mobil-icindekiler-sabit-cap:hover,
+    body:has(.blog-mobil-icindekiler-wrap) .blog-mobil-icindekiler-sabit-cap:focus-visible {
+        filter: brightness(1.08);
+        border-left-color: #f87171;
+        box-shadow:
+            -8px 8px 28px rgba(15, 23, 42, 0.35),
+            inset 0 1px 0 rgba(255, 255, 255, 0.12);
+        outline: none;
+    }
 }
 
 @media (max-width: 1179px) {

@@ -25,8 +25,11 @@ body.sayfa-hizmetlerimiz article.icerik-alani.hizmetlerimiz-sayfa > h1.sayfa-ana
 }
 
 body.sayfa-hizmetlerimiz article.icerik-alani.hizmetlerimiz-sayfa > h1.sayfa-ana-baslik .vurgu-renk {
-    display: inline-block;
-    padding-top: 6px;
+    display: block;
+    margin-top: 0.35em;
+    padding-top: 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* Sadece section içi bölüm başlıkları (4 Adım, Eğitim Alanlarımız) */
@@ -87,11 +90,6 @@ body.sayfa-hizmetlerimiz article.hizmetlerimiz-sayfa > p {
     text-align-last: left;
 }
 
-body.sayfa-hizmetlerimiz article.hizmetlerimiz-sayfa .iletisim-form-alani > p {
-    text-align: justify;
-    text-align-last: left;
-}
-
 /* Hub çerçevesi: alttaki gereksiz iç boşluk (12px) yok; kartlar satırda eşit boya uzamasın */
 body.sayfa-hizmetlerimiz .hizmetlerimiz-egitim-alanlari .dil-okullari-secim-paneli {
     padding-bottom: 0;
@@ -103,7 +101,7 @@ body.sayfa-hizmetlerimiz .hizmetlerimiz-egitim-alanlari .dil-okullari-secim-pane
     }
 }
 
-/* 4 adım — daire (border-radius 50%) kartlar; numara başlığın solunda */
+/* 4 adım — kartlar; numara başlığın solunda */
 .hizmet-adimlar-section {
     margin-top: 55px;
 }
@@ -126,8 +124,7 @@ body.sayfa-hizmetlerimiz .hizmetlerimiz-egitim-alanlari .dil-okullari-secim-pane
     max-width: 240px;
     padding: 14px 16px;
     background: #fff;
-    border: 1px solid #e2e8f0;
-    border-radius: 50%;
+    border: 0 solid transparent;
     text-align: center;
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -172,7 +169,6 @@ body.sayfa-hizmetlerimiz .hizmetlerimiz-egitim-alanlari .dil-okullari-secim-pane
     color: #fff;
     font-size: 13px;
     font-weight: 700;
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;

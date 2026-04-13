@@ -22,8 +22,11 @@ body.sayfa-hakkimizda article.icerik-alani.hakkimizda-sayfa > h1.sayfa-ana-basli
 }
 
 body.sayfa-hakkimizda article.icerik-alani.hakkimizda-sayfa > h1.sayfa-ana-baslik .vurgu-renk {
-    display: inline-block;
-    padding-top: 6px;
+    display: block;
+    margin-top: 0.35em;
+    padding-top: 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 

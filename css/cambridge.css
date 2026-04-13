@@ -1,29 +1,4 @@
-/* Cambridge yaz okullari sayfasina ozel secim paneli ve form bandi stilleri */
-.cambridge-secim-paneli .kirmizi-kutu { margin: 0; border-radius: 5px 5px 0 0; }
-.cambridge-secim-paneli .okul-liste-kapsayici { margin-top: 0; padding-top: 0; border-top-left-radius: 0; border-top-right-radius: 0; }
-.cambridge-secim-paneli .okul-liste-kapsayici .okul-liste-baslik { display: none; }
-.cambridge-secim-paneli .premium-liste-kart,
-.cambridge-secim-paneli .glass-stil,
-.cambridge-secim-paneli .incele-btn-minimal,
-.cambridge-secim-paneli .btn-modern-incele,
-.cambridge-secim-paneli .ok-animasyon { transition: none !important; }
-.cambridge-secim-paneli .premium-liste-kart:hover,
-.cambridge-secim-paneli .glass-stil:hover,
-.cambridge-secim-paneli .okul-liste-kapsayici:hover { transform: none !important; box-shadow: none !important; border-color: #d1d5db !important; background: #ffffff !important; }
-.cambridge-secim-paneli .okul-isim-link:hover,
-.cambridge-secim-paneli .incele-btn-minimal:hover,
-.cambridge-secim-paneli .btn-modern-incele:hover { color: inherit !important; text-decoration: none !important; padding-left: 0 !important; }
-.cambridge-secim-paneli .btn-modern-incele:hover { color: #e30613 !important; }
-.cambridge-secim-paneli .btn-modern-incele:hover .ok-animasyon { color: #e30613 !important; transform: translateX(2px); }
-.cambridge-secim-paneli .premium-liste-kart:hover .okul-isim-link,
-.cambridge-secim-paneli .premium-liste-kart:hover .btn-modern-incele,
-.cambridge-secim-paneli .premium-liste-kart:hover .ok-animasyon { color: #e30613 !important; }
-.cambridge-secim-paneli .premium-liste-kart:hover .liste-index,
-.cambridge-secim-paneli .liste-index { color: #6b7280 !important; transition: none !important; transform: none !important; }
-.cambridge-secim-paneli .liste-index,
-.cambridge-secim-paneli .okul-isim-link,
-.cambridge-secim-paneli .btn-modern-incele,
-.cambridge-secim-paneli .incele-btn-minimal { font-size: 16px !important; }
+/* Cambridge yaz okulları sayfası: form bandı ve sayfaya özel alanlar (program listesi: okul-listesi.css) */
 .cambridge-form-bant { margin-bottom: 0; border-radius: 5px 5px 0 0; background-color: #e30613; }
 .cambridge-form-bant .ust-satir { color: #ffffff !important; }
 .cambridge-form-bant .cambridge-form-alt-satir {
@@ -33,10 +8,7 @@
     line-height: 1.35;
     color: #00235d !important;
 }
-.cambridge-form-bant + .iletisim-form-alani { margin-top: 0 !important; border-top-left-radius: 0; border-top-right-radius: 0; padding-top: 0; }
-.cambridge-form-bant + .iletisim-form-alani > h2:first-child { margin-top: 0; padding-top: 0; }
-
-.cambridge-program-rozet-kutu .cambridge-program-rozet-grid > .dahil-rozet-kart:nth-child(3) {
+.cambridge-program-rozet-kutu .cambridge-program-rozet-grid > .rozet-kart:nth-child(3) {
     grid-column: 1 / -1;
     justify-self: center;
     width: min(100%, calc((100% - 18px) / 2));
@@ -48,7 +20,7 @@
     gap: 14px;
 }
 
-.gri-cerceve-kutu.cambridge-neden-kutu .dahil-rozet-grid.cambridge-neden-rozet-grid {
+.cerceve-kutu.cambridge-neden-kutu .rozet-grid.cambridge-neden-rozet-grid {
     grid-template-columns: 1fr !important;
 }
 
@@ -82,7 +54,7 @@
     color: #4b5563;
 }
 
-.cambridge-sosyal-rozet-kutu .cambridge-sosyal-rozet-grid > .dahil-rozet-kart:nth-child(3) {
+.cambridge-sosyal-rozet-kutu .cambridge-sosyal-rozet-grid > .rozet-kart:nth-child(3) {
     grid-column: 1 / -1;
     justify-self: center;
     width: min(100%, calc((100% - 14px) / 2));
@@ -109,7 +81,7 @@
 .cambridge-neden-kart p { font-size: 14.5px; color: #444; margin: 0; line-height: 1.6; }
 
 @media (max-width: 768px) {
-    .cambridge-program-rozet-kutu .cambridge-program-rozet-grid > .dahil-rozet-kart:nth-child(3) {
+    .cambridge-program-rozet-kutu .cambridge-program-rozet-grid > .rozet-kart:nth-child(3) {
         grid-column: auto;
         justify-self: stretch;
         width: 100%;
@@ -120,7 +92,7 @@
         grid-template-columns: 1fr;
     }
 
-    .cambridge-sosyal-rozet-kutu .cambridge-sosyal-rozet-grid > .dahil-rozet-kart:nth-child(3) {
+    .cambridge-sosyal-rozet-kutu .cambridge-sosyal-rozet-grid > .rozet-kart:nth-child(3) {
         grid-column: auto;
         justify-self: stretch;
         width: 100%;
