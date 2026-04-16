@@ -1,6 +1,7 @@
 (function () {
   'use strict';
-  var ENDPOINT = 'https://global-compass-paytr.canmuratsubat.workers.dev/iletisim';
+  // Use same-origin proxy route to avoid CORS/TLS issues in browsers.
+  var ENDPOINT = '/api/paytr/iletisim';
 
   function messageForValidity(el) {
     var v = el.validity;
@@ -279,7 +280,19 @@
         body: JSON.stringify(payload)
       })
         .then(function (res) {
-          if (!res.ok) throw new Error('Hata');
+          if (!res.ok) {
+            return res
+              .text()
+              .then(function (t) {
+                throw new Error(t || 'Hata');
+              })
+              .catch(function () {
+                throw new Error('Hata');
+              });
+          }
+          return res;
+        })
+        .then(function () {
           form.reset();
           clearFormErrors(form);
           showBildirim(
