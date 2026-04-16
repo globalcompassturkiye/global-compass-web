@@ -1,5 +1,5 @@
 /* Isvicre yaz okullari sayfasina ozel secim paneli/form ve hover stilleri */
-.isvicre-secim-paneli .kirmizi-kutu {
+.isvicre-secim-paneli .hizmet-alanlari-baslik {
     margin: 0;
     border-radius: 5px 5px 0 0;
 }
@@ -9,15 +9,7 @@
     padding-top: 0;
 }
 
-.isvicre-form-bant {
-    margin-bottom: 0;
-    border-radius: 5px 5px 0 0;
-    background-color: #e30613;
-}
-
-.isvicre-form-bant .ust-satir {
-    color: #ffffff !important;
-}
+/* Bilgi formu kırmızı bant: site-iletisim-form.css */
 
 .isvicre-secim-paneli .premium-liste-kart,
 .isvicre-secim-paneli .skyline-stil,
@@ -134,6 +126,9 @@
 .isvicre-kamp-kutu .isvicre-kamp-rozet-grid .rozet-kart {
     height: 100%;
     border-radius: 15px;
+    background: #ffffff !important;
+    border: 0 solid transparent !important;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06) !important;
 }
 
 .isvicre-kamp-kutu .isvicre-kamp-rozet-grid > .rozet-kart:nth-child(3) {
@@ -163,7 +158,7 @@
     }
 }
 
-/* Okul listesi: bu dosya style.css ve yurt-disi-yaz-okullari.css SONRA yüklendiği için kart aralığı burada sabitlenir */
+/* Okul listesi: bu dosya style.css SONRA yüklendiği için kart aralığı burada sabitlenir */
 .isvicre-secim-paneli .okul-liste-kapsayici .modern-okul-listesi {
     margin: 0 !important;
     padding: 0 !important;

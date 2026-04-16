@@ -9,18 +9,18 @@
     padding: 0 0 60px;
 }
 
-body.sayfa-sss article.icerik-alani.sss-sayfa > h1.sayfa-ana-baslik {
+body.sayfa-sss article.icerik-alani.sss-sayfa > h1 {
     font-size: var(--h1-font-size) !important;
     line-height: 1.4 !important;
 }
 
-body.sayfa-sss article.icerik-alani.sss-sayfa > h1.sayfa-ana-baslik > .vurgu-renk {
+body.sayfa-sss article.icerik-alani.sss-sayfa > h1 > .vurgu-renk {
     font-size: var(--h1-font-size) !important;
     line-height: 1.35 !important;
     color: #bd0505 !important;
 }
 
-body.sayfa-sss article.icerik-alani.sss-sayfa > h1.sayfa-ana-baslik .vurgu-renk {
+body.sayfa-sss article.icerik-alani.sss-sayfa > h1 .vurgu-renk {
     display: block;
     margin-top: 0.35em;
     padding-top: 0;
@@ -65,7 +65,8 @@ body.sayfa-sss .sosyal-medya-alani a img {
     margin-top: 8px;
 }
 
-.sayfa-sss .sss-sss-kutu.cerceve-kutu {
+.sayfa-sss .sss-sss-kutu.cerceve-kutu,
+.sayfa-sss .sss-sss-kutu.site-gri-cerceve-kutu {
     box-shadow: 0 4px 24px rgba(0, 0, 128, 0.06);
     max-width: 1200px;
     padding: 28px 22px 22px !important;
@@ -95,7 +96,8 @@ body.sayfa-sss .sosyal-medya-alani a img {
 }
 
 @media (max-width: 768px) {
-    .sayfa-sss .sss-sss-kutu.cerceve-kutu {
+    .sayfa-sss .sss-sss-kutu.cerceve-kutu,
+    .sayfa-sss .sss-sss-kutu.site-gri-cerceve-kutu {
         width: 100% !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
@@ -106,27 +108,31 @@ body.sayfa-sss .sosyal-medya-alani a img {
    Site geneli SSS (style.css ile birleştirildi — adım 5)
    ========================================= */
 
-/* h2.gri-cerceve-baslik / sayfa-bolum-basligi + .sss-alt-satir → style.css (Aşama 2 tek kaynak) */
+/* h2.gri-cerceve-baslik / sayfa-bolum-basligi + .vurgu-satir → style.css (Aşama 2 tek kaynak) */
 
 /* .sss-item summary h3 — küçük boyut aşağıdaki akordeon bloğunda (inherit) */
 
-/* SSS gri kutusu: üst boşluk (düz h2; style.css gri çerçeve ile uyumlu) */
-.cerceve-kutu:has(.sss-baslik),
+/* SSS gri kutusu: üst boşluk (düz h2; style.css gri çerçeve ile uyumlu)
+ * Hub SSS: h2’de sınıf yok; 1. satır düz metin, 2. .vurgu-satir */
+.cerceve-kutu:has(> h2:has(> .vurgu-satir)),
+.site-gri-cerceve-kutu:has(> h2:has(> .vurgu-satir)),
 .sss-gri-kutu {
     padding-top: 1.25rem;
     margin-top: 45px;
 }
 
 /* SSS başlığı ile 1. soru arası - tek kaynak (diğer etkenler sıfır) */
-.sss-baslik + .sss-alani {
+.cerceve-kutu > h2:has(> .vurgu-satir) + .sss-alani,
+.site-gri-cerceve-kutu > h2:has(> .vurgu-satir) + .sss-alani {
     padding-top: 0px;
     margin-top: 0;
 }
-.sss-baslik + .sss-alani > *:first-child {
+.cerceve-kutu > h2:has(> .vurgu-satir) + .sss-alani > *:first-child,
+.site-gri-cerceve-kutu > h2:has(> .vurgu-satir) + .sss-alani > *:first-child {
     margin-top: 0 !important;
 }
 
-/* h2 .sss-alt-satir → style.css (Aşama 2) */
+/* h2 .vurgu-satir → style.css (Aşama 2) */
 /* ===== MIGRATED FROM sss.css ===== */
 /* =========================================
     SSS SAYFASI – H1 İKİNCİ SATIR VURGUSU
@@ -238,7 +244,8 @@ h1 .h1-vurgu {
    ========================================= */
 
 /* İlk SSS üst boşluğu - margin sıfır (boşluk sadece style.css padding-top) */
-.sss-baslik + .sss-alani .sss-item:first-child,
+.cerceve-kutu > h2:has(> .vurgu-satir) + .sss-alani .sss-item:first-child,
+.site-gri-cerceve-kutu > h2:has(> .vurgu-satir) + .sss-alani .sss-item:first-child,
 .sss-alani > .sss-item:first-child {
     margin-top: 0 !important;
 }
@@ -368,7 +375,8 @@ h1 .h1-vurgu {
 }
 /* SSS gri kutu üst boşlukları (768px); h2 bölüm başlığı mobil → style.css */
 @media screen and (max-width: 768px) {
-    .cerceve-kutu:has(.sss-baslik),
+    .cerceve-kutu:has(> h2:has(> .vurgu-satir)),
+    .site-gri-cerceve-kutu:has(> h2:has(> .vurgu-satir)),
     .sss-gri-kutu {
         padding-top: 1.25rem !important;
         margin-top: 45px !important;

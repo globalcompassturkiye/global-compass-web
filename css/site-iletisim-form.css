@@ -1,69 +1,89 @@
-/* Bilgi istek formu — tek kaynak: kart, bant, alanlar, KVKK, bildirim ve sayfa özel düzenler.
+/* Bilgi istek formu — tek kaynak: başlık dışarıda, beyaz çerçeve (.iletisim-form-beyaz-cerceve), alanlar, KVKK, bildirim.
    Bu dosyayı kullanan sayfalarda yüklenir; site-breadcrumb.css sonrası. */
 
 /* ===== MIGRATED FROM form.css ===== */
 /* =========================================
-    6. İLETİŞİM FORMU (Gri Çerçeve Uyumlu)
+    6. İLETİŞİM FORMU (h2 üstte; form metin + alanlar beyaz kutuda)
    ========================================= */
-.kirmizi-kutu + .iletisim-form-alani {
+.hizmet-alanlari-baslik + .iletisim-form-alani {
     margin-top: 0;
     padding-top: 0;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
 }
 
-/* Kirmizi baslik formdan hemen onceyse iki blok tek parca gibi otursun */
-.kirmizi-kutu:has(+ .iletisim-form-alani) {
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    background-color: #e30613;
-    padding: 1rem 1.25rem 1.1rem;
+/* Formdan hemen önce ayrı .hizmet-alanlari-baslik varsa (nadir): kırmızı bant yok */
+.hizmet-alanlari-baslik:has(+ .iletisim-form-alani) {
+    border-radius: 0;
+    background-color: transparent;
+    padding: 0;
     box-sizing: border-box;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* Bilgi istek formu öncesi kırmızı bant: 1. satır beyaz, 2. satır lacivert */
-.kirmizi-kutu:has(+ .iletisim-form-alani) > h2.bilgi-form-bant-baslik .ust-satir {
-    color: #ffffff !important;
+/* Hub (ör. article > h2:has(> .vurgu-satir)) ile aynı iki satır tipografisi — style.css 4023–4035 */
+.hizmet-alanlari-baslik:has(+ .iletisim-form-alani) > h2:has(> .vurgu-satir) .ust-satir,
+.hizmet-alanlari-baslik:has(+ .iletisim-form-alani) > h2:has(> .vurgu-satir) > span:not(.vurgu-satir) {
+    color: #000000 !important;
+    font-weight: 700;
+    text-transform: none;
+    display: block;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+    line-height: 1.35;
 }
-.kirmizi-kutu:has(+ .iletisim-form-alani) > h2.bilgi-form-bant-baslik > span:not(.ust-satir) {
-    color: #00235d !important;
-    margin-top: 8px;
+.hizmet-alanlari-baslik:has(+ .iletisim-form-alani) > h2:has(> .vurgu-satir) > span:not(.ust-satir) {
+    color: #e30613 !important;
+    font-weight: 700;
+    margin-top: 0.35rem;
     display: block;
     width: 100%;
     text-align: center;
-    font-weight: 700;
-    line-height: 1.2;
+    line-height: 1.35;
 }
 
 .iletisim-form-alani {
-    /* Kenar + gölge: style.css :root --site-kart-* ile aynı (okul-liste-kapsayici ile uyum) */
-    --iletisim-kart-kenar: var(--site-kart-kenar, #e2e8f0);
-    --iletisim-kart-golge: var(--site-kart-golge, 0 4px 6px -1px rgba(15, 23, 42, 0.06), 0 10px 28px -8px rgba(15, 23, 42, 0.08));
     --iletisim-odak: #000080;
     --iletisim-odak-yarim: rgba(0, 0, 128, 0.12);
-    background: #ffffff;
-    margin: 25px auto 25px auto;
-    border-radius: 16px;
+    background: transparent;
+    margin: 40px auto 25px auto;
+    border-radius: 0;
     box-sizing: border-box;
     position: relative;
-    border: 1px solid var(--iletisim-kart-kenar);
-    box-shadow: var(--iletisim-kart-golge);
-    padding: 28px 28px 32px;
+    border: none;
+    box-shadow: none;
+    padding: 0 0 32px;
     max-width: 1200px;
 }
 
-/* Üst bant: iki satır tek h2 (span.ust-satir + span alt sınıfları) — görünüm span kurallarında */
-.iletisim-form-alani > .kirmizi-kutu > h2.bilgi-form-bant-baslik,
-.iletisim-form-alani .kirmizi-kutu h2.bilgi-form-bant-baslik {
+/* Giriş metni + form alanları — h2’nin dışında, beyaz kart */
+.iletisim-form-alani .iletisim-form-beyaz-cerceve {
+    --iletisim-kart-kenar: var(--site-kart-kenar, #e2e8f0);
+    --iletisim-kart-golge: var(
+        --site-kart-golge,
+        0 4px 6px -1px rgba(15, 23, 42, 0.06),
+        0 10px 28px -8px rgba(15, 23, 42, 0.08)
+    );
+    background: #ffffff;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    border: 1px solid var(--iletisim-kart-kenar);
+    border-radius: 16px;
+    box-shadow: var(--iletisim-kart-golge);
+    box-sizing: border-box;
+    padding: 28px 28px 32px;
+}
+
+/* İki satırlı h2 — hub’daki program-secim-hub-baslik ile aynı düzen (style.css 4010–4021, 14270–14284) */
+.iletisim-form-alani > .hizmet-alanlari-baslik > h2:has(> .vurgu-satir),
+.iletisim-form-alani .hizmet-alanlari-baslik h2:has(> .vurgu-satir) {
     position: static;
     width: 100%;
-    max-width: none;
-    margin: 0;
+    max-width: 1200px;
+    margin: 0 auto 15px !important;
     padding: 0;
     overflow: visible;
     clip: auto;
@@ -73,19 +93,43 @@
     background: transparent;
     font-family: "Poppins", sans-serif;
     font-size: inherit;
-    font-weight: inherit;
+    font-weight: 700;
     color: inherit;
     letter-spacing: normal;
-    line-height: inherit;
+    line-height: 1.35;
     text-align: center;
     box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
 }
 
-/* Üst şerit metni: gri iç çerçeve yok; h2 altında ortalanmış küçük etiket */
-.iletisim-form-alani > .kirmizi-kutu,
-section.iletisim-form-alani .kirmizi-kutu[class*="-form-bant"],
-section.iletisim-form-alani .kirmizi-kutu[class*="basvuru-bant"] {
-    margin: 0 0 16px;
+/* Bilgi formu üst başlık sarmalayıcı (.icerik-bilgi-form-bant): kırmızı şerit yok */
+.iletisim-form-alani > .hizmet-alanlari-baslik.icerik-bilgi-form-bant {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: none;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0;
+    box-shadow: none !important;
+    text-align: center;
+}
+
+.iletisim-form-alani > .hizmet-alanlari-baslik.icerik-bilgi-form-bant:first-child {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Tanıtım bandı (yalnızca p; Kings vb.) — şeffaf sarmalayıcı */
+.iletisim-form-alani > .hizmet-alanlari-baslik:not(.icerik-bilgi-form-bant) {
+    margin: 0;
     padding: 0;
     max-width: none;
     background: transparent !important;
@@ -96,72 +140,53 @@ section.iletisim-form-alani .kirmizi-kutu[class*="basvuru-bant"] {
     text-align: center;
 }
 
-/* Form üst bandı kartın dış genişliğini tam doldursun */
-.iletisim-form-alani > .kirmizi-kutu:first-child {
-    margin-left: -28px;
-    margin-right: -28px;
+/* İki satırlı h2 — üst/alt satır: sayfa üstündeki hub h2 ile aynı (style.css 4023–4035, 14286–14305) */
+.iletisim-form-alani > .hizmet-alanlari-baslik.icerik-bilgi-form-bant > h2:has(> .vurgu-satir) > .ust-satir,
+ .iletisim-form-alani > .hizmet-alanlari-baslik.icerik-bilgi-form-bant > h2:has(> .vurgu-satir) > span:not(.vurgu-satir),
+article.icerik-alani .iletisim-form-alani > .hizmet-alanlari-baslik.icerik-bilgi-form-bant > h2:has(> .vurgu-satir) > .ust-satir {
+    color: #000000 !important;
+    font-weight: 700;
+    text-transform: none;
+    display: block;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+    line-height: 1.35;
 }
 
-section.iletisim-form-alani .kirmizi-kutu[class*="-form-bant"] {
-    margin-top: 0;
-    margin-bottom: 16px;
+.iletisim-form-alani > .hizmet-alanlari-baslik.icerik-bilgi-form-bant > h2:has(> .vurgu-satir) > .vurgu-satir,
+article.icerik-alani .iletisim-form-alani > .hizmet-alanlari-baslik.icerik-bilgi-form-bant > h2:has(> .vurgu-satir) > .vurgu-satir {
+    color: #e30613 !important;
+    font-weight: 700;
+    margin: 0.35rem 0 0 !important;
+    display: block;
+    width: 100%;
+    text-align: center;
+    line-height: 1.35;
 }
 
-section.iletisim-form-alani .kirmizi-kutu[class*="basvuru-bant"] {
-    margin-top: 0;
-    margin-bottom: 16px;
-}
-
-/* İlk öğe kırmızı banttaysa ekstra üst boşluk yok */
-.iletisim-form-alani > .kirmizi-kutu:first-child {
-    margin-top: 0;
-}
-
-/* Kings vb.: üstteki tanıtım bandı hâlâ p; bilgi bantı h2 + span */
-.iletisim-form-alani > .kirmizi-kutu > p.ust-satir,
-.iletisim-form-alani > .kirmizi-kutu h2.bilgi-form-bant-baslik .ust-satir,
-section.iletisim-form-alani .kirmizi-kutu[class*="-form-bant"] .ust-satir,
-section.iletisim-form-alani .kirmizi-kutu[class*="basvuru-bant"] .ust-satir {
-    color: #64748b !important;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.07em;
-    text-transform: uppercase;
+/* Tanıtım bandı p satırları — hub h2 ile aynı ölçek (p kullanan sayfalar) */
+.iletisim-form-alani > .hizmet-alanlari-baslik:not(.icerik-bilgi-form-bant) > p.ust-satir,
+.iletisim-form-alani > .hizmet-alanlari-baslik:not(.icerik-bilgi-form-bant) p.ust-satir {
+    color: #000000 !important;
+    font-weight: 700;
+    text-transform: none;
+    letter-spacing: normal;
     text-align: center;
     margin: 0;
 }
 
-/* H2 + span standardinda 1. satir görünürlüğünü garanti et */
-.iletisim-form-alani .kirmizi-kutu > h2.bilgi-form-bant-baslik > .ust-satir {
-    color: #64748b !important;
+.iletisim-form-alani > .hizmet-alanlari-baslik:not(.icerik-bilgi-form-bant) > p.vurgu-satir,
+.iletisim-form-alani > .hizmet-alanlari-baslik:not(.icerik-bilgi-form-bant) > p.alt-satir {
+    color: #e30613 !important;
+    font-weight: var(--sayfa-bolum-baslik-alt-font-weight);
+    margin-top: 0.35rem !important;
+    line-height: 1.35;
 }
 
-article.icerik-alani section.iletisim-form-alani .kirmizi-kutu > h2.bilgi-form-bant-baslik > .ust-satir,
-article.icerik-alani .iletisim-form-alani .kirmizi-kutu > h2.bilgi-form-bant-baslik > .ust-satir {
-    color: #64748b !important;
-}
-
-.iletisim-form-alani > .kirmizi-kutu > p.alt-satir-lacivert,
-.iletisim-form-alani > .kirmizi-kutu > p.alt-satir,
-.iletisim-form-alani .kirmizi-kutu h2.bilgi-form-bant-baslik > span:not(.ust-satir),
-section.iletisim-form-alani .kirmizi-kutu[class*="-form-bant"] p.alt-satir-lacivert,
-section.iletisim-form-alani .kirmizi-kutu[class*="-form-bant"] p.alt-satir,
-section.iletisim-form-alani .kirmizi-kutu[class*="-form-bant"] [class*="form-alt-satir"],
-section.iletisim-form-alani .kirmizi-kutu[class*="basvuru-bant"] p.alt-satir-lacivert,
-section.iletisim-form-alani .kirmizi-kutu[class*="basvuru-bant"] p.alt-satir {
-    color: #000080 !important;
-    font-size: clamp(17px, 2.4vw, 20px);
-    font-weight: 700;
-    margin-top: 10px !important;
-}
-
-/* H2 + span standardinda 2. satir görünürlüğünü garanti et */
-.iletisim-form-alani .kirmizi-kutu > h2.bilgi-form-bant-baslik > .alt-satir-lacivert {
-    color: #000080 !important;
-}
-
-/* Giriş paragrafı (banttan sonra) */
-.iletisim-form-alani > p {
+/* Giriş paragrafı (beyaz kutu içinde) */
+.iletisim-form-alani .iletisim-form-beyaz-cerceve > p {
     padding: 0;
     margin: 0 0 22px;
     font-size: 15px;
@@ -169,11 +194,11 @@ section.iletisim-form-alani .kirmizi-kutu[class*="basvuru-bant"] p.alt-satir {
     line-height: 1.7;
 }
 
-.iletisim-form-alani > .kirmizi-kutu + p {
+.iletisim-form-alani > .hizmet-alanlari-baslik + .iletisim-form-beyaz-cerceve > p:first-of-type {
     margin-top: 4px;
 }
 
-.iletisim-form-alani form {
+.iletisim-form-alani .iletisim-form-beyaz-cerceve form {
     padding: 0;
 }
 
@@ -339,7 +364,7 @@ section.iletisim-form-alani .kirmizi-kutu[class*="basvuru-bant"] p.alt-satir {
     9. MOBİL UYUMLULUK (501px ALTI)
    ========================================= */
 @media (max-width: 768px) {
-    .iletisim-form-alani > p {
+    .iletisim-form-alani .iletisim-form-beyaz-cerceve > p {
         text-align: justify;
     }
 
@@ -375,7 +400,16 @@ section.iletisim-form-alani .kirmizi-kutu[class*="basvuru-bant"] p.alt-satir {
     }
 
     .iletisim-form-alani {
+        padding: 0 0 26px;
+    }
+
+    .iletisim-form-alani .iletisim-form-beyaz-cerceve {
         padding: 22px 18px 26px;
+    }
+
+    .iletisim-form-alani > .hizmet-alanlari-baslik.icerik-bilgi-form-bant:first-child {
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 
@@ -492,7 +526,7 @@ body.iletisim-form-bildirim-acik {
 }
 
 /* Hizmetlerimiz: form giriş metni iki yana yaslı */
-body.sayfa-hizmetlerimiz article.hizmetlerimiz-sayfa .iletisim-form-alani > p {
+body.sayfa-hizmetlerimiz article.hizmetlerimiz-sayfa .iletisim-form-alani .iletisim-form-beyaz-cerceve > p {
     text-align: justify;
     text-align-last: left;
 }
@@ -505,12 +539,37 @@ article.icerik-alani .new-york-bilgi-form-paneli {
 article.icerik-alani .new-york-bilgi-form-paneli .iletisim-form-alani {
     margin: 0 !important;
     max-width: none;
+    padding: 0;
+}
+
+article.icerik-alani .new-york-bilgi-form-paneli .iletisim-form-alani .iletisim-form-beyaz-cerceve {
+    margin: 0 !important;
+    max-width: none;
     border: none;
     box-shadow: none;
     padding: var(--bilgi-istek-form-metin-ust-bosluk, 25px) 22px 24px;
 }
 
-article.icerik-alani .new-york-bilgi-form-paneli .iletisim-form-alani > p:first-of-type {
+article.icerik-alani .new-york-bilgi-form-paneli .iletisim-form-alani .iletisim-form-beyaz-cerceve > p:first-of-type {
+    margin-top: 0;
+}
+
+/* Oxford Royale New York: doğrudan .iletisim-form-alani (Tokyo ile aynı yapı; üst boşluk hub paneli ile aynı) */
+body.oxford-royale-ny-sayfa article.icerik-alani .blog-yazi-ana > section.iletisim-form-alani {
+    margin-top: 50px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    max-width: none;
+    padding: 0;
+}
+
+body.oxford-royale-ny-sayfa article.icerik-alani .blog-yazi-ana > section.iletisim-form-alani .iletisim-form-beyaz-cerceve {
+    border: none;
+    box-shadow: none;
+    padding: var(--bilgi-istek-form-metin-ust-bosluk, 25px) 22px 24px;
+}
+
+body.oxford-royale-ny-sayfa article.icerik-alani .blog-yazi-ana > section.iletisim-form-alani .iletisim-form-beyaz-cerceve > p:first-of-type {
     margin-top: 0;
 }
 
@@ -519,9 +578,13 @@ article.icerik-alani .new-york-bilgi-form-paneli .iletisim-form-alani > p:first-
     max-width: none;
     width: 100%;
     margin: 0;
-    padding-top: var(--bilgi-istek-form-metin-ust-bosluk, 25px);
+    padding: 0;
     border-left: 0;
     border-right: 0;
+}
+
+.ielts-cta .iletisim-form-alani.ielts-dar-form .iletisim-form-beyaz-cerceve {
+    padding-top: var(--bilgi-istek-form-metin-ust-bosluk, 25px);
 }
 
 .blog-yazi-icerik .iletisim-form-alani.ielts-dar-form {
@@ -530,13 +593,17 @@ article.icerik-alani .new-york-bilgi-form-paneli .iletisim-form-alani > p:first-
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 0;
-    padding-top: var(--bilgi-istek-form-metin-ust-bosluk, 25px);
+    padding: 0;
     border-left: 0;
     border-right: 0;
 }
 
-.ielts-cta .iletisim-form-alani.ielts-dar-form > p,
-.blog-yazi-icerik .iletisim-form-alani.ielts-dar-form > p {
+.blog-yazi-icerik .iletisim-form-alani.ielts-dar-form .iletisim-form-beyaz-cerceve {
+    padding-top: var(--bilgi-istek-form-metin-ust-bosluk, 25px);
+}
+
+.ielts-cta .iletisim-form-alani.ielts-dar-form .iletisim-form-beyaz-cerceve > p,
+.blog-yazi-icerik .iletisim-form-alani.ielts-dar-form .iletisim-form-beyaz-cerceve > p {
     margin-top: 0;
 }
 
@@ -571,7 +638,3 @@ article.icerik-alani .new-york-bilgi-form-paneli .iletisim-form-alani > p:first-
     }
 }
 
-/* Hizmetlerimiz: gri kart çerçevesi köşeleri site geneli 16px yerine 15px */
-body.sayfa-hizmetlerimiz .iletisim-form-alani {
-    border-radius: 15px;
-}

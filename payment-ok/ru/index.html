@@ -13,50 +13,8 @@
     <link rel="stylesheet" href="/css/site-ustmenu.css">
     <link rel="stylesheet" href="/css/site-footer.css">
     <link rel="stylesheet" href="/css/site-breadcrumb.css">
-<style>
-        .odeme-sonuc-kapsayici {
-            max-width: 800px;
-            margin: 40px auto 60px auto;
-            text-align: center;
-        }
-        .odeme-sonuc-kutu {
-            border: 1px solid #d1d1d1;
-            border-radius: 10px;
-            padding: 40px 25px 30px;
-            background: #ffffff;
-            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
-        }
-        .odeme-sonuc-kutu h1 {
-            font-size: 26px;
-            color: #065f46;
-            margin-bottom: 10px;
-        }
-        .odeme-sonuc-kutu p {
-            font-size: 14px;
-            color: #4b5563;
-            margin-bottom: 16px;
-        }
-        .odeme-sonuc-kutu .buton-alani {
-            margin-top: 10px;
-        }
-        .odeme-sonuc-buton {
-            display: inline-block;
-            background-color: #000080;
-            color: #ffffff;
-            padding: 12px 28px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 14px;
-            transition: background 0.2s ease, transform 0.1s ease;
-        }
-        .odeme-sonuc-buton:hover {
-            background-color: #bd0505;
-            transform: translateY(-1px);
-        }
-    </style>
 </head>
-<body>
+<body class="odeme-durum-sayfa">
     <div class="sabit-ust-alan">
         <div class="ust-serit">
             <div class="ust-serit-kapsayici">
@@ -72,8 +30,8 @@
             </div>
         </div>
 
-        <header class="ust-menu" style="background: #fff; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 1000;">
-            <div class="ust-alan" style="margin: 0 auto; padding: 20px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center;">
+        <header class="ust-menu">
+            <div class="ust-alan">
                 <div></div>
                 <div class="logo">
                     <a href="/">
@@ -81,15 +39,15 @@
                     </a>
                 </div>
 
-                <div class="sosyal-medya-alani" style="display: flex; gap: 20px; justify-content: flex-end; align-items: center;">
-                    <a href="https://www.facebook.com/globalcompass.ankara/" target="_blank" style="transition: transform 0.3s ease; background: none;">
-                        <img src="/img/sosyal/facebook.png" alt="Facebook" width="30" height="30" style="display: block;" fetchpriority="high" decoding="sync">
+                <div class="sosyal-medya-alani">
+                    <a href="https://www.facebook.com/globalcompass.ankara/" target="_blank">
+                        <img src="/img/sosyal/facebook.png" alt="Facebook" width="30" height="30" fetchpriority="high" decoding="sync">
                     </a>
-                    <a href="https://www.instagram.com/globalcompass.turkiye/" target="_blank" style="transition: transform 0.3s ease; background: none;">
-                        <img src="/img/sosyal/instagram.webp" alt="Instagram" width="30" height="30" style="display: block;" fetchpriority="high" decoding="sync">
+                    <a href="https://www.instagram.com/globalcompass.turkiye/" target="_blank">
+                        <img src="/img/sosyal/instagram.webp" alt="Instagram" width="30" height="30" fetchpriority="high" decoding="sync">
                     </a>
-                    <a href="https://www.youtube.com/@GlobalCompassTurkiye" target="_blank" style="transition: transform 0.3s ease; background: none;">
-                        <img src="/img/sosyal/youtube.png" alt="Youtube" width="30" height="30" style="display: block;" fetchpriority="high" decoding="sync">
+                    <a href="https://www.youtube.com/@GlobalCompassTurkiye" target="_blank">
+                        <img src="/img/sosyal/youtube.png" alt="Youtube" width="30" height="30" fetchpriority="high" decoding="sync">
                     </a>
                 </div>
             </div>
@@ -97,7 +55,7 @@
     </div>
 
     <article class="icerik-alani odeme-sonuc-kapsayici">
-        <div class="odeme-sonuc-kutu">
+        <div class="odeme-sonuc-kutu odeme-sonuc-kutu--basari">
             <h1>Оплата успешно завершена</h1>
             <p>Благодарим за оплату. Наши консультанты свяжутся с вами в ближайшее время.</p>
             <p>Если у вас возникнут вопросы, вы можете связаться с нами через страницу <a href="/iletisim/">Контакты</a>.</p>

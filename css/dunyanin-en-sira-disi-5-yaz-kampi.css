@@ -65,9 +65,8 @@
     text-align: center;
 }
 
-/* Hero başlık: style.css --h1-font-size */
-.blog-yazi-yaz-kampi-mag .yk-mag-hero h1,
-.blog-yazi-yaz-kampi-mag .yk-mag-hero .yk-mag-h1 {
+/* Hero başlık: style.css --h1-font-size (sınıfsız h1) */
+.blog-yazi-yaz-kampi-mag .yk-mag-hero h1 {
     font-family: "Poppins", sans-serif;
     font-weight: 700;
     font-size: var(--h1-font-size);
@@ -77,8 +76,7 @@
     letter-spacing: -0.02em;
 }
 
-.blog-yazi-yaz-kampi-mag .yk-mag-hero h1 .vurgu-renk,
-.blog-yazi-yaz-kampi-mag .yk-mag-hero .yk-mag-h1 .vurgu-renk {
+.blog-yazi-yaz-kampi-mag .yk-mag-hero h1 .vurgu-renk {
     color: #bd0505;
     font-size: inherit;
     display: block;
@@ -88,13 +86,11 @@
 }
 
 @media (max-width: 501px) {
-    .blog-yazi-yaz-kampi-mag .yk-mag-hero h1,
-    .blog-yazi-yaz-kampi-mag .yk-mag-hero .yk-mag-h1 {
+    .blog-yazi-yaz-kampi-mag .yk-mag-hero h1 {
         font-size: var(--h1-font-size) !important;
     }
 
-    .blog-yazi-yaz-kampi-mag .yk-mag-hero h1 .vurgu-renk,
-    .blog-yazi-yaz-kampi-mag .yk-mag-hero .yk-mag-h1 .vurgu-renk {
+    .blog-yazi-yaz-kampi-mag .yk-mag-hero h1 .vurgu-renk {
         font-size: inherit !important;
     }
 }

@@ -12,7 +12,7 @@ Bu blok, bircok sayfada tekrar eden standart yapidir:
 
 - Ustte `kirmizi-kutu`:
   - `p.ust-satir` (or: "Daha Fazla Bilgi ve Basvuru Icin")
-  - `p.alt-satir-lacivert` (or: "Hangi Programi Tercih Edersiniz?")
+  - `p.vurgu-satir` (or: "Hangi Programi Tercih Edersiniz?")
 - Altta program listesi:
   - `div.okul-liste-kapsayici > section.modern-okul-listesi`
   - Her satir: `div.premium-liste-kart` (+ gerekiyorsa `glass-stil`)

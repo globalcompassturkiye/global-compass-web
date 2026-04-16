@@ -30,8 +30,9 @@
     <link rel="stylesheet" href="/css/site-iletisim-form.css">
     <link rel="stylesheet" href="/css/site-yonlendirme-kart.css">
     <link rel="stylesheet" href="/css/blog.css">
+    <link rel="stylesheet" href="/css/sss.css">
 </head>
-<body class="sayfa-yurt-disi-yaz-okullari-uk-bournemouth-kings-education blog-yazi-sayfa-mobil-ux sayfa-yurt-disi-yaz-okullari">
+<body class="kings-bournemouth-yaz-okulu-sayfa blog-yazi-sayfa-mobil-ux sayfa-yurt-disi-yaz-okullari">
     <div class="sabit-ust-alan">
         <div class="ust-serit">
             <div class="ust-serit-kapsayici">
@@ -52,7 +53,7 @@
                 <div></div>
                 <div class="logo">
                     <a href="/">
-                        <img src="/img/global-compass-logo.webp" alt="Global Compass Logo" width="158" height="48" fetchpriority="high" decoding="sync">
+                        <img src="/img/global-compass-logo.webp" alt="Global Compass Logo" width="158" height="48" fetchpriority="high" decoding="async">
                     </a>
                 </div>
 
@@ -76,7 +77,7 @@
             </button>
             <nav class="navigasyon" id="nav-menu" aria-label="Ana menü">
                 <ul class="nav-list">
-                    <li class="nav-logo-item"><a href="/"><img src="/img/global-compass-logo.webp" alt="Global Compass Logo" width="158" height="48" fetchpriority="high" decoding="sync"></a></li>
+                    <li class="nav-logo-item"><a href="/"><img src="/img/global-compass-logo.webp" alt="Global Compass Logo" width="158" height="48" fetchpriority="high" decoding="async"></a></li>
 
                     <li><a href="/">Ana Sayfa</a></li>
                     <li class="has-dropdown">
@@ -168,7 +169,7 @@
     <article class="icerik-alani blog-yazi-detay">
         <nav class="site-haritasi-yolu" aria-label="Sayfa konumu">
             <ol class="breadcrumb-kutu breadcrumb-kutu--hiyerarsik">
-                <li class="breadcrumb-oge"><a href="/">Ana Sayfa</a></li>
+                <li class="breadcrumb-oge"><a href="/" class="ana-sayfa-ikon"><img src="/img/home-icon.png" alt="Ana Sayfa" width="22" height="22" loading="lazy" decoding="async"></a></li>
                 <li class="breadcrumb-oge breadcrumb-oge--ayrac" aria-hidden="true"><span class="ayrac">›</span></li>
                 <li class="breadcrumb-oge"><a href="/yurt-disi-yaz-okullari/">Yurt Dışı Yaz Okulları</a></li>
                 <li class="breadcrumb-oge breadcrumb-oge--ayrac" aria-hidden="true"><span class="ayrac">›</span></li>
@@ -188,14 +189,18 @@
             <span class="vurgu-renk">İngiltere'nin Sahil Şehrinde Prestijli Yaz Kampı</span>
         </h1>
 
-        <div id="kings-bournemouth-giris-metni">
-        <div class="cerceve-kutu">
-            <h2 class="kutu-baslik">12-17 Yaş Arası Öğrenciler İçin Programlar</h2>
-            <p>İngiltere’nin en sevilen sahil kasabalarından biri olan Bournemouth, Kings Education’ın akademik kalitesiyle birleşerek öğrencilere unutulmaz bir yaz deneyimi sunuyor. 12-17 yaş grubundaki gençler için tasarlanan Kings Bournemouth Yaz Okulu, güvenli bir kampüs ortamında, yoğun İngilizce eğitimi ile sosyal aktiviteleri mükemmel bir dengede buluşturuyor. İngiltere’nin “Altın Sahilleri”nde yer alan bu seçkin okul, öğrencilerin hem dil becerilerini geliştirmelerini hem de çok kültürlü bir ortamda özgüven kazanmalarını sağlıyor. Yaz döneminde, modern tesisleri ve sahile yürüme mesafesindeki konumuyla Kings Bournemouth, akademik gelişim ve eğlencenin en doğru adresidir.</p>
-        </div>
+        <p>12-17 Yaş Arası Öğrenciler İçin Programlar</p>
+
+        <div id="kings-bournemouth-kampus" class="okul-logo-alani kings-education-gorsel-kapsayici">
+            <img src="/img/kings-education-photo/kings-education-bournemouth.webp" alt="Kings Education Bournemouth Yaz Okulu Kampüs Görseli" class="kings-education-gorsel" fetchpriority="high" decoding="sync">
         </div>
 
-        <div class="blog-mobil-icindekiler-wrap kings-bournemouth-mobil-icindekiler-giris-alti">
+        <div id="kings-bournemouth-giris-metni" class="cerceve-kutu">
+            <h2 class="kutu-baslik">Kings Education Bournemouth Yaz Okulu</h2>
+            <p>İngiltere’nin en sevilen sahil kasabalarından biri olan Bournemouth, Kings Education’ın akademik kalitesiyle birleşerek öğrencilere unutulmaz bir yaz deneyimi sunuyor. 12-17 yaş grubundaki gençler için tasarlanan Kings Bournemouth Yaz Okulu, güvenli bir kampüs ortamında, yoğun İngilizce eğitimi ile sosyal aktiviteleri mükemmel bir dengede buluşturuyor. İngiltere’nin “Altın Sahilleri”nde yer alan bu seçkin okul, öğrencilerin hem dil becerilerini geliştirmelerini hem de çok kültürlü bir ortamda özgüven kazanmalarını sağlıyor. Yaz döneminde, modern tesisleri ve sahile yürüme mesafesindeki konumuyla Kings Bournemouth, akademik gelişim ve eğlencenin en doğru adresidir.</p>
+        </div>
+
+        <div class="blog-mobil-icindekiler-wrap london-mobil-icindekiler-giris-alti">
             <nav class="blog-mobil-icindekiler-duz" aria-labelledby="kings-bournemouth-mobil-icindekiler-baslik">
                 <p class="blog-mobil-icindekiler-duz-baslik" id="kings-bournemouth-mobil-icindekiler-baslik">İçindekiler</p>
                 <ul class="blog-icindekiler-liste blog-icindekiler-liste--mobil">
@@ -220,41 +225,41 @@
             </div>
         </div>
 
-        <div id="kings-bournemouth-kampus" class="okul-logo-alani kings-education-gorsel-kapsayici">
-            <img src="/img/kings-education-photo/kings-education-bournemouth.webp" alt="Kings Education Bournemouth Yaz Okulu Kampüs Görseli" class="kings-education-gorsel" fetchpriority="high" decoding="sync">
-        </div>
-
-        <div id="kings-bournemouth-program-detay" class="cerceve-kutu immerse-detay-kutu">
+        <div id="kings-bournemouth-program-detay" class="cerceve-kutu icerik-kutusu">
             <h2 class="kutu-baslik">Kings Bournemouth Program Detayları</h2>
 
-            <div class="immerse-detay-grid">
-                <div class="immerse-detay-kart">
-                    <h3>Konum</h3>
-                    <p>İngiltere, Bournemouth</p>
-                </div>
+            <div class="rozet-grid icerik-kutusu-grid yatay-2">
+                <article class="rozet-kart">
+                    <div class="rozet-ikon rozet-ikon-tick" aria-hidden="true">✓</div>
+                    <h3 class="rozet-baslik">Konum</h3>
+                    <p class="rozet-metin">İngiltere, Bournemouth</p>
+                </article>
 
-                <div class="immerse-detay-kart">
-                    <h3>Yaş Grupları</h3>
-                    <p>12 - 17 yaşlar arası öğrenciler</p>
-                </div>
+                <article class="rozet-kart">
+                    <div class="rozet-ikon rozet-ikon-tick" aria-hidden="true">✓</div>
+                    <h3 class="rozet-baslik">Yaş Grupları</h3>
+                    <p class="rozet-metin">12 - 17 yaşlar arası öğrenciler</p>
+                </article>
 
-                <div class="immerse-detay-kart">
-                    <h3>Başlangıç Tarihleri</h3>
+                <article class="rozet-kart">
+                    <div class="rozet-ikon rozet-ikon-tick" aria-hidden="true">✓</div>
+                    <h3 class="rozet-baslik">Başlangıç Tarihleri</h3>
                     <ul class="kutu-liste">
                         <li>14, 21, 28 Haziran 2026</li>
                         <li>5, 12, 19, 26 Temmuz 2026</li>
                         <li>2 ve 9 Ağustos 2026</li>
                     </ul>
-                </div>
+                </article>
 
-                <div class="immerse-detay-kart">
-                    <h3>Program Süresi</h3>
-                    <p>16 yaş altı: 1 - 3 hafta (en fazla 3 hafta)</p>
-                    <p>16 yaş ve üzeri: 1 – 4 hafta</p>
-                </div>
+                <article class="rozet-kart">
+                    <div class="rozet-ikon rozet-ikon-tick" aria-hidden="true">✓</div>
+                    <h3 class="rozet-baslik">Program Süresi</h3>
+                    <p class="rozet-metin">16 yaş altı: 1 - 3 hafta (en fazla 3 hafta)<br>16 yaş ve üzeri: 1 – 4 hafta</p>
+                </article>
 
-                <div class="immerse-detay-kart">
-                    <h3>Fiyata Dahil Olanlar</h3>
+                <article class="rozet-kart">
+                    <div class="rozet-ikon rozet-ikon-tick" aria-hidden="true">✓</div>
+                    <h3 class="rozet-baslik">Fiyata Dahil Olanlar</h3>
                     <ul class="kutu-liste">
                         <li>Haftada 15 saat İngilizce dersi</li>
                         <li>Her gün kahvaltı, öğle ve akşam yemeği</li>
@@ -269,10 +274,11 @@
                         <li>Haftalık çamaşır yıkama hizmeti</li>
                         <li>Kurs sonu sertifikası</li>
                     </ul>
-                </div>
+                </article>
 
-                <div class="immerse-detay-kart">
-                    <h3>Tesisler</h3>
+                <article class="rozet-kart">
+                    <div class="rozet-ikon rozet-ikon-tick" aria-hidden="true">✓</div>
+                    <h3 class="rozet-baslik">Tesisler</h3>
                     <ul class="kutu-liste">
                         <li>15 öğrencilik, iyi donanımlı sınıflar</li>
                         <li>Çok amaçlı spor sahası</li>
@@ -282,18 +288,22 @@
                         <li>Açık hava yemek alanları</li>
                         <li>WiFi erişimi</li>
                     </ul>
-                </div>
+                </article>
 
-                <div class="immerse-detay-kart">
-                    <h3>Konaklama</h3>
-                    <p>Öğrenci yurdu veya aile yanı konaklama seçenekleri mevcuttur.</p>
-                </div>
+                <article class="rozet-kart">
+                    <div class="rozet-ikon rozet-ikon-tick" aria-hidden="true">✓</div>
+                    <h3 class="rozet-baslik">Konaklama</h3>
+                    <p class="rozet-metin">Öğrenci yurdu veya aile yanı konaklama seçenekleri mevcuttur.</p>
+                </article>
 
-                <div class="immerse-detay-kart">
-                    <h3>Program Seçenekleri</h3>
-                    <p><strong>İngilizce Programı:</strong> Haftada 15 saat İngilizce dersi ve spor, aktivite ve geziler dahildir. Minimum dil seviyesi temel seviyedir ve yaş aralığı 12 – 17’dir.</p>
-                    <p><strong>Akademik Program:</strong> GCSE hazırlığı, haftada 15 saat akademik ders ve geziler dahildir. Minimum dil seviyesi IELTS 4.5 (test gereklidir) ve yaş aralığı 14 – 16’dır.</p>
-                </div>
+                <article class="rozet-kart">
+                    <div class="rozet-ikon rozet-ikon-tick" aria-hidden="true">✓</div>
+                    <h3 class="rozet-baslik">Program Seçenekleri</h3>
+                    <div class="rozet-govde">
+                        <p class="rozet-metin"><strong>İngilizce Programı:</strong> Haftada 15 saat İngilizce dersi ve spor, aktivite ve geziler dahildir. Minimum dil seviyesi temel seviyedir ve yaş aralığı 12 – 17’dir.</p>
+                        <p class="rozet-metin"><strong>Akademik Program:</strong> GCSE hazırlığı, haftada 15 saat akademik ders ve geziler dahildir. Minimum dil seviyesi IELTS 4.5 (test gereklidir) ve yaş aralığı 14 – 16’dır.</p>
+                    </div>
+                </article>
             </div>
         </div>
 
@@ -372,10 +382,11 @@
         </div>
 
         <section class="iletisim-form-alani" id="bilgi-istek" aria-labelledby="kings-bournemouth-bilgi-form-baslik">
-<div class="kirmizi-kutu bournemouth-form-bant">
-<h2 class="bilgi-form-bant-baslik" id="kings-bournemouth-bilgi-form-baslik"><span class="ust-satir">Daha Fazla Bilgi ve Başvuru İçin</span><span class="alt-satir-lacivert">Bilgi İstek Formu</span></h2>
-</div>
-            <p>Kings Education Bournemouth yaz okulu hakkında detaylı bilgi almak, tarih ve konaklama seçeneklerini öğrenmek için formu doldurmanız yeterli.</p>
+            <div class="hizmet-alanlari-baslik icerik-bilgi-form-bant">
+                <h2 id="kings-bournemouth-bilgi-form-baslik"><span>Daha Fazla Bilgi ve Başvuru İçin</span><span class="vurgu-satir">Bilgi İstek Formu</span></h2>
+            </div>
+            <div class="iletisim-form-beyaz-cerceve">
+<p>Kings Education Bournemouth yaz okulu hakkında detaylı bilgi almak, tarih ve konaklama seçeneklerini öğrenmek için formu doldurmanız yeterli.</p>
             <form action="#" method="POST" id="iletisim-formu">
                 <div class="form-satir">
                     <input type="text" name="ad" placeholder="Adınız" required>
@@ -407,11 +418,10 @@
                     <button type="submit" class="form-buton-kucuk">Gönder</button>
                 </div>
             </form>
+            </div>
         </section>
-
-        </div>
-
-        <aside class="blog-yan-panel" aria-label="İçindekiler ve hızlı iletişim">
+            </div>
+    <aside class="blog-yan-panel" aria-label="İçindekiler ve hızlı iletişim">
             <nav class="blog-icindekiler-kutu" aria-labelledby="kings-bournemouth-masaustu-icindekiler-baslik">
                 <p class="blog-icindekiler-baslik" id="kings-bournemouth-masaustu-icindekiler-baslik">İçindekiler</p>
                 <ul class="blog-icindekiler-liste">
@@ -439,7 +449,7 @@
         </div>
 
         <div class="okul-liste-kapsayici">
-            <h2 class="okul-liste-baslik yonlendirme-karti-baslik">İlgili<span class="vurgu-renk">Sayfalar</span></h2>
+            <h2>İlgili Sayfalar</h2>
             <section class="alt-yonlendirme-alani">
                 <div class="yonlendirme-karti">
                     <p>Ülke ve şehir seçenekleriyle tüm yurt dışı yaz okulu programlarına genel sayfamızdan ulaşabilirsiniz.</p>
@@ -475,8 +485,6 @@
         </div>
     </footer>
 
-    <script src="/js/nav-submenu.js" defer></script>
-    <script src="/js/iletisim-formu.js" defer></script>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -554,7 +562,10 @@
   ]
 }
     </script>
-    <script src="/js/header-offset.js" defer></script>
+
+<script src="/js/nav-submenu.js" defer></script>
+    <script src="/js/iletisim-formu.js" defer></script>
+<script src="/js/header-offset.js" defer></script>
 </body>
 </html>
 

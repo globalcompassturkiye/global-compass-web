@@ -174,7 +174,7 @@
             </div>
         </nav>
 
-        <h1 class="sayfa-ana-baslik">Hizmetlerimiz<br>
+        <h1>Hizmetlerimiz<br>
             <span class="vurgu-renk">Akademik Yolculuğunuzun Her Aşamasında Yanınızdayız</span>
         </h1>
 
@@ -221,12 +221,10 @@
 
         <section class="hizmetlerimiz-egitim-alanlari icerik-alani ana-hizmetler-bolumu" id="egitim-alanlari">
             <div class="dil-okullari-secim-paneli">
-                <div class="kirmizi-kutu">
-                    <h2 class="program-secim-hub-baslik">
-                        <span class="ust-satir">2026 Yurt Dışı Eğitim Programları ve Uzman Danışmanlık Hizmetlerimiz</span>
-                        <span class="alt-satir-lacivert">Hangi Alanda Destek İstersiniz?</span>
-                    </h2>
-                </div>
+            <h2>
+                <span>2026 Yurt Dışı Eğitim Programları ve Uzman Danışmanlık Hizmetlerimiz</span>
+                <span class="vurgu-satir">Hangi Alanda Destek İstersiniz?</span>
+            </h2>
 
                 <nav class="yaz-okullari-ulke-kart-wrap" aria-label="Yurt dışı eğitim programları">
                     <a href="/yurt-disi-lise/" class="yaz-okullari-ulke-kart">
@@ -280,11 +278,12 @@
             </div>
         </section>
 
-        <section class="iletisim-form-alani" id="bilgi-istek">
-<div class="kirmizi-kutu">
-<h2 class="bilgi-form-bant-baslik"><span class="ust-satir">Daha Fazla Bilgi ve Başvuru İçin</span><span class="alt-satir-lacivert">Bilgi İstek Formu</span></h2>
-</div>
-            <p>Hizmetlerimiz ve yurt dışı eğitim planınız hakkında sorularınız için formu doldurun; danışmanlarımız en kısa sürede sizinle iletişime geçsin.</p>
+        <section class="iletisim-form-alani" id="bilgi-istek" aria-labelledby="hizmetlerimiz-bilgi-form-baslik">
+            <div class="hizmet-alanlari-baslik icerik-bilgi-form-bant">
+                <h2 id="hizmetlerimiz-bilgi-form-baslik"><span>Daha Fazla Bilgi ve Başvuru İçin</span><span class="vurgu-satir">Bilgi İstek Formu</span></h2>
+            </div>
+            <div class="iletisim-form-beyaz-cerceve">
+<p>Hizmetlerimiz ve yurt dışı eğitim planınız hakkında sorularınız için formu doldurun; danışmanlarımız en kısa sürede sizinle iletişime geçsin.</p>
             <form action="#" method="POST" id="iletisim-formu">
                 <div class="form-satir">
                     <input type="text" name="ad" placeholder="Adınız" required>
@@ -316,6 +315,7 @@
                     <button type="submit" class="form-buton-kucuk">Gönder</button>
                 </div>
             </form>
+        </div>
         </section>
 
     </article>

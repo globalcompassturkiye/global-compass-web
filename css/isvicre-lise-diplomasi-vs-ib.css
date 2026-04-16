@@ -17,8 +17,8 @@ body.blog-yazi-isvicre-ib .blog-yazi-baslik-wrap .blog-yazi-meta-alt {
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8) inset;
 }
 
-/* H1: diğer blog yazılarıyla aynı — blog.css .blog-yazi-ana-baslik + .vurgu-renk */
-body.blog-yazi-isvicre-ib .blog-yazi-baslik-wrap .blog-yazi-ana-baslik {
+/* H1: diğer blog yazılarıyla aynı — blog.css .blog-yazi-baslik-wrap > h1 */
+body.blog-yazi-isvicre-ib .blog-yazi-baslik-wrap > h1 {
     font-family: "Poppins", system-ui, sans-serif;
 }
 

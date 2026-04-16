@@ -32,6 +32,7 @@
     min-width: 300px;
     background-color: #fff;
     border: 0 solid transparent;
+    border-radius: 15px;
     padding: 25px;
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     display: flex;
@@ -53,8 +54,7 @@
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08); 
 }
 
-/* .okul-liste-baslik: style.css — yalnızca .okul-liste-kapsayici içindeki başlık görünür (bilgi formu h2 ile uyumlu).
-   Yönlendirme kartı üstü: h2’ye .yonlendirme-karti-baslik — tek satır, rozet başlığı boyutu, span.vurgu-renk tek satırda (global h2 .vurgu-renk block satırını override eder). */
+/* Yönlendirme üst başlığı: style.css — .okul-liste-kapsayici:has(> .alt-yonlendirme-alani) > h2 (sınıfsız, siyah 700) */
 
 /* 501px altı: yönlendirme kartı taşmasın */
 @media (max-width: 501px) {

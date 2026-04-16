@@ -1,21 +1,37 @@
 (function () {
     var KUTU = '.immerse-tokyo-branches-kutu';
-    var GOVDE = '.immerse-tokyo-rozet-govde';
-    var METIN = '.immerse-tokyo-rozet-accordion-metin';
+    var GOVDE = '.rozet-govde';
+    var METIN = '.rozet-accordion-metin';
     var BTN = '.immerse-tokyo-devam-btn';
     var CLS_GEN = 'immerse-tokyo-rozet-genisletilebilir';
     var CLS_ACIK = 'is-expanded';
     var ORAN = 0.25;
     var MIN_ONIZLEME = 96;
     var KISA_ESIK = 40;
-    /* immerse-education.css: 640px altı tek sütun; üstü iki sütun */
+    /* Eski: 640px altı tek sütun; üstü iki sütun. Partner senkronu yalnızca gerçekten 2 sütun varken. */
     var IKI_SUTUN_MQ = '(min-width: 641px)';
 
     function ikiSutunLayout() {
         return window.matchMedia(IKI_SUTUN_MQ).matches;
     }
 
-    /** İki sütunlu gridde aynı satırdaki diğer kart (.immerse-tokyo-rozet-govde) */
+    /** Computed grid-template-columns: tam iki sütun mu (tek sütunda yan kart eşlemesi yok) */
+    function gridIsTwoColumn() {
+        var grid = document.querySelector(KUTU + ' .rozet-grid');
+        if (!grid) {
+            return false;
+        }
+        var raw = window.getComputedStyle(grid).gridTemplateColumns;
+        if (!raw || raw === 'none') {
+            return false;
+        }
+        var parts = raw.trim().split(/\s+/).filter(function (p) {
+            return p.length;
+        });
+        return parts.length === 2;
+    }
+
+    /** İki sütunlu gridde aynı satırdaki diğer kart (.rozet-govde) */
     function partnerGovde(govde) {
         var tumu = Array.prototype.slice.call(document.querySelectorAll(KUTU + ' ' + GOVDE));
         var i = tumu.indexOf(govde);
@@ -109,7 +125,7 @@
                 return;
             }
             var acik = !govde.classList.contains(CLS_ACIK);
-            if (ikiSutunLayout()) {
+            if (ikiSutunLayout() && gridIsTwoColumn()) {
                 var partner = partnerGovde(govde);
                 if (partner) {
                     measureGovde(govde, { expanded: acik });

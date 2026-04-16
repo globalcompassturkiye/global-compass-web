@@ -1,6 +1,6 @@
 (function () {
     var GRUP = '[data-kings-cambridge-sync="fce-cae"]';
-    var METIN = '.immerse-tokyo-rozet-accordion-metin';
+    var METIN = '.rozet-accordion-metin';
     var BTN = '.immerse-tokyo-devam-btn';
 
     function etiketleriAyarla(btn, acik) {

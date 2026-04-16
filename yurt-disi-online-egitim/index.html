@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="/css/site-breadcrumb.css">
     <link rel="stylesheet" href="/css/site-iletisim-form.css">
     <link rel="stylesheet" href="/css/site-yonlendirme-kart.css">
+    <link rel="stylesheet" href="/css/sss.css">
 </head>
 <body class="sayfa-yurt-disi-online-egitim">
     <div class="sabit-ust-alan">
@@ -170,7 +171,7 @@
                 <a href="/" class="ana-sayfa-ikon">
                     <img src="/img/home-icon.png" alt="Ana Sayfa" width="22" height="22" loading="lazy" decoding="async">
                 </a>
-                <span class="breadcrumb-ayrac">></span>
+                <span class="ayrac">›</span>
                 <span class="su-anki-sayfa">Yurt Dışı Online Eğitim</span>
             </div>
         </nav>
@@ -205,11 +206,12 @@
             </div>
         </div>
 
-        <section class="iletisim-form-alani" id="bilgi-istek">
-<div class="kirmizi-kutu">
-<h2 class="bilgi-form-bant-baslik"><span class="ust-satir">Daha Fazla Bilgi ve Başvuru İçin</span><span class="alt-satir-lacivert">Bilgi İstek Formu</span></h2>
-</div>
-            <p>Yurt dışı online eğitim ve sertifika programları hakkında detaylı bilgi almak, hedeflerinize uygun programları öğrenmek ve başvuru sürecinizi planlamak için formu doldurabilirsiniz.</p>
+        <section class="iletisim-form-alani" id="bilgi-istek" aria-labelledby="online-egitim-bilgi-form-baslik">
+            <div class="hizmet-alanlari-baslik icerik-bilgi-form-bant">
+                <h2 id="online-egitim-bilgi-form-baslik"><span>Daha Fazla Bilgi ve Başvuru İçin</span><span class="vurgu-satir">Bilgi İstek Formu</span></h2>
+            </div>
+            <div class="iletisim-form-beyaz-cerceve">
+<p>Yurt dışı online eğitim ve sertifika programları hakkında detaylı bilgi almak, hedeflerinize uygun programları öğrenmek ve başvuru sürecinizi planlamak için formu doldurabilirsiniz.</p>
             <form action="#" method="POST" id="iletisim-formu">
                 <div class="form-satir">
                     <input type="text" name="ad" placeholder="Adınız" required>
@@ -233,18 +235,20 @@
 
                 <div class="kvkk-satir">
                     <div class="kvkk-alani">
-                        <input type="checkbox" id="kvkk-onay-online" required>
-                        <label for="kvkk-onay-online">
+                        <input type="checkbox" id="kvkk-onay-online-egitim" required>
+                        <label for="kvkk-onay-online-egitim">
                             <a href="/kvkk-aydinlatma-metni/" class="kvkk-link">KVKK Aydınlatma Metnini</a> Okudum*
                         </label>
                     </div>
                     <button type="submit" class="form-buton-kucuk">Gönder</button>
                 </div>
             </form>
+            </div>
         </section>
 
+
         <div class="okul-liste-kapsayici">
-            <h2 class="okul-liste-baslik yonlendirme-karti-baslik">Yurt Dışı<span class="vurgu-renk">Yaz Okulları</span></h2>
+            <h2>Yurt Dışı Yaz Okulları</h2>
             <section class="alt-yonlendirme-alani">
                 <div class="yonlendirme-karti">
                     <p>Ülke ve şehir seçenekleriyle tüm yurt dışı yaz okulu programlarına genel sayfamızdan ulaşabilirsiniz.</p>

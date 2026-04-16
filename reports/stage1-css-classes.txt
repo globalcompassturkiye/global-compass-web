@@ -10,7 +10,7 @@ aktivite-doga-icerik
 aktivite-genel-icerik
 aktivite-kultur-icerik
 aktivite-teknoloji-icerik
-alan-en
+tab-icerik-alan-en
 alan-tr
 almanya-adim
 almanya-adim-icerik
@@ -333,15 +333,13 @@ immerse-tokyo-devam-kapa
 immerse-tokyo-giris-blok
 immerse-tokyo-giris-kategori-grid
 immerse-tokyo-giris-kategori-intro
-immerse-tokyo-giris-program-liste
 immerse-tokyo-konaklama-grid
 immerse-tokyo-ornek-program-figure
 immerse-tokyo-ornek-program-gorsel
 immerse-tokyo-ornek-program-kutu
-immerse-tokyo-rozet-accordion-metin
+rozet-accordion-metin
 immerse-tokyo-rozet-genisletilebilir
-immerse-tokyo-rozet-govde
-immerse-tokyo-rozet-liste
+rozet-govde
 immerse-yas-tabs-kutu
 incele-btn-minimal
 ingiltere-deneyim-kutu
@@ -692,7 +690,7 @@ okul-isim
 okul-isim-link
 okul-liste-baslik
 okul-liste-kapsayici
-okul-listesi-alt-satir-lacivert
+vurgu-satir
 okul-listesi-ayrac-dikey
 okul-listesi-btn-modern-incele
 okul-listesi-glass-stil
@@ -898,7 +896,7 @@ sportech-program-icerik
 sportech-program-kart-wrap
 sportech-program-kart-wrap-son
 sportech-program-paneli
-sss-alt-satir
+vurgu-satir
 submenu
 tab-aksiyon
 tab-ic-icerik
@@ -979,7 +977,7 @@ yas-alan-etiketleri
 yas-tab-basliklar
 yas-tab-etiket
 yas-tab-icerik
-yas-tab-icerikler
+tab-icerikler
 yas-tab-input
 yas-tabs-kapsayici
 yatili-kamp-grid

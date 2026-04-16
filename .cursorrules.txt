@@ -510,7 +510,7 @@ Her sayfada şu CSS dosyaları yüklenmelidir:
         <div class="yas-tab-basliklar">
             <label for="tab1" class="yas-tab-etiket">Tab 1</label>
         </div>
-        <div class="yas-tab-icerikler">
+        <div class="tab-icerikler">
             <div class="yas-tab-icerik tab1-icerik">İçerik</div>
         </div>
     </div>
@@ -709,7 +709,7 @@ Her sayfada şu CSS dosyaları yüklenmelidir:
 - `body.ana-sayfa` → Ana sayfa body class
 - `.ana-karsilama-alani` → Hero bölümü
 - `.karsilama-konteynir` → Hero içerik kapsayıcı
-- `.ana-marka-baslik` → Marka başlığı (lacivert)
+- Ana sayfa hero: sınıfsız `<h1>` (`.karsilama-icerik > h1`; tipografi `style.css`)
 - `.ana-sayfa-slogan` → Slogan metni
 - `.ana-p` → Hero açıklama metni (18px)
 - `.karsilama-aksiyon` → Buton grubu
@@ -757,7 +757,7 @@ Her sayfada şu CSS dosyaları yüklenmelidir:
 - `.immerse-yas-tabs-kutu` → Yaş grubu tab bileşeni
 - `.yas-tab-basliklar` → Tab başlıkları grid
 - `.yas-tab-etiket` → Tek tab etiketi
-- `.yas-tab-icerikler` → Tab içerik alanı
+- `.tab-icerikler` → Tab içerik alanı
 - `.yas-tab-icerik` → Tek tab içeriği
 
 ### Dil Okulu Sayfaları

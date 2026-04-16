@@ -12,7 +12,7 @@ aktivite-genel-icerik
 aktivite-kultur-icerik
 aktiviteler-tabs-kapsayici
 aktivite-teknoloji-icerik
-alan-en
+tab-icerik-alan-en
 alan-tr
 almanya-avantaj-gorsel
 almanya-avantaj-gorsel-kutu
@@ -358,15 +358,13 @@ immerse-tokyo-devam-kapa
 immerse-tokyo-giris-blok
 immerse-tokyo-giris-kategori-grid
 immerse-tokyo-giris-kategori-intro
-immerse-tokyo-giris-program-liste
 immerse-tokyo-konaklama-grid
 immerse-tokyo-ornek-program-figure
 immerse-tokyo-ornek-program-gorsel
 immerse-tokyo-ornek-program-kutu
-immerse-tokyo-rozet-accordion-metin
-immerse-tokyo-rozet-govde
+rozet-accordion-metin
+rozet-govde
 immerse-tokyo-rozet-ikon-iki-hane
-immerse-tokyo-rozet-liste
 immerse-yas-tabs-kutu
 ingiltere-deneyim-kutu
 ingiltere-neden-kutu
@@ -704,7 +702,7 @@ okul-gorsel-alani
 okul-isim-link
 okul-liste-baslik
 okul-liste-kapsayici
-okul-listesi-alt-satir-lacivert
+vurgu-satir
 okul-listesi-ayrac-dikey
 okul-listesi-btn-modern-incele
 okul-listesi-glass-stil
@@ -959,7 +957,7 @@ sportech-program-kart-wrap
 sportech-program-kart-wrap-son
 sportech-program-paneli
 sss-alani
-sss-alt-satir
+vurgu-satir
 sss-baslik
 sss-gri-kutu
 sss-icerik
@@ -982,7 +980,7 @@ tokyo-immerse-form-on-metin
 tokyo-immerse-kariyer-icerik
 tokyo-immerse-mobil-icindekiler-giris-alti
 tokyo-immerse-yas-tab-basliklar
-tokyo-immerse-yas-tab-icerikler
+tokyo-immerse-tab-icerikler
 tokyo-immerse-yas-tabs-kapsayici
 tokyo-secim-paneli
 toronto-akademik-programlar-kutu
@@ -1034,7 +1032,7 @@ yas-alan-etiketleri
 yas-tab-basliklar
 yas-tab-etiket
 yas-tab-icerik
-yas-tab-icerikler
+tab-icerikler
 yas-tab-input
 yas-tabs-kapsayici
 yatay-2

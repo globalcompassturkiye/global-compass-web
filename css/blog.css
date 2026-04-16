@@ -19,7 +19,9 @@
     margin-bottom: 2rem;
 }
 
-.blog-sayfa-baslik {
+/* Blog hub başlığı: sınıfsız h1 — .blog-hero (ana blog) ve .blog-kategori-ust (kategori) */
+.blog-hero h1,
+.blog-kategori-ust h1 {
     font-size: clamp(1.75rem, 4vw, 2.25rem);
     font-weight: 700;
     color: #1a2332;
@@ -490,11 +492,6 @@ body.sayfa-blog .blog-kart-gorsel-link {
     outline-offset: 3px;
 }
 
-.blog-yazi-baslik-wrap--meta-modern .blog-yazi-ana-baslik {
-    margin-top: 0;
-    margin-bottom: 0.65rem;
-}
-
 .blog-yazi-meta-alt {
     display: flex;
     flex-wrap: wrap;
@@ -533,7 +530,8 @@ body.sayfa-blog .blog-kart-gorsel-link {
     opacity: 0.85;
 }
 
-.blog-yazi-ana-baslik {
+/* Yazı detay: sınıfsız h1 — kapsayıcı .blog-yazi-baslik-wrap */
+.blog-yazi-baslik-wrap > h1 {
     font-size: var(--h1-font-size);
     font-weight: 700;
     color: #000080;
@@ -542,7 +540,7 @@ body.sayfa-blog .blog-kart-gorsel-link {
     text-align: center;
 }
 
-.blog-yazi-ana-baslik .vurgu-renk {
+.blog-yazi-baslik-wrap > h1 .vurgu-renk {
     color: #bd0505;
     display: block;
     margin-top: 0.35em;
@@ -550,12 +548,17 @@ body.sayfa-blog .blog-kart-gorsel-link {
     box-sizing: border-box;
 }
 
+.blog-yazi-baslik-wrap--meta-modern > h1 {
+    margin-top: 0;
+    margin-bottom: 0.65rem;
+}
+
 @media (max-width: 501px) {
-    .blog-yazi-ana-baslik {
+    .blog-yazi-baslik-wrap > h1 {
         font-size: var(--h1-font-size) !important;
     }
 
-    .blog-yazi-ana-baslik .vurgu-renk {
+    .blog-yazi-baslik-wrap > h1 .vurgu-renk {
         font-size: inherit !important;
     }
 }
@@ -609,7 +612,7 @@ body.sayfa-blog .blog-kart-gorsel-link {
 .blog-yazi-icerik h2 {
     font-size: 1.35rem;
     font-weight: 700;
-    color: #0f172a;
+    color: #000000;
     margin: 2rem 0 0.75rem;
     line-height: 1.35;
     scroll-margin-top: calc(var(--site-header-offset, 122px) + 0.5rem);
@@ -702,24 +705,28 @@ body.sayfa-blog .blog-kart-gorsel-link {
     padding: 1rem 1rem 1.1rem;
 }
 
-/* Gömülü bilgi istek formu — site-iletisim-form varsayılanı 16px; blog yazılarında 15px */
+/* Gömülü bilgi istek formu — başlık dışarıda; beyaz kutu blog köşe yarıçapı ile */
 .blog-yazi-icerik .iletisim-form-alani {
-    border-radius: var(--blog-cerceve-radius, 15px);
+    border-radius: 0;
     margin-left: 0;
     margin-right: 0;
     max-width: 100%;
     margin-top: 1.75rem;
 }
 
+.blog-yazi-icerik .iletisim-form-alani .iletisim-form-beyaz-cerceve {
+    border-radius: var(--blog-cerceve-radius, 15px);
+}
+
 @media (max-width: 768px) {
     .blog-yazi-icerik .iletisim-form-alani {
-        padding-left: 18px;
-        padding-right: 18px;
+        padding-left: 0;
+        padding-right: 0;
     }
 
-    .blog-yazi-icerik .iletisim-form-alani > .kirmizi-kutu:first-child {
-        margin-left: -18px;
-        margin-right: -18px;
+    .blog-yazi-icerik .iletisim-form-alani > .hizmet-alanlari-baslik:first-child {
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 

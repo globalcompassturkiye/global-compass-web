@@ -510,7 +510,7 @@ Her sayfada şu CSS dosyaları yüklenmelidir:
         <div class="yas-tab-basliklar">
             <label for="tab1" class="yas-tab-etiket">Tab 1</label>
         </div>
-        <div class="yas-tab-icerikler">
+        <div class="tab-icerikler">
             <div class="yas-tab-icerik tab1-icerik">İçerik</div>
         </div>
     </div>

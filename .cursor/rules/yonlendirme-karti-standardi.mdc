@@ -12,6 +12,7 @@ Bu projede bilgi formu altı veya sayfa sonu CTA alanlarında standart yapı `ok
 
 - Dış kapsayıcı: `div.okul-liste-kapsayici`
 - **Tek ana başlık (mavi bant):** `h2.okul-liste-baslik` — CTA’nın özeti burada (ör. «Toronto Yaz Okullarını Karşılaştırın», «Yurt Dışı Dil Okulları»).
+- `h2.okul-liste-baslik` mutlaka `div.okul-liste-kapsayici` içinde olmalı; kapsayıcı (çerçeve) dışına alınmamalı.
 - `section.alt-yonlendirme-alani` → `div.yonlendirme-karti`
 - Kart içinde **yalnızca**:
   - açıklama metni (`p`)

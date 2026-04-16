@@ -14,7 +14,7 @@ Referans: `/yurt-disi-yaz-okullari/japan/tokyo/immerse-education/` (branş kartl
 
 ## HTML kalıpları
 
-1. **Standart sıra** (Tokyo branş / tam aç-kapa): `div.immerse-tokyo-rozet-govde` → `div.immerse-tokyo-rozet-accordion-metin` (içerik) → `button.immerse-tokyo-devam-btn` (metin **altında**; açıkken "Daha az göster" da butonda). İç span: `immerse-tokyo-devam-ac` / `immerse-tokyo-devam-kapa`.
+1. **Standart sıra** (Tokyo branş / tam aç-kapa): `div.rozet-govde` → `div.rozet-accordion-metin` (içerik) → `button.immerse-tokyo-devam-btn` (metin **altında**; açıkken "Daha az göster" da butonda). İç span: `immerse-tokyo-devam-ac` / `immerse-tokyo-devam-kapa`.
 2. **Önizleme (~%25)**: `immerse-tokyo-branches-readmore.js` + `.immerse-tokyo-branches-kutu` (Tokyo).
 3. **İkili senkron** (Kings FCE/CAE): `data-kings-cambridge-sync` + `/js/kings-cambridge-devam-sync.js`.
 

@@ -69,6 +69,9 @@ body {
     --site-kart-kenar: #e2e8f0;
     --site-kart-golge: 0 4px 6px -1px rgba(15, 23, 42, 0.06), 0 10px 28px -8px rgba(15, 23, 42, 0.08);
     --site-kart-golge-hover: 0 8px 14px -4px rgba(15, 23, 42, 0.1), 0 20px 44px -14px rgba(15, 23, 42, 0.14);
+    /* Yaz okulları tema vurgusu (destinasyon listeleri vb.) */
+    --yaz-vurgu: #0d9488;
+    --yaz-vurgu-acik: rgba(13, 148, 136, 0.1);
 }
 
 strong {
@@ -238,32 +241,162 @@ p {
 /* =========================================
     3. GRI ÇERÇEVE KUTU VE LİSTELER
    ========================================= */
-.cerceve-kutu {
+/* Site gri çerçeve: beyaz dolgu + site kenarı + gölge. Gri tonlu arka plan çerçeve rolünde kullanılmaz. */
+.cerceve-kutu,
+.site-gri-cerceve-kutu {
     max-width: 1200px;
     margin: 45px auto 0 auto;
     border: 1px solid var(--site-kart-kenar);
     border-radius: 15px;
     padding: 1.25rem 25px 15px 25px;
     position: relative;
-    background-color: #ffffff;
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    background-image: none !important;
     box-shadow: var(--site-kart-golge);
 }
 
+/* Ortak çerçeve kutusu içindeki alt kartlar da düz beyaz yüzey kullanır */
+.site-gri-cerceve-kutu .rozet-kart,
+.site-gri-cerceve-kutu .italy-program-kart,
+.site-gri-cerceve-kutu .italy-sosyal-madde,
+.site-gri-cerceve-kutu .italy-destinasyon-madde,
+.site-gri-cerceve-kutu .canada-program-sehir-kart {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    background-image: none !important;
+    border-radius: 15px !important;
+}
+
 /* Başlığında <br> olan gri kutular (iki satırlı h2; .baslik-iki-satir ayrı blokta) */
-.cerceve-kutu:has(h2:is(.gri-cerceve-baslik, .sayfa-bolum-basligi) br):not(.baslik-iki-satir) {
+.cerceve-kutu:has(h2:is(.gri-cerceve-baslik, .sayfa-bolum-basligi) br):not(.baslik-iki-satir),
+.site-gri-cerceve-kutu:has(h2:is(.gri-cerceve-baslik, .sayfa-bolum-basligi) br):not(.baslik-iki-satir) {
     margin-top: 45px;
     padding-top: 1.25rem;
 }
 
 /* Yaz okulları kamp sayfaları: .baslik-iki-satir + iki satırlı h2 (Aşama 4 — tek kaynak) */
-.cerceve-kutu.baslik-iki-satir {
+.cerceve-kutu.baslik-iki-satir,
+.site-gri-cerceve-kutu.baslik-iki-satir {
     margin-top: 45px;
     padding-top: 1.25rem;
 }
 /* İki satırlı başlıkta da alt boşluk yalnızca h2 margin-bottom: 25px (padding ile çiftleme yok) */
 .cerceve-kutu.baslik-iki-satir .gri-cerceve-baslik + *,
-.cerceve-kutu.baslik-iki-satir .sayfa-bolum-basligi + * {
+.cerceve-kutu.baslik-iki-satir .sayfa-bolum-basligi + *,
+.site-gri-cerceve-kutu.baslik-iki-satir .gri-cerceve-baslik + *,
+.site-gri-cerceve-kutu.baslik-iki-satir .sayfa-bolum-basligi + * {
     padding-top: 0;
+}
+
+/* Ödeme sonuç (payment-ok / payment-failed): gri çerçeve = site kart kenarı + gölge */
+.odeme-sonuc-kapsayici {
+    max-width: 800px;
+    margin: 40px auto 60px auto;
+    text-align: center;
+}
+
+.odeme-sonuc-kutu {
+    border: 1px solid var(--site-kart-kenar);
+    border-radius: 15px;
+    padding: 40px 25px 30px;
+    background: #ffffff;
+    box-shadow: var(--site-kart-golge);
+}
+
+.odeme-sonuc-kutu--hata {
+    border-color: #fecaca;
+    background: #fef2f2;
+    box-shadow: 0 10px 25px rgba(185, 28, 28, 0.08);
+}
+
+.odeme-sonuc-kutu h1 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.odeme-sonuc-kutu--basari h1 {
+    color: #065f46;
+}
+
+.odeme-sonuc-kutu--hata h1 {
+    color: #b91c1c;
+}
+
+.odeme-sonuc-kutu p {
+    font-size: 14px;
+    color: #4b5563;
+    margin-bottom: 16px;
+}
+
+.odeme-sonuc-kutu--hata p {
+    color: #7f1d1d;
+}
+
+.odeme-sonuc-kutu .buton-alani {
+    margin-top: 10px;
+}
+
+.odeme-sonuc-buton {
+    display: inline-block;
+    background-color: #000080;
+    color: #ffffff;
+    padding: 12px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.odeme-sonuc-buton:hover {
+    background-color: #bd0505;
+    transform: translateY(-1px);
+}
+
+body.odeme-durum-sayfa .sabit-ust-alan .ust-menu {
+    background: #fff;
+    border-bottom: 1px solid var(--site-kart-kenar);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+body.odeme-durum-sayfa .sabit-ust-alan .ust-alan {
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+}
+
+body.odeme-durum-sayfa .sosyal-medya-alani {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+body.odeme-durum-sayfa .sosyal-medya-alani img {
+    display: block;
+}
+
+body.odeme-durum-sayfa .sosyal-medya-alani a {
+    transition: transform 0.3s ease;
+    background: none;
+}
+
+/* SSS / akordeon: sol lacivert çizgi + kırmızı uyarı paragrafı */
+.icerik-blok-sol-lacivert-cizgi {
+    margin-top: 15px;
+    padding-left: 15px;
+    border-left: 3px solid #000080;
+}
+
+.icerik-paragraf-onemli-kirmizi {
+    color: #e30613;
+    font-weight: 800;
+    margin-top: 10px !important;
 }
 
 /* =========================================
@@ -309,96 +442,6 @@ body.kings-oxford-sayfa .kings-oxford-foto {
 }
 
 
-.kings-oxford-beceri-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    background: #ffffff;
-    padding: 0;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    column-gap: 25px;
-    row-gap: 50px;        /* kartların kendi aralarındaki dikey boşluk */
-    margin-top: 50px;     /* kırmızı bant ile ilk sıra arası 50px */
-}
-
-/* Geniş ekranlarda (masaüstü) her zaman 3 sütun göster */
-@media (min-width: 1024px) {
-    .kings-oxford-beceri-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-.kings-oxford-beceri-kutu {
-    margin: 0;
-    padding-top: 25px;
-    border-color: #dddddd;
-}
-
-/* 3+3 kartlarda başlık etiketi ile metin (liste) arasında 25px boşluk */
-.kings-oxford-beceri-kutu .kutu-liste {
-    margin-top: 25px !important;
-}
-
-/* 501px altı: beceri kartları arasında dikey boşluk 50px olsun */
-@media (max-width: 501px) {
-    .kings-oxford-beceri-grid,
-    .kings-oxford-beceri-ozet-grid {
-        row-gap: 50px;
-    }
-
-    /* 501px altı: 3+3 içindeki gri kutular genel 45px margin almasın,
-       toplam boşluk sadece row-gap 50px olsun */
-    .kings-oxford-beceri-grid .cerceve-kutu,
-    .kings-oxford-beceri-ozet-grid .cerceve-kutu {
-        margin-top: 0 !important;
-        margin-bottom: 0 !important;
-    }
-
-    /* 501px altı: metnin (liste) başlık altındaki boşluğu toplam 25px olsun */
-    .kings-oxford-beceri-kutu .kutu-liste {
-        margin-top: 0 !important;
-    }
-}
-
-/* Beceri grid içindeki gri kutular, genel 45px üst margin almasın */
-.kings-oxford-beceri-grid .cerceve-kutu {
-    margin-top: 0;
-}
-
-.kings-oxford-beceri-baslik {
-    background: #000080;
-    font-size: 14px;
-    text-transform: uppercase;
-}
-
-/* Boston Kings – beceri bloğu: masaüstünde 1200px, yan padding 0 */
-/* Boston Kings – beceri bloğu: genel icerik-alani padding'ini kullan */
-.kings-oxford-beceri-ozet-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    background: #ffffff;
-    padding: 0;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    column-gap: 25px;
-    row-gap: 50px;        /* alt 3'lünün iç dikey boşluğu */
-    margin-top: 50px;     /* üst 3'lü ile alt 3'lü arası 50px */
-}
-
-.kings-oxford-beceri-ozet-kutu {
-    margin: 0;
-    padding-top: 45px;
-    border-color: #dddddd;
-}
-
-.kings-oxford-vurgu {
-    display: block;
-    color: #000080;
-    margin-bottom: 2px;
-}
-
 body.kings-oxford-sayfa .kings-oxford-kurs-detay-bolumu {
     margin-top: 0; /* Boston Kings ile aynı: dikey boşlukları sadece .cerceve-kutu yönetir */
 }
@@ -438,53 +481,26 @@ body.kings-oxford-sayfa .kings-oxford-akreditasyon-metin {
    .kutu-baslik: gri çerçeve içi bölüm başlığı — style.css .kutu-baslik (Kings sayfa özel sınıfları hariç tutulur).
    ======================================================================== */
 
-h2.sayfa-bolum-basligi,
-h2.gri-cerceve-baslik {
-    position: static;
-    top: auto;
-    left: auto;
-    transform: none;
-    width: auto;
-    max-width: none;
-    background: none;
-    background-color: transparent;
-    color: var(--sayfa-bolum-baslik-renk);
-    box-shadow: none;
-    padding: 0;
-    margin: 2rem 0 25px 0;
-    font-size: var(--sayfa-bolum-baslik-font-size);
-    font-weight: 700;
-    font-family: "Poppins", sans-serif;
-    line-height: 1.35;
-    white-space: normal;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    text-transform: none !important;
-    text-align: left;
-    scroll-margin-top: calc(var(--site-header-offset, 122px) + 0.5rem);
-}
-
-.cerceve-kutu > h2.gri-cerceve-baslik:first-child {
-    margin-top: 0;
-}
-
-/* Başlık altı toplam 25px: yalnızca h2 margin-bottom; izleyen blok üst margin birikimi yok */
-h2.sayfa-bolum-basligi + *,
-h2.gri-cerceve-baslik + * {
-    margin-top: 0;
-}
-
-/* .kutu-baslik: gri çerçeve başlıklarıyla aynı mantık (üst margin birikimi yok; alt boşluk .kutu-baslik’ten) */
-h2.kutu-baslik + *,
-h3.kutu-baslik + * {
-    margin-top: 0 !important;
-}
+/* h2 özel varyantları kaldırıldı: tek tip h2 standardı dosya sonunda */
 
 h2.sayfa-bolum-basligi.sss-baslik,
 h2.gri-cerceve-baslik.sss-baslik {
     display: block;
     line-height: 1.35;
     padding: 0;
+}
+
+/* Site geneli: .vurgu-satir her zaman önceki içeriğin alt satırında (blok; flex satırında tam genişlik + kırılım)
+ * Renk: h2’ye verilen siyah (#000) mirasını kesmek için tek kaynak kırmızı (#bd0505) */
+.vurgu-satir {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    flex-basis: 100%;
+    min-width: 0;
+    align-self: stretch;
+    color: #bd0505;
 }
 
 /* h2 başlık içi vurgu / SSS alt etiketi */
@@ -649,71 +665,6 @@ h2 .sss-alt-satir {
     line-height: 1.65;
 }
 
-/* Toronto Immerse – Neler Var? dikey zaman çizelgesi tasarımı */
-.toronto-neler-kutu .toronto-neler-zaman-cizelgesi {
-    position: relative;
-    margin-top: 20px;
-    padding-left: 26px;
-}
-
-.toronto-neler-kutu .toronto-neler-zaman-cizelgesi::before {
-    content: "";
-    position: absolute;
-    left: 10px;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: linear-gradient(to bottom, #000080, #38bdf8);
-    opacity: 0.5;
-}
-
-.toronto-neler-adim {
-    position: relative;
-    padding-left: 18px;
-    padding-bottom: 18px;
-}
-
-.toronto-neler-adim:last-child {
-    padding-bottom: 0;
-}
-
-.toronto-neler-adim::before {
-    content: "";
-    position: absolute;
-    left: -8px;
-    top: 4px;
-    width: 14px;
-    height: 14px;
-    background: #ffffff;
-    border: 3px solid #000080;
-    box-shadow: 0 0 0 3px rgba(129, 140, 248, 0.25);
-}
-
-.toronto-neler-baslik {
-    font-size: 15.5px;
-    font-weight: 700;
-    color: #000080;
-    margin: 0 0 6px 0;
-}
-
-.toronto-neler-aciklama {
-    font-size: 14.5px;
-    color: #444444;
-    margin: 0;
-    line-height: 1.7;
-}
-
-@media (max-width: 640px) {
-    .toronto-neler-kutu .toronto-neler-zaman-cizelgesi {
-        padding-left: 20px;
-    }
-    .toronto-neler-adim {
-        padding-left: 14px;
-        padding-bottom: 16px;
-    }
-}
-
-
 /* İtalya yaz okulları – vizyoner avantaj kartları */
 .italy-avantaj-kutu .italy-avantaj-grid {
     display: grid;
@@ -785,8 +736,11 @@ h2 .sss-alt-satir {
 .italy-destinasyon-madde {
     position: relative;
     padding: 14px 16px 12px 56px;
-    background: linear-gradient(135deg, #ffffff 0%, #ffffff 60%, #eff6ff 100%);
+    background: #ffffff !important;
+    background-image: none !important;
     border: 0 solid transparent;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
 }
 
 .italy-destinasyon-madde::before {
@@ -802,6 +756,7 @@ h2 .sss-alt-satir {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 50%;
     font-size: 14px;
     font-weight: 700;
 }
@@ -1689,12 +1644,14 @@ article.icerik-alani .icerik-vurgu-kutu p {
 }
 
 /* Yurt dışı üniversite sayfasında 3 rozet: daha dengeli görünüm için alt alta */
-.cerceve-kutu .rozet-grid:has(>.rozet-kart:nth-child(3)) {
+.cerceve-kutu .rozet-grid:has(>.rozet-kart:nth-child(3)),
+.site-gri-cerceve-kutu .rozet-grid:has(>.rozet-kart:nth-child(3)) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 @media (max-width: 640px) {
-    .cerceve-kutu .rozet-grid:has(>.rozet-kart:nth-child(3)) {
+    .cerceve-kutu .rozet-grid:has(>.rozet-kart:nth-child(3)),
+    .site-gri-cerceve-kutu .rozet-grid:has(>.rozet-kart:nth-child(3)) {
         grid-template-columns: 1fr;
     }
 
@@ -1777,6 +1734,15 @@ article.icerik-alani .icerik-vurgu-kutu p {
     font-weight: 700;
     color: #111827;
     margin: 0;
+}
+
+/* Ortak kart iç başlık standardı (program/destinasyon/sosyal kartları) */
+.ortak-kart-baslik {
+    margin: 0 0 8px 0;
+    font-size: 15px;
+    line-height: 1.4;
+    font-weight: 700;
+    color: #111827;
 }
 
 .rozet-metin {
@@ -2036,72 +2002,7 @@ article.icerik-alani .icerik-vurgu-kutu p {
     transition: all 0.3s ease;
 }
 
-.okul-liste-baslik {
-    display: none !important;
-}
-
-/* Doğrudan çocuk şart değil; display için !important (.okul-liste-baslik gizli kalmasın) */
-.okul-liste-kapsayici .okul-liste-baslik {
-    display: flex !important;
-    flex-direction: column;
-    align-items: center;
-    /* İki satır arası: gap + .vurgu-renk margin kapalı */
-    gap: 10px;
-    margin: 25px 0 !important;
-    padding: 0;
-    font-family: "Poppins", sans-serif;
-    /* Yalnızca bu h2: liste satırı (.okul-isim-link) değil; gri çerçeve h2’sinden belirgin */
-    font-size: clamp(26px, 2.6vw + 16px, 36px) !important;
-    font-weight: 700;
-    /* İki satır: 1. satır lacivert; 2. satır h2 .vurgu-renk ile kırmızı */
-    color: #000080 !important;
-    letter-spacing: -0.02em;
-    line-height: 1.2;
-    text-align: center !important;
-}
-
-/* Global h2 .vurgu-renk (margin: 0.3em) tamamen kapat; satır arası yalnızca üstteki gap */
-.okul-liste-kapsayici .okul-liste-baslik .vurgu-renk {
-    color: #bd0505 !important;
-    text-align: center !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    font-size: inherit !important;
-    font-weight: inherit !important;
-    line-height: inherit !important;
-}
-
-/* Yönlendirme kartı (alt-yonlendirme-alani) üstündeki h2: tek satır, sola dayalı; 19px başlık.
-   Global h2 .vurgu-renk { display:block; width:100% } iki satıra böler; burada inline + inherit renkle tek satır başlık. */
-.okul-liste-kapsayici .okul-liste-baslik.yonlendirme-karti-baslik {
-    flex-direction: row !important;
-    flex-wrap: nowrap;
-    align-items: baseline !important;
-    justify-content: flex-start;
-    text-align: left !important;
-    gap: 0.25em;
-    font-size: 19px !important;
-    line-height: 1.4 !important;
-    letter-spacing: 0 !important;
-    font-weight: 700 !important;
-    margin: 16px 0 12px 0 !important;
-    color: #111827 !important;
-    text-transform: none !important;
-    white-space: nowrap;
-}
-
-.okul-liste-kapsayici .okul-liste-baslik.yonlendirme-karti-baslik .vurgu-renk {
-    display: inline !important;
-    width: auto !important;
-    max-width: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    text-align: left !important;
-    font-size: inherit !important;
-    font-weight: inherit !important;
-    line-height: inherit !important;
-    color: inherit !important;
-}
+/* okul-liste-baslik özel varyantları kaldırıldı: tek tip h2 standardı dosya sonunda */
 
 @media (max-width: 480px) {
     .okul-liste-kapsayici .okul-liste-baslik.yonlendirme-karti-baslik {
@@ -2500,7 +2401,8 @@ article.icerik-alani .icerik-vurgu-kutu p {
     }
 
     /* Gri Kutu Taşma ve Boşluk Ayarı (genel) */
-    .cerceve-kutu {
+    .cerceve-kutu,
+    .site-gri-cerceve-kutu {
         /* 768px altında da sol/sağ boşluğu parent (icerik-alani) padding'inden
            üretilsin. Böylece breakpoint'ler arası boşluk farkı oluşmaz. */
         margin: 45px 0 0 0;
@@ -2509,7 +2411,8 @@ article.icerik-alani .icerik-vurgu-kutu p {
     }
 
     /* Başlığında <br> olan gri kutular (tümü; .baslik-iki-satir dahil) */
-    .cerceve-kutu:has(h2:is(.gri-cerceve-baslik, .sayfa-bolum-basligi) br) {
+    .cerceve-kutu:has(h2:is(.gri-cerceve-baslik, .sayfa-bolum-basligi) br),
+    .site-gri-cerceve-kutu:has(h2:is(.gri-cerceve-baslik, .sayfa-bolum-basligi) br) {
         margin-top: 45px !important;
         padding-top: 1.25rem !important;
     }
@@ -2565,6 +2468,7 @@ article.icerik-alani .icerik-vurgu-kutu p {
 
     /* 1200px altı: dış frame'ler + hero'lar 25px gutter'ı bozmasın */
     .icerik-alani .cerceve-kutu,
+    .icerik-alani .site-gri-cerceve-kutu,
     .icerik-alani .kirmizi-kutu,
     .icerik-alani .hizmet-tab-alani,
     .icerik-alani .yonlendirme-karti,
@@ -2598,6 +2502,7 @@ article.icerik-alani .icerik-vurgu-kutu p {
 
     /* İçteki çerçeve kutular: container içinde tam otursun (ekstra margin yok) */
     .cerceve-kutu,
+    .site-gri-cerceve-kutu,
     .hizmet-tab-alani,
     .kirmizi-kutu,
     .yonlendirme-karti {
@@ -2606,30 +2511,6 @@ article.icerik-alani .icerik-vurgu-kutu p {
         width: 100% !important;
     }
 
-
-    /* Oxford & Boston Kings – 3'lü beceri kartları da
-       diğer gri çerçevelerle aynı genişlikte olsun */
-    .kings-oxford-beceri-grid {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-    }
-
-    .kings-oxford-beceri-kutu {
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        width: 100% !important;
-    }
-
-    .kings-oxford-beceri-ozet-grid {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-    }
-
-    .kings-oxford-beceri-ozet-kutu {
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        width: 100% !important;
-    }
 
     /* 501px altı: h1 ve h2 dışındaki tüm metinlerin font-size'ını 15px yap */
     body *:not(h1):not(h2) {
@@ -2658,24 +2539,7 @@ article.icerik-alani .icerik-vurgu-kutu p {
 /* 1. Ana Konteynır - 1200px Standart */
 
 /* Gri çerçeve / içerik blokları: h2 ve h3.kutu-baslik — tek kaynak (yüzen beyaz şerit yok) */
-.kutu-baslik {
-    position: static;
-    top: auto;
-    left: auto;
-    transform: none;
-    background: transparent;
-    background-color: transparent;
-    padding: 0;
-    margin: 0 0 25px 0;
-    color: #000000;
-    text-align: left;
-    box-shadow: none;
-    font-family: "Poppins", sans-serif;
-    font-size: clamp(1.15rem, 2.2vw, 1.35rem);
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    line-height: 1.35;
-}
+/* .kutu-baslik özel boyutu kaldırıldı: tek tip h2 standardı dosya sonunda */
 
 /* .vurgu-renk / .sss-alt-satir: h2/h3 başlıklarda vurgu kırmızı */
 h2.kutu-baslik .vurgu-renk,
@@ -2694,19 +2558,25 @@ h3.kutu-baslik .vurgu-renk {
  * Sayfa özel aralık: daha spesifik seçici ile margin-top / padding-top geçersiz kılınır (ör. japan.css).
  */
 article.icerik-alani .cerceve-kutu > h2.kutu-baslik + p:has(+ .rozet-grid),
-article.icerik-alani .cerceve-kutu > h3.kutu-baslik + p:has(+ .rozet-grid) {
+article.icerik-alani .cerceve-kutu > h3.kutu-baslik + p:has(+ .rozet-grid),
+article.icerik-alani .site-gri-cerceve-kutu > h2.kutu-baslik + p:has(+ .rozet-grid),
+article.icerik-alani .site-gri-cerceve-kutu > h3.kutu-baslik + p:has(+ .rozet-grid) {
     margin-bottom: 0;
     /* body line-height: 2 kalıtımı ilk satırda fazla “boşluk” yaratır; içerik standardı 1.7 */
     line-height: 1.7;
 }
 
 article.icerik-alani .cerceve-kutu > h2.kutu-baslik + p:has(+ .rozet-grid) + .rozet-grid,
-article.icerik-alani .cerceve-kutu > h3.kutu-baslik + p:has(+ .rozet-grid) + .rozet-grid {
+article.icerik-alani .cerceve-kutu > h3.kutu-baslik + p:has(+ .rozet-grid) + .rozet-grid,
+article.icerik-alani .site-gri-cerceve-kutu > h2.kutu-baslik + p:has(+ .rozet-grid) + .rozet-grid,
+article.icerik-alani .site-gri-cerceve-kutu > h3.kutu-baslik + p:has(+ .rozet-grid) + .rozet-grid {
     margin-top: 15px;
 }
 
 article.icerik-alani .cerceve-kutu > h2.kutu-baslik + p + .rozet-grid > .rozet-kart,
-article.icerik-alani .cerceve-kutu > h3.kutu-baslik + p + .rozet-grid > .rozet-kart {
+article.icerik-alani .cerceve-kutu > h3.kutu-baslik + p + .rozet-grid > .rozet-kart,
+article.icerik-alani .site-gri-cerceve-kutu > h2.kutu-baslik + p + .rozet-grid > .rozet-kart,
+article.icerik-alani .site-gri-cerceve-kutu > h3.kutu-baslik + p + .rozet-grid > .rozet-kart {
     padding-top: 12px;
 }
 
@@ -3427,7 +3297,7 @@ article.icerik-alani .okul-listesi-program-secim-hub-baslik .okul-listesi-alt-sa
 
 /* Yönlendirme kartı: /css/site-yonlendirme-kart.css (yalnızca .yonlendirme-karti / .alt-yonlendirme-alani olan sayfalar) */
 
-/* BAKIM NOTU: modern okul listesi — §9; yaz program bandı — yurt-disi-yaz-okullari.css; Londra satır renkleri — london.css + yurt-disi-yaz-okullari.css */
+/* BAKIM NOTU: modern okul listesi — §9; yaz program bandı / Londra satır renkleri — style.css (birleşik yaz blokları) + london.css */
 
 /* Çerçeve kenarları: içerik kutularında varsayılan çerçeve kalınlığı 0px (gölge/spacing korunur). Üst menü: site-ustmenu.css */
 
@@ -3762,6 +3632,7 @@ body.ana-sayfa .ana-sayfa-blog-ozeti-wrap {
     line-height: 1.25;
     margin: 0;
     letter-spacing: -0.02em;
+    text-align: center !important;
 }
 
 .ana-sayfa-blog-ozeti-kirmizi-bant .ana-sayfa-blog-ozeti-baslik {
@@ -4377,7 +4248,8 @@ input:checked + .ana-tab-etiket {
 }
 
 /* Kanada avantajlar: masaustunde 3+1 (son kart ortali) */
-.cerceve-kutu .canada-avantaj-grid-3-1 {
+.cerceve-kutu .canada-avantaj-grid-3-1,
+.site-gri-cerceve-kutu .canada-avantaj-grid-3-1 {
     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
     gap: 14px;
 }
@@ -4386,6 +4258,14 @@ input:checked + .ana-tab-etiket {
     grid-column: 1 / -1;
     justify-self: center;
     width: min(100%, calc((100% - 28px) / 3));
+}
+
+.site-gri-cerceve-kutu.kanada-avantaj-kutu .rozet-kart {
+    background: #ffffff !important;
+    background-image: none !important;
+    border: 0 solid transparent !important;
+    border-radius: 15px !important;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06) !important;
 }
 
 /* Kanada program sehirleri: 3 cerceve yanyana */
@@ -4398,10 +4278,11 @@ input:checked + .ana-tab-etiket {
 
 .canada-program-sehir-kart {
     padding: 14px 16px;
-    border: 1px solid #ccfbf1;
-    border-radius: 10px;
-    background: linear-gradient(180deg, #f0fdfa 0%, #ffffff 100%);
-    box-shadow: 0 4px 12px rgba(13, 148, 136, 0.06);
+    border: 1px solid var(--site-kart-kenar);
+    border-radius: 15px;
+    background: #ffffff !important;
+    background-image: none !important;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
 }
 
 .canada-program-sehir-kart h3 {
@@ -4420,7 +4301,8 @@ input:checked + .ana-tab-etiket {
 }
 
 @media (max-width: 992px) {
-    .cerceve-kutu .canada-avantaj-grid-3-1 {
+    .cerceve-kutu .canada-avantaj-grid-3-1,
+    .site-gri-cerceve-kutu .canada-avantaj-grid-3-1 {
         grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     }
     .canada-avantaj-grid-3-1 > .rozet-kart:nth-child(4) {
@@ -4434,7 +4316,8 @@ input:checked + .ana-tab-etiket {
 }
 
 @media (max-width: 768px) {
-    .cerceve-kutu .canada-avantaj-grid-3-1 {
+    .cerceve-kutu .canada-avantaj-grid-3-1,
+    .site-gri-cerceve-kutu .canada-avantaj-grid-3-1 {
         grid-template-columns: 1fr !important;
     }
     .canada-avantaj-grid-3-1 > .rozet-kart:nth-child(4) {
@@ -5340,7 +5223,8 @@ body.sayfa-chantemerle .immerse-detay-kutu .chantemerle-detay-grid-3lu .immerse-
 }
 
 /* Almanya avantajlar: masaustunde 3+2, altta 2 kart ortali */
-.cerceve-kutu .almanya-avantaj-grid-3-2 {
+.cerceve-kutu .almanya-avantaj-grid-3-2,
+.site-gri-cerceve-kutu .almanya-avantaj-grid-3-2 {
     grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
     gap: 14px;
 }
@@ -5435,7 +5319,8 @@ body.sayfa-chantemerle .immerse-detay-kutu .chantemerle-detay-grid-3lu .immerse-
 }
 
 @media (max-width: 992px) {
-    .cerceve-kutu .almanya-avantaj-grid-3-2 {
+    .cerceve-kutu .almanya-avantaj-grid-3-2,
+    .site-gri-cerceve-kutu .almanya-avantaj-grid-3-2 {
         grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     }
     .almanya-avantaj-grid-3-2 > .rozet-kart:nth-child(4),
@@ -5445,7 +5330,8 @@ body.sayfa-chantemerle .immerse-detay-kutu .chantemerle-detay-grid-3lu .immerse-
 }
 
 @media (max-width: 768px) {
-    .cerceve-kutu .almanya-avantaj-grid-3-2 {
+    .cerceve-kutu .almanya-avantaj-grid-3-2,
+    .site-gri-cerceve-kutu .almanya-avantaj-grid-3-2 {
         grid-template-columns: 1fr !important;
     }
 
@@ -7593,11 +7479,11 @@ summary.immerse-tokyo-devam-btn::-webkit-details-marker {
 
 .italy-program-kutu .italy-program-kart {
     padding: 20px;
-    border: none;
-    border-left: 4px solid var(--yaz-vurgu);
-    border-radius: 0 10px 10px 0;
-    background: linear-gradient(90deg, rgba(13, 148, 136, 0.06) 0%, #ffffff 100%);
-    box-shadow: 0 2px 8px rgba(13, 148, 136, 0.05);
+    border: 0 solid transparent;
+    border-radius: 15px;
+    background: #ffffff !important;
+    background-image: none !important;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
 }
 
 .italy-program-kutu .italy-program-kart h3 {
@@ -7620,10 +7506,11 @@ summary.immerse-tokyo-devam-btn::-webkit-details-marker {
 .italy-sosyal-kutu .italy-sosyal-madde {
     border-top: none;
     padding: 20px;
-    border-left: 4px solid var(--yaz-vurgu);
-    border-radius: 0 10px 10px 0;
-    background: #ffffff;
-    box-shadow: 0 2px 8px rgba(13, 148, 136, 0.05);
+    border: 0 solid transparent;
+    border-radius: 15px;
+    background: #ffffff !important;
+    background-image: none !important;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
     gap: 12px;
 }
 .italy-sosyal-kutu .italy-sosyal-ikon { display: none; }
@@ -7702,16 +7589,19 @@ body.sayfa-yurt-disi-yaz-okullari-italy .yaz-okullari-ulke-kart[href*="italy/mil
 }
 
 /* Giriş–grid aralığı: style.css varsayılanı 15px; bu hub’da önceki 18px bandına yakın */
-article.icerik-alani .cerceve-kutu.japan-tercih-bolumu > h2.kutu-baslik + p:has(+ .rozet-grid) + .rozet-grid.japan-tercih-grid {
+article.icerik-alani .cerceve-kutu.japan-tercih-bolumu > h2.kutu-baslik + p:has(+ .rozet-grid) + .rozet-grid.japan-tercih-grid,
+article.icerik-alani .site-gri-cerceve-kutu.japan-tercih-bolumu > h2.kutu-baslik + p:has(+ .rozet-grid) + .rozet-grid.japan-tercih-grid {
     margin-top: 18px;
 }
 
-article.icerik-alani .cerceve-kutu.japan-tercih-bolumu > h2.kutu-baslik + p + .rozet-grid.japan-tercih-grid > .rozet-kart {
+article.icerik-alani .cerceve-kutu.japan-tercih-bolumu > h2.kutu-baslik + p + .rozet-grid.japan-tercih-grid > .rozet-kart,
+article.icerik-alani .site-gri-cerceve-kutu.japan-tercih-bolumu > h2.kutu-baslik + p + .rozet-grid.japan-tercih-grid > .rozet-kart {
     padding-top: 16px;
 }
 
 /* 5 rozet: flex ile satırlar ortalı; son satırdaki 2 kart (4–5) yan yana ortada */
-.cerceve-kutu.japan-tercih-bolumu .rozet-grid.japan-tercih-grid {
+.cerceve-kutu.japan-tercih-bolumu .rozet-grid.japan-tercih-grid,
+.site-gri-cerceve-kutu.japan-tercih-bolumu .rozet-grid.japan-tercih-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -7719,20 +7609,23 @@ article.icerik-alani .cerceve-kutu.japan-tercih-bolumu > h2.kutu-baslik + p + .r
     gap: 18px 22px;
 }
 
-.cerceve-kutu.japan-tercih-bolumu .rozet-grid.japan-tercih-grid > .rozet-kart {
+.cerceve-kutu.japan-tercih-bolumu .rozet-grid.japan-tercih-grid > .rozet-kart,
+.site-gri-cerceve-kutu.japan-tercih-bolumu .rozet-grid.japan-tercih-grid > .rozet-kart {
     flex: 1 1 280px;
     max-width: min(100%, 400px);
     box-sizing: border-box;
 }
 
 @media (max-width: 992px) {
-    .cerceve-kutu.japan-tercih-bolumu .rozet-grid.japan-tercih-grid > .rozet-kart {
+    .cerceve-kutu.japan-tercih-bolumu .rozet-grid.japan-tercih-grid > .rozet-kart,
+    .site-gri-cerceve-kutu.japan-tercih-bolumu .rozet-grid.japan-tercih-grid > .rozet-kart {
         flex-basis: 260px;
     }
 }
 
 @media (max-width: 640px) {
-    .cerceve-kutu.japan-tercih-bolumu .rozet-grid.japan-tercih-grid > .rozet-kart {
+    .cerceve-kutu.japan-tercih-bolumu .rozet-grid.japan-tercih-grid > .rozet-kart,
+    .site-gri-cerceve-kutu.japan-tercih-bolumu .rozet-grid.japan-tercih-grid > .rozet-kart {
         flex: 1 1 100%;
         max-width: 100%;
     }
@@ -10800,9 +10693,14 @@ body.sayfa-kvkk-aydinlatma .kvkk-ilgili-metin a {
 
 /* --- merged: london.css --- */
 /* Londra dil okulları hub + ortak “Londra neden” blokları.
-   Yaz Londra program listesi: yurt-disi-yaz-okullari.css (.london-secim-paneli) */
+   Yaz Londra program listesi: style.css .london-secim-paneli */
 
 /* Londra dil: program listesi satırları (yaz hub ile aynı görünüm; yalnızca dil sayfası london.css yükler) */
+.london-secim-paneli .hizmet-alanlari-baslik {
+    margin: 0;
+    border-radius: 5px 5px 0 0;
+}
+
 .london-secim-paneli .kirmizi-kutu {
     margin: 0;
     border-radius: 5px 5px 0 0;
@@ -10866,14 +10764,11 @@ body.sayfa-kvkk-aydinlatma .kvkk-ilgili-metin a {
     transform: none !important;
 }
 
-.london-secim-paneli .liste-index {
-    font-size: 18px !important;
-}
-
+.london-secim-paneli .liste-index,
 .london-secim-paneli .okul-isim-link,
 .london-secim-paneli .btn-modern-incele,
 .london-secim-paneli .incele-btn-minimal {
-    font-size: 15px !important;
+    font-size: 18px !important;
 }
 
 .london-secim-paneli .okul-liste-kapsayici .modern-okul-listesi {
@@ -14027,30 +13922,39 @@ body.ana-sayfa .hizmet-tab-alani .tab-metin {
 
 
 /* --- merged: uk.css --- */
-/* UK yaz okullari sayfasina ozel one cikan sehirler bolumu */
-.uk-one-cikan-sehirler-kutu .rozet-grid {
+/* Hub rozet gridi: 3 → 2 → 1 sütun (yaz ülke / öne çıkan şehirler vb.)
+   .cerceve-kutu .rozet-grid:has(3. kart) genel kuralından daha yüksek özgüllük */
+.cerceve-kutu .rozet-grid.rozet-grid--hub-3-2-1,
+.site-gri-cerceve-kutu .rozet-grid.rozet-grid--hub-3-2-1 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 14px;
 }
 
-/* Rozet kartları: grid satırında eşit yükseklik + küçük CLS için alt sınır */
-.uk-one-cikan-sehirler-kutu .rozet-kart {
+.cerceve-kutu .rozet-grid.rozet-grid--hub-3-2-1 .rozet-kart,
+.site-gri-cerceve-kutu .rozet-grid.rozet-grid--hub-3-2-1 .rozet-kart {
     height: 100%;
     min-height: 9.5rem;
+    background: #ffffff !important;
+    border-radius: 15px !important;
+    border: 0 solid transparent !important;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06) !important;
 }
 
-.uk-one-cikan-sehirler-kutu .rozet-baslik {
+.cerceve-kutu .rozet-grid.rozet-grid--hub-3-2-1 .rozet-baslik,
+.site-gri-cerceve-kutu .rozet-grid.rozet-grid--hub-3-2-1 .rozet-baslik {
     color: #111827 !important;
 }
 
 @media (max-width: 992px) {
-    .uk-one-cikan-sehirler-kutu .rozet-grid {
+    .cerceve-kutu .rozet-grid.rozet-grid--hub-3-2-1,
+    .site-gri-cerceve-kutu .rozet-grid.rozet-grid--hub-3-2-1 {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
 @media (max-width: 768px) {
-    .uk-one-cikan-sehirler-kutu .rozet-grid {
+    .cerceve-kutu .rozet-grid.rozet-grid--hub-3-2-1,
+    .site-gri-cerceve-kutu .rozet-grid.rozet-grid--hub-3-2-1 {
         grid-template-columns: 1fr;
     }
 }
@@ -14268,16 +14172,17 @@ body.sayfa-yurt-disi-burs-firsatlari .kutu-liste-sirali span {
     line-height: 1;
 }
 
-/* Başlık + ülke/hizmet hub — dil/yaz paneli aynı iskelet */
+/* Başlık + ülke/hizmet hub — dil/yaz paneli aynı iskelet.
+   Dış kutu çerçevesiz: beyaz kutu yalnızca tek tek kartlarda (a.yaz-okullari-ulke-kart). */
 .dil-okullari-secim-paneli,
 .yaz-okullari-secim-paneli {
     max-width: 1200px;
     margin: 25px auto 60px auto;
     padding: 0;
-    border: 1px solid var(--site-kart-kenar);
-    border-radius: 15px;
-    background: #ffffff !important;
-    box-shadow: var(--site-kart-golge) !important;
+    border: none;
+    border-radius: 0;
+    background: transparent !important;
+    box-shadow: none !important;
     overflow: visible;
 }
 
@@ -14330,6 +14235,131 @@ body.sayfa-yurt-disi-burs-firsatlari .kutu-liste-sirali span {
     font-size: var(--kirmizi-bant-alt-font-size);
     font-weight: var(--sayfa-bolum-baslik-alt-font-weight);
     line-height: 1.35;
+}
+
+/* Hub iki satırlı h2 — :has() olmadan da iki satır; 1. satır siyah, 2. kırmızı (.kutu-baslik SSS vb. hariç) */
+article.icerik-alani > h2:not(.kutu-baslik) > span,
+.dil-okullari-secim-paneli > h2:not(.kutu-baslik) > span,
+.yaz-okullari-secim-paneli > h2:not(.kutu-baslik) > span {
+    display: block;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+article.icerik-alani > h2:not(.kutu-baslik) > span:not(.vurgu-satir),
+.dil-okullari-secim-paneli > h2:not(.kutu-baslik) > span:not(.vurgu-satir),
+.yaz-okullari-secim-paneli > h2:not(.kutu-baslik) > span:not(.vurgu-satir) {
+    color: #000000;
+    margin: 0;
+    font-size: var(--sayfa-bolum-baslik-font-size);
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.35;
+}
+
+article.icerik-alani > h2:not(.kutu-baslik) > span.vurgu-satir,
+.dil-okullari-secim-paneli > h2:not(.kutu-baslik) > span.vurgu-satir,
+.yaz-okullari-secim-paneli > h2:not(.kutu-baslik) > span.vurgu-satir {
+    color: #bd0505;
+    margin: 0;
+    margin-top: 0.35rem;
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+/* Ülke / şehir kartı üstü: iki satırlı h2 — 1. satır siyah; 2. satır .vurgu-satir kırmızı (:has ile ek margin/scroll) */
+article.icerik-alani > h2:has(> .vurgu-satir),
+.icerik-alani > h2:has(> .vurgu-satir) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    margin: 2rem 0 25px 0;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    font-size: var(--sayfa-bolum-baslik-font-size);
+    font-weight: 700;
+    line-height: 1.35;
+    text-align: center;
+    color: var(--sayfa-bolum-baslik-renk);
+    background: transparent;
+    scroll-margin-top: calc(var(--site-header-offset, 122px) + 0.5rem);
+}
+
+.dil-okullari-secim-paneli > h2:has(> .vurgu-satir),
+.yaz-okullari-secim-paneli > h2:has(> .vurgu-satir) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    margin: 0 0 15px 0;
+    padding: 0;
+    position: relative;
+    z-index: 2;
+    font-family: "Poppins", sans-serif;
+    font-size: var(--sayfa-bolum-baslik-font-size);
+    font-weight: 700;
+    line-height: 1.35;
+    text-align: center;
+    color: var(--sayfa-bolum-baslik-renk);
+    background: transparent;
+}
+
+/* Ülke kartları üst başlığı (tek/çift satır): kartlardan önce alt boşluk daima 15px */
+.dil-okullari-secim-paneli > h2:not(.kutu-baslik),
+.yaz-okullari-secim-paneli > h2:not(.kutu-baslik) {
+    margin: 0 0 15px 0 !important;
+}
+
+.dil-okullari-secim-paneli > h2:has(> .vurgu-satir) + .ulke-kart-wrap,
+.yaz-okullari-secim-paneli > h2:has(> .vurgu-satir) + .ulke-kart-wrap,
+.yaz-okullari-secim-paneli > h2:has(> .vurgu-satir) + .yaz-okullari-ulke-kart-wrap {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+article.icerik-alani > h2:has(> .vurgu-satir) > span:not(.vurgu-satir),
+.icerik-alani > h2:has(> .vurgu-satir) > span:not(.vurgu-satir),
+.dil-okullari-secim-paneli > h2:has(> .vurgu-satir) > span:not(.vurgu-satir),
+.yaz-okullari-secim-paneli > h2:has(> .vurgu-satir) > span:not(.vurgu-satir) {
+    display: block;
+    width: 100%;
+    margin: 0;
+    color: #000000;
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+    letter-spacing: inherit;
+    text-align: center;
+    line-height: 1.35;
+}
+
+article.icerik-alani > h2:has(> .vurgu-satir) > .vurgu-satir,
+.icerik-alani > h2:has(> .vurgu-satir) > .vurgu-satir,
+.dil-okullari-secim-paneli > h2:has(> .vurgu-satir) > .vurgu-satir,
+.yaz-okullari-secim-paneli > h2:has(> .vurgu-satir) > .vurgu-satir {
+    display: block;
+    width: 100%;
+    margin: 0.35rem 0 15px 0 !important;
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    font-weight: 700;
+    color: #bd0505;
+    line-height: 1.3;
+    text-align: center;
+}
+
+article.icerik-alani > h2:has(> .vurgu-satir) > .vurgu-satir .vurgu-renk,
+.icerik-alani > h2:has(> .vurgu-satir) > .vurgu-satir .vurgu-renk,
+.dil-okullari-secim-paneli > h2:has(> .vurgu-satir) > .vurgu-satir .vurgu-renk,
+.yaz-okullari-secim-paneli > h2:has(> .vurgu-satir) > .vurgu-satir .vurgu-renk {
+    color: #bd0505 !important;
 }
 
 .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap {
@@ -14810,9 +14840,52 @@ article.icerik-alani > h1 + p {
 
 
 
-/* --- merged: yurt-disi-yaz-okullari.css --- */
+/* --- Yurt dışı yaz okulları (ülke hub, program kutuları, rozetler; tek dosya) --- */
 /* Yurt Dışı Yaz Okulları sayfasına özel stiller */
 /* Ülke seçim kartları ve program kutuları */
+
+.yaz-okullari-secim-paneli {
+    max-width: 1200px;
+    margin: 25px auto 60px auto;
+    padding: 0;
+    border: 0 solid transparent;
+    border-top: none;
+    background: transparent !important;
+    box-shadow: none !important;
+    overflow: hidden;
+}
+
+.yaz-okullari-secim-paneli .hizmet-alanlari-baslik {
+    margin: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.yaz-okullari-secim-paneli .sehir-kare-yigini {
+    padding: 16px 18px 20px 18px;
+}
+
+.yaz-okullari-secim-paneli .okul-liste-kapsayici {
+    margin: 0;
+    padding: 16px 18px 20px 18px;
+}
+
+@media (max-width: 768px) {
+    .yaz-okullari-secim-paneli {
+        margin: 20px 0 45px 0;
+        padding: 0;
+    }
+}
+
+.yaz-okullari-secim-paneli .okul-liste-kapsayici .okul-isim-link {
+    font-size: 20px;
+}
+
+@media (max-width: 501px) {
+    .yaz-okullari-secim-paneli .okul-liste-kapsayici .okul-isim-link {
+        font-size: 13px;
+    }
+}
 
 /* Rozet ikonunda onay işareti (✓) */
 .yaz-okullari-program-kutu .rozet-ikon-tick,
@@ -14845,20 +14918,20 @@ article.icerik-alani > h1 + p {
     text-align: center !important;
 }
 
-.yaz-okullari-secim-paneli .program-secim-hub-baslik .alt-satir-lacivert {
+.yaz-okullari-secim-paneli .program-secim-hub-baslik .vurgu-satir {
     margin: 0;
     font-size: clamp(1.2rem, 2.5vw, 1.5rem);
     font-weight: 700;
-    color: #000080;
+    color: #bd0505;
     line-height: 1.3;
     text-align: center !important;
 }
 
-.yaz-okullari-secim-paneli .program-secim-hub-baslik .alt-satir-lacivert .vurgu-renk {
+.yaz-okullari-secim-paneli .program-secim-hub-baslik .vurgu-satir .vurgu-renk {
     color: #bd0505 !important;
 }
 
-.yaz-okullari-secim-paneli .program-secim-hub-baslik > .alt-satir-lacivert:first-child {
+.yaz-okullari-secim-paneli .program-secim-hub-baslik > .vurgu-satir:first-child {
     margin-top: 0;
 }
 
@@ -14888,103 +14961,15 @@ article.icerik-alani > h1 + p {
     background-image: none !important;
 }
 
-/* Liste satırı: ortak 15px (.okul-liste-kapsayici .okul-isim-link); 20px başlıktan büyük görünüyordu */
-
-/* Londra yaz hub: program satırı renkleri / hover (dil Londra: london.css) */
-.london-secim-paneli .kirmizi-kutu {
+.ulke-secim-paneli-ortak .hizmet-alanlari-baslik {
     margin: 0;
-    border-radius: 5px 5px 0 0;
 }
 
-.london-secim-paneli .okul-liste-kapsayici {
-    margin-top: 0;
-    padding-top: 0;
-}
-
-.london-secim-paneli .premium-liste-kart,
-.london-secim-paneli .glass-stil,
-.london-secim-paneli .incele-btn-minimal,
-.london-secim-paneli .btn-modern-incele,
-.london-secim-paneli .ok-animasyon {
-    transition: none !important;
-}
-
-.london-secim-paneli .premium-liste-kart:hover,
-.london-secim-paneli .glass-stil:hover {
-    transform: none !important;
-    box-shadow: none !important;
-    border-color: transparent !important;
-    background: transparent !important;
-}
-
-.london-secim-paneli .okul-liste-kapsayici:hover {
-    transform: none !important;
-    box-shadow: var(--site-kart-golge) !important;
-    border-color: var(--site-kart-kenar) !important;
-    background: #ffffff !important;
-}
-
-.london-secim-paneli .okul-isim-link:hover,
-.london-secim-paneli .incele-btn-minimal:hover,
-.london-secim-paneli .btn-modern-incele:hover {
-    color: inherit !important;
-    text-decoration: none !important;
-    padding-left: 0 !important;
-}
-
-.london-secim-paneli .btn-modern-incele:hover {
-    color: #e30613 !important;
-}
-
-.london-secim-paneli .btn-modern-incele:hover .ok-animasyon {
-    color: #e30613 !important;
-    transform: translateX(2px);
-}
-
-.london-secim-paneli .premium-liste-kart:hover .okul-isim-link,
-.london-secim-paneli .premium-liste-kart:hover .btn-modern-incele,
-.london-secim-paneli .premium-liste-kart:hover .ok-animasyon {
-    color: #e30613 !important;
-}
-
-.london-secim-paneli .premium-liste-kart:hover .liste-index,
-.london-secim-paneli .liste-index {
-    color: #6b7280 !important;
-    transition: none !important;
-    transform: none !important;
-}
-
-.london-secim-paneli .liste-index {
-    font-size: 18px !important;
-}
-
-.london-secim-paneli .okul-isim-link,
-.london-secim-paneli .btn-modern-incele,
-.london-secim-paneli .incele-btn-minimal {
-    font-size: 15px !important;
-}
-
-.london-secim-paneli .okul-liste-kapsayici .modern-okul-listesi {
-    margin: 0 !important;
-    padding: 0 !important;
-    max-width: 100% !important;
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    row-gap: 12px !important;
-    column-gap: 0 !important;
-}
-
-.london-secim-paneli .okul-liste-kapsayici .modern-okul-listesi > .premium-liste-kart ~ .premium-liste-kart {
-    margin-top: 0 !important;
-}
-
-.london-secim-paneli .okul-liste-kapsayici .modern-okul-listesi > .premium-liste-kart {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    margin-bottom: 0 !important;
-}
+/* Liste satırı: ortak 15px (.okul-liste-kapsayici .okul-isim-link); 20px başlıktan büyük görünüyordu */
+/* Londra yaz program listesi: merged: london.css (.london-secim-paneli) ile aynı kurallar */
 
 .yaz-okullari-secim-paneli .ulke-secim-butonlari,
+.yaz-okullari-secim-paneli .ulke-kart-wrap,
 .yaz-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap {
     margin: 0;
     max-width: none;
@@ -15117,19 +15102,15 @@ a.yaz-standart-yesil-buton.blog-yan-iletisim-buton {
 }
 
 /* Program kutusu → bir sonraki gri kutu (İngiltere şehir kartları sonrası) */
-.yaz-okullari-program-kutu + .cerceve-kutu {
+.yaz-okullari-program-kutu + .cerceve-kutu,
+.yaz-okullari-program-kutu + .site-gri-cerceve-kutu {
     margin-top: 50px;
 }
 
-/* İngiltere sayfasında Program Seçenekleri → SSS arası boşluk */
-.program-sosyal-kutu + .cerceve-kutu {
+/* Program + sosyal özet kutusu → SSS arası boşluk (yaz ülke hub) */
+.yaz-okullari-sosyal-program-kutu + .cerceve-kutu,
+.yaz-okullari-sosyal-program-kutu + .site-gri-cerceve-kutu {
     margin-top: 70px;
-}
-
-/* Yaz teması vurgu rengi - sıcak yaz tonu */
-:root {
-    --yaz-vurgu: #0d9488;
-    --yaz-vurgu-acik: rgba(13, 148, 136, 0.1);
 }
 
 /* Destinasyon kutusu - liste kart grid görünümü */
@@ -15505,15 +15486,15 @@ body.oxford-royale-cambridge-sayfa .ora-ulasim-onemli-not {
 }
 
 /* Gri çerçeve başlığında onay işareti — isteğe bağlı
- * HTML: h2.kutu-baslik.kutu-baslik-tick > span.kutu-baslik-tick-ikon[aria-hidden="true"] + metin
- * Ek sınıflar: kutu-baslik-tick (h2), kutu-baslik-tick-ikon (span; sadece görsel) */
+ * HTML: h2.kutu-baslik.kutu-baslik-tick > span[aria-hidden="true"]:first-child + span (1. satır sınıfsız)
+ * Onay dairesi: yalnızca ilk span[aria-hidden="true"] (sınıf yok; 1. satırda metin sınıfı yok kuralı) */
 article.icerik-alani h2.kutu-baslik.kutu-baslik-tick {
     display: flex;
     align-items: flex-start;
     gap: 0.65rem;
 }
 
-article.icerik-alani h2.kutu-baslik.kutu-baslik-tick .kutu-baslik-tick-ikon {
+article.icerik-alani h2.kutu-baslik.kutu-baslik-tick > span[aria-hidden="true"]:first-child {
     flex-shrink: 0;
     display: inline-flex;
     align-items: center;
@@ -15553,6 +15534,7 @@ body.sayfa-hizmetlerimiz .dil-okullari-secim-paneli,
 body.sayfa-yurt-disi-lise .dil-okullari-secim-paneli,
 body.sayfa-yurt-disi-dil-okullari .dil-okullari-secim-paneli,
 body.sayfa-yurt-disi-dil-okullari-uk .dil-okullari-secim-paneli,
+body.sayfa-yurt-disi-yaz-okullari-uk .yaz-okullari-secim-paneli,
 body.sayfa-yurt-disi-dil-okullari-usa .dil-okullari-secim-paneli { }
 
 .yaz-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap,
@@ -15568,14 +15550,22 @@ body.sayfa-yurt-disi-dil-okullari-usa .dil-okullari-secim-paneli { }
 .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0;
+    gap: 5px;
     margin: 0;
-    padding: 12px;
+    padding: 0 12px 12px 12px;
     box-sizing: border-box;
     border: none;
     border-radius: 0;
     background: transparent;
     overflow: visible;
+}
+
+.dil-okullari-secim-paneli > h2:not(.kutu-baslik) + .yaz-okullari-ulke-kart-wrap,
+.yaz-okullari-secim-paneli > h2:not(.kutu-baslik) + .yaz-okullari-ulke-kart-wrap,
+.dil-okullari-secim-paneli > h2:not(.kutu-baslik) + .ulke-kart-wrap,
+.yaz-okullari-secim-paneli > h2:not(.kutu-baslik) + .ulke-kart-wrap {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
 }
 
 @media (min-width: 768px) {
@@ -15594,7 +15584,7 @@ body.sayfa-yurt-disi-dil-okullari-usa .dil-okullari-secim-paneli { }
    (1200-44)/4 ≈ 289px; (1200-44)/6 ≈ 192px); ortalanır */
 body.sayfa-yurt-disi-dil-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0;
+    gap: 5px;
     justify-content: center;
     /* Yaz okulu paneliyle aynı iç boşluk standardı */
     padding: 12px;
@@ -16073,6 +16063,7 @@ body.sayfa-yurt-disi-yaz-okullari-usa .yaz-okullari-ulke-kart-baslik {
 }
 
 body.sayfa-yurt-disi-yaz-okullari a.yaz-okullari-ulke-kart:hover .yaz-okullari-ulke-kart-bayrak,
+body.sayfa-yurt-disi-yaz-okullari-uk a.yaz-okullari-ulke-kart:hover .yaz-okullari-ulke-kart-bayrak,
 body.sayfa-yurt-disi-lise a.yaz-okullari-ulke-kart:hover .yaz-okullari-ulke-kart-bayrak,
 body.sayfa-yurt-disi-dil-okullari a.yaz-okullari-ulke-kart:hover .yaz-okullari-ulke-kart-bayrak {
     transform: scale(1.04);
@@ -16127,5 +16118,39 @@ article.icerik-alani :is(
     max-width: 1200px !important;
     margin-left: auto !important;
     margin-right: auto !important;
+}
+
+/* ==========================================================================
+   TEK TİP H2 STANDARDI
+   1. satır: 19px siyah
+   2. satır: .vurgu-satir 19px kırmızı
+   ========================================================================== */
+h2 {
+    font-family: "Poppins", sans-serif !important;
+    font-size: 19px !important;
+    font-weight: 700 !important;
+    line-height: 1.35 !important;
+    letter-spacing: 0 !important;
+    color: #000000 !important;
+    margin: 0 0 25px 0 !important;
+}
+
+h2 > .vurgu-satir {
+    display: block !important;
+    width: 100% !important;
+    margin: 0.35rem 0 25px 0 !important;
+    padding: 0 !important;
+    font-size: 19px !important;
+    font-weight: 700 !important;
+    line-height: 1.35 !important;
+    color: #bd0505 !important;
+}
+
+h2:has(> .vurgu-satir) {
+    margin-bottom: 0 !important;
+}
+
+h2 + * {
+    margin-top: 0 !important;
 }
 
