@@ -248,7 +248,7 @@ a.blog-filtre-sekmesi.blog-filtre-sekmesi--aktif:hover {
 }
 
 /* /blog/ ana listede yalnızca 1 kart varsa ortalı göster */
-body.sayfa-blog:not(.sayfa-blog-kategori) .blog-yazi-grid:has(> article.blog-yazi-karti:only-child) {
+article.blog-ana-sayfa .blog-yazi-grid:has(> article.blog-yazi-karti:only-child) {
     grid-template-columns: minmax(0, 420px);
     justify-content: center;
 }
@@ -298,7 +298,7 @@ body.sayfa-blog:not(.sayfa-blog-kategori) .blog-yazi-grid:has(> article.blog-yaz
 }
 
 /* Blog liste sayfaları (/blog/ ve /blog/{kategori}/): yazı kartlarında kapak görseli yok */
-body.sayfa-blog .blog-kart-gorsel-link {
+article.blog-ana-sayfa .blog-kart-gorsel-link {
     display: none;
 }
 
@@ -427,12 +427,10 @@ body.sayfa-blog .blog-kart-gorsel-link {
     min-width: 0;
 }
 
-/* Ana yazı sütununda “dış” gri çerçeve: çift kutu görünmez (Tokyo Immerse ile aynı).
-   - Doğrudan .blog-yazi-ana çocuğu (Immerse / Alpadia vb.)
-   - section.icerik-alani içinde birinci seviye (Kings, SBC Canford vb.); böylece
-     section > .cerceve-kutu içindeki iç içe .cerceve-kutu (IELTS ikili vb.) seçilmez. */
-.blog-yazi-ana > .cerceve-kutu,
-.blog-yazi-ana > section.icerik-alani > .cerceve-kutu {
+/* Yalnızca Immerse Education şablonu: dış .cerceve-kutu görünmez (çift kutu / Tokyo hizası).
+   Swiss, Alpadia, Chantemerle vb. sayfalarda site gri çerçeve sözleşmesi korunur (style.css .cerceve-kutu). */
+body.immerse-education-page .blog-yazi-ana > .cerceve-kutu,
+body.immerse-education-page .blog-yazi-ana > section.icerik-alani > .cerceve-kutu {
     border: none !important;
     box-shadow: none !important;
     background-color: transparent !important;

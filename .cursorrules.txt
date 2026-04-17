@@ -776,8 +776,11 @@ Her sayfada şu CSS dosyaları yüklenmelidir:
 - `.ingiltere-deneyim-kutu` → Gradient deneyim kutusu
 - `.oxford-egitim-kutu` → İkonlu 2x2 egitim blokları
 - `.bournemouth-egitim-kutu` → Bournemouth için aynı yapı
-- `.immerse-detay-kutu` → Program detay kartları
-- `.immerse-detay-kart` → Tek detay kartı (yeşil başlık)
+- `.program-detay-kutu` → Program detay kartları (gri çerçeve içi blok)
+- `.detay-kart-grid` → Program detay rozet kartları grid’i
+- `.rozet-kart.rozet-kart--detay` → Program detay / immerse grid içi sade kart (ikon yok; başlık #111827)
+- `.icerik-galeri-grid` → Çerçeve içi foto galeri grid’i (16px gap); varsayılan sütunlar yalnızca “düz” galeride; özel düzen için ikinci sınıf eklenir (ör. `.alpadia-galeri-grid`, `.chantemerle-galeri-grid`, `.kings-galeri-grid`, `.futbol-galeri-grid`, `.sbc-canford-konaklama-galeri`)
+- `.galeri-gorsel` → Galeri görseli (**15px köşe**); boyut grid / sayfa kuralına göre değişir
 
 ### Yüksek Lisans Sayfası
 - `.yuksek-lisans-neden-kutu` → 2x2 rozet grid

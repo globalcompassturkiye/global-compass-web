@@ -13,6 +13,9 @@ alwaysApply: false
   - `h3.rozet-baslik`
   - `p.rozet-metin` (veya sayfada kullanılan liste/kart metni)
 
+## Program detay grid (ikon yok)
+- `immerse-detay-grid` içinde kart: **`article.rozet-kart.rozet-kart--detay`** (`.rozet-kart--detay` taban `.rozet-kart` ızgarasız sade blok düzene çevirir). Eski sınıf `immerse-detay-kart` kullanılmaz; kart sarmalayıcı `div` değil `article`.
+
 ## Layout özel class
 - `2+1 / 2+2 / 3+1` gibi yerleşimler için “parent wrapper class” ekle:
   - Örn: `yurt-disi-universite` içindeki “ülke-egitim” bölümünde `ulke-egitim-grid-2-2-1` gibi.

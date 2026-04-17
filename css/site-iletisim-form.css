@@ -526,32 +526,9 @@ body.iletisim-form-bildirim-acik {
 }
 
 /* Hizmetlerimiz: form giriş metni iki yana yaslı */
-body.sayfa-hizmetlerimiz article.hizmetlerimiz-sayfa .iletisim-form-alani .iletisim-form-beyaz-cerceve > p {
+article.hizmetlerimiz-sayfa .iletisim-form-alani .iletisim-form-beyaz-cerceve > p {
     text-align: justify;
     text-align-last: left;
-}
-
-/* New York yaz okulu: bilgi formu panel içi — üst banttayla birleşik kutu */
-article.icerik-alani .new-york-bilgi-form-paneli {
-    margin-top: 50px;
-}
-
-article.icerik-alani .new-york-bilgi-form-paneli .iletisim-form-alani {
-    margin: 0 !important;
-    max-width: none;
-    padding: 0;
-}
-
-article.icerik-alani .new-york-bilgi-form-paneli .iletisim-form-alani .iletisim-form-beyaz-cerceve {
-    margin: 0 !important;
-    max-width: none;
-    border: none;
-    box-shadow: none;
-    padding: var(--bilgi-istek-form-metin-ust-bosluk, 25px) 22px 24px;
-}
-
-article.icerik-alani .new-york-bilgi-form-paneli .iletisim-form-alani .iletisim-form-beyaz-cerceve > p:first-of-type {
-    margin-top: 0;
 }
 
 /* Oxford Royale New York: doğrudan .iletisim-form-alani (Tokyo ile aynı yapı; üst boşluk hub paneli ile aynı) */

@@ -9,18 +9,18 @@
     padding: 0 0 60px;
 }
 
-body.sayfa-sss article.icerik-alani.sss-sayfa > h1 {
+article.icerik-alani.sss-sayfa > h1 {
     font-size: var(--h1-font-size) !important;
     line-height: 1.4 !important;
 }
 
-body.sayfa-sss article.icerik-alani.sss-sayfa > h1 > .vurgu-renk {
+article.icerik-alani.sss-sayfa > h1 > .vurgu-renk {
     font-size: var(--h1-font-size) !important;
     line-height: 1.35 !important;
     color: #bd0505 !important;
 }
 
-body.sayfa-sss article.icerik-alani.sss-sayfa > h1 .vurgu-renk {
+article.icerik-alani.sss-sayfa > h1 .vurgu-renk {
     display: block;
     margin-top: 0.35em;
     padding-top: 0;
@@ -44,19 +44,19 @@ body.sayfa-sss article.icerik-alani.sss-sayfa > h1 .vurgu-renk {
 }
 
 /* Sosyal alan — header (inline style kaldırıldı) */
-body.sayfa-sss .sosyal-medya-alani {
+header.sss-sayfa-ust-menu .sosyal-medya-alani {
     display: flex;
     gap: 20px;
     justify-content: flex-end;
     align-items: center;
 }
 
-body.sayfa-sss .sosyal-medya-alani a {
+header.sss-sayfa-ust-menu .sosyal-medya-alani a {
     transition: transform 0.3s ease;
     background: none;
 }
 
-body.sayfa-sss .sosyal-medya-alani a img {
+header.sss-sayfa-ust-menu .sosyal-medya-alani a img {
     display: block;
 }
 
