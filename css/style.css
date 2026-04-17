@@ -1557,7 +1557,7 @@ body.sayfa-kvkk-aydinlatma .sosyal-medya-alani a {
 }
 
 .icerik-paragraf-onemli-kirmizi {
-    color: #e30613;
+    color: #bd0505;
     font-weight: 800;
     margin-top: 10px !important;
 }body.kings-oxford-sayfa h2.kings-oxford-kurs-baslik,
@@ -2354,7 +2354,7 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
 .usa-form-bant {
     margin-bottom: 0;
     border-radius: 5px 5px 0 0;
-    background-color: #e30613;
+    background-color: #bd0505;
 }.london-form-bant .ust-satir,
 .bournemouth-form-bant .ust-satir,
 .cambridge-form-bant .ust-satir,
@@ -4522,7 +4522,7 @@ article.icerik-alani .cerceve-kutu.japan-tercih-bolumu > h2.kutu-baslik + p:has(
     font-size: 1.05em;
     font-weight: 700;
     line-height: 1;
-    color: #e30613;
+    color: #bd0505;
 }.bournemouth-secim-paneli .kirmizi-kutu,
 .canada-secim-paneli .kirmizi-kutu,
 .germany-secim-paneli .kirmizi-kutu,
@@ -4603,7 +4603,7 @@ article.icerik-alani .cerceve-kutu.japan-tercih-bolumu > h2.kutu-baslik + p:has(
 .tokyo-secim-paneli .premium-liste-kart:hover .okul-isim-link, .tokyo-secim-paneli .premium-liste-kart:hover .btn-modern-incele, .tokyo-secim-paneli .premium-liste-kart:hover .ok-animasyon,
 .usa-secim-paneli .btn-modern-incele:hover,
 .usa-secim-paneli .premium-liste-kart:hover .okul-isim-link, .usa-secim-paneli .premium-liste-kart:hover .btn-modern-incele, .usa-secim-paneli .premium-liste-kart:hover .ok-animasyon {
-    color: #e30613 !important;
+    color: #bd0505 !important;
 }.bournemouth-secim-paneli .btn-modern-incele:hover .ok-animasyon,
 .canada-secim-paneli .btn-modern-incele:hover .ok-animasyon,
 .germany-secim-paneli .btn-modern-incele:hover .ok-animasyon,
@@ -4614,7 +4614,7 @@ article.icerik-alani .cerceve-kutu.japan-tercih-bolumu > h2.kutu-baslik + p:has(
 .oxford-secim-paneli .btn-modern-incele:hover .ok-animasyon,
 .tokyo-secim-paneli .btn-modern-incele:hover .ok-animasyon,
 .usa-secim-paneli .btn-modern-incele:hover .ok-animasyon {
-    color: #e30613 !important;
+    color: #bd0505 !important;
     transform: translateX(2px);
 }
 .bournemouth-secim-paneli .premium-liste-kart:hover .liste-index, .bournemouth-secim-paneli .liste-index,
@@ -5183,7 +5183,7 @@ body.sayfa-swiss-education-academy .immerse-detay-kutu .immerse-detay-grid.sea-p
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #e30613 0%, #b80510 100%);
+    background: linear-gradient(135deg, #bd0505 0%, #9e0404 100%);
     color: #fff;
     font-size: 1.1em;
     font-weight: 700;
@@ -6635,7 +6635,7 @@ article.icerik-alani ul.kutu-liste.yas-alan-etiketleri li {
     font-size: 15px;
     font-weight: 600;
     line-height: 1.4;
-    color: #e30613;
+    color: #bd0505;
     cursor: pointer;
     text-align: left;
     text-decoration: underline;
@@ -11518,7 +11518,7 @@ article.icerik-alani h2.kutu-baslik.kutu-baslik-tick > span[aria-hidden="true"]:
     font-weight: 700;
     line-height: 1;
     color: #ffffff;
-    background-color: #e30613;
+    background-color: #bd0505;
     border-radius: 50%;
 }
 
