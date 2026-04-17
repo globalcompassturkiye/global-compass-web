@@ -65,11 +65,10 @@
     text-align: center;
 }
 
-/* Hero başlık: style.css --h1-font-size (sınıfsız h1) */
+/* Hero başlık: global h1 (style.css) */
 .blog-yazi-yaz-kampi-mag .yk-mag-hero h1 {
     font-family: "Poppins", sans-serif;
     font-weight: 700;
-    font-size: var(--h1-px, 28px);
     line-height: 1.25;
     color: #000080;
     margin: 0 0 1.25rem;
@@ -83,16 +82,6 @@
     margin-top: 0.35em;
     width: 100%;
     box-sizing: border-box;
-}
-
-@media (max-width: 501px) {
-    .blog-yazi-yaz-kampi-mag .yk-mag-hero h1 {
-        font-size: var(--h1-px, 28px) !important;
-    }
-
-    .blog-yazi-yaz-kampi-mag .yk-mag-hero h1 .vurgu-renk {
-        font-size: inherit !important;
-    }
 }
 
 /* —— Kamp blokları (numara watermark) —— */

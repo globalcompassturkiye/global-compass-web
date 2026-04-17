@@ -19,10 +19,9 @@
     margin-bottom: 2rem;
 }
 
-/* Blog hub başlığı: sınıfsız h1 — .blog-hero (ana blog) ve .blog-kategori-ust (kategori) */
+/* Blog hub başlığı: sınıfsız h1 — .blog-hero (ana blog) ve .blog-kategori-ust (kategori); boyut style.css h1 */
 .blog-hero h1,
 .blog-kategori-ust h1 {
-    font-size: clamp(1.75rem, 4vw, 2.25rem);
     font-weight: 700;
     color: #1a2332;
     line-height: 1.25;
@@ -528,9 +527,8 @@ body.immerse-education-page .blog-yazi-ana > section.icerik-alani > .cerceve-kut
     opacity: 0.85;
 }
 
-/* Yazı detay: sınıfsız h1 — kapsayıcı .blog-yazi-baslik-wrap */
+/* Yazı detay: sınıfsız h1 — kapsayıcı .blog-yazi-baslik-wrap; boyut style.css h1 */
 .blog-yazi-baslik-wrap > h1 {
-    font-size: var(--h1-px, 28px);
     font-weight: 700;
     color: #000080;
     line-height: 1.25;
@@ -549,16 +547,6 @@ body.immerse-education-page .blog-yazi-ana > section.icerik-alani > .cerceve-kut
 .blog-yazi-baslik-wrap--meta-modern > h1 {
     margin-top: 0;
     margin-bottom: 0.65rem;
-}
-
-@media (max-width: 501px) {
-    .blog-yazi-baslik-wrap > h1 {
-        font-size: var(--h1-px, 28px) !important;
-    }
-
-    .blog-yazi-baslik-wrap > h1 .vurgu-renk {
-        font-size: inherit !important;
-    }
 }
 
 .blog-yazi-meta-satir {

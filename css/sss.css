@@ -10,12 +10,10 @@
 }
 
 article.icerik-alani.sss-sayfa > h1 {
-    font-size: var(--h1-px, 28px) !important;
     line-height: 1.4 !important;
 }
 
 article.icerik-alani.sss-sayfa > h1 > .vurgu-renk {
-    font-size: var(--h1-px, 28px) !important;
     line-height: 1.35 !important;
     color: #bd0505 !important;
 }
