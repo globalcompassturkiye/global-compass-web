@@ -10,12 +10,12 @@
 }
 
 article.icerik-alani.sss-sayfa > h1 {
-    font-size: var(--h1-font-size) !important;
+    font-size: var(--h1-px, 28px) !important;
     line-height: 1.4 !important;
 }
 
 article.icerik-alani.sss-sayfa > h1 > .vurgu-renk {
-    font-size: var(--h1-font-size) !important;
+    font-size: var(--h1-px, 28px) !important;
     line-height: 1.35 !important;
     color: #bd0505 !important;
 }
@@ -72,18 +72,11 @@ header.sss-sayfa-ust-menu .sosyal-medya-alani a img {
     padding: 28px 22px 22px !important;
 }
 
-.sayfa-sss .sss-sss-kutu h2:is(.gri-cerceve-baslik, .sayfa-bolum-basligi),
+.sayfa-sss .sss-sss-kutu h2:is(.gri-cerceve-baslik, .sayfa-bolum-basligi, .kutu-baslik),
 .sayfa-sss .sss-sss-kutu h2.sss-baslik {
     text-align: center !important;
     color: #0f172a !important;
     margin: 0 0 15px 0 !important;
-}
-
-@media (max-width: 501px) {
-    .sayfa-sss .sss-sss-kutu h2:is(.gri-cerceve-baslik, .sayfa-bolum-basligi),
-    .sayfa-sss .sss-sss-kutu h2.sss-baslik {
-        font-size: 1.25rem !important;
-    }
 }
 
 .sayfa-sss .sss-sss-kutu .sss-alani {
@@ -254,20 +247,23 @@ h1 .h1-vurgu {
 .sss-item {
     border: 0 solid transparent;
     margin-bottom: 12px;
-    padding: 12px 15px;
+    padding: 10px 10px 12px;
     background: #ffffff;
 }
 
-/* Soru (Summary) Ayarları */
+/* Soru (Summary) Ayarları — 501px–1920px: 14px↔16px kalın(700); alt/üst clamp */
+/* Aralık: 1920 - 501 = 1419; eğim: 2px / 1419 */
 .sss-item summary { 
     cursor: pointer; 
     list-style: none; 
-    padding-left: 30px; 
+    padding-left: 1.35rem;
     position: relative; 
     outline: none;
     display: flex;
     align-items: center;
-    font-size: 16px;
+    justify-content: flex-start;
+    text-align: left;
+    font-size: clamp(14px, calc(14px + (100vw - 501px) * 2 / 1419), 16px);
     font-weight: 700;
     color: #000000;
     background-color: #ffffff;
@@ -289,7 +285,7 @@ h1 .h1-vurgu {
 .sss-item summary::before { 
     content: "▼"; 
     position: absolute; 
-    left: 5px; 
+    left: 2px; 
     color: #000000;
     font-size: 12px;
     top: 50%; 
@@ -302,17 +298,61 @@ h1 .h1-vurgu {
     transform: translateY(-50%) rotate(180deg);
 }
 
+/* Çerçeve içi SSS: soru ve cevap, h2 ile aynı yatay iç kenar (cerceve-kutu sol padding) */
+.cerceve-kutu .sss-alani,
+.site-gri-cerceve-kutu .sss-alani {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.cerceve-kutu .sss-item,
+.site-gri-cerceve-kutu .sss-item {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.cerceve-kutu .sss-item summary,
+.site-gri-cerceve-kutu .sss-item summary {
+    padding-left: 0;
+    padding-right: 0;
+    gap: 0.4rem;
+    align-items: flex-start;
+}
+
+.cerceve-kutu .sss-item summary::before,
+.site-gri-cerceve-kutu .sss-item summary::before {
+    position: static;
+    left: auto;
+    top: auto;
+    transform: none;
+    margin-top: 0.2em;
+    align-self: flex-start;
+    flex-shrink: 0;
+}
+
+.cerceve-kutu .sss-item[open] summary::before,
+.site-gri-cerceve-kutu .sss-item[open] summary::before {
+    transform: rotate(180deg);
+}
+
+.cerceve-kutu .sss-icerik p,
+.site-gri-cerceve-kutu .sss-icerik p {
+    padding-left: 0;
+    padding-right: 0;
+}
+
 /* Soru ile Cevap Arasındaki Alan */
 .sss-icerik p {
     padding-top: 15px;
     padding-bottom: 5px;
     color: #555;
-    font-size: 15px;
+    font-size: clamp(14px, calc(14px + (100vw - 501px) * 2 / 1419), 16px);
+    line-height: 1.7;
     border-top: 1px solid #f4f4f4; 
     margin-top: 10px;
     background: #ffffff;
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 8px;
+    padding-right: 10px;
 }
 
 /* Cevap kutusu (.sss-icerik): tüm içerik için arka plan beyaz */
@@ -366,8 +406,7 @@ h1 .h1-vurgu {
         margin-top: 0; /* Başlık-1. soru arası style.css padding-top ile belirlenir */
     }
     .sss-item summary {
-        padding-left: 25px;
-        font-size: 15px;
+        padding-left: 1.2rem;
     }
     .sss-item summary::before {
         font-size: 10px;
@@ -380,5 +419,13 @@ h1 .h1-vurgu {
     .sss-gri-kutu {
         padding-top: 1.25rem !important;
         margin-top: 45px !important;
+    }
+}
+
+/* SSS akordeon — 501px altı: clamp zaten min 14px; dar ekranda satır aralığı */
+@media (max-width: 501px) {
+    .sayfa-sss .sss-icerik p,
+    .sss-icerik p {
+        line-height: 1.65;
     }
 }

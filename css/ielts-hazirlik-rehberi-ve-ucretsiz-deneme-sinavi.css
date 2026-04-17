@@ -8,7 +8,7 @@
 
 .ielts-blog-yazi .blog-yazi-icerik > h1 {
     font-family: "Poppins", sans-serif;
-    font-size: var(--h1-font-size);
+    font-size: var(--h1-px, 28px);
     line-height: 1.25;
     margin: 0.4rem 0 0.65rem;
     text-align: center;

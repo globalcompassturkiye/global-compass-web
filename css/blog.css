@@ -530,7 +530,7 @@ body.immerse-education-page .blog-yazi-ana > section.icerik-alani > .cerceve-kut
 
 /* Yazı detay: sınıfsız h1 — kapsayıcı .blog-yazi-baslik-wrap */
 .blog-yazi-baslik-wrap > h1 {
-    font-size: var(--h1-font-size);
+    font-size: var(--h1-px, 28px);
     font-weight: 700;
     color: #000080;
     line-height: 1.25;
@@ -553,7 +553,7 @@ body.immerse-education-page .blog-yazi-ana > section.icerik-alani > .cerceve-kut
 
 @media (max-width: 501px) {
     .blog-yazi-baslik-wrap > h1 {
-        font-size: var(--h1-font-size) !important;
+        font-size: var(--h1-px, 28px) !important;
     }
 
     .blog-yazi-baslik-wrap > h1 .vurgu-renk {
