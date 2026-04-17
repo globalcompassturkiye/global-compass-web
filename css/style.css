@@ -850,11 +850,11 @@ body.sayfa-chantemerle .chantemerle-giris-metni {
         gap: 12px;
     }
 
-    .chantemerle-galeri-grid .chantemerle-galeri-gorsel:nth-child(n) {
+    .chantemerle-galeri-grid > .galeri-oge:nth-child(n) {
         grid-column: auto;
     }
 
-    .chantemerle-galeri-grid .chantemerle-galeri-gorsel:nth-child(7) {
+    .chantemerle-galeri-grid > .galeri-oge:nth-child(7) {
         grid-column: 1 / -1;
         justify-self: center;
         width: min(100%, calc((100% - 12px) / 2));
@@ -4025,7 +4025,7 @@ article.icerik-alani .cerceve-kutu.japan-tercih-bolumu > h2.kutu-baslik + p + .r
 .alpadia-h3-ozel { margin: 20px 0 12px; font-size: 1.1em; color: #111827; }
 
 .alpadia-galeri-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-.alpadia-galeri-gorsel { width: 100%; height: 200px; object-fit: cover; }
+.alpadia-galeri-grid .galeri-oge img { width: 100%; height: 200px; object-fit: cover; }
 
 body.sayfa-alpadia-frankfurt .immerse-detay-kutu .immerse-detay-kart h3 {
     border-bottom: 1px solid #d1d5db;
@@ -4053,7 +4053,7 @@ body.sayfa-alpadia-freiburg .immerse-detay-kutu .alpadia-program-detay-grid .imm
 
 body.sayfa-alpadia-frankfurt .immerse-detay-kutu .alpadia-program-detay-grid .immerse-detay-kart:nth-child(-n+6),
 body.sayfa-alpadia-freiburg .immerse-detay-kutu .alpadia-program-detay-grid .immerse-detay-kart:nth-child(-n+6),
-.chantemerle-galeri-grid .chantemerle-galeri-gorsel:nth-child(-n + 4),
+.chantemerle-galeri-grid > .galeri-oge:nth-child(-n + 4),
 .almanya-avantaj-grid-3-2 > .rozet-kart:nth-child(1), .almanya-avantaj-grid-3-2 > .rozet-kart:nth-child(2), .almanya-avantaj-grid-3-2 > .rozet-kart:nth-child(3),
 body.sayfa-swiss-education-academy .immerse-detay-kutu .sea-program-detay-grid > .immerse-detay-kart:nth-child(-n+6) {
     grid-column: span 2;
@@ -4153,7 +4153,7 @@ body.sayfa-kvkk-aydinlatma .kvkk-metin-kutu,
     margin-top: 24px;
 }
 .alpadia-mt12 { margin-top: 12px; }
-.alpadia-galeri-gorsel { width: 100%; height: 200px; object-fit: cover; }
+.alpadia-galeri-grid .galeri-oge img { width: 100%; height: 200px; object-fit: cover; }
 
 @media (max-width: 767px) {
 body.sayfa-alpadia-freiburg .alpadia-galeri-grid {
@@ -4162,7 +4162,7 @@ body.sayfa-alpadia-freiburg .alpadia-galeri-grid {
         gap: 12px;
     }
 
-    body.sayfa-alpadia-freiburg .alpadia-galeri-grid .alpadia-galeri-gorsel {
+    body.sayfa-alpadia-freiburg .alpadia-galeri-grid .galeri-oge img {
         width: 100%;
         min-width: 0;
         height: 160px;
@@ -5116,24 +5116,27 @@ body.sayfa-swiss-education-academy .immerse-detay-kutu .immerse-detay-grid.sea-p
     align-items: stretch;
 }
 
-.chantemerle-galeri-gorsel {
-    display: block;
-    width: 100%;
+.chantemerle-galeri-grid > .galeri-oge {
     aspect-ratio: 4 / 3;
-    height: auto;
+}
+
+.chantemerle-galeri-grid > .galeri-oge img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
-.chantemerle-galeri-grid .chantemerle-galeri-gorsel:nth-child(5),
+
+.chantemerle-galeri-grid > .galeri-oge:nth-child(5),
 .almanya-avantaj-grid-3-2 > .rozet-kart:nth-child(4) {
     grid-column: 2 / span 2;
 }
 
-.chantemerle-galeri-grid .chantemerle-galeri-gorsel:nth-child(6),
+.chantemerle-galeri-grid > .galeri-oge:nth-child(6),
 .almanya-avantaj-grid-3-2 > .rozet-kart:nth-child(5) {
     grid-column: 4 / span 2;
 }
 
-.chantemerle-galeri-grid .chantemerle-galeri-gorsel:nth-child(7) {
+.chantemerle-galeri-grid > .galeri-oge:nth-child(7) {
     grid-column: 6 / span 2;
 }
 
@@ -7057,19 +7060,30 @@ body.sayfa-yurt-disi-yaz-okullari-italy .yaz-okullari-ulke-kart[href*="italy/mil
     gap: 14px;
 }
 
-.kings-galeri-oge {
+/* Cerçeve içi galeri — tek öğe sınıfı: figure veya li kapsayıcısı */
+.galeri-oge {
     margin: 0;
     overflow: hidden;
     border: 0 solid transparent;
+    border-radius: 8px;
     background: #f9fafb;
 }
 
-.kings-galeri-oge img {
+.galeri-oge img {
     display: block;
     width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.kings-galeri-grid .galeri-oge img {
     height: 100%;
     max-height: 220px;
-    object-fit: cover;
+}
+
+.futbol-galeri-item.galeri-oge img {
+    height: 100%;
+    max-height: none;
 }
 
 .sayfa-kings-education .kings-hero-alt-baslik {
@@ -9236,7 +9250,7 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     min-width: 0;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-konaklama-galeri img {
+body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-konaklama-galeri .galeri-oge img {
     width: 100%;
     height: auto;
     aspect-ratio: 4 / 3;
@@ -10134,6 +10148,20 @@ body.ana-sayfa .hizmet-tab-alani .alt-panel .tab-ic-icerik {
 
 .tab-metin h3 { font-size: 22px; margin-bottom: 10px; font-weight: 700; }
 .tab-metin p { color: #666; font-size: 14px; margin-bottom: 20px; }
+
+body.ana-sayfa .hizmet-tab-alani .tab-metin .tab-kategori-ozet {
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+body.ana-sayfa .hizmet-tab-alani .tab-metin .tab-kategori-ozet a {
+    color: #bd0505;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+}
+body.ana-sayfa .hizmet-tab-alani .tab-metin .tab-kategori-ozet a:hover {
+    text-decoration: underline;
+}
 
 body.ana-sayfa .hizmet-tab-alani .tab-metin h2,
 body.ana-sayfa .hizmet-tab-alani .tab-metin h3 {
