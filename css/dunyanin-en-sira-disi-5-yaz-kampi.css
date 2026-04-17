@@ -15,11 +15,9 @@
     --yk-krem: #faf8f5;
     --yk-duman: #e8eef6;
     --yk-vurgu: #f4f0eb;
-    font-family: "Poppins", sans-serif;
 }
 
 .blog-yazi-yaz-kampi-mag .yk-mag-wrap p {
-    font-family: "Poppins", sans-serif;
     font-size: 15px;
     line-height: 1.7;
     color: #2d3748;
@@ -67,7 +65,6 @@
 
 /* Hero başlık: global h1 (style.css) */
 .blog-yazi-yaz-kampi-mag .yk-mag-hero h1 {
-    font-family: "Poppins", sans-serif;
     font-weight: 700;
     line-height: 1.25;
     color: #000080;
@@ -100,7 +97,6 @@
     position: absolute;
     left: -0.15em;
     top: 0.05em;
-    font-family: "Poppins", sans-serif;
     font-size: clamp(4.5rem, 14vw, 7.5rem);
     font-weight: 700;
     line-height: 1;
@@ -164,7 +160,6 @@
 }
 
 .blog-yazi-yaz-kampi-mag .yk-mag-kamp h2 {
-    font-family: "Poppins", sans-serif;
     font-size: clamp(1.15rem, 2.4vw, 1.45rem);
     font-weight: 700;
     line-height: 1.3;
@@ -226,7 +221,6 @@
 }
 
 .blog-yazi-yaz-kampi-mag .yk-mag-fig-metin .yk-mag-fig-cap {
-    font-family: "Poppins", sans-serif;
     font-size: 13px;
     font-weight: 600;
     color: #64748b;
@@ -237,7 +231,6 @@
 }
 
 .blog-yazi-yaz-kampi-mag .yk-mag-fig-metin > p:not(.yk-mag-fig-cap) {
-    font-family: "Poppins", sans-serif;
     font-size: 15px;
     line-height: 1.7;
     color: #2d3748;
@@ -277,7 +270,6 @@
 }
 
 .blog-yazi-yaz-kampi-mag .yk-mag-neden h2 {
-    font-family: "Poppins", sans-serif;
     font-size: 1.35rem;
     font-weight: 700;
     color: var(--yk-lacivert-soft);
@@ -300,7 +292,6 @@
     gap: 0.75rem;
     align-items: flex-start;
     margin-bottom: 0.85rem;
-    font-family: "Poppins", sans-serif;
     font-size: 15px;
     line-height: 1.65;
     color: #334155;
@@ -325,7 +316,6 @@
 
 /* Sayfa gövdesi (breadcrumb, meta, yan panel, içindekiler): tek aile Poppins */
 body.blog-yazi-yaz-kampi-mag .icerik-alani.blog-yazi-detay {
-    font-family: "Poppins", sans-serif;
 }
 
 /* Alt yönlendirme: iki CTA (Dil Okulları / Yaz Okulları) */

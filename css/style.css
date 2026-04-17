@@ -2290,7 +2290,6 @@ article.icerik-alani .kings-kampus-olani-sol ul.kutu-liste.yas-alan-etiketleri l
     margin: 0;
     line-height: 1.35;
     font-weight: 700;
-    font-family: "Poppins", sans-serif;
     color: #0f172a;
     text-align: center;
 }
@@ -3204,7 +3203,6 @@ article.icerik-alani > h2:has(> .vurgu-satir) > .vurgu-satir .vurgu-renk, .iceri
     font-size: 22px;
     font-weight: 900;
     color: #e0e0e0;
-    font-family: "Poppins", sans-serif;
 }.ayrac-dikey,
 .okul-listesi-ayrac-dikey {
     width: 1px;
@@ -4402,7 +4400,6 @@ body.ana-sayfa .ana-tab-cerceve-ust-bant {
 
 body.ana-sayfa .ana-tab-cerceve-ust-bant-baslik {
     margin: 0;
-    font-family: "Poppins", sans-serif;
     font-weight: 700;
     color: #0f172a;
     text-align: center;
@@ -4792,7 +4789,6 @@ body.sayfa-chantemerle .chantemerle-program-ozet-liste {
 body.sayfa-chantemerle .chantemerle-program-ozet-liste li {
     position: relative;
     padding: 0.35rem 0 0.35rem 1.45rem;
-    font-family: "Poppins", sans-serif;
     font-size: 15px;
     line-height: 1.55;
     color: #1f2937;
@@ -4973,7 +4969,6 @@ body.sayfa-swiss-education-academy .immerse-detay-kutu .immerse-detay-grid.sea-p
     font-weight: 700;
     line-height: 1.35;
     color: #000080;
-    font-family: "Poppins", sans-serif;
 }.frankfurt-dil-program-bolumu .frankfurt-dil-program-kart p,
 .frankfurt-sosyal-kultur-bolumu .frankfurt-sosyal-kultur-kart p {
     margin: 0 0 12px 0;
@@ -5033,7 +5028,6 @@ body.sayfa-swiss-education-academy .immerse-detay-kutu .immerse-detay-grid.sea-p
     font-weight: 700;
     line-height: 1.35;
     color: #000080;
-    font-family: "Poppins", sans-serif;
 }
 
 .frankfurt-dil-program-bolumu .frankfurt-dil-program-ic-kart p {
@@ -6229,7 +6223,6 @@ body.sayfa-yurt-disi-yaz-okullari-japan-tokyo-immerse-education #tokyo-immerse-m
     font-size: 16px;
     line-height: 1.35;
     color: #0f766e;
-    font-family: "Poppins", sans-serif;
 }
 
 .immerse-konaklama-kutu .toronto-konaklama-yurt-rozet-grid {
@@ -8101,7 +8094,6 @@ body.sayfa-kings-education-new-york .kings-la-hollywood-ozet-grid {
 
 body.sayfa-kings-education-los-angeles .kings-la-hollywood-ozet-kart,
 body.sayfa-kings-education-new-york .kings-la-hollywood-ozet-kart {
-    font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 14px 16px 16px 18px;
     background: #f8fafc;
@@ -9471,7 +9463,6 @@ body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .sportech-program-icerik
         0 8px 20px rgba(15, 23, 42, 0.08);
     box-sizing: border-box;
     overflow: hidden;
-    font-family: "Poppins", sans-serif;
     cursor: default;
 }
 
@@ -9580,7 +9571,6 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
 
 body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-giris-alt-baslik {
     margin: 0.65rem 0 1rem 0;
-    font-family: "Poppins", sans-serif;
     font-size: clamp(1.05rem, 2.4vw, 1.3rem);
     font-weight: 600;
     line-height: 1.4;
@@ -9600,7 +9590,6 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
 
 body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-giris-vurgu-etiket {
     margin: 0 0 0.45rem 0;
-    font-family: "Poppins", sans-serif;
     font-size: 0.72rem;
     font-weight: 700;
     letter-spacing: 0.1em;
@@ -9611,7 +9600,6 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
 
 body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-giris-vurgu-metin {
     margin: 0;
-    font-family: "Poppins", sans-serif;
     font-size: 15px;
     line-height: 1.7;
     color: #1e293b;
@@ -9638,7 +9626,6 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
 
 body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-tesis-etkinlik-bolumu .sbc-canford-tesisler-kart > h3,
 body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-tesis-etkinlik-bolumu .sbc-canford-etkinlikler-kart > h3 {
-    font-family: "Poppins", sans-serif;
     font-size: 16px;
     font-weight: 700;
     line-height: 1.35;
@@ -9670,7 +9657,6 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
 }
 
 body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-konaklama-metin p {
-    font-family: "Poppins", sans-serif;
     font-size: 15px;
     line-height: 1.7;
     color: #334155;
@@ -9724,7 +9710,6 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     overflow: hidden;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
     min-height: 0;
 }
 
@@ -9833,7 +9818,6 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
 }
 
 body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-tesis-etiket-yaprak {
-    font-family: "Poppins", sans-serif;
     font-size: 13px;
     font-weight: 500;
     color: #0f172a;
@@ -9877,7 +9861,6 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     box-shadow: 0 4px 24px rgba(15, 23, 42, 0.08);
     border: 0 solid transparent;
     transition: transform 0.22s ease, box-shadow 0.22s ease;
-    font-family: "Poppins", sans-serif;
 }
 
 body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-course-card:hover {
@@ -9917,7 +9900,6 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     justify-content: center;
     width: 36px;
     height: 36px;
-    font-family: "Poppins", sans-serif;
     font-size: 15px;
     font-weight: 700;
     line-height: 1;
@@ -10042,7 +10024,6 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     padding: 0;
     box-shadow: 0 2px 12px rgba(15, 23, 42, 0.06);
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
     transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
     overflow: hidden;
     min-height: min-content;
@@ -10157,7 +10138,6 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     width: 100%;
     min-width: 560px;
     border-collapse: collapse;
-    font-family: "Poppins", sans-serif;
     font-size: 14px;
 }
 
@@ -10196,7 +10176,6 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     list-style: disc;
     margin: 12px 0 0 0;
     padding-left: 1.35em;
-    font-family: "Poppins", sans-serif;
 }
 
 body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-sss-dahil-liste li {
@@ -10834,7 +10813,6 @@ body.sayfa-yurt-disi-burs-firsatlari .kutu-liste-sirali span {
 .yaz-okullari-secim-paneli .kirmizi-kutu h2.program-secim-hub-baslik {
     margin: 0;
     padding: 0;
-    font-family: "Poppins", sans-serif;
     font-size: inherit;
     font-weight: 700;
     line-height: 1.35;
@@ -10882,7 +10860,6 @@ article.icerik-alani > h2:not(.kutu-baslik) > span:not(.vurgu-satir),
     margin: 0;
     font-size: var(--sayfa-bolum-baslik-font-size);
     font-weight: 700;
-    font-family: "Poppins", sans-serif;
     line-height: 1.35;
 }
 
@@ -10909,7 +10886,6 @@ article.icerik-alani > h2:has(> .vurgu-satir),
     margin-left: auto;
     margin-right: auto;
     padding: 0;
-    font-family: "Poppins", sans-serif;
     font-size: var(--sayfa-bolum-baslik-font-size);
     font-weight: 700;
     line-height: 1.35;
@@ -10930,7 +10906,6 @@ article.icerik-alani > h2:has(> .vurgu-satir),
     padding: 0;
     position: relative;
     z-index: 2;
-    font-family: "Poppins", sans-serif;
     font-size: var(--sayfa-bolum-baslik-font-size);
     font-weight: 700;
     line-height: 1.35;
@@ -11247,7 +11222,6 @@ a.yaz-standart-yesil-buton {
     font-weight: 600;
     font-size: 0.95rem;
     text-decoration: none;
-    font-family: "Poppins", sans-serif;
     transition: background 0.2s ease, transform 0.15s ease;
     border: none;
     box-sizing: border-box;
@@ -11515,7 +11489,6 @@ body.oxford-royale-cambridge-sayfa .ora-daha-fazla-aktivite-kart {
 }
 
 .london-icerik-grid-pilot-kutu .london-pilot-grid-baslik {
-    font-family: "Poppins", sans-serif;
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 0.06em;
@@ -11538,7 +11511,6 @@ article.icerik-alani h2.kutu-baslik.kutu-baslik-tick > span[aria-hidden="true"]:
     width: 28px;
     height: 28px;
     margin-top: 0.06em;
-    font-family: "Poppins", sans-serif;
     font-size: 14px;
     font-weight: 700;
     line-height: 1;
@@ -11821,7 +11793,6 @@ body.sayfa-yurt-disi-lise .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wra
         background-color 0.3s ease;
     box-sizing: border-box;
     overflow: hidden;
-    font-family: "Poppins", sans-serif;
 }
 
 .yaz-okullari-secim-paneli a.yaz-okullari-ulke-kart:hover,
@@ -12060,7 +12031,7 @@ article.icerik-alani :is(
 }
 
 h2 {
-    font-family: "Poppins", sans-serif !important;
+    font-family: inherit !important;
     font-size: var(--h2-font-size) !important;
     font-weight: 700 !important;
     line-height: 1.35 !important;

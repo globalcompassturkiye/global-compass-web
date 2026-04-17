@@ -1,13 +1,5 @@
 /* İsviçre Lise Diploması vs IB — blog yazısı özel düzen */
 
-body.blog-yazi-isvicre-ib article.blog-yazi-detay {
-    font-family: "Poppins", system-ui, sans-serif;
-}
-
-body.blog-yazi-isvicre-ib .blog-yazi-baslik-wrap .blog-yazi-meta-alt {
-    font-family: "Poppins", system-ui, sans-serif;
-}
-
 .isvicre-blog-hero {
     background: linear-gradient(180deg, #f1f5f9 0%, #e8eef5 100%);
     border: 0 solid transparent;
@@ -18,12 +10,8 @@ body.blog-yazi-isvicre-ib .blog-yazi-baslik-wrap .blog-yazi-meta-alt {
 }
 
 /* H1: diğer blog yazılarıyla aynı — blog.css .blog-yazi-baslik-wrap > h1 */
-body.blog-yazi-isvicre-ib .blog-yazi-baslik-wrap > h1 {
-    font-family: "Poppins", system-ui, sans-serif;
-}
 
 .isvicre-blog-hero-lead {
-    font-family: "Poppins", system-ui, sans-serif;
     font-size: 1.08rem;
     line-height: 1.75;
     color: #334155;
@@ -71,7 +59,6 @@ body.blog-yazi-isvicre-ib .blog-yazi-baslik-wrap > h1 {
 }
 
 .isvicre-karsilastirma-kart-baslik {
-    font-family: "Poppins", system-ui, sans-serif;
     font-size: 1.125rem;
     font-weight: 700;
     line-height: 1.35;
@@ -113,7 +100,6 @@ body.blog-yazi-isvicre-ib .blog-yazi-baslik-wrap > h1 {
 
 /* Satır içi etiket (ör. "Devlet Üniversitelerine Doğrudan Geçiş:") */
 .isvicre-satir-ici-baslik {
-    font-family: "Poppins", system-ui, sans-serif;
     font-weight: 700;
     font-size: 15px;
     line-height: 1.5;
@@ -150,7 +136,6 @@ body.blog-yazi-isvicre-ib .blog-yazi-baslik-wrap > h1 {
 }
 
 .isvicre-bilgi-notu-baslik {
-    font-family: "Poppins", system-ui, sans-serif;
     font-size: 14.5px;
     font-weight: 700;
     line-height: 1.4;
@@ -159,7 +144,6 @@ body.blog-yazi-isvicre-ib .blog-yazi-baslik-wrap > h1 {
 }
 
 .isvicre-bilgi-notu p {
-    font-family: "Poppins", system-ui, sans-serif;
     margin: 0;
     font-size: 15px;
     line-height: 1.7;
@@ -172,7 +156,6 @@ body.blog-yazi-isvicre-ib .blog-yazi-baslik-wrap > h1 {
 }
 
 .isvicre-strateji-baslik {
-    font-family: "Poppins", system-ui, sans-serif;
     font-size: clamp(1.2rem, 2.5vw, 1.45rem);
     font-weight: 700;
     color: #0f172a;
@@ -188,7 +171,6 @@ body.blog-yazi-isvicre-ib .blog-yazi-baslik-wrap > h1 {
 }
 
 .isvicre-strateji-paragraflar p {
-    font-family: "Poppins", system-ui, sans-serif;
     margin: 0 0 1rem;
     font-size: 15px;
     line-height: 1.7;
@@ -210,7 +192,6 @@ body.blog-yazi-isvicre-ib .blog-yazi-baslik-wrap > h1 {
 }
 
 .isvicre-danisman-paneli-baslik {
-    font-family: "Poppins", system-ui, sans-serif;
     font-size: clamp(1.2rem, 2.5vw, 1.4rem);
     font-weight: 700;
     color: #0f172a;
