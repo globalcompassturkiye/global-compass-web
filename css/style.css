@@ -11563,16 +11563,6 @@ body.sayfa-yurt-disi-dil-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-
         grid-template-columns: repeat(2, minmax(0, 192px));
     }
 
-body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > a.yaz-okullari-ulke-kart:nth-child(6n + 1) {
-        border-top-left-radius: 15px;
-        border-bottom-left-radius: 15px;
-    }
-
-    body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > a.yaz-okullari-ulke-kart:nth-child(6n),
-    body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > a.yaz-okullari-ulke-kart:nth-last-child(1) {
-        border-top-right-radius: 15px;
-        border-bottom-right-radius: 15px;
-    }
 }
 
 body.sayfa-yurt-disi-dil-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap {
@@ -11702,15 +11692,17 @@ body.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > a.yaz-o
     }
 }
 
-@media (min-width: 768px) and (max-width: 1439px) {
-body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > a.yaz-okullari-ulke-kart:nth-child(4n + 1) {
+@media (min-width: 768px) {
+body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > a:nth-child(1) {
         border-top-left-radius: 15px;
+    }
+body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > a:nth-child(4) {
+        border-top-right-radius: 15px;
+    }
+body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > a:nth-child(5) {
         border-bottom-left-radius: 15px;
     }
-
-    body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > a.yaz-okullari-ulke-kart:nth-child(4n),
-    body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > a.yaz-okullari-ulke-kart:nth-last-child(1) {
-        border-top-right-radius: 15px;
+body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > a:nth-last-child(1) {
         border-bottom-right-radius: 15px;
     }
 }
