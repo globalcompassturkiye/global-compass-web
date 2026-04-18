@@ -213,7 +213,7 @@
 .isvicre-danisman-paneli-cta-satiri {
     margin-top: 1.25rem;
     padding-top: 1.15rem;
-    border-top: 1px solid #e2e8f0;
+    border-top: 1px solid var(--site-kart-kenar);
 }
 
 .isvicre-danisman-paneli .blog-buton-birincil {

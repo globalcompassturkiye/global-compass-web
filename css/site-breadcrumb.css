@@ -61,7 +61,7 @@
     font-weight: 500;
     padding: 6px 5px;
     min-height: 32px;
-    border: 1px solid #d1d5db;
+    border: 1px solid var(--site-kart-kenar, #ffffff);
     transition: all 0.3s ease;
     white-space: normal;
     overflow-wrap: anywhere;
@@ -112,7 +112,7 @@
     text-decoration: none;
     font-size: 13px;
     font-weight: 500;
-    border: 1px solid #d1d5db;
+    border: 1px solid var(--site-kart-kenar, #ffffff);
     transition: all 0.3s ease;
     padding: 5px 6px !important;
     flex-shrink: 0;
@@ -164,7 +164,7 @@
         font-weight: 500;
         text-decoration: none !important;
         color: #000080 !important; /* Senin lacivertin */
-        border: 1px solid #d1d5db;
+        border: 1px solid var(--site-kart-kenar, #ffffff);
         white-space: normal !important;
         overflow-wrap: anywhere;
         word-wrap: break-word;

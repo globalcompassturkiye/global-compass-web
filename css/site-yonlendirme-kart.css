@@ -106,7 +106,7 @@
     text-transform: uppercase;
     letter-spacing: 0.5px;
     padding-bottom: 5px;
-    border-bottom: 2px solid #eee; /* Varsayılan silik çizgi */
+    border-bottom: 2px solid var(--site-kart-kenar, #ffffff); /* Varsayılan: beyaz çerçeve */
     transition: 0.3s; 
     align-self: flex-start; /* Sadece metin kadar yer kaplar */
 }

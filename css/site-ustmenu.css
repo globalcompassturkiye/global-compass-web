@@ -155,7 +155,7 @@ body.ana-sayfa {
 }
 .ana-sayfa .ust-menu {
     background: #ffffff;
-    border-bottom: 1px solid #eeeeee;
+    border-bottom: 1px solid var(--site-kart-kenar, #ffffff);
     padding: 0;
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.04);
 }
@@ -259,7 +259,7 @@ body.ana-sayfa {
     width: 100%;
     margin: 0 auto;
     padding: 0 0 0 0;
-    border-top: 1px solid #eee;
+    border-top: 1px solid var(--site-kart-kenar, #ffffff);
     margin-top: 0;
     box-sizing: border-box;
     background-color: #ffffff;
@@ -365,7 +365,7 @@ body.ana-sayfa {
     min-width: 180px;
     background: #fff;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-    border: 1px solid #eee;
+    border: 1px solid var(--site-kart-kenar, #ffffff);
     opacity: 0;
     visibility: hidden;
     transform: translateY(-3px);

@@ -60,7 +60,7 @@
 
 /* Giriş metni + form alanları — h2’nin dışında, beyaz kart */
 .iletisim-form-alani .iletisim-form-beyaz-cerceve {
-    --iletisim-kart-kenar: var(--site-kart-kenar, #e2e8f0);
+    --iletisim-kart-kenar: var(--site-kart-kenar, #ffffff);
     --iletisim-kart-golge: var(
         --site-kart-golge,
         0 4px 6px -1px rgba(15, 23, 42, 0.06),
