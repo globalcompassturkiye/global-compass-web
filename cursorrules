@@ -371,10 +371,10 @@ Her sayfada şu CSS dosyaları yüklenmelidir:
 </section>
 ```
 
-### Kurs Detay Kutusu
+### Kings program kartı (icerik-kutusu)
 ```html
 <section class="icerik-alani">
-    <div class="cerceve-kutu kurs-detay-kutu">
+    <div class="cerceve-kutu icerik-kutusu">
         <h2 class="kutu-baslik">Kurs Adı</h2>
         <div class="kurs-icerik-esnek">
             <div class="kurs-teknik-bilgi">

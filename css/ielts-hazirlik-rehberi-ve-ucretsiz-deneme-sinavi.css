@@ -51,7 +51,7 @@
 
 .ielts-bolum-kart h3 {
     margin: 0 0 0.55rem;
-    font-size: 1.02rem;
+    font-size: var(--h3-font-size);
     line-height: 1.35;
 }
 

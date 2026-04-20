@@ -326,19 +326,19 @@ article.blog-ana-sayfa .blog-kart-gorsel-link {
     text-decoration: none;
 }
 
-.blog-kart-baslik {
+.blog-yazi-karti .blog-kart-icerik h2 {
     font-size: 1.05rem;
     font-weight: 700;
     line-height: 1.35;
     margin-bottom: 0.5rem;
 }
 
-.blog-kart-baslik a {
+.blog-yazi-karti .blog-kart-icerik h2 a {
     color: #0f172a;
     text-decoration: none;
 }
 
-.blog-kart-baslik a:hover {
+.blog-yazi-karti .blog-kart-icerik h2 a:hover {
     color: #c41e3a;
 }
 
@@ -594,12 +594,15 @@ body.immerse-education-page .blog-yazi-ana > section.icerik-alani > .cerceve-kut
     margin-bottom: 1rem;
 }
 
+/* Faz 0: Blog yazı gövdesi site geneli `h2 { … !important }` (style.css) dışında; aynı özgüllük+!important ile korunur */
 .blog-yazi-icerik h2 {
-    font-size: 1.35rem;
-    font-weight: 700;
-    color: #000000;
-    margin: 2rem 0 0.75rem;
-    line-height: 1.35;
+    font-family: inherit !important;
+    font-size: 1.35rem !important;
+    font-weight: 700 !important;
+    line-height: 1.35 !important;
+    letter-spacing: normal !important;
+    color: #000000 !important;
+    margin: 2rem 0 0.75rem !important;
     scroll-margin-top: calc(var(--site-header-offset, 122px) + 0.5rem);
 }
 

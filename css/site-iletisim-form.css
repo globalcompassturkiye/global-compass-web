@@ -77,7 +77,7 @@
     padding: 28px 28px 32px;
 }
 
-/* İki satırlı h2 — hub’daki program-secim-hub-baslik ile aynı düzen (style.css 4010–4021, 14270–14284) */
+/* İki satırlı h2 — yaz/dil hub bandı (div.program-secim-hub-baslik) ile aynı iki satır düzeni */
 .iletisim-form-alani > .hizmet-alanlari-baslik > h2:has(> .vurgu-satir),
 .iletisim-form-alani .hizmet-alanlari-baslik h2:has(> .vurgu-satir) {
     position: static;

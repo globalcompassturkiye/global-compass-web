@@ -29,8 +29,9 @@
     <link rel="stylesheet" href="/css/site-breadcrumb.css">
     <link rel="stylesheet" href="/css/site-iletisim-form.css">
     <link rel="stylesheet" href="/css/sss.css">
+    <link rel="stylesheet" href="/css/blog.css">
 </head>
-<body class="sayfa-iletisim">
+<body class="sayfa-iletisim blog-yazi-sayfa-mobil-ux">
     <div class="sabit-ust-alan">
         <div class="ust-serit">
             <div class="ust-serit-kapsayici">
@@ -175,13 +176,29 @@
             </div>
         </nav>
 
+        <div class="blog-yazi-tek-sutun blog-yazi-tek-sutun--tam">
+        <div class="blog-yazi-layout blog-yazi-layout--yan-panel">
+        <div class="blog-yazi-ana">
+
         <h1>İletişim<br>
             <span class="vurgu-renk">Bize Nasıl Ulaşabilirsiniz?</span>
         </h1>
         <p class="iletisim-intro">Yurt dışında dil okulu, lise, üniversite, yüksek lisans veya yaz okulu hayallerinizi gerçeğe dönüştürmek için profesyonel destek almaya hazır mısınız?</p>
 
-        <section class="iletisim-yontem-section">
-            <h2 class="iletisim-section-baslik">Eğitim yolculuğunuz için buradayız</h2>
+        <div id="blog-mobil-icindekiler-hedef" class="blog-mobil-icindekiler-wrap">
+            <nav class="blog-mobil-icindekiler-duz" aria-labelledby="iletisim-mobil-icindekiler-baslik">
+                <p class="blog-mobil-icindekiler-duz-baslik" id="iletisim-mobil-icindekiler-baslik">İçindekiler</p>
+                <ul class="blog-icindekiler-liste blog-icindekiler-liste--mobil">
+                    <li><a href="#iletisim-yontem">Eğitim yolculuğunuz için buradayız</a></li>
+                    <li><a href="#iletisim-adres-harita">Adres ve harita</a></li>
+                    <li><a href="#bilgi-istek">Bilgi istek formu</a></li>
+                    <li><a href="#iletisim-sss">Sıkça sorulan sorular</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <section class="iletisim-yontem-section" id="iletisim-yontem" aria-labelledby="iletisim-yontem-baslik">
+            <h2 id="iletisim-yontem-baslik">Eğitim yolculuğunuz için buradayız</h2>
             <div class="iletisim-kartlar">
                 <div class="iletisim-kart iletisim-kart-ofis">
                     <div class="iletisim-kart-ikon">📍</div>
@@ -196,7 +213,7 @@
             </div>
         </section>
 
-        <section class="ofis-harita-section">
+        <section class="ofis-harita-section" id="iletisim-adres-harita" aria-label="Adres ve harita">
             <div class="ofis-harita-kutu">
                 <div class="ofis-adres-alani">
                     <p class="ofis-adres-metin">Kızılay mah. Elgün sok. Tuğaç İş hanı 3. Kat No: 11<br>İç Kapı No: 52 Çankaya Kızılay/Ankara</p>
@@ -255,8 +272,8 @@
             </div>
         </section>
 
-        <div class="cerceve-kutu iletisim-sss-kutu">
-            <h2 class="kutu-baslik">Sıkça Sorulan Sorular</h2>
+        <div class="cerceve-kutu iletisim-sss-kutu" id="iletisim-sss">
+            <h2 id="iletisim-sss-baslik">Sıkça Sorulan Sorular</h2>
             <div class="sss-alani">
                 <details class="sss-item">
                     <summary>1. Ofisinizde yapacağımız yüz yüze görüşmeler ücretsiz mi?</summary>
@@ -277,6 +294,23 @@
                     </div>
                 </details>
             </div>
+        </div>
+
+        </div>
+
+        <aside class="blog-yan-panel" aria-label="Yan menü">
+            <nav class="blog-icindekiler-kutu iletisim-icindekiler-kutu" aria-labelledby="iletisim-masaustu-icindekiler-baslik">
+                <p class="blog-icindekiler-baslik" id="iletisim-masaustu-icindekiler-baslik">İçindekiler</p>
+                <ul class="blog-icindekiler-liste">
+                    <li><a href="#iletisim-yontem">Eğitim yolculuğunuz için buradayız</a></li>
+                    <li><a href="#iletisim-adres-harita">Adres ve harita</a></li>
+                    <li><a href="#bilgi-istek">Bilgi istek formu</a></li>
+                    <li><a href="#iletisim-sss">Sıkça sorulan sorular</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        </div>
         </div>
     </article>
     </main>
@@ -408,5 +442,6 @@
 }
 </script>
 <script src="/js/header-offset.js" defer></script>
+    <a href="#blog-mobil-icindekiler-hedef" class="blog-mobil-icindekiler-sabit-cap" aria-label="İçindekiler bölümüne git"><span class="blog-mobil-icindekiler-sabit-cap-ok" aria-hidden="true">↑</span></a>
 </body>
 </html>

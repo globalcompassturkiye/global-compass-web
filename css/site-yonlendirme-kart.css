@@ -54,7 +54,7 @@
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08); 
 }
 
-/* Yönlendirme üst başlığı: style.css — .okul-liste-kapsayici:has(> .alt-yonlendirme-alani) > h2 (sınıfsız, siyah 700) */
+/* Yönlendirme üst başlığı: .okul-liste-kapsayici:has(> .alt-yonlendirme-alani) > h2 (sınıfsız; mobil sarma style.css) */
 
 /* 501px altı: yönlendirme kartı taşmasın */
 @media (max-width: 501px) {
@@ -64,7 +64,7 @@
     }
 }
 
-/* Yönlendirme: bilgi istek formu ile 50px; üstte .okul-liste-baslik liste çerçevesi içinde (köşeler style.css ile 15px) */
+/* Yönlendirme: bilgi istek formu ile 50px; üstte sınıfsız h2 başlık aynı çerçeve içinde (köşeler style.css ile 15px) */
 .okul-liste-kapsayici:has(> .alt-yonlendirme-alani) {
     margin: 50px auto 25px auto;
     padding: 24px 25px 15px 25px;
@@ -77,14 +77,21 @@
     padding: 12px 0 16px 0;
 }
 
-/* Kart içi başlıklar (nadiren kullanılır) — gövde metni rengi */
+/* Kart içi başlıklar (nadiren kullanılır) — gövde metni rengi; h3: style.css --h3-font-size */
 .yonlendirme-karti h1,
 .yonlendirme-karti h2,
-.yonlendirme-karti h3,
 .yonlendirme-karti h4 {
     color: #333333;
     margin: 0 0 15px 0;
     font-size: 16px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.yonlendirme-karti h3 {
+    color: #333333;
+    margin: 0 0 15px 0;
+    font-size: var(--h3-font-size);
     font-weight: 700;
     text-align: left;
 }
@@ -189,14 +196,20 @@
 @media (max-width: 501px) {
     .okul-liste-kapsayici .yonlendirme-karti h1,
     .okul-liste-kapsayici .yonlendirme-karti h2,
-    .okul-liste-kapsayici .yonlendirme-karti h3,
     .okul-liste-kapsayici .yonlendirme-karti h4,
     .yonlendirme-karti h1,
     .yonlendirme-karti h2,
-    .yonlendirme-karti h3,
     .yonlendirme-karti h4 {
         text-align: left;
         font-size: 15px;
+        line-height: 1.35;
+        overflow-wrap: break-word;
+    }
+
+    .okul-liste-kapsayici .yonlendirme-karti h3,
+    .yonlendirme-karti h3 {
+        text-align: left;
+        font-size: var(--h3-font-size);
         line-height: 1.35;
         overflow-wrap: break-word;
     }

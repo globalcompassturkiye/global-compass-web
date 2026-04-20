@@ -371,10 +371,10 @@ Her sayfada şu CSS dosyaları yüklenmelidir:
 </section>
 ```
 
-### Kurs Detay Kutusu
+### Kings program kartı (icerik-kutusu)
 ```html
 <section class="icerik-alani">
-    <div class="cerceve-kutu kurs-detay-kutu">
+    <div class="cerceve-kutu icerik-kutusu">
         <h2 class="kutu-baslik">Kurs Adı</h2>
         <div class="kurs-icerik-esnek">
             <div class="kurs-teknik-bilgi">
@@ -737,7 +737,7 @@ Her sayfada şu CSS dosyaları yüklenmelidir:
 - `.kings-oxford-beceri-baslik` → Lacivert başlık etiketi
 - `.kings-oxford-beceri-ozet-grid` → Alt 3'lü grid
 - `.kings-oxford-vurgu` → Lacivert bold metin
-- `.kurs-detay-kutu` → Kurs detay gri kutusu
+- `.icerik-kutusu` (Kings program kartı ile birlikte `cerceve-kutu`) → Kurs detay çerçevesi
 - `.kurs-icerik-esnek` → Kurs içerik wrapper
 - `.kurs-teknik-bilgi` → Kırmızı rozet bilgi satırı
 

@@ -70,8 +70,7 @@ header.sss-sayfa-ust-menu .sosyal-medya-alani a img {
     padding: 28px 22px 22px !important;
 }
 
-.sayfa-sss .sss-sss-kutu h2:is(.gri-cerceve-baslik, .sayfa-bolum-basligi, .kutu-baslik),
-.sayfa-sss .sss-sss-kutu h2.sss-baslik {
+.sayfa-sss .sss-sss-kutu h2 {
     text-align: center !important;
     color: #0f172a !important;
     margin: 0 0 15px 0 !important;
@@ -99,7 +98,7 @@ header.sss-sayfa-ust-menu .sosyal-medya-alani a img {
    Site geneli SSS (style.css ile birleştirildi — adım 5)
    ========================================= */
 
-/* h2.gri-cerceve-baslik / sayfa-bolum-basligi + .vurgu-satir → style.css (Aşama 2 tek kaynak) */
+/* Gri kutu h2 + .vurgu-satir → style.css (Aşama 2 tek kaynak) */
 
 /* .sss-item summary h3 — küçük boyut aşağıdaki akordeon bloğunda (inherit) */
 
