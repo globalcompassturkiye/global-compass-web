@@ -13,6 +13,7 @@ alwaysApply: false
 - Sayfadaki **giriş metni** (veya şablondaki tanıtım / hero öncesi intro bloğu) **önce** gelir.
 - **`blog-mobil-icindekiler-wrap`** (içinde `nav.blog-mobil-icindekiler-duz` + aynı yapıda tekrarlanan `div.blog-yan-iletisim-kutu`), bu giriş bloğunun **hemen ardından** gelir (aynı üst içerik akışında). **`blog-yan-iletisim-kutu`** yalnızca **`min-width: 1180px`** iken görünür (`blog.css`); dar ekranda gizlenir, mobilde yalnızca içindekiler `nav` görünür.
 - Ana **`h1`** girişten önce kalır; mobil/tablet kırılımında tek sütunda sıra: **`h1` → giriş → içindekiler →** devam içeriği.
+- **Ara içerik yasağı:** Giriş metni ile `blog-mobil-icindekiler-wrap` arasına başka bölüm (ör. program özeti, çift sütun blok, gömülü form) **konmamalı**. İçindekiler bağlantıları alt satıra kırıldığında da blok, giriş metninin **altında** tam genişlikte kalmalı; bu davranış `blog.css` içinde `@media (max-width: 1179px)` altında `.blog-yazi-sayfa-mobil-ux .blog-mobil-icindekiler-wrap` ve içteki `.blog-mobil-icindekiler-duz` / `.blog-icindekiler-liste` genişlik + `min-width: 0` kurallarıyla desteklenir.
 
 ## Neden
 
@@ -22,6 +23,10 @@ alwaysApply: false
 
 - İki sütun + masaüstü yan panel: **`min-width: 1180px`** (`.blog-yazi-layout--yan-panel`).
 - Tek sütun + mobil içindekiler görünür: **`max-width: 1179px`**.
+
+## CSS (ortak)
+
+- Dosya: **`css/blog.css`**, `@media (max-width: 1179px)` içinde `.blog-yazi-sayfa-mobil-ux .blog-mobil-icindekiler-wrap` ve alt seçiciler; sayfaya özel override ekleme — düzen burada tekilleştirilir.
 
 ## Örnek sıra (Chantemerle)
 

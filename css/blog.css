@@ -982,6 +982,34 @@ body.immerse-education-page .blog-yazi-ana > section.icerik-alani > .cerceve-kut
         flex-direction: column;
         gap: 25px;
         margin: 0.75rem 0 1rem;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        align-self: stretch;
+        min-width: 0;
+    }
+
+    /* Sportech: giriş metni alt boşluğu style.css ile 25px; üst margin bu sayfalarda eklenmesin */
+    body.sportech-academy-page.blog-yazi-sayfa-mobil-ux .blog-mobil-icindekiler-wrap.sportech-tenis-mobil-icindekiler-giris-alti,
+    body.sportech-academy-page.blog-yazi-sayfa-mobil-ux .blog-mobil-icindekiler-wrap.sportech-futbol-mobil-icindekiler-giris-alti,
+    body.sportech-academy-page.blog-yazi-sayfa-mobil-ux .blog-mobil-icindekiler-wrap.sportech-mobil-icindekiler-giris-alti {
+        margin-top: 0;
+    }
+
+    /* İçindekiler + link metni satır kırılınca tam genişlikte, giriş bloğunun altında kalır (yan taşma yok) */
+    .blog-yazi-sayfa-mobil-ux .blog-mobil-icindekiler-wrap .blog-mobil-icindekiler-duz {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .blog-yazi-sayfa-mobil-ux .blog-mobil-icindekiler-duz .blog-icindekiler-liste {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .blog-yazi-sayfa-mobil-ux .blog-mobil-icindekiler-duz .blog-icindekiler-liste li {
+        align-items: flex-start;
     }
 
     .blog-yazi-sayfa-mobil-ux {

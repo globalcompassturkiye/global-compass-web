@@ -5360,13 +5360,71 @@ body.sayfa-swiss-education-academy .immerse-detay-kutu .immerse-detay-grid.sea-p
 }
 body.immerse-education-page .blog-yazi-ana div[id$="-giris-metni"] > h2:first-of-type,
 body.investin-page #investin-giris-metni > h2:first-of-type,
-#sportech-futbol-giris-metni > h2:first-of-type {
+.sportech-academy-giris-metni > h2:first-of-type {
     text-align: center;
     font-size: 18px;
     font-weight: 700;
     color: #444;
     margin-bottom: 20px;
 }
+
+/* Sportech Academy: giriş metni üstü (h1 ile blok arası) 25px — h1 margin-bottom ile çakışır, büyük olan geçerli */
+body.sportech-academy-page .blog-yazi-ana > .sportech-academy-giris-metni {
+    margin-top: 25px;
+}
+
+/* Sportech Academy: giriş metni altı (metin sonu → mobil içindekiler) toplam 25px — ayrıca blog.css’te wrap margin-top: 0 */
+body.sportech-academy-page .sportech-academy-giris-metni .futbol-intro-metin {
+    padding-bottom: 25px;
+}
+
+body.sportech-academy-page .sportech-academy-giris-metni > p:last-child:not(.futbol-logo-kapsayici):not(.sportech-academy-logo-kapsayici):not(.futbol-intro-metin) {
+    margin-bottom: 0;
+    padding-bottom: 25px;
+}
+
+/* Sportech Tenis — yatılı program giriş paragrafı → olanak listesi: toplam 25px */
+#sportech-tenis-yatili-program-icerigi > .futbol-intro-metin {
+    padding-bottom: 25px;
+}
+
+#sportech-tenis-yatili-program-icerigi > .futbol-intro-metin + .olanak-liste {
+    margin-top: 0;
+}
+
+/* Sportech Tenis — gündüz program giriş paragrafı → olanak listesi: toplam 25px */
+#sportech-tenis-gunduz-program-icerigi > .futbol-intro-metin {
+    padding-bottom: 25px;
+}
+
+#sportech-tenis-gunduz-program-icerigi > .futbol-intro-metin + .olanak-liste {
+    margin-top: 0;
+}
+
+/* Sportech Tenis — Program Yapısı giriş paragrafı → ikili kutu: toplam 25px */
+#sportech-tenis-program-yapisi > .futbol-intro-metin {
+    padding-bottom: 25px;
+}
+
+#sportech-tenis-program-yapisi > .futbol-ikili-kapsayici {
+    margin-top: 0;
+}
+
+/* Sportech Tenis — Program Yapısı ikili kart başlıkları: tick (.olanak-liste ile aynı renk) */
+#sportech-tenis-program-yapisi .futbol-ikili-kapsayici .ac-milan-avantaj-kutu > h3 {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+#sportech-tenis-program-yapisi .futbol-ikili-kapsayici .ac-milan-avantaj-kutu > h3::before {
+    content: "✓";
+    flex-shrink: 0;
+    color: #000080;
+    font-weight: bold;
+    line-height: 1.25;
+}
+
 .futbol-logo-kapsayici { margin: 0; text-align: center; }
 
 .futbol-intro-metin {
