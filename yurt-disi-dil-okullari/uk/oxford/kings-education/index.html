@@ -228,11 +228,9 @@
     </div>
 </div>
 
-        <section class="icerik-alani kings-oxford-foto-bolumu" id="kings-kampus-olanaklari">
-            <div class="okul-foto-alani kings-kampus-foto">
-                <img src="/img/kings-education-photo/kings-oxford.webp" alt="Kings Education Oxford Kampüs" class="kings-oxford-foto" fetchpriority="high" decoding="sync">
-            </div>
-        </section>
+        <div class="okul-foto-alani kings-kampus-foto" id="kings-kampus-olanaklari">
+                <img src="/img/kings-education-photo/kings-oxford.webp" alt="Kings Education Oxford Kampüs" class="kings-oxford-foto" fetchpriority="high" decoding="async">
+        </div>
 
         <div class="blog-mobil-icindekiler-wrap kings-la-mobil-icindekiler-giris-alti">
             <nav class="blog-mobil-icindekiler-duz" aria-labelledby="kings-oxford-mobil-icindekiler-baslik">
@@ -666,16 +664,17 @@
             </div>
         </div>
 
-        <section class="icerik-alani kings-oxford-akreditasyon-bolumu">
-            <div class="cerceve-kutu icerik-kutusu">
-                <h2 id="kings-akreditasyon">Akreditasyon</h2>
+        <div class="cerceve-kutu icerik-kutusu kings-akreditasyon-bolum" id="kings-akreditasyon">
+            <h2>Akreditasyon</h2>
+            
+            <div class="kings-akreditasyon-icerik">
                 <p>Kings Oxford, British Council tarafından tam akreditasyona sahiptir. English UK üyesidir ve Ofsted tarafından düzenli olarak denetlenmektedir.</p>
 
                 <div class="kings-oxford-akreditasyon-gorsel">
                     <img src="/img/kings-education-photo/accreditation.webp" alt="Kings Education Akreditasyonlar" class="kings-oxford-akreditasyon-img" loading="lazy" decoding="async">
                 </div>
             </div>
-        </section>
+        </div>
 
         <div class="cerceve-kutu">
             <h2 id="kings-sss">Oxford Dil Okulları Hakkında<br>
@@ -727,7 +726,7 @@
         </div>
 
         <section class="iletisim-form-alani" id="bilgi-istek" aria-labelledby="kings-oxford-bilgi-form-baslik">
-            <div class="hizmet-alanlari-baslik icerik-bilgi-form-bant kings-oxford-basvuru-bant">
+            <div class="hizmet-alanlari-baslik icerik-bilgi-form-bant usa-form-bant kings-form-bant-ust kings-oxford-basvuru-bant">
                 <h2 id="kings-oxford-bilgi-form-baslik"><span>Daha Fazla Bilgi ve Başvuru İçin</span><span class="vurgu-satir">Bilgi İstek Formu</span></h2>
             </div>
             <div class="iletisim-form-beyaz-cerceve">
@@ -795,7 +794,7 @@
         </div>
 
         <div class="okul-liste-kapsayici">
-            <h2>Yurt Dışı Yaz Okulları</h2>
+            <h2>İlgili Sayfalar</h2>
             <section class="alt-yonlendirme-alani">
                 <div class="yonlendirme-karti">
                     <p>Ülke ve şehir seçenekleriyle tüm yurt dışı yaz okulu programlarına genel sayfamızdan ulaşabilirsiniz.</p>
@@ -831,6 +830,7 @@
         </div>
     </footer>
 
+    <script src="/js/nav-submenu.js" defer></script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -977,8 +977,6 @@
       ]
     }
     </script>
-
-    <script src="/js/nav-submenu.js" defer></script>
     <script src="/js/iletisim-formu.js" defer></script>
 <script src="/js/header-offset.js" defer></script>
 </body>

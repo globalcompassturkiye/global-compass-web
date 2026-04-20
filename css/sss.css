@@ -94,6 +94,13 @@ header.sss-sayfa-ust-menu .sosyal-medya-alani a img {
     }
 }
 
+@media (max-width: 501px) {
+    .sayfa-sss .sss-sss-kutu.cerceve-kutu,
+    .sayfa-sss .sss-sss-kutu.site-gri-cerceve-kutu {
+        padding: 28px 25px 22px !important;
+    }
+}
+
 /* =========================================
    Site geneli SSS (style.css ile birleştirildi — adım 5)
    ========================================= */
