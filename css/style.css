@@ -2868,7 +2868,7 @@ article.icerik-alani .icerik-vurgu-kutu p {
 }
 
 .rozet-baslik {
-    font-size: var(--h3-font-size);
+    font-size: clamp(14px, calc(14px + (100vw - 501px) * 2 / 1419), 16px);
     font-weight: 700;
     color: #111827;
     margin: 0;
@@ -3573,28 +3573,6 @@ body.kings-oxford-sayfa .kings-oxford-teknik-vurgu {
     position: absolute;
     left: 0;
     font-weight: bold;
-}
-
-.olanak-liste.sol-kenar-kalin-sag-koseler-15px-gradyan {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.olanak-liste.sol-kenar-kalin-sag-koseler-15px-gradyan li {
-    margin-bottom: 0;
-    padding: 16px 16px 14px 16px;
-    border: 1px solid var(--site-kart-kenar);
-    border-radius: 15px;
-    background: #fff;
-    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
-    font-size: 15px;
-    color: #4b5563;
-    line-height: 1.7;
-}
-
-.olanak-liste.sol-kenar-kalin-sag-koseler-15px-gradyan li::before {
-    content: none;
 }
 
 .program-ekstralar {
@@ -5402,6 +5380,10 @@ body.sportech-academy-page .giris-metni .intro-metin {
     padding-bottom: 25px;
 }
 
+#sportech-tenis-giris-metni > h2:first-of-type {
+    text-align: center;
+}
+
 .giris-metni > .intro-metin {
     margin-top: 50px;
     margin-bottom: 50px;
@@ -5414,90 +5396,12 @@ body.sportech-academy-page .giris-metni > p:last-child:not(.futbol-logo-kapsayic
     padding-bottom: 25px;
 }
 
-/* Sportech Tenis — yatılı program giriş paragrafı → olanak listesi: toplam 25px */
-#sportech-tenis-yatili-program-icerigi > .futbol-intro-metin {
-    padding-bottom: 25px;
+#sportech-tenis-yatili-program-icerigi > .rozet-grid.icerik-kutusu-grid.yatay-2 + .rozet-grid.icerik-kutusu-grid.yatay-2 {
+    margin-top: 50px;
 }
 
-#sportech-tenis-yatili-program-icerigi > .futbol-intro-metin + .olanak-liste {
-    margin-top: 0;
-}
-
-/* Sportech Tenis — gündüz program giriş paragrafı → olanak listesi: toplam 25px */
-#sportech-tenis-gunduz-program-icerigi > .futbol-intro-metin {
-    padding-bottom: 25px;
-}
-
-#sportech-tenis-gunduz-program-icerigi > .futbol-intro-metin + .olanak-liste {
-    margin-top: 0;
-}
-
-/* Sportech Tenis — Program Yapısı giriş paragrafı → ikili kutu: toplam 25px */
-#sportech-tenis-program-yapisi > .futbol-intro-metin {
-    padding-bottom: 25px;
-}
-
-#sportech-tenis-program-yapisi > .futbol-ikili-kapsayici {
-    margin-top: 0;
-}
-
-/* Sportech Tenis — cerceve/kart stili MBA rozet-kart ile hizali */
-body.sayfa-sportech-tenis .ac-milan-avantaj-kutu .ac-milan-avantaj-listesi {
-    gap: 14px;
-    margin-top: 0;
-}
-
-body.sayfa-sportech-tenis .ac-milan-avantaj-kutu .ac-milan-avantaj-kart {
-    background: #fff;
-    border: 1px solid var(--site-kart-kenar);
-    padding: 16px 16px 14px 16px;
-    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 10px 14px;
-    align-items: flex-start;
-    border-radius: 15px;
-    transition: none;
-}
-
-body.sayfa-sportech-tenis .ac-milan-avantaj-kutu .ac-milan-avantaj-kart:hover {
-    transform: none;
-    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
-    border-color: var(--site-kart-kenar);
-}
-
-body.sayfa-sportech-tenis .ac-milan-avantaj-kutu .ac-milan-avantaj-numara {
-    width: 32px;
-    height: 32px;
-    margin-left: 0;
-    background: #fef2f2;
-    color: #b91c1c;
-    font-size: 14px;
-}
-
-body.sayfa-sportech-tenis .ac-milan-avantaj-kutu .ac-milan-avantaj-icerik h3 {
-    color: #111827;
-}
-
-body.sayfa-sportech-tenis .ac-milan-avantaj-kutu .ac-milan-avantaj-icerik p {
-    color: #4b5563;
-    font-size: 15px;
-    line-height: 1.7;
-}
-
-/* Sportech Tenis — Program Yapısı ikili kart başlıkları: tick (.olanak-liste ile aynı renk) */
-#sportech-tenis-program-yapisi .futbol-ikili-kapsayici .ac-milan-avantaj-kutu > h3 {
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-}
-
-#sportech-tenis-program-yapisi .futbol-ikili-kapsayici .ac-milan-avantaj-kutu > h3::before {
-    content: "✓";
-    flex-shrink: 0;
-    color: #000080;
-    font-weight: bold;
-    line-height: 1.25;
+#sportech-tenis-gunduz-program-icerigi > .rozet-grid.icerik-kutusu-grid.yatay-2 + .rozet-grid.icerik-kutusu-grid.yatay-2 {
+    margin-top: 50px;
 }
 
 .futbol-logo-kapsayici { margin: 0; text-align: center; }
@@ -5596,9 +5500,7 @@ body.sayfa-sportech-tenis .ac-milan-avantaj-kutu .ac-milan-avantaj-icerik p {
 }
 
 @media (max-width: 500px) {
-    body.sayfa-sportech-tenis .ac-milan-avantaj-kutu .ac-milan-avantaj-listesi {
-        grid-template-columns: 1fr;
-    }
+    .ac-milan-avantaj-kutu .ac-milan-avantaj-listesi { grid-template-columns: 1fr; }
 }
 
 .yatili-kamp-kutu .yatili-kamp-grid {
@@ -6075,7 +5977,7 @@ body.sayfa-hizmetlerimiz .hizmet-adimlar-section .okul-liste-kapsayici .hizmet-a
     }
 }
 
-.hizmet-adim-ayrac {
+.hizmetlerimiz-sayfa .hizmet-adimlar > hr {
     width: 48px;
     height: 0;
     flex-shrink: 0;
@@ -6096,7 +5998,7 @@ body.sayfa-hizmetlerimiz .hizmet-adimlar-section .okul-liste-kapsayici .hizmet-a
         max-width: 1200px;
     }
 
-    .hizmetlerimiz-sayfa .hizmet-adim-ayrac {
+    .hizmetlerimiz-sayfa .hizmet-adimlar > hr {
         display: block;
         flex-shrink: 0;
         align-self: center;
@@ -6126,7 +6028,7 @@ body.sayfa-hizmetlerimiz .hizmet-adimlar-section .okul-liste-kapsayici .hizmet-a
         margin-right: 0;
     }
 
-    .hizmetlerimiz-sayfa .hizmet-adim-ayrac {
+    .hizmetlerimiz-sayfa .hizmet-adimlar > hr {
         display: none;
     }
 
@@ -6157,7 +6059,7 @@ body.sayfa-hizmetlerimiz .hizmet-adimlar-section .okul-liste-kapsayici .hizmet-a
         justify-items: stretch;
     }
 
-    .hizmetlerimiz-sayfa .hizmet-adim-ayrac {
+    .hizmetlerimiz-sayfa .hizmet-adimlar > hr {
         display: none;
     }
 
