@@ -3575,6 +3575,28 @@ body.kings-oxford-sayfa .kings-oxford-teknik-vurgu {
     font-weight: bold;
 }
 
+.olanak-liste.sol-kenar-kalin-sag-koseler-15px-gradyan {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.olanak-liste.sol-kenar-kalin-sag-koseler-15px-gradyan li {
+    margin-bottom: 0;
+    padding: 16px 16px 14px 16px;
+    border: 1px solid var(--site-kart-kenar);
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+    font-size: 15px;
+    color: #4b5563;
+    line-height: 1.7;
+}
+
+.olanak-liste.sol-kenar-kalin-sag-koseler-15px-gradyan li::before {
+    content: none;
+}
+
 .program-ekstralar {
     margin-top: 25px;
     padding: 15px;
@@ -5369,16 +5391,25 @@ body.investin-page #investin-giris-metni > h2:first-of-type,
 }
 
 /* Sportech Academy: giriş metni üstü (h1 ile blok arası) 25px — h1 margin-bottom ile çakışır, büyük olan geçerli */
-body.sportech-academy-page .blog-yazi-ana > .sportech-academy-giris-metni {
+body.sportech-academy-page .blog-yazi-ana > .sportech-academy-giris-metni,
+body.sportech-academy-page .blog-yazi-ana > .giris-metni {
     margin-top: 25px;
 }
 
 /* Sportech Academy: giriş metni altı (metin sonu → mobil içindekiler) toplam 25px — ayrıca blog.css’te wrap margin-top: 0 */
-body.sportech-academy-page .sportech-academy-giris-metni .futbol-intro-metin {
+body.sportech-academy-page .sportech-academy-giris-metni .futbol-intro-metin,
+body.sportech-academy-page .giris-metni .intro-metin {
     padding-bottom: 25px;
 }
 
-body.sportech-academy-page .sportech-academy-giris-metni > p:last-child:not(.futbol-logo-kapsayici):not(.sportech-academy-logo-kapsayici):not(.futbol-intro-metin) {
+.giris-metni > .intro-metin {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-bottom: 0;
+}
+
+body.sportech-academy-page .sportech-academy-giris-metni > p:last-child:not(.futbol-logo-kapsayici):not(.sportech-academy-logo-kapsayici):not(.futbol-intro-metin):not(.intro-metin),
+body.sportech-academy-page .giris-metni > p:last-child:not(.futbol-logo-kapsayici):not(.sportech-academy-logo-kapsayici):not(.futbol-intro-metin):not(.intro-metin) {
     margin-bottom: 0;
     padding-bottom: 25px;
 }
@@ -5408,6 +5439,50 @@ body.sportech-academy-page .sportech-academy-giris-metni > p:last-child:not(.fut
 
 #sportech-tenis-program-yapisi > .futbol-ikili-kapsayici {
     margin-top: 0;
+}
+
+/* Sportech Tenis — cerceve/kart stili MBA rozet-kart ile hizali */
+body.sayfa-sportech-tenis .ac-milan-avantaj-kutu .ac-milan-avantaj-listesi {
+    gap: 14px;
+    margin-top: 0;
+}
+
+body.sayfa-sportech-tenis .ac-milan-avantaj-kutu .ac-milan-avantaj-kart {
+    background: #fff;
+    border: 1px solid var(--site-kart-kenar);
+    padding: 16px 16px 14px 16px;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px 14px;
+    align-items: flex-start;
+    border-radius: 15px;
+    transition: none;
+}
+
+body.sayfa-sportech-tenis .ac-milan-avantaj-kutu .ac-milan-avantaj-kart:hover {
+    transform: none;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+    border-color: var(--site-kart-kenar);
+}
+
+body.sayfa-sportech-tenis .ac-milan-avantaj-kutu .ac-milan-avantaj-numara {
+    width: 32px;
+    height: 32px;
+    margin-left: 0;
+    background: #fef2f2;
+    color: #b91c1c;
+    font-size: 14px;
+}
+
+body.sayfa-sportech-tenis .ac-milan-avantaj-kutu .ac-milan-avantaj-icerik h3 {
+    color: #111827;
+}
+
+body.sayfa-sportech-tenis .ac-milan-avantaj-kutu .ac-milan-avantaj-icerik p {
+    color: #4b5563;
+    font-size: 15px;
+    line-height: 1.7;
 }
 
 /* Sportech Tenis — Program Yapısı ikili kart başlıkları: tick (.olanak-liste ile aynı renk) */
@@ -5485,6 +5560,7 @@ body.sportech-academy-page .sportech-academy-giris-metni > p:last-child:not(.fut
     font-size: 1.1em;
     font-weight: 700;
     margin-left: 20px;
+    border-radius: 50%;
 }
 
 .ac-milan-avantaj-kutu .ac-milan-avantaj-icerik h3 {
@@ -5492,6 +5568,20 @@ body.sportech-academy-page .sportech-academy-giris-metni > p:last-child:not(.fut
     font-size: var(--h3-font-size);
     font-weight: 700;
     line-height: 1.3;
+}
+
+.ac-milan-avantaj-kutu .ac-milan-avantaj-icerik h3.ac-milan-avantaj-baslik--numarali {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ac-milan-avantaj-kutu .ac-milan-avantaj-icerik .ac-milan-avantaj-numara.ac-milan-avantaj-numara--mini {
+    width: 28px;
+    height: 28px;
+    margin-left: 0;
+    font-size: 0.82em;
+    line-height: 1;
 }
 
 .ac-milan-avantaj-kutu .ac-milan-avantaj-icerik p {
@@ -5503,6 +5593,12 @@ body.sportech-academy-page .sportech-academy-giris-metni > p:last-child:not(.fut
 
 .ac-milan-avantaj-kutu .ac-milan-avantaj-numarasiz .ac-milan-avantaj-kart {
     padding-left: 20px;
+}
+
+@media (max-width: 500px) {
+    body.sayfa-sportech-tenis .ac-milan-avantaj-kutu .ac-milan-avantaj-listesi {
+        grid-template-columns: 1fr;
+    }
 }
 
 .yatili-kamp-kutu .yatili-kamp-grid {
