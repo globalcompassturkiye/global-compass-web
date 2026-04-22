@@ -4830,9 +4830,10 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
 .alt-panel {
     display: none !important;
 }
-#tab-dil:checked ~ .hizmet-tab-panelleri-kapsayici #panel-dil, #tab-yaz:checked ~ .hizmet-tab-panelleri-kapsayici #panel-yaz,
+#tab-dil:checked ~ .hizmet-tab-panelleri-kapsayici #panel-dil, #tab-yaz:checked ~ .hizmet-tab-panelleri-kapsayici #panel-yaz, #tab-uni:checked ~ .hizmet-tab-panelleri-kapsayici #panel-uni,
 #dil-ing:checked ~ .hizmet-tab-ana-icerik-cerceve #panel-dil-ing, #dil-usa:checked ~ .hizmet-tab-ana-icerik-cerceve #panel-dil-usa,
 #yaz-ing:checked ~ .hizmet-tab-ana-icerik-cerceve #panel-yaz-ing, #yaz-isvicre:checked ~ .hizmet-tab-ana-icerik-cerceve #panel-yaz-isvicre, #yaz-almanya:checked ~ .hizmet-tab-ana-icerik-cerceve #panel-yaz-almanya, #yaz-kanada:checked ~ .hizmet-tab-ana-icerik-cerceve #panel-yaz-kanada, #yaz-italya:checked ~ .hizmet-tab-ana-icerik-cerceve #panel-yaz-italya, #yaz-japonya:checked ~ .hizmet-tab-ana-icerik-cerceve #panel-yaz-japonya, #yaz-amerika:checked ~ .hizmet-tab-ana-icerik-cerceve #panel-yaz-amerika,
+#uni-isvicre:checked ~ .hizmet-tab-ana-icerik-cerceve #panel-uni-isvicre,
 #yas-13-15:checked ~ #panel-yas-13-15, #yas-16-18:checked ~ #panel-yas-16-18 {
     display: block !important;
 }
@@ -10673,7 +10674,8 @@ body.ana-sayfa .hizmet-tab-alani .sehir-buton:hover {
 }
 
 body.ana-sayfa #tab-dil:checked ~ label[for="tab-dil"],
-body.ana-sayfa #tab-yaz:checked ~ label[for="tab-yaz"] {
+body.ana-sayfa #tab-yaz:checked ~ label[for="tab-yaz"],
+body.ana-sayfa #tab-uni:checked ~ label[for="tab-uni"] {
     background: #e74c3c !important;
     color: #ffffff !important;
     border-color: transparent !important;
@@ -10683,7 +10685,8 @@ body.ana-sayfa #tab-yaz:checked ~ label[for="tab-yaz"] {
 
 .tab-panel { display: none; }
 #tab-dil:checked ~ .hizmet-tab-panelleri-kapsayici #panel-dil,
-#tab-yaz:checked ~ .hizmet-tab-panelleri-kapsayici #panel-yaz { display: block !important; }
+#tab-yaz:checked ~ .hizmet-tab-panelleri-kapsayici #panel-yaz,
+#tab-uni:checked ~ .hizmet-tab-panelleri-kapsayici #panel-uni { display: block !important; }
 
 .alt-tab-kapsayici {
     margin-top: 10px;
@@ -10742,7 +10745,8 @@ body.ana-sayfa .hizmet-tab-alani .ana-tab-etiket {
 #yaz-kanada:checked ~ label[for="yaz-kanada"],
 #yaz-italya:checked ~ label[for="yaz-italya"],
 #yaz-japonya:checked ~ label[for="yaz-japonya"],
-#yaz-amerika:checked ~ label[for="yaz-amerika"] {
+#yaz-amerika:checked ~ label[for="yaz-amerika"],
+#uni-isvicre:checked ~ label[for="uni-isvicre"] {
     background: #e74c3c !important;
     color: #ffffff !important;
     border-color: transparent !important;
@@ -10978,6 +10982,7 @@ body.ana-sayfa .hizmet-tab-alani .tab-metin .tab-link-listesi {
     body.ana-sayfa .hizmet-tab-alani .sehir-buton:hover,
     body.ana-sayfa #tab-dil:checked ~ label[for="tab-dil"],
     body.ana-sayfa #tab-yaz:checked ~ label[for="tab-yaz"],
+    body.ana-sayfa #tab-uni:checked ~ label[for="tab-uni"],
     .sehir-buton:hover {
         transform: none !important;
     }
@@ -12042,6 +12047,22 @@ body.sayfa-yurt-disi-lise .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wra
     box-sizing: border-box;
 }
 
+/* Yurt dışı üniversite hub: giriş (h1 + p) altında toplam 50px boşluk — mobil içindekiler öncesi */
+body.sayfa-yurt-disi-universite .blog-yazi-ana > h1 + p {
+    padding-bottom: 50px;
+    margin-bottom: 0 !important;
+}
+
+/* Yurt dışı üniversite hub: ülke seçimi h2 — ortalı, alt boşluk 15px */
+body.sayfa-yurt-disi-universite #uni-ulkeler-secim {
+    text-align: center;
+    margin-bottom: 15px !important;
+}
+
+body.sayfa-yurt-disi-universite #uni-ulkeler-secim + .yaz-okullari-secim-paneli {
+    margin-top: 0;
+}
+
 /* Üniversite sayfası: giriş altındaki tek ülke kartı yaz okullarıyla aynı ölçüde ve ortada */
 body.sayfa-yurt-disi-universite .yaz-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap {
     grid-template-columns: 1fr;
@@ -12608,6 +12629,12 @@ h3 {
 
 body.sayfa-yurt-disi-universite-switzerland-bhms #bhms-programlar .kutu-baslik {
     margin: 0 0 15px 0;
+}
+
+/* BHMS okul üst sayfası: program seçenekleri h2 */
+#bhms-lisans-program-secenekleri-baslik {
+    text-align: center;
+    margin-bottom: 15px !important;
 }
 
 body.sayfa-yurt-disi-universite-switzerland-bhms .toronto-simgesel-icerik > p:first-of-type {

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
@@ -29,9 +29,10 @@
     <link rel="stylesheet" href="/css/site-breadcrumb.css">
     <link rel="stylesheet" href="/css/site-iletisim-form.css">
     <link rel="stylesheet" href="/css/site-yonlendirme-kart.css">
+    <link rel="stylesheet" href="/css/blog.css">
     <link rel="stylesheet" href="/css/sss.css">
 </head>
-<body class="sayfa-yurt-disi-universite">
+<body class="sayfa-yurt-disi-universite blog-yazi-sayfa-mobil-ux">
     <div class="sabit-ust-alan">
         <div class="ust-serit">
             <div class="ust-serit-kapsayici">
@@ -86,7 +87,13 @@
                             <li><a href="/yurt-disi-lise/degisim-programlari/">Değişim Programları</a></li>
                         </ul>
                     </li>
-                    <li><a href="/yurt-disi-universite/" class="aktif">Üniversite</a></li>
+                    <li class="has-dropdown">
+                        <a href="/yurt-disi-universite/" class="aktif" aria-haspopup="true" aria-expanded="false">Üniversite</a>
+                        <ul class="submenu">
+                            <li><a href="/yurt-disi-universite/">Tümü</a></li>
+                            <li><a href="/yurt-disi-universite/switzerland/">İsviçre</a></li>
+                        </ul>
+                    </li>
                     <li><a href="/yurt-disi-yuksek-lisans-mba/">Yüksek Lisans & MBA</a></li>
                     <li><a href="/yurt-disi-online-egitim/">Online Eğitim</a></li>
                     <li><a href="/yurt-disi-burs-firsatlari/">Burs Fırsatları</a></li>
@@ -165,7 +172,7 @@
     </div>
 
     <main id="icerik">
-    <article class="icerik-alani">
+    <article class="icerik-alani blog-yazi-detay">
         <nav class="site-haritasi-yolu" aria-label="Sayfa konumu">
             <div class="breadcrumb-kutu">
                 <a href="/" class="ana-sayfa-ikon">
@@ -176,12 +183,34 @@
             </div>
         </nav>
 
-        <h1>Yurt Dışı Üniversite Eğitimi<br>
+        <div class="blog-yazi-tek-sutun blog-yazi-tek-sutun--tam">
+        <div class="blog-yazi-layout blog-yazi-layout--yan-panel">
+        <div class="blog-yazi-ana">
+
+        <h1 id="uni-hub-giris">Yurt Dışı Üniversite Eğitimi<br>
             <span class="vurgu-renk">Ülkeler, Bölümler, Kabul Şartları ve Sınavsız Seçenekler</span>
         </h1>
 
         <p>Yurt dışında lisans eğitimi almak size sadece bir diploma değil; ana dil seviyesinde yabancı dil, global bir çevre ve uluslararası iş kapılarını açar. İngiltere, Amerika, Kanada ve Avrupa’nın eğitim başkentlerinde geçireceğiniz üniversite yılları, analitik düşünme becerinizi geliştirirken size dünya standartlarında bir vizyon kazandırır. Ancak bu heyecan verici süreç; doğru üniversite seçimi, karmaşık başvuru şartları ve titiz dosya hazırlığı gibi uzmanlık gerektiren pek çok aşamadan oluşur.</p>
 
+        <div id="blog-mobil-icindekiler-hedef" class="blog-mobil-icindekiler-wrap">
+            <nav class="blog-mobil-icindekiler-duz" aria-labelledby="uni-hub-mobil-icindekiler-baslik">
+                <p class="blog-mobil-icindekiler-duz-baslik" id="uni-hub-mobil-icindekiler-baslik">İçindekiler</p>
+                <ul class="blog-icindekiler-liste blog-icindekiler-liste--mobil">
+                    <li><a href="#uni-hub-giris">Giriş</a></li>
+                    <li><a href="#uni-ulkeler-secim">Ülke seçimi</a></li>
+                    <li><a href="#uni-neden-yurt-disinda">Neden yurt dışında üniversite</a></li>
+                    <li><a href="#uni-populer-ulkeler">Popüler ülkeler ve eğitim sistemleri</a></li>
+                    <li><a href="#uni-basvuru-sartlari">Başvuru şartları</a></li>
+                    <li><a href="#uni-global-compass-adimlar">Global Compass ile adım adım</a></li>
+                    <li><a href="#uni-sss">Sıkça sorulan sorular</a></li>
+                    <li><a href="#universite-bilgi-form-baslik">Bilgi istek formu</a></li>
+                    <li><a href="#uni-dil-okullari-yonlendirme">Yurt dışı dil okulları</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <h2 id="uni-ulkeler-secim">Üniversite Eğitimi İçin Hangi Ülkeyi Tercih Edersiniz?</h2>
         <div class="yaz-okullari-secim-paneli">
             <nav class="yaz-okullari-ulke-kart-wrap son-kart-ortala" aria-label="Ülke seçimi">
                 <a href="/yurt-disi-universite/switzerland/" class="yaz-okullari-ulke-kart">
@@ -195,10 +224,10 @@
             </nav>
         </div>
 
-        <div class="cerceve-kutu icerik-kutusu">
+        <div class="cerceve-kutu icerik-kutusu" id="uni-neden-yurt-disinda">
             <h2>Neden Yurt Dışında Üniversite Okumalısınız?</h2>
 
-            <div class="rozet-grid icerik-kutusu-grid yatay-3 universite-neden-rozet-grid">
+            <div class="rozet-grid icerik-kutusu-grid yatay-1 universite-neden-rozet-grid">
                 <article class="rozet-kart">
                     <h3 class="rozet-baslik">Kariyer Avantajı</h3>
                     <ul class="kutu-liste">
@@ -228,7 +257,7 @@
             </div>
         </div>
 
-        <div class="cerceve-kutu icerik-kutusu">
+        <div class="cerceve-kutu icerik-kutusu" id="uni-populer-ulkeler">
             <h2>Popüler Ülkeler ve Eğitim Sistemleri</h2>
             <p>Yurt dışı üniversite başvurularında her ülkenin kendine has kabul şartları vardır. Size en uygun seçeneği birlikte belirliyoruz:</p>
             <div class="rozet-grid icerik-kutusu-grid yatay-2 son-kart-ortala">
@@ -275,7 +304,7 @@
             </div>
         </div>
 
-        <div class="cerceve-kutu icerik-kutusu">
+        <div class="cerceve-kutu icerik-kutusu" id="uni-basvuru-sartlari">
             <h2>Yurt Dışı Üniversite Başvuru Şartları Nelerdir?</h2>
             <p>Başvuru sürecinde başarı şansınızı artırmak için şu kriterlere odaklanıyoruz:</p>
             <ul class="kutu-liste">
@@ -286,7 +315,7 @@
             </ul>
         </div>
 
-        <div class="cerceve-kutu icerik-kutusu">
+        <div class="cerceve-kutu icerik-kutusu" id="uni-global-compass-adimlar">
             <h2>Global Compass İle Adım Adım Üniversite Başvurusu</h2>
             <p>Global Compass olarak, 300’den fazla partner üniversitemizle, hayalinizdeki bölüme kabul almanız için profesyonel yurt dışı eğitim danışmanlığı sunuyoruz.</p>
             <div class="rozet-grid icerik-kutusu-grid yatay-2 son-kart-ortala">
@@ -318,7 +347,7 @@
 
         </div>
 
-        <div class="cerceve-kutu">
+        <div class="cerceve-kutu" id="uni-sss">
             <h2>Yurt Dışı Üniversite<span class="vurgu-satir">Sıkça Sorulan Sorular (SSS)</span></h2>
             <div class="sss-alani">
                 <details class="sss-item">
@@ -397,7 +426,8 @@
             </form>
             </div>
         </section>
-        <div class="okul-liste-kapsayici">
+
+        <div class="okul-liste-kapsayici" id="uni-dil-okullari-yonlendirme">
             <h2>Yurt Dışı Dil Okulları</h2>
             <section class="alt-yonlendirme-alani">
                 <div class="yonlendirme-karti">
@@ -405,6 +435,28 @@
                     <a href="/yurt-disi-dil-okullari/" class="kart-link">Yurt Dışı Dil Okullarını Keşfet →</a>
                 </div>
             </section>
+        </div>
+
+        </div>
+
+        <aside class="blog-yan-panel" aria-label="İçindekiler">
+            <nav class="blog-icindekiler-kutu" aria-labelledby="uni-hub-masaustu-icindekiler-baslik">
+                <p class="blog-icindekiler-baslik" id="uni-hub-masaustu-icindekiler-baslik">İçindekiler</p>
+                <ul class="blog-icindekiler-liste">
+                    <li><a href="#uni-hub-giris">Giriş</a></li>
+                    <li><a href="#uni-ulkeler-secim">Ülke seçimi</a></li>
+                    <li><a href="#uni-neden-yurt-disinda">Neden yurt dışında üniversite</a></li>
+                    <li><a href="#uni-populer-ulkeler">Popüler ülkeler ve eğitim sistemleri</a></li>
+                    <li><a href="#uni-basvuru-sartlari">Başvuru şartları</a></li>
+                    <li><a href="#uni-global-compass-adimlar">Global Compass ile adım adım</a></li>
+                    <li><a href="#uni-sss">Sıkça sorulan sorular</a></li>
+                    <li><a href="#universite-bilgi-form-baslik">Bilgi istek formu</a></li>
+                    <li><a href="#uni-dil-okullari-yonlendirme">Yurt dışı dil okulları</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        </div>
         </div>
     </article>
     </main>
@@ -557,7 +609,8 @@
 
     <script src="/js/nav-submenu.js" defer></script>
     <script src="/js/iletisim-formu.js" defer></script>
-<script src="/js/header-offset.js" defer></script>
+    <script src="/js/header-offset.js" defer></script>
+    <a href="#blog-mobil-icindekiler-hedef" class="blog-mobil-icindekiler-sabit-cap" aria-label="İçindekiler bölümüne git"><span class="blog-mobil-icindekiler-sabit-cap-ok" aria-hidden="true">↑</span></a>
 </body>
 </html>
 

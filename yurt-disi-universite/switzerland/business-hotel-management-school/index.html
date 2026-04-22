@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="/css/blog.css">
     <link rel="stylesheet" href="/css/sss.css">
 </head>
-<body class="sayfa-yurt-disi-universite sayfa-yurt-disi-universite-switzerland-bhms">
+<body class="sayfa-yurt-disi-universite sayfa-yurt-disi-universite-switzerland-bhms blog-yazi-sayfa-mobil-ux">
     <div class="sabit-ust-alan">
         <div class="ust-serit">
             <div class="ust-serit-kapsayici">
@@ -87,7 +87,13 @@
                             <li><a href="/yurt-disi-lise/degisim-programlari/">Değişim Programları</a></li>
                         </ul>
                     </li>
-                    <li><a href="/yurt-disi-universite/" class="aktif">Üniversite</a></li>
+                    <li class="has-dropdown">
+                        <a href="/yurt-disi-universite/" class="aktif" aria-haspopup="true" aria-expanded="false">Üniversite</a>
+                        <ul class="submenu">
+                            <li><a href="/yurt-disi-universite/">Tümü</a></li>
+                            <li><a href="/yurt-disi-universite/switzerland/">İsviçre</a></li>
+                        </ul>
+                    </li>
                     <li><a href="/yurt-disi-yuksek-lisans-mba/">Yüksek Lisans & MBA</a></li>
                     <li><a href="/yurt-disi-online-egitim/">Online Eğitim</a></li>
                     <li><a href="/yurt-disi-burs-firsatlari/">Burs Fırsatları</a></li>
@@ -166,7 +172,7 @@
     </div>
 
     <main id="icerik">
-    <article class="icerik-alani">
+    <article class="icerik-alani blog-yazi-detay">
         <nav class="site-haritasi-yolu" aria-label="Sayfa konumu">
             <ol class="breadcrumb-kutu breadcrumb-kutu--hiyerarsik">
                 <li class="breadcrumb-oge"><a href="/" class="ana-sayfa-ikon"><img src="/img/home-icon.png" alt="Ana Sayfa" width="22" height="22" loading="lazy" decoding="async"></a></li>
@@ -179,12 +185,30 @@
             </ol>
         </nav>
 
-        <h1>BHMS Switzerland:<br><span class="vurgu-renk">İsviçre'de Kariyer Odaklı Lisans Eğitimi</span></h1>
-        <p>İsviçre'nin kalbi Lucerne'de yer alan BHMS (Business and Hotel Management School), akademik mükemmelliği profesyonel iş deneyimiyle birleştiren prestijli bir eğitim modeli sunar. QS World University Rankings 2026 verilerine göre otelcilik alanında dünyanın en iyi 12. kurumu seçilen üniversite; işletme, konaklama ve mutfak sanatları dallarında hızlandırılmış programlar sağlar.</p>
-        <p>BHMS'nin en güçlü yönü, her akademik dönemin ardından gelen 6 aylık maaşlı staj sistemidir. Bu benzersiz yapı, öğrencilerin teorik bilgilerini küresel iş dünyasında pratiğe dökerek profesyonel bir kariyer inşa etmelerine olanak tanır. Mezunlarının %90'ın üzerinde istihdam oranına sahip olması, okulun sektörel itibarını ve eğitim kalitesini kanıtlamaktadır.</p>
+        <div class="blog-yazi-tek-sutun blog-yazi-tek-sutun--tam">
+        <div class="blog-yazi-layout blog-yazi-layout--yan-panel">
+        <div class="blog-yazi-ana">
 
+        <h1 id="bhms-okul-giris">BHMS Switzerland:<br><span class="vurgu-renk">İsviçre'de Kariyer Odaklı Lisans Eğitimi</span></h1>
+        <p>İsviçre'nin kalbi Lucerne'de yer alan BHMS (Business and Hotel Management School), akademik mükemmelliği profesyonel iş deneyimiyle birleştiren prestijli bir eğitim modeli sunar. <strong>QS World University Rankings 2026</strong> verilerine göre otelcilik alanında <strong>dünyanın en iyi 12. eğitim kurumu</strong> seçilen üniversite; işletme, konaklama ve mutfak sanatları dallarında hızlandırılmış programlar sağlar.</p>
+        <p>BHMS'nin en güçlü yönü, her akademik dönemin ardından gelen <strong>6 aylık maaşlı staj sistemi</strong>dir. Bu benzersiz yapı, öğrencilerin teorik bilgilerini küresel iş dünyasında pratiğe dökerek profesyonel bir kariyer inşa etmelerine olanak tanır. Mezunlarının %90'ın üzerinde istihdam oranına sahip olması, okulun sektörel itibarını ve eğitim kalitesini kanıtlamaktadır.</p>
+
+        <div id="blog-mobil-icindekiler-hedef" class="blog-mobil-icindekiler-wrap">
+            <nav class="blog-mobil-icindekiler-duz" aria-labelledby="bhms-okul-mobil-icindekiler-baslik">
+                <p class="blog-mobil-icindekiler-duz-baslik" id="bhms-okul-mobil-icindekiler-baslik">İçindekiler</p>
+                <ul class="blog-icindekiler-liste blog-icindekiler-liste--mobil">
+                    <li><a href="#bhms-okul-giris">Giriş</a></li>
+                    <li><a href="#bhms-lisans-program-secenekleri-baslik">Lisans program seçenekleri</a></li>
+                    <li><a href="#bhms-ust-duzey-egitim">Üst düzey eğitim kalitesi ve global akreditasyon</a></li>
+                    <li><a href="#bhms-esnek-baslangic">Esnek başlangıç tarihleri ve kariyer planlama</a></li>
+                    <li><a href="#bhms-okul-bilgi-form-baslik">Bilgi istek formu</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <h2 id="bhms-lisans-program-secenekleri-baslik">BHMS İsviçre Lisans Program Seçenekleri</h2>
         <div class="yaz-okullari-secim-paneli ulke-hub-kart-paneli ulke-hub--satir-1">
-            <nav class="yaz-okullari-ulke-kart-wrap" aria-label="Program seçenekleri">
+            <nav class="yaz-okullari-ulke-kart-wrap" aria-labelledby="bhms-lisans-program-secenekleri-baslik">
                 <a href="/yurt-disi-universite/switzerland/business-hotel-management-school/isletme-yonetimi-lisans-programi/" class="yaz-okullari-ulke-kart">
                     <div class="yaz-okullari-ulke-kart-icerik">
                         <span class="yaz-okullari-ulke-kart-bayrak" aria-hidden="true">
@@ -196,7 +220,108 @@
             </nav>
         </div>
 
-        <div id="blog-mobil-icindekiler-hedef" hidden></div>
+        <section id="bhms-ust-duzey-egitim" class="cerceve-kutu icerik-kutusu" aria-labelledby="bhms-ust-duzey-egitim-baslik">
+            <h2 id="bhms-ust-duzey-egitim-baslik">Üst Düzey Eğitim Kalitesi<br><span class="vurgu-satir">Global Akreditasyon</span></h2>
+            <p>BHMS, eğitim kalitesini uluslararası alanda tescillemiş, İsviçre'nin en prestijli eğitim kurumlarından biridir. QS Dünya Üniversite Sıralaması 2026 verilerine göre Konaklama ve Turizm Yönetimi alanında dünya genelinde 12. sırada yer alan üniversitemiz, aynı zamanda İsviçre'de "5 Yıldızlı Kurum" derecesine sahip sadece altı okuldan biridir.</p>
+            <p><strong>5 yıldızlı bir kurumda eğitim almanın öğrencilere sağladığı avantajlar:</strong></p>
+            <div class="rozet-grid icerik-kutusu-grid yatay-3">
+                <article class="rozet-kart">
+                    <div class="rozet-ikon rozet-ikon-tick" aria-hidden="true">✓</div>
+                    <h3 class="rozet-baslik">Dünya Standartlarında Müfredat</h3>
+                    <p class="rozet-metin">Birleşik Krallık'taki öncü üniversitelerle yapılan akademik ortaklıklar, eğitim standartlarının en yüksek seviyede kalmasını garanti eder.</p>
+                </article>
+                <article class="rozet-kart">
+                    <div class="rozet-ikon rozet-ikon-tick" aria-hidden="true">✓</div>
+                    <h3 class="rozet-baslik">Modern Tesis İmkanları</h3>
+                    <p class="rozet-metin">Öğrenciler, teorik bilgileri en yeni teknolojilerle donatılmış laboratuvarlarda ve modern kampüs ortamında pratiğe dökme şansı bulur.</p>
+                </article>
+                <article class="rozet-kart">
+                    <div class="rozet-ikon rozet-ikon-tick" aria-hidden="true">✓</div>
+                    <h3 class="rozet-baslik">Güçlü Kariyer Ağı</h3>
+                    <p class="rozet-metin">Beş yıldızlı akademik itibar, mezunların küresel iş pazarında en seçkin işverenler tarafından öncelikli olarak tercih edilmesini sağlar.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="bhms-esnek-baslangic" class="cerceve-kutu icerik-kutusu" aria-labelledby="bhms-esnek-baslangic-baslik">
+            <h2 id="bhms-esnek-baslangic-baslik">Esnek Başlangıç Tarihleri<br><span class="vurgu-satir">Kariyer Planlama</span></h2>
+            <p>BHMS, öğrencilerine yıl boyunca sunduğu sekiz farklı başlangıç dönemi ile benzersiz bir esneklik sağlar. Bu modüler yapı, eğitiminize size en uygun zamanda başlama imkanı tanırken, iş dünyasındaki staj fırsatlarını da daha geniş bir zaman diliminde yakalamanıza olanak tanır.</p>
+            <div class="rozet-grid icerik-kutusu-grid yatay-3">
+                <article class="rozet-kart">
+                    <div class="rozet-ikon rozet-ikon-tick" aria-hidden="true">✓</div>
+                    <h3 class="rozet-baslik">Akademik Yapı</h3>
+                    <p class="rozet-metin">Eğitim yılı, altışar aylık iki ana yarıyıla bölünmüştür. Bu sistem, teorik eğitim ile profesyonel iş hayatını dengeli bir şekilde birleştirir.</p>
+                </article>
+                <article class="rozet-kart">
+                    <div class="rozet-ikon rozet-ikon-tick" aria-hidden="true">✓</div>
+                    <h3 class="rozet-baslik">Sürekli Staj Akışı</h3>
+                    <p class="rozet-metin">Her 6 aylık akademik dönemin ardından, öğrendiklerinizi pekiştirebileceğiniz 6 aylık uygulamalı staj süreci başlar.</p>
+                </article>
+                <article class="rozet-kart">
+                    <div class="rozet-ikon rozet-ikon-tick" aria-hidden="true">✓</div>
+                    <h3 class="rozet-baslik">Küresel Deneyim</h3>
+                    <p class="rozet-metin">Stajlarınızı İsviçre'nin seçkin işletmelerinde gerçekleştirebileceğiniz gibi, dünya genelindeki global iş ortaklarımız bünyesinde de tamamlayarak uluslararası bir özgeçmiş oluşturabilirsiniz.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="iletisim-form-alani" id="bilgi-istek" aria-labelledby="bhms-okul-bilgi-form-baslik">
+            <div class="hizmet-alanlari-baslik icerik-bilgi-form-bant">
+                <h2 id="bhms-okul-bilgi-form-baslik"><span>Daha Fazla Bilgi ve Başvuru İçin</span><span class="vurgu-satir">Bilgi İstek Formu</span></h2>
+            </div>
+            <div class="iletisim-form-beyaz-cerceve">
+            <p>BHMS İsviçre lisans programları, başvuru koşulları ve Lucerne'de eğitim süreci hakkında danışmanlarımızdan bilgi almak için formu doldurabilirsiniz.</p>
+            <form action="#" method="POST" id="iletisim-formu">
+                <div class="form-satir">
+                    <input type="text" name="ad" placeholder="Adınız" required>
+                    <input type="text" name="soyad" placeholder="Soyadınız" required>
+                </div>
+
+                <div class="form-satir">
+                    <input type="tel" name="telefon" placeholder="Telefon*" required>
+                    <input type="email" name="email" placeholder="E-Posta*" required>
+                </div>
+
+                <div class="form-grup">
+                    <div class="radyo-grup">
+                        <label><input type="radio" name="kimlik-bhms-okul" value="ogrenci" required> Öğrenciyim</label>
+                        <label><input type="radio" name="kimlik-bhms-okul" value="veli"> Veliyim</label>
+                        <label><input type="radio" name="kimlik-bhms-okul" value="diger"> Diğer</label>
+                    </div>
+                </div>
+
+                <textarea name="mesaj" placeholder="Merak Ettikleriniz*" rows="4" required></textarea>
+
+                <div class="kvkk-satir">
+                    <div class="kvkk-alani">
+                        <input type="checkbox" id="kvkk-onay-bhms-okul" required>
+                        <label for="kvkk-onay-bhms-okul">
+                            <a href="/kvkk-aydinlatma-metni/" class="kvkk-link">KVKK Aydınlatma Metnini</a> Okudum*
+                        </label>
+                    </div>
+                    <button type="submit" class="form-buton-kucuk">Gönder</button>
+                </div>
+            </form>
+            </div>
+        </section>
+
+        </div>
+
+        <aside class="blog-yan-panel" aria-label="İçindekiler">
+            <nav class="blog-icindekiler-kutu" aria-labelledby="bhms-okul-masaustu-icindekiler-baslik">
+                <p class="blog-icindekiler-baslik" id="bhms-okul-masaustu-icindekiler-baslik">İçindekiler</p>
+                <ul class="blog-icindekiler-liste">
+                    <li><a href="#bhms-okul-giris">Giriş</a></li>
+                    <li><a href="#bhms-lisans-program-secenekleri-baslik">Lisans program seçenekleri</a></li>
+                    <li><a href="#bhms-ust-duzey-egitim">Üst düzey eğitim kalitesi ve global akreditasyon</a></li>
+                    <li><a href="#bhms-esnek-baslangic">Esnek başlangıç tarihleri ve kariyer planlama</a></li>
+                    <li><a href="#bhms-okul-bilgi-form-baslik">Bilgi istek formu</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        </div>
+        </div>
     </article>
     </main>
 
@@ -227,6 +352,7 @@
 
     <script src="/js/nav-submenu.js" defer></script>
     <script src="/js/header-offset.js" defer></script>
+    <script src="/js/iletisim-formu.js" defer></script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
