@@ -1,0 +1,24 @@
+{
+    "schema":  "global-compass-css-baseline/1",
+    "file":  "css/style.css",
+    "measured_at":  "2026-04-23T02:02:01+03:00",
+    "bytes":  376233,
+    "lines":  11007,
+    "git_commit":  "7011b8e594d1c3a3a2803027a2de48573457ff73",
+    "working_tree_clean":  false,
+    "policy":  {
+                   "yeni_sayfa_css":  ".cursor/rules/yeni-sayfa-ek-css-yasagi.mdc",
+                   "summary":  "Yeni HTML sayfasında varsayılan olarak style.css\u0027e yeni seçici/kural eklenmez; mevcut sınıflar kullanılır."
+               },
+    "update_command":  "powershell -NoProfile -ExecutionPolicy Bypass -File tools/update-css-style-baseline.ps1",
+    "notes":  [
+                  "Aşama 0 — stil boyutu referansı. Tasarruf aşamaları öncesi/sonrası karşılaştırma için bu dosyayı güncelleyin.",
+                  "Aşama 1 — Kapsam-duyarlı tekrar özeti: tools/css-dedupe-stage1-report.ps1 → tools/css-dedupe-stage1-report.json. Tam birleştirme: tools/css-merge-scenario-a.ps1 -DryRun (yorumları siler; üretim öncesi ayrı strateji).",
+                  "Aşama 2 — Uzun / birleşik seçici envanteri: tools/css-mega-selectors-stage2-report.ps1 → tools/css-mega-selectors-stage2-report.json (override-yasagi ile hizalı kısaltma adayları).",
+                  "Aşama 3 — HTML–CSS modül envanteri: tools/css-modules-stage3-inventory.ps1 → tools/css-modules-stage3-report.json (ortak imza kümeleri, eksik href, diskte referanssız css).",
+                  "Aşama 4 — Kırık href giderildi: canada/germany/italy/usa/new-york/immerse-shared minimal /css dosyaları. Sağlık özeti: tools/css-dead-stage4-report.ps1 → tools/css-dead-stage4-report.json",
+                  "Aşama 5 — Yas-tab / immerse-shared aynası: tools/css-stage5-yas-tab-report.ps1 → tools/css-stage5-yas-tab-report.json (yas-tab-alani-standardi ile hizalı envanter).",
+                  "Aşama 6 — Tek komut rapor + özet: tools/css-stage6-run-all-reports.ps1 → tools/css-stage6-dashboard.json (isteğe -UpdateBaseline, -MergeScenarioDryRun)."
+              ],
+    "update_command_pwsh":  "pwsh -File tools/update-css-style-baseline.ps1"
+}

@@ -1,4 +1,5 @@
 #Requires -Version 5.1
+# Fast estimate: mixes TOP-level and @media rules in one bucket. Scope-aware report: tools/css-dedupe-stage1-report.ps1
 $ErrorActionPreference = 'Stop'
 $path = Join-Path $PSScriptRoot '..\css\style.css'
 $raw = [System.IO.File]::ReadAllText($path, [System.Text.Encoding]::UTF8)

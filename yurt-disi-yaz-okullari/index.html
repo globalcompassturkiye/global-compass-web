@@ -30,8 +30,9 @@
     <link rel="stylesheet" href="/css/site-iletisim-form.css">
     <link rel="stylesheet" href="/css/site-yonlendirme-kart.css">
     <link rel="stylesheet" href="/css/sss.css">
+    <link rel="stylesheet" href="/css/blog.css">
 </head>
-<body class="sayfa-yurt-disi-yaz-okullari">
+<body class="sayfa-yurt-disi-yaz-okullari blog-yazi-sayfa-mobil-ux">
     <div class="sabit-ust-alan">
         <div class="ust-serit">
             <div class="ust-serit-kapsayici">
@@ -82,14 +83,12 @@
                     <li class="has-dropdown">
                         <a href="/yurt-disi-lise/" aria-haspopup="true" aria-expanded="false">Lise</a>
                         <ul class="submenu">
-                            <li><a href="/yurt-disi-lise/">Tümü</a></li>
                             <li><a href="/yurt-disi-lise/degisim-programlari/">Değişim Programları</a></li>
                         </ul>
                     </li>
                     <li class="has-dropdown">
                         <a href="/yurt-disi-universite/" aria-haspopup="true" aria-expanded="false">Üniversite</a>
                         <ul class="submenu">
-                            <li><a href="/yurt-disi-universite/">Tümü</a></li>
                             <li><a href="/yurt-disi-universite/switzerland/">İsviçre</a></li>
                         </ul>
                     </li>
@@ -99,7 +98,6 @@
                     <li class="has-dropdown">
                         <a href="/yurt-disi-dil-okullari/" aria-haspopup="true" aria-expanded="false">Dil Okulları</a>
                         <ul class="submenu">
-                            <li><a href="/yurt-disi-dil-okullari/">Tümü</a></li>
                             <li class="has-dropdown">
                                 <a href="/yurt-disi-dil-okullari/uk/" aria-haspopup="true" aria-expanded="false">İngiltere</a>
                                 <ul class="submenu">
@@ -121,7 +119,6 @@
                     <li class="has-dropdown">
                         <a href="/yurt-disi-yaz-okullari/" class="aktif" aria-haspopup="true" aria-expanded="false">Yaz Okulları</a>
                         <ul class="submenu">
-                            <li><a href="/yurt-disi-yaz-okullari/" class="aktif">Tümü</a></li>
                             <li class="has-dropdown">
                                 <a href="/yurt-disi-yaz-okullari/uk/" aria-haspopup="true" aria-expanded="false">İngiltere</a>
                                 <ul class="submenu">
@@ -171,7 +168,7 @@
     </div>
 
     <main id="icerik">
-    <article class="icerik-alani">
+    <article class="icerik-alani blog-yazi-detay">
         <nav class="site-haritasi-yolu" aria-label="Sayfa konumu">
             <div class="breadcrumb-kutu">
                 <a href="/" class="ana-sayfa-ikon">
@@ -182,13 +179,33 @@
             </div>
         </nav>
 
-        <h1>Yurt Dışı Yaz Okulları:<br>
+        <div class="blog-yazi-tek-sutun blog-yazi-tek-sutun--tam">
+        <div class="blog-yazi-layout blog-yazi-layout--yan-panel">
+        <div class="blog-yazi-ana">
+
+        <h1 id="yaz-hub-giris">Yurt Dışı Yaz Okulları:<br>
             <span class="vurgu-renk">Unutulmaz Bir Yaz, Global Bir Deneyim</span>
         </h1>
 
         <p>Yurt dışı yaz okulları, öğrencilere sadece yabancı dil öğretmekle kalmaz; onlara kendi ayakları üzerinde durmayı, farklı kültürlerle kalıcı dostluklar kurmayı ve küresel bir dünya vizyonu kazanmayı öğretir. Yurt dışı yaz okulu programları, <strong>8-18 yaş arası öğrenciler için</strong> dünyanın en prestijli kampüslerinde, güvenli ve eğlence dolu bir yaz kampı deneyimi sunuyor. İngiltere’nin tarihi kolejlerinden Kanada’nın modern üniversitelerine kadar uzanan geniş yelpazemizle, gençlerimizin potansiyellerini keşfetmelerine rehberlik ediyoruz.</p>
 
-        <h2>
+        <div id="blog-mobil-icindekiler-hedef" class="blog-mobil-icindekiler-wrap">
+            <nav class="blog-mobil-icindekiler-duz" aria-labelledby="yaz-hub-mobil-icindekiler-baslik">
+                <p class="blog-mobil-icindekiler-duz-baslik" id="yaz-hub-mobil-icindekiler-baslik">İçindekiler</p>
+                <ul class="blog-icindekiler-liste blog-icindekiler-liste--mobil">
+                    <li><a href="#yaz-hub-giris">Giriş</a></li>
+                    <li><a href="#yaz-hub-ulkeler">Ülke seçimi</a></li>
+                    <li><a href="#yaz-hub-destinasyonlar">Popüler destinasyonlar</a></li>
+                    <li><a href="#yaz-hub-avantajlar">Avantajlar</a></li>
+                    <li><a href="#yaz-hub-program-icerik">Program ve aktiviteler</a></li>
+                    <li><a href="#yaz-hub-sss">Sıkça sorulan sorular</a></li>
+                    <li><a href="#bilgi-istek">Bilgi istek formu</a></li>
+                    <li><a href="#yaz-hub-dil-okullari">Yurt dışı dil okulları</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <h2 id="yaz-hub-ulkeler">
             <span>Yurt Dışı Yaz Okullarını Keşfedin!</span>
             <span class="vurgu-satir">Hangi Ülkeyi Tercih Edersiniz?</span>
         </h2>
@@ -254,7 +271,7 @@
             </nav>
         </div>
 
-        <div class="cerceve-kutu icerik-kutusu">
+        <div class="cerceve-kutu icerik-kutusu" id="yaz-hub-destinasyonlar">
             <h2>Popüler Yaz Okulu Destinasyonları</h2>
             <p>Dünyanın en prestijli eğitim merkezlerinde, her bütçeye ve ilgi alanına uygun yaz okulu seçeneklerimizi inceleyin:</p>
 
@@ -285,7 +302,7 @@
     </div>
 </div>
 
-        <div class="cerceve-kutu icerik-kutusu dil-okullari-konaklama-kutu">
+        <div class="cerceve-kutu icerik-kutusu dil-okullari-konaklama-kutu" id="yaz-hub-avantajlar">
             <h2>Yurt Dışı Yaz Okulları Avantajları</h2>
             <p>Yaz okulu deneyimi, öğrencilere sadece dil öğretmekle kalmaz; kişisel gelişim ve global vizyon kazandırır:</p>
 
@@ -321,7 +338,7 @@
             </div>
         </div>
 
-        <div class="cerceve-kutu icerik-kutusu">
+        <div class="cerceve-kutu icerik-kutusu" id="yaz-hub-program-icerik">
             <h2>Program İçerikleri ve Aktiviteler</h2>
             <p>Yaz okulları sadece derslerden ibaret değildir. Öğrencilerimiz haftada ortalama 15-20 saatlik dil eğitiminin yanı sıra şu aktivitelere katılırlar:</p>
 
@@ -354,7 +371,7 @@
             </div>
         </div>
 
-        <div class="cerceve-kutu">
+        <div class="cerceve-kutu" id="yaz-hub-sss">
             <h2>Yurt Dışı Yaz Okulları Hakkında<span class="vurgu-satir">Sıkça Sorulan Sorular (SSS)</span></h2>
             <div class="sss-alani">
                 <details class="sss-item">
@@ -427,7 +444,7 @@
             </div>
         </section>
 
-        <div class="okul-liste-kapsayici">
+        <div class="okul-liste-kapsayici" id="yaz-hub-dil-okullari">
             <h2>Yurt Dışı Dil Okulları</h2>
             <section class="alt-yonlendirme-alani">
                 <div class="yonlendirme-karti">
@@ -435,6 +452,27 @@
                     <a href="/yurt-disi-dil-okullari/" class="kart-link">Yurt Dışı Dil Okullarını Keşfet →</a>
                 </div>
             </section>
+        </div>
+
+        </div>
+
+        <aside class="blog-yan-panel" aria-label="İçindekiler">
+            <nav class="blog-icindekiler-kutu" aria-labelledby="yaz-hub-masaustu-icindekiler-baslik">
+                <p class="blog-icindekiler-baslik" id="yaz-hub-masaustu-icindekiler-baslik">İçindekiler</p>
+                <ul class="blog-icindekiler-liste">
+                    <li><a href="#yaz-hub-giris">Giriş</a></li>
+                    <li><a href="#yaz-hub-ulkeler">Ülke seçimi</a></li>
+                    <li><a href="#yaz-hub-destinasyonlar">Popüler destinasyonlar</a></li>
+                    <li><a href="#yaz-hub-avantajlar">Avantajlar</a></li>
+                    <li><a href="#yaz-hub-program-icerik">Program ve aktiviteler</a></li>
+                    <li><a href="#yaz-hub-sss">Sıkça sorulan sorular</a></li>
+                    <li><a href="#bilgi-istek">Bilgi istek formu</a></li>
+                    <li><a href="#yaz-hub-dil-okullari">Yurt dışı dil okulları</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        </div>
         </div>
     </article>
     </main>

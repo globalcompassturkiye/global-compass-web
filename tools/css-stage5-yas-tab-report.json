@@ -1,0 +1,52 @@
+{
+    "rule_reference":  ".cursor/rules/yas-tab-alani-standardi.mdc",
+    "mirror_status":  {
+                          "immerse_shared_yas_tab_lines":  0,
+                          "mirror_gap_note":  "immerse-shared.css has no yas-tab lines while style.css does. Per yas-tab-alani-standardi: mirror rules if a page loads immerse-shared without style.css; most pages load both - confirm templates.",
+                          "mirror_gap_flag":  true,
+                          "style_has_yas_tab_lines":  44
+                      },
+    "notes":  [
+                  "Mega-selector debt for age tabs: see css-mega-selectors-stage2-report.json top_by_pain_score.",
+                  "Do not conflate with ana sayfa hizmet-tab (tab.css); yas-tab-alani-standardi applies to content pages."
+              ],
+    "html_summary":  {
+                         "pages_both_yas_and_immerse_link":  0,
+                         "pages_with_yas_tab_markup":  10,
+                         "pages_linking_immerse_shared":  1
+                     },
+    "immerse_shared_css":  {
+                               "file":  "css/immerse-shared.css",
+                               "bytes":  95,
+                               "total_lines":  1,
+                               "lines_match_yas_tab":  0,
+                               "lines_match_hash_yas":  0,
+                               "lines_checked_plus_yas":  0
+                           },
+    "html_with_yas_tab_sample":  [
+                                     "yurt-disi-dil-okullari/uk/bournemouth/kings-education/index.html",
+                                     "yurt-disi-universite/switzerland/business-hotel-management-school/isletme-yonetimi-lisans-programi/index.html",
+                                     "yurt-disi-yaz-okullari/canada/toronto/immerse-education/index.html",
+                                     "yurt-disi-yaz-okullari/japan/tokyo/immerse-education/index.html",
+                                     "yurt-disi-yaz-okullari/switzerland/swiss-education-academy/index.html",
+                                     "yurt-disi-yaz-okullari/uk/cambridge/immerse-education/index.html",
+                                     "yurt-disi-yaz-okullari/uk/cambridge/oxford-royale-academy/index.html",
+                                     "yurt-disi-yaz-okullari/uk/london/immerse-education/index.html",
+                                     "yurt-disi-yaz-okullari/uk/london/investin/index.html",
+                                     "yurt-disi-yaz-okullari/uk/oxford/immerse-education/index.html"
+                                 ],
+    "style_css":  {
+                      "file":  "css/style.css",
+                      "bytes":  376233,
+                      "total_lines":  12705,
+                      "lines_match_yas_tab":  44,
+                      "lines_match_hash_yas":  4,
+                      "lines_checked_plus_yas":  15
+                  },
+    "generated_at":  "2026-04-23T02:19:34+03:00",
+    "schema":  "global-compass-css-stage5-yas-tab/1",
+    "related_tools":  {
+                          "mega_stage2":  "tools/css-mega-selectors-stage2-report.ps1",
+                          "stage3":  "tools/css-modules-stage3-inventory.ps1"
+                      }
+}

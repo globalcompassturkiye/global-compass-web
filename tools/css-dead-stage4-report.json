@@ -1,0 +1,183 @@
+{
+    "generated_at":  "2026-04-23T02:19:33+03:00",
+    "files":  [
+                  {
+                      "path":  "css/blog.css",
+                      "bytes":  25265,
+                      "lines":  1130,
+                      "brace_open_count":  168,
+                      "brace_close_count":  168,
+                      "likely_stub":  false
+                  },
+                  {
+                      "path":  "css/canada.css",
+                      "bytes":  75,
+                      "lines":  2,
+                      "brace_open_count":  0,
+                      "brace_close_count":  0,
+                      "likely_stub":  true
+                  },
+                  {
+                      "path":  "css/dunyanin-en-sira-disi-5-yaz-kampi.css",
+                      "bytes":  8473,
+                      "lines":  338,
+                      "brace_open_count":  45,
+                      "brace_close_count":  45,
+                      "likely_stub":  false
+                  },
+                  {
+                      "path":  "css/germany.css",
+                      "bytes":  76,
+                      "lines":  2,
+                      "brace_open_count":  0,
+                      "brace_close_count":  0,
+                      "likely_stub":  true
+                  },
+                  {
+                      "path":  "css/ibdp-ve-ibcp-farki-hangisi-daha-iyi.css",
+                      "bytes":  406,
+                      "lines":  21,
+                      "brace_open_count":  3,
+                      "brace_close_count":  3,
+                      "likely_stub":  false
+                  },
+                  {
+                      "path":  "css/ielts-hazirlik-rehberi-ve-ucretsiz-deneme-sinavi.css",
+                      "bytes":  2127,
+                      "lines":  117,
+                      "brace_open_count":  19,
+                      "brace_close_count":  19,
+                      "likely_stub":  false
+                  },
+                  {
+                      "path":  "css/immerse-shared.css",
+                      "bytes":  95,
+                      "lines":  2,
+                      "brace_open_count":  0,
+                      "brace_close_count":  0,
+                      "likely_stub":  true
+                  },
+                  {
+                      "path":  "css/isvicre-lise-diplomasi-vs-ib.css",
+                      "bytes":  5077,
+                      "lines":  242,
+                      "brace_open_count":  40,
+                      "brace_close_count":  40,
+                      "likely_stub":  false
+                  },
+                  {
+                      "path":  "css/italy.css",
+                      "bytes":  74,
+                      "lines":  2,
+                      "brace_open_count":  0,
+                      "brace_close_count":  0,
+                      "likely_stub":  true
+                  },
+                  {
+                      "path":  "css/new-york.css",
+                      "bytes":  77,
+                      "lines":  2,
+                      "brace_open_count":  0,
+                      "brace_close_count":  0,
+                      "likely_stub":  true
+                  },
+                  {
+                      "path":  "css/russell-group-nedir-ingiltere-prestijli-universiteler.css",
+                      "bytes":  3948,
+                      "lines":  168,
+                      "brace_open_count":  26,
+                      "brace_close_count":  26,
+                      "likely_stub":  false
+                  },
+                  {
+                      "path":  "css/site-breadcrumb.css",
+                      "bytes":  6355,
+                      "lines":  212,
+                      "brace_open_count":  19,
+                      "brace_close_count":  19,
+                      "likely_stub":  false
+                  },
+                  {
+                      "path":  "css/site-cls-rezerv.css",
+                      "bytes":  1644,
+                      "lines":  45,
+                      "brace_open_count":  6,
+                      "brace_close_count":  6,
+                      "likely_stub":  false
+                  },
+                  {
+                      "path":  "css/site-footer.css",
+                      "bytes":  3220,
+                      "lines":  141,
+                      "brace_open_count":  22,
+                      "brace_close_count":  22,
+                      "likely_stub":  false
+                  },
+                  {
+                      "path":  "css/site-iletisim-form.css",
+                      "bytes":  16794,
+                      "lines":  617,
+                      "brace_open_count":  80,
+                      "brace_close_count":  80,
+                      "likely_stub":  false
+                  },
+                  {
+                      "path":  "css/site-ustmenu.css",
+                      "bytes":  48221,
+                      "lines":  1627,
+                      "brace_open_count":  225,
+                      "brace_close_count":  225,
+                      "likely_stub":  false
+                  },
+                  {
+                      "path":  "css/site-yonlendirme-kart.css",
+                      "bytes":  6069,
+                      "lines":  217,
+                      "brace_open_count":  29,
+                      "brace_close_count":  29,
+                      "likely_stub":  false
+                  },
+                  {
+                      "path":  "css/sss.css",
+                      "bytes":  11090,
+                      "lines":  436,
+                      "brace_open_count":  70,
+                      "brace_close_count":  70,
+                      "likely_stub":  false
+                  },
+                  {
+                      "path":  "css/style.css",
+                      "bytes":  376233,
+                      "lines":  12706,
+                      "brace_open_count":  1842,
+                      "brace_close_count":  1842,
+                      "likely_stub":  false
+                  },
+                  {
+                      "path":  "css/usa.css",
+                      "bytes":  72,
+                      "lines":  2,
+                      "brace_open_count":  0,
+                      "brace_close_count":  0,
+                      "likely_stub":  true
+                  },
+                  {
+                      "path":  "css/yurt-disinda-yuksek-lisans-kariyer-sicramasi.css",
+                      "bytes":  2008,
+                      "lines":  92,
+                      "brace_open_count":  13,
+                      "brace_close_count":  13,
+                      "likely_stub":  false
+                  }
+              ],
+    "schema":  "global-compass-css-dead-stage4/1",
+    "summary":  {
+                    "likely_stub_files":  6,
+                    "css_files_on_disk":  21
+                },
+    "stage3_note":  "Last stage3 missing_hrefs_reported: 0. Re-run inventory to refresh.",
+    "notes":  [
+                  "likely_stub: no property:block pattern after stripping comments, and file is small â€” safe extension point or candidate to remove if links are dropped.",
+                  "Unused selectors inside style.css are not analyzed here (needs HTML token corpus + safer heuristics)."
+              ]
+}

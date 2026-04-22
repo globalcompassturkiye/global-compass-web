@@ -4,7 +4,8 @@
 
 param(
     [string]$Source = (Join-Path $PSScriptRoot '..\css\style.css'),
-    [string]$Backup = (Join-Path $PSScriptRoot '..\css\style.css.pre-scenario-a')
+    [string]$Backup = (Join-Path $PSScriptRoot '..\css\style.css.pre-scenario-a'),
+    [switch]$DryRun
 )
 
 $ErrorActionPreference = 'Stop'
@@ -117,7 +118,12 @@ function Emit-MergedRules($rulesWithIndex, $plan) {
 
 # --- Tek geçiş: sıralı akış ---
 $raw = [System.IO.File]::ReadAllText($Source, [System.Text.Encoding]::UTF8)
-Copy-Item -LiteralPath $Source -Destination $Backup -Force
+if (-not $DryRun) {
+    Copy-Item -LiteralPath $Source -Destination $Backup -Force
+}
+else {
+    Write-Host "DryRun: no backup, no write." -ForegroundColor Cyan
+}
 
 $text = Remove-BlockComments $raw
 
@@ -231,13 +237,20 @@ foreach ($seg in $stream) {
 }
 
 $utf8NoBom = New-Object System.Text.UTF8Encoding $false
-[System.IO.File]::WriteAllText($Source, $sbFinal.ToString(), $utf8NoBom)
+$out = $sbFinal.ToString()
+if (-not $DryRun) {
+    Write-Host "WARNING: Output drops block comments and normalizes rule formatting." -ForegroundColor Yellow
+    [System.IO.File]::WriteAllText($Source, $out, $utf8NoBom)
+}
+else {
+    Write-Host "DryRun: merge preview size only (file not written)." -ForegroundColor Cyan
+}
 
 $oldLines = ($raw -split "`n").Count
-$newLines = ($sbFinal.ToString() -split "`n").Count
+$newLines = ($out -split "`n").Count
 $oldBytes = [System.Text.Encoding]::UTF8.GetByteCount($raw)
-$newBytes = [System.Text.Encoding]::UTF8.GetByteCount($sbFinal.ToString())
+$newBytes = [System.Text.Encoding]::UTF8.GetByteCount($out)
 Write-Host "OK: $Source"
-Write-Host "Yedek: $Backup"
+if (-not $DryRun) { Write-Host "Yedek: $Backup" }
 Write-Host "Satir: $oldLines -> $newLines (delta: $($newLines - $oldLines))"
 Write-Host "Bayt:  $oldBytes -> $newBytes (delta: $($newBytes - $oldBytes))"

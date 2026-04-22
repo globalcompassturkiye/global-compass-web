@@ -30,8 +30,9 @@
     <link rel="stylesheet" href="/css/site-iletisim-form.css">
     <link rel="stylesheet" href="/css/site-yonlendirme-kart.css">
     <link rel="stylesheet" href="/css/sss.css">
+    <link rel="stylesheet" href="/css/blog.css">
 </head>
-<body class="sayfa-yurt-disi-dil-okullari">
+<body class="sayfa-yurt-disi-dil-okullari blog-yazi-sayfa-mobil-ux">
     <div class="sabit-ust-alan">
         <div class="ust-serit">
             <div class="ust-serit-kapsayici">
@@ -82,14 +83,12 @@
                     <li class="has-dropdown">
                         <a href="/yurt-disi-lise/" aria-haspopup="true" aria-expanded="false">Lise</a>
                         <ul class="submenu">
-                            <li><a href="/yurt-disi-lise/">Tümü</a></li>
                             <li><a href="/yurt-disi-lise/degisim-programlari/">Değişim Programları</a></li>
                         </ul>
                     </li>
                     <li class="has-dropdown">
                         <a href="/yurt-disi-universite/" aria-haspopup="true" aria-expanded="false">Üniversite</a>
                         <ul class="submenu">
-                            <li><a href="/yurt-disi-universite/">Tümü</a></li>
                             <li><a href="/yurt-disi-universite/switzerland/">İsviçre</a></li>
                         </ul>
                     </li>
@@ -99,7 +98,6 @@
                     <li class="has-dropdown">
                         <a href="/yurt-disi-dil-okullari/" class="aktif" aria-haspopup="true" aria-expanded="false">Dil Okulları</a>
                         <ul class="submenu">
-                            <li><a href="/yurt-disi-dil-okullari/" class="aktif">Tümü</a></li>
                             <li class="has-dropdown">
                                 <a href="/yurt-disi-dil-okullari/uk/" aria-haspopup="true" aria-expanded="false">İngiltere</a>
                                 <ul class="submenu">
@@ -121,7 +119,6 @@
                     <li class="has-dropdown">
                         <a href="/yurt-disi-yaz-okullari/" aria-haspopup="true" aria-expanded="false">Yaz Okulları</a>
                         <ul class="submenu">
-                            <li><a href="/yurt-disi-yaz-okullari/">Tümü</a></li>
                             <li class="has-dropdown">
                                 <a href="/yurt-disi-yaz-okullari/uk/" aria-haspopup="true" aria-expanded="false">İngiltere</a>
                                 <ul class="submenu">
@@ -171,7 +168,7 @@
     </div>
 
     <main id="icerik">
-    <article class="icerik-alani">
+    <article class="icerik-alani blog-yazi-detay">
         <nav class="site-haritasi-yolu" aria-label="Sayfa konumu">
             <div class="breadcrumb-kutu">
                 <a href="/" class="ana-sayfa-ikon">
@@ -182,13 +179,33 @@
             </div>
         </nav>
 
-        <h1>Yurt Dışı Dil Okulları:<br>
+        <div class="blog-yazi-tek-sutun blog-yazi-tek-sutun--tam">
+        <div class="blog-yazi-layout blog-yazi-layout--yan-panel">
+        <div class="blog-yazi-ana">
+
+        <h1 id="dil-hub-giris">Yurt Dışı Dil Okulları:<br>
             <span class="vurgu-renk">Global Bir Kariyer İçin İlk Adım</span>
         </h1>
 
         <p>Global Compass olarak; İngiltere, ABD, Kanada, İrlanda, Malta gibi popüler destinasyonların yanı sıra Japonya, Güney Kore ve Çin gibi Uzak Doğu’nun yükselen eğitim merkezlerinde de yanınızdayız. Dünyanın en seçkin dil okullarıyla yaptığımız stratejik iş ortaklıkları sayesinde, öğrencilerimize her bütçeye ve hedefe uygun yüzlerce farklı kurs seçeneği sunuyoruz.</p>
 
-        <h2>
+        <div id="blog-mobil-icindekiler-hedef" class="blog-mobil-icindekiler-wrap">
+            <nav class="blog-mobil-icindekiler-duz" aria-labelledby="dil-hub-mobil-icindekiler-baslik">
+                <p class="blog-mobil-icindekiler-duz-baslik" id="dil-hub-mobil-icindekiler-baslik">İçindekiler</p>
+                <ul class="blog-icindekiler-liste blog-icindekiler-liste--mobil">
+                    <li><a href="#dil-hub-giris">Giriş</a></li>
+                    <li><a href="#dil-hub-ulkeler">Ülke seçimi</a></li>
+                    <li><a href="#dil-hub-avantajlar">Kariyer avantajları</a></li>
+                    <li><a href="#dil-hub-konaklama">Konaklama seçenekleri</a></li>
+                    <li><a href="#dil-hub-programlar">Program seçenekleri</a></li>
+                    <li><a href="#dil-hub-sss">Sıkça sorulan sorular</a></li>
+                    <li><a href="#bilgi-istek">Bilgi istek formu</a></li>
+                    <li><a href="#dil-hub-yaz-okullari">Yurt dışı yaz okulları</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <h2 id="dil-hub-ulkeler">
             <span>Yurt Dışı Dil Okullarını Keşfedin!</span>
             <span class="vurgu-satir">Hangi Ülkeyi Tercih Edersiniz?</span>
         </h2>
@@ -214,7 +231,7 @@
             </nav>
         </div>
 
-        <div class="cerceve-kutu icerik-kutusu">
+        <div class="cerceve-kutu icerik-kutusu" id="dil-hub-avantajlar">
             <h2><span>Yurt Dışında Dil Eğitimi:</span><span class="vurgu-satir">Kariyerinize Sağladığı Avantajlar</span></h2>
 
             <p>Yurt dışında eğitim almak sadece bir dil öğrenme süreci değil, aynı zamanda global bir vizyon kazanma yolculuğudur. Bu deneyimin size kazandıracağı temel avantajlar:</p>
@@ -254,7 +271,7 @@
             </div>
         </div>
 
-        <div class="cerceve-kutu icerik-kutusu dil-okullari-konaklama-kutu">
+        <div class="cerceve-kutu icerik-kutusu dil-okullari-konaklama-kutu" id="dil-hub-konaklama">
             <h2>Dil Okulu Konaklama Alternatifleri</h2>
 
             <p>Dil eğitimi süresince kendinizi en konforlu ve güvende hissedeceğiniz konaklama tipini seçmeniz, öğrenme sürecinizi doğrudan etkiler. Okullarımızın sunduğu temel seçenekler:</p>
@@ -291,7 +308,7 @@
             </div>
         </div>
 
-        <div class="cerceve-kutu icerik-kutusu">
+        <div class="cerceve-kutu icerik-kutusu" id="dil-hub-programlar">
             <h2>Dil Okulu Program Seçenekleri</h2>
 
             <p>Dil okullarında her seviyeye ve hedefe uygun, esnek başlangıç tarihlerine sahip çeşitli eğitim modelleri sunulmaktadır. Sizin için en etkili programı birlikte belirliyoruz.</p>
@@ -339,7 +356,7 @@
             </div>
         </div>
 
-        <div class="cerceve-kutu">
+        <div class="cerceve-kutu" id="dil-hub-sss">
             <h2>Yurt Dışı Dil Okulları Hakkında<span class="vurgu-satir">Sıkça Sorulan Sorular (SSS)</span></h2>
             <div class="sss-alani">
                 <details class="sss-item">
@@ -413,7 +430,7 @@
             </div>
         </section>
 
-        <div class="okul-liste-kapsayici">
+        <div class="okul-liste-kapsayici" id="dil-hub-yaz-okullari">
             <h2>Yurt Dışı Yaz Okulları</h2>
             <section class="alt-yonlendirme-alani">
                 <div class="yonlendirme-karti">
@@ -421,6 +438,27 @@
                     <a href="/yurt-disi-yaz-okullari/" class="kart-link">Yurt Dışı Yaz Okullarını Keşfet →</a>
                 </div>
             </section>
+        </div>
+
+        </div>
+
+        <aside class="blog-yan-panel" aria-label="İçindekiler">
+            <nav class="blog-icindekiler-kutu" aria-labelledby="dil-hub-masaustu-icindekiler-baslik">
+                <p class="blog-icindekiler-baslik" id="dil-hub-masaustu-icindekiler-baslik">İçindekiler</p>
+                <ul class="blog-icindekiler-liste">
+                    <li><a href="#dil-hub-giris">Giriş</a></li>
+                    <li><a href="#dil-hub-ulkeler">Ülke seçimi</a></li>
+                    <li><a href="#dil-hub-avantajlar">Kariyer avantajları</a></li>
+                    <li><a href="#dil-hub-konaklama">Konaklama seçenekleri</a></li>
+                    <li><a href="#dil-hub-programlar">Program seçenekleri</a></li>
+                    <li><a href="#dil-hub-sss">Sıkça sorulan sorular</a></li>
+                    <li><a href="#bilgi-istek">Bilgi istek formu</a></li>
+                    <li><a href="#dil-hub-yaz-okullari">Yurt dışı yaz okulları</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        </div>
         </div>
     </article>
     </main>

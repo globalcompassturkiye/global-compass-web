@@ -29,9 +29,10 @@
     <link rel="stylesheet" href="/css/site-breadcrumb.css">
     <link rel="stylesheet" href="/css/site-iletisim-form.css">
     <link rel="stylesheet" href="/css/site-yonlendirme-kart.css">
+    <link rel="stylesheet" href="/css/blog.css">
     <link rel="stylesheet" href="/css/sss.css">
 </head>
-<body class="sayfa-yurt-disi-burs-firsatlari">
+<body class="sayfa-yurt-disi-burs-firsatlari blog-yazi-sayfa-mobil-ux">
     <div class="sabit-ust-alan">
         <div class="ust-serit">
             <div class="ust-serit-kapsayici">
@@ -82,14 +83,12 @@
                     <li class="has-dropdown">
                         <a href="/yurt-disi-lise/" aria-haspopup="true" aria-expanded="false">Lise</a>
                         <ul class="submenu">
-                            <li><a href="/yurt-disi-lise/">Tümü</a></li>
                             <li><a href="/yurt-disi-lise/degisim-programlari/">Değişim Programları</a></li>
                         </ul>
                     </li>
                     <li class="has-dropdown">
                         <a href="/yurt-disi-universite/" aria-haspopup="true" aria-expanded="false">Üniversite</a>
                         <ul class="submenu">
-                            <li><a href="/yurt-disi-universite/">Tümü</a></li>
                             <li><a href="/yurt-disi-universite/switzerland/">İsviçre</a></li>
                         </ul>
                     </li>
@@ -99,7 +98,6 @@
                     <li class="has-dropdown">
                         <a href="/yurt-disi-dil-okullari/" aria-haspopup="true" aria-expanded="false">Dil Okulları</a>
                         <ul class="submenu">
-                            <li><a href="/yurt-disi-dil-okullari/">Tümü</a></li>
                             <li class="has-dropdown">
                                 <a href="/yurt-disi-dil-okullari/uk/" aria-haspopup="true" aria-expanded="false">İngiltere</a>
                                 <ul class="submenu">
@@ -121,7 +119,6 @@
                     <li class="has-dropdown">
                         <a href="/yurt-disi-yaz-okullari/" aria-haspopup="true" aria-expanded="false">Yaz Okulları</a>
                         <ul class="submenu">
-                            <li><a href="/yurt-disi-yaz-okullari/">Tümü</a></li>
                             <li class="has-dropdown">
                                 <a href="/yurt-disi-yaz-okullari/uk/" aria-haspopup="true" aria-expanded="false">İngiltere</a>
                                 <ul class="submenu">
@@ -171,7 +168,7 @@
     </div>
 
     <main id="icerik">
-    <article class="icerik-alani sayfa-burs-firsatlari-icerik">
+    <article class="icerik-alani blog-yazi-detay sayfa-burs-firsatlari-icerik">
         <nav class="site-haritasi-yolu" aria-label="Sayfa konumu">
             <div class="breadcrumb-kutu">
                 <a href="/" class="ana-sayfa-ikon">
@@ -182,13 +179,33 @@
             </div>
         </nav>
 
-        <h1>2026 Yurt Dışı Burs Fırsatları<br>
+        <div class="blog-yazi-tek-sutun blog-yazi-tek-sutun--tam">
+        <div class="blog-yazi-layout blog-yazi-layout--yan-panel">
+        <div class="blog-yazi-ana">
+
+        <h1 id="burs-hub-giris">2026 Yurt Dışı Burs Fırsatları<br>
             <span class="vurgu-renk">Başvuru şartları ve popüler burslar</span>
         </h1>
         <p>Yurt dışında burslu eğitim almak, sadece akademik bir başarı değil; global bir vizyon ve kariyer basamaklarını hızla tırmanmanızı sağlayan güçlü bir deneyimdir.
             Global Compass olarak, bütçenizin bu hayalin önünde engel olmasını istemiyor; devlet bursları, vakıf destekleri ve üniversite indirimleriyle maliyetleri yönetilebilir hale getiriyoruz.</p>
 
-        <div class="cerceve-kutu icerik-kutusu">
+        <div id="blog-mobil-icindekiler-hedef" class="blog-mobil-icindekiler-wrap">
+            <nav class="blog-mobil-icindekiler-duz" aria-labelledby="burs-hub-mobil-icindekiler-baslik">
+                <p class="blog-mobil-icindekiler-duz-baslik" id="burs-hub-mobil-icindekiler-baslik">İçindekiler</p>
+                <ul class="blog-icindekiler-liste blog-icindekiler-liste--mobil">
+                    <li><a href="#burs-hub-giris">Giriş</a></li>
+                    <li><a href="#burs-temel-kriterler">5 temel kriter</a></li>
+                    <li><a href="#burs-populer-programlar">Popüler burs programları</a></li>
+                    <li><a href="#burs-basvuru-sureci">Başvuru süreci</a></li>
+                    <li><a href="#burs-sss">Sıkça sorulan sorular</a></li>
+                    <li><a href="#burs-hayal-metni">Burslu eğitim özeti</a></li>
+                    <li><a href="#bilgi-istek">Bilgi istek formu</a></li>
+                    <li><a href="#burs-dil-okullari">Yurt dışı dil okulları</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="cerceve-kutu icerik-kutusu" id="burs-temel-kriterler">
             <h2>Burs Dosyanızı Güçlendiren 5 Temel Kriter</h2>
             <div class="rozet-grid icerik-kutusu-grid yatay-2 son-kart-ortala">
                 <article class="rozet-kart">
@@ -219,7 +236,7 @@
             </div>
         </div>
 
-        <div class="cerceve-kutu icerik-kutusu burs-program-kutu">
+        <div class="cerceve-kutu icerik-kutusu burs-program-kutu" id="burs-populer-programlar">
             <h2>En Popüler Uluslararası Burs Programları</h2>
 
             <p>Dünya genelinde Türk öğrencilere kapılarını açan, eğitim ve yaşam giderlerini kapsayan birçok prestijli program bulunmaktadır:</p>
@@ -245,7 +262,7 @@
             </div>
         </div>
 
-        <div class="cerceve-kutu icerik-kutusu">
+        <div class="cerceve-kutu icerik-kutusu" id="burs-basvuru-sureci">
             <h2>Burs Başvuru Süreci Nasıl İşler?</h2>
 
             <p>Burs süreci, kabul sürecinden bağımsız ve ek strateji gerektiren bir yoldur. Global Compass uzmanlığıyla bu süreci şu adımlarla yönetiyoruz:</p>
@@ -271,7 +288,7 @@
             </div>
         </div>
 
-        <div class="cerceve-kutu">
+        <div class="cerceve-kutu" id="burs-sss">
             <h2>Yurt Dışı Burs Fırsatları<span class="vurgu-satir">Sıkça Sorulan Sorular (SSS)</span></h2>
             <div class="sss-alani">
                 <details class="sss-item">
@@ -304,7 +321,7 @@
             </div>
         </div>
 
-        <div class="cerceve-kutu icerik-kutusu">
+        <div class="cerceve-kutu icerik-kutusu" id="burs-hayal-metni">
             <h2>Burslu Eğitim Fırsatları:<br><span class="vurgu-satir">Hayalinizdeki Okula Ulaşın</span></h2>
 
             <p>Global Compass danışmanlığı ile <strong>burs kazanma</strong> şansınızı artırın. Size en uygun burs ve indirim seçeneklerini öğrenmek için hemen iletişime geçin.</p>
@@ -349,7 +366,7 @@
             </form>
             </div>
         </section>
-        <div class="okul-liste-kapsayici">
+        <div class="okul-liste-kapsayici" id="burs-dil-okullari">
             <h2>Yurt Dışı Dil Okulları</h2>
             <section class="alt-yonlendirme-alani">
                 <div class="yonlendirme-karti">
@@ -357,6 +374,27 @@
                     <a href="/yurt-disi-dil-okullari/" class="kart-link">Yurt Dışı Dil Okullarını Keşfet →</a>
                 </div>
             </section>
+        </div>
+
+        </div>
+
+        <aside class="blog-yan-panel" aria-label="İçindekiler">
+            <nav class="blog-icindekiler-kutu" aria-labelledby="burs-hub-masaustu-icindekiler-baslik">
+                <p class="blog-icindekiler-baslik" id="burs-hub-masaustu-icindekiler-baslik">İçindekiler</p>
+                <ul class="blog-icindekiler-liste">
+                    <li><a href="#burs-hub-giris">Giriş</a></li>
+                    <li><a href="#burs-temel-kriterler">5 temel kriter</a></li>
+                    <li><a href="#burs-populer-programlar">Popüler burs programları</a></li>
+                    <li><a href="#burs-basvuru-sureci">Başvuru süreci</a></li>
+                    <li><a href="#burs-sss">Sıkça sorulan sorular</a></li>
+                    <li><a href="#burs-hayal-metni">Burslu eğitim özeti</a></li>
+                    <li><a href="#bilgi-istek">Bilgi istek formu</a></li>
+                    <li><a href="#burs-dil-okullari">Yurt dışı dil okulları</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        </div>
         </div>
     </article>
     </main>

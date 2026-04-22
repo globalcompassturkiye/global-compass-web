@@ -1578,27 +1578,6 @@ body.sayfa-kings-education-bournemouth .blog-yazi-ana > h1 + h2 {
     font-weight: 600;
 }
 
-body.kings-oxford-sayfa .kings-oxford-giris-kutu,
-body.kings-oxford-sayfa .kings-oxford-foto-bolumu,
-.kings-oxford-vurgulu-tablo,
-p + .kirmizi-kutu,
-.alpadia-kampus-kapsayici,
-.alpadia-mt24, .alpadia-mt12,
-.geziler-tabs-kapsayici,
-.sayfa-kings-education .kings-form-bant-ust,
-.sayfa-kings-education .usa-form-bant.kings-form-bant-ust,
-body.sayfa-kings-education-boston #kings-bos-konaklama .konaklama-giris,
-body.sayfa-kings-education-bournemouth .blog-yazi-ana > .kings-giris-metni,
-body.sayfa-kings-education-bournemouth .kings-bournemouth-bolum-ust,
-body.sayfa-kings-education-bournemouth .kings-oxford-basvuru-bant,
-body.sayfa-kings-education-new-york #kings-ny-konaklama .konaklama-giris,
-body.kings-oxford-sayfa .blog-yazi-ana > .kings-giris-metni,
-body.kings-oxford-sayfa .kings-oxford-basvuru-bant,
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .blog-yazi-ana > .sbc-canford-giris-metni,
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .blog-yazi-ana > .sbc-canford-program-bolumu {
-    margin-top: 25px;
-}
-
 body.kings-oxford-sayfa .son-paragraf-sifir-margin,
 .ingiltere-deneyim-kutu p:last-of-type,
 .alpadia-freiburg-tanitim-metin p:last-child,
@@ -2755,11 +2734,6 @@ article.icerik-alani > h1 + p {
 article.icerik-alani .rozet-grid.icerik-kutusu-grid {
     gap: 14px;
     margin-top: 0;
-}
-
-/* .futbol-mt-* tek başına gridde ezilir (yukarıdaki margin-top:0); Sportech Tıp vb. özet kartı üst boşluğu */
-article.icerik-alani .rozet-grid.icerik-kutusu-grid.futbol-mt-25 {
-    margin-top: 25px;
 }
 
 article.icerik-alani .rozet-grid.icerik-kutusu-grid.dikey, article.icerik-alani .rozet-grid.icerik-kutusu-grid.yatay-1,
@@ -5032,8 +5006,14 @@ article.icerik-alani .cerceve-kutu.japan-tercih-bolumu > h2 + p:has(+ .rozet-gri
     padding-bottom: 8px;
 }
 
-/* Toronto şehir sayfası: tek satırlı panel başlığı (vurgu-satir yok) ülke hub h2 ile aynı hizada ortada */
-.canada-secim-paneli > h2 {
+/* Toronto şehir / Sportech tenis / Chantemerle / SEA / ana sayfa hizmet sekmesi / Kings Bournemouth — ortak text-align:center */
+#sportech-tenis-giris-metni > h2:first-of-type,
+.canada-secim-paneli > h2,
+.chantemerle-ornek-kapsayici,
+.sea-beslenme-kart.sea-beslenme-kart-ortali,
+body.ana-sayfa .hizmet-tab-alani,
+body.ana-sayfa .hizmet-tab-alani .tab-metin,
+body.kings-bournemouth-yaz-okulu-sayfa article.icerik-alani h2 {
     text-align: center;
 }
 
@@ -5291,10 +5271,6 @@ body.sayfa-swiss-education-academy .immerse-detay-kutu .immerse-detay-grid.sea-p
     }
 }
 
-.chantemerle-ornek-kapsayici {
-    text-align: center;
-}
-
 .chantemerle-ornek-gorsel {
     max-width: 100%;
     height: auto;
@@ -5499,20 +5475,10 @@ body.immerse-education-page .blog-yazi-ana div[id$="-giris-metni"] p strong {
     font-weight: 700 !important;
 }
 
-/* Sportech Academy: giriş metni üstü (h1 ile blok arası) 25px — h1 margin-bottom ile çakışır, büyük olan geçerli */
-body.sportech-academy-page .blog-yazi-ana > .sportech-academy-giris-metni,
-body.sportech-academy-page .blog-yazi-ana > .giris-metni {
-    margin-top: 25px;
-}
-
 /* Sportech Academy: giriş metni alt boşluğu — .intro-metin margin/padding ile yönetilir; .futbol-intro-metin ile çift padding oluşmasın */
 body.sportech-academy-page .sportech-academy-giris-metni .futbol-intro-metin.intro-metin,
 body.sportech-academy-page .giris-metni .futbol-intro-metin.intro-metin {
     padding-bottom: 0;
-}
-
-#sportech-tenis-giris-metni > h2:first-of-type {
-    text-align: center;
 }
 
 .giris-metni > .intro-metin {
@@ -5551,7 +5517,35 @@ body.sportech-academy-page .giris-metni > p:last-child:not(.futbol-logo-kapsayic
     margin-top: 45px;
 }
 
-.futbol-mt-25 { margin-top: 25px; }
+/* Birlesik margin-top:25px (dedupe TOP — Kings hub, Sportech futbol/tenis/tip, .futbol-mt-25, rozet grid, BHMS Toronto, Academy giris) */
+#sportech-futbol-avantaj-galeri .futbol-galeri-kapsayici,
+#sportech-tenis-program-yapisi .futbol-galeri-grid,
+#sportech-tip-programda-neler-var .futbol-galeri-grid,
+.futbol-mt-25,
+article.icerik-alani .rozet-grid.icerik-kutusu-grid.futbol-mt-25,
+body.kings-oxford-sayfa .kings-oxford-giris-kutu,
+body.kings-oxford-sayfa .kings-oxford-foto-bolumu,
+.kings-oxford-vurgulu-tablo,
+p + .kirmizi-kutu,
+.alpadia-kampus-kapsayici,
+.alpadia-mt24, .alpadia-mt12,
+.geziler-tabs-kapsayici,
+.sayfa-kings-education .kings-form-bant-ust,
+.sayfa-kings-education .usa-form-bant.kings-form-bant-ust,
+body.sayfa-kings-education-boston #kings-bos-konaklama .konaklama-giris,
+body.sayfa-kings-education-bournemouth .blog-yazi-ana > .kings-giris-metni,
+body.sayfa-kings-education-bournemouth .kings-bournemouth-bolum-ust,
+body.sayfa-kings-education-bournemouth .kings-oxford-basvuru-bant,
+body.sayfa-kings-education-new-york #kings-ny-konaklama .konaklama-giris,
+body.kings-oxford-sayfa .blog-yazi-ana > .kings-giris-metni,
+body.kings-oxford-sayfa .kings-oxford-basvuru-bant,
+body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .blog-yazi-ana > .sbc-canford-giris-metni,
+body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .blog-yazi-ana > .sbc-canford-program-bolumu,
+body.sayfa-yurt-disi-universite-switzerland-bhms .toronto-arkadaslik-icerik > p:nth-of-type(2),
+body.sportech-academy-page .blog-yazi-ana > .sportech-academy-giris-metni,
+body.sportech-academy-page .blog-yazi-ana > .giris-metni {
+    margin-top: 25px;
+}
 
 .futbol-mt-50 { margin-top: 50px; }
 
@@ -5565,8 +5559,6 @@ body.sportech-academy-page .giris-metni > p:last-child:not(.futbol-logo-kapsayic
 .futbol-galeri-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 24px; }
 .futbol-galeri-item { aspect-ratio: 4/3; overflow: hidden; }
 .futbol-galeri-img { width: 100%; height: 100%; object-fit: cover; display: block; }
-#sportech-tenis-program-yapisi .futbol-galeri-grid { margin-top: 25px; }
-#sportech-tip-programda-neler-var .futbol-galeri-grid { margin-top: 25px; }
 
 .ac-milan-avantaj-kutu .ac-milan-avantaj-listesi {
     display: grid;
@@ -5723,9 +5715,6 @@ body.sportech-academy-page .giris-metni > p:last-child:not(.futbol-logo-kapsayic
 }
 #sportech-futbol-avantaj-galeri.futbol-ikili-kapsayici {
     grid-template-columns: minmax(0, 1fr);
-}
-#sportech-futbol-avantaj-galeri .futbol-galeri-kapsayici {
-    margin-top: 25px;
 }
 .futbol-galeri-kapsayici {
     width: 100%;
@@ -6677,11 +6666,6 @@ body.sayfa-yurt-disi-yaz-okullari-japan-tokyo-immerse-education #tokyo-immerse-m
 .sayfa-kings-education .kings-okul-logo-alani img {
     max-width: 220px;
     height: auto;
-}
-
-/* Kings Bournemouth yaz okulu — başlıklar ve okul logosu ortada */
-body.kings-bournemouth-yaz-okulu-sayfa article.icerik-alani h2 {
-    text-align: center;
 }
 
 body.kings-bournemouth-yaz-okulu-sayfa article.icerik-alani .kings-okul-logo-alani {
@@ -10438,12 +10422,6 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
 .sea-beslenme-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
 .sea-beslenme-kart { background: #ffffff; border: 0 solid transparent; padding: 20px; }
 
-.sea-beslenme-kart.sea-beslenme-kart-ortali,
-body.ana-sayfa .hizmet-tab-alani,
-body.ana-sayfa .hizmet-tab-alani .tab-metin {
-    text-align: center;
-}
-
 body.sayfa-swiss-education-academy .sea-konaklama-gri-kutu .sea-konaklama-ozet-stack {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
@@ -11300,6 +11278,59 @@ article.icerik-alani > h2:has(> .vurgu-satir),
 /* /yurt-disi-yaz-okullari/ — ülke kartları üstü h2: genel h2:has(.vurgu-satir) margin-bottom:0 !important üstünden 15px alt boşluk */
 body.sayfa-yurt-disi-yaz-okullari article.icerik-alani > h2:has(> .vurgu-satir) {
     margin-bottom: 15px !important;
+}
+
+/* Dil / yaz / lise hub: program veya ülke seçimi h2 .blog-yazi-ana içinde; article>h2 seçicileri tutmaz — iki satır başlığı ortala */
+body.sayfa-yurt-disi-yaz-okullari #yaz-hub-ulkeler,
+body.sayfa-yurt-disi-dil-okullari #dil-hub-ulkeler,
+body.sayfa-yurt-disi-lise #lise-hub-program-secimi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    margin: 2rem 0 15px 0;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    font-size: var(--sayfa-bolum-baslik-font-size);
+    font-weight: 700;
+    line-height: 1.35;
+    text-align: center;
+    color: var(--sayfa-bolum-baslik-renk);
+    background: transparent;
+    scroll-margin-top: calc(var(--site-header-offset, 122px) + 0.5rem);
+}
+
+body.sayfa-yurt-disi-yaz-okullari #yaz-hub-ulkeler > span,
+body.sayfa-yurt-disi-dil-okullari #dil-hub-ulkeler > span,
+body.sayfa-yurt-disi-lise #lise-hub-program-secimi > span {
+    display: block;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+body.sayfa-yurt-disi-yaz-okullari #yaz-hub-ulkeler > span:not(.vurgu-satir),
+body.sayfa-yurt-disi-dil-okullari #dil-hub-ulkeler > span:not(.vurgu-satir),
+body.sayfa-yurt-disi-lise #lise-hub-program-secimi > span:not(.vurgu-satir) {
+    color: #000000;
+    margin: 0;
+    font-size: var(--sayfa-bolum-baslik-font-size);
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+body.sayfa-yurt-disi-yaz-okullari #yaz-hub-ulkeler > span.vurgu-satir,
+body.sayfa-yurt-disi-dil-okullari #dil-hub-ulkeler > span.vurgu-satir,
+body.sayfa-yurt-disi-lise #lise-hub-program-secimi > span.vurgu-satir {
+    color: #bd0505;
+    margin: 0;
+    margin-top: 0.35rem;
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    font-weight: 700;
+    line-height: 1.3;
 }
 
 /* /yurt-disi-yaz-okullari/italy/ — tüm h2 başlıkların altında 25px boşluk */
@@ -12671,10 +12702,6 @@ body.sayfa-yurt-disi-universite-switzerland-bhms .toronto-mezuniyet-staji-icerik
 
 body.sayfa-yurt-disi-universite-switzerland-bhms .toronto-mezuniyet-staji-icerik > p:first-of-type strong {
     font-weight: 700;
-}
-
-body.sayfa-yurt-disi-universite-switzerland-bhms .toronto-arkadaslik-icerik > p:nth-of-type(2) {
-    margin-top: 25px;
 }
 
 body.sayfa-yurt-disi-universite-switzerland-bhms .toronto-simgesel-icerik .rozet-kart .kutu-liste {

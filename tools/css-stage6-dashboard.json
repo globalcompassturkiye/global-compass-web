@@ -1,0 +1,63 @@
+{
+    "stage3_modules":  {
+                           "unique_local_sheets_linked":  20,
+                           "missing_hrefs_reported":  0,
+                           "unreferenced_css_on_disk":  1,
+                           "css_files_on_disk":  21,
+                           "html_files_scanned":  95
+                       },
+    "next_work_hints":  [
+                            "Comment-preserving duplicate merge for style.css (avoid css-merge-scenario-a until parser preserves /* */).",
+                            "Reduce mega selectors listed in css-mega-selectors-stage2-report.json (payment / yas :checked chains).",
+                            "Re-run this dashboard after substantive CSS edits: tools/css-stage6-run-all-reports.ps1"
+                        ],
+    "baseline_snapshot":  {
+                              "measured_at":  "2026-04-23T02:02:01+03:00",
+                              "lines":  11007,
+                              "file":  "css/style.css",
+                              "bytes":  376233,
+                              "git_commit":  "7011b8e594d1c3a3a2803027a2de48573457ff73"
+                          },
+    "sources":  {
+                    "stage4":  "tools/css-dead-stage4-report.json",
+                    "stage3":  "tools/css-modules-stage3-report.json",
+                    "stage2":  "tools/css-mega-selectors-stage2-report.json",
+                    "baseline":  "tools/css-style-baseline.json",
+                    "stage5":  "tools/css-stage5-yas-tab-report.json",
+                    "stage1":  "tools/css-dedupe-stage1-report.json"
+                },
+    "stage4_file_health":  {
+                               "likely_stub_files":  6,
+                               "css_files_on_disk":  21
+                           },
+    "stage2_mega":  {
+                        "heavy_comma_list_rules":  32,
+                        "rules_scanned":  1774,
+                        "rules_with_hash_id_hint":  60,
+                        "rules_with_body_sayfa_hint":  352,
+                        "long_selector_rules":  172,
+                        "long_and_heavy_rules":  31
+                    },
+    "stage5_yas_tab":  {
+                           "mirror_status":  {
+                                                 "immerse_shared_yas_tab_lines":  0,
+                                                 "mirror_gap_note":  "immerse-shared.css has no yas-tab lines while style.css does. Per yas-tab-alani-standardi: mirror rules if a page loads immerse-shared without style.css; most pages load both - confirm templates.",
+                                                 "mirror_gap_flag":  true,
+                                                 "style_has_yas_tab_lines":  44
+                                             },
+                           "html_summary":  {
+                                                "pages_both_yas_and_immerse_link":  0,
+                                                "pages_with_yas_tab_markup":  10,
+                                                "pages_linking_immerse_shared":  1
+                                            }
+                       },
+    "stage1_dedupe_scope":  {
+                                "selectors_in_dup_groups":  390,
+                                "opaque_at_segments":  3,
+                                "duplicate_body_groups":  142,
+                                "rules_top_level_segments":  1345,
+                                "at_merge_segments":  59
+                            },
+    "generated_at":  "2026-04-23T02:19:35+03:00",
+    "schema":  "global-compass-css-stage6-dashboard/1"
+}
