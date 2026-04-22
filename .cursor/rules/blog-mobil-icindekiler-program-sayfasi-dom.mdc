@@ -46,6 +46,7 @@ Masaüstünde (`≥1180px`) `blog-mobil-icindekiler-wrap` yine gizlidir; içinde
 
 ## Sabit “içindekilere dön” oku (mobil)
 
-- **`</body>` hemen öncesi:** `a.blog-mobil-icindekiler-sabit-cap` + içte `span.blog-mobil-icindekiler-sabit-cap-ok` (↑); `href`, mobil içindekiler sarmalayıcısının `id` değerine gider. Varsayılan sarmalayıcı **`id="blog-mobil-icindekiler-hedef"`**; özel sayfa (ör. Tokyo) mevcut `id` korunabilir.
-- **Görünüm:** `blog.css` — `body:has(.blog-mobil-icindekiler-wrap)`, yalnızca **`max-width: 1179px`**. Dikeyde **`top: min(50vh + 2rem, …)`** + **`translateY(-50%)`** (ekran ortasının biraz altı); alt sabit CTA (`blog-mobil-cta-bar-wrap`) varsa `min()` içindeki üst sınır sıkılaştırılır.
-- **Üstte gizli:** Sayfa **`scrollY ≤ ~120px`** iken ok görünmez; aşağı kaydırılınca `header-offset.js` **`body.blog-icindekiler-sabit-ok-goster`** ekler (`blog.css` ile görünür).
+- **Tüm sayfalar:** `header-offset.js` sayfada `a.blog-mobil-icindekiler-sabit-cap` yoksa oluşturur; `href` önceliği `#blog-mobil-icindekiler-hedef` → `.blog-mobil-icindekiler-wrap[id]` → `#` (wrap id yoksa tıklanınca `scrollIntoView` veya sayfa başı).
+- **İsteğe bağlı HTML:** `</body>` öncesi elle eklenen aynı sınıflı bağlantı da kullanılabilir (çift ekleme yok).
+- **Görünüm:** `style.css` — yalnızca **`max-width: 501px`**. Dikeyde **`top: min(50vh + 2rem, …)`** + **`translateY(-50%)`**; alt sabit CTA (`blog-mobil-cta-bar-wrap` veya `global-mobil-cta-bar-wrap`) varsa `min()` içindeki üst sınır sıkılaştırılır.
+- **Üstte gizli:** **`scrollY ≤ ~120px`** iken ok görünmez; aşağı kaydırılınca **`body.blog-icindekiler-sabit-ok-goster`** eklenir (yalnızca ≤501px eşleşince anlamlıdır).
