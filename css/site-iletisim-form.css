@@ -292,6 +292,10 @@ article.icerik-alani .iletisim-form-alani > .hizmet-alanlari-baslik.icerik-bilgi
     cursor: pointer;
 }
 
+.iletisim-form-alani .form-grup-hangi-program {
+    margin: 0 0 18px;
+}
+
 .iletisim-form-alani textarea {
     min-height: 120px;
     resize: vertical;

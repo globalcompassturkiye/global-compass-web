@@ -220,10 +220,15 @@
 
   function messageWithPageContext(form) {
     var mesaj = valField(form, 'mesaj');
+    var hangi = valField(form, 'hangi_program');
     var h1 = pageH1Text();
-    if (!h1) return mesaj;
-    if (!mesaj) return '[Sayfa H1] ' + h1;
-    return '[Sayfa H1] ' + h1 + '\n\n' + mesaj;
+    var on = '';
+    if (hangi) {
+      on = '[Hangi program] ' + hangi + '\n\n';
+    }
+    if (!h1) return on + mesaj;
+    if (!mesaj) return on + '[Sayfa H1] ' + h1;
+    return on + '[Sayfa H1] ' + h1 + '\n\n' + mesaj;
   }
 
   function bind() {
@@ -271,6 +276,7 @@
         email: valField(form, 'email'),
         telefon: valField(form, 'telefon'),
         kimlik: kimlikValue(form),
+        hangi_program: valField(form, 'hangi_program'),
         mesaj: messageWithPageContext(form),
         h1: pageH1Text()
       };

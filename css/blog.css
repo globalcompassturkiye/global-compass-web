@@ -427,18 +427,6 @@ article.blog-kategori-sayfa .blog-kart-gorsel-link {
     min-width: 0;
 }
 
-/* Yalnızca Immerse Education şablonu: dış .cerceve-kutu görünmez (çift kutu / Tokyo hizası).
-   Swiss, Alpadia, Chantemerle vb. sayfalarda site gri çerçeve sözleşmesi korunur (style.css .cerceve-kutu). */
-body.immerse-education-page .blog-yazi-ana > .cerceve-kutu,
-body.immerse-education-page .blog-yazi-ana > section.icerik-alani > .cerceve-kutu {
-    border: none !important;
-    box-shadow: none !important;
-    background-color: transparent !important;
-    padding-top: 1.25rem !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-}
-
 .blog-yazi-layout--yan-panel .blog-yazi-ana {
     max-width: 850px;
 }
