@@ -253,6 +253,8 @@ h1 .h1-vurgu {
     margin-bottom: 12px;
     padding: 10px 10px 12px;
     background: #ffffff;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 /* Soru (Summary) Ayarları — 501px–1920px: 14px↔16px kalın(700); alt/üst clamp */
@@ -260,7 +262,7 @@ h1 .h1-vurgu {
 .sss-item summary { 
     cursor: pointer; 
     list-style: none; 
-    padding-left: 1.35rem;
+    padding-left: calc(1.35rem + 15px);
     position: relative; 
     outline: none;
     display: flex;
@@ -289,7 +291,7 @@ h1 .h1-vurgu {
 .sss-item summary::before { 
     content: "▼"; 
     position: absolute; 
-    left: 2px; 
+    left: 15px; 
     color: #000000;
     font-size: 12px;
     top: 50%; 
@@ -317,7 +319,7 @@ h1 .h1-vurgu {
 
 .cerceve-kutu .sss-item summary,
 .site-gri-cerceve-kutu .sss-item summary {
-    padding-left: 0;
+    padding-left: 15px;
     padding-right: 0;
     gap: 0.4rem;
     align-items: flex-start;
@@ -341,8 +343,8 @@ h1 .h1-vurgu {
 
 .cerceve-kutu .sss-icerik p,
 .site-gri-cerceve-kutu .sss-icerik p {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 15px;
+    padding-right: 10px;
 }
 
 /* Soru ile Cevap Arasındaki Alan */
@@ -352,11 +354,21 @@ h1 .h1-vurgu {
     color: #555;
     font-size: clamp(14px, calc(14px + (100vw - 501px) * 2 / 1419), 16px);
     line-height: 1.7;
+    text-align: justify;
     border-top: 1px solid #f4f4f4; 
     margin-top: 10px;
     background: #ffffff;
-    padding-left: 8px;
+    padding-left: 15px;
     padding-right: 10px;
+}
+
+/* Global SSS: cevap metinleri iki yana yasli */
+.sss-icerik,
+.sss-icerik p,
+.cerceve-kutu .sss-icerik p,
+.site-gri-cerceve-kutu .sss-icerik p {
+    text-align: justify !important;
+    text-justify: inter-word;
 }
 
 /* Cevap kutusu (.sss-icerik): tüm içerik için arka plan beyaz */

@@ -964,6 +964,11 @@ article.blog-kategori-sayfa .blog-kart-gorsel-link {
         display: none !important;
     }
 
+    .blog-yazi-sayfa-mobil-ux .blog-yazi-layout--yan-panel .blog-yazi-ana {
+        max-width: none;
+        width: 100%;
+    }
+
     /* Giriş metni blokundan sonra (tek sütunda); üst boşluk yok, altta içerik ayrımı */
     .blog-yazi-sayfa-mobil-ux .blog-mobil-icindekiler-wrap {
         display: flex;
