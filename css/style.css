@@ -2191,6 +2191,7 @@ summary.immerse-tokyo-devam-btn::-webkit-details-marker,
 .cerceve-kutu.icerik-kutusu .kurs-icerik-esnek,
 .sayfa-kings-education .kings-london-dahil-gri-dikey .rozet-metin,
 .sportech-academy-page .yaz-programlari-kategori-baslik:first-of-type,
+body.sayfa-yurt-disi-universite-switzerland-bhms .yaz-programlari-kategori-baslik:first-of-type,
 body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-konaklama-metin,
 body.oxford-royale-cambridge-sayfa .cerceve-kutu .ora-ulasim-alt-baslik:first-of-type {
     margin-top: 8px;
@@ -2894,6 +2895,31 @@ article.icerik-alani .icerik-vurgu-kutu p {
 
 .icerik-kutusu .rozet-kart > .kutu-liste li:last-child {
     margin-bottom: 0;
+}
+
+/* İsviçre üniversite ülke sayfası — Popüler Bölümler: dairesiz siyah madde işareti (•) */
+body.sayfa-yurt-disi-universite-switzerland .isvicre-populer-rozet-grid {
+    justify-content: start;
+    width: 100%;
+}
+
+body.sayfa-yurt-disi-universite-switzerland .isvicre-populer-rozet-grid .rozet-ikon {
+    width: auto;
+    min-width: 0;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    color: #111827;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.25;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 /* Yurt dışı üniversite — “Neden” kartları: tik rozet ikonunda değil, liste maddelerinde */
@@ -4207,6 +4233,7 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
 body.sayfa-swiss-education-academy .blog-yazi-layout--yan-panel .blog-yazi-ana,
 body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli,
 body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli,
+body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli,
 .yaz-okullari-secim-paneli.ulke-hub-kart-paneli {
     overflow: visible;
 }
@@ -4437,15 +4464,16 @@ body.ana-sayfa article.icerik-alani .ana-sayfa-blog-ozeti-kirmizi-bant #ana-sayf
     body.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap,
     body.sayfa-hizmetlerimiz .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap,
     body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap,
-    body.sayfa-yurt-disi-dil-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap,
-    body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap {
+    body[class*='sayfa-yurt-disi-dil-okullari'] .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap,
+    body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap,
+    body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap {
         grid-template-columns: repeat(3, minmax(0, 1fr));
         justify-content: stretch;
         max-width: 100%;
     }
 
     /* /yurt-disi-dil-okullari/ hub: yalnızca 2 kart — 3 sütunda boş 3. kolon kartları sola iter; iki sütun + ortala */
-    body.sayfa-yurt-disi-dil-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap:has(> .yaz-okullari-ulke-kart:nth-child(2):last-child) {
+    body[class*='sayfa-yurt-disi-dil-okullari'] .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap:has(> .yaz-okullari-ulke-kart:nth-child(2):last-child) {
         grid-template-columns: repeat(2, minmax(0, var(--ulke-secim-kart-en)));
         justify-content: center;
         max-width: 100%;
@@ -4454,8 +4482,9 @@ body.ana-sayfa article.icerik-alani .ana-sayfa-blog-ozeti-kirmizi-bant #ana-sayf
     body.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > span.yaz-okullari-ulke-kart,
     body.sayfa-hizmetlerimiz .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > span.yaz-okullari-ulke-kart,
     body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap > span.yaz-okullari-ulke-kart,
-    body.sayfa-yurt-disi-dil-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > span.yaz-okullari-ulke-kart,
-    body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > span.yaz-okullari-ulke-kart {
+    body[class*='sayfa-yurt-disi-dil-okullari'] .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > span.yaz-okullari-ulke-kart,
+    body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > span.yaz-okullari-ulke-kart,
+    body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > span.yaz-okullari-ulke-kart {
         width: 100%;
         max-width: none;
         justify-self: stretch;
@@ -4464,79 +4493,90 @@ body.ana-sayfa article.icerik-alani .ana-sayfa-blog-ozeti-kirmizi-bant #ana-sayf
     body.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart,
     body.sayfa-hizmetlerimiz .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart,
     body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart,
-    body.sayfa-yurt-disi-dil-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart,
-    body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart {
+    body[class*='sayfa-yurt-disi-dil-okullari'] .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart,
+    body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart,
+    body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart {
         border-radius: 0;
     }
 
     body.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:only-child,
     body.sayfa-hizmetlerimiz .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:only-child,
     body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:only-child,
-    body.sayfa-yurt-disi-dil-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:only-child,
-    body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:only-child {
+    body[class*='sayfa-yurt-disi-dil-okullari'] .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:only-child,
+    body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:only-child,
+    body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:only-child {
         border-radius: 15px;
     }
 
     body.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(1):not(:only-child),
     body.sayfa-hizmetlerimiz .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(1):not(:only-child),
     body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(1):not(:only-child),
-    body.sayfa-yurt-disi-dil-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(1):not(:only-child),
-    body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(1):not(:only-child) {
+    body[class*='sayfa-yurt-disi-dil-okullari'] .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(1):not(:only-child),
+    body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(1):not(:only-child),
+    body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(1):not(:only-child) {
         border-top-left-radius: 15px;
     }
 
     body.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap:has(> .yaz-okullari-ulke-kart:nth-child(3)) > .yaz-okullari-ulke-kart:nth-child(3),
     body.sayfa-hizmetlerimiz .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap:has(> .yaz-okullari-ulke-kart:nth-child(3)) > .yaz-okullari-ulke-kart:nth-child(3),
     body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap:has(> .yaz-okullari-ulke-kart:nth-child(3)) > .yaz-okullari-ulke-kart:nth-child(3),
-    body.sayfa-yurt-disi-dil-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap:has(> .yaz-okullari-ulke-kart:nth-child(3)) > .yaz-okullari-ulke-kart:nth-child(3),
-    body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap:has(> .yaz-okullari-ulke-kart:nth-child(3)) > .yaz-okullari-ulke-kart:nth-child(3) {
+    body[class*='sayfa-yurt-disi-dil-okullari'] .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap:has(> .yaz-okullari-ulke-kart:nth-child(3)) > .yaz-okullari-ulke-kart:nth-child(3),
+    body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap:has(> .yaz-okullari-ulke-kart:nth-child(3)) > .yaz-okullari-ulke-kart:nth-child(3),
+    body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap:has(> .yaz-okullari-ulke-kart:nth-child(3)) > .yaz-okullari-ulke-kart:nth-child(3) {
         border-top-right-radius: 15px;
     }
 
     body.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap:has(> .yaz-okullari-ulke-kart:nth-child(2):nth-last-child(1)) > .yaz-okullari-ulke-kart:nth-child(2),
     body.sayfa-hizmetlerimiz .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap:has(> .yaz-okullari-ulke-kart:nth-child(2):nth-last-child(1)) > .yaz-okullari-ulke-kart:nth-child(2),
     body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap:has(> .yaz-okullari-ulke-kart:nth-child(2):nth-last-child(1)) > .yaz-okullari-ulke-kart:nth-child(2),
-    body.sayfa-yurt-disi-dil-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap:has(> .yaz-okullari-ulke-kart:nth-child(2):nth-last-child(1)) > .yaz-okullari-ulke-kart:nth-child(2),
-    body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap:has(> .yaz-okullari-ulke-kart:nth-child(2):nth-last-child(1)) > .yaz-okullari-ulke-kart:nth-child(2) {
+    body[class*='sayfa-yurt-disi-dil-okullari'] .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap:has(> .yaz-okullari-ulke-kart:nth-child(2):nth-last-child(1)) > .yaz-okullari-ulke-kart:nth-child(2),
+    body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap:has(> .yaz-okullari-ulke-kart:nth-child(2):nth-last-child(1)) > .yaz-okullari-ulke-kart:nth-child(2),
+    body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap:has(> .yaz-okullari-ulke-kart:nth-child(2):nth-last-child(1)) > .yaz-okullari-ulke-kart:nth-child(2) {
         border-top-right-radius: 15px;
     }
 
     body.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-last-child(1):nth-child(3n),
     body.sayfa-hizmetlerimiz .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-last-child(1):nth-child(3n),
     body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-last-child(1):nth-child(3n),
-    body.sayfa-yurt-disi-dil-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-last-child(1):nth-child(3n),
+    body[class*='sayfa-yurt-disi-dil-okullari'] .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-last-child(1):nth-child(3n),
     body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-last-child(1):nth-child(3n),
+    body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-last-child(1):nth-child(3n),
     body.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-last-child(1):nth-child(3n + 2),
     body.sayfa-hizmetlerimiz .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-last-child(1):nth-child(3n + 2),
     body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-last-child(1):nth-child(3n + 2),
-    body.sayfa-yurt-disi-dil-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-last-child(1):nth-child(3n + 2),
-    body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-last-child(1):nth-child(3n + 2) {
+    body[class*='sayfa-yurt-disi-dil-okullari'] .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-last-child(1):nth-child(3n + 2),
+    body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-last-child(1):nth-child(3n + 2),
+    body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-last-child(1):nth-child(3n + 2) {
         border-bottom-right-radius: 15px;
     }
 
     body.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(3n):nth-last-child(2),
     body.sayfa-hizmetlerimiz .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(3n):nth-last-child(2),
     body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(3n):nth-last-child(2),
-    body.sayfa-yurt-disi-dil-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(3n):nth-last-child(2),
-    body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(3n):nth-last-child(2) {
+    body[class*='sayfa-yurt-disi-dil-okullari'] .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(3n):nth-last-child(2),
+    body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(3n):nth-last-child(2),
+    body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(3n):nth-last-child(2) {
         border-bottom-right-radius: 15px;
     }
 
     body.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(3n + 1):nth-last-child(3),
     body.sayfa-hizmetlerimiz .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(3n + 1):nth-last-child(3),
     body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(3n + 1):nth-last-child(3),
-    body.sayfa-yurt-disi-dil-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(3n + 1):nth-last-child(3),
+    body[class*='sayfa-yurt-disi-dil-okullari'] .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(3n + 1):nth-last-child(3),
     body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(3n + 1):nth-last-child(3),
+    body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(3n + 1):nth-last-child(3),
     body.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(3n + 1):nth-last-child(1):not(:only-child),
     body.sayfa-hizmetlerimiz .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(3n + 1):nth-last-child(1):not(:only-child),
     body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(3n + 1):nth-last-child(1):not(:only-child),
-    body.sayfa-yurt-disi-dil-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(3n + 1):nth-last-child(1):not(:only-child),
+    body[class*='sayfa-yurt-disi-dil-okullari'] .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(3n + 1):nth-last-child(1):not(:only-child),
     body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(3n + 1):nth-last-child(1):not(:only-child),
+    body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(3n + 1):nth-last-child(1):not(:only-child),
     body.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(3n + 1):nth-last-child(2),
     body.sayfa-hizmetlerimiz .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(3n + 1):nth-last-child(2),
     body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(3n + 1):nth-last-child(2),
-    body.sayfa-yurt-disi-dil-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(3n + 1):nth-last-child(2),
-    body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(3n + 1):nth-last-child(2) {
+    body[class*='sayfa-yurt-disi-dil-okullari'] .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(3n + 1):nth-last-child(2),
+    body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(3n + 1):nth-last-child(2),
+    body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(3n + 1):nth-last-child(2) {
         border-bottom-left-radius: 15px;
     }
 
@@ -4544,8 +4584,9 @@ body.ana-sayfa article.icerik-alani .ana-sayfa-blog-ozeti-kirmizi-bant #ana-sayf
     body.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap.son-kart-ortala > *:last-child:nth-child(3n + 1):not(:only-child),
     body.sayfa-hizmetlerimiz .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap.son-kart-ortala > *:last-child:nth-child(3n + 1):not(:only-child),
     body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap.son-kart-ortala > *:last-child:nth-child(3n + 1):not(:only-child),
-    body.sayfa-yurt-disi-dil-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap.son-kart-ortala > *:last-child:nth-child(3n + 1):not(:only-child),
-    body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap.son-kart-ortala > *:last-child:nth-child(3n + 1):not(:only-child) {
+    body[class*='sayfa-yurt-disi-dil-okullari'] .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap.son-kart-ortala > *:last-child:nth-child(3n + 1):not(:only-child),
+    body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap.son-kart-ortala > *:last-child:nth-child(3n + 1):not(:only-child),
+    body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap.son-kart-ortala > *:last-child:nth-child(3n + 1):not(:only-child) {
         grid-column: 2;
         justify-self: stretch;
         width: 100%;
@@ -4556,16 +4597,18 @@ body.ana-sayfa article.icerik-alani .ana-sayfa-blog-ozeti-kirmizi-bant #ana-sayf
     body.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap.son-kart-ortala:has(> .yaz-okullari-ulke-kart:nth-child(7):last-child) > .yaz-okullari-ulke-kart:nth-child(4),
     body.sayfa-hizmetlerimiz .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap.son-kart-ortala:has(> .yaz-okullari-ulke-kart:nth-child(7):last-child) > .yaz-okullari-ulke-kart:nth-child(4),
     body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap.son-kart-ortala:has(> .yaz-okullari-ulke-kart:nth-child(7):last-child) > .yaz-okullari-ulke-kart:nth-child(4),
-    body.sayfa-yurt-disi-dil-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap.son-kart-ortala:has(> .yaz-okullari-ulke-kart:nth-child(7):last-child) > .yaz-okullari-ulke-kart:nth-child(4),
-    body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap.son-kart-ortala:has(> .yaz-okullari-ulke-kart:nth-child(7):last-child) > .yaz-okullari-ulke-kart:nth-child(4) {
+    body[class*='sayfa-yurt-disi-dil-okullari'] .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap.son-kart-ortala:has(> .yaz-okullari-ulke-kart:nth-child(7):last-child) > .yaz-okullari-ulke-kart:nth-child(4),
+    body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap.son-kart-ortala:has(> .yaz-okullari-ulke-kart:nth-child(7):last-child) > .yaz-okullari-ulke-kart:nth-child(4),
+    body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap.son-kart-ortala:has(> .yaz-okullari-ulke-kart:nth-child(7):last-child) > .yaz-okullari-ulke-kart:nth-child(4) {
         border-bottom-left-radius: 15px;
     }
 
     body.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap.son-kart-ortala:has(> .yaz-okullari-ulke-kart:nth-child(7):last-child) > .yaz-okullari-ulke-kart:nth-child(7),
     body.sayfa-hizmetlerimiz .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap.son-kart-ortala:has(> .yaz-okullari-ulke-kart:nth-child(7):last-child) > .yaz-okullari-ulke-kart:nth-child(7),
     body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap.son-kart-ortala:has(> .yaz-okullari-ulke-kart:nth-child(7):last-child) > .yaz-okullari-ulke-kart:nth-child(7),
-    body.sayfa-yurt-disi-dil-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap.son-kart-ortala:has(> .yaz-okullari-ulke-kart:nth-child(7):last-child) > .yaz-okullari-ulke-kart:nth-child(7),
-    body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap.son-kart-ortala:has(> .yaz-okullari-ulke-kart:nth-child(7):last-child) > .yaz-okullari-ulke-kart:nth-child(7) {
+    body[class*='sayfa-yurt-disi-dil-okullari'] .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap.son-kart-ortala:has(> .yaz-okullari-ulke-kart:nth-child(7):last-child) > .yaz-okullari-ulke-kart:nth-child(7),
+    body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap.son-kart-ortala:has(> .yaz-okullari-ulke-kart:nth-child(7):last-child) > .yaz-okullari-ulke-kart:nth-child(7),
+    body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap.son-kart-ortala:has(> .yaz-okullari-ulke-kart:nth-child(7):last-child) > .yaz-okullari-ulke-kart:nth-child(7) {
         border-top-left-radius: 0;
         border-top-right-radius: 0;
         border-bottom-left-radius: 15px;
@@ -9770,7 +9813,8 @@ body.oxford-royale-cambridge-sayfa .ora-ulasim-tablo-ust-metin {
     cursor: pointer;
 }
 
-.sportech-academy-page .yaz-programlari-kategori-baslik {
+.sportech-academy-page .yaz-programlari-kategori-baslik,
+body.sayfa-yurt-disi-universite-switzerland-bhms .yaz-programlari-kategori-baslik {
     margin: 28px 0 14px;
     padding: 12px 16px;
     font-size: 1.2em;
@@ -9795,7 +9839,8 @@ body.oxford-royale-cambridge-sayfa .ora-ulasim-tablo-ust-metin {
     display: inline-block;
 }
 
-body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli span.yaz-okullari-ulke-kart.yaz-okullari-ulke-kart--pasif {
+body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli span.yaz-okullari-ulke-kart.yaz-okullari-ulke-kart--pasif,
+body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli span.yaz-okullari-ulke-kart.yaz-okullari-ulke-kart--pasif {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -9815,7 +9860,8 @@ body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-pane
     cursor: default;
 }
 
-body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli span.yaz-okullari-ulke-kart.yaz-okullari-ulke-kart--pasif:hover {
+body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli span.yaz-okullari-ulke-kart.yaz-okullari-ulke-kart--pasif:hover,
+body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli span.yaz-okullari-ulke-kart.yaz-okullari-ulke-kart--pasif:hover {
     transform: none;
     box-shadow:
         0 2px 6px rgba(15, 23, 42, 0.06),
@@ -11461,6 +11507,12 @@ body.sayfa-yurt-disi-universite #uni-ulkeler-secim > span.vurgu-satir {
     line-height: 1.3;
 }
 
+/* Ülke/şehir (yaz-okullari-ulke-kart-wrap) kart gridi üstündeki h2: üstten 50px — hub, ülke alt sayfaları, ana sayfa/hizmetler kart bölümü */
+article.icerik-alani h2:has(+ .yaz-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap),
+article.icerik-alani h2:has(+ .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap) {
+    margin-top: 50px !important;
+}
+
 /* Ülke hub şehir seçim h2 (UK/USA dil + UK/Germany/Japan/Italy/Canada yaz) — alt boşluk 25px */
 body:is(.sayfa-yurt-disi-dil-okullari-uk, .sayfa-yurt-disi-dil-okullari-usa, .sayfa-yurt-disi-yaz-okullari-uk, .sayfa-yurt-disi-yaz-okullari-germany, .sayfa-yurt-disi-yaz-okullari-japan, .sayfa-yurt-disi-yaz-okullari-italy, .sayfa-yurt-disi-yaz-okullari-canada) article.icerik-alani > h2:has(> .vurgu-satir) {
     margin-bottom: 25px !important;
@@ -12159,11 +12211,10 @@ body.oxford-royale-cambridge-sayfa .ora-daha-fazla-aktivite-kart {
 body.ana-sayfa .dil-okullari-secim-paneli,
 body.sayfa-hizmetlerimiz .dil-okullari-secim-paneli,
 body.sayfa-yurt-disi-lise .dil-okullari-secim-paneli,
-body.sayfa-yurt-disi-dil-okullari .dil-okullari-secim-paneli,
-body.sayfa-yurt-disi-dil-okullari-uk .dil-okullari-secim-paneli,
-body.sayfa-yurt-disi-dil-okullari-usa .dil-okullari-secim-paneli,
+body[class*='sayfa-yurt-disi-dil-okullari'] .dil-okullari-secim-paneli,
 body.sayfa-yurt-disi-yaz-okullari-uk .yaz-okullari-secim-paneli,
 body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli,
+body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli,
 
 .yaz-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap,
 .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap {
@@ -12200,19 +12251,14 @@ body.sayfa-hizmetlerimiz .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap
 /* Ana sayfa: hub grid — içerik/blog ile aynı yatay hiza (genel dil paneli 12px yatay padding kullanmaz) */
 body.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap,
 body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap,
-body.sayfa-yurt-disi-dil-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap,
+body[class*='sayfa-yurt-disi-dil-okullari'] .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap,
 body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap,
+body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap,
 body.sayfa-yurt-disi-lise .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap {
     padding-left: 0 !important;
     padding-right: 0 !important;
     padding-bottom: 12px;
     box-sizing: border-box;
-}
-
-/* Yurt dışı üniversite hub: giriş (h1 + p) altında toplam 50px boşluk — mobil içindekiler öncesi */
-body.sayfa-yurt-disi-universite .blog-yazi-ana > h1 + p {
-    padding-bottom: 50px;
-    margin-bottom: 0 !important;
 }
 
 body.sayfa-yurt-disi-universite #uni-ulkeler-secim + .yaz-okullari-secim-paneli {
@@ -12243,8 +12289,9 @@ body.sayfa-yurt-disi-universite .yaz-okullari-secim-paneli .yaz-okullari-ulke-ka
 body.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart,
 body.sayfa-hizmetlerimiz .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart,
 body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart,
-body.sayfa-yurt-disi-dil-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart,
-body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart {
+body[class*='sayfa-yurt-disi-dil-okullari'] .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart,
+body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart,
+body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart {
     width: 100%;
     max-width: none;
     justify-self: stretch;
@@ -12269,8 +12316,9 @@ body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-pane
 
 /* Dil ana + Sportech (dil paneli): dar ekranda 2 sütun genişlik üst sınırı — ≥900px kuralları üstteki @media ile 3 sütuna geçer */
 @media (max-width: 899px) {
-    body.sayfa-yurt-disi-dil-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap,
-    body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap {
+    body[class*='sayfa-yurt-disi-dil-okullari'] .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap,
+    body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap,
+    body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap {
         max-width: min(100%, calc(2 * var(--ulke-secim-kart-en) + 5px));
         margin-left: auto;
         margin-right: auto;
@@ -12309,7 +12357,8 @@ body.sayfa-yurt-disi-lise .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wra
 @media (min-width: 502px) and (max-width: 599px) {
     body[class*='sayfa-yurt-disi-dil-okullari'] .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap.son-kart-ortala > *:last-child:nth-child(odd):not(:only-child),
     body[class*='sayfa-yurt-disi-yaz-okullari-'] .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap.son-kart-ortala > *:last-child:nth-child(odd):not(:only-child),
-    body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap.son-kart-ortala > *:last-child:nth-child(odd):not(:only-child) {
+    body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap.son-kart-ortala > *:last-child:nth-child(odd):not(:only-child),
+    body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap.son-kart-ortala > *:last-child:nth-child(odd):not(:only-child) {
         grid-column: 1 / -1;
         justify-self: center;
         width: min(var(--ulke-secim-kart-en), calc((100% - 5px) / 2));
@@ -12333,7 +12382,8 @@ body.sayfa-yurt-disi-lise .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wra
     /* 2 sütun minmax(0, --ulke-secim-kart-en): sütun tavanı ile hizala */
     body[class*='sayfa-yurt-disi-dil-okullari'] .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap.son-kart-ortala > *:last-child:nth-child(odd):not(:only-child),
     body.sayfa-yurt-disi-yaz-okullari-germany .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap.son-kart-ortala > *:last-child:nth-child(odd):not(:only-child),
-    body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap.son-kart-ortala > *:last-child:nth-child(odd):not(:only-child) {
+    body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap.son-kart-ortala > *:last-child:nth-child(odd):not(:only-child),
+    body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap.son-kart-ortala > *:last-child:nth-child(odd):not(:only-child) {
         grid-column: 1 / -1;
         justify-self: center;
         width: min(var(--ulke-secim-kart-en), calc((100% - 5px) / 2));
@@ -12384,12 +12434,14 @@ body.sayfa-yurt-disi-lise .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wra
     outline-offset: 2px;
 }
 
-@media (max-width: 599px) {
-body.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart,
+/* Tam yuvarlak kartlar: yalnızca 502–599px (≤501 iki sütun + dış köşe kuralları aşağıda) */
+@media (min-width: 502px) and (max-width: 599px) {
+    body.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart,
     body.sayfa-hizmetlerimiz .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart,
     body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart,
-    body.sayfa-yurt-disi-dil-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart,
-    body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart {
+    body[class*='sayfa-yurt-disi-dil-okullari'] .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart,
+    body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart,
+    body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart {
         border-radius: 15px;
     }
 }
@@ -12399,8 +12451,9 @@ body.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-ok
     body.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart,
     body.sayfa-hizmetlerimiz .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart,
     body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart,
-    body.sayfa-yurt-disi-dil-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart,
+    body[class*='sayfa-yurt-disi-dil-okullari'] .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart,
     body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart,
+    body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart,
     body.sayfa-yurt-disi-yaz-okullari-germany .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap > a.yaz-okullari-ulke-kart {
         border-radius: 0;
     }
@@ -12408,8 +12461,9 @@ body.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-ok
     body.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:only-child,
     body.sayfa-hizmetlerimiz .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:only-child,
     body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:only-child,
-    body.sayfa-yurt-disi-dil-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:only-child,
+    body[class*='sayfa-yurt-disi-dil-okullari'] .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:only-child,
     body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:only-child,
+    body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:only-child,
     body.sayfa-yurt-disi-yaz-okullari-germany .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap > a.yaz-okullari-ulke-kart:only-child {
         border-radius: 15px;
     }
@@ -12417,8 +12471,9 @@ body.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-ok
     body.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(1):not(:only-child),
     body.sayfa-hizmetlerimiz .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(1):not(:only-child),
     body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(1):not(:only-child),
-    body.sayfa-yurt-disi-dil-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(1):not(:only-child),
+    body[class*='sayfa-yurt-disi-dil-okullari'] .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(1):not(:only-child),
     body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(1):not(:only-child),
+    body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(1):not(:only-child),
     body.sayfa-yurt-disi-yaz-okullari-germany .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap > a.yaz-okullari-ulke-kart:nth-child(1):not(:only-child) {
         border-top-left-radius: 15px;
     }
@@ -12426,8 +12481,9 @@ body.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-ok
     body.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap:has(> .yaz-okullari-ulke-kart:nth-child(2):nth-last-child(1)) > .yaz-okullari-ulke-kart:nth-child(2),
     body.sayfa-hizmetlerimiz .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap:has(> .yaz-okullari-ulke-kart:nth-child(2):nth-last-child(1)) > .yaz-okullari-ulke-kart:nth-child(2),
     body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap:has(> .yaz-okullari-ulke-kart:nth-child(2):nth-last-child(1)) > .yaz-okullari-ulke-kart:nth-child(2),
-    body.sayfa-yurt-disi-dil-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap:has(> .yaz-okullari-ulke-kart:nth-child(2):nth-last-child(1)) > .yaz-okullari-ulke-kart:nth-child(2),
+    body[class*='sayfa-yurt-disi-dil-okullari'] .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap:has(> .yaz-okullari-ulke-kart:nth-child(2):nth-last-child(1)) > .yaz-okullari-ulke-kart:nth-child(2),
     body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap:has(> .yaz-okullari-ulke-kart:nth-child(2):nth-last-child(1)) > .yaz-okullari-ulke-kart:nth-child(2),
+    body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap:has(> .yaz-okullari-ulke-kart:nth-child(2):nth-last-child(1)) > .yaz-okullari-ulke-kart:nth-child(2),
     body.sayfa-yurt-disi-yaz-okullari-germany .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap:has(> a.yaz-okullari-ulke-kart:nth-child(2):nth-last-child(1)) > a.yaz-okullari-ulke-kart:nth-child(2) {
         border-top-right-radius: 15px;
     }
@@ -12436,8 +12492,9 @@ body.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-ok
     body.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2):not(:nth-last-child(1)),
     body.sayfa-hizmetlerimiz .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2):not(:nth-last-child(1)),
     body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2):not(:nth-last-child(1)),
-    body.sayfa-yurt-disi-dil-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2):not(:nth-last-child(1)),
+    body[class*='sayfa-yurt-disi-dil-okullari'] .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2):not(:nth-last-child(1)),
     body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2):not(:nth-last-child(1)),
+    body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2):not(:nth-last-child(1)),
     body.sayfa-yurt-disi-yaz-okullari-germany .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap > a.yaz-okullari-ulke-kart:nth-child(2):not(:nth-last-child(1)) {
         border-top-right-radius: 15px;
     }
@@ -12445,8 +12502,9 @@ body.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-ok
     body.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-last-child(1):nth-child(2n),
     body.sayfa-hizmetlerimiz .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-last-child(1):nth-child(2n),
     body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-last-child(1):nth-child(2n),
-    body.sayfa-yurt-disi-dil-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-last-child(1):nth-child(2n),
+    body[class*='sayfa-yurt-disi-dil-okullari'] .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-last-child(1):nth-child(2n),
     body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-last-child(1):nth-child(2n),
+    body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-last-child(1):nth-child(2n),
     body.sayfa-yurt-disi-yaz-okullari-germany .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap > a.yaz-okullari-ulke-kart:nth-last-child(1):nth-child(2n) {
         border-bottom-right-radius: 15px;
     }
@@ -12454,8 +12512,9 @@ body.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-ok
     body.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2n):nth-last-child(2),
     body.sayfa-hizmetlerimiz .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2n):nth-last-child(2),
     body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2n):nth-last-child(2),
-    body.sayfa-yurt-disi-dil-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2n):nth-last-child(2),
+    body[class*='sayfa-yurt-disi-dil-okullari'] .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2n):nth-last-child(2),
     body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2n):nth-last-child(2),
+    body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2n):nth-last-child(2),
     body.sayfa-yurt-disi-yaz-okullari-germany .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap > a.yaz-okullari-ulke-kart:nth-child(2n):nth-last-child(2) {
         border-bottom-right-radius: 15px;
     }
@@ -12463,14 +12522,106 @@ body.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-ok
     body.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2n + 1):nth-last-child(1):not(:only-child),
     body.sayfa-hizmetlerimiz .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2n + 1):nth-last-child(1):not(:only-child),
     body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2n + 1):nth-last-child(1):not(:only-child),
-    body.sayfa-yurt-disi-dil-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2n + 1):nth-last-child(1):not(:only-child),
+    body[class*='sayfa-yurt-disi-dil-okullari'] .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2n + 1):nth-last-child(1):not(:only-child),
     body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2n + 1):nth-last-child(1):not(:only-child),
+    body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2n + 1):nth-last-child(1):not(:only-child),
     body.sayfa-yurt-disi-yaz-okullari-germany .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap > a.yaz-okullari-ulke-kart:nth-child(2n + 1):nth-last-child(1):not(:only-child),
     body.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2n + 1):nth-last-child(2),
     body.sayfa-hizmetlerimiz .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2n + 1):nth-last-child(2),
     body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2n + 1):nth-last-child(2),
-    body.sayfa-yurt-disi-dil-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2n + 1):nth-last-child(2),
+    body[class*='sayfa-yurt-disi-dil-okullari'] .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2n + 1):nth-last-child(2),
     body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2n + 1):nth-last-child(2),
+    body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2n + 1):nth-last-child(2),
+    body.sayfa-yurt-disi-yaz-okullari-germany .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap > a.yaz-okullari-ulke-kart:nth-child(2n + 1):nth-last-child(2) {
+        border-bottom-left-radius: 15px;
+    }
+}
+
+/* Hub 2 sütun ≤501px: satırda 2 kart + 600–899 ile aynı dış köşe mantığı */
+@media (max-width: 501px) {
+    body.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart,
+    body.sayfa-hizmetlerimiz .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart,
+    body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart,
+    body[class*='sayfa-yurt-disi-dil-okullari'] .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart,
+    body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart,
+    body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart,
+    body.sayfa-yurt-disi-yaz-okullari-germany .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap > a.yaz-okullari-ulke-kart {
+        border-radius: 0;
+    }
+
+    body.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:only-child,
+    body.sayfa-hizmetlerimiz .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:only-child,
+    body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:only-child,
+    body[class*='sayfa-yurt-disi-dil-okullari'] .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:only-child,
+    body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:only-child,
+    body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:only-child,
+    body.sayfa-yurt-disi-yaz-okullari-germany .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap > a.yaz-okullari-ulke-kart:only-child {
+        border-radius: 15px;
+    }
+
+    body.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(1):not(:only-child),
+    body.sayfa-hizmetlerimiz .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(1):not(:only-child),
+    body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(1):not(:only-child),
+    body[class*='sayfa-yurt-disi-dil-okullari'] .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(1):not(:only-child),
+    body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(1):not(:only-child),
+    body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(1):not(:only-child),
+    body.sayfa-yurt-disi-yaz-okullari-germany .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap > a.yaz-okullari-ulke-kart:nth-child(1):not(:only-child) {
+        border-top-left-radius: 15px;
+    }
+
+    body.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap:has(> .yaz-okullari-ulke-kart:nth-child(2):nth-last-child(1)) > .yaz-okullari-ulke-kart:nth-child(2),
+    body.sayfa-hizmetlerimiz .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap:has(> .yaz-okullari-ulke-kart:nth-child(2):nth-last-child(1)) > .yaz-okullari-ulke-kart:nth-child(2),
+    body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap:has(> .yaz-okullari-ulke-kart:nth-child(2):nth-last-child(1)) > .yaz-okullari-ulke-kart:nth-child(2),
+    body[class*='sayfa-yurt-disi-dil-okullari'] .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap:has(> .yaz-okullari-ulke-kart:nth-child(2):nth-last-child(1)) > .yaz-okullari-ulke-kart:nth-child(2),
+    body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap:has(> .yaz-okullari-ulke-kart:nth-child(2):nth-last-child(1)) > .yaz-okullari-ulke-kart:nth-child(2),
+    body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap:has(> .yaz-okullari-ulke-kart:nth-child(2):nth-last-child(1)) > .yaz-okullari-ulke-kart:nth-child(2),
+    body.sayfa-yurt-disi-yaz-okullari-germany .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap:has(> a.yaz-okullari-ulke-kart:nth-child(2):nth-last-child(1)) > a.yaz-okullari-ulke-kart:nth-child(2) {
+        border-top-right-radius: 15px;
+    }
+
+    body.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2):not(:nth-last-child(1)),
+    body.sayfa-hizmetlerimiz .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2):not(:nth-last-child(1)),
+    body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2):not(:nth-last-child(1)),
+    body[class*='sayfa-yurt-disi-dil-okullari'] .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2):not(:nth-last-child(1)),
+    body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2):not(:nth-last-child(1)),
+    body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2):not(:nth-last-child(1)),
+    body.sayfa-yurt-disi-yaz-okullari-germany .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap > a.yaz-okullari-ulke-kart:nth-child(2):not(:nth-last-child(1)) {
+        border-top-right-radius: 15px;
+    }
+
+    body.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-last-child(1):nth-child(2n),
+    body.sayfa-hizmetlerimiz .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-last-child(1):nth-child(2n),
+    body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-last-child(1):nth-child(2n),
+    body[class*='sayfa-yurt-disi-dil-okullari'] .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-last-child(1):nth-child(2n),
+    body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-last-child(1):nth-child(2n),
+    body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-last-child(1):nth-child(2n),
+    body.sayfa-yurt-disi-yaz-okullari-germany .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap > a.yaz-okullari-ulke-kart:nth-last-child(1):nth-child(2n) {
+        border-bottom-right-radius: 15px;
+    }
+
+    body.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2n):nth-last-child(2),
+    body.sayfa-hizmetlerimiz .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2n):nth-last-child(2),
+    body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2n):nth-last-child(2),
+    body[class*='sayfa-yurt-disi-dil-okullari'] .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2n):nth-last-child(2),
+    body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2n):nth-last-child(2),
+    body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2n):nth-last-child(2),
+    body.sayfa-yurt-disi-yaz-okullari-germany .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap > a.yaz-okullari-ulke-kart:nth-child(2n):nth-last-child(2) {
+        border-bottom-right-radius: 15px;
+    }
+
+    body.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2n + 1):nth-last-child(1):not(:only-child),
+    body.sayfa-hizmetlerimiz .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2n + 1):nth-last-child(1):not(:only-child),
+    body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2n + 1):nth-last-child(1):not(:only-child),
+    body[class*='sayfa-yurt-disi-dil-okullari'] .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2n + 1):nth-last-child(1):not(:only-child),
+    body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2n + 1):nth-last-child(1):not(:only-child),
+    body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2n + 1):nth-last-child(1):not(:only-child),
+    body.sayfa-yurt-disi-yaz-okullari-germany .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap > a.yaz-okullari-ulke-kart:nth-child(2n + 1):nth-last-child(1):not(:only-child),
+    body.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2n + 1):nth-last-child(2),
+    body.sayfa-hizmetlerimiz .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2n + 1):nth-last-child(2),
+    body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2n + 1):nth-last-child(2),
+    body[class*='sayfa-yurt-disi-dil-okullari'] .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2n + 1):nth-last-child(2),
+    body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2n + 1):nth-last-child(2),
+    body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart:nth-child(2n + 1):nth-last-child(2),
     body.sayfa-yurt-disi-yaz-okullari-germany .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap > a.yaz-okullari-ulke-kart:nth-child(2n + 1):nth-last-child(2) {
         border-bottom-left-radius: 15px;
     }
@@ -12489,9 +12640,10 @@ body.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-ok
 }
 
 /* Dil / yaz ana hub: bayrak + başlık bloğu kartın hem dikey hem yatay merkezinde */
-body.sayfa-yurt-disi-dil-okullari .dil-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart,
+body[class*='sayfa-yurt-disi-dil-okullari'] .dil-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart,
 body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart,
-body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart {
+body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart,
+body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart {
     align-self: stretch;
     height: 100%;
     min-height: 0;
@@ -12499,9 +12651,10 @@ body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-pane
     align-items: center;
 }
 
-body.sayfa-yurt-disi-dil-okullari .dil-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-icerik,
+body[class*='sayfa-yurt-disi-dil-okullari'] .dil-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-icerik,
 body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-icerik,
 body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-icerik,
+body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-icerik,
 body.sayfa-yurt-disi-universite .yaz-okullari-secim-paneli .yaz-okullari-ulke-kart-icerik {
     flex: 0 1 auto;
     width: auto;
@@ -12513,9 +12666,10 @@ body.sayfa-yurt-disi-universite .yaz-okullari-secim-paneli .yaz-okullari-ulke-ka
     text-align: center;
 }
 
-body.sayfa-yurt-disi-dil-okullari .dil-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-baslik,
+body[class*='sayfa-yurt-disi-dil-okullari'] .dil-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-baslik,
 body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-baslik,
 body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-baslik,
+body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-baslik,
 body.sayfa-yurt-disi-universite .yaz-okullari-secim-paneli .yaz-okullari-ulke-kart-baslik {
     padding: 8px 12px;
     text-align: center;
@@ -12745,12 +12899,12 @@ h3 {
     }
 }
 
-/* ≤501px: kart/çerçeve grid’leri yan yana olmasın (992px tablet bloğu + hub özgüllüğü 2 sütunu burada kırılır; ülke/dil kart sarmalayıcıları dahil) */
+/* ≤501px: ülke/dil/yaz hub — satırda 2 kart; köşe yuvarlaklığı yukarıdaki @media (max-width: 501px) hub bloğunda */
 @media (max-width: 501px) {
     .yaz-okullari-ulke-kart-wrap,
     .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap {
-        grid-template-columns: 1fr !important;
-        max-width: min(100%, var(--ulke-secim-kart-en)) !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        max-width: 100% !important;
         justify-content: stretch !important;
     }
 
@@ -12764,13 +12918,20 @@ h3 {
 
     .ulke-hub-kart-paneli .yaz-okullari-ulke-kart-wrap,
     .ulke-hub-kart-paneli.dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap {
-        grid-template-columns: 1fr !important;
-        max-width: min(100%, 1200px) !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        max-width: min(100%, calc(2 * var(--ulke-secim-kart-en) + 5px)) !important;
+        justify-content: center !important;
     }
 
-    .yaz-okullari-ulke-kart-wrap > a.yaz-okullari-ulke-kart,
-    .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > a.yaz-okullari-ulke-kart {
-        border-radius: 15px !important;
+    body[class*='sayfa-yurt-disi-dil-okullari'] .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap.son-kart-ortala > *:last-child:nth-child(odd):not(:only-child),
+    body[class*='sayfa-yurt-disi-yaz-okullari-'] .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap.son-kart-ortala > *:last-child:nth-child(odd):not(:only-child),
+    body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap.son-kart-ortala > *:last-child:nth-child(odd):not(:only-child),
+    body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap.son-kart-ortala > *:last-child:nth-child(odd):not(:only-child) {
+        grid-column: 1 / -1;
+        justify-self: center;
+        width: min(var(--ulke-secim-kart-en), calc((100% - 5px) / 2));
+        max-width: min(var(--ulke-secim-kart-en), calc((100% - 5px) / 2));
+        box-sizing: border-box;
     }
 
     .cerceve-kutu .rozet-grid.rozet-grid--hub-3-2-1,

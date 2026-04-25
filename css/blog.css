@@ -977,6 +977,11 @@ article.blog-kategori-sayfa .blog-kart-gorsel-link {
         min-width: 0;
     }
 
+    /* Giriş paragrafı ile mobil içindekiler kutusu arası 50px (≤501px’teki .blog-mobil-icindekiler-duz margin-top ile tek kaynak; sayfa özel padding tekrarı yok) */
+    .blog-yazi-sayfa-mobil-ux .blog-mobil-icindekiler-wrap .blog-mobil-icindekiler-duz {
+        margin-top: 50px;
+    }
+
     /* İçindekiler + link metni satır kırılınca tam genişlikte, giriş bloğunun altında kalır (yan taşma yok) */
     .blog-yazi-sayfa-mobil-ux .blog-mobil-icindekiler-wrap .blog-mobil-icindekiler-duz {
         width: 100%;
@@ -1033,6 +1038,18 @@ article.blog-kategori-sayfa .blog-kart-gorsel-link {
 
     .blog-yazi-sayfa-mobil-ux .blog-mobil-cta-bar-metin {
         line-height: 1.3;
+    }
+}
+
+/* ≤501px: mobil içindekiler — çerçeveli kutu (.blog-mobil-icindekiler-duz) üstünde/altında 50px (wrap altı yalnızca blog-yazi-sayfa-mobil-ux) */
+@media (max-width: 501px) {
+    .blog-yazi-sayfa-mobil-ux .blog-mobil-icindekiler-wrap {
+        margin-bottom: 50px;
+    }
+
+    /* Beyaz çerçevenin üstünde, önceki akış ile kutu arası 50px — tüm sayfalarda .blog-mobil-icindekiler-duz */
+    .blog-mobil-icindekiler-duz {
+        margin-top: 50px;
     }
 }
 

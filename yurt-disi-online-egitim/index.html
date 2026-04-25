@@ -29,9 +29,10 @@
     <link rel="stylesheet" href="/css/site-breadcrumb.css">
     <link rel="stylesheet" href="/css/site-iletisim-form.css">
     <link rel="stylesheet" href="/css/site-yonlendirme-kart.css">
+    <link rel="stylesheet" href="/css/blog.css">
     <link rel="stylesheet" href="/css/sss.css">
 </head>
-<body class="sayfa-yurt-disi-online-egitim">
+<body class="sayfa-yurt-disi-online-egitim blog-yazi-sayfa-mobil-ux">
     <div class="sabit-ust-alan">
         <div class="ust-serit">
             <div class="ust-serit-kapsayici">
@@ -167,7 +168,7 @@
     </div>
 
     <main id="icerik">
-    <article class="icerik-alani">
+    <article class="icerik-alani blog-yazi-detay">
         <nav class="site-haritasi-yolu" aria-label="Sayfa konumu">
             <div class="breadcrumb-kutu">
                 <a href="/" class="ana-sayfa-ikon">
@@ -178,10 +179,26 @@
             </div>
         </nav>
 
-        <h1>Yurt Dışı Online Eğitim<br><span class="vurgu-renk">Sınırların Ötesinde Eğitim!</span></h1>
+        <div class="blog-yazi-tek-sutun blog-yazi-tek-sutun--tam">
+        <div class="blog-yazi-layout blog-yazi-layout--yan-panel">
+        <div class="blog-yazi-ana">
+
+        <h1 id="online-hub-giris">Yurt Dışı Online Eğitim<br><span class="vurgu-renk">Sınırların Ötesinde Eğitim!</span></h1>
         <p>Dünyanın En İyi Üniversiteleri ve Dil Okulları Artık Evinizde! Yurt dışına gitmek için zamanınız veya bütçeniz kısıtlı olabilir ancak bu durum hayalinizdeki eğitimi almanıza engel değil. Global Compass olarak; Amerika, İngiltere ve Avrupa'nın en prestijli eğitim kurumları tarafından sunulan Online İngilizce Kursları, Sertifika Programları ve Akademik Hazırlık eğitimlerini ayağınıza getiriyoruz.</p>
 
-        <div class="cerceve-kutu icerik-kutusu">
+        <div id="blog-mobil-icindekiler-hedef" class="blog-mobil-icindekiler-wrap">
+            <nav class="blog-mobil-icindekiler-duz" aria-labelledby="online-hub-mobil-icindekiler-baslik">
+                <p class="blog-mobil-icindekiler-duz-baslik" id="online-hub-mobil-icindekiler-baslik">İçindekiler</p>
+                <ul class="blog-icindekiler-liste blog-icindekiler-liste--mobil">
+                    <li><a href="#online-hub-giris">Giriş</a></li>
+                    <li><a href="#online-hub-neden">Neden online eğitim</a></li>
+                    <li><a href="#bilgi-istek">Bilgi istek formu</a></li>
+                    <li><a href="#online-hub-yaz-okullari">Yurt dışı yaz okulları</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="cerceve-kutu icerik-kutusu" id="online-hub-neden">
             <h2>Neden Online Eğitimi Tercih Etmelisiniz?</h2>
             <p>Online eğitim, sadece bir bilgisayar ekranı değil, küresel bir sınıfa açılan kapıdır:</p>
             <div class="rozet-grid icerik-kutusu-grid yatay-2">
@@ -253,14 +270,31 @@
         </section>
 
 
-        <div class="okul-liste-kapsayici">
+        <div class="okul-liste-kapsayici" id="online-hub-yaz-okullari">
             <h2>Yurt Dışı Yaz Okulları</h2>
             <section class="alt-yonlendirme-alani">
                 <div class="yonlendirme-karti">
                     <p>Ülke ve şehir seçenekleriyle tüm yurt dışı yaz okulu programlarına genel sayfamızdan ulaşabilirsiniz.</p>
                     <a href="/yurt-disi-yaz-okullari/" class="kart-link">Yurt Dışı Yaz Okullarını Keşfet →</a>
                 </div>
-</section>
+            </section>
+        </div>
+
+        </div>
+
+        <aside id="online-hub-yan-panel" class="blog-yan-panel" aria-label="İçindekiler">
+            <nav class="blog-icindekiler-kutu" aria-labelledby="online-hub-masaustu-icindekiler-baslik">
+                <p class="blog-icindekiler-baslik" id="online-hub-masaustu-icindekiler-baslik">İçindekiler</p>
+                <ul class="blog-icindekiler-liste">
+                    <li><a href="#online-hub-giris">Giriş</a></li>
+                    <li><a href="#online-hub-neden">Neden online eğitim</a></li>
+                    <li><a href="#bilgi-istek">Bilgi istek formu</a></li>
+                    <li><a href="#online-hub-yaz-okullari">Yurt dışı yaz okulları</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        </div>
         </div>
     </article>
     </main>

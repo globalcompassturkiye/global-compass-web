@@ -391,6 +391,22 @@ body.ana-sayfa {
 .navigasyon .has-dropdown {
     position: relative;
 }
+
+/* ≤992px: açılır satır sağındaki ok — daha büyük dokunma / görünürlük */
+@media (max-width: 992px) {
+    .navigasyon .has-dropdown > a::after {
+        margin-left: 10px;
+        border: 0 solid transparent;
+        border-left-width: 7px;
+        border-right-width: 7px;
+        border-top: 9px solid currentColor;
+        vertical-align: 0.12em;
+    }
+    .navigasyon .has-dropdown.submenu-open > a::after {
+        transform: rotate(180deg);
+    }
+}
+
 /* Yalnızca bir seviye aşağıdaki alt menü açılsın (İngiltere > şehirler gibi iç içe yapılarda
    tüm alt menülerin tek hover’da açılmasını engeller) */
 .navigasyon .nav-list > li.has-dropdown:hover > .submenu,
@@ -787,7 +803,7 @@ body.ana-sayfa {
         top: 100%;
         left: 0;
         right: auto;
-        width: min(360px, calc(100vw - 20px));
+        width: min(288px, calc((100vw - 20px) * 0.8));
         max-width: 100%;
         box-sizing: border-box;
         justify-content: flex-start;
@@ -1393,7 +1409,7 @@ body.ana-sayfa {
         top: 100%;
         left: 0;
         right: auto;
-        width: min(360px, calc(100vw - 20px));
+        width: min(288px, calc((100vw - 20px) * 0.8));
         max-width: 100%;
         box-sizing: border-box;
         background: #fff;

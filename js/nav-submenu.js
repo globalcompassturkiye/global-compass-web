@@ -1,7 +1,8 @@
 /**
  * Ana menü: hamburger + ≤992px tıklamalı alt menü.
- * 1. tıklama: aç | 2. tıklama: kapat (aynı başlığa tekrar basınca).
- * Aynı seviyede (kardeş li.has-dropdown) en fazla biri açık; üst menü kapanınca tüm altlar sıfırlanır.
+ * Basit klasik: 1. tık alt menüyü açar, 2. tık aynı satırda hub sayfasına gider (preventDefault yok).
+ * Aynı seviyede en fazla bir açılır dal; hamburger kapanınca tüm altlar sıfırlanır.
+ * Menü ve hamburger dışına tıklanınca çekmece kapanır.
  */
 (function () {
   function initGlobalMobileCtaBar() {
@@ -70,16 +71,6 @@
     });
   }
 
-  /** Kapatılırken iç içe açık alt menü sınıflarını da sıfırla */
-  function closeNestedDropdowns(containerLi) {
-    containerLi.querySelectorAll('li.has-dropdown').forEach(function (li) {
-      li.classList.remove('submenu-open');
-    });
-    containerLi.querySelectorAll('li.has-dropdown > a').forEach(function (a) {
-      a.setAttribute('aria-expanded', 'false');
-    });
-  }
-
   function init() {
     initGlobalMobileCtaBar();
 
@@ -88,20 +79,40 @@
     if (!toggle || !nav) return;
     applyMobileSubmenuLayout(nav);
 
-    toggle.addEventListener('click', function () {
-      var open = nav.classList.toggle('is-open');
-      toggle.classList.toggle('is-open', open);
-      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    function closeMainDrawer() {
+      nav.classList.remove('is-open');
+      toggle.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+      nav.querySelectorAll('li.has-dropdown').forEach(function (li) {
+        li.classList.remove('submenu-open');
+      });
+      nav.querySelectorAll('li.has-dropdown > a').forEach(function (a) {
+        a.setAttribute('aria-expanded', 'false');
+      });
       applyMobileSubmenuLayout(nav);
-      if (!open) {
-        nav.querySelectorAll('li.has-dropdown').forEach(function (li) {
-          li.classList.remove('submenu-open');
-        });
-        nav.querySelectorAll('li.has-dropdown > a').forEach(function (a) {
-          a.setAttribute('aria-expanded', 'false');
-        });
+    }
+
+    toggle.addEventListener('click', function () {
+      if (nav.classList.contains('is-open')) {
+        closeMainDrawer();
+      } else {
+        nav.classList.add('is-open');
+        toggle.classList.add('is-open');
+        toggle.setAttribute('aria-expanded', 'true');
+        applyMobileSubmenuLayout(nav);
       }
     });
+
+    document.addEventListener(
+      'click',
+      function (e) {
+        if (!nav.classList.contains('is-open')) return;
+        var t = e.target;
+        if (nav.contains(t) || toggle.contains(t)) return;
+        closeMainDrawer();
+      },
+      false
+    );
 
     document.querySelectorAll('.has-dropdown > a').forEach(function (trigger) {
       trigger.addEventListener('click', function (e) {
@@ -115,12 +126,8 @@
           this.setAttribute('aria-expanded', 'true');
           applyMobileSubmenuLayout(nav);
         } else {
-          /* 2. tıklamada kapat (ülke hub’a gitme yok); iç içe altlar da sıfırlanır. */
-          e.preventDefault();
-          closeNestedDropdowns(parent);
-          parent.classList.remove('submenu-open');
+          /* 2. tık: sayfaya git — preventDefault yok */
           this.setAttribute('aria-expanded', 'false');
-          applyMobileSubmenuLayout(nav);
         }
       });
     });
