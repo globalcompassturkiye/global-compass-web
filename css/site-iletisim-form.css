@@ -54,8 +54,9 @@
     position: relative;
     border: none;
     box-shadow: none;
-    padding: 0 0 32px;
+    padding: 0 var(--icerik-yan-gutter) 32px;
     max-width: 1200px;
+    box-sizing: border-box;
 }
 
 /* Giriş metni + form alanları — h2’nin dışında, beyaz kart */

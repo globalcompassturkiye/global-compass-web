@@ -944,8 +944,6 @@ uni-avantaj-madde-liste
 uni-avantaj-main-kutu
 uni-sayfasi-avantajlar
 usa-avantaj-grid-4lu
-usa-capraz-cerceve-grid
-usa-capraz-cerceve-kart
 usa-form-alt-satir
 usa-form-bant
 usa-one-cikan-sehirler-kutu

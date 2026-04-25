@@ -2,6 +2,7 @@
 
 Bu dokuman, override temizliginde kullanilacak ortak HTML->CSS baglanti sozlesmesini tanimlar.
 Hedef: sayfa-ozel gorunumu degil, ortak bilesen kombinasyonlarini kullanmak.
+Rozet kart standardinin dondurulmus Faz 0 metni: `docs/rozet-bilesen-sozlesmesi-faz0.md`.
 
 ## 1) Cekirdek Blok Sozlesmesi
 

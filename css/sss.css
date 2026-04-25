@@ -248,13 +248,24 @@ h1 .h1-vurgu {
 }
 
 /* Ana Kutu Yapısı */
-.sss-item {
-    border: 0 solid transparent;
-    margin-bottom: 12px;
-    padding: 10px 10px 12px;
+.sss-alani {
     background: #ffffff;
+    border: 0 solid transparent;
     border-radius: 5px;
     overflow: hidden;
+}
+
+.sss-item {
+    border: 0;
+    margin-bottom: 0;
+    padding: 10px 10px 12px;
+    background: transparent;
+    border-radius: 0;
+    overflow: hidden;
+}
+
+.sss-item + .sss-item {
+    border-top: 1px solid #f4f4f4;
 }
 
 /* Soru (Summary) Ayarları — 501px–1920px: 14px↔16px kalın(700); alt/üst clamp */

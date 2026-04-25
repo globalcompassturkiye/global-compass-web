@@ -1000,8 +1000,6 @@ ulke-secim-paneli-ortak
 uni-avantaj-bolumu
 uni-avantaj-madde-liste
 usa-avantaj-grid-4lu
-usa-capraz-cerceve-grid
-usa-capraz-cerceve-kart
 usa-form-alt-satir
 usa-form-bant
 usa-one-cikan-sehirler-kutu
