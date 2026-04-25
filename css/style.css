@@ -4381,6 +4381,13 @@ body.ana-sayfa article.icerik-alani > section.icerik-alani.ana-hizmetler-bolumu 
     padding-right: 0;
 }
 
+/* Ana sayfa: hizmet kartları iç genişliği blog gövdesi ile aynı olsun */
+body.ana-sayfa article.icerik-alani > section.icerik-alani.ana-hizmetler-bolumu .dil-okullari-secim-paneli {
+    padding-left: var(--icerik-yan-gutter);
+    padding-right: var(--icerik-yan-gutter);
+    box-sizing: border-box;
+}
+
 /* site-gri-cerceve-kutu / cerceve-kutu ile aynı kart yüzeyi (ana sayfa blog dış çerçevesi) */
 .ana-sayfa-blog-ozeti-inner {
     border: 1px solid var(--site-kart-kenar);
@@ -4476,6 +4483,11 @@ body.ana-sayfa article.icerik-alani .ana-sayfa-blog-ozeti-kirmizi-bant #ana-sayf
         grid-template-columns: repeat(3, minmax(0, 1fr));
         justify-content: stretch;
         max-width: 100%;
+    }
+
+    /* Ana sayfa: hizmet kartları masaüstünde her satırda 3 kart */
+    body.ana-sayfa article.icerik-alani > section.icerik-alani.ana-hizmetler-bolumu .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
     /* /yurt-disi-dil-okullari/ hub: yalnızca 2 kart — 3 sütunda boş 3. kolon kartları sola iter; iki sütun + ortala */
@@ -13190,6 +13202,34 @@ article.icerik-alani .yaz-okullari-secim-paneli .yaz-programlari-kategori-baslik
     article.icerik-alani .yaz-okullari-secim-paneli {
         padding-left: var(--icerik-yan-gutter);
         padding-right: var(--icerik-yan-gutter);
+    }
+}
+
+/* Ana sayfa + Hizmetlerimiz: hizmet kartları blog çerçevesiyle aynı toplam genişlikte */
+body.ana-sayfa article.icerik-alani > section.icerik-alani.ana-hizmetler-bolumu .dil-okullari-secim-paneli,
+body.sayfa-hizmetlerimiz article.icerik-alani > section.hizmetlerimiz-egitim-alanlari.icerik-alani.ana-hizmetler-bolumu .dil-okullari-secim-paneli {
+    padding-left: var(--icerik-yan-gutter);
+    padding-right: var(--icerik-yan-gutter);
+    box-sizing: border-box;
+}
+
+body.ana-sayfa article.icerik-alani > section.icerik-alani.ana-hizmetler-bolumu .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap,
+body.sayfa-hizmetlerimiz article.icerik-alani > section.hizmetlerimiz-egitim-alanlari.icerik-alani.ana-hizmetler-bolumu .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap {
+    max-width: 100%;
+}
+
+@media (min-width: 900px) {
+    body.ana-sayfa article.icerik-alani > section.icerik-alani.ana-hizmetler-bolumu .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap,
+    body.sayfa-hizmetlerimiz article.icerik-alani > section.hizmetlerimiz-egitim-alanlari.icerik-alani.ana-hizmetler-bolumu .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        justify-content: stretch;
+    }
+
+    body.ana-sayfa article.icerik-alani > section.icerik-alani.ana-hizmetler-bolumu .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart,
+    body.sayfa-hizmetlerimiz article.icerik-alani > section.hizmetlerimiz-egitim-alanlari.icerik-alani.ana-hizmetler-bolumu .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart {
+        width: 100%;
+        max-width: none;
+        justify-self: stretch;
     }
 }
 
