@@ -1068,12 +1068,6 @@ body.sayfa-hizmetlerimiz .hizmetlerimiz-egitim-alanlari .dil-okullari-secim-pane
         padding: 20px 18px;
     }
 
-.milan-avantaj-kutu .rozet-grid > .rozet-kart:nth-child(5) {
-        grid-column: auto;
-        justify-self: stretch;
-        width: 100%;
-    }
-
 .kings-galeri-kutu .kings-galeri-grid {
         grid-template-columns: 1fr;
     }
@@ -1311,8 +1305,7 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
         grid-template-columns: 1fr;
     }
 
-    .dil-okullari-secim-paneli,
-    .yaz-okullari-secim-paneli {
+    :is(.dil-okullari-secim-paneli, .yaz-okullari-secim-paneli) {
         margin: 20px 0 45px 0;
         padding: 0;
     }
@@ -1332,11 +1325,6 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
 
 .boston-neden-kutu .rozet-grid {
         grid-template-columns: 1fr;
-    }
-
-.yaz-okullari-secim-paneli {
-        margin: 20px 0 45px 0;
-        padding: 0;
     }
 
 .yaz-okullari-destinasyon-kutu .kutu-liste-sirali {
@@ -2022,12 +2010,32 @@ body.sayfa-yurt-disi-dil-okullari-uk-london .londra-neden-kutu .rozet-grid .roze
     font-weight: 700;
 }
 
-.milan-avantaj-kutu .rozet-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
+body.sayfa-yurt-disi-yaz-okullari-italy-milan .italy-sosyal-kutu .italy-sosyal-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+body.sayfa-yurt-disi-yaz-okullari-italy-milan .italy-sosyal-kutu .italy-sosyal-list > .italy-sosyal-madde {
+    border: 0 solid transparent;
+    border-radius: 15px;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+    padding: 16px 14px 14px;
+}
+
+body.sayfa-yurt-disi-yaz-okullari-italy-milan .italy-sosyal-kutu .italy-sosyal-list > .italy-sosyal-madde:last-child {
+    grid-column: 1 / -1;
+}
+
+@media (max-width: 768px) {
+    body.sayfa-yurt-disi-yaz-okullari-italy-milan .italy-sosyal-kutu .italy-sosyal-list {
+        grid-template-columns: 1fr;
+    }
+
+    body.sayfa-yurt-disi-yaz-okullari-italy-milan .italy-sosyal-kutu .italy-sosyal-list > .italy-sosyal-madde:last-child {
+        grid-column: auto;
+    }
 }
 
 .frankfurt-avantaj-kart {
@@ -2720,7 +2728,6 @@ body.sayfa-yurt-disi-lise .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wra
 }
 
 article.icerik-alani .rozet-grid.icerik-kutusu-grid.yatay-2.son-kart-ortala > .rozet-kart:last-child:nth-child(odd),
-.milan-avantaj-kutu .rozet-grid > .rozet-kart:nth-child(5),
 .oxford-sosyal-rozet-kutu .rozet-grid > .rozet-kart:nth-child(3) {
     grid-column: 1 / -1;
     justify-self: center;
@@ -3192,7 +3199,8 @@ article.icerik-alani .rozet-grid.icerik-kutusu-grid.yatay-2 > .rozet-kart.kings-
     }
 }
 
-.okul-liste-kapsayici .modern-okul-listesi {
+.okul-liste-kapsayici .modern-okul-listesi,
+.okul-listesi-okul-liste-kapsayici .okul-listesi-modern-okul-listesi {
     max-width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
@@ -3221,13 +3229,9 @@ article.icerik-alani .rozet-grid.icerik-kutusu-grid.yatay-2 > .rozet-kart.kings-
 
 .okul-liste-kapsayici .modern-okul-listesi > .premium-liste-kart ~ .premium-liste-kart,
 .london-secim-paneli .okul-liste-kapsayici .modern-okul-listesi > .premium-liste-kart ~ .premium-liste-kart,
-.new-york-secim-paneli .okul-liste-kapsayici .modern-okul-listesi > .premium-liste-kart ~ .premium-liste-kart,
+:is(.new-york-secim-paneli, .tokyo-secim-paneli, .dil-okullari-secim-paneli, .yaz-okullari-sehir-okul-paneli, .yaz-okullari-secim-paneli) .okul-liste-kapsayici .modern-okul-listesi > .premium-liste-kart ~ .premium-liste-kart,
 .okul-listesi-okul-liste-kapsayici .okul-listesi-modern-okul-listesi > .okul-listesi-premium-liste-kart ~ .okul-listesi-premium-liste-kart,
 .okul-listesi-secim-paneli .okul-listesi-okul-liste-kapsayici .okul-listesi-modern-okul-listesi > .okul-listesi-premium-liste-kart ~ .okul-listesi-premium-liste-kart,
-.tokyo-secim-paneli .okul-liste-kapsayici .modern-okul-listesi > .premium-liste-kart ~ .premium-liste-kart,
-.dil-okullari-secim-paneli .okul-liste-kapsayici .modern-okul-listesi > .premium-liste-kart ~ .premium-liste-kart,
-.yaz-okullari-sehir-okul-paneli .okul-liste-kapsayici .modern-okul-listesi > .premium-liste-kart ~ .premium-liste-kart,
-.yaz-okullari-secim-paneli .okul-liste-kapsayici .modern-okul-listesi > .premium-liste-kart ~ .premium-liste-kart,
 h2 + * {
     margin-top: 0 !important;
 }
@@ -3246,17 +3250,10 @@ h2 + * {
     background: transparent !important;
 }
 
-.okul-liste-kapsayici .modern-okul-listesi .premium-liste-kart:hover, .okul-liste-kapsayici .modern-okul-listesi .premium-liste-kart.glass-stil:hover,
-.yaz-okullari-sehir-okul-paneli .premium-liste-kart:hover, .yaz-okullari-sehir-okul-paneli .glass-stil:hover,
-.canada-secim-paneli .premium-liste-kart:hover, .canada-secim-paneli .glass-stil:hover,
-.germany-secim-paneli .premium-liste-kart:hover, .germany-secim-paneli .glass-stil:hover,
-.italy-secim-paneli .premium-liste-kart:hover, .italy-secim-paneli .glass-stil:hover,
-.london-secim-paneli .premium-liste-kart:hover, .london-secim-paneli .glass-stil:hover,
-.new-york-secim-paneli .premium-liste-kart:hover, .new-york-secim-paneli .glass-stil:hover,
-.okul-listesi-okul-liste-kapsayici .okul-listesi-modern-okul-listesi .okul-listesi-premium-liste-kart:hover, .okul-listesi-okul-liste-kapsayici .okul-listesi-modern-okul-listesi .okul-listesi-premium-liste-kart.okul-listesi-glass-stil:hover,
-.okul-listesi-secim-paneli .okul-listesi-premium-liste-kart:hover, .okul-listesi-secim-paneli .okul-listesi-glass-stil:hover,
-.oxford-secim-paneli .premium-liste-kart:hover, .oxford-secim-paneli .glass-stil:hover,
-.tokyo-secim-paneli .premium-liste-kart:hover, .tokyo-secim-paneli .glass-stil:hover {
+.okul-liste-kapsayici .modern-okul-listesi :is(.premium-liste-kart, .premium-liste-kart.glass-stil):hover,
+:is(.yaz-okullari-sehir-okul-paneli, .canada-secim-paneli, .germany-secim-paneli, .italy-secim-paneli, .london-secim-paneli, .new-york-secim-paneli, .oxford-secim-paneli, .tokyo-secim-paneli) :is(.premium-liste-kart, .glass-stil):hover,
+.okul-listesi-okul-liste-kapsayici .okul-listesi-modern-okul-listesi :is(.okul-listesi-premium-liste-kart, .okul-listesi-premium-liste-kart.okul-listesi-glass-stil):hover,
+.okul-listesi-secim-paneli :is(.okul-listesi-premium-liste-kart, .okul-listesi-glass-stil):hover {
     transform: none !important;
     box-shadow: none !important;
     border-color: transparent !important;
@@ -3317,8 +3314,8 @@ h2 + * {
 .okul-isim-link:hover,
 .okul-listesi-program-secim-hub-baslik .okul-listesi-alt-satir-lacivert .vurgu-renk,
 .okul-listesi-okul-isim-link:hover,
-.yaz-okullari-secim-paneli .kirmizi-kutu .alt-satir-lacivert, .dil-okullari-secim-paneli .kirmizi-kutu .alt-satir-lacivert,
-article.icerik-alani > h2:has(> .vurgu-satir) > .vurgu-satir .vurgu-renk, .icerik-alani > h2:has(> .vurgu-satir) > .vurgu-satir .vurgu-renk, body.sayfa-hizmetlerimiz .hizmetlerimiz-egitim-alanlari > h2:has(> .vurgu-satir) > .vurgu-satir .vurgu-renk, .dil-okullari-secim-paneli > h2:has(> .vurgu-satir) > .vurgu-satir .vurgu-renk, .yaz-okullari-secim-paneli > h2:has(> .vurgu-satir) > .vurgu-satir .vurgu-renk,
+:is(.yaz-okullari-secim-paneli, .dil-okullari-secim-paneli) .kirmizi-kutu .alt-satir-lacivert,
+article.icerik-alani > h2:has(> .vurgu-satir) > .vurgu-satir .vurgu-renk, .icerik-alani > h2:has(> .vurgu-satir) > .vurgu-satir .vurgu-renk, body.sayfa-hizmetlerimiz .hizmetlerimiz-egitim-alanlari > h2:has(> .vurgu-satir) > .vurgu-satir .vurgu-renk, :is(.dil-okullari-secim-paneli, .yaz-okullari-secim-paneli) > h2:has(> .vurgu-satir) > .vurgu-satir .vurgu-renk,
 .yaz-okullari-secim-paneli .program-secim-hub-baslik .vurgu-satir .vurgu-renk {
     color: #bd0505 !important;
 }
@@ -4990,112 +4987,51 @@ article.icerik-alani .cerceve-kutu.japan-tercih-bolumu > h2 + p:has(+ .rozet-gri
     color: #bd0505;
 }
 
-.yaz-okullari-sehir-okul-paneli .kirmizi-kutu,
-.canada-secim-paneli .kirmizi-kutu,
-.germany-secim-paneli .kirmizi-kutu,
-.italy-secim-paneli .kirmizi-kutu,
-.japan-secim-paneli .kirmizi-kutu,
-.london-secim-paneli .hizmet-alanlari-baslik,
-.london-secim-paneli .kirmizi-kutu,
-.oxford-secim-paneli .kirmizi-kutu {
+:is(.yaz-okullari-sehir-okul-paneli, .canada-secim-paneli, .germany-secim-paneli, .italy-secim-paneli, .japan-secim-paneli, .oxford-secim-paneli) .kirmizi-kutu,
+.london-secim-paneli :is(.hizmet-alanlari-baslik, .kirmizi-kutu) {
     margin: 0;
     border-radius: 5px 5px 0 0;
 }
 
-.yaz-okullari-sehir-okul-paneli .okul-liste-kapsayici,
-.germany-secim-paneli .okul-liste-kapsayici,
-.london-secim-paneli .okul-liste-kapsayici,
-.new-york-secim-paneli .okul-liste-kapsayici,
-.okul-listesi-secim-paneli .okul-listesi-okul-liste-kapsayici,
-.oxford-secim-paneli .okul-liste-kapsayici,
-.tokyo-secim-paneli .okul-liste-kapsayici,
-.ulke-secim-paneli-ortak .okul-liste-kapsayici {
+:is(.yaz-okullari-sehir-okul-paneli, .germany-secim-paneli, .london-secim-paneli, .new-york-secim-paneli, .oxford-secim-paneli, .tokyo-secim-paneli, .ulke-secim-paneli-ortak) .okul-liste-kapsayici,
+.okul-listesi-secim-paneli .okul-listesi-okul-liste-kapsayici {
     margin-top: 0;
     padding-top: 0;
 }
 
-.yaz-okullari-sehir-okul-paneli .premium-liste-kart, .yaz-okullari-sehir-okul-paneli .glass-stil, .yaz-okullari-sehir-okul-paneli .incele-btn-minimal, .yaz-okullari-sehir-okul-paneli .btn-modern-incele, .yaz-okullari-sehir-okul-paneli .ok-animasyon,
-.canada-secim-paneli .premium-liste-kart, .canada-secim-paneli .glass-stil, .canada-secim-paneli .incele-btn-minimal, .canada-secim-paneli .btn-modern-incele, .canada-secim-paneli .ok-animasyon,
-.germany-secim-paneli .premium-liste-kart, .germany-secim-paneli .glass-stil, .germany-secim-paneli .incele-btn-minimal, .germany-secim-paneli .btn-modern-incele, .germany-secim-paneli .ok-animasyon,
-.italy-secim-paneli .premium-liste-kart, .italy-secim-paneli .glass-stil, .italy-secim-paneli .incele-btn-minimal, .italy-secim-paneli .btn-modern-incele, .italy-secim-paneli .ok-animasyon,
-.london-secim-paneli .premium-liste-kart, .london-secim-paneli .glass-stil, .london-secim-paneli .incele-btn-minimal, .london-secim-paneli .btn-modern-incele, .london-secim-paneli .ok-animasyon,
-.new-york-secim-paneli .premium-liste-kart, .new-york-secim-paneli .glass-stil, .new-york-secim-paneli .btn-modern-incele, .new-york-secim-paneli .ok-animasyon,
-.okul-listesi-secim-paneli .okul-listesi-premium-liste-kart, .okul-listesi-secim-paneli .okul-listesi-glass-stil, .okul-listesi-secim-paneli .okul-listesi-btn-modern-incele, .okul-listesi-secim-paneli .okul-listesi-ok-animasyon,
-.oxford-secim-paneli .premium-liste-kart, .oxford-secim-paneli .glass-stil, .oxford-secim-paneli .incele-btn-minimal, .oxford-secim-paneli .btn-modern-incele, .oxford-secim-paneli .ok-animasyon,
-.tokyo-secim-paneli .premium-liste-kart, .tokyo-secim-paneli .glass-stil, .tokyo-secim-paneli .btn-modern-incele, .tokyo-secim-paneli .ok-animasyon {
+:is(.yaz-okullari-sehir-okul-paneli, .canada-secim-paneli, .germany-secim-paneli, .italy-secim-paneli, .london-secim-paneli, .new-york-secim-paneli, .oxford-secim-paneli, .tokyo-secim-paneli) :is(.premium-liste-kart, .glass-stil, .incele-btn-minimal, .btn-modern-incele, .ok-animasyon),
+.okul-listesi-secim-paneli :is(.okul-listesi-premium-liste-kart, .okul-listesi-glass-stil, .okul-listesi-btn-modern-incele, .okul-listesi-ok-animasyon) {
     transition: none !important;
 }
-.yaz-okullari-sehir-okul-paneli .okul-liste-kapsayici:hover,
-.canada-secim-paneli .okul-liste-kapsayici:hover,
-.germany-secim-paneli .okul-liste-kapsayici:hover,
-.italy-secim-paneli .okul-liste-kapsayici:hover,
-.london-secim-paneli .okul-liste-kapsayici:hover,
-.new-york-secim-paneli .okul-liste-kapsayici:hover,
-.okul-listesi-secim-paneli .okul-listesi-okul-liste-kapsayici:hover,
-.oxford-secim-paneli .okul-liste-kapsayici:hover,
-.tokyo-secim-paneli .okul-liste-kapsayici:hover {
+:is(.yaz-okullari-sehir-okul-paneli, .canada-secim-paneli, .germany-secim-paneli, .italy-secim-paneli, .london-secim-paneli, .new-york-secim-paneli, .oxford-secim-paneli, .tokyo-secim-paneli) .okul-liste-kapsayici:hover,
+.okul-listesi-secim-paneli .okul-listesi-okul-liste-kapsayici:hover {
     transform: none !important;
     box-shadow: var(--site-kart-golge) !important;
     border-color: var(--site-kart-kenar) !important;
     background: #ffffff !important;
 }
 
-.yaz-okullari-sehir-okul-paneli .okul-isim-link:hover, .yaz-okullari-sehir-okul-paneli .incele-btn-minimal:hover, .yaz-okullari-sehir-okul-paneli .btn-modern-incele:hover,
-.canada-secim-paneli .okul-isim-link:hover, .canada-secim-paneli .incele-btn-minimal:hover, .canada-secim-paneli .btn-modern-incele:hover,
-.germany-secim-paneli .okul-isim-link:hover, .germany-secim-paneli .incele-btn-minimal:hover, .germany-secim-paneli .btn-modern-incele:hover,
-.italy-secim-paneli .okul-isim-link:hover, .italy-secim-paneli .incele-btn-minimal:hover, .italy-secim-paneli .btn-modern-incele:hover,
-.london-secim-paneli .okul-isim-link:hover, .london-secim-paneli .incele-btn-minimal:hover, .london-secim-paneli .btn-modern-incele:hover,
-.new-york-secim-paneli .okul-isim-link:hover, .new-york-secim-paneli .btn-modern-incele:hover,
-.okul-listesi-secim-paneli .okul-listesi-okul-isim-link:hover, .okul-listesi-secim-paneli .okul-listesi-btn-modern-incele:hover,
-.oxford-secim-paneli .okul-isim-link:hover, .oxford-secim-paneli .incele-btn-minimal:hover, .oxford-secim-paneli .btn-modern-incele:hover,
-.tokyo-secim-paneli .okul-isim-link:hover, .tokyo-secim-paneli .btn-modern-incele:hover {
+:is(.yaz-okullari-sehir-okul-paneli, .canada-secim-paneli, .germany-secim-paneli, .italy-secim-paneli, .london-secim-paneli, .new-york-secim-paneli, .oxford-secim-paneli, .tokyo-secim-paneli) :is(.okul-isim-link:hover, .incele-btn-minimal:hover, .btn-modern-incele:hover),
+.okul-listesi-secim-paneli :is(.okul-listesi-okul-isim-link:hover, .okul-listesi-btn-modern-incele:hover) {
     color: inherit !important;
     text-decoration: none !important;
     padding-left: 0 !important;
 }
 
-.yaz-okullari-sehir-okul-paneli .btn-modern-incele:hover,
-.yaz-okullari-sehir-okul-paneli .premium-liste-kart:hover .okul-isim-link, .yaz-okullari-sehir-okul-paneli .premium-liste-kart:hover .btn-modern-incele, .yaz-okullari-sehir-okul-paneli .premium-liste-kart:hover .ok-animasyon,
-.canada-secim-paneli .btn-modern-incele:hover,
-.canada-secim-paneli .premium-liste-kart:hover .okul-isim-link, .canada-secim-paneli .premium-liste-kart:hover .btn-modern-incele, .canada-secim-paneli .premium-liste-kart:hover .ok-animasyon,
-.germany-secim-paneli .btn-modern-incele:hover,
-.germany-secim-paneli .premium-liste-kart:hover .okul-isim-link, .germany-secim-paneli .premium-liste-kart:hover .btn-modern-incele, .germany-secim-paneli .premium-liste-kart:hover .ok-animasyon,
-.italy-secim-paneli .btn-modern-incele:hover,
-.italy-secim-paneli .premium-liste-kart:hover .okul-isim-link, .italy-secim-paneli .premium-liste-kart:hover .btn-modern-incele, .italy-secim-paneli .premium-liste-kart:hover .ok-animasyon,
-.london-secim-paneli .btn-modern-incele:hover,
-.london-secim-paneli .premium-liste-kart:hover .okul-isim-link, .london-secim-paneli .premium-liste-kart:hover .btn-modern-incele, .london-secim-paneli .premium-liste-kart:hover .ok-animasyon,
-.new-york-secim-paneli .btn-modern-incele:hover,
-.new-york-secim-paneli .premium-liste-kart:hover .okul-isim-link, .new-york-secim-paneli .premium-liste-kart:hover .btn-modern-incele, .new-york-secim-paneli .premium-liste-kart:hover .ok-animasyon,
+:is(.yaz-okullari-sehir-okul-paneli, .canada-secim-paneli, .germany-secim-paneli, .italy-secim-paneli, .london-secim-paneli, .new-york-secim-paneli, .oxford-secim-paneli, .tokyo-secim-paneli) .btn-modern-incele:hover,
+:is(.yaz-okullari-sehir-okul-paneli, .canada-secim-paneli, .germany-secim-paneli, .italy-secim-paneli, .london-secim-paneli, .new-york-secim-paneli, .oxford-secim-paneli, .tokyo-secim-paneli) .premium-liste-kart:hover :is(.okul-isim-link, .btn-modern-incele, .ok-animasyon),
 .okul-listesi-secim-paneli .okul-listesi-btn-modern-incele:hover,
-.okul-listesi-secim-paneli .okul-listesi-premium-liste-kart:hover .okul-listesi-okul-isim-link, .okul-listesi-secim-paneli .okul-listesi-premium-liste-kart:hover .okul-listesi-btn-modern-incele, .okul-listesi-secim-paneli .okul-listesi-premium-liste-kart:hover .okul-listesi-ok-animasyon,
-.oxford-secim-paneli .btn-modern-incele:hover,
-.oxford-secim-paneli .premium-liste-kart:hover .okul-isim-link, .oxford-secim-paneli .premium-liste-kart:hover .btn-modern-incele, .oxford-secim-paneli .premium-liste-kart:hover .ok-animasyon,
-.tokyo-secim-paneli .btn-modern-incele:hover,
-.tokyo-secim-paneli .premium-liste-kart:hover .okul-isim-link, .tokyo-secim-paneli .premium-liste-kart:hover .btn-modern-incele, .tokyo-secim-paneli .premium-liste-kart:hover .ok-animasyon {
+.okul-listesi-secim-paneli .okul-listesi-premium-liste-kart:hover :is(.okul-listesi-okul-isim-link, .okul-listesi-btn-modern-incele, .okul-listesi-ok-animasyon) {
     color: #bd0505 !important;
 }
 
-.yaz-okullari-sehir-okul-paneli .btn-modern-incele:hover .ok-animasyon,
-.canada-secim-paneli .btn-modern-incele:hover .ok-animasyon,
-.germany-secim-paneli .btn-modern-incele:hover .ok-animasyon,
-.italy-secim-paneli .btn-modern-incele:hover .ok-animasyon,
-.london-secim-paneli .btn-modern-incele:hover .ok-animasyon,
-.new-york-secim-paneli .btn-modern-incele:hover .ok-animasyon,
-.okul-listesi-secim-paneli .okul-listesi-btn-modern-incele:hover .okul-listesi-ok-animasyon,
-.oxford-secim-paneli .btn-modern-incele:hover .ok-animasyon,
-.tokyo-secim-paneli .btn-modern-incele:hover .ok-animasyon {
+:is(.yaz-okullari-sehir-okul-paneli, .canada-secim-paneli, .germany-secim-paneli, .italy-secim-paneli, .london-secim-paneli, .new-york-secim-paneli, .oxford-secim-paneli, .tokyo-secim-paneli) .btn-modern-incele:hover .ok-animasyon,
+.okul-listesi-secim-paneli .okul-listesi-btn-modern-incele:hover .okul-listesi-ok-animasyon {
     color: #bd0505 !important;
     transform: translateX(2px);
 }
-.yaz-okullari-sehir-okul-paneli .premium-liste-kart:hover .liste-index, .yaz-okullari-sehir-okul-paneli .liste-index,
-.canada-secim-paneli .premium-liste-kart:hover .liste-index, .canada-secim-paneli .liste-index,
-.germany-secim-paneli .premium-liste-kart:hover .liste-index, .germany-secim-paneli .liste-index,
-.italy-secim-paneli .premium-liste-kart:hover .liste-index, .italy-secim-paneli .liste-index,
-.london-secim-paneli .premium-liste-kart:hover .liste-index, .london-secim-paneli .liste-index,
-.new-york-secim-paneli .premium-liste-kart:hover .liste-index, .new-york-secim-paneli .liste-index,
-.okul-listesi-secim-paneli .okul-listesi-premium-liste-kart:hover .okul-listesi-liste-index, .okul-listesi-secim-paneli .okul-listesi-liste-index,
-.oxford-secim-paneli .premium-liste-kart:hover .liste-index, .oxford-secim-paneli .liste-index,
-.tokyo-secim-paneli .premium-liste-kart:hover .liste-index, .tokyo-secim-paneli .liste-index {
+:is(.yaz-okullari-sehir-okul-paneli, .canada-secim-paneli, .germany-secim-paneli, .italy-secim-paneli, .london-secim-paneli, .new-york-secim-paneli, .oxford-secim-paneli, .tokyo-secim-paneli) :is(.premium-liste-kart:hover .liste-index, .liste-index),
+.okul-listesi-secim-paneli :is(.okul-listesi-premium-liste-kart:hover .okul-listesi-liste-index, .okul-listesi-liste-index) {
     color: #6b7280 !important;
     transition: none !important;
     transform: none !important;
@@ -5754,8 +5690,7 @@ article.icerik-alani .blog-yazi-ana > h1 + p.intro-metin {
 
 
 /* Ulke karti panelleri: diger icerik bloklari ile ayni yatay hiza */
-article.icerik-alani .dil-okullari-secim-paneli,
-article.icerik-alani .yaz-okullari-secim-paneli {
+article.icerik-alani :is(.dil-okullari-secim-paneli, .yaz-okullari-secim-paneli) {
     box-sizing: border-box;
     padding-left: var(--icerik-yan-gutter);
     padding-right: var(--icerik-yan-gutter);
@@ -6060,23 +5995,33 @@ article.icerik-alani.sayfa-yan-bosluk-15 {
     padding-right: 15px !important;
 }
 
-article.icerik-alani .yaz-okullari-sehir-okul-paneli {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+/* Milano Keşfet: cerceve-kutu ile ayni 1200px + --icerik-yan-gutter; h2 ile kart ayni yatay hatta */
+body.sayfa-yurt-disi-yaz-okullari-italy-milan article.icerik-alani .yaz-okullari-sehir-okul-paneli {
+    max-width: 1200px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--icerik-yan-gutter) !important;
+    padding-right: var(--icerik-yan-gutter) !important;
+    box-sizing: border-box;
 }
 
-article.icerik-alani .yaz-okullari-sehir-okul-paneli .okul-liste-kapsayici {
-    padding: 16px 15px 20px 15px !important;
+body.sayfa-yurt-disi-yaz-okullari-italy-milan article.icerik-alani .yaz-okullari-sehir-okul-paneli .okul-liste-kapsayici {
     width: 100% !important;
     max-width: none !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
+    padding: 16px 0 20px 0 !important;
+    box-sizing: border-box;
 }
 
-@media (max-width: 501px) {
-    article.icerik-alani .yaz-okullari-sehir-okul-paneli .okul-liste-kapsayici {
-        padding: 16px 15px 14px 15px !important;
-    }
+body.sayfa-yurt-disi-yaz-okullari-italy-milan article.icerik-alani .yaz-okullari-sehir-okul-paneli .okul-liste-kapsayici .modern-okul-listesi > .premium-liste-kart {
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 20px !important;
+    box-sizing: border-box !important;
 }
 
 .almanya-avantaj-gorsel-kutu .almanya-avantaj-gorsel {
@@ -7812,14 +7757,6 @@ summary.immerse-tokyo-devam-btn {
     gap: 12px;
 }
 
-.milan-avantaj-kutu .rozet-grid .rozet-ikon {
-    font-size: 13px;
-    font-weight: 700;
-    background: #fce7f3;
-    border: 1px solid #f9a8d4;
-    color: #be185d;
-}
-
 body.sayfa-yurt-disi-yaz-okullari-italy .yaz-okullari-ulke-kart[href*="italy/milan"] .yaz-okullari-ulke-kart-bayrak img {
     object-position: center top;
 }
@@ -9501,33 +9438,6 @@ body.sayfa-kvkk-acik-riza .riza-kutu {
     display: inline-block;
     margin-right: 6px;
     user-select: none;
-}
-
-.london-secim-paneli .okul-liste-kapsayici .modern-okul-listesi,
-.new-york-secim-paneli .okul-liste-kapsayici .modern-okul-listesi,
-.okul-listesi-secim-paneli .okul-listesi-okul-liste-kapsayici .okul-listesi-modern-okul-listesi,
-.tokyo-secim-paneli .okul-liste-kapsayici .modern-okul-listesi,
-.dil-okullari-secim-paneli .okul-liste-kapsayici .modern-okul-listesi,
-.yaz-okullari-sehir-okul-paneli .okul-liste-kapsayici .modern-okul-listesi,
-.yaz-okullari-secim-paneli .okul-liste-kapsayici .modern-okul-listesi {
-    margin: 0 !important;
-    padding: 0 !important;
-    max-width: 100% !important;
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    row-gap: var(--okul-liste-satir-araligi) !important;
-    column-gap: 0 !important;
-}
-.london-secim-paneli .okul-liste-kapsayici .modern-okul-listesi > .premium-liste-kart,
-.new-york-secim-paneli .okul-liste-kapsayici .modern-okul-listesi > .premium-liste-kart,
-.okul-listesi-secim-paneli .okul-listesi-okul-liste-kapsayici .okul-listesi-modern-okul-listesi > .okul-listesi-premium-liste-kart,
-.tokyo-secim-paneli .okul-liste-kapsayici .modern-okul-listesi > .premium-liste-kart,
-.dil-okullari-secim-paneli .okul-liste-kapsayici .modern-okul-listesi > .premium-liste-kart,
-.yaz-okullari-sehir-okul-paneli .okul-liste-kapsayici .modern-okul-listesi > .premium-liste-kart,
-.yaz-okullari-secim-paneli .okul-liste-kapsayici .modern-okul-listesi > .premium-liste-kart {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    margin-bottom: 0 !important;
 }
 
 .cerceve-kutu.londra-neden-kutu .rozet-grid,
@@ -11699,8 +11609,7 @@ body.sayfa-yurt-disi-burs-firsatlari .kutu-liste-sirali span {
     line-height: 1;
 }
 
-.dil-okullari-secim-paneli,
-.yaz-okullari-secim-paneli {
+:is(.dil-okullari-secim-paneli, .yaz-okullari-secim-paneli) {
     max-width: 1200px;
     margin: 25px auto 60px auto;
     padding: 0;
@@ -11712,8 +11621,7 @@ body.sayfa-yurt-disi-burs-firsatlari .kutu-liste-sirali span {
 }
 
 article.icerik-alani > h2 > span,
-.dil-okullari-secim-paneli > h2 > span,
-.yaz-okullari-secim-paneli > h2 > span {
+:is(.dil-okullari-secim-paneli, .yaz-okullari-secim-paneli) > h2 > span {
     display: block;
     width: 100%;
     text-align: center;
@@ -11721,8 +11629,7 @@ article.icerik-alani > h2 > span,
 }
 
 article.icerik-alani > h2 > span:not(.vurgu-satir),
-.dil-okullari-secim-paneli > h2 > span:not(.vurgu-satir),
-.yaz-okullari-secim-paneli > h2 > span:not(.vurgu-satir) {
+:is(.dil-okullari-secim-paneli, .yaz-okullari-secim-paneli) > h2 > span:not(.vurgu-satir) {
     color: #000000;
     margin: 0;
     font-size: var(--sayfa-bolum-baslik-font-size);
@@ -11731,8 +11638,7 @@ article.icerik-alani > h2 > span:not(.vurgu-satir),
 }
 
 article.icerik-alani > h2 > span.vurgu-satir,
-.dil-okullari-secim-paneli > h2 > span.vurgu-satir,
-.yaz-okullari-secim-paneli > h2 > span.vurgu-satir {
+:is(.dil-okullari-secim-paneli, .yaz-okullari-secim-paneli) > h2 > span.vurgu-satir {
     color: #bd0505;
     margin: 0;
     margin-top: 0.35rem;
@@ -11844,8 +11750,7 @@ body.sayfa-yurt-disi-lise article.icerik-alani > h2:has(> .vurgu-satir) {
     margin-bottom: 15px !important;
 }
 
-.dil-okullari-secim-paneli > h2:has(> .vurgu-satir),
-.yaz-okullari-secim-paneli > h2:has(> .vurgu-satir) {
+:is(.dil-okullari-secim-paneli, .yaz-okullari-secim-paneli) > h2:has(> .vurgu-satir) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11863,8 +11768,7 @@ body.sayfa-yurt-disi-lise article.icerik-alani > h2:has(> .vurgu-satir) {
     background: transparent;
 }
 
-.dil-okullari-secim-paneli > h2,
-.yaz-okullari-secim-paneli > h2 {
+:is(.dil-okullari-secim-paneli, .yaz-okullari-secim-paneli) > h2 {
     margin: 0 0 15px 0 !important;
 }
 
@@ -11949,16 +11853,17 @@ body.ana-sayfa .ana-hizmetler-bolumu .dil-okullari-secim-paneli > h2 {
     margin: 100px 0 15px 0 !important;
 }
 
-.dil-okullari-secim-paneli > h2:has(> .vurgu-satir) + .ulke-kart-wrap, .yaz-okullari-secim-paneli > h2:has(> .vurgu-satir) + .ulke-kart-wrap, .yaz-okullari-secim-paneli > h2:has(> .vurgu-satir) + .yaz-okullari-ulke-kart-wrap,
-.dil-okullari-secim-paneli > h2 + .yaz-okullari-ulke-kart-wrap, .yaz-okullari-secim-paneli > h2 + .yaz-okullari-ulke-kart-wrap, .dil-okullari-secim-paneli > h2 + .ulke-kart-wrap, .yaz-okullari-secim-paneli > h2 + .ulke-kart-wrap {
+:is(.dil-okullari-secim-paneli, .yaz-okullari-secim-paneli) > h2:has(> .vurgu-satir) + .ulke-kart-wrap,
+.yaz-okullari-secim-paneli > h2:has(> .vurgu-satir) + .yaz-okullari-ulke-kart-wrap,
+:is(.dil-okullari-secim-paneli, .yaz-okullari-secim-paneli) > h2 + .yaz-okullari-ulke-kart-wrap,
+:is(.dil-okullari-secim-paneli, .yaz-okullari-secim-paneli) > h2 + .ulke-kart-wrap {
     margin-top: 0 !important;
     padding-top: 0 !important;
 }
 
 article.icerik-alani > h2:has(> .vurgu-satir) > span:not(.vurgu-satir),
 .icerik-alani > h2:has(> .vurgu-satir) > span:not(.vurgu-satir),
-.dil-okullari-secim-paneli > h2:has(> .vurgu-satir) > span:not(.vurgu-satir),
-.yaz-okullari-secim-paneli > h2:has(> .vurgu-satir) > span:not(.vurgu-satir) {
+:is(.dil-okullari-secim-paneli, .yaz-okullari-secim-paneli) > h2:has(> .vurgu-satir) > span:not(.vurgu-satir) {
     display: block;
     width: 100%;
     margin: 0;
@@ -11973,8 +11878,7 @@ article.icerik-alani > h2:has(> .vurgu-satir) > span:not(.vurgu-satir),
 
 article.icerik-alani > h2:has(> .vurgu-satir) > .vurgu-satir,
 .icerik-alani > h2:has(> .vurgu-satir) > .vurgu-satir,
-.dil-okullari-secim-paneli > h2:has(> .vurgu-satir) > .vurgu-satir,
-.yaz-okullari-secim-paneli > h2:has(> .vurgu-satir) > .vurgu-satir {
+:is(.dil-okullari-secim-paneli, .yaz-okullari-secim-paneli) > h2:has(> .vurgu-satir) > .vurgu-satir {
     display: block;
     width: 100%;
     margin: 0.35rem 0 0 0 !important;
@@ -11985,7 +11889,7 @@ article.icerik-alani > h2:has(> .vurgu-satir) > .vurgu-satir,
     text-align: center;
 }
 
-.dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap {
+:is(.dil-okullari-secim-paneli, .yaz-okullari-secim-paneli) .yaz-okullari-ulke-kart-wrap {
     margin: 0;
     max-width: none;
     padding: 0;
@@ -11995,36 +11899,13 @@ article.icerik-alani > h2:has(> .vurgu-satir) > .vurgu-satir,
     overflow: visible;
 }
 
-.dil-okullari-secim-paneli .sehir-kare-yigini, .yaz-okullari-secim-paneli .sehir-kare-yigini,
-.yaz-okullari-secim-paneli .sehir-kare-yigini {
+:is(.dil-okullari-secim-paneli, .yaz-okullari-secim-paneli) .sehir-kare-yigini {
     padding: 16px 18px 20px 18px;
 }
 
-.dil-okullari-secim-paneli .okul-liste-kapsayici, .yaz-okullari-secim-paneli .okul-liste-kapsayici,
-.yaz-okullari-secim-paneli .okul-liste-kapsayici {
+:is(.dil-okullari-secim-paneli, .yaz-okullari-secim-paneli) .okul-liste-kapsayici {
     margin: 0;
     padding: 16px 18px 20px 18px;
-}
-
-/* Şehir okul listesi: kartın ekstra sol iç boşluğunu kaldır; liste, h2 altındaki cerceve-kutu içeriğiyle aynı yatay hizada (kutu padding’i 25px). */
-article.icerik-alani .yaz-okullari-sehir-okul-paneli .okul-liste-kapsayici .modern-okul-listesi > .premium-liste-kart {
-    padding-left: 0;
-    padding-right: 16px;
-}
-
-@media (max-width: 501px) {
-    article.icerik-alani .yaz-okullari-sehir-okul-paneli .okul-liste-kapsayici {
-        padding: 16px 12px 14px 20px !important;
-    }
-
-    article.icerik-alani .yaz-okullari-sehir-okul-paneli .okul-liste-kapsayici .modern-okul-listesi > .premium-liste-kart {
-        padding: 0 12px 0 0 !important;
-    }
-
-    .okul-liste-kapsayici .modern-okul-listesi,
-    .okul-listesi-okul-liste-kapsayici .okul-listesi-modern-okul-listesi {
-        row-gap: var(--okul-liste-satir-araligi) !important;
-    }
 }
 
 .dil-okullari-konaklama-kutu .konaklama-icerik h3 {
@@ -12539,10 +12420,7 @@ body.sayfa-yurt-disi-lise .dil-okullari-secim-paneli,
 body[class*='sayfa-yurt-disi-dil-okullari'] .dil-okullari-secim-paneli,
 body.sayfa-yurt-disi-yaz-okullari-uk .yaz-okullari-secim-paneli,
 body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli,
-body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli,
-
-.yaz-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap,
-.dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap {
+body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli {
     padding: 0;
     border: none;
     border-radius: 0;
@@ -12550,8 +12428,7 @@ body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli,
     margin-bottom: 16px;
 }
 
-.yaz-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap,
-.dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap {
+:is(.yaz-okullari-secim-paneli, .dil-okullari-secim-paneli) .yaz-okullari-ulke-kart-wrap {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, var(--ulke-secim-kart-en)));
     justify-content: center;
@@ -13193,10 +13070,6 @@ h3 {
 
 /* Rozet / çerçeve grid: ≤768px tek sütun. Hub ve 992px tablet bloğu 501px altında hâlâ 2 sütun verebildiği için ayrıca alttaki @media (max-width: 501px) bloğuna bakın. */
 @media (max-width: 768px) {
-    article.icerik-alani .yaz-okullari-sehir-okul-paneli .okul-liste-kapsayici .modern-okul-listesi > .premium-liste-kart {
-        padding: 0 15px 0 5px !important;
-    }
-
     .cerceve-kutu .rozet-grid,
     .site-gri-cerceve-kutu .rozet-grid {
         grid-template-columns: 1fr;
@@ -13385,16 +13258,7 @@ body.sayfa-yurt-disi-universite-switzerland-bhms .toronto-simgesel-icerik .rozet
     }
 }
 
-/* Ulke kart panelleri: stabil global hizalama (tasma olmadan) */
-article.icerik-alani .dil-okullari-secim-paneli,
-article.icerik-alani .yaz-okullari-secim-paneli {
-    box-sizing: border-box;
-    padding-left: var(--icerik-yan-gutter);
-    padding-right: var(--icerik-yan-gutter);
-}
-
-article.icerik-alani .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap,
-article.icerik-alani .yaz-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap {
+article.icerik-alani :is(.dil-okullari-secim-paneli, .yaz-okullari-secim-paneli) .yaz-okullari-ulke-kart-wrap {
     padding-left: 0 !important;
     padding-right: 0 !important;
     max-width: min(100%, calc(2 * var(--ulke-secim-kart-en) + 5px));
@@ -13404,13 +13268,11 @@ article.icerik-alani .yaz-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap {
 }
 
 /* Ulke hub panelleri (or. /yurt-disi-dil-okullari/uk/) 2 kart genişliğine sıkışmasın */
-article.icerik-alani .dil-okullari-secim-paneli.ulke-hub-kart-paneli:not(.ulke-hub--satir-1) .yaz-okullari-ulke-kart-wrap,
-article.icerik-alani .yaz-okullari-secim-paneli.ulke-hub-kart-paneli:not(.ulke-hub--satir-1) .yaz-okullari-ulke-kart-wrap {
+article.icerik-alani :is(.dil-okullari-secim-paneli, .yaz-okullari-secim-paneli).ulke-hub-kart-paneli:not(.ulke-hub--satir-1) .yaz-okullari-ulke-kart-wrap {
     max-width: 100%;
 }
 
-article.icerik-alani .dil-okullari-secim-paneli .yaz-programlari-kategori-baslik,
-article.icerik-alani .yaz-okullari-secim-paneli .yaz-programlari-kategori-baslik {
+article.icerik-alani :is(.dil-okullari-secim-paneli, .yaz-okullari-secim-paneli) .yaz-programlari-kategori-baslik {
     width: 100%;
     max-width: none;
     margin-left: 0 !important;
@@ -13420,8 +13282,7 @@ article.icerik-alani .yaz-okullari-secim-paneli .yaz-programlari-kategori-baslik
 }
 
 @media (max-width: 501px) {
-    article.icerik-alani .dil-okullari-secim-paneli,
-    article.icerik-alani .yaz-okullari-secim-paneli {
+    article.icerik-alani :is(.dil-okullari-secim-paneli, .yaz-okullari-secim-paneli) {
         padding-left: var(--icerik-yan-gutter);
         padding-right: var(--icerik-yan-gutter);
     }
@@ -13455,14 +13316,6 @@ body.sayfa-hizmetlerimiz article.icerik-alani > section.hizmetlerimiz-egitim-ala
     }
 }
 
-/* Global final override: h2 alt bosluk toplam 15px */
-article.icerik-alani h2,
-article.icerik-alani h2:has(> .vurgu-satir),
-.icerik-alani h2,
-.icerik-alani h2:has(> .vurgu-satir) {
-    margin-bottom: 15px !important;
-}
-
 article.icerik-alani h2 + *,
 .icerik-alani h2 + * {
     margin-top: 0 !important;
@@ -13470,8 +13323,7 @@ article.icerik-alani h2 + *,
 
 article.icerik-alani h2 > .vurgu-satir,
 .icerik-alani h2 > .vurgu-satir,
-.dil-okullari-secim-paneli > h2 > .vurgu-satir,
-.yaz-okullari-secim-paneli > h2 > .vurgu-satir {
+:is(.dil-okullari-secim-paneli, .yaz-okullari-secim-paneli) > h2 > .vurgu-satir {
     margin-top: 0 !important;
 }
 
@@ -13542,5 +13394,48 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
         height: 140px !important;
         max-width: 140px !important;
         max-height: 140px !important;
+    }
+}
+
+/* Global kesin hizalama: sehir okul listesi paneli, tum sayfalarda cerceve genisligiyle ayni olsun */
+article.icerik-alani .yaz-okullari-sehir-okul-paneli {
+    width: min(100%, 1200px) !important;
+    max-width: 1200px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+article.icerik-alani .yaz-okullari-sehir-okul-paneli .okul-liste-kapsayici {
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 16px 15px 20px 15px !important;
+    box-sizing: border-box !important;
+}
+
+article.icerik-alani .yaz-okullari-sehir-okul-paneli .okul-liste-kapsayici .modern-okul-listesi > .premium-liste-kart {
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 20px !important;
+    box-sizing: border-box !important;
+}
+
+@media (max-width: 501px) {
+    article.icerik-alani .yaz-okullari-sehir-okul-paneli .okul-liste-kapsayici {
+        padding: 16px 15px 14px 15px !important;
+    }
+
+    body.sayfa-yurt-disi-yaz-okullari-italy-milan article.icerik-alani .yaz-okullari-sehir-okul-paneli .okul-liste-kapsayici {
+        padding: 16px 0 14px 0 !important;
+    }
+
+    .okul-liste-kapsayici .modern-okul-listesi,
+    .okul-listesi-okul-liste-kapsayici .okul-listesi-modern-okul-listesi {
+        row-gap: var(--okul-liste-satir-araligi) !important;
     }
 }
