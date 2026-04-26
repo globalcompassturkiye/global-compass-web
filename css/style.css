@@ -598,14 +598,6 @@ body.ana-sayfa .icerik-alani,
         padding-right: 0;
     }
 
-.italy-avantaj-kutu .rozet-grid {
-        grid-template-columns: 1fr;
-    }
-
-.italy-destinasyon-madde {
-        padding-left: 50px;
-    }
-
 .yas-tab-etiket {
         font-size: 12px;
         padding: 7px 14px;
@@ -1457,7 +1449,6 @@ p {
 
 .site-gri-cerceve-kutu .rozet-kart,
 .site-gri-cerceve-kutu .italy-sosyal-madde,
-.site-gri-cerceve-kutu .italy-destinasyon-madde,
 .site-gri-cerceve-kutu .canada-program-sehir-kart {
     background: var(--site-kart-yuzey) !important;
     background-image: none !important;
@@ -1969,77 +1960,11 @@ body.sayfa-yurt-disi-dil-okullari-uk-london .londra-neden-kutu .rozet-grid .roze
     margin: 0 0 6px 0;
 }
 
-.italy-avantaj-kutu .rozet-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px;
-    margin-top: 22px;
-}
-
 .yas-tab-icerik p {
     font-size: 14.5px;
     color: #444;
     margin: 0;
     line-height: 1.7;
-}
-
-.italy-destinasyon-kutu .italy-destinasyon-list {
-    list-style: none;
-    margin: 20px 0 0 0;
-    padding: 0;
-    counter-reset: italy-dest;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-}
-
-.italy-destinasyon-madde {
-    position: relative;
-    padding: 14px 16px 12px 56px;
-    background: #ffffff !important;
-    background-image: none !important;
-    border: 0 solid transparent;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
-}
-
-.italy-destinasyon-madde::before {
-    counter-increment: italy-dest;
-    content: counter(italy-dest);
-    position: absolute;
-    left: 14px;
-    top: 18px;
-    width: 28px;
-    height: 28px;
-    background: #000080;
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    font-size: 14px;
-    font-weight: 700;
-}
-
-.italy-destinasyon-madde h3 {
-    margin: 0 0 4px 0;
-    font-size: var(--h3-font-size);
-    font-weight: 700;
-}
-
-.italy-destinasyon-etiket {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 12px;
-    color: #6b7280;
-    margin-bottom: 6px;
-}
-
-.italy-destinasyon-etiket span {
-    padding: 2px 8px;
-    background: #eef2ff;
-    color: #4b5563;
 }
 
 .italy-program-kutu .rozet-grid,
@@ -2964,6 +2889,25 @@ article.icerik-alani .icerik-vurgu-kutu p {
     line-height: 1.7;
 }
 
+.rozet-kisa-metin {
+    grid-column: 1 / -1;
+    justify-self: start;
+    display: inline-block;
+    width: fit-content;
+    max-width: 100%;
+    font-size: 14px;
+    color: #334155;
+    margin: 4px 0 0 0;
+    line-height: 1.5;
+    background: #e8f0fe;
+    border-radius: 8px;
+    padding: 6px 10px;
+}
+
+.rozet-kisa-metin strong {
+    color: #0f172a;
+}
+
 .yaz-okullari-program-kutu .rozet-kart, .icerik-kutusu .rozet-kart, .lise-degisim-sol-kalin-liste .rozet-kart,
 .immerse-tokyo-giris-kategori-grid .rozet-kart,
 .immerse-tokyo-branches-kutu .rozet-kart {
@@ -2991,6 +2935,18 @@ article.icerik-alani .icerik-vurgu-kutu p {
 .yaz-okullari-program-kutu .rozet-kart > .kutu-liste, .icerik-kutusu .rozet-kart > .kutu-liste, .lise-degisim-sol-kalin-liste .rozet-kart > .kutu-liste {
     grid-column: 1 / -1;
     grid-row: 2;
+}
+
+.yaz-okullari-program-kutu .rozet-kisa-metin, .icerik-kutusu .rozet-kisa-metin, .lise-degisim-sol-kalin-liste .rozet-kisa-metin {
+    grid-column: 1 / -1;
+    grid-row: 2;
+}
+
+.icerik-kutusu .rozet-kart > .rozet-kisa-metin + .rozet-metin,
+.yaz-okullari-program-kutu .rozet-kart > .rozet-kisa-metin + .rozet-metin,
+.lise-degisim-sol-kalin-liste .rozet-kart > .rozet-kisa-metin + .rozet-metin {
+    grid-row: 3;
+    margin-top: 6px;
 }
 
 /* Kartta hem açıklama hem liste varsa üst üste binmeyi önle */
@@ -4958,6 +4914,7 @@ body.ana-sayfa .karsilama-icerik > h1.ana-marka-baslik {
 
 body.ana-sayfa .karsilama-icerik > p.ana-sayfa-slogan {
     margin: var(--ana-hero-metin-araligi) 0 0 !important;
+    text-align: center !important;
 }
 
 body.ana-sayfa .ana-karsilama-alani .guven-rozetleri {
@@ -7855,7 +7812,6 @@ summary.immerse-tokyo-devam-btn {
     gap: 12px;
 }
 
-.italy-avantaj-kutu .rozet-grid .rozet-ikon,
 .milan-avantaj-kutu .rozet-grid .rozet-ikon {
     font-size: 13px;
     font-weight: 700;
@@ -13199,7 +13155,6 @@ h3 {
     margin: 0;
 }
 
-.italy-destinasyon-madde p,
 .italy-program-kutu .rozet-kart p,
 .italy-sosyal-icerik p,
 .frankfurt-avantaj-kart p {
