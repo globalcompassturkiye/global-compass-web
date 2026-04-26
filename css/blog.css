@@ -421,6 +421,11 @@ article.blog-kategori-sayfa .blog-kart-gorsel-link {
         justify-content: space-between;
         align-items: start;
     }
+
+    body.sayfa-hizmetlerimiz .blog-yazi-layout--yan-panel {
+        grid-template-columns: minmax(0, 1fr) 260px;
+        gap: 1rem;
+    }
 }
 
 .blog-yazi-ana {
@@ -429,6 +434,10 @@ article.blog-kategori-sayfa .blog-kart-gorsel-link {
 
 .blog-yazi-layout--yan-panel .blog-yazi-ana {
     max-width: 850px;
+}
+
+body.sayfa-hizmetlerimiz .blog-yazi-layout--yan-panel .blog-yazi-ana {
+    max-width: none;
 }
 
 .blog-yazi-kapak-gorsel {

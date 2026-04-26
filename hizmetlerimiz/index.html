@@ -23,13 +23,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css?v=20260417h3">
+    <link rel="stylesheet" href="/css/style.css?v=20260427h1">
+    <link rel="stylesheet" href="/css/blog.css?v=20260427h1">
     <link rel="stylesheet" href="/css/site-ustmenu.css">
     <link rel="stylesheet" href="/css/site-footer.css">
     <link rel="stylesheet" href="/css/site-breadcrumb.css">
     <link rel="stylesheet" href="/css/site-iletisim-form.css">
 </head>
-<body class="sayfa-hizmetlerimiz">
+<body class="sayfa-hizmetlerimiz blog-yazi-sayfa-mobil-ux">
     <div class="sabit-ust-alan">
         <div class="ust-serit">
             <div class="ust-serit-kapsayici">
@@ -165,7 +166,7 @@
     </div>
 
     <main id="icerik">
-    <article class="icerik-alani hizmetlerimiz-sayfa">
+    <article class="icerik-alani hizmetlerimiz-sayfa blog-yazi-detay">
         <nav class="site-haritasi-yolu" aria-label="Sayfa konumu">
             <div class="breadcrumb-kutu">
                 <a href="/" class="ana-sayfa-ikon">
@@ -176,11 +177,28 @@
             </div>
         </nav>
 
-        <h1>Hizmetlerimiz<br>
+        <div class="blog-yazi-tek-sutun blog-yazi-tek-sutun--tam">
+        <div class="blog-yazi-layout blog-yazi-layout--yan-panel">
+        <div class="blog-yazi-ana">
+
+        <h1 id="hizmetlerimiz-giris" class="sayfa-ana-baslik">Hizmetlerimiz<br>
             <span class="vurgu-renk">Akademik Yolculuğunuzun Her Aşamasında Yanınızdayız</span>
         </h1>
 
         <p class="giris-metin">Global Compass olarak, akademik yolculuğunuzun her aşamasında profesyonel rehberliğimizle yanınızdayız. 10 yılı aşkın tecrübemiz ve dünya çapındaki prestijli partner okullarımızla, geleceğinizi şekillendirecek en doğru eğitim stratejisini size özel çözümlerle birlikte belirliyoruz.</p>
+
+        <div id="blog-mobil-icindekiler-hedef" class="blog-mobil-icindekiler-wrap">
+            <nav class="blog-mobil-icindekiler-duz" aria-labelledby="hizmetlerimiz-mobil-icindekiler-baslik">
+                <p class="blog-mobil-icindekiler-duz-baslik" id="hizmetlerimiz-mobil-icindekiler-baslik">İçindekiler</p>
+                <ul class="blog-icindekiler-liste blog-icindekiler-liste--mobil">
+                    <li><a href="#hizmetlerimiz-giris">Giriş</a></li>
+                    <li><a href="#dort-adim">4 adımda planlama</a></li>
+                    <li><a href="#egitim-alanlari">Eğitim programları</a></li>
+                    <li><a href="#bilgi-istek">Bilgi istek formu</a></li>
+                    <li><a href="#hizmetlerimiz-iletisim-karti">İletişim</a></li>
+                </ul>
+            </nav>
+        </div>
 
         <section class="hizmet-adimlar-section" id="dort-adim">
             <h2 class="metin-h2">4 Adımda Geleceğinizi Planlayın</h2>
@@ -323,6 +341,34 @@
             </form>
         </div>
         </section>
+
+        <div class="okul-liste-kapsayici" id="hizmetlerimiz-iletisim-karti">
+            <h2 class="metin-h2">İletişim</h2>
+            <section class="alt-yonlendirme-alani">
+                <div class="yonlendirme-karti">
+                    <p>Program seçimi, başvuru süreci ve danışmanlık detayları için ekibimizle doğrudan iletişime geçebilirsiniz.</p>
+                    <a href="/iletisim/" class="kart-link">İletişim Sayfasına Git →</a>
+                </div>
+            </section>
+        </div>
+
+        </div>
+
+        <aside class="blog-yan-panel" aria-label="İçindekiler">
+            <nav class="blog-icindekiler-kutu" aria-labelledby="hizmetlerimiz-masaustu-icindekiler-baslik">
+                <p class="blog-icindekiler-baslik" id="hizmetlerimiz-masaustu-icindekiler-baslik">İçindekiler</p>
+                <ul class="blog-icindekiler-liste">
+                    <li><a href="#hizmetlerimiz-giris">Giriş</a></li>
+                    <li><a href="#dort-adim">4 adımda planlama</a></li>
+                    <li><a href="#egitim-alanlari">Eğitim programları</a></li>
+                    <li><a href="#bilgi-istek">Bilgi istek formu</a></li>
+                    <li><a href="#hizmetlerimiz-iletisim-karti">İletişim</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        </div>
+        </div>
 
     </article>
     </main>
