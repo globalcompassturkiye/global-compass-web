@@ -57,3 +57,24 @@ Faz 3 tamamlandiktan sonra:
 
 - `style.css` icinde kalan buyuk tekrar bloklarinin birlestirilmesi (ayri PR/dalga)
 - Kullanilmayan CSS envanterinin genisletilmesi (`reports/stage1-unused-candidates.txt` ile)
+
+## 5) Faz 3 devam — kod tabani dogrulamalari (2026-04-26)
+
+### Kings `:has(> .rozet-kart > .rozet-kart-icerik-blok)` kapsami
+
+`css/style.css` icindeki ilgili kurallar yalnizca asagidaki koklar altinda:
+
+- `.sayfa-kings-education ...`
+- `body.sayfa-kings-education-los-angeles ...`
+
+Bu sayede Kings disindaki sayfalardaki `rozet-grid.icerik-kutusu-grid.yatay-2` bloklari etkilenmez.
+
+`:has(...)` kosulu, gridin **dogrudan cocugu** olan `article.rozet-kart` icinde yine **dogrudan cocuk** `div.rozet-kart-icerik-blok` bulunmasini ister. Ornek kontroller:
+
+- Kurs / program ozeti bloklari: `article.rozet-kart` > `div.rozet-kart-icerik-blok` — kural **tetiklenir** (beklenen).
+- Konaklama rozetleri (`rozet-ikon` + baslik + liste): `rozet-kart-icerik-blok` yok — kural **tetiklenmez** (ornek: `yurt-disi-dil-okullari/uk/bournemouth/kings-education/index.html` konaklama gridi).
+- `kings-la-program-detay-grid` program detaylari: kartlar `kutu-liste` / ozel tam genis kart; `rozet-kart-icerik-blok` yok — kural **tetiklenmez**; bu grid ayri olarak `.kings-la-program-detay-grid` ile hedeflenmeye devam eder.
+
+### Toronto konaklama miras sinifi
+
+`toronto-konaklama-yurt-rozet-grid` ifadesi guncel `css/style.css` dosyasinda **bulunmuyor** (tamamen kaldirilmis). Eski rapor satirlari (`reports/stage1-*.txt`) gecmise ait envanter olabilir; temizlik kararinda `style.css` ve HTML esas alinmalidir.

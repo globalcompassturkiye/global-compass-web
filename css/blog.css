@@ -1044,6 +1044,23 @@ article.blog-kategori-sayfa .blog-kart-gorsel-link {
     .blog-yazi-sayfa-mobil-ux .blog-mobil-cta-bar-metin {
         line-height: 1.3;
     }
+
+    /* Global kural: icindekiler alt satira dustugunde giris metninin hemen altinda gorunur */
+    .blog-yazi-layout--yan-panel .blog-yan-panel {
+        display: none !important;
+    }
+
+    .blog-yazi-layout--yan-panel .blog-yazi-ana {
+        max-width: none;
+        width: 100%;
+    }
+
+    .blog-yazi-layout--yan-panel .blog-yazi-ana .blog-mobil-icindekiler-wrap {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0 0 50px;
+    }
 }
 
 /* ≤501px: mobil içindekiler — çerçeveli kutu (.blog-mobil-icindekiler-duz) üstünde/altında 50px (wrap altı yalnızca blog-yazi-sayfa-mobil-ux) */

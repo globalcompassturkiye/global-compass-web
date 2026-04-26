@@ -30,8 +30,9 @@
     <link rel="stylesheet" href="/css/site-iletisim-form.css">
     <link rel="stylesheet" href="/css/site-yonlendirme-kart.css">
     <link rel="stylesheet" href="/css/sss.css">
+    <link rel="stylesheet" href="/css/blog.css">
 </head>
-<body class="sayfa-yurt-disi-dil-okullari-uk-oxford">
+<body class="sayfa-yurt-disi-dil-okullari-uk-oxford blog-yazi-sayfa-mobil-ux">
     <div class="sabit-ust-alan">
         <div class="ust-serit">
             <div class="ust-serit-kapsayici">
@@ -183,16 +184,36 @@
             </div>
         </nav>
 
-        <h1>Oxford Dil Okulları:<br>
+        <div class="blog-yazi-tek-sutun blog-yazi-tek-sutun--tam">
+        <div class="blog-yazi-layout blog-yazi-layout--yan-panel">
+        <div class="blog-yazi-ana">
+
+        <h1 id="oxford-giris">Oxford Dil Okulları:<br>
             <span class="vurgu-renk">İngiltere’de Akademik İngilizce Eğitimi</span>
         </h1>
 
-        <div class="oxford-dil-giris">
+        <div id="oxford-giris-metni" class="oxford-dil-giris">
             <p>Oxford dil okulları, öğrencilere akademik derinliği olan, disiplinli bir yaşayarak öğrenme deneyimi sunar. <strong>Global Compass</strong> olarak; dünyanın en köklü akademik mirasına sahip bu şehirde, prestijli dil okullarıyla sizi geleceğe hazırlıyoruz.</p>
             <p>Oxford’da dil eğitimi almak, sadece bir kursa gitmek değil, dünyanın en saygın akademik atmosferini solumaktır. Programlar genellikle sabahları yoğun Genel İngilizce veya <strong>IELTS ve TOEFL</strong> hazırlık dersleri ile başlar; tarihi kolejlerin ve kütüphanelerin arasında küresel bir öğrenci profiliyle buluşursunuz.</p>
         </div>
 
-        <div class="yaz-okullari-secim-paneli ulke-secim-paneli-ortak yaz-okullari-sehir-okul-paneli">
+        <div class="blog-mobil-icindekiler-wrap">
+            <nav class="blog-mobil-icindekiler-duz" aria-labelledby="oxford-mobil-icindekiler-baslik">
+                <p class="blog-mobil-icindekiler-duz-baslik" id="oxford-mobil-icindekiler-baslik">İçindekiler</p>
+                <ul class="blog-icindekiler-liste blog-icindekiler-liste--mobil">
+                    <li><a href="#oxford-giris">Giriş</a></li>
+                    <li><a href="#oxford-giris-metni">Giriş metni</a></li>
+                    <li><a href="#oxford-okul-secim">Oxford dil okullarını keşfedin</a></li>
+                    <li><a href="#oxford-egitim-deneyimi">Eğitim deneyimi</a></li>
+                    <li><a href="#oxford-neden">Neden Oxford?</a></li>
+                    <li><a href="#oxford-sss">Sıkça sorulan sorular</a></li>
+                    <li><a href="#yurt-disi-dil-okullari-uk-oxford-bilgi-form-baslik">Bilgi istek formu</a></li>
+                    <li><a href="#oxford-yaz-okulu-yonlendirme">Yurt dışı yaz okulları</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div id="oxford-okul-secim" class="yaz-okullari-secim-paneli ulke-secim-paneli-ortak yaz-okullari-sehir-okul-paneli">
             <h2>Oxford Dil Okullarını Keşfedin<span class="vurgu-satir">Hangi Dil Okulunu Tercih Edersiniz?</span></h2>
             <div class="okul-liste-kapsayici">
                 <section class="modern-okul-listesi">
@@ -215,7 +236,7 @@
             </div>
         </div>
 
-        <div class="cerceve-kutu icerik-kutusu baslik-iki-satir oxford-egitim-kutu">
+        <div id="oxford-egitim-deneyimi" class="cerceve-kutu icerik-kutusu baslik-iki-satir oxford-egitim-kutu">
             <h2>Oxford'da Eğitim Deneyimi:<br><span class="vurgu-satir">Programda Sizi Neler Bekliyor?</span></h2>
 
             <div class="rozet-grid icerik-kutusu-grid yatay-2">
@@ -242,7 +263,7 @@
             </div>
         </div>
 
-        <div class="cerceve-kutu icerik-kutusu oxford-neden-kutu">
+        <div id="oxford-neden" class="cerceve-kutu icerik-kutusu oxford-neden-kutu">
             <h2>Neden Oxford Dil Okullarını Tercih Etmelisiniz?</h2>
 
             <div class="rozet-grid icerik-kutusu-grid yatay-2 son-kart-ortala">
@@ -274,7 +295,7 @@
             </div>
         </div>
 
-        <div class="cerceve-kutu">
+        <div id="oxford-sss" class="cerceve-kutu">
             <h2>Oxford Dil Okulları Hakkında<br>
                 <span class="vurgu-satir">Sıkça Sorulan Sorular (SSS)</span></h2>
             
@@ -367,7 +388,7 @@
             </div>
         </section>
 
-        <div class="okul-liste-kapsayici yaz-okullari-sehir-yonlendirme-kapsayici">
+        <div id="oxford-yaz-okulu-yonlendirme" class="okul-liste-kapsayici yaz-okullari-sehir-yonlendirme-kapsayici">
             <h2>Yurt Dışı Yaz Okulları</h2>
             <section class="alt-yonlendirme-alani">
                 <div class="yonlendirme-karti">
@@ -375,6 +396,25 @@
                     <a href="/yurt-disi-yaz-okullari/" class="kart-link">Yurt Dışı Yaz Okullarını Keşfet →</a>
                 </div>
             </section>
+        </div>
+
+        </div>
+        <aside class="blog-yan-panel" aria-label="İçindekiler">
+            <nav class="blog-icindekiler-kutu" aria-labelledby="oxford-masaustu-icindekiler-baslik">
+                <p class="blog-icindekiler-baslik" id="oxford-masaustu-icindekiler-baslik">İçindekiler</p>
+                <ul class="blog-icindekiler-liste">
+                    <li><a href="#oxford-giris">Giriş</a></li>
+                    <li><a href="#oxford-giris-metni">Giriş metni</a></li>
+                    <li><a href="#oxford-okul-secim">Oxford dil okullarını keşfedin</a></li>
+                    <li><a href="#oxford-egitim-deneyimi">Eğitim deneyimi</a></li>
+                    <li><a href="#oxford-neden">Neden Oxford?</a></li>
+                    <li><a href="#oxford-sss">Sıkça sorulan sorular</a></li>
+                    <li><a href="#yurt-disi-dil-okullari-uk-oxford-bilgi-form-baslik">Bilgi istek formu</a></li>
+                    <li><a href="#oxford-yaz-okulu-yonlendirme">Yurt dışı yaz okulları</a></li>
+                </ul>
+            </nav>
+        </aside>
+        </div>
         </div>
 
     </article>

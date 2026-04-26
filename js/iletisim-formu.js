@@ -1,7 +1,10 @@
 (function () {
   'use strict';
-  // Use same-origin proxy route to avoid CORS/TLS issues in browsers.
-  var ENDPOINT = '/api/paytr/iletisim';
+  // First try same-origin proxy, then direct worker fallback.
+  var ENDPOINTS = [
+    '/api/paytr/iletisim',
+    'https://global-compass-paytr.canmuratsubat.workers.dev/iletisim'
+  ];
 
   function messageForValidity(el) {
     var v = el.validity;
@@ -222,13 +225,15 @@
     var mesaj = valField(form, 'mesaj');
     var hangi = valField(form, 'hangi_program');
     var h1 = pageH1Text();
-    var on = '';
-    if (hangi) {
-      on = '[Hangi program] ' + hangi + '\n\n';
+    var lines = [];
+    if (h1) lines.push('Sayfa: ' + h1);
+    if (hangi) lines.push('Hangi program: ' + hangi);
+    if (mesaj) {
+      lines.push('');
+      lines.push('Mesaj:');
+      lines.push(mesaj);
     }
-    if (!h1) return on + mesaj;
-    if (!mesaj) return on + '[Sayfa H1] ' + h1;
-    return on + '[Sayfa H1] ' + h1 + '\n\n' + mesaj;
+    return lines.join('\n').trim();
   }
 
   function bind() {
@@ -280,24 +285,7 @@
         mesaj: messageWithPageContext(form),
         h1: pageH1Text()
       };
-      fetch(ENDPOINT, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      })
-        .then(function (res) {
-          if (!res.ok) {
-            return res
-              .text()
-              .then(function (t) {
-                throw new Error(t || 'Hata');
-              })
-              .catch(function () {
-                throw new Error('Hata');
-              });
-          }
-          return res;
-        })
+      postWithFallback(payload)
         .then(function () {
           form.reset();
           clearFormErrors(form);
@@ -318,6 +306,32 @@
             }
           );
         });
+    });
+  }
+
+  function postTo(url, payload) {
+    return fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    }).then(function (res) {
+      if (!res.ok) {
+        return res
+          .text()
+          .then(function (t) {
+            throw new Error(t || 'Hata');
+          })
+          .catch(function () {
+            throw new Error('Hata');
+          });
+      }
+      return res;
+    });
+  }
+
+  function postWithFallback(payload) {
+    return postTo(ENDPOINTS[0], payload).catch(function () {
+      return postTo(ENDPOINTS[1], payload);
     });
   }
 

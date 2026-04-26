@@ -121,7 +121,7 @@ Koddan tamamen silinen (HTML'de kullanimi olmayan) miras seciciler:
 
 - `milan-avantaj-kart` (ve turevleri)
 - `italy-avantaj-kart` (ve turevleri)
-- `toronto-konaklama-yurt-rozet-grid` (yalniz CSS'te kalan secici)
+- `toronto-konaklama-yurt-rozet-grid` (miras; guncel `style.css`'ten de kaldirildi)
 - `oxford-egitim-rozet-ikon` (yalniz CSS'te kalan secici)
 
 Ek not:
