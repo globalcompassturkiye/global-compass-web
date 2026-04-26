@@ -6,7 +6,7 @@
     SİTE HARİTASI (MODERN ETİKET TASARIMI)
     Tüm Cihazlar İçin Ortak & Responsive
    ========================================= */
-/* Site haritası: breadcrumb chip metni ≤500px 11px; 501px–1920px arası 13px→14px ölçekli */
+/* Site haritası: breadcrumb chip metni tum breakpointlerde 13px */
 .site-haritasi-yolu {
     width: 100%;
     background-color: transparent;
@@ -71,20 +71,27 @@
     border-radius: 5px;
 }
 
-/* ≤500px: kompakt chip metni (501px+ ölçek ayrı) */
+/* Tum breakpointlerde sabit 13px */
+ .breadcrumb-kutu a:not(.ana-sayfa-ikon),
+ .breadcrumb-kutu .su-anki-sayfa,
+ .breadcrumb-kutu a.ana-sayfa-ikon {
+    font-size: 13px;
+}
+
+/* ≤500px: sabit 13px */
 @media (max-width: 500px) {
     .breadcrumb-kutu a:not(.ana-sayfa-ikon),
     .breadcrumb-kutu .su-anki-sayfa {
-        font-size: 11px;
+        font-size: 13px;
     }
 }
 
-/* 501px–1920px: 13px → 14px doğrusal (ekran 1920px’de 14px); clamp üst sınır >1920’de de 14px */
+/* 501px+: sabit 13px */
 @media (min-width: 501px) {
     .breadcrumb-kutu a:not(.ana-sayfa-ikon),
     .breadcrumb-kutu .su-anki-sayfa,
     .breadcrumb-kutu a.ana-sayfa-ikon {
-        font-size: clamp(13px, calc(13px + (100vw - 501px) * 1 / 1419), 14px);
+        font-size: 13px;
     }
 }
 

@@ -2705,6 +2705,24 @@ body.sayfa-kings-education-boston .kings-bos-konaklama-bilgi-iskelet.kings-la-ko
     overflow: hidden;
 }
 
+.ana-gorsel {
+    width: 100%;
+    max-width: 1200px;
+    margin: 25px auto 35px;
+    padding-left: var(--icerik-yan-gutter);
+    padding-right: var(--icerik-yan-gutter);
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.ana-gorsel img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    border-radius: 15px 15px 50px 15px;
+}
+
 .vurgulu-incele-btn {
     display: flex;
     align-items: center;
@@ -2867,19 +2885,33 @@ article.icerik-alani .icerik-vurgu-kutu p {
 .kart-h2 {
     text-align: center;
     color: #111;
+    font-size: 19px !important;
+    line-height: 1.35 !important;
 }
 
 .kart-h2 .vurgu-satir {
     color: #c62828;
+    font-size: 19px !important;
+    line-height: 1.35 !important;
 }
 
 .metin-h2 {
     text-align: left;
     color: #111;
+    font-size: 19px !important;
+    line-height: 1.35 !important;
 }
 
 .metin-h2 .vurgu-satir {
     color: #c62828;
+    font-size: 19px !important;
+    line-height: 1.35 !important;
+}
+
+.kart-h2 > span:not(.vurgu-satir),
+.metin-h2 > span:not(.vurgu-satir) {
+    font-size: 19px !important;
+    line-height: 1.35 !important;
 }
 
 .h2-altinda-metin {
@@ -2887,6 +2919,14 @@ article.icerik-alani .icerik-vurgu-kutu p {
 }
 
 .giris-metin {
+    display: block;
+    width: 100%;
+    max-width: 1100px !important;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: calc(var(--icerik-yan-gutter) + 10px);
+    padding-right: calc(var(--icerik-yan-gutter) + 10px);
+    box-sizing: border-box;
     text-align: justify;
     margin-top: 25px;
     margin-bottom: 50px;
@@ -2898,6 +2938,14 @@ article.icerik-alani .icerik-vurgu-kutu p {
 
 .giris-metin + .giris-metin {
     margin-top: 1em;
+}
+
+@media (max-width: 1200px) {
+    .giris-metin {
+        max-width: none !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
 }
 
 .ortak-kart-baslik {
@@ -5713,11 +5761,12 @@ article.icerik-alani .blog-yazi-ana > .sportech-academy-giris-metni:not(.cerceve
 article.icerik-alani .blog-yazi-ana > .alpadia-tanitim-giris:not(.cerceve-kutu):not(.site-gri-cerceve-kutu),
 article.icerik-alani .blog-yazi-ana > .sea-giris-metni:not(.cerceve-kutu):not(.site-gri-cerceve-kutu),
 article.icerik-alani .blog-yazi-ana > .chantemerle-giris-metni:not(.cerceve-kutu):not(.site-gri-cerceve-kutu) {
-    max-width: 1200px;
+    width: 100%;
+    max-width: 1000px !important;
     margin-left: auto;
     margin-right: auto;
-    padding-left: var(--icerik-yan-gutter);
-    padding-right: var(--icerik-yan-gutter);
+    padding-left: calc(var(--icerik-yan-gutter) + 20px);
+    padding-right: calc(var(--icerik-yan-gutter) + 20px);
     box-sizing: border-box;
 }
 
@@ -5731,6 +5780,21 @@ article.icerik-alani .blog-yazi-ana > h1 + p.intro-metin {
     padding-right: var(--icerik-yan-gutter);
     box-sizing: border-box;
 }
+
+@media (max-width: 1200px) {
+    article.icerik-alani .blog-yazi-ana > div[id$="-giris-metni"]:not(.cerceve-kutu):not(.site-gri-cerceve-kutu),
+    article.icerik-alani .blog-yazi-ana > .giris-metin:not(.cerceve-kutu):not(.site-gri-cerceve-kutu),
+    article.icerik-alani .blog-yazi-ana > .kings-giris-metni:not(.cerceve-kutu):not(.site-gri-cerceve-kutu),
+    article.icerik-alani .blog-yazi-ana > .sportech-academy-giris-metni:not(.cerceve-kutu):not(.site-gri-cerceve-kutu),
+    article.icerik-alani .blog-yazi-ana > .alpadia-tanitim-giris:not(.cerceve-kutu):not(.site-gri-cerceve-kutu),
+    article.icerik-alani .blog-yazi-ana > .sea-giris-metni:not(.cerceve-kutu):not(.site-gri-cerceve-kutu),
+    article.icerik-alani .blog-yazi-ana > .chantemerle-giris-metni:not(.cerceve-kutu):not(.site-gri-cerceve-kutu) {
+        max-width: none !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
 
 /* Ulke karti panelleri: diger icerik bloklari ile ayni yatay hiza */
 article.icerik-alani .dil-okullari-secim-paneli,
@@ -8919,53 +8983,15 @@ body.sayfa-kings-education-los-angeles .blog-yazi-ana .cerceve-kutu > h2 {
     margin: 16px 0 20px 0;
 }
 
-.sayfa-kings-education .kings-la-ozet-kutu-acik {
-    background: #f8f9fa;
-    padding: 12px;
-    border: 0 solid transparent;
-}
-
-.sayfa-kings-education .kings-la-ozet-kutu-mavi {
+.sayfa-kings-education .kings-la-ozet-kutu-acik,
+.sayfa-kings-education .ozet-kutu-mavi {
     background: #e8f0fe;
     padding: 12px;
     border: 0 solid transparent;
-}
-
-.sayfa-kings-education .kings-la-ozet-kutu-pembe {
-    background: #fff4f4;
-    padding: 12px;
-    border: 0 solid transparent;
-}
-
-.sayfa-kings-education .kings-la-ozet-kutu-altin {
-    background: #fffdf0;
-    padding: 12px;
-    border: 0 solid transparent;
-}
-
-.sayfa-kings-education .kings-la-ozet-kutu-turkuaz {
-    background: #e0f7fa;
-    padding: 12px;
-    border: 0 solid transparent;
-}
-
-.sayfa-kings-education .kings-la-ozet-kutu-acik,
-.sayfa-kings-education .kings-la-ozet-kutu-mavi,
-.sayfa-kings-education .kings-la-ozet-kutu-pembe,
-.sayfa-kings-education .kings-la-ozet-kutu-altin,
-.sayfa-kings-education .kings-la-ozet-kutu-turkuaz {
     border-radius: 5px;
 }
 
-.sayfa-kings-education .kings-la-etiket-ust {
-    display: block;
-    font-size: 11px;
-    color: #666;
-    text-transform: uppercase;
-    margin-bottom: 4px;
-}
-
-.sayfa-kings-education .kings-la-etiket-ust-koyu {
+.sayfa-kings-education .etiket-ust-koyu {
     display: block;
     font-size: 11px;
     color: #1a3a6e;
@@ -8973,40 +8999,15 @@ body.sayfa-kings-education-los-angeles .blog-yazi-ana .cerceve-kutu > h2 {
     margin-bottom: 4px;
 }
 
-.sayfa-kings-education .kings-la-etiket-altin {
-    display: block;
-    font-size: 11px;
-    color: #8a6d3b;
-    text-transform: uppercase;
-    margin-bottom: 4px;
-}
-
-.sayfa-kings-education .kings-la-metin-lacivert {
-    color: #000080;
+.sayfa-kings-education .metin-lacivert,
+.sayfa-kings-education strong.metin-lacivert,
+.sayfa-kings-education .ozet-kutu-mavi .metin-lacivert {
+    color: #000080 !important;
     font-size: 15px;
 }
 
-.sayfa-kings-education .kings-la-metin-kirmizi {
-    color: #bd0505;
-    font-size: 15px;
-}
-
-.sayfa-kings-education .kings-la-metin-siyah {
-    color: #1a1a1a;
-    font-size: 15px;
-}
-
-.sayfa-kings-education .kings-la-metin-turkuaz {
-    color: #00838f;
-    font-size: 15px;
-}
-
-.sayfa-kings-education .kings-la-etiket-turkuaz {
-    display: block;
-    font-size: 11px;
-    color: #006064;
-    text-transform: uppercase;
-    margin-bottom: 4px;
+.sayfa-kings-education .etiket-lacivert {
+    color: #000080 !important;
 }
 
 .sayfa-kings-education .kings-la-yan-panel-kesikli {
@@ -9113,8 +9114,8 @@ body.sayfa-kings-education-new-york .kutu-liste.kings-la-film-icerik-listesi li:
     position: absolute;
     left: 0;
     top: 0.4em;
-    color: #e8d48a;
-    font-size: 0.55rem;
+    color: #111;
+    font-size: 0.95rem;
     line-height: 1;
 }
 
@@ -9518,7 +9519,7 @@ body.sayfa-kings-education-new-york .kings-la-bolum-discovery {
 }
 
 body.sayfa-kings-education-new-york .kings-la-dahil-bolum {
-    border-top: 1px solid #d1d1d1;
+    border-top: none;
 }
 
 body.sayfa-kvkk-acik-riza .riza-onay-satiri {
