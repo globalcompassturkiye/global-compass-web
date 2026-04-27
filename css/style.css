@@ -92,6 +92,81 @@ html {
     }
 }
 
+@media (max-width: 900px) {
+    body.sayfa-hizmetlerimiz
+        .hizmetlerimiz-egitim-alanlari
+        .dil-okullari-secim-paneli
+        :is(.yaz-okullari-ulke-kart-wrap, .rozet-kart-grid) {
+        grid-template-columns: 1fr !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        justify-content: stretch !important;
+    }
+
+    body.sayfa-hizmetlerimiz
+        .hizmetlerimiz-egitim-alanlari
+        .dil-okullari-secim-paneli
+        :is(.yaz-okullari-ulke-kart-wrap, .rozet-kart-grid)
+        > :is(.yaz-okullari-ulke-kart, .rozet-kart-link) {
+        width: 100% !important;
+        max-width: none !important;
+        min-width: 0 !important;
+        justify-self: stretch !important;
+        border-radius: 15px !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    body.sayfa-hizmetlerimiz
+        .hizmetlerimiz-egitim-alanlari
+        .dil-okullari-secim-paneli
+        :is(.yaz-okullari-ulke-kart-wrap, .rozet-kart-grid) {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+
+@media (max-width: 501px) {
+    body.sayfa-hizmetlerimiz
+        article.icerik-alani
+        > section.hizmetlerimiz-egitim-alanlari.icerik-alani.ana-hizmetler-bolumu {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    body.sayfa-hizmetlerimiz
+        .hizmetlerimiz-egitim-alanlari
+        .dil-okullari-secim-paneli {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    body.sayfa-hizmetlerimiz
+        .hizmetlerimiz-egitim-alanlari
+        .dil-okullari-secim-paneli
+        :is(.yaz-okullari-ulke-kart-wrap, .rozet-kart-grid) {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    body.sayfa-hizmetlerimiz
+        .hizmetlerimiz-egitim-alanlari
+        .dil-okullari-secim-paneli
+        :is(.yaz-okullari-ulke-kart-wrap, .rozet-kart-grid)
+        > :is(.yaz-okullari-ulke-kart, .rozet-kart-link) {
+        width: 100% !important;
+        max-width: none !important;
+        min-width: 0 !important;
+        justify-self: stretch !important;
+    }
+}
+
 body.sayfa-yurt-disi-dil-okullari-uk-london .londra-neden-kutu .rozet-grid .rozet-kart {
     position: relative;
     display: block !important;
@@ -969,12 +1044,6 @@ body.sayfa-hizmetlerimiz .hizmetlerimiz-egitim-alanlari .dil-okullari-secim-pane
         padding-bottom: 0;
     }
 
-    .iletisim-sss-kutu.cerceve-kutu {
-        width: 100% !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-    }
-
 .immerse-tokyo-giris-kategori-grid {
         grid-template-columns: 1fr;
     }
@@ -1617,7 +1686,7 @@ body.sayfa-kings-education-bournemouth .kings-bournemouth-paragraf-son,
 .sayfa-kings-education .kings-cambridge-kart-ust > p:last-child,
 .sayfa-kings-education .kings-cambridge-gri-ikili .immerse-tokyo-rozet-accordion-metin p:last-child,
 .sayfa-kings-education .kings-la-film-icerik-listesi li:last-child,
-body.sayfa-kings-education-los-angeles .kings-la-konaklama-bolum .konaklama-liste li:last-child, body.sayfa-kings-education-new-york .kings-la-konaklama-bolum .konaklama-liste li:last-child, body.sayfa-kings-education-boston .kings-la-konaklama-bolum .konaklama-liste li:last-child,
+body.sayfa-kings-education-los-angeles .kings-la-konaklama-bolum .konaklama-liste li:last-child, body.sayfa-kings-education-new-york .kings-la-konaklama-bolum .konaklama-liste li:last-child, body.sayfa-kings-education-boston .kings-la-konaklama-bolum .konaklama-liste li:last-child, body.sayfa-kings-education-london .kings-la-konaklama-bolum .konaklama-liste li:last-child,
 body.kings-oxford-sayfa .kings-oxford-sosyal-paragraf-son,
 .londra-dil-giris p:last-child,
 .oxford-dil-giris p:last-child,
@@ -6034,8 +6103,7 @@ body.sayfa-hizmetlerimiz .hizmet-adimlar-section {
 }
 
 body.sayfa-hizmetlerimiz section.hizmetlerimiz-egitim-alanlari.icerik-alani.ana-hizmetler-bolumu,
-.hizmet-adimlar-section,
-.iletisim-sayfa .iletisim-sss-kutu {
+.hizmet-adimlar-section {
     margin-top: 55px;
 }
 
@@ -6060,11 +6128,33 @@ body.sayfa-hizmetlerimiz
 }
 
 body.sayfa-hizmetlerimiz .hizmetlerimiz-egitim-alanlari .hizmetlerimiz-hub-kart-ikon {
-    display: block;
+    display: inline-flex;
     font-size: 2rem;
     line-height: 1;
-    margin: 0 0 0.45rem;
+    margin: 0;
     user-select: none;
+    grid-column: 1;
+    grid-row: 1;
+    align-self: center;
+}
+
+body.sayfa-hizmetlerimiz .hizmetlerimiz-egitim-alanlari .yaz-okullari-ulke-kart-icerik {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 10px;
+    row-gap: 8px;
+    align-items: start;
+}
+
+body.sayfa-hizmetlerimiz .hizmetlerimiz-egitim-alanlari .yaz-okullari-ulke-kart-baslik {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 0;
+}
+
+body.sayfa-hizmetlerimiz .hizmetlerimiz-egitim-alanlari .ana-hizmet-hub-kart-metin {
+    grid-column: 1 / -1;
+    grid-row: 2;
 }
 
 body.sayfa-hizmetlerimiz .hizmet-adimlar-section > .okul-liste-kapsayici.hizmet-adimlar-cerceve {
@@ -6575,12 +6665,6 @@ body.kings-oxford-sayfa .kings-oxford-akreditasyon-bolumu,
         margin-left: 0 !important;
         margin-right: 0 !important;
     }
-}
-
-.iletisim-sayfa .iletisim-sss-kutu.cerceve-kutu {
-    border-radius: 16px;
-    box-shadow: 0 4px 24px rgba(0, 0, 128, 0.06);
-    max-width: 1200px;
 }
 
 .immerse-tokyo-giris-blok {
@@ -7930,14 +8014,16 @@ body.sayfa-yurt-disi-yaz-okullari-italy .yaz-okullari-ulke-kart[href*="italy/mil
 }
 
 .sayfa-kings-education .kings-ielts-merkez-kutu {
-    background: linear-gradient(135deg, #fff4f4 0%, #fff 100%);
-    border: 2px solid #bd0505;
-    padding: 22px 24px;
-    margin-top: 25px;
+    background: #dfe6f0;
+    padding: 20px 24px;
+    margin-top: 16px;
+    margin-bottom: 0;
+    border-left: 4px solid #000080;
+    border-radius: 0 12px 12px 0;
 }
 
 .sayfa-kings-education .kings-ielts-merkez-kutu h4 {
-    color: #bd0505;
+    color: #000080;
     margin: 0 0 10px 0;
     font-size: 16px;
     font-weight: 700;
@@ -7955,10 +8041,10 @@ body.sayfa-yurt-disi-yaz-okullari-italy .yaz-okullari-ulke-kart[href*="italy/mil
 }
 
 .sayfa-kings-education .kings-ielts-merkez-kutu p {
-    font-size: 15px;
-    color: #333;
+    font-size: 14px;
+    color: #444;
     margin: 0;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 .sayfa-kings-education .kings-cambridge-grid {
@@ -8444,14 +8530,16 @@ body.sayfa-kings-education-bournemouth .dahil-olanlar-konteyner .kings-bournemou
 }
 
 .sayfa-kings-education .kings-ielts-merkez-kutu {
-    background: linear-gradient(135deg, #fff4f4 0%, #fff 100%);
-    border: 2px solid #bd0505;
-    padding: 22px 24px;
-    margin-top: 25px;
+    background: #dfe6f0;
+    padding: 20px 24px;
+    margin-top: 16px;
+    margin-bottom: 0;
+    border-left: 4px solid #000080;
+    border-radius: 0 12px 12px 0;
 }
 
 .sayfa-kings-education .kings-ielts-merkez-kutu h4 {
-    color: #bd0505;
+    color: #000080;
     margin: 0 0 10px 0;
     font-size: 16px;
     font-weight: 700;
@@ -8462,6 +8550,7 @@ body.sayfa-kings-education-bournemouth .dahil-olanlar-konteyner .kings-bournemou
 }
 
 .sayfa-kings-education .kings-ielts-merkez-kutu .kings-yildiz-ikon {
+    color: #000080;
     font-size: 20px;
     line-height: 1;
 }
@@ -8470,7 +8559,15 @@ body.sayfa-kings-education-bournemouth .dahil-olanlar-konteyner .kings-bournemou
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
     gap: 24px;
-    margin-top: 24px;
+    margin-top: 12px;
+}
+
+body.sayfa-kings-education-london .kings-cambridge-gri-ikili {
+    grid-template-columns: 1fr;
+}
+
+body.sayfa-kings-education-london .kings-cambridge-gri-ikili .cerceve-kutu {
+    padding-left: 15px;
 }
 
 .sayfa-kings-education .kings-cambridge-gri-ikili .cerceve-kutu {
@@ -9266,7 +9363,8 @@ body.sayfa-kings-education-los-angeles article.icerik-alani .kutu-liste li::befo
 
 body.sayfa-kings-education-los-angeles .kings-la-konaklama-bolum .konaklama-liste,
 body.sayfa-kings-education-new-york .kings-la-konaklama-bolum .konaklama-liste,
-body.sayfa-kings-education-boston .kings-la-konaklama-bolum .konaklama-liste {
+body.sayfa-kings-education-boston .kings-la-konaklama-bolum .konaklama-liste,
+body.sayfa-kings-education-london .kings-la-konaklama-bolum .konaklama-liste {
     list-style: disc;
     padding-left: 1.35em;
     margin: 0;
@@ -9274,7 +9372,8 @@ body.sayfa-kings-education-boston .kings-la-konaklama-bolum .konaklama-liste {
 
 body.sayfa-kings-education-los-angeles .kings-la-konaklama-bolum .konaklama-liste li,
 body.sayfa-kings-education-new-york .kings-la-konaklama-bolum .konaklama-liste li,
-body.sayfa-kings-education-boston .kings-la-konaklama-bolum .konaklama-liste li {
+body.sayfa-kings-education-boston .kings-la-konaklama-bolum .konaklama-liste li,
+body.sayfa-kings-education-london .kings-la-konaklama-bolum .konaklama-liste li {
     margin-bottom: 8px;
     padding-left: 0;
     display: list-item;
@@ -13366,6 +13465,63 @@ article.icerik-alani .yaz-okullari-sehir-okul-paneli .okul-liste-kapsayici .mode
         min-width: 0 !important;
         flex: 1 1 auto !important;
         justify-self: stretch !important;
+    }
+}
+
+@media (min-width: 900px) {
+    body.sayfa-hizmetlerimiz
+        .hizmetlerimiz-egitim-alanlari
+        .dil-okullari-secim-paneli
+        :is(.yaz-okullari-ulke-kart-wrap, .rozet-kart-grid) {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        justify-content: stretch !important;
+    }
+
+    body.sayfa-hizmetlerimiz
+        .hizmetlerimiz-egitim-alanlari
+        .dil-okullari-secim-paneli
+        :is(.yaz-okullari-ulke-kart-wrap, .rozet-kart-grid)
+        > :is(.yaz-okullari-ulke-kart, .rozet-kart-link) {
+        width: 100% !important;
+        max-width: none !important;
+        min-width: 0 !important;
+        justify-self: stretch !important;
+    }
+
+    body.sayfa-hizmetlerimiz
+        .hizmetlerimiz-egitim-alanlari
+        .dil-okullari-secim-paneli
+        :is(.yaz-okullari-ulke-kart-wrap, .rozet-kart-grid)
+        > :is(.yaz-okullari-ulke-kart, .rozet-kart-link):first-child {
+        border-top-left-radius: 15px !important;
+    }
+
+    body.sayfa-hizmetlerimiz
+        .hizmetlerimiz-egitim-alanlari
+        .dil-okullari-secim-paneli
+        :is(.yaz-okullari-ulke-kart-wrap, .rozet-kart-grid)
+        > :is(.yaz-okullari-ulke-kart, .rozet-kart-link):nth-child(2) {
+        border-top-right-radius: 15px !important;
+    }
+
+    body.sayfa-hizmetlerimiz
+        .hizmetlerimiz-egitim-alanlari
+        .dil-okullari-secim-paneli
+        :is(.yaz-okullari-ulke-kart-wrap, .rozet-kart-grid)
+        > :is(.yaz-okullari-ulke-kart, .rozet-kart-link):nth-last-child(2):nth-child(odd) {
+        border-bottom-left-radius: 15px !important;
+    }
+
+    body.sayfa-hizmetlerimiz
+        .hizmetlerimiz-egitim-alanlari
+        .dil-okullari-secim-paneli
+        :is(.yaz-okullari-ulke-kart-wrap, .rozet-kart-grid)
+        > :is(.yaz-okullari-ulke-kart, .rozet-kart-link):last-child:nth-child(even) {
+        border-bottom-right-radius: 15px !important;
     }
 }
 
