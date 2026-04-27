@@ -77,9 +77,9 @@
     padding: 0.8rem 1.2rem;
     border-radius: 15px;
     background: linear-gradient(180deg, #c41e3a 0%, #9e1830 100%);
-    color: #fff !important;
+    color: #fff;
     font-weight: 700;
-    text-decoration: none !important;
+    text-decoration: none;
     box-shadow: 0 10px 26px rgba(196, 30, 58, 0.24);
     transition: transform 0.15s ease, box-shadow 0.2s ease;
 }

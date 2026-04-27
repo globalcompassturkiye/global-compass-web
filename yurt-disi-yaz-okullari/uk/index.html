@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
@@ -28,7 +28,6 @@
     <link rel="stylesheet" href="/css/site-footer.css">
     <link rel="stylesheet" href="/css/site-breadcrumb.css">
     <link rel="stylesheet" href="/css/site-iletisim-form.css">
-    <link rel="stylesheet" href="/css/site-yonlendirme-kart.css">
     <link rel="stylesheet" href="/css/sss.css">
     <link rel="stylesheet" href="/css/blog.css">
 </head>
@@ -192,7 +191,8 @@
 
         <div class="blog-mobil-icindekiler-wrap">
             <nav class="blog-mobil-icindekiler-duz" aria-label="İçindekiler">
-                <ul>
+                <p class="blog-mobil-icindekiler-duz-baslik">İçindekiler</p>
+                <ul class="blog-icindekiler-liste blog-icindekiler-liste--mobil">
                     <li><a href="#yurt-disi-yaz-okullari-uk-giris">Giriş</a></li>
                     <li><a href="#yurt-disi-yaz-okullari-uk-giris-metni">Giriş Metni</a></li>
                     <li><a href="#yurt-disi-yaz-okullari-uk-kesfet">Keşfet</a></li>
@@ -207,12 +207,12 @@
 
         <p class="giris-metin">Prestijli İngiliz yatılı okulları (Boarding Schools) ve köklü üniversite kampüslerinde organize edilen İngiltere yaz kampı programları; öğrencilere profesyonel dil pratiğinin yanı sıra küresel bir vizyon kazandırır. Uluslararası standartlarda eğitim alırken, farklı kültürlerden arkadaşlıklar kuracağınız bu programlar, unutulmaz bir yurt dışı eğitim deneyiminin kapılarını aralıyor.</p>
 
-        <h2 class="metin-h2">
+        <h2 class="kart-h2">
             <span>İngiltere’nin En Popüler Eğitim Şehirlerini Keşfedin!</span>
             <span class="vurgu-satir">Hangi Şehri Tercih Edersiniz?</span>
         </h2>
 
-        <div class="yaz-okullari-secim-paneli ulke-secim-paneli-ortak ulke-hub-kart-paneli ulke-hub--satir-4" id="yurt-disi-yaz-okullari-uk-kesfet">
+        <div class="yaz-okullari-secim-paneli dil-okullari-secim-paneli ulke-secim-paneli-ortak ulke-hub-kart-paneli ulke-hub--satir-3" id="yurt-disi-yaz-okullari-uk-kesfet">
             <nav class="son-kart-ortala rozet-kart-grid yaz-okullari-ulke-kart-wrap" aria-label="İngiltere şehirlerine göre yaz okulları">
                 <a href="/yurt-disi-yaz-okullari/uk/london/" class="rozet-kart-link yaz-okullari-ulke-kart">
                     <div class="rozet-kart-icerik yaz-okullari-ulke-kart-icerik">
@@ -280,7 +280,7 @@
         <div class="cerceve-kutu icerik-kutusu yaz-okullari-program-kutu">
             <h2 class="metin-h2">Öne Çıkan Şehirler ve Kampüsler</h2>
             
-            <div class="rozet-grid rozet-grid--hub-3-2-1 icerik-kutusu-grid dikey">
+            <div class="rozet-grid rozet-grid--hub-3-2-1 icerik-kutusu-grid yatay-3">
                 <article class="rozet-kart">
                     <div class="rozet-ikon">1</div>
                     <h3 class="rozet-baslik">Londra Yaz Okulları</h3>
@@ -303,21 +303,23 @@
             <h2 class="metin-h2">Program Seçenekleri ve Sosyal Aktiviteler</h2>
             
             <p class="h2-altinda-metin">İngiltere yaz okullarımızda eğitim, sınıf dışındaki sosyal hayatla iç içedir:</p>
-
-            <ul class="kutu-liste">
-                <li>
-                    <strong>Haftalık 15-20 Saat Dil Eğitimi:</strong>
-                    <span>Seviye gruplarına ayrılmış, interaktif dersler.</span>
-                </li>
-                <li>
-                    <strong>Tam Gün Geziler:</strong>
-                    <span>Haftada en az bir tam gün (Londra, Stonehenge, Windsor vb.) ve yarım gün gezileri.</span>
-                </li>
-                <li>
-                    <strong>Akşam Etkinlikleri:</strong>
-                    <span>Yetenek yarışmaları, spor turnuvaları ve temalı partiler.</span>
-                </li>
-            </ul>
+            <div class="rozet-grid rozet-grid--hub-3-2-1 icerik-kutusu-grid yatay-3">
+                <article class="rozet-kart">
+                    <div class="rozet-ikon">✓</div>
+                    <h3 class="rozet-baslik">Haftalık 15-20 Saat Dil Eğitimi</h3>
+                    <p class="rozet-metin">Seviye gruplarına ayrılmış, interaktif dersler.</p>
+                </article>
+                <article class="rozet-kart">
+                    <div class="rozet-ikon">✓</div>
+                    <h3 class="rozet-baslik">Tam Gün Geziler</h3>
+                    <p class="rozet-metin">Haftada en az bir tam gün (Londra, Stonehenge, Windsor vb.) ve yarım gün gezileri.</p>
+                </article>
+                <article class="rozet-kart">
+                    <div class="rozet-ikon">✓</div>
+                    <h3 class="rozet-baslik">Akşam Etkinlikleri</h3>
+                    <p class="rozet-metin">Yetenek yarışmaları, spor turnuvaları ve temalı partiler.</p>
+                </article>
+            </div>
         </div>
 
         <div class="cerceve-kutu">
@@ -405,7 +407,7 @@
                 <aside class="blog-yan-panel">
                     <nav class="blog-icindekiler-kutu" aria-label="Bu sayfada">
                         <p class="blog-icindekiler-baslik">İçindekiler</p>
-                        <ul>
+                        <ul class="blog-icindekiler-liste">
                             <li><a href="#yurt-disi-yaz-okullari-uk-giris">Giriş</a></li>
                             <li><a href="#yurt-disi-yaz-okullari-uk-giris-metni">Giriş Metni</a></li>
                             <li><a href="#yurt-disi-yaz-okullari-uk-kesfet">Keşfet</a></li>

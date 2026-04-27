@@ -53,7 +53,7 @@
     justify-content: center;
     flex-wrap: wrap;
     background-color: #f4f6f8;
-    color: #000080 !important; /* Senin kurumsal lacivertin */
+    color: #000080; /* Senin kurumsal lacivertin */
     text-decoration: none;
     font-weight: 500;
     padding: 6px 5px;
@@ -98,7 +98,7 @@
 /* Masaüstünde Hover Etkisi */
 .breadcrumb-kutu a:hover {
     background-color: #000080;
-    color: #ffffff !important;
+    color: #ffffff;
     border: 1px solid #000080;
     transform: translateY(-1px);
     box-shadow: 0 4px 8px rgba(0,0,128,0.1);
@@ -107,7 +107,7 @@
 /* Üzerinde Bulunulan Sayfa Vurgusu */
 .breadcrumb-kutu .su-anki-sayfa {
     background-color: #000080;
-    color: #ffffff !important;
+    color: #ffffff;
     border: 1px solid #000080;
     cursor: default;
 }
@@ -129,13 +129,13 @@
     align-items: center;
     justify-content: center;
     background-color: #f4f6f8;
-    color: #000080 !important;
+    color: #000080;
     text-decoration: none;
     font-size: 12px;
     font-weight: 500;
     border: 1px solid var(--site-kart-kenar, #ffffff);
     transition: all 0.3s ease;
-    padding: 5px 6px !important;
+    padding: 5px 6px;
     flex-shrink: 0;
     white-space: nowrap;
     box-sizing: border-box;
@@ -157,35 +157,35 @@
 }
 
 /* -----------------------------------------
-    MOBİL UYUM (768px Altı) — boşluklar tabanla aynı; sarma / !important düzeni
+    MOBİL UYUM (768px Altı) — boşluklar tabanla aynı; sarma / düzeni
    ----------------------------------------- */
 @media (max-width: 768px) {
     .breadcrumb-kutu {
-        display: flex !important;
-        flex-wrap: wrap !important; /* Kategorinin bittiği mantıklı yerden alta atar */
-        align-items: center !important;
-        gap: 4px !important;
-        padding: 10px 15px !important;
-        background: transparent !important;
-        border: none !important;
-        border-radius: 0 !important;
-        box-shadow: none !important;
+        display: flex;
+        flex-wrap: wrap; /* Kategorinin bittiği mantıklı yerden alta atar */
+        align-items: center;
+        gap: 4px;
+        padding: 10px 15px;
+        background: transparent;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
     }
 
     /* Her bir link ve mevcut sayfa kutusu (home ikonu ayrı) */
     .breadcrumb-kutu a:not(.ana-sayfa-ikon),
     .breadcrumb-kutu .su-anki-sayfa {
-        display: inline-flex !important;
+        display: inline-flex;
         align-items: center;
         justify-content: center;
-        flex-wrap: wrap !important;
+        flex-wrap: wrap;
         background: #f4f6f8; /* Çok hafif profesyonel gri */
-        padding: 6px 5px !important;
+        padding: 6px 5px;
         font-weight: 500;
-        text-decoration: none !important;
-        color: #000080 !important; /* Senin lacivertin */
+        text-decoration: none;
+        color: #000080; /* Senin lacivertin */
         border: 1px solid var(--site-kart-kenar, #ffffff);
-        white-space: normal !important;
+        white-space: normal;
         overflow-wrap: anywhere;
         word-wrap: break-word;
         line-height: 1.35;
@@ -195,37 +195,37 @@
         box-sizing: border-box;
         text-align: center;
         transition: all 0.2s ease;
-        border-radius: 5px !important;
+        border-radius: 5px;
     }
 
     /* Üzerinde olduğumuz sayfa vurgusu */
     .breadcrumb-kutu .su-anki-sayfa {
-        background: #000080 !important;
-        color: #ffffff !important;
-        border: 1px solid #000080 !important;
+        background: #000080;
+        color: #ffffff;
+        border: 1px solid #000080;
     }
 
     /* Ayraçların (>) tasarımı */
     .breadcrumb-kutu .ayrac,
     .breadcrumb-kutu .breadcrumb-ayrac {
-        display: inline-block !important;
-        color: #abb5be !important;
-        font-size: 16px !important;
-        line-height: 1 !important;
-        margin: 0 1px !important;
+        display: inline-block;
+        color: #abb5be;
+        font-size: 16px;
+        line-height: 1;
+        margin: 0 1px;
         font-weight: bold;
     }
 
     /* Ana sayfa ikon kutusu — sol/sağ (özellikle sol) ince pay */
     .breadcrumb-kutu .ana-sayfa-ikon {
-        padding: 5px 6px !important;
-        display: flex !important;
+        padding: 5px 6px;
+        display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 5px !important;
+        border-radius: 5px;
     }
     
     .breadcrumb-kutu .ana-sayfa-ikon img {
-        margin: 0 !important;
+        margin: 0;
     }
 }

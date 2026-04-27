@@ -10,12 +10,12 @@
 }
 
 article.icerik-alani.sss-sayfa > h1 {
-    line-height: 1.4 !important;
+    line-height: 1.4;
 }
 
 article.icerik-alani.sss-sayfa > h1 > .vurgu-renk {
-    line-height: 1.35 !important;
-    color: #bd0505 !important;
+    line-height: 1.35;
+    color: #bd0505;
 }
 
 article.icerik-alani.sss-sayfa > h1 .vurgu-renk {
@@ -67,13 +67,13 @@ header.sss-sayfa-ust-menu .sosyal-medya-alani a img {
 .sayfa-sss .sss-sss-kutu.site-gri-cerceve-kutu {
     box-shadow: 0 4px 24px rgba(0, 0, 128, 0.06);
     max-width: 1200px;
-    padding: 28px 22px 22px !important;
+    padding: 28px 22px 22px;
 }
 
 .sayfa-sss .sss-sss-kutu h2 {
-    text-align: center !important;
-    color: #0f172a !important;
-    margin: 0 0 15px 0 !important;
+    text-align: center;
+    color: #0f172a;
+    margin: 0 0 15px 0;
 }
 
 .sayfa-sss .sss-sss-kutu .sss-alani {
@@ -88,16 +88,16 @@ header.sss-sayfa-ust-menu .sosyal-medya-alani a img {
 @media (max-width: 768px) {
     .sayfa-sss .sss-sss-kutu.cerceve-kutu,
     .sayfa-sss .sss-sss-kutu.site-gri-cerceve-kutu {
-        width: 100% !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 
 @media (max-width: 501px) {
     .sayfa-sss .sss-sss-kutu.cerceve-kutu,
     .sayfa-sss .sss-sss-kutu.site-gri-cerceve-kutu {
-        padding: 28px 25px 22px !important;
+        padding: 28px 25px 22px;
     }
 }
 
@@ -126,7 +126,7 @@ header.sss-sayfa-ust-menu .sosyal-medya-alani a img {
 }
 .cerceve-kutu > h2:has(> .vurgu-satir) + .sss-alani > *:first-child,
 .site-gri-cerceve-kutu > h2:has(> .vurgu-satir) + .sss-alani > *:first-child {
-    margin-top: 0 !important;
+    margin-top: 0;
 }
 
 /* h2 .vurgu-satir → style.css (Aşama 2) */
@@ -244,7 +244,7 @@ h1 .h1-vurgu {
 .cerceve-kutu > h2:has(> .vurgu-satir) + .sss-alani .sss-item:first-child,
 .site-gri-cerceve-kutu > h2:has(> .vurgu-satir) + .sss-alani .sss-item:first-child,
 .sss-alani > .sss-item:first-child {
-    margin-top: 0 !important;
+    margin-top: 0;
 }
 
 /* Ana Kutu Yapısı */
@@ -378,7 +378,7 @@ h1 .h1-vurgu {
 .sss-icerik p,
 .cerceve-kutu .sss-icerik p,
 .site-gri-cerceve-kutu .sss-icerik p {
-    text-align: justify !important;
+    text-align: justify;
     text-justify: inter-word;
 }
 
@@ -393,13 +393,13 @@ h1 .h1-vurgu {
 .sss-tab-alani .tab-panel { display: none; }
 #sss-genel:checked ~ #panel-sss-genel,
 #sss-yaz:checked ~ #panel-sss-yaz {
-    display: block !important;
+    display: block;
 }
 #sss-genel:checked ~ label[for="sss-genel"],
 #sss-yaz:checked ~ label[for="sss-yaz"] {
-    background: #000080 !important;
-    color: #ffffff !important;
-    border-color: #000080 !important;
+    background: #000080;
+    color: #ffffff;
+    border-color: #000080;
     box-shadow: 0 14px 28px rgba(15, 23, 42, 0.2);
     transform: translateY(-1px);
 }
@@ -444,8 +444,8 @@ h1 .h1-vurgu {
     .cerceve-kutu:has(> h2:has(> .vurgu-satir)),
     .site-gri-cerceve-kutu:has(> h2:has(> .vurgu-satir)),
     .sss-gri-kutu {
-        padding-top: 1.25rem !important;
-        margin-top: 45px !important;
+        padding-top: 1.25rem;
+        margin-top: 45px;
     }
 }
 

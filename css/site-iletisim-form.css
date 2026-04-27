@@ -16,7 +16,7 @@
     background-color: transparent;
     padding: 0;
     box-sizing: border-box;
-    max-width: 1200px;
+    max-width: var(--site-cerceve-max-width, 1200px);
     margin-left: auto;
     margin-right: auto;
 }
@@ -24,7 +24,7 @@
 /* Hub (ör. article > h2:has(> .vurgu-satir)) ile aynı iki satır tipografisi — style.css 4023–4035 */
 .hizmet-alanlari-baslik:has(+ .iletisim-form-alani) > h2:has(> .vurgu-satir) .ust-satir,
 .hizmet-alanlari-baslik:has(+ .iletisim-form-alani) > h2:has(> .vurgu-satir) > span:not(.vurgu-satir) {
-    color: #000000 !important;
+    color: #000000;
     font-weight: 700;
     text-transform: none;
     display: block;
@@ -35,7 +35,7 @@
     line-height: 1.35;
 }
 .hizmet-alanlari-baslik:has(+ .iletisim-form-alani) > h2:has(> .vurgu-satir) > span:not(.ust-satir) {
-    color: #e30613 !important;
+    color: #e30613;
     font-weight: 700;
     margin-top: 0.35rem;
     display: block;
@@ -55,7 +55,7 @@
     border: none;
     box-shadow: none;
     padding: 0 var(--icerik-yan-gutter) 32px;
-    max-width: 1200px;
+    max-width: var(--site-cerceve-max-width, 1200px);
     box-sizing: border-box;
 }
 
@@ -83,8 +83,8 @@
 .iletisim-form-alani .hizmet-alanlari-baslik h2:has(> .vurgu-satir) {
     position: static;
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto 15px !important;
+    max-width: var(--site-cerceve-max-width, 1200px);
+    margin: 0 auto 15px;
     padding: 0;
     overflow: visible;
     clip: auto;
@@ -114,10 +114,10 @@
     padding: 0;
     box-sizing: border-box;
     max-width: none;
-    background: transparent !important;
-    border: none !important;
+    background: transparent;
+    border: none;
     border-radius: 0;
-    box-shadow: none !important;
+    box-shadow: none;
     text-align: center;
 }
 
@@ -132,11 +132,11 @@
     margin: 0;
     padding: 0;
     max-width: none;
-    background: transparent !important;
-    border: none !important;
+    background: transparent;
+    border: none;
     border-radius: 0;
     box-sizing: border-box;
-    box-shadow: none !important;
+    box-shadow: none;
     text-align: center;
 }
 
@@ -144,7 +144,7 @@
 .iletisim-form-alani > .hizmet-alanlari-baslik.icerik-bilgi-form-bant > h2:has(> .vurgu-satir) > .ust-satir,
  .iletisim-form-alani > .hizmet-alanlari-baslik.icerik-bilgi-form-bant > h2:has(> .vurgu-satir) > span:not(.vurgu-satir),
 article.icerik-alani .iletisim-form-alani > .hizmet-alanlari-baslik.icerik-bilgi-form-bant > h2:has(> .vurgu-satir) > .ust-satir {
-    color: #000000 !important;
+    color: #000000;
     font-weight: 700;
     text-transform: none;
     display: block;
@@ -157,9 +157,9 @@ article.icerik-alani .iletisim-form-alani > .hizmet-alanlari-baslik.icerik-bilgi
 
 .iletisim-form-alani > .hizmet-alanlari-baslik.icerik-bilgi-form-bant > h2:has(> .vurgu-satir) > .vurgu-satir,
 article.icerik-alani .iletisim-form-alani > .hizmet-alanlari-baslik.icerik-bilgi-form-bant > h2:has(> .vurgu-satir) > .vurgu-satir {
-    color: #e30613 !important;
+    color: #e30613;
     font-weight: 700;
-    margin: 0.35rem 0 0 !important;
+    margin: 0.35rem 0 0;
     display: block;
     width: 100%;
     text-align: center;
@@ -169,7 +169,7 @@ article.icerik-alani .iletisim-form-alani > .hizmet-alanlari-baslik.icerik-bilgi
 /* Tanıtım bandı p satırları — hub h2 ile aynı ölçek (p kullanan sayfalar) */
 .iletisim-form-alani > .hizmet-alanlari-baslik:not(.icerik-bilgi-form-bant) > p.ust-satir,
 .iletisim-form-alani > .hizmet-alanlari-baslik:not(.icerik-bilgi-form-bant) p.ust-satir {
-    color: #000000 !important;
+    color: #000000;
     font-weight: 700;
     text-transform: none;
     letter-spacing: normal;
@@ -179,9 +179,9 @@ article.icerik-alani .iletisim-form-alani > .hizmet-alanlari-baslik.icerik-bilgi
 
 .iletisim-form-alani > .hizmet-alanlari-baslik:not(.icerik-bilgi-form-bant) > p.vurgu-satir,
 .iletisim-form-alani > .hizmet-alanlari-baslik:not(.icerik-bilgi-form-bant) > p.alt-satir {
-    color: #e30613 !important;
+    color: #e30613;
     font-weight: var(--sayfa-bolum-baslik-alt-font-weight);
-    margin-top: 0.35rem !important;
+    margin-top: 0.35rem;
     line-height: 1.35;
 }
 
@@ -500,18 +500,18 @@ body.iletisim-form-bildirim-acik {
    ------------------------------------------------------------------------- */
 @media (max-width: 1200px) {
     .icerik-alani .iletisim-form-alani {
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        width: 100% !important;
-        max-width: none !important;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        max-width: none;
     }
 }
 
 @media (max-width: 501px) {
     .iletisim-form-alani {
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        width: 100% !important;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
     }
 }
 
@@ -523,9 +523,9 @@ body.iletisim-form-bildirim-acik {
 @media (max-width: 768px) {
     .iletisim-sayfa .ofis-harita-kutu,
     .iletisim-sayfa .iletisim-form-alani {
-        width: 100% !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 
@@ -537,9 +537,9 @@ article.hizmetlerimiz-sayfa .iletisim-form-alani .iletisim-form-beyaz-cerceve > 
 
 /* Oxford Royale New York: doğrudan .iletisim-form-alani (Tokyo ile aynı yapı; üst boşluk hub paneli ile aynı) */
 body.oxford-royale-ny-sayfa article.icerik-alani .blog-yazi-ana > section.iletisim-form-alani {
-    margin-top: 50px !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+    margin-top: 50px;
+    margin-left: 0;
+    margin-right: 0;
     max-width: none;
     padding: 0;
 }
@@ -605,16 +605,16 @@ body.oxford-royale-ny-sayfa article.icerik-alani .blog-yazi-ana > section.iletis
 
 /* Formdan hemen sonra tek yönlendirme kartı: üst margin birikmez */
 .iletisim-form-alani + .okul-liste-kapsayici:has(> .alt-yonlendirme-alani) {
-    margin-top: 25px !important;
+    margin-top: 25px;
 }
 
 /* Online eğitim: geniş ekranda içerik genişliği ile hizalı form */
 @media (min-width: 1201px) {
     .icerik-alani .iletisim-form-alani {
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        width: 100% !important;
-        max-width: 1200px !important;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        max-width: var(--site-cerceve-max-width, 1200px);
         box-sizing: border-box;
     }
 }
