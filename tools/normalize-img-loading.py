@@ -13,7 +13,7 @@ HERO_CLASS_SUBSTR = (
     "-foto",
     "kings-education-gorsel",
     "chantemerle-gorsel",
-    "immerse-kampus-gorsel",
+    "ana-gorsel",
     "alpadia-kampus-gorsel",
     "investin-logo",
     "immerse-logo",

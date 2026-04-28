@@ -337,8 +337,8 @@ immerse-detay-kutu
 immerse-education-page
 immerse-geziler-kutu
 immerse-giris-paragraf
-immerse-kampus-gorsel
-immerse-kampus-kapsayici
+ana-gorsel
+ana-gorsel-kapsayici
 immerse-konaklama-grid
 immerse-konaklama-kart
 immerse-konaklama-kutu

@@ -39,7 +39,7 @@ function Test-SkipLazy([string]$tag, [string]$html, [int]$idx) {
     foreach ($s in @('footer-logo-img', 'odeme-ust-logo-img')) {
         if ($classes.Contains($s)) { return $true }
     }
-    $heroSubs = @('-foto', 'kings-education-gorsel', 'chantemerle-gorsel', 'immerse-kampus-gorsel', 'alpadia-kampus-gorsel',
+    $heroSubs = @('-foto', 'kings-education-gorsel', 'chantemerle-gorsel', 'ana-gorsel', 'alpadia-kampus-gorsel',
         'investin-logo', 'immerse-logo', 'sportech-academy-logo', 'alpadia-logo', 'futbol-logo')
     foreach ($s in $heroSubs) {
         if ($classes.Contains($s.ToLowerInvariant())) {

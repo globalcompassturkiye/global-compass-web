@@ -48,13 +48,13 @@
     --iletisim-odak: #000080;
     --iletisim-odak-yarim: rgba(0, 0, 128, 0.12);
     background: transparent;
-    margin: 40px auto 25px auto;
+    margin: 40px auto 0 auto;
     border-radius: 0;
     box-sizing: border-box;
     position: relative;
     border: none;
     box-shadow: none;
-    padding: 0 var(--icerik-yan-gutter) 32px;
+    padding: 0 var(--icerik-yan-gutter) 0;
     max-width: var(--site-cerceve-max-width, 1200px);
     box-sizing: border-box;
 }
@@ -103,6 +103,12 @@
     flex-direction: column;
     align-items: center;
     gap: 0.35rem;
+}
+
+/* kart-h2 üst boşluk — üstteki margin: 0 auto 15px ile çakışmayı .kart-h2 özgüllüğüyle kır */
+.iletisim-form-alani > .hizmet-alanlari-baslik > h2.kart-h2,
+.iletisim-form-alani .hizmet-alanlari-baslik > h2.kart-h2 {
+    margin-top: 50px;
 }
 
 /* Bilgi formu üst başlık sarmalayıcı (.icerik-bilgi-form-bant): kırmızı şerit yok */
@@ -404,7 +410,7 @@ article.icerik-alani .iletisim-form-alani > .hizmet-alanlari-baslik.icerik-bilgi
     }
 
     .iletisim-form-alani {
-        padding: 0 0 26px;
+        padding: 0;
     }
 
     .iletisim-form-alani .iletisim-form-beyaz-cerceve {
@@ -498,6 +504,15 @@ body.iletisim-form-bildirim-acik {
 /* -------------------------------------------------------------------------
    Yerleşim — önceden style.css / iletisim.css / bölge dosyalarındaydı; tek kaynak.
    ------------------------------------------------------------------------- */
+
+/* Yan panel sol sütun: article yatay gutter sonrası form bölümünde çift padding olmasın */
+article.icerik-alani.blog-yazi-detay .blog-yazi-ana > section.iletisim-form-alani,
+article.icerik-alani .blog-yazi-layout--yan-panel .blog-yazi-ana > section.iletisim-form-alani {
+    padding-left: 0;
+    padding-right: 0;
+    box-sizing: border-box;
+}
+
 @media (max-width: 1200px) {
     .icerik-alani .iletisim-form-alani {
         margin-left: 0;

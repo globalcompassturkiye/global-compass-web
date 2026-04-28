@@ -251,7 +251,7 @@ h1 .h1-vurgu {
 .sss-alani {
     background: #ffffff;
     border: 0 solid transparent;
-    border-radius: 5px;
+    border-radius: 15px;
     overflow: hidden;
 }
 
@@ -326,6 +326,28 @@ h1 .h1-vurgu {
 .site-gri-cerceve-kutu .sss-item {
     padding-left: 0;
     padding-right: 0;
+}
+
+/* SSS akordeon: dış üst / dış alt köşeler 15px (ilk soru üstü, son soru altı) */
+.sss-alani > .sss-item:first-child > summary {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.sss-alani > .sss-item:last-child:not([open]) > summary {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.sss-alani > .sss-item:last-child[open] > .sss-icerik {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    overflow: hidden;
+}
+
+.sss-alani > .sss-item:last-child[open] > summary {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 .cerceve-kutu .sss-item summary,

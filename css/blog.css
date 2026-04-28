@@ -1068,14 +1068,14 @@ body.sayfa-hizmetlerimiz .blog-yazi-layout--yan-panel .blog-yazi-ana {
         display: flex;
         flex-direction: column;
         width: 100%;
-        margin: 0 0 50px;
+        margin: 0 0 0;
     }
 }
 
 /* ≤501px: mobil içindekiler — çerçeveli kutu (.blog-mobil-icindekiler-duz) üstünde/altında 50px (wrap altı yalnızca blog-yazi-sayfa-mobil-ux) */
 @media (max-width: 501px) {
     .blog-yazi-sayfa-mobil-ux .blog-mobil-icindekiler-wrap {
-        margin-bottom: 50px;
+        margin-bottom: 0;
     }
 
     /* Beyaz çerçevenin üstünde, önceki akış ile kutu arası 50px — tüm sayfalarda .blog-mobil-icindekiler-duz */

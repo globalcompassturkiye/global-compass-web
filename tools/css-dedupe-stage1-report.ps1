@@ -192,6 +192,17 @@ $payload = [ordered]@{
         dry_run           = 'powershell -NoProfile -ExecutionPolicy Bypass -File tools/css-merge-scenario-a.ps1 -DryRun'
         warning           = 'Full merge rewrites the file, normalizes declaration formatting, and drops all /* block comments */. Prefer DryRun until a comment-preserving merge exists.'
     }
+    identical_rule_dedupe_tool = @{
+        script  = 'tools/css-identical-rule-dedupe.js'
+        dry_run = 'node tools/css-identical-rule-dedupe.js --dry-run'
+        write   = 'node tools/css-identical-rule-dedupe.js --write'
+        note    = 'Aynı seçici + aynı bildirim gövdesi (TOP / @media / @supports kapsamı); son tekrar kalır; yorum ve iç içe @-kurallar korunur.'
+    }
+    css_html_usage_audit_tool = @{
+        script = 'tools/css-html-usage-audit.js'
+        run    = 'node tools/css-html-usage-audit.js'
+        out    = 'tools/css-html-usage-report.json ve tools/css-html-usage-report.md'
+    }
     analyze_tool               = 'tools/css-dedupe-analyze.ps1'
 }
 

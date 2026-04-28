@@ -1,41 +1,28 @@
 {
     "schema":  "global-compass-css-dedupe-stage1/1",
-    "generated_at":  "2026-04-23T02:19:29+03:00",
+    "generated_at":  "2026-04-27T23:51:11+03:00",
     "source_file":  "css/style.css",
     "summary":  {
-                    "selectors_in_dup_groups":  390,
+                    "selectors_in_dup_groups":  470,
                     "opaque_at_segments":  3,
-                    "duplicate_body_groups":  142,
-                    "rules_top_level_segments":  1345,
-                    "at_merge_segments":  59
+                    "duplicate_body_groups":  159,
+                    "rules_top_level_segments":  1368,
+                    "at_merge_segments":  83
                 },
     "top_20_by_selector_count":  [
                                      {
                                          "scope":  "TOP",
-                                         "selector_count":  8,
-                                         "property_count":  1,
-                                         "decl_key_preview":  "margin-top:25px",
-                                         "selectors_sample":  [
-                                                                  "#sportech-futbol-avantaj-galeri .futbol-galeri-kapsayici",
-                                                                  "#sportech-tenis-program-yapisi .futbol-galeri-grid",
-                                                                  "#sportech-tip-programda-neler-var .futbol-galeri-grid",
-                                                                  ".futbol-mt-25",
-                                                                  "article.icerik-alani .rozet-grid.icerik-kutusu-grid.futbol-mt-25",
-                                                                  "body.kings-oxford-sayfa .kings-oxford-giris-kutu,\nbody.kings-oxford-sayfa .kings-oxford-foto-bolumu,\n.kings-oxford-vurgulu-tablo,\np + .kirmizi-kutu,\n.alpadia-kampus-kapsayici,\n.alpadia-mt24, .alpadia-mt12,\n.geziler-tabs-kapsayici,\n.sayfa-kings-education .kings-form-bant-ust,\n.sayfa-kings-education .usa-form-bant.kings-form-bant-ust,\nbody.sayfa-kings-education-boston #kings-bos-konaklama .konaklama-giris,\nbody.sayfa-kings-education-bournemouth .blog-yazi-ana \u003e .kings-giris-metni,\nbody.sayfa-kings-education-bournemouth .kings-bournemouth-bolum-ust,\nbody.sayfa-kings-education-bournemouth .kings-oxford-basvuru-bant,\nbody.sayfa-kings-education-new-york #kings-ny-konaklama .konaklama-giris,\nbody.kings-oxford-sayfa .blog-yazi-ana \u003e .kings-giris-metni,\nbody.kings-oxford-sayfa .kings-oxford-basvuru-bant,\nbody.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .blog-yazi-ana \u003e .sbc-canford-giris-metni,\nbody.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .blog-yazi-ana \u003e .sbc-canford-program-bolumu",
-                                                                  "body.sayfa-yurt-disi-universite-switzerland-bhms .toronto-arkadaslik-icerik \u003e p:nth-of-type(2)",
-                                                                  "body.sportech-academy-page .blog-yazi-ana \u003e .sportech-academy-giris-metni,\nbody.sportech-academy-page .blog-yazi-ana \u003e .giris-metni"
-                                                              ]
-                                     },
-                                     {
-                                         "scope":  "TOP",
-                                         "selector_count":  7,
+                                         "selector_count":  10,
                                          "property_count":  1,
                                          "decl_key_preview":  "margin-top:0",
                                          "selectors_sample":  [
+                                                                  ".okul-liste-kapsayici .modern-okul-listesi \u003e .premium-liste-kart ~ .premium-liste-kart,\n.london-secim-paneli .okul-liste-kapsayici .modern-okul-listesi \u003e .premium-liste-kart ~ .premium-liste-kart,\n:is(.new-york-secim-paneli, .tokyo-secim-paneli, .dil-okullari-secim-paneli, .yaz-okullari-sehir-okul-paneli, .yaz-okullari-secim-paneli) .okul-liste-kapsayici .modern-okul-listesi \u003e .premium-liste-kart ~ .premium-liste-kart,\n.okul-listesi-okul-liste-kapsayici .okul-listesi-modern-okul-listesi \u003e .okul-listesi-premium-liste-kart ~ .okul-listesi-premium-liste-kart,\n.okul-listesi-secim-paneli .okul-listesi-okul-liste-kapsayici .okul-listesi-modern-okul-listesi \u003e .okul-listesi-premium-liste-kart ~ .okul-listesi-premium-liste-kart,\nh2 + *",
+                                                                  "article.icerik-alani h2 + *,\n.icerik-alani h2 + *",
+                                                                  "article.icerik-alani h2 \u003e .vurgu-satir,\n.icerik-alani h2 \u003e .vurgu-satir,\n:is(.dil-okullari-secim-paneli, .yaz-okullari-secim-paneli) \u003e h2 \u003e .vurgu-satir",
                                                                   "body.ana-sayfa .hizmet-tab-alani .hizmet-tab-alt-icerik-cerceve .alt-panel",
                                                                   "body.ana-sayfa .hizmet-tab-alani \u003e .cerceve-kutu.icerik-kutusu",
                                                                   "body.ana-sayfa article.icerik-alani \u003e section.icerik-alani.ana-hizmetler-bolumu \u003e .cerceve-kutu.icerik-kutusu",
-                                                                  "body.kings-oxford-sayfa .kings-oxford-kurs-detay-bolumu,\nbody.kings-oxford-sayfa .kings-oxford-kursunuz-bekliyor,\nbody.kings-oxford-sayfa .kings-oxford-akreditasyon-bolumu,\n.alpadia-tanitim-giris \u003e p:first-child,\nbody.sayfa-alpadia-frankfurt .cerceve-kutu.baslik-iki-satir \u003e h2 + p,\nbody.sayfa-alpadia-frankfurt .cerceve-kutu.baslik-iki-satir \u003e h2 + h3.alpadia-h3-ozel,\nbody.sayfa-cerez-aydinlatma-metni .kvkk-metin-kutu \u003e h2:first-of-type,\nbody.sayfa-chantemerle .chantemerle-giris-metni \u003e p:first-child,\nbody.sayfa-chantemerle .chantemerle-deneyim-ana \u003e .chantemerle-sol-kenar-cerceve:first-child,\nbody.sayfa-gizlilik-politikasi .kvkk-metin-kutu \u003e h2:first-of-type,\n.hakkimizda-sayfa .hakkimizda-icerik-kutu h2:first-of-type,\nbody.sayfa-hizmetlerimiz .hizmet-adimlar-section \u003e h2,\n.immerse-tokyo-giris-blok .immerse-tokyo-giris-kategori-grid,\n.geziler-tab-icerikler,\n.yas-alan-etiketleri li:has(.alan-en) .alan-tr,\nbody.sayfa-kings-education-boston .kings-bos-konaklama-bant,\nbody.sayfa-kings-education-boston .kings-bos-konaklama-bilgi-iskelet .cerceve-kutu.kings-mini-kutu-sik,\n.sayfa-kings-education .kings-london-konaklama-kart h3,\nbody.sayfa-kings-education-new-york .kings-ny-konaklama-bant,\nbody.sayfa-kings-education-new-york .kings-ny-konaklama-bilgi-iskelet .cerceve-kutu.kings-mini-kutu-sik,\n.okul-listesi-program-secim-hub-baslik \u003e .okul-listesi-alt-satir-lacivert:first-child,\n.sportech-program-paneli .sportech-program-icerik,\nbody.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .blog-yazi-ana \u003e .sbc-canford-giris-alt-baslik + .sbc-canford-giris-metni,\nbody.sayfa-swiss-education-academy .sea-giris-metni \u003e p:first-child,\n.yaz-okullari-sehir-okul-paneli .okul-liste-kapsayici,\n.cerceve-kutu.los-angeles-neden-kutu .los-angeles-neden-rozet-grid .rozet-metin,\n.yaz-okullari-secim-paneli .program-secim-hub-baslik \u003e .vurgu-satir:first-child,\n.london-icerik-grid-pilot-kutu .london-pilot-grid-baslik:first-of-type",
+                                                                  "body.kings-oxford-sayfa\n    :is(.kings-oxford-kurs-detay-bolumu, .kings-oxford-kursunuz-bekliyor, .kings-oxford-akreditasyon-bolumu),\n.alpadia-tanitim-giris \u003e p:first-child,\nbody.sayfa-alpadia-frankfurt .cerceve-kutu.baslik-iki-satir \u003e h2 + p,\nbody.sayfa-alpadia-frankfurt .cerceve-kutu.baslik-iki-satir \u003e h2 + h3.alpadia-h3-ozel,\nbody.sayfa-cerez-aydinlatma-metni .kvkk-metin-kutu \u003e h2:first-of-type,\nbody.sayfa-chantemerle .chantemerle-giris-metni \u003e p:first-child,\nbody.sayfa-chantemerle .chantemerle-deneyim-ana \u003e .chantemerle-sol-kenar-cerceve:first-child,\nbody.sayfa-gizlilik-politikasi .kvkk-metin-kutu \u003e h2:first-of-type,\narticle.hakkimizda-sayfa #global-compass-kimdir \u003e .metin-h2,\nbody.sayfa-hizmetlerimiz .hizmet-adimlar-section \u003e h2,\n.immerse-tokyo-giris-blok .immerse-tokyo-giris-kategori-grid,\n.geziler-tab-icerikler,\n.yas-alan-etiketleri li:has(.alan-en) .alan-tr,\nbody.sayfa-kings-education-boston\n    :is(.kings-bos-konaklama-bant, .kings-bos-konaklama-bilgi-iskelet .cerceve-kutu.kings-mini-kutu-sik),\n.sayfa-kings-education .kings-london-konaklama-kart h3,\nbody.sayfa-kings-education-new-york\n    :is(.kings-ny-konaklama-bant, .kings-ny-konaklama-bilgi-iskelet .cerceve-kutu.kings-mini-kutu-sik),\n.okul-listesi-program-secim-hub-baslik \u003e .okul-listesi-alt-satir-lacivert:first-child,\nbody.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .blog-yazi-ana \u003e .sbc-canford-giris-alt-baslik + .sbc-canford-giris-metni,\nbody.sayfa-swiss-education-academy .sea-giris-metni \u003e p:first-child,\n.yaz-okullari-sehir-okul-paneli .okul-liste-kapsayici,\n.cerceve-kutu.los-angeles-neden-kutu .rozet-grid .rozet-metin,\n.yaz-okullari-secim-paneli .program-secim-hub-baslik \u003e .vurgu-satir:first-child,\n.london-icerik-grid-pilot-kutu .london-pilot-grid-baslik:first-of-type",
                                                                   "body.sayfa-hizmetlerimiz .hizmet-adimlar-section .hizmet-adimlar",
                                                                   "body.sayfa-hizmetlerimiz .hizmetlerimiz-egitim-alanlari \u003e .dil-okullari-secim-paneli",
                                                                   "body.sayfa-yurt-disi-universite #uni-ulkeler-secim + .yaz-okullari-secim-paneli"
@@ -43,11 +30,28 @@
                                      },
                                      {
                                          "scope":  "TOP",
-                                         "selector_count":  6,
+                                         "selector_count":  8,
+                                         "property_count":  1,
+                                         "decl_key_preview":  "margin-bottom:15px",
+                                         "selectors_sample":  [
+                                                                  ".giris-metni \u003e .intro-metin:not(:last-child)",
+                                                                  ".ust-marka-alani",
+                                                                  "article.icerik-alani h2,\narticle.icerik-alani h2:has(\u003e .vurgu-satir),\n.icerik-alani h2,\n.icerik-alani h2:has(\u003e .vurgu-satir)",
+                                                                  "body.ana-sayfa h2",
+                                                                  "body.sayfa-yurt-disi-lise article.icerik-alani \u003e h2:has(\u003e .vurgu-satir)",
+                                                                  "body.sayfa-yurt-disi-yaz-okullari article.icerik-alani \u003e h2:has(\u003e .vurgu-satir)",
+                                                                  "body:is(.sayfa-yurt-disi-dil-okullari-uk, .sayfa-yurt-disi-dil-okullari-usa, .sayfa-yurt-disi-yaz-okullari-uk, .sayfa-yurt-disi-yaz-okullari-germany, .sayfa-yurt-disi-yaz-okullari-japan, .sayfa-yurt-disi-yaz-okullari-italy, .sayfa-yurt-disi-yaz-okullari-canada) article.icerik-alani \u003e h2:has(\u003e .vurgu-satir)",
+                                                                  "h2,\nh2:has(\u003e .vurgu-satir),\narticle.icerik-alani \u003e h2,\n.icerik-alani \u003e h2"
+                                                              ]
+                                     },
+                                     {
+                                         "scope":  "TOP",
+                                         "selector_count":  7,
                                          "property_count":  1,
                                          "decl_key_preview":  "margin-bottom:25px",
                                          "selectors_sample":  [
-                                                                  "body.sayfa-alpadia-frankfurt .immerse-detay-kart.alpadia-tarihler-tam-satir \u003e h3 + p,\nbody.sayfa-alpadia-freiburg .immerse-detay-kart.alpadia-tarihler-tam-satir \u003e h3 + p",
+                                                                  ".blok-alt-bosluk-25",
+                                                                  ":is(body.sayfa-alpadia-frankfurt, body.sayfa-alpadia-freiburg) .immerse-detay-kart.alpadia-tarihler-tam-satir \u003e h3 + p",
                                                                   "body.sayfa-yurt-disi-universite-switzerland-bhms .toronto-immerse-sec-akademik-icerik \u003e p:first-of-type",
                                                                   "body.sayfa-yurt-disi-universite-switzerland-bhms .toronto-immerse-sec-deneyim-icerik \u003e p:first-of-type",
                                                                   "body.sayfa-yurt-disi-universite-switzerland-bhms .toronto-kulturel-icerik \u003e p:first-of-type",
@@ -57,11 +61,13 @@
                                      },
                                      {
                                          "scope":  "TOP",
-                                         "selector_count":  5,
+                                         "selector_count":  7,
                                          "property_count":  1,
                                          "decl_key_preview":  "display:none",
                                          "selectors_sample":  [
                                                                   ".blog-mobil-icindekiler-sabit-cap",
+                                                                  ".hizmet-tab-alani input[type=\"radio\"]",
+                                                                  ".hizmet-tab-alani input[type=\"radio\"],\n.alt-panel",
                                                                   ".sayfa-kings-education .kings-london-toc-outer .blog-mobil-icindekiler-wrap",
                                                                   ".tab-panel",
                                                                   ".yas-tab-input",
@@ -70,28 +76,57 @@
                                      },
                                      {
                                          "scope":  "TOP",
-                                         "selector_count":  5,
+                                         "selector_count":  6,
                                          "property_count":  1,
-                                         "decl_key_preview":  "text-align:center",
+                                         "decl_key_preview":  "grid-template-columns:1fr",
                                          "selectors_sample":  [
-                                                                  "#sportech-tenis-giris-metni \u003e h2:first-of-type",
-                                                                  ".canada-secim-paneli \u003e h2",
-                                                                  ".chantemerle-ornek-kapsayici",
-                                                                  ".sea-beslenme-kart.sea-beslenme-kart-ortali,\nbody.ana-sayfa .hizmet-tab-alani,\nbody.ana-sayfa .hizmet-tab-alani .tab-metin",
-                                                                  "body.kings-bournemouth-yaz-okulu-sayfa article.icerik-alani h2"
+                                                                  ".sayfa-kings-education .kings-la-program-detay-grid .rozet-kart,\n.sayfa-kings-education .rozet-grid.icerik-kutusu-grid.yatay-2:has(\u003e .rozet-kart \u003e .rozet-kart-icerik-blok) .rozet-kart",
+                                                                  "article.icerik-alani .rozet-grid.icerik-kutusu-grid.dikey, article.icerik-alani .rozet-grid.icerik-kutusu-grid.yatay-1,\n.futbol-ikili-kapsayici .ac-milan-avantaj-kutu .ac-milan-avantaj-listesi,\n:is(body.ana-sayfa .dil-okullari-secim-paneli, body.sayfa-hizmetlerimiz .dil-okullari-secim-paneli, body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli)) .yaz-okullari-ulke-kart-wrap",
+                                                                  "body.sayfa-kings-education-london .kings-cambridge-gri-ikili",
+                                                                  "body.sayfa-kings-education-los-angeles .kings-la-program-detay-grid .rozet-kart,\nbody.sayfa-kings-education-los-angeles .rozet-grid.icerik-kutusu-grid.yatay-2:has(\u003e .rozet-kart \u003e .rozet-kart-icerik-blok) .rozet-kart",
+                                                                  "body.sayfa-yurt-disi-universite #uni-neden-yurt-disinda .rozet-grid .rozet-kart",
+                                                                  "body.sportech-academy-page #yaz-programlari-detay .rozet-grid .rozet-kart"
+                                                              ]
+                                     },
+                                     {
+                                         "scope":  "TOP",
+                                         "selector_count":  6,
+                                         "property_count":  1,
+                                         "decl_key_preview":  "font-weight:700",
+                                         "selectors_sample":  [
+                                                                  "body.immerse-education-page .blog-yazi-ana div[id$=\"-giris-metni\"] \u003e h2:first-of-type strong",
+                                                                  "body.immerse-education-page .blog-yazi-ana div[id$=\"-giris-metni\"] p strong",
+                                                                  "body.sayfa-yurt-disi-universite-switzerland-bhms .toronto-immerse-sec-akademik-icerik \u003e p:first-of-type strong",
+                                                                  "body.sayfa-yurt-disi-universite-switzerland-bhms .toronto-immerse-sec-deneyim-icerik \u003e p:first-of-type strong",
+                                                                  "body.sayfa-yurt-disi-universite-switzerland-bhms .toronto-kulturel-icerik \u003e p:first-of-type strong",
+                                                                  "body.sayfa-yurt-disi-universite-switzerland-bhms .toronto-mezuniyet-staji-icerik \u003e p:first-of-type strong"
+                                                              ]
+                                     },
+                                     {
+                                         "scope":  "TOP",
+                                         "selector_count":  6,
+                                         "property_count":  1,
+                                         "decl_key_preview":  "grid-column:1 / -1",
+                                         "selectors_sample":  [
+                                                                  ".rozet-kart-tam-satir",
+                                                                  ".sayfa-kings-education .kings-la-grid-tam-genis",
+                                                                  ".sayfa-kings-education .rozet-grid.icerik-kutusu-grid.yatay-2 \u003e .rozet-kart.kings-la-rozet-tam-genis",
+                                                                  ":is(body.sayfa-alpadia-frankfurt, body.sayfa-alpadia-freiburg)\n    .immerse-detay-kutu\n    .alpadia-program-detay-grid\n    .immerse-detay-kart.alpadia-tarihler-tam-satir,\nbody.sayfa-chantemerle .immerse-detay-kutu .chantemerle-detay-grid-3lu .chantemerle-detay-kart--tam-satir",
+                                                                  "article.icerik-alani .rozet-grid.icerik-kutusu-grid.yatay-2 \u003e .rozet-kart.kings-la-rozet-tam-genis",
+                                                                  "body.sayfa-yurt-disi-yaz-okullari-italy-milan .italy-sosyal-kutu .italy-sosyal-list \u003e .italy-sosyal-madde:last-child"
                                                               ]
                                      },
                                      {
                                          "scope":  "TOP",
                                          "selector_count":  5,
                                          "property_count":  1,
-                                         "decl_key_preview":  "grid-template-columns:1fr",
+                                         "decl_key_preview":  "margin-top:50px",
                                          "selectors_sample":  [
-                                                                  ".sayfa-kings-education .kings-la-program-detay-grid .rozet-kart,\n.sayfa-kings-education .kings-la-kurs-rozet-grid .rozet-kart",
-                                                                  "article.icerik-alani .rozet-grid.icerik-kutusu-grid.dikey, article.icerik-alani .rozet-grid.icerik-kutusu-grid.yatay-1,\n.futbol-ikili-kapsayici .ac-milan-avantaj-kutu .ac-milan-avantaj-listesi,\nbody.ana-sayfa .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap, body.sayfa-hizmetlerimiz .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap,\nbody.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli) .yaz-okullari-ulke-kart-wrap",
-                                                                  "body.sayfa-kings-education-los-angeles .kings-la-program-detay-grid .rozet-kart,\nbody.sayfa-kings-education-los-angeles .kings-la-kurs-rozet-grid .rozet-kart",
-                                                                  "body.sayfa-yurt-disi-universite .universite-neden-rozet-grid .rozet-kart",
-                                                                  "body.sportech-academy-page #yaz-programlari-detay .rozet-grid.sportech-program-detay-grid .rozet-kart"
+                                                                  "#sportech-tenis-gunduz-program-icerigi \u003e .rozet-grid.icerik-kutusu-grid.yatay-2 + .rozet-grid.icerik-kutusu-grid.yatay-2",
+                                                                  "#sportech-tenis-yatili-program-icerigi \u003e .rozet-grid.icerik-kutusu-grid.yatay-2 + .rozet-grid.icerik-kutusu-grid.yatay-2",
+                                                                  ".futbol-mt-50",
+                                                                  ".ofis-harita-section,\n.immerse-konaklama-kutu,\n.immerse-geziler-kutu,\n.sayfa-kings-education .kings-beceri-ust-bolum,\nbody.sayfa-kings-education-bournemouth .kings-bournemouth-akreditasyon-bolumu,\nbody.kings-oxford-sayfa .kings-oxford-akreditasyon-bolumu,\n.yaz-okullari-program-kutu + .cerceve-kutu, .yaz-okullari-program-kutu + .site-gri-cerceve-kutu",
+                                                                  "article.icerik-alani h2:has(+ .yaz-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap),\narticle.icerik-alani h2:has(+ .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap)"
                                                               ]
                                      },
                                      {
@@ -100,46 +135,70 @@
                                          "property_count":  2,
                                          "decl_key_preview":  "grid-column:1|grid-row:1",
                                          "selectors_sample":  [
-                                                                  ".sayfa-kings-education .kings-la-program-detay-grid .rozet-baslik,\n.sayfa-kings-education .kings-la-kurs-rozet-grid .rozet-baslik",
-                                                                  "body.sayfa-kings-education-los-angeles .kings-la-program-detay-grid .rozet-baslik,\nbody.sayfa-kings-education-los-angeles .kings-la-kurs-rozet-grid .rozet-baslik",
-                                                                  "body.sayfa-yurt-disi-universite .universite-neden-rozet-grid .rozet-baslik",
-                                                                  "body.sportech-academy-page #yaz-programlari-detay .rozet-grid.sportech-program-detay-grid .ortak-kart-baslik"
+                                                                  ".sayfa-kings-education .kings-la-program-detay-grid .rozet-baslik,\n.sayfa-kings-education .rozet-grid.icerik-kutusu-grid.yatay-2:has(\u003e .rozet-kart \u003e .rozet-kart-icerik-blok) .rozet-baslik",
+                                                                  "body.sayfa-kings-education-los-angeles .kings-la-program-detay-grid .rozet-baslik,\nbody.sayfa-kings-education-los-angeles .rozet-grid.icerik-kutusu-grid.yatay-2:has(\u003e .rozet-kart \u003e .rozet-kart-icerik-blok) .rozet-baslik",
+                                                                  "body.sayfa-yurt-disi-universite #uni-neden-yurt-disinda .rozet-grid .rozet-baslik",
+                                                                  "body.sportech-academy-page #yaz-programlari-detay .rozet-grid .ortak-kart-baslik"
+                                                              ]
+                                     },
+                                     {
+                                         "scope":  "TOP",
+                                         "selector_count":  4,
+                                         "property_count":  3,
+                                         "decl_key_preview":  "grid-column:1 / -1|justify-self:center|width:min(100%, calc((100% - 14px) / 2))",
+                                         "selectors_sample":  [
+                                                                  ".cerceve-kutu .rozet-grid.rozet-grid--hub-2-2-1 \u003e .rozet-kart:nth-child(3),\n.site-gri-cerceve-kutu .rozet-grid.rozet-grid--hub-2-2-1 \u003e .rozet-kart:nth-child(3)",
+                                                                  ".sayfa-kings-education .kings-la-program-detay-grid \u003e .kings-la-program-sure-kart-ortali",
+                                                                  "article.icerik-alani .rozet-grid.icerik-kutusu-grid.yatay-2.son-kart-ortala \u003e .rozet-kart:last-child:nth-child(odd),\n.oxford-sosyal-rozet-kutu .rozet-grid \u003e .rozet-kart:nth-child(3)",
+                                                                  "body.sayfa-kings-education-los-angeles .kings-la-program-detay-grid \u003e .kings-la-program-sure-kart-ortali"
                                                               ]
                                      },
                                      {
                                          "scope":  "TOP",
                                          "selector_count":  4,
                                          "property_count":  1,
-                                         "decl_key_preview":  "grid-column:1 / -1",
+                                         "decl_key_preview":  "margin-bottom:50px",
                                          "selectors_sample":  [
-                                                                  ".sayfa-kings-education .kings-la-grid-tam-genis",
-                                                                  ".sayfa-kings-education .rozet-grid.icerik-kutusu-grid.yatay-2 \u003e .rozet-kart.kings-la-rozet-tam-genis",
-                                                                  "article.icerik-alani .rozet-grid.icerik-kutusu-grid.yatay-2 \u003e .rozet-kart.kings-la-rozet-tam-genis",
-                                                                  "body.sayfa-alpadia-frankfurt .immerse-detay-kutu .alpadia-program-detay-grid .immerse-detay-kart.alpadia-tarihler-tam-satir,\nbody.sayfa-alpadia-freiburg .immerse-detay-kutu .alpadia-program-detay-grid .immerse-detay-kart.alpadia-tarihler-tam-satir,\nbody.sayfa-chantemerle .immerse-detay-kutu .chantemerle-detay-grid-3lu .chantemerle-detay-kart--tam-satir"
+                                                                  "body.sbc-canford-yaz-okulu-sayfa .sbc-spor-akademi-kart-grid \u003e .sbc-spor-akademi-kart:first-child",
+                                                                  "body.sbc-canford-yaz-okulu-sayfa .sbc-spor-akademi-kart-grid \u003e .sbc-spor-akademi-kart:nth-child(2)",
+                                                                  "body.sbc-canford-yaz-okulu-sayfa .sbc-spor-akademi-kart-grid \u003e .sbc-spor-akademi-kart:nth-child(3)",
+                                                                  "body.sbc-canford-yaz-okulu-sayfa .sbc-spor-akademi-kart-grid \u003e .sbc-spor-akademi-kart:nth-child(4)"
                                                               ]
                                      },
                                      {
                                          "scope":  "TOP",
                                          "selector_count":  4,
                                          "property_count":  1,
-                                         "decl_key_preview":  "margin-bottom:15px !important",
+                                         "decl_key_preview":  "margin-bottom:0",
                                          "selectors_sample":  [
-                                                                  "body.ana-sayfa h2",
-                                                                  "body.sayfa-yurt-disi-lise article.icerik-alani \u003e h2:has(\u003e .vurgu-satir)",
-                                                                  "body.sayfa-yurt-disi-yaz-okullari article.icerik-alani \u003e h2:has(\u003e .vurgu-satir)",
-                                                                  "body.sayfa-yurt-disi-yaz-okullari-canada .icerik-alani \u003e h2:has(.vurgu-satir)"
+                                                                  ".icerik-kutusu .rozet-kart \u003e .kutu-liste li:last-child",
+                                                                  ".icerik-kutusu .rozet-kart \u003e .rozet-kart-icerik-blok \u003e .kings-la-paragraf-metin:last-child",
+                                                                  ".kutu-liste li:last-child,\nh2:has(\u003e .vurgu-satir)",
+                                                                  "body.kings-oxford-sayfa .son-paragraf-sifir-margin,\n.ingiltere-deneyim-kutu p:last-of-type,\n.alpadia-freiburg-tanitim-metin p:last-child,\n.alpadia-li-mb0,\n.bournemouth-dil-giris p:last-child,\n.frankfurt-dil-program-bolumu .frankfurt-dil-program-kart:not(.frankfurt-dil-program-metod-kapsayici) \u003e p:last-child,\n.frankfurt-sosyal-kultur-bolumu .frankfurt-sosyal-kultur-alt-liste li:last-child,\n.immerse-tokyo-giris-program-liste li:last-child,\n.immerse-detay-kart.immerse-tokyo-detay-one-cikanlar .kutu-liste li:last-child,\n.immerse-tokyo-branches-kutu .immerse-tokyo-rozet-liste li:last-child,\n.konaklama-intro-panel p:last-child,\n.sayfa-kings-education .kings-paragraf-son,\nbody.sayfa-kings-education-bournemouth .kings-bournemouth-paragraf-son,\n.sayfa-kings-education .kings-giris-metni p:last-child,\n.sayfa-kings-education .immerse-detay-kart.kings-london-detay-liste-kart .kutu-liste li:last-child,\n.sayfa-kings-education .kings-cambridge-kart-ust \u003e p:last-child,\n.sayfa-kings-education .kings-cambridge-gri-ikili .immerse-tokyo-rozet-accordion-metin p:last-child,\n.sayfa-kings-education .kings-la-film-icerik-listesi li:last-child,\nbody.sayfa-kings-education-los-angeles .kings-la-konaklama-bolum .konaklama-liste li:last-child, body.sayfa-kings-education-new-york .kings-la-konaklama-bolum .konaklama-liste li:last-child, body.sayfa-kings-education-boston .kings-la-konaklama-bolum .konaklama-liste li:last-child, body.sayfa-kings-education-london .kings-la-konaklama-bolum .konaklama-liste li:last-child,\nbody.kings-oxford-sayfa .kings-oxford-sosyal-paragraf-son,\n.londra-dil-giris p:last-child,\n.oxford-dil-giris p:last-child,\n.sportech-academy-sol-vurgu-blok p:last-child,\nbody.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-konaklama-metin .son-paragraf-sifir-margin,\nbody.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-kurs-kartlari-bolumu \u003e .kirmizi-kutu,\nbody.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-sss-dahil-liste li:last-child,\n.usa-sehir-dil-giris p:last-child"
+                                                              ]
+                                     },
+                                     {
+                                         "scope":  "TOP",
+                                         "selector_count":  4,
+                                         "property_count":  2,
+                                         "decl_key_preview":  "margin-top:0|padding-top:0",
+                                         "selectors_sample":  [
+                                                                  ":is(.dil-okullari-secim-paneli, .yaz-okullari-secim-paneli) \u003e h2:has(\u003e .vurgu-satir) + .ulke-kart-wrap,\n.yaz-okullari-secim-paneli \u003e h2:has(\u003e .vurgu-satir) + .yaz-okullari-ulke-kart-wrap,\n:is(.dil-okullari-secim-paneli, .yaz-okullari-secim-paneli) \u003e h2 + .yaz-okullari-ulke-kart-wrap,\n:is(.dil-okullari-secim-paneli, .yaz-okullari-secim-paneli) \u003e h2 + .ulke-kart-wrap",
+                                                                  ":is(.yaz-okullari-sehir-okul-paneli, .germany-secim-paneli, .london-secim-paneli, .new-york-secim-paneli, .oxford-secim-paneli, .tokyo-secim-paneli, .ulke-secim-paneli-ortak) .okul-liste-kapsayici,\n.okul-listesi-secim-paneli .okul-listesi-okul-liste-kapsayici",
+                                                                  "body.ana-sayfa .hizmet-tab-alani .hizmet-tab-alt-icerik-cerceve",
+                                                                  "body.sayfa-hizmetlerimiz .hizmetlerimiz-egitim-alanlari \u003e h2 + .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap"
                                                               ]
                                      },
                                      {
                                          "scope":  "TOP",
                                          "selector_count":  4,
                                          "property_count":  1,
-                                         "decl_key_preview":  "font-weight:700",
+                                         "decl_key_preview":  "color:#bd0505",
                                          "selectors_sample":  [
-                                                                  "body.sayfa-yurt-disi-universite-switzerland-bhms .toronto-immerse-sec-akademik-icerik \u003e p:first-of-type strong",
-                                                                  "body.sayfa-yurt-disi-universite-switzerland-bhms .toronto-immerse-sec-deneyim-icerik \u003e p:first-of-type strong",
-                                                                  "body.sayfa-yurt-disi-universite-switzerland-bhms .toronto-kulturel-icerik \u003e p:first-of-type strong",
-                                                                  "body.sayfa-yurt-disi-universite-switzerland-bhms .toronto-mezuniyet-staji-icerik \u003e p:first-of-type strong"
+                                                                  ".incele-btn-minimal:hover,\n.iletisim-kart-online .iletisim-kart-baslik,\n.sayfa-kings-education .kings-bos-toefl-kart-vurgu h4,\n.okul-listesi-btn-modern-incele:hover",
+                                                                  ".okul-isim-link:hover,\n.okul-listesi-program-secim-hub-baslik .okul-listesi-alt-satir-lacivert .vurgu-renk,\n.okul-listesi-okul-isim-link:hover,\n:is(.yaz-okullari-secim-paneli, .dil-okullari-secim-paneli) .kirmizi-kutu .alt-satir-lacivert,\narticle.icerik-alani \u003e h2:has(\u003e .vurgu-satir) \u003e .vurgu-satir .vurgu-renk, .icerik-alani \u003e h2:has(\u003e .vurgu-satir) \u003e .vurgu-satir .vurgu-renk, body.sayfa-hizmetlerimiz .hizmetlerimiz-egitim-alanlari \u003e h2:has(\u003e .vurgu-satir) \u003e .vurgu-satir .vurgu-renk, :is(.dil-okullari-secim-paneli, .yaz-okullari-secim-paneli) \u003e h2:has(\u003e .vurgu-satir) \u003e .vurgu-satir .vurgu-renk,\n.yaz-okullari-secim-paneli .program-secim-hub-baslik .vurgu-satir .vurgu-renk",
+                                                                  ":is(.yaz-okullari-sehir-okul-paneli, .canada-secim-paneli, .germany-secim-paneli, .italy-secim-paneli, .london-secim-paneli, .new-york-secim-paneli, .oxford-secim-paneli, .tokyo-secim-paneli) .btn-modern-incele:hover,\n:is(.yaz-okullari-sehir-okul-paneli, .canada-secim-paneli, .germany-secim-paneli, .italy-secim-paneli, .london-secim-paneli, .new-york-secim-paneli, .oxford-secim-paneli, .tokyo-secim-paneli) .premium-liste-kart:hover :is(.okul-isim-link, .btn-modern-incele, .ok-animasyon),\n.okul-listesi-secim-paneli .okul-listesi-btn-modern-incele:hover,\n.okul-listesi-secim-paneli .okul-listesi-premium-liste-kart:hover :is(.okul-listesi-okul-isim-link, .okul-listesi-btn-modern-incele, .okul-listesi-ok-animasyon)",
+                                                                  "article.icerik-alani .cerceve-kutu \u003e h3 .vurgu-renk"
                                                               ]
                                      },
                                      {
@@ -156,59 +215,46 @@
                                      },
                                      {
                                          "scope":  "TOP",
-                                         "selector_count":  4,
-                                         "property_count":  1,
-                                         "decl_key_preview":  "margin-top:50px",
+                                         "selector_count":  3,
+                                         "property_count":  6,
+                                         "decl_key_preview":  "color:#bd0505|font-size:clamp(1.2rem, 2.5vw, 1.5rem)|font-weight:700|line-height:1.3|margin:0|margin-top:0.35rem",
                                          "selectors_sample":  [
-                                                                  "#sportech-tenis-gunduz-program-icerigi \u003e .rozet-grid.icerik-kutusu-grid.yatay-2 + .rozet-grid.icerik-kutusu-grid.yatay-2",
-                                                                  "#sportech-tenis-yatili-program-icerigi \u003e .rozet-grid.icerik-kutusu-grid.yatay-2 + .rozet-grid.icerik-kutusu-grid.yatay-2",
-                                                                  ".futbol-mt-50",
-                                                                  ".ofis-harita-section,\n.immerse-konaklama-kutu,\n.immerse-geziler-kutu,\n.sayfa-kings-education .kings-beceri-ust-bolum,\nbody.sayfa-kings-education-bournemouth .kings-bournemouth-akreditasyon-bolumu,\nbody.kings-oxford-sayfa .kings-oxford-akreditasyon-bolumu,\n.yaz-okullari-program-kutu + .cerceve-kutu, .yaz-okullari-program-kutu + .site-gri-cerceve-kutu"
-                                                              ]
-                                     },
-                                     {
-                                         "scope":  "TOP",
-                                         "selector_count":  4,
-                                         "property_count":  3,
-                                         "decl_key_preview":  "grid-column:1 / -1|justify-self:center|width:min(100%, calc((100% - 14px) / 2))",
-                                         "selectors_sample":  [
-                                                                  ".cerceve-kutu .rozet-grid.rozet-grid--hub-2-2-1 \u003e .rozet-kart:nth-child(3),\n.site-gri-cerceve-kutu .rozet-grid.rozet-grid--hub-2-2-1 \u003e .rozet-kart:nth-child(3)",
-                                                                  ".sayfa-kings-education .kings-la-program-detay-grid \u003e .kings-la-program-sure-kart-ortali",
-                                                                  "article.icerik-alani .rozet-grid.icerik-kutusu-grid.yatay-2.son-kart-ortala \u003e .rozet-kart:last-child:nth-child(odd),\n.milan-avantaj-kutu .milan-avantaj-rozet-grid \u003e .rozet-kart:nth-child(5),\n.oxford-sosyal-rozet-kutu .oxford-sosyal-rozet-grid \u003e .rozet-kart:nth-child(3)",
-                                                                  "body.sayfa-kings-education-los-angeles .kings-la-program-detay-grid \u003e .kings-la-program-sure-kart-ortali"
+                                                                  "article.icerik-alani \u003e h2 \u003e span.vurgu-satir,\n:is(.dil-okullari-secim-paneli, .yaz-okullari-secim-paneli) \u003e h2 \u003e span.vurgu-satir",
+                                                                  "body.sayfa-hizmetlerimiz .hizmetlerimiz-egitim-alanlari \u003e h2 \u003e span.vurgu-satir",
+                                                                  "body.sayfa-yurt-disi-yaz-okullari #yaz-hub-ulkeler \u003e span.vurgu-satir,\nbody.sayfa-yurt-disi-yaz-okullari #sportech-mil-program-secim \u003e span.vurgu-satir,\nbody.sayfa-yurt-disi-dil-okullari #dil-hub-ulkeler \u003e span.vurgu-satir,\nbody.sayfa-yurt-disi-lise #lise-hub-program-secimi \u003e span.vurgu-satir,\nbody.sayfa-yurt-disi-universite #uni-ulkeler-secim \u003e span.vurgu-satir"
                                                               ]
                                      },
                                      {
                                          "scope":  "TOP",
                                          "selector_count":  3,
-                                         "property_count":  4,
-                                         "decl_key_preview":  "color:#444|font-size:14.5px|line-height:1.7|margin:0",
+                                         "property_count":  2,
+                                         "decl_key_preview":  "content:none|display:none",
                                          "selectors_sample":  [
-                                                                  ".italy-avantaj-kart p,\n.yas-tab-icerik p",
-                                                                  ".italy-destinasyon-madde p,\n.italy-program-kart p,\n.italy-sosyal-icerik p,\n.milan-avantaj-kart p,\n.frankfurt-avantaj-kart p",
-                                                                  ".yas-tab-icerik p"
-                                                              ]
-                                     },
-                                     {
-                                         "scope":  "TOP",
-                                         "selector_count":  3,
-                                         "property_count":  3,
-                                         "decl_key_preview":  "font-size:var(--h3-font-size)|font-weight:700|margin:0 0 6px 0",
-                                         "selectors_sample":  [
-                                                                  ".dil-okullari-konaklama-kutu .konaklama-icerik h3,\n.icerik-kutusu .yaz-konaklama-icerik h3",
-                                                                  ".italy-program-kart h3,\n.milan-avantaj-kart h3",
-                                                                  ".kanada-avantaj-kart h3,\n.italy-avantaj-kart h3,\n.immerse-program-icerik h3,\n.burs-program-kart h3"
+                                                                  ".immerse-tokyo-giris-program-liste li::before",
+                                                                  ".kirmizi-kutu p.ust-satir::before, .kirmizi-kutu p.ust-satir::after, .kirmizi-kutu h2 .ust-satir::before, .kirmizi-kutu h2 .ust-satir::after, article.icerik-alani .kirmizi-kutu p.ust-satir::before, article.icerik-alani .kirmizi-kutu p.ust-satir::after, article.icerik-alani .kirmizi-kutu h2 .ust-satir::before, article.icerik-alani .kirmizi-kutu h2 .ust-satir::after, body.ana-sayfa article.icerik-alani .kirmizi-kutu p.ust-satir::before, body.ana-sayfa article.icerik-alani .kirmizi-kutu p.ust-satir::after, body.ana-sayfa article.icerik-alani .kirmizi-kutu h2 .ust-satir::before, body.ana-sayfa article.icerik-alani .kirmizi-kutu h2 .ust-satir::after,\n.immerse-detay-kart.immerse-tokyo-detay-one-cikanlar .kutu-liste li::before,\n.sayfa-kings-education .immerse-detay-kart.kings-london-detay-liste-kart .kutu-liste li::before,\nbody.sayfa-kings-education-los-angeles .kutu-liste.kings-la-liste-sifir:not(.kings-la-film-icerik-listesi) li::before, body.sayfa-kings-education-new-york .kutu-liste.kings-la-liste-sifir:not(.kings-la-film-icerik-listesi) li::before,\nbody.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-tesisler-kart .yas-alan-etiketleri li::before, body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-etkinlikler-kart .yas-alan-etiketleri li::before",
+                                                                  "body.sayfa-kings-education-los-angeles article.icerik-alani .kutu-liste li::before"
                                                               ]
                                      },
                                      {
                                          "scope":  "TOP",
                                          "selector_count":  3,
                                          "property_count":  1,
-                                         "decl_key_preview":  "margin-bottom:0",
+                                         "decl_key_preview":  "display:block",
                                          "selectors_sample":  [
-                                                                  ".icerik-kutusu .rozet-kart \u003e .kutu-liste li:last-child",
-                                                                  ".icerik-kutusu .rozet-kart \u003e .rozet-kart-icerik-blok \u003e .kings-la-paragraf-metin:last-child",
-                                                                  "body.kings-oxford-sayfa .son-paragraf-sifir-margin,\n.ingiltere-deneyim-kutu p:last-of-type,\n.alpadia-freiburg-tanitim-metin p:last-child,\n.alpadia-li-mb0,\n.bournemouth-dil-giris p:last-child,\n.frankfurt-dil-program-bolumu .frankfurt-dil-program-kart:not(.frankfurt-dil-program-metod-kapsayici) \u003e p:last-child,\n.frankfurt-sosyal-kultur-bolumu .frankfurt-sosyal-kultur-alt-liste li:last-child,\n.immerse-tokyo-giris-program-liste li:last-child,\n.immerse-detay-kart.immerse-tokyo-detay-one-cikanlar .kutu-liste li:last-child,\n.immerse-tokyo-branches-kutu .immerse-tokyo-rozet-liste li:last-child,\n.konaklama-intro-panel p:last-child,\n.sayfa-kings-education .kings-paragraf-son,\nbody.sayfa-kings-education-bournemouth .kings-bournemouth-paragraf-son,\n.sayfa-kings-education .kings-giris-metni p:last-child,\n.sayfa-kings-education .immerse-detay-kart.kings-london-detay-liste-kart .kutu-liste li:last-child,\n.sayfa-kings-education .kings-cambridge-kart-ust \u003e p:last-child,\n.sayfa-kings-education .kings-cambridge-gri-ikili .immerse-tokyo-rozet-accordion-metin p:last-child,\n.sayfa-kings-education .kings-la-film-icerik-listesi li:last-child,\nbody.sayfa-kings-education-los-angeles .kings-la-konaklama-bolum .konaklama-liste li:last-child, body.sayfa-kings-education-new-york .kings-la-konaklama-bolum .konaklama-liste li:last-child, body.sayfa-kings-education-boston .kings-la-konaklama-bolum .konaklama-liste li:last-child,\nbody.kings-oxford-sayfa .kings-oxford-sosyal-paragraf-son,\n.londra-dil-giris p:last-child,\n.oxford-dil-giris p:last-child,\n.sportech-program-paneli .kirmizi-kutu,\n.sportech-program-icerik .sportech-program-kart-wrap-son,\n.sportech-academy-sol-vurgu-blok p:last-child,\nbody.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-konaklama-metin .son-paragraf-sifir-margin,\nbody.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-kurs-kartlari-bolumu \u003e .kirmizi-kutu,\nbody.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-sss-dahil-liste li:last-child,\n.usa-sehir-dil-giris p:last-child"
+                                                                  "#tab-dil:checked ~ .hizmet-tab-panelleri-kapsayici #panel-dil, #tab-yaz:checked ~ .hizmet-tab-panelleri-kapsayici #panel-yaz, #tab-uni:checked ~ .hizmet-tab-panelleri-kapsayici #panel-uni,\n#dil-ing:checked ~ .hizmet-tab-ana-icerik-cerceve #panel-dil-ing, #dil-usa:checked ~ .hizmet-tab-ana-icerik-cerceve #panel-dil-usa,\n#yaz-ing:checked ~ .hizmet-tab-ana-icerik-cerceve #panel-yaz-ing, #yaz-isvicre:checked ~ .hizmet-tab-ana-icerik-cerceve #panel-yaz-isvicre, #yaz-almanya:checked ~ .hizmet-tab-ana-icerik-cerceve #panel-yaz-almanya, #yaz-kanada:checked ~ .hizmet-tab-ana-icerik-cerceve #panel-yaz-kanada, #yaz-italya:checked ~ .hizmet-tab-ana-icerik-cerceve #panel-yaz-italya, #yaz-japonya:checked ~ .hizmet-tab-ana-icerik-cerceve #panel-yaz-japonya, #yaz-amerika:checked ~ .hizmet-tab-ana-icerik-cerceve #panel-yaz-amerika,\n#uni-isvicre:checked ~ .hizmet-tab-ana-icerik-cerceve #panel-uni-isvicre,\n#yas-13-15:checked ~ #panel-yas-13-15, #yas-16-18:checked ~ #panel-yas-16-18",
+                                                                  "#tab-dil:checked ~ .hizmet-tab-panelleri-kapsayici #panel-dil,\n#tab-yaz:checked ~ .hizmet-tab-panelleri-kapsayici #panel-yaz,\n#tab-uni:checked ~ .hizmet-tab-panelleri-kapsayici #panel-uni",
+                                                                  ":is(\n        body.odeme-durum-sayfa,\n        body.sayfa-cerez-aydinlatma-metni,\n        body.sayfa-gizlilik-politikasi,\n        body.sayfa-kvkk-acik-riza,\n        body.sayfa-kvkk-aydinlatma\n    )\n    .sosyal-medya-alani\n    img,\n#yas13-15:checked ~ .yas-tab-icerikler .yas13-15-icerik, #yas15-18:checked ~ .yas-tab-icerikler .yas15-18-icerik, #yas16-18:checked ~ .yas-tab-icerikler .yas16-18-icerik, #yas18-30:checked ~ .yas-tab-icerikler .yas18-30-icerik, #yas13-15-oxford:checked ~ .yas-tab-icerikler .yas13-15-oxford-icerik, #yas16-18-oxford:checked ~ .yas-tab-icerikler .yas16-18-oxford-icerik, #tokyo-immerse-akademik:checked ~ .yas-tab-icerikler .tokyo-immerse-akademik-icerik, #tokyo-immerse-kariyer:checked ~ .yas-tab-icerikler .tokyo-immerse-kariyer-icerik, #yas15-18-toronto:checked ~ .yas-tab-icerikler .yas15-18-toronto-icerik, #toronto-simgesel:checked ~ .yas-tab-icerikler .toronto-simgesel-icerik, #toronto-kulturel:checked ~ .yas-tab-icerikler .toronto-kulturel-icerik, #toronto-arkadaslik:checked ~ .yas-tab-icerikler .toronto-arkadaslik-icerik, #toronto-immerse-sec-akademik:checked ~ .yas-tab-icerikler .toronto-immerse-sec-akademik-icerik, #toronto-immerse-sec-deneyim:checked ~ .yas-tab-icerikler .toronto-immerse-sec-deneyim-icerik, #toronto-mezuniyet-staji:checked ~ .yas-tab-icerikler .toronto-mezuniyet-staji-icerik, #sea-bern:checked ~ .yas-tab-icerikler .sea-bern-icerik, #sea-cailler:checked ~ .yas-tab-icerikler .sea-cailler-icerik, #sea-olimpiyat:checked ~ .yas-tab-icerikler .sea-olimpiyat-icerik, #sektor-mimarlik:checked ~ .yas-tab-icerikler .sektor-mimarlik-icerik, #sektor-bankacilik:checked ~ .yas-tab-icerikler .sektor-bankacilik-icerik, #sektor-muhendislik:checked ~ .yas-tab-icerikler .sektor-muhendislik-icerik, #sektor-film:checked ~ .yas-tab-icerikler .sektor-film-icerik, #aktivite-genel:checked ~ .yas-tab-icerikler .aktivite-genel-icerik, #aktivite-doga:checked ~ .yas-tab-icerikler .aktivite-doga-icerik, #aktivite-kultur:checked ~ .yas-tab-icerikler .aktivite-kultur-icerik, #aktivite-teknoloji:checked ~ .yas-tab-icerikler .aktivite-teknoloji-icerik,\n#yas13-15:checked ~ .yas-tab-icerikler .yas13-15-icerik, #yas15-18:checked ~ .yas-tab-icerikler .yas15-18-icerik, #yas16-18:checked ~ .yas-tab-icerikler .yas16-18-icerik, #yas18-30:checked ~ .yas-tab-icerikler .yas18-30-icerik, #yas13-15-oxford:checked ~ .yas-tab-icerikler .yas13-15-oxford-icerik, #yas16-18-oxford:checked ~ .yas-tab-icerikler .yas16-18-oxford-icerik, #tokyo-immerse-akademik:checked ~ .yas-tab-icerikler .tokyo-immerse-akademik-icerik, #tokyo-immerse-kariyer:checked ~ .yas-tab-icerikler .tokyo-immerse-kariyer-icerik, #yas15-18-toronto:checked ~ .yas-tab-icerikler .yas15-18-toronto-icerik, #toronto-simgesel:checked ~ .yas-tab-icerikler .toronto-simgesel-icerik, #toronto-kulturel:checked ~ .yas-tab-icerikler .toronto-kulturel-icerik, #toronto-arkadaslik:checked ~ .yas-tab-icerikler .toronto-arkadaslik-icerik, #toronto-immerse-sec-akademik:checked ~ .yas-tab-icerikler .toronto-immerse-sec-akademik-icerik, #toronto-immerse-sec-deneyim:checked ~ .yas-tab-icerikler .toronto-immerse-sec-deneyim-icerik, #toronto-mezuniyet-staji:checked ~ .yas-tab-icerikler .toronto-mezuniyet-staji-icerik, #sea-bern:checked ~ .yas-tab-icerikler .sea-bern-icerik, #sea-cailler:checked ~ .yas-tab-icerikler .sea-cailler-icerik, #sea-olimpiyat:checked ~ .yas-tab-icerikler .sea-olimpiyat-icerik, #sektor-mimarlik:checked ~ .yas-tab-icerikler .sektor-mimarlik-icerik, #sektor-bankacilik:checked ~ .yas-tab-icerikler .sektor-bankacilik-icerik, #sektor-muhendislik:checked ~ .yas-tab-icerikler .sektor-muhendislik-icerik, #sektor-film:checked ~ .yas-tab-icerikler .sektor-film-icerik, #investin-15-18:checked ~ .yas-tab-icerikler .investin-15-18-icerik, #investin-12-14:checked ~ .yas-tab-icerikler .investin-12-14-icerik,\n#gez-cam-nehri:checked ~ .yas-tab-icerikler .gez-cam-nehri-icerik, #gez-kings-chapel:checked ~ .yas-tab-icerikler .gez-kings-chapel-icerik, #gez-mentor-aile:checked ~ .yas-tab-icerikler .gez-mentor-aile-icerik, #gez-cambridge-simgeleri:checked ~ .yas-tab-icerikler .gez-cambridge-simgeleri-icerik, #gez-kulturel-etkinlikler:checked ~ .yas-tab-icerikler .gez-kulturel-etkinlikler-icerik, #oxford-geleneksel:checked ~ .yas-tab-icerikler .oxford-geleneksel-icerik, #oxford-tarihi-yapilar:checked ~ .yas-tab-icerikler .oxford-tarihi-yapilar-icerik, #oxford-botanik-bahcesi:checked ~ .yas-tab-icerikler .oxford-botanik-bahcesi-icerik, #oxford-cherwell-sandal:checked ~ .yas-tab-icerikler .oxford-cherwell-sandal-icerik, #oxford-yuruyus-turu:checked ~ .yas-tab-icerikler .oxford-yuruyus-turu-icerik,\n.yas-alan-etiketleri li .alan-en, .yas-alan-etiketleri li .alan-tr,\nbody.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford\n    :is(.sbc-course-card__spec-ikon svg, .sbc-spor-akademi-kart__ikon svg),\n#yaz-ing-londra:checked ~ .hizmet-tab-ana-icerik-cerceve #panel-yaz-ing #okul-listesi-yaz-ing-londra, #yaz-ing-oxford:checked ~ .hizmet-tab-ana-icerik-cerceve #panel-yaz-ing #okul-listesi-yaz-ing-oxford, #yaz-ing-cambridge:checked ~ .hizmet-tab-ana-icerik-cerceve #panel-yaz-ing #okul-listesi-yaz-ing-cambridge, #yaz-ing-bournemouth:checked ~ .hizmet-tab-ana-icerik-cerceve #panel-yaz-ing #okul-listesi-yaz-ing-bournemouth, #dil-ing-londra:checked ~ .hizmet-tab-ana-icerik-cerceve #panel-dil-ing #okul-listesi-dil-ing-londra, #dil-ing-oxford:checked ~ .hizmet-tab-ana-icerik-cerceve #panel-dil-ing #okul-listesi-dil-ing-oxford, #dil-ing-bournemouth:checked ~ .hizmet-tab-ana-icerik-cerceve #panel-dil-ing #okul-listesi-dil-ing-bournemouth, #dil-usa-los-angeles:checked ~ .hizmet-tab-ana-icerik-cerceve #panel-dil-usa #okul-listesi-dil-usa-los-angeles, #dil-usa-new-york:checked ~ .hizmet-tab-ana-icerik-cerceve #panel-dil-usa #okul-listesi-dil-usa-new-york, #dil-usa-boston:checked ~ .hizmet-tab-ana-icerik-cerceve #panel-dil-usa #okul-listesi-dil-usa-boston, #yaz-almanya-frankfurt:checked ~ .hizmet-tab-ana-icerik-cerceve #panel-yaz-almanya #okul-listesi-yaz-almanya-frankfurt, #yaz-almanya-freiburg:checked ~ .hizmet-tab-ana-icerik-cerceve #panel-yaz-almanya #okul-listesi-yaz-almanya-freiburg, #yaz-kanada-toronto:checked ~ .hizmet-tab-ana-icerik-cerceve #panel-yaz-kanada #okul-listesi-yaz-kanada-toronto, #yaz-italya-milano:checked ~ .hizmet-tab-ana-icerik-cerceve #panel-yaz-italya #okul-listesi-yaz-italya-milano, #yaz-japonya-tokyo:checked ~ .hizmet-tab-ana-icerik-cerceve #panel-yaz-japonya #okul-listesi-yaz-japonya-tokyo, #yaz-amerika-newyork:checked ~ .hizmet-tab-ana-icerik-cerceve #panel-yaz-amerika #okul-listesi-yaz-amerika-newyork,\n#yaz-ing-londra:checked ~ .hizmet-tab-ana-icerik-cerceve #panel-yaz-ing #baslik-yaz-ing-londra, #yaz-ing-oxford:checked ~ .hizmet-tab-ana-icerik-cerceve #panel-yaz-ing #baslik-yaz-ing-oxford, #yaz-ing-cambridge:checked ~ .hizmet-tab-ana-icerik-cerceve #panel-yaz-ing #baslik-yaz-ing-cambridge, #yaz-ing-bournemouth:checked ~ .hizmet-tab-ana-icerik-cerceve #panel-yaz-ing #baslik-yaz-ing-bournemouth, #dil-ing-londra:checked ~ .hizmet-tab-ana-icerik-cerceve #panel-dil-ing #baslik-dil-ing-londra, #dil-ing-oxford:checked ~ .hizmet-tab-ana-icerik-cerceve #panel-dil-ing #baslik-dil-ing-oxford, #dil-ing-bournemouth:checked ~ .hizmet-tab-ana-icerik-cerceve #panel-dil-ing #baslik-dil-ing-bournemouth, #dil-usa-los-angeles:checked ~ .hizmet-tab-ana-icerik-cerceve #panel-dil-usa #baslik-dil-usa-los-angeles, #dil-usa-new-york:checked ~ .hizmet-tab-ana-icerik-cerceve #panel-dil-usa #baslik-dil-usa-new-york, #dil-usa-boston:checked ~ .hizmet-tab-ana-icerik-cerceve #panel-dil-usa #baslik-dil-usa-boston, #yaz-almanya-frankfurt:checked ~ .hizmet-tab-ana-icerik-cerceve #panel-yaz-almanya #baslik-yaz-almanya-frankfurt, #yaz-almanya-freiburg:checked ~ .hizmet-tab-ana-icerik-cerceve #panel-yaz-almanya #baslik-yaz-almanya-freiburg"
+                                                              ]
+                                     },
+                                     {
+                                         "scope":  "TOP",
+                                         "selector_count":  3,
+                                         "property_count":  2,
+                                         "decl_key_preview":  "grid-column:1 / -1|grid-row:2",
+                                         "selectors_sample":  [
+                                                                  ".yaz-okullari-program-kutu .rozet-kisa-metin, .icerik-kutusu .rozet-kisa-metin",
+                                                                  ".yaz-okullari-program-kutu .rozet-metin, .icerik-kutusu .rozet-metin,\n.yaz-okullari-program-kutu .rozet-kart \u003e .kutu-liste, .icerik-kutusu .rozet-kart \u003e .kutu-liste",
+                                                                  "body.sayfa-hizmetlerimiz .hizmetlerimiz-egitim-alanlari .ana-hizmet-hub-kart-metin"
                                                               ]
                                      },
                                      {
@@ -218,76 +264,74 @@
                                          "decl_key_preview":  "padding-bottom:0",
                                          "selectors_sample":  [
                                                                   ".futbol-intro-metin.intro-metin",
-                                                                  "body.ana-sayfa .dil-okullari-secim-paneli,\nbody.sayfa-hizmetlerimiz .hizmetlerimiz-egitim-alanlari .dil-okullari-secim-paneli,\nbody.sayfa-kings-education-bournemouth .icerik-alani.dahil-olanlar-konteyner,\nbody.kings-oxford-sayfa .icerik-alani.dahil-olanlar-konteyner",
+                                                                  ":is(body.ana-sayfa .dil-okullari-secim-paneli, body.sayfa-hizmetlerimiz .hizmetlerimiz-egitim-alanlari .dil-okullari-secim-paneli),\nbody.sayfa-kings-education-bournemouth .icerik-alani.dahil-olanlar-konteyner,\nbody.kings-oxford-sayfa .icerik-alani.dahil-olanlar-konteyner",
                                                                   "body.sportech-academy-page .sportech-academy-giris-metni .futbol-intro-metin.intro-metin,\nbody.sportech-academy-page .giris-metni .futbol-intro-metin.intro-metin"
-                                                              ]
-                                     },
-                                     {
-                                         "scope":  "TOP",
-                                         "selector_count":  3,
-                                         "property_count":  1,
-                                         "decl_key_preview":  "color:#bd0505 !important",
-                                         "selectors_sample":  [
-                                                                  ".okul-isim-link:hover,\n.okul-listesi-program-secim-hub-baslik .okul-listesi-alt-satir-lacivert .vurgu-renk,\n.okul-listesi-okul-isim-link:hover,\n.yaz-okullari-secim-paneli .kirmizi-kutu .alt-satir-lacivert, .dil-okullari-secim-paneli .kirmizi-kutu .alt-satir-lacivert,\narticle.icerik-alani \u003e h2:has(\u003e .vurgu-satir) \u003e .vurgu-satir .vurgu-renk, .icerik-alani \u003e h2:has(\u003e .vurgu-satir) \u003e .vurgu-satir .vurgu-renk, body.sayfa-hizmetlerimiz .hizmetlerimiz-egitim-alanlari \u003e h2:has(\u003e .vurgu-satir) \u003e .vurgu-satir .vurgu-renk, .dil-okullari-secim-paneli \u003e h2:has(\u003e .vurgu-satir) \u003e .vurgu-satir .vurgu-renk, .yaz-okullari-secim-paneli \u003e h2:has(\u003e .vurgu-satir) \u003e .vurgu-satir .vurgu-renk,\n.yaz-okullari-secim-paneli .program-secim-hub-baslik .vurgu-satir .vurgu-renk",
-                                                                  ".yaz-okullari-sehir-okul-paneli .btn-modern-incele:hover,\n.yaz-okullari-sehir-okul-paneli .premium-liste-kart:hover .okul-isim-link, .yaz-okullari-sehir-okul-paneli .premium-liste-kart:hover .btn-modern-incele, .yaz-okullari-sehir-okul-paneli .premium-liste-kart:hover .ok-animasyon,\n.canada-secim-paneli .btn-modern-incele:hover,\n.canada-secim-paneli .premium-liste-kart:hover .okul-isim-link, .canada-secim-paneli .premium-liste-kart:hover .btn-modern-incele, .canada-secim-paneli .premium-liste-kart:hover .ok-animasyon,\n.germany-secim-paneli .btn-modern-incele:hover,\n.germany-secim-paneli .premium-liste-kart:hover .okul-isim-link, .germany-secim-paneli .premium-liste-kart:hover .btn-modern-incele, .germany-secim-paneli .premium-liste-kart:hover .ok-animasyon,\n.italy-secim-paneli .btn-modern-incele:hover,\n.italy-secim-paneli .premium-liste-kart:hover .okul-isim-link, .italy-secim-paneli .premium-liste-kart:hover .btn-modern-incele, .italy-secim-paneli .premium-liste-kart:hover .ok-animasyon,\n.london-secim-paneli .btn-modern-incele:hover,\n.london-secim-paneli .premium-liste-kart:hover .okul-isim-link, .london-secim-paneli .premium-liste-kart:hover .btn-modern-incele, .london-secim-paneli .premium-liste-kart:hover .ok-animasyon,\n.new-york-secim-paneli .btn-modern-incele:hover,\n.new-york-secim-paneli .premium-liste-kart:hover .okul-isim-link, .new-york-secim-paneli .premium-liste-kart:hover .btn-modern-incele, .new-york-secim-paneli .premium-liste-kart:hover .ok-animasyon,\n.okul-listesi-secim-paneli .okul-listesi-btn-modern-incele:hover,\n.okul-listesi-secim-paneli .okul-listesi-premium-liste-kart:hover .okul-listesi-okul-isim-link, .okul-listesi-secim-paneli .okul-listesi-premium-liste-kart:hover .okul-listesi-btn-modern-incele, .okul-listesi-secim-paneli .okul-listesi-premium-liste-kart:hover .okul-listesi-ok-animasyon,\n.oxford-secim-paneli .btn-modern-incele:hover,\n.oxford-secim-paneli .premium-liste-kart:hover .okul-isim-link, .oxford-secim-paneli .premium-liste-kart:hover .btn-modern-incele, .oxford-secim-paneli .premium-liste-kart:hover .ok-animasyon,\n.tokyo-secim-paneli .btn-modern-incele:hover,\n.tokyo-secim-paneli .premium-liste-kart:hover .okul-isim-link, .tokyo-secim-paneli .premium-liste-kart:hover .btn-modern-incele, .tokyo-secim-paneli .premium-liste-kart:hover .ok-animasyon",
-                                                                  "article.icerik-alani .cerceve-kutu \u003e h3 .vurgu-renk"
-                                                              ]
-                                     },
-                                     {
-                                         "scope":  "TOP",
-                                         "selector_count":  3,
-                                         "property_count":  7,
-                                         "decl_key_preview":  "column-gap:0 !important|display:grid !important|grid-template-columns:1fr !important|margin:0 !important|max-width:100% ...",
-                                         "selectors_sample":  [
-                                                                  ".london-secim-paneli .okul-liste-kapsayici .modern-okul-listesi,\n.new-york-secim-paneli .okul-liste-kapsayici .modern-okul-listesi,\n.okul-listesi-secim-paneli .okul-listesi-okul-liste-kapsayici .okul-listesi-modern-okul-listesi,\n.tokyo-secim-paneli .okul-liste-kapsayici .modern-okul-listesi,\n.dil-okullari-secim-paneli .okul-liste-kapsayici .modern-okul-listesi,\n.yaz-okullari-sehir-okul-paneli .okul-liste-kapsayici .modern-okul-listesi,\n.yaz-okullari-secim-paneli .okul-liste-kapsayici .modern-okul-listesi",
-                                                                  ".okul-liste-kapsayici .modern-okul-listesi",
-                                                                  ".okul-listesi-okul-liste-kapsayici .okul-listesi-modern-okul-listesi"
-                                                              ]
-                                     },
-                                     {
-                                         "scope":  "TOP",
-                                         "selector_count":  3,
-                                         "property_count":  2,
-                                         "decl_key_preview":  "margin-bottom:25px|text-align:center",
-                                         "selectors_sample":  [
-                                                                  ".immerse-logo-kapsayici",
-                                                                  ".immerse-logo-kapsayici,\n.immerse-kampus-kapsayici,\n.sayfa-kings-education .kings-okul-logo-alani",
-                                                                  "body.kings-bournemouth-yaz-okulu-sayfa article.icerik-alani .kings-okul-logo-alani"
                                                               ]
                                      }
                                  ],
     "at_rules_15_largest_groups":  [
                                        {
                                            "scope":  "@media (max-width: 768px)",
-                                           "selector_count":  28,
+                                           "selector_count":  30,
                                            "property_count":  1,
                                            "decl_key_preview":  "grid-template-columns:1fr",
                                            "selectors_sample":  [
-                                                                    ".boston-neden-kutu .boston-neden-rozet-grid",
+                                                                    ".boston-neden-kutu .rozet-grid",
                                                                     ".canada-program-sehir-grid",
+                                                                    ".cerceve-kutu .almanya-avantaj-grid-3-2,\n    .site-gri-cerceve-kutu .almanya-avantaj-grid-3-2",
+                                                                    ".cerceve-kutu .canada-avantaj-grid-3-1,\n    .site-gri-cerceve-kutu .canada-avantaj-grid-3-1",
                                                                     ".cerceve-kutu .rozet-grid,\n    .site-gri-cerceve-kutu .rozet-grid",
                                                                     ".cerceve-kutu .rozet-grid.rozet-grid--hub-2-2-1,\n    .site-gri-cerceve-kutu .rozet-grid.rozet-grid--hub-2-2-1",
                                                                     ".cerceve-kutu .rozet-grid.rozet-grid--hub-3-2-1,\n    .site-gri-cerceve-kutu .rozet-grid.rozet-grid--hub-3-2-1",
+                                                                    ".dahil-grid, .konaklama-grid",
                                                                     ".immerse-tokyo-giris-kategori-grid",
-                                                                    ".investin-one-cikan-grid",
-                                                                    ".italy-avantaj-kutu .italy-avantaj-grid",
-                                                                    ".kings-galeri-kutu .kings-galeri-grid",
-                                                                    ".konaklama-grid"
+                                                                    ".investin-one-cikan-grid"
                                                                 ]
                                        },
                                        {
                                            "scope":  "@media (max-width: 992px)",
-                                           "selector_count":  7,
+                                           "selector_count":  8,
                                            "property_count":  1,
                                            "decl_key_preview":  "grid-template-columns:repeat(2, minmax(0, 1fr))",
                                            "selectors_sample":  [
                                                                     ".canada-program-sehir-grid",
+                                                                    ".cerceve-kutu .almanya-avantaj-grid-3-2,\n    .site-gri-cerceve-kutu .almanya-avantaj-grid-3-2",
+                                                                    ".cerceve-kutu .canada-avantaj-grid-3-1,\n    .site-gri-cerceve-kutu .canada-avantaj-grid-3-1",
                                                                     ".cerceve-kutu .rozet-grid.rozet-grid--hub-3-2-1,\n    .site-gri-cerceve-kutu .rozet-grid.rozet-grid--hub-3-2-1",
-                                                                    ".cerceve-kutu.toronto-aktivite-kutu .rozet-grid.toronto-aktivite-rozet-grid",
                                                                     ".immerse-konaklama-grid",
                                                                     ".investin-one-cikan-grid",
                                                                     ".kings-galeri-kutu .kings-galeri-grid",
                                                                     ".rozet-grid"
+                                                                ]
+                                       },
+                                       {
+                                           "scope":  "@media (min-width: 901px)",
+                                           "selector_count":  7,
+                                           "property_count":  2,
+                                           "decl_key_preview":  "flex:1 1 auto|order:1",
+                                           "selectors_sample":  [
+                                                                    "body.sbc-canford-yaz-okulu-sayfa .sbc-canford-geziler-liste \u003e .sbc-canford-gezi-kart.sbc-canford-gezi-kart--metin-sol-gorsel-sag \u003e .sbc-canford-gezi-kart__icerik",
+                                                                    "body.sbc-canford-yaz-okulu-sayfa .sbc-canford-geziler-liste \u003e .sbc-canford-gezi-kart:first-child \u003e .sbc-canford-gezi-kart__icerik",
+                                                                    "body.sbc-canford-yaz-okulu-sayfa .sbc-canford-geziler-liste \u003e .sbc-canford-gezi-kart:nth-child(3) \u003e .sbc-canford-gezi-kart__icerik",
+                                                                    "body.sbc-canford-yaz-okulu-sayfa .sbc-spor-akademi-kart-grid \u003e .sbc-spor-akademi-kart:first-child \u003e .sbc-spor-akademi-kart__govde",
+                                                                    "body.sbc-canford-yaz-okulu-sayfa .sbc-spor-akademi-kart-grid \u003e .sbc-spor-akademi-kart:nth-child(2) \u003e .sbc-spor-akademi-kart__govde",
+                                                                    "body.sbc-canford-yaz-okulu-sayfa .sbc-spor-akademi-kart-grid \u003e .sbc-spor-akademi-kart:nth-child(3) \u003e .sbc-spor-akademi-kart__govde",
+                                                                    "body.sbc-canford-yaz-okulu-sayfa .sbc-spor-akademi-kart-grid \u003e .sbc-spor-akademi-kart:nth-child(4) \u003e .sbc-spor-akademi-kart__govde"
+                                                                ]
+                                       },
+                                       {
+                                           "scope":  "@media (min-width: 901px)",
+                                           "selector_count":  7,
+                                           "property_count":  3,
+                                           "decl_key_preview":  "align-items:flex-start|display:flex|flex-direction:row",
+                                           "selectors_sample":  [
+                                                                    "body.sbc-canford-yaz-okulu-sayfa .sbc-canford-geziler-liste \u003e .sbc-canford-gezi-kart.sbc-canford-gezi-kart--metin-sol-gorsel-sag",
+                                                                    "body.sbc-canford-yaz-okulu-sayfa .sbc-canford-geziler-liste \u003e .sbc-canford-gezi-kart:first-child",
+                                                                    "body.sbc-canford-yaz-okulu-sayfa .sbc-canford-geziler-liste \u003e .sbc-canford-gezi-kart:nth-child(3)",
+                                                                    "body.sbc-canford-yaz-okulu-sayfa .sbc-spor-akademi-kart-grid \u003e .sbc-spor-akademi-kart:first-child",
+                                                                    "body.sbc-canford-yaz-okulu-sayfa .sbc-spor-akademi-kart-grid \u003e .sbc-spor-akademi-kart:nth-child(2)",
+                                                                    "body.sbc-canford-yaz-okulu-sayfa .sbc-spor-akademi-kart-grid \u003e .sbc-spor-akademi-kart:nth-child(3)",
+                                                                    "body.sbc-canford-yaz-okulu-sayfa .sbc-spor-akademi-kart-grid \u003e .sbc-spor-akademi-kart:nth-child(4)"
                                                                 ]
                                        },
                                        {
@@ -306,43 +350,73 @@
                                                                 ]
                                        },
                                        {
-                                           "scope":  "@media (max-width: 768px)",
+                                           "scope":  "@media (min-width: 901px)",
                                            "selector_count":  7,
+                                           "property_count":  2,
+                                           "decl_key_preview":  "margin-right:16px|order:0",
+                                           "selectors_sample":  [
+                                                                    "body.sbc-canford-yaz-okulu-sayfa .sbc-canford-geziler-liste \u003e .sbc-canford-gezi-kart.sbc-canford-gezi-kart--metin-sol-gorsel-sag \u003e .sbc-canford-gezi-kart__media",
+                                                                    "body.sbc-canford-yaz-okulu-sayfa .sbc-canford-geziler-liste \u003e .sbc-canford-gezi-kart:first-child \u003e .sbc-canford-gezi-kart__media",
+                                                                    "body.sbc-canford-yaz-okulu-sayfa .sbc-canford-geziler-liste \u003e .sbc-canford-gezi-kart:nth-child(3) \u003e .sbc-canford-gezi-kart__media",
+                                                                    "body.sbc-canford-yaz-okulu-sayfa .sbc-spor-akademi-kart-grid \u003e .sbc-spor-akademi-kart:first-child \u003e .sbc-spor-akademi-kart__media",
+                                                                    "body.sbc-canford-yaz-okulu-sayfa .sbc-spor-akademi-kart-grid \u003e .sbc-spor-akademi-kart:nth-child(2) \u003e .sbc-spor-akademi-kart__media",
+                                                                    "body.sbc-canford-yaz-okulu-sayfa .sbc-spor-akademi-kart-grid \u003e .sbc-spor-akademi-kart:nth-child(3) \u003e .sbc-spor-akademi-kart__media",
+                                                                    "body.sbc-canford-yaz-okulu-sayfa .sbc-spor-akademi-kart-grid \u003e .sbc-spor-akademi-kart:nth-child(4) \u003e .sbc-spor-akademi-kart__media"
+                                                                ]
+                                       },
+                                       {
+                                           "scope":  "@media (max-width: 768px)",
+                                           "selector_count":  6,
+                                           "property_count":  1,
+                                           "decl_key_preview":  "grid-column:auto",
+                                           "selectors_sample":  [
+                                                                    ".chantemerle-galeri-grid \u003e .galeri-oge:nth-child(n)",
+                                                                    "body.sayfa-alpadia-frankfurt .immerse-detay-kutu .alpadia-program-detay-grid .immerse-detay-kart:nth-child(-n+6)",
+                                                                    "body.sayfa-alpadia-frankfurt\n        .immerse-detay-kutu\n        .alpadia-program-detay-grid\n        .immerse-detay-kart:is(:nth-child(7), :nth-child(8), .alpadia-tarihler-tam-satir)",
+                                                                    "body.sayfa-alpadia-freiburg .immerse-detay-kutu .alpadia-program-detay-grid .immerse-detay-kart:nth-child(-n+6)",
+                                                                    "body.sayfa-alpadia-freiburg\n        .immerse-detay-kutu\n        .alpadia-program-detay-grid\n        .immerse-detay-kart:is(:nth-child(7), :nth-child(8), .alpadia-tarihler-tam-satir)",
+                                                                    "body.sayfa-yurt-disi-yaz-okullari-italy-milan .italy-sosyal-kutu .italy-sosyal-list \u003e .italy-sosyal-madde:last-child"
+                                                                ]
+                                       },
+                                       {
+                                           "scope":  "@media (max-width: 768px)",
+                                           "selector_count":  6,
                                            "property_count":  3,
                                            "decl_key_preview":  "grid-column:auto|justify-self:stretch|width:100%",
                                            "selectors_sample":  [
                                                                     ".canada-avantaj-grid-3-1 \u003e .rozet-kart:nth-child(4)",
                                                                     ".london-program-rozet-kutu .rozet-grid.icerik-kutusu-grid.yatay-3 \u003e .rozet-kart:nth-child(3)",
-                                                                    ".milan-avantaj-kutu .milan-avantaj-rozet-grid \u003e .rozet-kart:nth-child(5)",
-                                                                    ".oxford-neden-kutu .oxford-neden-rozet-grid .rozet-kart:nth-child(5)",
-                                                                    ".oxford-sosyal-rozet-kutu .oxford-sosyal-rozet-grid \u003e .rozet-kart:nth-child(3)",
+                                                                    ".oxford-neden-kutu .rozet-grid .rozet-kart:nth-child(5)",
+                                                                    ".oxford-sosyal-rozet-kutu .rozet-grid \u003e .rozet-kart:nth-child(3)",
                                                                     "article.icerik-alani .rozet-grid.icerik-kutusu-grid.yatay-2.son-kart-ortala \u003e .rozet-kart:last-child:nth-child(odd)",
                                                                     "body.sayfa-kings-education-los-angeles .kings-la-program-detay-grid \u003e .kings-la-program-sure-kart-ortali"
+                                                                ]
+                                       },
+                                       {
+                                           "scope":  "@media (max-width: 501px)",
+                                           "selector_count":  6,
+                                           "property_count":  1,
+                                           "decl_key_preview":  "grid-template-columns:1fr",
+                                           "selectors_sample":  [
+                                                                    ".cerceve-kutu .canada-avantaj-grid-3-1,\n    .site-gri-cerceve-kutu .canada-avantaj-grid-3-1,\n    .cerceve-kutu .almanya-avantaj-grid-3-2,\n    .site-gri-cerceve-kutu .almanya-avantaj-grid-3-2,\n    .canada-program-sehir-grid,\n    .immerse-konaklama-grid,\n    .investin-one-cikan-grid,\n    .cerceve-kutu.toronto-aktivite-kutu .rozet-grid",
+                                                                    ".cerceve-kutu .rozet-grid.rozet-grid--hub-3-2-1,\n    .site-gri-cerceve-kutu .rozet-grid.rozet-grid--hub-3-2-1,\n    .cerceve-kutu .rozet-grid.rozet-grid--hub-2-2-1,\n    .site-gri-cerceve-kutu .rozet-grid.rozet-grid--hub-2-2-1",
+                                                                    ".iletisim-kartlar",
+                                                                    ".ofis-harita-kutu",
+                                                                    ".rozet-grid",
+                                                                    "body.oxford-royale-cambridge-sayfa .rozet-grid"
                                                                 ]
                                        },
                                        {
                                            "scope":  "@media (max-width: 768px)",
                                            "selector_count":  5,
                                            "property_count":  1,
-                                           "decl_key_preview":  "grid-column:auto",
+                                           "decl_key_preview":  "display:none",
                                            "selectors_sample":  [
-                                                                    ".chantemerle-galeri-grid \u003e .galeri-oge:nth-child(n)",
-                                                                    "body.sayfa-alpadia-frankfurt .immerse-detay-kutu .alpadia-program-detay-grid .immerse-detay-kart:nth-child(7),\n    body.sayfa-alpadia-frankfurt .immerse-detay-kutu .alpadia-program-detay-grid .immerse-detay-kart:nth-child(8),\n    body.sayfa-alpadia-frankfurt .immerse-detay-kutu .alpadia-program-detay-grid .immerse-detay-kart.alpadia-tarihler-tam-satir",
-                                                                    "body.sayfa-alpadia-frankfurt .immerse-detay-kutu .alpadia-program-detay-grid .immerse-detay-kart:nth-child(-n+6)",
-                                                                    "body.sayfa-alpadia-freiburg .immerse-detay-kutu .alpadia-program-detay-grid .immerse-detay-kart:nth-child(7),\n    body.sayfa-alpadia-freiburg .immerse-detay-kutu .alpadia-program-detay-grid .immerse-detay-kart:nth-child(8),\n    body.sayfa-alpadia-freiburg .immerse-detay-kutu .alpadia-program-detay-grid .immerse-detay-kart.alpadia-tarihler-tam-satir",
-                                                                    "body.sayfa-alpadia-freiburg .immerse-detay-kutu .alpadia-program-detay-grid .immerse-detay-kart:nth-child(-n+6)"
-                                                                ]
-                                       },
-                                       {
-                                           "scope":  "@media (max-width: 501px)",
-                                           "selector_count":  4,
-                                           "property_count":  1,
-                                           "decl_key_preview":  "grid-template-columns:1fr !important",
-                                           "selectors_sample":  [
-                                                                    ".cerceve-kutu .canada-avantaj-grid-3-1,\n    .site-gri-cerceve-kutu .canada-avantaj-grid-3-1,\n    .cerceve-kutu .almanya-avantaj-grid-3-2,\n    .site-gri-cerceve-kutu .almanya-avantaj-grid-3-2,\n    .canada-program-sehir-grid,\n    .immerse-konaklama-grid,\n    .investin-one-cikan-grid,\n    .cerceve-kutu.toronto-aktivite-kutu .rozet-grid.toronto-aktivite-rozet-grid,\n    .kings-galeri-kutu .kings-galeri-grid",
-                                                                    ".cerceve-kutu .rozet-grid.rozet-grid--hub-3-2-1,\n    .site-gri-cerceve-kutu .rozet-grid.rozet-grid--hub-3-2-1,\n    .cerceve-kutu .rozet-grid.rozet-grid--hub-2-2-1,\n    .site-gri-cerceve-kutu .rozet-grid.rozet-grid--hub-2-2-1",
-                                                                    ".rozet-grid",
-                                                                    "body.oxford-royale-cambridge-sayfa .rozet-grid"
+                                                                    ".ayrac-dikey",
+                                                                    ".kazanim-seridi::before",
+                                                                    ".okul-liste-kapsayici .kart-sag-grup,\n    .modern-okul-listesi .kart-sag-grup",
+                                                                    ".okul-listesi-okul-liste-kapsayici .okul-listesi-kart-sag-grup,\n    .okul-listesi-modern-okul-listesi .okul-listesi-kart-sag-grup",
+                                                                    "body.ana-sayfa .karsilama-aksiyon .ana-buton-light"
                                                                 ]
                                        },
                                        {
@@ -358,37 +432,14 @@
                                                                 ]
                                        },
                                        {
-                                           "scope":  "@media (max-width: 768px)",
-                                           "selector_count":  4,
+                                           "scope":  "@media (min-width: 900px)",
+                                           "selector_count":  3,
                                            "property_count":  1,
-                                           "decl_key_preview":  "display:none",
+                                           "decl_key_preview":  "border-bottom-right-radius:15px",
                                            "selectors_sample":  [
-                                                                    ".ayrac-dikey",
-                                                                    ".kart-bg-no",
-                                                                    ".kazanim-seridi::before",
-                                                                    "body.ana-sayfa .karsilama-aksiyon .ana-buton-light"
-                                                                ]
-                                       },
-                                       {
-                                           "scope":  "@media (min-width: 768px)",
-                                           "selector_count":  3,
-                                           "property_count":  2,
-                                           "decl_key_preview":  "border-bottom-right-radius:15px|border-top-right-radius:15px",
-                                           "selectors_sample":  [
-                                                                    ".ulke-hub-kart-paneli.ulke-hub--satir-2.yaz-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap \u003e a.yaz-okullari-ulke-kart:nth-child(2n),\n    .ulke-hub-kart-paneli.ulke-hub--satir-2.yaz-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap \u003e a.yaz-okullari-ulke-kart:nth-last-child(1)",
-                                                                    ".ulke-hub-kart-paneli.ulke-hub--satir-3.dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap \u003e a.yaz-okullari-ulke-kart:nth-child(3n),\n    .ulke-hub-kart-paneli.ulke-hub--satir-3.dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap \u003e a.yaz-okullari-ulke-kart:nth-last-child(1)",
-                                                                    ".ulke-hub-kart-paneli.ulke-hub--satir-4.yaz-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap \u003e a.yaz-okullari-ulke-kart:nth-child(4n),\n    .ulke-hub-kart-paneli.ulke-hub--satir-4.yaz-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap \u003e a.yaz-okullari-ulke-kart:nth-last-child(1)"
-                                                                ]
-                                       },
-                                       {
-                                           "scope":  "@media (max-width: 768px)",
-                                           "selector_count":  3,
-                                           "property_count":  4,
-                                           "decl_key_preview":  "box-sizing:border-box !important|padding-left:var(--icerik-yan-gutter) !important|padding-right:var(--icerik-yan-gutter)...",
-                                           "selectors_sample":  [
-                                                                    ".icerik-alani, \n    .dahil-olanlar-konteyner, \n    .konaklama-konteyner, \n    .vurgulu-tablo-konteyner, \n    .sehir-kare-yigini",
-                                                                    ".modern-okul-listesi",
-                                                                    ".okul-listesi-modern-okul-listesi"
+                                                                    ":is(body.ana-sayfa .dil-okullari-secim-paneli, body.sayfa-hizmetlerimiz .dil-okullari-secim-paneli, body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli), body[class*=\u0027sayfa-yurt-disi-dil-okullari\u0027] .dil-okullari-secim-paneli, body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli, body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli) .yaz-okullari-ulke-kart-wrap \u003e .yaz-okullari-ulke-kart:nth-child(3n):nth-last-child(2)",
+                                                                    ":is(body.ana-sayfa .dil-okullari-secim-paneli, body.sayfa-hizmetlerimiz .dil-okullari-secim-paneli, body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli), body[class*=\u0027sayfa-yurt-disi-dil-okullari\u0027] .dil-okullari-secim-paneli, body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli, body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli) .yaz-okullari-ulke-kart-wrap \u003e .yaz-okullari-ulke-kart:nth-last-child(1):nth-child(3n),\n    :is(body.ana-sayfa .dil-okullari-secim-paneli, body.sayfa-hizmetlerimiz .dil-okullari-secim-paneli, body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli), body[class*=\u0027sayfa-yurt-disi-dil-okullari\u0027] .dil-okullari-secim-paneli, body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli, body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli) .yaz-okullari-ulke-kart-wrap \u003e .yaz-okullari-ulke-kart:nth-last-child(1):nth-child(3n + 2)",
+                                                                    "body.sayfa-hizmetlerimiz\n        .hizmetlerimiz-egitim-alanlari\n        .dil-okullari-secim-paneli\n        :is(.yaz-okullari-ulke-kart-wrap, .rozet-kart-grid)\n        \u003e :is(.yaz-okullari-ulke-kart, .rozet-kart-link):last-child:nth-child(even)"
                                                                 ]
                                        },
                                        {
@@ -403,47 +454,25 @@
                                                                 ]
                                        },
                                        {
-                                           "scope":  "@media (min-width: 768px)",
-                                           "selector_count":  3,
-                                           "property_count":  2,
-                                           "decl_key_preview":  "border-bottom-left-radius:15px|border-top-left-radius:15px",
-                                           "selectors_sample":  [
-                                                                    ".ulke-hub-kart-paneli.ulke-hub--satir-2.yaz-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap \u003e a.yaz-okullari-ulke-kart:nth-child(2n + 1)",
-                                                                    ".ulke-hub-kart-paneli.ulke-hub--satir-3.dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap \u003e a.yaz-okullari-ulke-kart:nth-child(3n + 1)",
-                                                                    ".ulke-hub-kart-paneli.ulke-hub--satir-4.yaz-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap \u003e a.yaz-okullari-ulke-kart:nth-child(4n + 1)"
-                                                                ]
-                                       },
-                                       {
-                                           "scope":  "@media (max-width: 768px)",
+                                           "scope":  "@media (max-width: 992px)",
                                            "selector_count":  3,
                                            "property_count":  1,
-                                           "decl_key_preview":  "grid-template-columns:1fr !important",
+                                           "decl_key_preview":  "grid-template-columns:1fr",
                                            "selectors_sample":  [
-                                                                    ".cerceve-kutu .almanya-avantaj-grid-3-2,\n    .site-gri-cerceve-kutu .almanya-avantaj-grid-3-2",
-                                                                    ".cerceve-kutu .canada-avantaj-grid-3-1,\n    .site-gri-cerceve-kutu .canada-avantaj-grid-3-1",
-                                                                    ".dahil-grid, .konaklama-grid"
+                                                                    ".futbol-ikili-kapsayici",
+                                                                    ".konaklama-grid",
+                                                                    ".sportech-academy-program-icerik-liste"
                                                                 ]
                                        },
                                        {
-                                           "scope":  "@media (max-width: 768px)",
-                                           "selector_count":  3,
-                                           "property_count":  1,
-                                           "decl_key_preview":  "flex-direction:column",
-                                           "selectors_sample":  [
-                                                                    ".almanya-avantaj-gorsel-kutu .almanya-avantaj-gorsel",
-                                                                    ".karsilama-aksiyon",
-                                                                    ".satir-sol"
-                                                                ]
-                                       },
-                                       {
-                                           "scope":  "@media (max-width: 768px)",
+                                           "scope":  "@media (max-width: 501px)",
                                            "selector_count":  3,
                                            "property_count":  2,
-                                           "decl_key_preview":  "margin:20px 0 45px 0|padding:0",
+                                           "decl_key_preview":  "padding-left:var(--site-cerceve-gutter)|padding-right:var(--site-cerceve-gutter)",
                                            "selectors_sample":  [
-                                                                    ".dil-okullari-secim-paneli,\n    .yaz-okullari-secim-paneli",
-                                                                    ".okul-listesi-secim-paneli",
-                                                                    ".yaz-okullari-secim-paneli"
+                                                                    "article.icerik-alani :is(.dil-okullari-secim-paneli, .yaz-okullari-secim-paneli)",
+                                                                    "body.sayfa-hizmetlerimiz\n        .hizmetlerimiz-egitim-alanlari\n        .dil-okullari-secim-paneli",
+                                                                    "body.sayfa-hizmetlerimiz\n        article.icerik-alani\n        \u003e section.hizmetlerimiz-egitim-alanlari.icerik-alani.ana-hizmetler-bolumu"
                                                                 ]
                                        }
                                    ],
@@ -452,5 +481,16 @@
                        "warning":  "Full merge rewrites the file, normalizes declaration formatting, and drops all /* block comments */. Prefer DryRun until a comment-preserving merge exists.",
                        "dry_run":  "powershell -NoProfile -ExecutionPolicy Bypass -File tools/css-merge-scenario-a.ps1 -DryRun"
                    },
+    "identical_rule_dedupe_tool":  {
+                                       "script":  "tools/css-identical-rule-dedupe.js",
+                                       "write":  "node tools/css-identical-rule-dedupe.js --write",
+                                       "note":  "AynÄ± seÃ§ici + aynÄ± bildirim gÃ¶vdesi (TOP / @media / @supports kapsamÄ±); son tekrar kalÄ±r; yorum ve iÃ§ iÃ§e @-kurallar korunur.",
+                                       "dry_run":  "node tools/css-identical-rule-dedupe.js --dry-run"
+                                   },
+    "css_html_usage_audit_tool":  {
+                                      "out":  "tools/css-html-usage-report.json ve tools/css-html-usage-report.md",
+                                      "script":  "tools/css-html-usage-audit.js",
+                                      "run":  "node tools/css-html-usage-audit.js"
+                                  },
     "analyze_tool":  "tools/css-dedupe-analyze.ps1"
 }
