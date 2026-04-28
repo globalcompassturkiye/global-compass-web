@@ -90,3 +90,21 @@ Refaktor sirasinda eski siniflar su hedefe cekilir:
 - Yeni gelistirmelerde kart bileseni sadece rozet yapisiyla acilir.
 - Kart yapi kararlarinda bu dokuman tek referans kabul edilir.
 - Sonraki fazlarda envanter ve donusum listesi bu sozlesmeye gore yapilir.
+
+## 9) Kose Yaricapi ve Tek Kalan Kart Kurali (Global)
+
+Bu davranis `article.icerik-alani` icindeki `rozet-grid icerik-kutusu-grid`
+varyantlari icin global sozlesmedir:
+
+- Desktop/tablet (`min-width: 769px`):
+  - `yatay-2/3/4/5` kartlarinda ic birlesim koseleri `0` kalir.
+  - Sadece disa bakan kose noktalarinda `15px` yaricap kullanilir.
+  - `yatay-2` duzende son satirda tek kart kalirsa kart full-width olur.
+  - Bu tek kalan kartta ust koseler `0`, alt koseler `15px` olmalidir.
+
+- Mobil (`max-width: 768px`):
+  - Kartlar tek kolona dusunce ara kartlarin tum koseleri `0` olur.
+  - Sadece ilk kartin ust koseleri `15px`, son kartin alt koseleri `15px`.
+  - Yalnizca tek kart varsa tum koseler `15px`.
+
+Not: Bu kural sayfa-ozel override ile degistirilmez; ortak sozlesme olarak korunur.
