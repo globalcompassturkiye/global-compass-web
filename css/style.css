@@ -4758,7 +4758,7 @@ body.ana-sayfa article.icerik-alani > section.icerik-alani.ana-hizmetler-bolumu 
 }
 
 body.ana-sayfa .ana-sayfa-blog-ozeti-wrap > #ana-sayfa-blog-ozeti-baslik {
-    margin: 0 0 15px 0;
+    margin: 25px 0 15px 0;
     text-align: left;
 }
 
@@ -14485,6 +14485,11 @@ body.ana-sayfa .navigasyon-form-alani .form-satir {
 }
 
 @media (max-width: 768px) {
+    body.ana-sayfa article.icerik-alani > section.ana-sayfa-navigasyon-layout.icerik-alani {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
     :is(body.sayfa-ornek, body.ana-sayfa) .navigasyon-form-alani .form-satir {
         grid-template-columns: 1fr;
         display: grid;
