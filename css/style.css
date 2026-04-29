@@ -8045,7 +8045,7 @@ body.sayfa-yurt-disi-yaz-okullari-italy .yaz-okullari-ulke-kart[href*="italy/mil
     margin: 0;
     overflow: hidden;
     border: 0 solid transparent;
-    border-radius: 8px;
+    border-radius: 0;
     background: #f9fafb;
 }
 
@@ -8058,28 +8058,40 @@ body.sayfa-yurt-disi-yaz-okullari-italy .yaz-okullari-ulke-kart[href*="italy/mil
 
 .icerik-galeri-grid {
     display: grid;
-    gap: 16px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 5px;
     margin-top: 12px;
     list-style: none;
     padding: 0;
     box-sizing: border-box;
+    border-radius: 15px;
+    overflow: hidden;
+    background: var(--sayfa-zemin, #f8fafc);
 }
 
-.icerik-galeri-grid:not(.alpadia-galeri-grid):not(.chantemerle-galeri-grid):not(.kings-galeri-grid):not(.futbol-galeri-grid):not(.sbc-canford-konaklama-galeri) {
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
-}
-
-.icerik-galeri-grid:not(.sbc-canford-konaklama-galeri) > .galeri-oge {
+.icerik-galeri-grid > .galeri-oge {
     aspect-ratio: 4 / 3;
     min-height: 0;
     align-self: start;
 }
 
-.icerik-galeri-grid:not(.alpadia-galeri-grid):not(.kings-galeri-grid):not(.chantemerle-galeri-grid):not(.futbol-galeri-grid):not(.sbc-canford-konaklama-galeri) > .galeri-oge img {
+.icerik-galeri-grid > .galeri-oge img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
+}
+
+@media (max-width: 1199px) {
+    .icerik-galeri-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 501px) {
+    .icerik-galeri-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .icerik-galeri-grid.kings-galeri-grid > .galeri-oge img {
