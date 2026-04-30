@@ -3131,11 +3131,7 @@ article.icerik-alani .icerik-vurgu-kutu p {
     box-sizing: border-box;
     text-align: justify;
     margin-top: 25px;
-    margin-bottom: 50px;
-}
-
-.giris-metin:has(+ .giris-metin) {
-    margin-bottom: 1em;
+    margin-bottom: 0;
 }
 
 .giris-metin + .giris-metin {
@@ -9246,7 +9242,7 @@ body.sayfa-kings-education-new-york .kutu-liste.kings-la-film-icerik-listesi li:
 .sayfa-kings-education .kings-la-bilgi-satir-mavi {
     --bilgi-sol-renk: #000080;
     position: relative;
-    margin-top: 16px;
+    margin-top: 25px;
     padding: 15px 16px 15px 26px;
     background: #dfe6f0;
     border: 0;
@@ -9339,7 +9335,7 @@ body.sayfa-kings-education-new-york .kutu-liste.kings-la-film-icerik-listesi li:
 .kings-la-bilgi-satir-mavi {
     --bilgi-sol-renk: #000080;
     position: relative;
-    margin-top: 16px;
+    margin-top: 25px;
     padding: 15px 16px 15px 26px;
     background: #dfe6f0;
     border: 0;
@@ -13815,6 +13811,11 @@ article.icerik-alani > h2.metin-h2,
 article.icerik-alani :is(.cerceve-kutu, .site-gri-cerceve-kutu, .icerik-kutusu) > h2.metin-h2,
 .blog-yazi-ana :is(.cerceve-kutu, .site-gri-cerceve-kutu, .icerik-kutusu) > h2.metin-h2 {
     margin-top: 0;
+}
+
+article.icerik-alani :is(.cerceve-kutu, .site-gri-cerceve-kutu, .icerik-kutusu) > h2.metin-h2.blok-ust-bosluk-25,
+.blog-yazi-ana :is(.cerceve-kutu, .site-gri-cerceve-kutu, .icerik-kutusu) > h2.metin-h2.blok-ust-bosluk-25 {
+    margin-top: 25px;
 }
 
 article.icerik-alani > section > h2.metin-h2:first-child,
