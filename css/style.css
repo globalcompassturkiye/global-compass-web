@@ -1513,7 +1513,6 @@ p {
 }
 
 .site-gri-cerceve-kutu .rozet-kart,
-.site-gri-cerceve-kutu .italy-sosyal-madde,
 .site-gri-cerceve-kutu .canada-program-sehir-kart {
     background: var(--site-kart-yuzey);
     background-image: none;
@@ -1827,8 +1826,7 @@ h2 .sss-alt-satir {
     font-weight: 400;
 }
 
-.kutu-liste li:last-child,
-h2:has(> .vurgu-satir) {
+.kutu-liste li:last-child {
     margin-bottom: 0;
 }
 
@@ -2045,68 +2043,6 @@ body.sayfa-yurt-disi-dil-okullari-uk-london .londra-neden-kutu .rozet-grid .roze
     font-weight: 700;
 }
 
-.italy-sosyal-kutu .italy-sosyal-list {
-    list-style: none;
-    margin: 18px 0 0 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.italy-sosyal-madde {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 10px 0;
-    border-top: 0 dashed transparent;
-}
-
-.italy-sosyal-madde:first-child {
-    border-top: none;
-}
-
-.italy-sosyal-ikon {
-    font-size: 20px;
-    width: 28px;
-    text-align: center;
-    margin-top: 2px;
-}
-
-.italy-sosyal-icerik h3 {
-    margin: 0 0 4px 0;
-    font-size: var(--h3-font-size);
-    font-weight: 700;
-}
-
-body.sayfa-yurt-disi-yaz-okullari-italy-milan .italy-sosyal-kutu .italy-sosyal-list {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 14px;
-}
-
-body.sayfa-yurt-disi-yaz-okullari-italy-milan .italy-sosyal-kutu .italy-sosyal-list > .italy-sosyal-madde {
-    border: 0 solid transparent;
-    border-radius: 15px;
-    background: #ffffff;
-    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
-    padding: 16px 14px 14px;
-}
-
-body.sayfa-yurt-disi-yaz-okullari-italy-milan .italy-sosyal-kutu .italy-sosyal-list > .italy-sosyal-madde:last-child {
-    grid-column: 1 / -1;
-}
-
-@media (max-width: 768px) {
-    body.sayfa-yurt-disi-yaz-okullari-italy-milan .italy-sosyal-kutu .italy-sosyal-list {
-        grid-template-columns: 1fr;
-    }
-
-    body.sayfa-yurt-disi-yaz-okullari-italy-milan .italy-sosyal-kutu .italy-sosyal-list > .italy-sosyal-madde:last-child {
-        grid-column: auto;
-    }
-}
-
 .frankfurt-avantaj-kart {
     min-width: 0;
     border: 0 solid transparent;
@@ -2164,7 +2100,6 @@ body.sayfa-yurt-disi-yaz-okullari-italy-milan .italy-sosyal-kutu .italy-sosyal-l
 .tab-panel,
 summary.immerse-tokyo-devam-btn::-webkit-details-marker,
 .investin-logo-gizli,
-.italy-sosyal-kutu .italy-sosyal-ikon,
 .sehir-okul-listesi,
 .sehir-baslik {
     display: none;
@@ -3092,6 +3027,7 @@ article.icerik-alani .icerik-vurgu-kutu p {
     color: #111;
     font-size: 19px;
     line-height: 1.35;
+    margin-bottom: 15px;
 }
 
 .kart-h2 .vurgu-satir {
@@ -3105,6 +3041,7 @@ article.icerik-alani .icerik-vurgu-kutu p {
     color: #111;
     font-size: 19px;
     line-height: 1.35;
+    margin-bottom: 15px;
 }
 
 .metin-h2 .vurgu-satir {
@@ -3121,6 +3058,16 @@ article.icerik-alani .icerik-vurgu-kutu p {
 
 .h2-altinda-metin {
     text-align: justify;
+    margin-bottom: 15px;
+}
+
+article.icerik-alani :is(.cerceve-kutu, .site-gri-cerceve-kutu) > :is(h2, h3) + p.h2-altinda-metin {
+    margin-top: 0;
+}
+
+article.icerik-alani p.rozet-metin.h2-altinda-metin {
+    margin-top: 0;
+    margin-bottom: 15px;
 }
 
 .giris-metin {
@@ -5934,6 +5881,11 @@ article.icerik-alani .blog-yazi-layout--yan-panel .blog-yazi-ana > :is(.dil-okul
 .sea-mb24 {
     margin-bottom: 24px;
 }
+
+.metin-h2.futbol-mb-24,
+.kart-h2.futbol-mb-24 {
+    margin-bottom: 15px;
+}
 .futbol-galeri-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 24px; }
 .futbol-galeri-item { aspect-ratio: 4/3; overflow: hidden; }
 .futbol-galeri-img { width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -6345,7 +6297,7 @@ body.sayfa-hizmetlerimiz article.icerik-alani.hizmetlerimiz-sayfa .blog-yazi-ana
     font-size: 20px;
     font-weight: 700;
     color: #111827;
-    margin: 0 0 12px 0;
+    margin: 0 0 15px 0;
     padding: 0;
     text-align: left;
     letter-spacing: -0.2px;
@@ -7134,10 +7086,6 @@ body.sayfa-yurt-disi-yaz-okullari-japan-tokyo-immerse-education #tokyo-immerse-m
 
 #tokyo-immerse-konaklama {
     margin-top: 45px;
-}
-
-#tokyo-immerse-konaklama > .metin-h2 {
-    margin-bottom: 14px;
 }
 
 #tokyo-immerse-konaklama > .immerse-konaklama-grid.immerse-tokyo-konaklama-grid {
@@ -8007,17 +7955,6 @@ summary.immerse-tokyo-devam-btn {
 
 .italy-program-kutu
 
-.italy-sosyal-kutu .italy-sosyal-list { gap: 14px; }
-.italy-sosyal-kutu .italy-sosyal-madde {
-    border-top: none;
-    padding: 20px;
-    border: 0 solid transparent;
-    border-radius: 15px;
-    background: #ffffff;
-    background-image: none;
-    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
-    gap: 12px;
-}
 
 body.sayfa-yurt-disi-yaz-okullari-italy .yaz-okullari-ulke-kart[href*="italy/milan"] .yaz-okullari-ulke-kart-bayrak img {
     object-position: center top;
@@ -8121,8 +8058,9 @@ body.sayfa-yurt-disi-yaz-okullari-italy .yaz-okullari-ulke-kart[href*="italy/mil
     }
 }
 
-/* Moda galeri: 3 sütun (.icerik-galeri-grid ile birlikte aksi halde 4 sütun uygulanır) */
-#sportech-moda-galeri .icerik-galeri-grid.futbol-galeri-grid {
+/* Moda / Motor mühendisliği galeri: 3 sütun (.icerik-galeri-grid ile birlikte aksi halde 4 sütun uygulanır) */
+#sportech-moda-galeri .icerik-galeri-grid.futbol-galeri-grid,
+#sportech-motor-galeri .icerik-galeri-grid.futbol-galeri-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
@@ -13292,7 +13230,8 @@ h2 {
 h2 > .vurgu-satir {
     display: block;
     width: 100%;
-    margin: 0.35rem 0 25px 0;
+    /* Alt boşluk başlığın (h2 / .metin-h2) margin-bottom ile tek kaynaktan gelsin; flex çerçevelerde iç span mb + h2 mb çiftlenmesin */
+    margin: 0.35rem 0 0 0;
     padding: 0;
     font-size: var(--h2-font-size);
     font-weight: 700;
@@ -13311,7 +13250,6 @@ h2 > .vurgu-satir {
 }
 
 .italy-program-kutu .rozet-kart p,
-.italy-sosyal-icerik p,
 .frankfurt-avantaj-kart p {
     margin: 0;
     font-size: 14.5px;
@@ -13793,6 +13731,7 @@ article.icerik-alani h2 > .vurgu-satir,
 .icerik-alani h2 > .vurgu-satir,
 :is(.dil-okullari-secim-paneli, .yaz-okullari-secim-paneli) > h2 > .vurgu-satir {
     margin-top: 0;
+    margin-bottom: 0;
 }
 
 article.icerik-alani h2,
@@ -14545,7 +14484,7 @@ article.icerik-alani
 }
 
 :is(body.sayfa-ornek, body.ana-sayfa) .navigasyon-kontrol-alani > .metin-h2 {
-    margin-bottom: 12px;
+    margin-bottom: 15px;
 }
 
 :is(body.sayfa-ornek, body.ana-sayfa) .navigasyon-form-alani .form-satir {
@@ -14555,7 +14494,7 @@ article.icerik-alani
 
 :is(body.sayfa-ornek, body.ana-sayfa) #ornek-okul-listesi-karti #ornek-secim-ozeti.metin-h2 {
     margin-top: 25px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 :is(body.sayfa-ornek, body.ana-sayfa) #ornek-okul-listesi-karti .rozet-grid {
@@ -14588,6 +14527,11 @@ article.icerik-alani
 :is(body.sayfa-ornek, body.ana-sayfa) #ornek-okul-listesi > .premium-liste-kart:hover .okul-isim-link,
 :is(body.sayfa-ornek, body.ana-sayfa) #ornek-okul-listesi > .premium-liste-kart:hover .liste-index {
     color: #e30613;
+}
+
+:is(body.sayfa-ornek, body.ana-sayfa) #ornek-okul-listesi .okul-isim-link {
+    font-size: 15px;
+    font-weight: 400;
 }
 
 body.ana-sayfa article.icerik-alani {
@@ -14781,4 +14725,39 @@ body.ana-sayfa .navigasyon-icindekiler-liste a:hover {
     }
 }
 
+/* Blog detay çerçeve: flex sütun (margin çöküşü yok) + üst margin sıfır + alt boşluk kontrolü */
+article.icerik-alani.blog-yazi-detay .blog-yazi-ana .cerceve-kutu,
+article.icerik-alani.blog-yazi-detay .blog-yazi-ana .site-gri-cerceve-kutu {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    align-items: stretch;
+}
 
+article.icerik-alani.blog-yazi-detay
+    .blog-yazi-ana
+    .cerceve-kutu
+    > *:not([class*="blok-ust-bosluk"]):not([class*="futbol-mt"]):not([class*="alpadia-mt"]):not([class*="rozet-grid"]),
+article.icerik-alani.blog-yazi-detay
+    .blog-yazi-ana
+    .site-gri-cerceve-kutu
+    > *:not([class*="blok-ust-bosluk"]):not([class*="futbol-mt"]):not([class*="alpadia-mt"]):not([class*="rozet-grid"]) {
+    margin-top: 0;
+}
+
+article.icerik-alani.blog-yazi-detay .blog-yazi-ana .cerceve-kutu > :is(h2, h3):is(.metin-h2, .kart-h2),
+article.icerik-alani.blog-yazi-detay .blog-yazi-ana .site-gri-cerceve-kutu > :is(h2, h3):is(.metin-h2, .kart-h2) {
+    margin-bottom: 15px;
+}
+
+article.icerik-alani.blog-yazi-detay .blog-yazi-ana .cerceve-kutu > p.h2-altinda-metin,
+article.icerik-alani.blog-yazi-detay .blog-yazi-ana .site-gri-cerceve-kutu > p.h2-altinda-metin {
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+/* .baslik-iki-satir ile aynı: başlıktan sonraki doğrudan kardeşte üst padding sıfır (h3.metin-h2 dahil) */
+article.icerik-alani.blog-yazi-detay .blog-yazi-ana .cerceve-kutu > :is(h2, h3):is(.metin-h2, .kart-h2) + *,
+article.icerik-alani.blog-yazi-detay .blog-yazi-ana .site-gri-cerceve-kutu > :is(h2, h3):is(.metin-h2, .kart-h2) + * {
+    padding-top: 0;
+}
