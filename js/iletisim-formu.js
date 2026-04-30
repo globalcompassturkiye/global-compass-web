@@ -215,6 +215,15 @@
     return r && r.value ? r.value : '';
   }
 
+  function enforceAllFieldsRequired(form) {
+    form.querySelectorAll('input, textarea, select').forEach(function (el) {
+      if (!el || el.disabled || el.readOnly) return;
+      var t = (el.type || '').toLowerCase();
+      if (t === 'hidden' || t === 'submit' || t === 'button' || t === 'reset') return;
+      el.required = true;
+    });
+  }
+
   function pageH1Text() {
     var h1 = document.querySelector('h1');
     if (!h1) return '';
@@ -240,6 +249,7 @@
     var form = document.getElementById('iletisim-formu');
     if (!form) return;
     form.setAttribute('novalidate', 'novalidate');
+    enforceAllFieldsRequired(form);
 
     form.addEventListener('input', function (ev) {
       var t = ev.target;
