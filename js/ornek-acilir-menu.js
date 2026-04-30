@@ -68,7 +68,8 @@
                     { name: "Sportech Academy - Milano - Genç Tenis Kampı - 8-16 Yaş - Yaz Okulu", url: "/yurt-disi-yaz-okullari/italy/milan/sportech-academy/tenis/" },
                     { name: "Sportech Academy - Milano - 15-18 Yaş - IBEM İşletme Yaz Programı", url: "/yurt-disi-yaz-okullari/italy/milan/sportech-academy/isletme/" },
                     { name: "Sportech Academy - Milano - 15-18 Yaş - İtalya Tıp Yaz Okulu", url: "/yurt-disi-yaz-okullari/italy/milan/sportech-academy/tip/" },
-                    { name: "Sportech Academy - Milano - 15-18 Yaş - Tasarım Yaz Programı", url: "/yurt-disi-yaz-okullari/italy/milan/sportech-academy/tasarim/" }
+                    { name: "Sportech Academy - Milano - 15-18 Yaş - Tasarım Yaz Programı", url: "/yurt-disi-yaz-okullari/italy/milan/sportech-academy/tasarim/" },
+                    { name: "Sportech Academy - Milano - 15-18 Yaş - Moda Yaz Programı", url: "/yurt-disi-yaz-okullari/italy/milan/sportech-academy/moda/" }
                 ]
             },
             "Japonya": {
