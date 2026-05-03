@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.globalcompass.com.tr/</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -359,13 +359,13 @@
   </url>
   <url>
     <loc>https://www.globalcompass.com.tr/yurt-disi-yaz-okullari/italy/milan/</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.globalcompass.com.tr/yurt-disi-yaz-okullari/italy/milan/sportech-academy/</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -408,6 +408,12 @@
   <url>
     <loc>https://www.globalcompass.com.tr/yurt-disi-yaz-okullari/italy/milan/sportech-academy/moda/</loc>
     <lastmod>2026-04-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.globalcompass.com.tr/yurt-disi-yaz-okullari/italy/milan/sportech-academy/sahne-sanatlari/</loc>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
