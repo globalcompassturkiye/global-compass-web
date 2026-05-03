@@ -1136,7 +1136,7 @@ body.sayfa-hizmetlerimiz .blog-yazi-layout--yan-panel .blog-yazi-ana {
     margin-top: 0;
 }
 
-/* Sabit yukarı / içindekilere ok: kurallar style.css (≤501px, tüm sayfalar) */
+/* Sabit yukarı / içindekilere ok: style.css @media (max-width: 501px); boyutlar :root --mobil-sabit-cap-* */
 
 @media (max-width: 1179px) {
     html:has(body.blog-yazi-sayfa-mobil-ux) {

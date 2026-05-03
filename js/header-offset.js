@@ -35,7 +35,8 @@
 
 /**
  * Mobil sabit ok (≤501px): içindekiler hedefine veya sayfa başına; yoksa DOM’a eklenir.
- * Görünürlük: body.blog-icindekiler-sabit-ok-goster + style.css @media (max-width: 501px)
+ * Görünürlük: body.blog-icindekiler-sabit-ok-goster + style.css @media (max-width: 501px).
+ * Daire / ikon ölçüsü: style.css :root --mobil-sabit-cap-boy, --mobil-sabit-cap-ikon-boy (SVG width/height ile uyumlu tutun).
  */
 (function () {
   var CLS = 'blog-icindekiler-sabit-ok-goster';
@@ -61,8 +62,18 @@
     return 'Sayfa başına git';
   }
 
+  var SABIT_CAP_SVG =
+    '<svg class="blog-mobil-icindekiler-sabit-cap-ok-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.35" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M12 18V6"/><path d="m7 11 5-5 5 5"/></svg>';
+
   function ensureSabitCap() {
-    if (document.querySelector('.blog-mobil-icindekiler-sabit-cap')) return;
+    var existingCap = document.querySelector('.blog-mobil-icindekiler-sabit-cap');
+    if (existingCap) {
+      var okSpan = existingCap.querySelector('.blog-mobil-icindekiler-sabit-cap-ok');
+      if (okSpan && !okSpan.querySelector('.blog-mobil-icindekiler-sabit-cap-ok-svg')) {
+        okSpan.innerHTML = SABIT_CAP_SVG;
+      }
+      return;
+    }
     var a = document.createElement('a');
     a.className = 'blog-mobil-icindekiler-sabit-cap';
     a.href = resolveCapHref();
@@ -70,7 +81,7 @@
     var span = document.createElement('span');
     span.className = 'blog-mobil-icindekiler-sabit-cap-ok';
     span.setAttribute('aria-hidden', 'true');
-    span.textContent = '\u2191';
+    span.innerHTML = SABIT_CAP_SVG;
     a.appendChild(span);
     a.addEventListener('click', function (e) {
       var raw = a.getAttribute('href') || '';
