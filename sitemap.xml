@@ -370,8 +370,20 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.globalcompass.com.tr/yurt-disi-yaz-okullari/italy/milan/sportech-academy/gastronomi-ve-mutfak/</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.globalcompass.com.tr/yurt-disi-yaz-okullari/italy/milan/sportech-academy/a-level-hazirlik/</loc>
     <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.globalcompass.com.tr/yurt-disi-yaz-okullari/italy/milan/sportech-academy/ib-hazirlik/</loc>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

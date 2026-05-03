@@ -8046,6 +8046,11 @@ body.sayfa-yurt-disi-yaz-okullari-italy .yaz-okullari-ulke-kart[href*="italy/mil
     display: block;
 }
 
+/* Standart içerik galerisi: .icerik-galeri-grid tek başına 4 sütun; futbol-galeri-grid ile birlikte masaüstü yatay 3 */
+.icerik-galeri-grid.futbol-galeri-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 @media (max-width: 1199px) {
     .icerik-galeri-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -8061,7 +8066,8 @@ body.sayfa-yurt-disi-yaz-okullari-italy .yaz-okullari-ulke-kart[href*="italy/mil
 /* Moda / Motor mühendisliği galeri: 3 sütun (.icerik-galeri-grid ile birlikte aksi halde 4 sütun uygulanır) */
 #sportech-moda-galeri .icerik-galeri-grid.futbol-galeri-grid,
 #sportech-motor-galeri .icerik-galeri-grid.futbol-galeri-grid,
-#sportech-sahne-galeri .icerik-galeri-grid.futbol-galeri-grid {
+#sportech-sahne-galeri .icerik-galeri-grid.futbol-galeri-grid,
+#sportech-gastronomi-galeri .icerik-galeri-grid.futbol-galeri-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
