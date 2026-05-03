@@ -227,7 +227,8 @@ article.icerik-alani > :is(
     .okul-liste-kapsayici,
     .okul-listesi-okul-liste-kapsayici,
     section.iletisim-form-alani,
-    .yonlendirme-karti
+    .yonlendirme-karti,
+    .site-ana-hizmetler-kartlari-bolumu
 ) {
     width: 100%;
     max-width: var(--site-cerceve-max-width);
@@ -3800,6 +3801,7 @@ article.icerik-alani > h2:has(> .vurgu-satir) > .vurgu-satir .vurgu-renk, .iceri
     .icerik-alani .kirmizi-kutu,
     .icerik-alani .hizmet-tab-alani,
     .icerik-alani .yonlendirme-karti,
+    .icerik-alani .site-ana-hizmetler-kartlari-bolumu,
     .icerik-alani [class$="-hero"] {
         margin-left: 0;
         margin-right: 0;
@@ -3808,7 +3810,13 @@ article.icerik-alani > h2:has(> .vurgu-satir) > .vurgu-satir .vurgu-renk, .iceri
     }
 
     .icerik-alani .cerceve-kutu,
-    .icerik-alani .site-gri-cerceve-kutu {
+    .icerik-alani .site-gri-cerceve-kutu,
+    .icerik-alani .site-ana-hizmetler-kartlari-bolumu {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .icerik-alani .site-ana-hizmetler-kartlari-bolumu .dil-okullari-secim-paneli {
         padding-left: 0;
         padding-right: 0;
     }
@@ -4632,18 +4640,6 @@ body.ana-sayfa article.icerik-alani > section.ana-sayfa-blog-ozeti-wrap.icerik-a
     column-gap: 5px;
 }
 
-@media (max-width: 768px) {
-    .site-ana-hizmetler-kartlari-bolumu {
-        width: calc(100% + 2 * var(--site-cerceve-gutter));
-        max-width: none;
-        margin-left: calc(-1 * var(--site-cerceve-gutter));
-        margin-right: calc(-1 * var(--site-cerceve-gutter));
-        padding-left: var(--site-cerceve-gutter);
-        padding-right: var(--site-cerceve-gutter);
-        box-sizing: border-box;
-    }
-}
-
 .ana-sayfa-blog-ozeti-inner {
     border: 1px solid var(--site-kart-kenar);
     border-radius: 15px;
@@ -4848,9 +4844,39 @@ body.ana-sayfa article.icerik-alani .ana-sayfa-blog-ozeti-kirmizi-bant #ana-sayf
         border-bottom-right-radius: 15px;
     }
 
-    body.sayfa-hizmetlerimiz #egitim-alanlari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > :is(.yaz-okullari-ulke-kart, .rozet-kart-link):nth-child(2n + 1):nth-last-child(1):not(:only-child),
-    body.sayfa-hizmetlerimiz #egitim-alanlari .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > :is(.yaz-okullari-ulke-kart, .rozet-kart-link):nth-child(2n + 1):nth-last-child(2) {
-        border-bottom-left-radius: 15px;
+}
+
+/* Ana sayfa + /hizmetlerimiz/ — #egitim-alanlari hizmet kartları: navigasyon .form-satırı ile aynı köşe (14px); kartlar arası boşluk */
+#egitim-alanlari.site-ana-hizmetler-kartlari-bolumu #site-ana-hizmetler-kartlari,
+#egitim-alanlari.site-ana-hizmetler-kartlari-bolumu .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap {
+    gap: 10px;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+#egitim-alanlari.site-ana-hizmetler-kartlari-bolumu #site-ana-hizmetler-kartlari > :is(.yaz-okullari-ulke-kart, .rozet-kart-link),
+#egitim-alanlari.site-ana-hizmetler-kartlari-bolumu .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > :is(.yaz-okullari-ulke-kart, .rozet-kart-link) {
+    border-radius: 14px;
+}
+
+/* ≤1199px: ana sayfa + /hizmetlerimiz/ — ana sütun ve hizmet bandı yatay boşluk sabit 15px */
+@media (max-width: 1199px) {
+    body.ana-sayfa main#icerik > article.icerik-alani,
+    body.sayfa-hizmetlerimiz main#icerik > article.icerik-alani {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* :is(… .blog-yazi-ana > section#egitim-alanlari …) margin:auto üstüne çıkmak için site-ana sınıfı + article zinciri (ana sayfa + /hizmetlerimiz/) */
+    article.icerik-alani > section#egitim-alanlari.site-ana-hizmetler-kartlari-bolumu,
+    article.icerik-alani .blog-yazi-ana > section#egitim-alanlari.site-ana-hizmetler-kartlari-bolumu {
+        width: calc(100% + 2 * var(--icerik-yan-gutter, 15px));
+        max-width: none;
+        margin-left: calc(-1 * var(--icerik-yan-gutter, 15px));
+        margin-right: calc(-1 * var(--icerik-yan-gutter, 15px));
+        box-sizing: border-box;
+        padding-left: var(--icerik-yan-gutter, 15px);
+        padding-right: var(--icerik-yan-gutter, 15px);
     }
 }
 
@@ -11986,7 +12012,8 @@ article.icerik-alani > h2:has(> .vurgu-satir) > .vurgu-satir,
     article.icerik-alani > .cerceve-kutu,
     article.icerik-alani > .kirmizi-kutu,
     article.icerik-alani > .yonlendirme-karti,
-    article.icerik-alani > .okul-liste-kapsayici {
+    article.icerik-alani > .okul-liste-kapsayici,
+    article.icerik-alani > .site-ana-hizmetler-kartlari-bolumu {
         margin-left: calc(-1 * var(--icerik-yan-gutter));
         margin-right: calc(-1 * var(--icerik-yan-gutter));
         width: calc(100% + 2 * var(--icerik-yan-gutter));
@@ -12002,7 +12029,8 @@ article.icerik-alani > h2:has(> .vurgu-satir) > .vurgu-satir,
     article.icerik-alani > .kirmizi-kutu,
     article.icerik-alani > .okul-liste-kapsayici,
     article.icerik-alani > .yonlendirme-karti,
-    article.icerik-alani > .hizmet-tab-alani {
+    article.icerik-alani > .hizmet-tab-alani,
+    article.icerik-alani > .site-ana-hizmetler-kartlari-bolumu {
         margin-left: 0;
         margin-right: 0;
         width: 100%;
@@ -12672,72 +12700,22 @@ body.sayfa-yurt-disi-lise .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wra
         > :is(.yaz-okullari-ulke-kart, .rozet-kart-link):last-child:nth-child(odd):not(:only-child) {
         border-bottom-right-radius: 15px;
     }
+}
 
-    .site-ana-hizmetler-kartlari-bolumu
-        .dil-okullari-secim-paneli
-        .yaz-okullari-ulke-kart-wrap {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        max-width: 100%;
-        justify-content: stretch;
+/* 769–1199 dil/yaz bandı dar kart max-width’ü #egitim site-ana hizmet kartlarını sıkıştırıyordu; ≤1199 son söz */
+@media (max-width: 1199px) {
+    #egitim-alanlari.site-ana-hizmetler-kartlari-bolumu .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap,
+    #egitim-alanlari.site-ana-hizmetler-kartlari-bolumu #site-ana-hizmetler-kartlari {
+        max-width: none;
+        width: 100%;
         margin-left: 0;
         margin-right: 0;
+        justify-content: stretch;
     }
 
-    .site-ana-hizmetler-kartlari-bolumu
-        .yaz-okullari-ulke-kart-wrap
-        > .yaz-okullari-ulke-kart {
-        border-radius: 0;
-    }
-
-    .site-ana-hizmetler-kartlari-bolumu
-        .yaz-okullari-ulke-kart-wrap
-        > .yaz-okullari-ulke-kart:only-child {
-        border-radius: 15px;
-    }
-
-    .site-ana-hizmetler-kartlari-bolumu
-        .yaz-okullari-ulke-kart-wrap
-        > .yaz-okullari-ulke-kart:nth-child(1):not(:only-child) {
-        border-top-left-radius: 15px;
-    }
-
-    .site-ana-hizmetler-kartlari-bolumu
-        .yaz-okullari-ulke-kart-wrap:has(> .yaz-okullari-ulke-kart:nth-child(3))
-        > .yaz-okullari-ulke-kart:nth-child(3) {
-        border-top-right-radius: 15px;
-    }
-
-    .site-ana-hizmetler-kartlari-bolumu
-        .yaz-okullari-ulke-kart-wrap:has(> .yaz-okullari-ulke-kart:nth-child(2):nth-last-child(1))
-        > .yaz-okullari-ulke-kart:nth-child(2) {
-        border-top-right-radius: 15px;
-    }
-
-    .site-ana-hizmetler-kartlari-bolumu
-        .yaz-okullari-ulke-kart-wrap
-        > .yaz-okullari-ulke-kart:nth-last-child(1):nth-child(3n),
-    .site-ana-hizmetler-kartlari-bolumu
-        .yaz-okullari-ulke-kart-wrap
-        > .yaz-okullari-ulke-kart:nth-last-child(1):nth-child(3n + 2) {
-        border-bottom-right-radius: 15px;
-    }
-
-    .site-ana-hizmetler-kartlari-bolumu
-        .yaz-okullari-ulke-kart-wrap
-        > .yaz-okullari-ulke-kart:nth-child(3n):nth-last-child(2) {
-        border-bottom-right-radius: 15px;
-    }
-
-    .site-ana-hizmetler-kartlari-bolumu
-        .yaz-okullari-ulke-kart-wrap
-        > .yaz-okullari-ulke-kart:nth-child(3n + 1):nth-last-child(3),
-    .site-ana-hizmetler-kartlari-bolumu
-        .yaz-okullari-ulke-kart-wrap
-        > .yaz-okullari-ulke-kart:nth-child(3n + 1):nth-last-child(1):not(:only-child),
-    .site-ana-hizmetler-kartlari-bolumu
-        .yaz-okullari-ulke-kart-wrap
-        > .yaz-okullari-ulke-kart:nth-child(3n + 1):nth-last-child(2) {
-        border-bottom-left-radius: 15px;
+    #egitim-alanlari.site-ana-hizmetler-kartlari-bolumu .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap > :is(.yaz-okullari-ulke-kart, .rozet-kart-link),
+    #egitim-alanlari.site-ana-hizmetler-kartlari-bolumu #site-ana-hizmetler-kartlari > :is(.yaz-okullari-ulke-kart, .rozet-kart-link) {
+        border-radius: 14px;
     }
 }
 
@@ -13516,13 +13494,10 @@ article.icerik-alani :is(.dil-okullari-secim-paneli, .yaz-okullari-secim-paneli)
         padding-right: var(--site-cerceve-gutter);
     }
 
-    .site-ana-hizmetler-kartlari-bolumu .dil-okullari-secim-paneli {
-        padding-left: 0;
-        padding-right: 0;
-    }
 }
 
-@media (min-width: 900px) {
+/* Hizmet kartları (#egitim): genişlik / gutter = .icerik-alani çerçeve sözleşmesi (max-width:1200px); 3 sütun ≥1201px; 502–1199px 2 sütun */
+@media (min-width: 1201px) {
     .site-ana-hizmetler-kartlari-bolumu .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap {
         grid-template-columns: repeat(3, minmax(0, 1fr));
         justify-content: stretch;
@@ -13534,6 +13509,33 @@ article.icerik-alani :is(.dil-okullari-secim-paneli, .yaz-okullari-secim-paneli)
         > :is(.yaz-okullari-ulke-kart, .rozet-kart-link) {
         width: 100%;
         max-width: none;
+        justify-self: stretch;
+    }
+}
+
+@media (min-width: 502px) and (max-width: 1199px) {
+    .site-ana-hizmetler-kartlari-bolumu .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wrap,
+    #site-ana-hizmetler-kartlari {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: 100%;
+        max-width: none;
+        justify-content: stretch;
+        gap: 5px;
+        row-gap: 5px;
+        column-gap: 5px;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .site-ana-hizmetler-kartlari-bolumu
+        .dil-okullari-secim-paneli
+        .yaz-okullari-ulke-kart-wrap
+        > :is(.yaz-okullari-ulke-kart, .rozet-kart-link),
+    #site-ana-hizmetler-kartlari > :is(.yaz-okullari-ulke-kart, .rozet-kart-link) {
+        width: 100%;
+        max-width: none;
+        min-width: 0;
         justify-self: stretch;
     }
 }
