@@ -5736,14 +5736,19 @@ body.sportech-academy-page .giris-metni .futbol-intro-metin.intro-metin {
     padding-bottom: 0;
 }
 
+/* Giriş: ardışık paragraflar arası ~1 satır; aşırı dikey boşluk yok */
 .giris-metni > .intro-metin {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 0;
+    margin-bottom: 0;
     padding-bottom: 0;
 }
 
+.giris-metni > .intro-metin + .intro-metin {
+    margin-top: 1em;
+}
+
 .giris-metni > .intro-metin:not(:last-child) {
-    margin-bottom: 15px;
+    margin-bottom: 0;
 }
 
 body.sportech-academy-page .sportech-academy-giris-metni > p:last-child:not(.futbol-logo-kapsayici):not(.sportech-academy-logo-kapsayici):not(.futbol-intro-metin):not(.intro-metin),
@@ -6886,7 +6891,11 @@ div[id$='-giris-metni'].giris-metin {
 
 div[id$='-giris-metni'].giris-metin p {
     margin-top: 0;
-    margin-bottom: 14px;
+    margin-bottom: 0;
+}
+
+div[id$='-giris-metni'].giris-metin p + p {
+    margin-top: 1em;
 }
 
 .dikkat-cekici-metin {
