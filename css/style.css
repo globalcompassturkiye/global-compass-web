@@ -3066,7 +3066,15 @@ article.icerik-alani p.rozet-metin.h2-altinda-metin {
 }
 
 @media (max-width: 1200px) {
-    /* Yalnızca doğrudan paragraf (.giris-metin); .giris-metni blog’da article+gutter ile çift 15px üretmesin */
+    /* .icerik-alani zaten yatay gutter veriyor; .giris-metin’de tekrar padding olmasın → metin ~15px içten */
+    .icerik-alani .giris-metin {
+        max-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        box-sizing: border-box;
+    }
+
+    /* .icerik-alani dışı (nadir): yalnızca bu sınıfta 15px */
     .giris-metin {
         max-width: 100%;
         padding-left: var(--site-cerceve-gutter, 15px);
@@ -5878,8 +5886,8 @@ article.icerik-alani .blog-yazi-ana > h1 + p.intro-metin {
     article.icerik-alani .blog-yazi-ana > .sea-giris-metni:not(.cerceve-kutu):not(.site-gri-cerceve-kutu),
     article.icerik-alani .blog-yazi-ana > .chantemerle-giris-metni:not(.cerceve-kutu):not(.site-gri-cerceve-kutu) {
         max-width: 100%;
-        padding-left: var(--site-cerceve-gutter);
-        padding-right: var(--site-cerceve-gutter);
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
