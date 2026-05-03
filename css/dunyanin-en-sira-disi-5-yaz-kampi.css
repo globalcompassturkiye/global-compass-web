@@ -314,24 +314,3 @@
     margin: 1.5rem 0 1rem;
 }
 
-/* Sayfa gövdesi (breadcrumb, meta, yan panel, içindekiler): tek aile Poppins */
-body.blog-yazi-yaz-kampi-mag .icerik-alani.blog-yazi-detay {
-}
-
-/* Alt yönlendirme: iki CTA (Dil Okulları / Yaz Okulları) */
-.blog-yazi-yaz-kampi-mag .yonlendirme-karti-cta-wrap {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    align-items: flex-start;
-}
-
-@media (max-width: 640px) {
-    .blog-yazi-yaz-kampi-mag .yonlendirme-karti--yk-mag-iki-cta .kart-link {
-        min-width: 0;
-        width: 100%;
-        max-width: 100%;
-        justify-content: center;
-        text-align: center;
-    }
-}

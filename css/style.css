@@ -13926,8 +13926,10 @@ article.icerik-alani > :last-child:is(
     box-shadow: var(--site-kart-golge);
     box-sizing: border-box;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: flex-start;
+    align-items: flex-start;
     gap: 14px;
     transition: none;
 }
@@ -13948,8 +13950,10 @@ article.icerik-alani > :last-child:is(
     border-radius: 15px;
     padding: 25px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: flex-start;
+    align-items: flex-start;
     gap: 14px;
     box-shadow: var(--site-kart-golge);
     box-sizing: border-box;
@@ -13986,13 +13990,28 @@ article.icerik-alani > :last-child:is(
     color: #666;
     font-size: 15px;
     margin: 0;
-    text-align: left;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
-.yonlendirme-karti .kart-link:hover {
-    color: inherit;
-    border-bottom-color: transparent;
-    padding-left: 0;
+/* Metin ve başlıklar tam satır; birden fazla CTA yan yana (sarmalanabilir) */
+.yonlendirme-karti > :is(h1, h2, h3, h4, p) {
+    flex: 1 1 100%;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+/* İsteğe bağlı: birden fazla CTA’yı tek grupta tutmak için (eski sayfalar) */
+.yonlendirme-karti > .yonlendirme-karti-cta-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: flex-start;
+    flex: 1 1 100%;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
 }
 
 .yonlendirme-karti .vurgulu-incele-btn,
@@ -14002,7 +14021,9 @@ article.icerik-alani > :last-child:is(
     justify-content: center;
     gap: 10px;
     width: auto;
-    min-width: 260px;
+    max-width: 100%;
+    min-width: min(260px, 100%);
+    flex: 0 1 auto;
     padding: 10px 25px;
     text-decoration: none;
     border: none;
@@ -14012,20 +14033,84 @@ article.icerik-alani > :last-child:is(
     font-weight: 600;
     letter-spacing: 0;
     text-transform: none;
-    box-shadow: none;
-    transition: none;
+    white-space: nowrap;
+    box-shadow: 0 1px 2px rgba(44, 62, 80, 0.12);
+    transition:
+        background-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease,
+        filter 0.2s ease;
     align-self: flex-start;
     border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* >=1200px: kartta 3+ CTA yan yana; metin tek satır (min-content), sığmazsa buton tamamı alt satıra sarar */
+@media (min-width: 1200px) {
+    .yonlendirme-karti:has(> a.kart-link:nth-of-type(3)) > a.kart-link,
+    .yonlendirme-karti:has(> a.kart-link:nth-of-type(3)) > .vurgulu-incele-btn {
+        flex: 1 1 0;
+        min-width: min-content;
+        max-width: none;
+        width: auto;
+        align-self: stretch;
+    }
+
+    .yonlendirme-karti:has(> .yonlendirme-karti-cta-wrap > a.kart-link:nth-of-type(3)) > .yonlendirme-karti-cta-wrap > a.kart-link,
+    .yonlendirme-karti:has(> .yonlendirme-karti-cta-wrap > a.kart-link:nth-of-type(3)) > .yonlendirme-karti-cta-wrap > .vurgulu-incele-btn {
+        flex: 1 1 0;
+        min-width: min-content;
+        max-width: none;
+        width: auto;
+        align-self: stretch;
+    }
+
+    .yonlendirme-karti:has(> .yonlendirme-karti-cta-wrap > a.kart-link:nth-of-type(3)) > .yonlendirme-karti-cta-wrap {
+        flex-wrap: wrap;
+    }
 }
 
 .yonlendirme-karti .vurgulu-incele-btn:hover,
 .yonlendirme-karti .kart-link:hover {
-    background: #2c3e50;
+    background: #3d566e;
     color: #ffffff;
-    transform: none;
-    box-shadow: none;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(44, 62, 80, 0.35);
+    filter: brightness(1.03);
     padding-left: 25px;
     border-bottom-color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .yonlendirme-karti .vurgulu-incele-btn,
+    .yonlendirme-karti .kart-link {
+        transition: none;
+    }
+
+    .yonlendirme-karti .vurgulu-incele-btn:hover,
+    .yonlendirme-karti .kart-link:hover {
+        transform: none;
+    }
+}
+
+@media (max-width: 640px) {
+    .yonlendirme-karti > .kart-link,
+    .yonlendirme-karti > .vurgulu-incele-btn,
+    .yonlendirme-karti > .yonlendirme-karti-cta-wrap .kart-link,
+    .yonlendirme-karti > .yonlendirme-karti-cta-wrap .vurgulu-incele-btn {
+        flex: 1 1 100%;
+        min-width: 0;
+        width: 100%;
+        max-width: 100%;
+        justify-content: center;
+        text-align: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .yonlendirme-karti > .yonlendirme-karti-cta-wrap {
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 768px) {
