@@ -8060,7 +8060,8 @@ body.sayfa-yurt-disi-yaz-okullari-italy .yaz-okullari-ulke-kart[href*="italy/mil
 
 /* Moda / Motor mühendisliği galeri: 3 sütun (.icerik-galeri-grid ile birlikte aksi halde 4 sütun uygulanır) */
 #sportech-moda-galeri .icerik-galeri-grid.futbol-galeri-grid,
-#sportech-motor-galeri .icerik-galeri-grid.futbol-galeri-grid {
+#sportech-motor-galeri .icerik-galeri-grid.futbol-galeri-grid,
+#sportech-sahne-galeri .icerik-galeri-grid.futbol-galeri-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
