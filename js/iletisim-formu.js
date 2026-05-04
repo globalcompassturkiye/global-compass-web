@@ -274,21 +274,6 @@
     return (h1.textContent || '').replace(/\s+/g, ' ').trim();
   }
 
-  function messageWithPageContext(form) {
-    var mesaj = valField(form, 'mesaj');
-    var hangi = valField(form, 'hangi_program');
-    var h1 = pageH1Text();
-    var lines = [];
-    if (h1) lines.push('Sayfa: ' + h1);
-    if (hangi) lines.push('Hangi program: ' + hangi);
-    if (mesaj) {
-      lines.push('');
-      lines.push('Mesaj:');
-      lines.push(mesaj);
-    }
-    return lines.join('\n').trim();
-  }
-
   function bind() {
     var form = document.getElementById('iletisim-formu');
     if (!form) return;
@@ -338,7 +323,8 @@
         telefon: valField(form, 'telefon'),
         tip: tipVal,
         ilgilenilen_program: valField(form, 'hangi_program'),
-        mesaj: messageWithPageContext(form),
+        mesaj: valField(form, 'mesaj'),
+        landing_page: pageH1Text(),
         kvkk_onay: kvkkAccepted(form) ? 1 : 0
       };
       postSubmit(payload)
