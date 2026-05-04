@@ -752,7 +752,6 @@ Her sayfada şu CSS dosyaları yüklenmelidir:
 - `.isvicre-kamp-grid` → Grid
 - `.isvicre-kamp-kart` → Tek kart
 - `.isvicre-kamp-numara` → Lacivert numara rozeti
-- `.kanada-avantaj-kutu` → Kanada 4 avantaj kartı
 - `.toronto-neler-kutu` → Zaman çizelgesi
 - `.toronto-neler-zaman-cizelgesi` → Dikey çizgi
 - `.toronto-neler-adim` → Tek adım

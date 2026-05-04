@@ -1,0 +1,23 @@
+style.css — kullanılmayan sınıf temizliği (aşamalı)
+
+Faz 0 — Envanter
+- scripts/audit-style-css-classes.mjs : style.css içindeki .sınıf token’larını toplar; html / js / json / (style dışı) css dosyalarında “token” olarak arar.
+- Çıktı: docs/style-css-unused-class-candidates-phase1.txt
+- Uyarı: Otomatik liste **mutlaka** elle doğrulanmalı (classList / şablon stringi, farkındalık: “maybe” sütunu = alt dize eşleşmesi). Son çalıştırmada örnek: ~13 kesin aday, ~13 manuel kontrol satırı (ortam ve dosya ağacına bağlı değişir).
+
+Faz 1 — Yüksek güvenli silme
+- HTML’de sıfır eşleşme + style.css’te yalıtılmış kural blokları.
+- Örnek (tamamlanan): .kanada-avantaj-* (Kanada sayfalarında artık kullanılmıyor); ortak seçicilerde yalnızca kanada ile birleşik satırlar ayrıştırıldı (.immerse-program-icerik h3, .immerse-akademik-kart p korundu).
+
+Faz 2 — Tekrarlayan / ölü bloklar
+- style.css içinde aynı seçicilerin birden çok kez tanımlandığı yerler (ör. canada-avantaj-grid-3-1 medya tekrarları) konsolidasyon gerektirir; ayrı görev.
+
+Faz 3 — “Aday liste” kümeleri
+- Dosya başına veya marka başına (ör. frankfurt-*, kings-*, japan-*) kümelenen kurallar: her kümede HTML grep → sonra blok silme.
+
+Faz 4 — Yardımcı sınıflar
+- Yalnızca docs/kurallarda geçen ama hiç HTML’de kullanılmayan yardımcılar: ya kullanıma bağlanır ya da kaldırılır (ürün kararı).
+- Uygulama (örnek): `blok-alt-bosluk-15` HTML’de yoktu → `style.css`’ten silindi; `.cursor/rules/blok-alt-bosluk-yardimci-sinif-standardi.mdc` güncellendi.
+
+Komut (Node):
+  node scripts/audit-style-css-classes.mjs
