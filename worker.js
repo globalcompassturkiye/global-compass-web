@@ -46,6 +46,10 @@ async function handleSubmitForm(request, env) {
     500
   );
   var mesaj = truncStr(body.mesaj, 8000);
+  var hedef_ulke = truncStr(body.hedef_ulke, 120);
+  if (!hedef_ulke) {
+    hedef_ulke = "Belirtilmedi";
+  }
 
   if (!ad || !soyad || !email || !telefon || !tip) {
     return jsonResponse({ ok: false, error: "Zorunlu alanlar eksik veya geçersiz." }, 400);
@@ -56,7 +60,7 @@ async function handleSubmitForm(request, env) {
   try {
     var result = await db
       .prepare(
-        "INSERT INTO students (ad, soyad, email, telefon, tip, ilgilenilen_program, mesaj, kvkk_onay, kayit_tarihi, kaynak, durum) VALUES (?, ?, ?, ?, ?, ?, ?, 1, ?, ?, ?)"
+        "INSERT INTO students (ad, soyad, email, telefon, tip, ilgilenilen_program, mesaj, kvkk_onay, kayit_tarihi, kaynak, durum, hedef_ulke) VALUES (?, ?, ?, ?, ?, ?, ?, 1, ?, ?, ?, ?)"
       )
       .bind(
         ad,
@@ -68,7 +72,8 @@ async function handleSubmitForm(request, env) {
         mesaj,
         kayit_tarihi,
         "web_site",
-        "yeni"
+        "yeni",
+        hedef_ulke
       )
       .run();
 
