@@ -54,7 +54,7 @@ async function handleSubmitForm(request, env) {
   var kayit_tarihi = new Date().toISOString();
 
   try {
-    await db
+    var result = await db
       .prepare(
         "INSERT INTO students (ad, soyad, email, telefon, tip, ilgilenilen_program, mesaj, kvkk_onay, kayit_tarihi, kaynak, durum) VALUES (?, ?, ?, ?, ?, ?, ?, 1, ?, ?, ?)"
       )
@@ -71,9 +71,30 @@ async function handleSubmitForm(request, env) {
         "yeni"
       )
       .run();
+
+    if (result && result.success === false) {
+      var runErr =
+        result.error != null
+          ? typeof result.error === "string"
+            ? result.error
+            : JSON.stringify(result.error)
+          : "D1 sorgusu başarısız.";
+      console.error("submit-form D1 run:", runErr);
+      return jsonResponse(
+        { ok: false, error: "Kayıt oluşturulamadı.", detail: String(runErr).slice(0, 400) },
+        500
+      );
+    }
   } catch (e) {
-    console.error("submit-form D1:", e && e.message ? e.message : e);
-    return jsonResponse({ ok: false, error: "Kayıt oluşturulamadı." }, 500);
+    var tech = "";
+    if (e && typeof e.message === "string") tech = e.message;
+    else if (e && e.cause && typeof e.cause.message === "string") tech = e.cause.message;
+    else tech = String(e || "");
+    console.error("submit-form D1:", tech);
+    return jsonResponse(
+      { ok: false, error: "Kayıt oluşturulamadı.", detail: tech.slice(0, 400) },
+      500
+    );
   }
 
   return jsonResponse({ ok: true }, 201);

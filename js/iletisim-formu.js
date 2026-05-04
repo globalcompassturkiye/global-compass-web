@@ -381,6 +381,9 @@
               var j = JSON.parse(t);
               if (j && typeof j.error === 'string' && j.error.length > 0) {
                 msg = j.error;
+                if (typeof j.detail === 'string' && j.detail.length > 0) {
+                  msg = msg + ' (' + j.detail + ')';
+                }
               }
             } catch (parseErr) {
               if (t.length < 200) msg = t;
