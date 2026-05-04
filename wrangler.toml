@@ -6,4 +6,8 @@ main = "worker.js"
 directory = "./"
 binding = "ASSETS"
 
+# Cloudflare: wrangler d1 list → database_id değerini yapıştırın. Binding adı worker.js ile aynı olmalı (STUDENTS_DB).
+[[d1_databases]]
+binding = "STUDENTS_DB"
+database_id = "9df77b3f-035f-44c9-86e0-2daeaac73022"
 

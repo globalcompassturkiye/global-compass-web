@@ -1,10 +1,6 @@
 (function () {
   'use strict';
-  // First try same-origin proxy, then direct worker fallback.
-  var ENDPOINTS = [
-    '/api/paytr/iletisim',
-    'https://global-compass-paytr.canmuratsubat.workers.dev/iletisim'
-  ];
+  var SUBMIT_URL = '/api/submit-form';
 
   function messageForValidity(el) {
     var v = el.validity;
@@ -215,6 +211,54 @@
     return r && r.value ? r.value : '';
   }
 
+  function wireKvkkCheckbox(form) {
+    if (form.querySelector('input[name="kvkk_onay"]')) return;
+    var cb =
+      form.querySelector('.kvkk-alani input[type="checkbox"]') ||
+      form.querySelector('input[type="checkbox"][id^="kvkk-onay"]') ||
+      form.querySelector('#kvkk-onay');
+    if (cb) {
+      cb.name = 'kvkk_onay';
+      if (!cb.getAttribute('value')) cb.setAttribute('value', '1');
+      cb.required = true;
+      return;
+    }
+    injectKvkkRow(form);
+  }
+
+  function injectKvkkRow(form) {
+    var btn = form.querySelector('button[type="submit"]');
+    if (!btn || !btn.parentNode) return;
+    var id = 'iletisim-kvkk-' + String(Date.now());
+    var row = document.createElement('div');
+    row.className = 'kvkk-satir';
+    var alan = document.createElement('div');
+    alan.className = 'kvkk-alani';
+    var cb = document.createElement('input');
+    cb.type = 'checkbox';
+    cb.name = 'kvkk_onay';
+    cb.id = id;
+    cb.value = '1';
+    cb.required = true;
+    var lab = document.createElement('label');
+    lab.setAttribute('for', id);
+    var a = document.createElement('a');
+    a.href = '/kvkk-aydinlatma-metni/';
+    a.className = 'kvkk-link';
+    a.textContent = 'KVKK Aydınlatma Metnini';
+    lab.appendChild(a);
+    lab.appendChild(document.createTextNode(' Okudum*'));
+    alan.appendChild(cb);
+    alan.appendChild(lab);
+    row.appendChild(alan);
+    btn.parentNode.insertBefore(row, btn);
+  }
+
+  function kvkkAccepted(form) {
+    var el = form.querySelector('input[name="kvkk_onay"]');
+    return !!(el && el.checked);
+  }
+
   function enforceAllFieldsRequired(form) {
     form.querySelectorAll('input, textarea, select').forEach(function (el) {
       if (!el || el.disabled || el.readOnly) return;
@@ -249,6 +293,7 @@
     var form = document.getElementById('iletisim-formu');
     if (!form) return;
     form.setAttribute('novalidate', 'novalidate');
+    wireKvkkCheckbox(form);
     enforceAllFieldsRequired(form);
 
     form.addEventListener('input', function (ev) {
@@ -277,7 +322,7 @@
         if (buton) buton.disabled = false;
         var firstBad =
           form.querySelector(
-            'input[aria-invalid="true"]:not([type="radio"]), textarea[aria-invalid="true"]'
+            'input[aria-invalid="true"]:not([type="radio"]), textarea[aria-invalid="true"], input[type="checkbox"][aria-invalid="true"]'
           ) || form.querySelector('input[type="radio"][aria-invalid="true"]');
         if (firstBad && typeof firstBad.focus === 'function') {
           firstBad.focus();
@@ -285,63 +330,66 @@
         return;
       }
 
+      var tipVal = kimlikValue(form);
       var payload = {
         ad: valField(form, 'ad'),
         soyad: valField(form, 'soyad'),
         email: valField(form, 'email'),
         telefon: valField(form, 'telefon'),
-        kimlik: kimlikValue(form),
-        hangi_program: valField(form, 'hangi_program'),
+        tip: tipVal,
+        ilgilenilen_program: valField(form, 'hangi_program'),
         mesaj: messageWithPageContext(form),
-        h1: pageH1Text()
+        kvkk_onay: kvkkAccepted(form) ? 1 : 0
       };
-      postWithFallback(payload)
+      postSubmit(payload)
         .then(function () {
           form.reset();
           clearFormErrors(form);
+          wireKvkkCheckbox(form);
+          enforceAllFieldsRequired(form);
           showBildirim(
             'basari',
-            'Mesajınız iletildi, en kısa sürede sizinle iletişime geçeceğiz.',
+            'Mesajınız iletildi, teşekkür ederiz.',
             function () {
               if (buton) buton.disabled = false;
             }
           );
         })
-        .catch(function () {
-          showBildirim(
-            'hata',
-            'Bir hata oluştu, lütfen tekrar deneyin.',
-            function () {
-              if (buton) buton.disabled = false;
-            }
-          );
+        .catch(function (err) {
+          var msg =
+            err && typeof err.message === 'string' && err.message.length > 0
+              ? err.message
+              : 'Bir hata oluştu, lütfen tekrar deneyin.';
+          showBildirim('hata', msg, function () {
+            if (buton) buton.disabled = false;
+          });
         });
     });
   }
 
-  function postTo(url, payload) {
-    return fetch(url, {
+  function postSubmit(payload) {
+    return fetch(SUBMIT_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
     }).then(function (res) {
       if (!res.ok) {
-        return res
-          .text()
-          .then(function (t) {
-            throw new Error(t || 'Hata');
-          })
-          .catch(function () {
-            throw new Error('Hata');
-          });
+        return res.text().then(function (t) {
+          var msg = 'Bir hata oluştu, lütfen tekrar deneyin.';
+          if (t) {
+            try {
+              var j = JSON.parse(t);
+              if (j && typeof j.error === 'string' && j.error.length > 0) {
+                msg = j.error;
+              }
+            } catch (parseErr) {
+              if (t.length < 200) msg = t;
+            }
+          }
+          throw new Error(msg);
+        });
       }
       return res;
-    });
-  }
-
-  function postWithFallback(payload) {
-    return postTo(ENDPOINTS[0], payload).catch(function () {
-      return postTo(ENDPOINTS[1], payload);
     });
   }
 

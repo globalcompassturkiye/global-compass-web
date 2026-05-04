@@ -1,3 +1,84 @@
+function truncStr(value, max) {
+  if (value == null) return "";
+  var t = String(value).trim();
+  return t.length > max ? t.slice(0, max) : t;
+}
+
+function jsonResponse(obj, status) {
+  return new Response(JSON.stringify(obj), {
+    status: status,
+    headers: {
+      "Content-Type": "application/json; charset=utf-8",
+      "Cache-Control": "no-store"
+    }
+  });
+}
+
+async function handleSubmitForm(request, env) {
+  var db = env.STUDENTS_DB;
+  if (!db) {
+    return jsonResponse({ ok: false, error: "Sunucu yapılandırması eksik (D1)." }, 503);
+  }
+
+  var body;
+  try {
+    var raw = await request.text();
+    if (raw.length > 65536) {
+      return jsonResponse({ ok: false, error: "İstek gövdesi çok büyük." }, 413);
+    }
+    body = JSON.parse(raw);
+  } catch (e) {
+    return jsonResponse({ ok: false, error: "Geçersiz JSON." }, 400);
+  }
+
+  var kvkk = body.kvkk_onay;
+  if (!(kvkk === true || kvkk === 1 || kvkk === "1")) {
+    return jsonResponse({ ok: false, error: "Kişisel verilerin işlenmesi için onay (KVKK) gerekli." }, 400);
+  }
+
+  var ad = truncStr(body.ad, 120);
+  var soyad = truncStr(body.soyad, 120);
+  var email = truncStr(body.email, 254);
+  var telefon = truncStr(body.telefon, 64);
+  var tip = truncStr(body.tip != null ? body.tip : body.kimlik, 64);
+  var ilgilenilen_program = truncStr(
+    body.ilgilenilen_program != null ? body.ilgilenilen_program : body.hangi_program,
+    500
+  );
+  var mesaj = truncStr(body.mesaj, 8000);
+
+  if (!ad || !soyad || !email || !telefon || !tip) {
+    return jsonResponse({ ok: false, error: "Zorunlu alanlar eksik veya geçersiz." }, 400);
+  }
+
+  var kayit_tarihi = new Date().toISOString();
+
+  try {
+    await db
+      .prepare(
+        "INSERT INTO students (ad, soyad, email, telefon, tip, ilgilenilen_program, mesaj, kvkk_onay, kayit_tarihi, kaynak, durum) VALUES (?, ?, ?, ?, ?, ?, ?, 1, ?, ?, ?)"
+      )
+      .bind(
+        ad,
+        soyad,
+        email,
+        telefon,
+        tip,
+        ilgilenilen_program,
+        mesaj,
+        kayit_tarihi,
+        "web_site",
+        "yeni"
+      )
+      .run();
+  } catch (e) {
+    console.error("submit-form D1:", e && e.message ? e.message : e);
+    return jsonResponse({ ok: false, error: "Kayıt oluşturulamadı." }, 500);
+  }
+
+  return jsonResponse({ ok: true }, 201);
+}
+
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
@@ -117,6 +198,17 @@ export default {
       });
     }
 
+    // Bilgi istek formu → D1 (students)
+    if (pathname === "/api/submit-form") {
+      if (request.method === "POST") {
+        return handleSubmitForm(request, env);
+      }
+      return new Response("Method Not Allowed", {
+        status: 405,
+        headers: { Allow: "POST", "Content-Type": "text/plain; charset=utf-8" }
+      });
+    }
+
     // PAYTR yönlendirme
     if (pathname.startsWith("/api/paytr")) {
       const newUrl = request.url.replace(
@@ -126,6 +218,9 @@ export default {
       return fetch(new Request(newUrl, request));
     }
 
+    if (env.ASSETS) {
+      return env.ASSETS.fetch(request);
+    }
     return fetch(request);
   }
 };
