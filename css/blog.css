@@ -611,7 +611,8 @@ body.sayfa-hizmetlerimiz .blog-yazi-layout--yan-panel .blog-yazi-ana {
     scroll-margin-top: calc(var(--site-header-offset, 122px) + 0.5rem);
 }
 
-.blog-yazi-icerik h3 {
+/* Rozet başlığı (.rozet-baslik) hariç: tik + grid hizası style.css’teki .rozet-kart ile kalır */
+.blog-yazi-icerik h3:not(.rozet-baslik) {
     font-size: 1.15rem;
     font-weight: 700;
     color: #1e293b;

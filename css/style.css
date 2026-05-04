@@ -5579,7 +5579,12 @@ article.icerik-alani.blog-yazi-detay .blog-yazi-ana > section.icerik-alani > .ce
 article.icerik-alani.blog-yazi-detay .blog-yazi-ana #tokyo-immerse-konaklama > .immerse-konaklama-grid.immerse-tokyo-konaklama-grid,
 article.icerik-alani .blog-yazi-layout--yan-panel .blog-yazi-ana > .cerceve-kutu,
 article.icerik-alani .blog-yazi-layout--yan-panel .blog-yazi-ana > section.icerik-alani > .cerceve-kutu,
-article.icerik-alani .blog-yazi-layout--yan-panel .blog-yazi-ana #tokyo-immerse-konaklama > .immerse-konaklama-grid.immerse-tokyo-konaklama-grid {
+article.icerik-alani .blog-yazi-layout--yan-panel .blog-yazi-ana #tokyo-immerse-konaklama > .immerse-konaklama-grid.immerse-tokyo-konaklama-grid,
+/* Çoğu blog yazısı: cerceve .blog-yazi-icerik içinde (doğrudan .blog-yazi-ana çocuğu değil) — giris-metin ile h2 aynı sol hiza */
+article.icerik-alani.blog-yazi-detay .blog-yazi-ana .blog-yazi-icerik > .cerceve-kutu,
+article.icerik-alani.blog-yazi-detay .blog-yazi-ana .blog-yazi-icerik > .site-gri-cerceve-kutu,
+article.icerik-alani .blog-yazi-layout--yan-panel .blog-yazi-ana .blog-yazi-icerik > .cerceve-kutu,
+article.icerik-alani .blog-yazi-layout--yan-panel .blog-yazi-ana .blog-yazi-icerik > .site-gri-cerceve-kutu {
     padding-left: 0;
     padding-right: 0;
     box-sizing: border-box;

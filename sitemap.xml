@@ -486,7 +486,7 @@
 
   <url>
     <loc>https://www.globalcompass.com.tr/blog/</loc>
-    <lastmod>2026-04-14</lastmod>
+    <lastmod>2026-05-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -510,7 +510,7 @@
   </url>
   <url>
     <loc>https://www.globalcompass.com.tr/blog/lise/</loc>
-    <lastmod>2026-04-03</lastmod>
+    <lastmod>2026-05-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.75</priority>
   </url>
@@ -577,6 +577,12 @@
   <url>
     <loc>https://www.globalcompass.com.tr/blog/lise/isvicre-lise-diplomasi-vs-ib/</loc>
     <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://www.globalcompass.com.tr/blog/lise/abd-lise-degisim-programlari-kuresel-gelecege-erken-baslangic/</loc>
+    <lastmod>2026-05-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
   </url>
