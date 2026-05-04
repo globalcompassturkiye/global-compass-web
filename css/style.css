@@ -7046,18 +7046,23 @@ body.kings-bournemouth-yaz-okulu-sayfa .kings-la-konaklama-bolum h2.konaklama-an
     }
 }
 
-.icerik-gorsel-metin-satir > figure {
+.icerik-gorsel-metin-satir > .ana-gorsel-kapsayici {
     margin: 0;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
 }
 
-.icerik-gorsel-metin-satir > figure img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.icerik-gorsel-metin-satir > .blog-yazi-kapak-gorsel {
+/* Blog yazı gövdesi: görsel+metin satırında sol hücre — article genel .ana-gorsel-kapsayici margin/padding taşınmasın */
+article.icerik-alani.blog-yazi-detay .blog-yazi-ana .icerik-gorsel-metin-satir > .ana-gorsel-kapsayici,
+article.icerik-alani .blog-yazi-layout--yan-panel .blog-yazi-ana .icerik-gorsel-metin-satir > .ana-gorsel-kapsayici {
+    margin-top: 0;
     margin-bottom: 0;
+}
+
+.icerik-gorsel-metin-satir > .ana-gorsel-kapsayici img.ana-gorsel {
+    width: 100%;
+    max-width: 100%;
 }
 
 .icerik-gorsel-metin-satir-metin {

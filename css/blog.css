@@ -440,24 +440,6 @@ body.sayfa-hizmetlerimiz .blog-yazi-layout--yan-panel .blog-yazi-ana {
     max-width: none;
 }
 
-.blog-yazi-kapak-gorsel {
-    margin-bottom: 1.25rem;
-    overflow: hidden;
-}
-
-.blog-yazi-kapak-gorsel img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-/* İçerik gövdesinde (çoklu blok) tam sütun genişliği yerine okunaklı sınır */
-.blog-yazi-kapak-gorsel.blog-yazi-kapak-gorsel--icerik {
-    max-width: min(100%, 640px);
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .blog-yazi-baslik-wrap {
     margin-bottom: 1.25rem;
 }
@@ -762,12 +744,15 @@ body.sayfa-hizmetlerimiz .blog-yazi-layout--yan-panel .blog-yazi-ana {
 }
 
 /* Gömülü bilgi istek formu — başlık dışarıda; beyaz kutu blog köşe yarıçapı ile */
+/* article + .cerceve-kutu ile aynı sol hiza: .iletisim-form-alani genel kuralı yatay padding ekliyor (çift gutter) */
 .blog-yazi-icerik .iletisim-form-alani {
     border-radius: 0;
     margin-left: 0;
     margin-right: 0;
     max-width: 100%;
     margin-top: 1.75rem;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .blog-yazi-icerik .iletisim-form-alani .iletisim-form-beyaz-cerceve {
