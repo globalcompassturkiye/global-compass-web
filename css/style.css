@@ -7226,6 +7226,44 @@ body.kings-bournemouth-yaz-okulu-sayfa .kings-la-konaklama-bolum h2.konaklama-an
     margin-bottom: 25px;
 }
 
+/* İçerik: görsel solda, metin sağda (dar ekranda görsel üstte, metin altta) */
+.icerik-gorsel-metin-satir {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    align-items: start;
+}
+
+@media (min-width: 768px) {
+    .icerik-gorsel-metin-satir {
+        grid-template-columns: minmax(0, 38%) minmax(0, 1fr);
+        column-gap: 1.5rem;
+        row-gap: 0;
+    }
+}
+
+.icerik-gorsel-metin-satir > figure {
+    margin: 0;
+}
+
+.icerik-gorsel-metin-satir > figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.icerik-gorsel-metin-satir > .blog-yazi-kapak-gorsel {
+    margin-bottom: 0;
+}
+
+.icerik-gorsel-metin-satir-metin {
+    min-width: 0;
+}
+
+.icerik-gorsel-metin-satir-metin > :first-child {
+    margin-top: 0;
+}
+
 .ana-gorsel-kapsayici {
     text-align: center;
     margin: 0 auto 30px;

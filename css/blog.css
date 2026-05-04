@@ -451,6 +451,13 @@ body.sayfa-hizmetlerimiz .blog-yazi-layout--yan-panel .blog-yazi-ana {
     height: auto;
 }
 
+/* İçerik gövdesinde (çoklu blok) tam sütun genişliği yerine okunaklı sınır */
+.blog-yazi-kapak-gorsel.blog-yazi-kapak-gorsel--icerik {
+    max-width: min(100%, 640px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .blog-yazi-baslik-wrap {
     margin-bottom: 1.25rem;
 }
