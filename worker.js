@@ -76,7 +76,7 @@ async function handleSubmitForm(request, env) {
         mesaj,
         kayit_tarihi,
         "web_site",
-        "yeni",
+        "potansiyel",
         hedef_ulke,
         landing_page
       )
