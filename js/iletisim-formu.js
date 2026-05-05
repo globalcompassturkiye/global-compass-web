@@ -323,6 +323,7 @@
         telefon: valField(form, 'telefon'),
         tip: tipVal,
         ilgilenilen_program: valField(form, 'hangi_program'),
+        hedef_ulke: valField(form, 'hedef_ulke'),
         mesaj: valField(form, 'mesaj'),
         landing_page: pageH1Text(),
         kvkk_onay: kvkkAccepted(form) ? 1 : 0

@@ -310,8 +310,15 @@ article.icerik-alani .iletisim-form-alani > .hizmet-alanlari-baslik.icerik-bilgi
     cursor: pointer;
 }
 
-.iletisim-form-alani .form-grup-hangi-program {
+/* Hedef ülke (sol) + ilgilenilen program (sağ) — .form-satir ile aynı satır */
+.iletisim-form-alani .form-satir-hedef-ulke-program {
     margin: 0 0 18px;
+}
+
+.iletisim-form-alani .form-satir-hedef-ulke-program > input {
+    flex: 1 1 0;
+    min-width: 0;
+    width: auto;
 }
 
 .iletisim-form-alani textarea {
