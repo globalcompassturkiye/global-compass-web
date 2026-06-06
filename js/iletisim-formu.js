@@ -387,7 +387,7 @@
           enforceAllFieldsRequired(form);
           showBildirim(
             'basari',
-            'Mesajınız iletildi, teşekkür ederiz.',
+            'Mesajınız bize ulaştı. Uzman ekibimiz en kısa sürede sizinle iletişime geçecektir.',
             function () {
               if (buton) buton.disabled = false;
             }
