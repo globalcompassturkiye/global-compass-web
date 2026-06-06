@@ -14,26 +14,66 @@ function jsonResponse(obj, status) {
   });
 }
 
+function logSubmitError(context, detail) {
+  if (detail) {
+    console.error("submit-form " + context + ":", detail);
+  }
+}
+
+function mapDbErrorToUserMessage(tech) {
+  var t = String(tech || "").toLowerCase();
+  if (!t) {
+    return "Formunuz kaydedilemedi. Lütfen birkaç dakika sonra tekrar deneyin.";
+  }
+  if (t.indexOf("unique") !== -1 || t.indexOf("constraint") !== -1) {
+    return "Bu bilgilerle daha önce başvuru yapılmış olabilir. Farklı bir e-posta deneyin veya bizi arayın.";
+  }
+  if (t.indexOf("no column") !== -1 || t.indexOf("sqlite_error") !== -1 || t.indexOf("d1_error") !== -1) {
+    return "Form geçici olarak kullanılamıyor. Lütfen daha sonra tekrar deneyin veya telefonla bize ulaşın.";
+  }
+  if (t.indexOf("timeout") !== -1 || t.indexOf("timed out") !== -1) {
+    return "İşlem zaman aşımına uğradı. Lütfen tekrar deneyin.";
+  }
+  return "Formunuz kaydedilemedi. Lütfen bilgilerinizi kontrol edip tekrar deneyin.";
+}
+
 async function handleSubmitForm(request, env) {
   var db = env.STUDENTS_DB;
   if (!db) {
-    return jsonResponse({ ok: false, error: "Sunucu yapılandırması eksik (D1)." }, 503);
+    logSubmitError("config", "STUDENTS_DB binding missing");
+    return jsonResponse(
+      {
+        ok: false,
+        error: "Form şu an hizmet dışı. Lütfen daha sonra tekrar deneyin veya telefonla bize ulaşın."
+      },
+      503
+    );
   }
 
   var body;
   try {
     var raw = await request.text();
     if (raw.length > 65536) {
-      return jsonResponse({ ok: false, error: "İstek gövdesi çok büyük." }, 413);
+      return jsonResponse(
+        { ok: false, error: "Mesajınız çok uzun. Lütfen kısaltıp tekrar deneyin." },
+        413
+      );
     }
     body = JSON.parse(raw);
   } catch (e) {
-    return jsonResponse({ ok: false, error: "Geçersiz JSON." }, 400);
+    logSubmitError("json", e && e.message ? e.message : e);
+    return jsonResponse(
+      { ok: false, error: "Form verisi gönderilemedi. Sayfayı yenileyip tekrar deneyin." },
+      400
+    );
   }
 
   var kvkk = body.kvkk_onay;
   if (!(kvkk === true || kvkk === 1 || kvkk === "1")) {
-    return jsonResponse({ ok: false, error: "Kişisel verilerin işlenmesi için onay (KVKK) gerekli." }, 400);
+    return jsonResponse(
+      { ok: false, error: "Devam etmek için KVKK onay kutusunu işaretlemeniz gerekir." },
+      400
+    );
   }
 
   var ad = truncStr(body.ad, 120);
@@ -56,7 +96,14 @@ async function handleSubmitForm(request, env) {
   }
 
   if (!ad || !soyad || !email || !telefon || !tip) {
-    return jsonResponse({ ok: false, error: "Zorunlu alanlar eksik veya geçersiz." }, 400);
+    return jsonResponse(
+      {
+        ok: false,
+        error:
+          "Lütfen ad, soyad, e-posta, telefon ve öğrenci/veli seçimini doldurun."
+      },
+      400
+    );
   }
 
   var kayit_tarihi = new Date().toISOString();
@@ -88,22 +135,16 @@ async function handleSubmitForm(request, env) {
             ? result.error
             : JSON.stringify(result.error)
           : "D1 sorgusu başarısız.";
-      console.error("submit-form D1 run:", runErr);
-      return jsonResponse(
-        { ok: false, error: "Kayıt oluşturulamadı.", detail: String(runErr).slice(0, 400) },
-        500
-      );
+      logSubmitError("D1 run", runErr);
+      return jsonResponse({ ok: false, error: mapDbErrorToUserMessage(runErr) }, 500);
     }
   } catch (e) {
     var tech = "";
     if (e && typeof e.message === "string") tech = e.message;
     else if (e && e.cause && typeof e.cause.message === "string") tech = e.cause.message;
     else tech = String(e || "");
-    console.error("submit-form D1:", tech);
-    return jsonResponse(
-      { ok: false, error: "Kayıt oluşturulamadı.", detail: tech.slice(0, 400) },
-      500
-    );
+    logSubmitError("D1", tech);
+    return jsonResponse({ ok: false, error: mapDbErrorToUserMessage(tech) }, 500);
   }
 
   return jsonResponse({ ok: true }, 201);

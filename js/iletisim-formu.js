@@ -4,19 +4,70 @@
 
   function messageForValidity(el) {
     var v = el.validity;
+    var label = fieldLabel(el);
     if (v.valueMissing) {
       if (el.type === 'checkbox') {
         return 'Devam etmek için onay kutusunu işaretlemeniz gerekir.';
       }
+      if (label) {
+        return label + ' alanı zorunludur.';
+      }
       return 'Bu alan zorunludur.';
     }
     if (el.type === 'email' && (v.typeMismatch || v.badInput)) {
-      return 'Geçerli bir e-posta adresi girin.';
+      return 'Geçerli bir e-posta adresi girin (örnek: ad@ornek.com).';
+    }
+    if (el.type === 'tel' && (v.typeMismatch || v.badInput)) {
+      return 'Geçerli bir telefon numarası girin.';
     }
     if (v.typeMismatch || v.badInput) {
-      return 'Lütfen geçerli bir değer girin.';
+      return label ? label + ' için geçerli bir değer girin.' : 'Lütfen geçerli bir değer girin.';
     }
     return el.validationMessage || 'Geçersiz değer.';
+  }
+
+  function fieldLabel(el) {
+    if (!el) return '';
+    if (el.placeholder) return el.placeholder.replace(/\*+$/, '').trim();
+    if (el.getAttribute('aria-label')) return el.getAttribute('aria-label').trim();
+    return '';
+  }
+
+  function defaultHttpErrorMessage(status) {
+    if (status === 400) {
+      return 'Gönderdiğiniz bilgiler eksik veya hatalı. Lütfen formu kontrol edip tekrar deneyin.';
+    }
+    if (status === 413) {
+      return 'Mesajınız çok uzun. Lütfen kısaltıp tekrar deneyin.';
+    }
+    if (status === 503) {
+      return 'Form şu an hizmet dışı. Lütfen daha sonra tekrar deneyin veya telefonla bize ulaşın.';
+    }
+    if (status >= 500) {
+      return 'Formunuz kaydedilemedi. Lütfen birkaç dakika sonra tekrar deneyin.';
+    }
+    return 'Form gönderilemedi. Lütfen tekrar deneyin.';
+  }
+
+  function parseSubmitErrorResponse(res, bodyText) {
+    if (bodyText) {
+      try {
+        var j = JSON.parse(bodyText);
+        if (j && typeof j.error === 'string' && j.error.length > 0) {
+          return j.error;
+        }
+      } catch (parseErr) {
+        /* sunucu JSON döndürmediyse varsayılan mesaj kullanılır */
+      }
+    }
+    return defaultHttpErrorMessage(res && res.status ? res.status : 0);
+  }
+
+  function submitErrorMessage(err) {
+    if (err && typeof err.message === 'string' && err.message.length > 0) {
+      return err.message;
+    }
+    return 'Bağlantı kurulamadı. İnternet bağlantınızı kontrol edip tekrar deneyin.';
   }
 
   function clearFormErrors(form) {
@@ -343,11 +394,7 @@
           );
         })
         .catch(function (err) {
-          var msg =
-            err && typeof err.message === 'string' && err.message.length > 0
-              ? err.message
-              : 'Bir hata oluştu, lütfen tekrar deneyin.';
-          showBildirim('hata', msg, function () {
+          showBildirim('hata', submitErrorMessage(err), function () {
             if (buton) buton.disabled = false;
           });
         });
@@ -359,28 +406,21 @@
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
-    }).then(function (res) {
-      if (!res.ok) {
-        return res.text().then(function (t) {
-          var msg = 'Bir hata oluştu, lütfen tekrar deneyin.';
-          if (t) {
-            try {
-              var j = JSON.parse(t);
-              if (j && typeof j.error === 'string' && j.error.length > 0) {
-                msg = j.error;
-                if (typeof j.detail === 'string' && j.detail.length > 0) {
-                  msg = msg + ' (' + j.detail + ')';
-                }
-              }
-            } catch (parseErr) {
-              if (t.length < 200) msg = t;
-            }
-          }
-          throw new Error(msg);
-        });
-      }
-      return res;
-    });
+    })
+      .then(function (res) {
+        if (!res.ok) {
+          return res.text().then(function (t) {
+            throw new Error(parseSubmitErrorResponse(res, t));
+          });
+        }
+        return res;
+      })
+      .catch(function (err) {
+        if (err && err.name === 'TypeError') {
+          throw new Error('Bağlantı kurulamadı. İnternet bağlantınızı kontrol edip tekrar deneyin.');
+        }
+        throw err;
+      });
   }
 
   if (document.readyState === 'loading') {
