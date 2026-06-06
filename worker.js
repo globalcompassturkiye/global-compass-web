@@ -64,7 +64,7 @@ async function handleSubmitForm(request, env) {
   try {
     var result = await db
       .prepare(
-        "INSERT INTO students (ad, soyad, email, telefon, tip, ilgilenilen_program, mesaj, kvkk_onay, kayit_tarihi, kaynak, durum, hedef_ulke, landing_page) VALUES (?, ?, ?, ?, ?, ?, ?, 1, ?, ?, ?, ?, ?)"
+        "INSERT INTO students (ad, soyad, email, telefon, tip, ilgilenilen_program, mesaj, kvkk_onay, kayit_tarihi, kaynak, status_id, hedef_ulke, landing_page) VALUES (?, ?, ?, ?, ?, ?, ?, 1, ?, ?, 1, ?, ?)"
       )
       .bind(
         ad,
@@ -76,7 +76,6 @@ async function handleSubmitForm(request, env) {
         mesaj,
         kayit_tarihi,
         "web_site",
-        "yeni",
         hedef_ulke,
         landing_page
       )
