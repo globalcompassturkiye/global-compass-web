@@ -354,7 +354,11 @@ export default {
     if (expiredPaths.has(pathname)) {
       return new Response("410 Gone", {
         status: 410,
-        headers: { "Content-Type": "text/plain; charset=utf-8" }
+        headers: {
+          "Content-Type": "text/plain; charset=utf-8",
+          "Cache-Control": "public, max-age=3600",
+          "X-Robots-Tag": "noindex"
+        }
       });
     }
 
