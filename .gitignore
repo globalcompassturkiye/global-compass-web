@@ -1,2 +1,18 @@
+# Cursor / yerel
 *.mdc
 /dev
+
+# Dokümantasyon ve notlar (deploy edilmez)
+*.md
+*.txt
+!robots.txt
+
+# Araç / otomasyon scriptleri (deploy edilmez)
+*.ps1
+*.py
+
+# Audit, migration ve rapor çıktıları
+/tools/
+/reports/
+/fix-jsonld.ps1
+/scripts/frame-alignment-audit.js
