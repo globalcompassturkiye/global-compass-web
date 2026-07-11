@@ -166,7 +166,7 @@
         if (!kimlikTouched) {
           setKimlikGroupError(
             form,
-            'Lütfen öğrenci, veli veya diğer seçeneklerinden birini işaretleyin.'
+            'Lütfen öğrenci veya veli seçeneklerinden birini işaretleyin.'
           );
           kimlikTouched = true;
         }
@@ -366,13 +366,25 @@
         return;
       }
 
-      var tipVal = kimlikValue(form);
+      var kimlikVal = kimlikValue(form);
+      if (kimlikVal !== 'ogrenci' && kimlikVal !== 'veli') {
+        setKimlikGroupError(
+          form,
+          'Lütfen öğrenci veya veli seçeneklerinden birini işaretleyin.'
+        );
+        if (buton) buton.disabled = false;
+        var kimlikBad = form.querySelector('input[type="radio"][name^="kimlik"]');
+        if (kimlikBad && typeof kimlikBad.focus === 'function') {
+          kimlikBad.focus();
+        }
+        return;
+      }
       var payload = {
         ad: valField(form, 'ad'),
         soyad: valField(form, 'soyad'),
         email: valField(form, 'email'),
         telefon: valField(form, 'telefon'),
-        tip: tipVal,
+        lead_type: kimlikVal === 'veli' ? 'PARENT' : 'STUDENT',
         ilgilenilen_program: valField(form, 'hangi_program'),
         hedef_ulke: valField(form, 'hedef_ulke'),
         mesaj: valField(form, 'mesaj'),

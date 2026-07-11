@@ -76,11 +76,20 @@ async function handleSubmitForm(request, env) {
     );
   }
 
-  var ad = truncStr(body.ad, 120);
-  var soyad = truncStr(body.soyad, 120);
-  var email = truncStr(body.email, 254);
-  var telefon = truncStr(body.telefon, 64);
-  var tip = truncStr(body.tip != null ? body.tip : body.kimlik, 64);
+  var adRaw = truncStr(body.ad, 120);
+  var soyadRaw = truncStr(body.soyad, 120);
+  var emailRaw = truncStr(body.email, 254);
+  var telefonRaw = truncStr(body.telefon, 64);
+  var lead_type = truncStr(
+    body.lead_type != null
+      ? body.lead_type
+      : body.tip != null
+        ? body.tip
+        : body.kimlik,
+    64
+  ).toUpperCase();
+  if (lead_type === "OGRENCI" || lead_type === "ÖĞRENCİ") lead_type = "STUDENT";
+  if (lead_type === "VELI" || lead_type === "VELİ") lead_type = "PARENT";
   var ilgilenilen_program = truncStr(
     body.ilgilenilen_program != null ? body.ilgilenilen_program : body.hangi_program,
     500
@@ -95,15 +104,45 @@ async function handleSubmitForm(request, env) {
     hedef_ulke = "Belirtilmedi";
   }
 
-  if (!ad || !soyad || !email || !telefon || !tip) {
+  if (lead_type !== "STUDENT" && lead_type !== "PARENT") {
     return jsonResponse(
       {
         ok: false,
-        error:
-          "Lütfen ad, soyad, e-posta, telefon ve öğrenci/veli seçimini doldurun."
+        error: "Lütfen öğrenci veya veli seçeneklerinden birini işaretleyin."
       },
       400
     );
+  }
+
+  if (!adRaw || !soyadRaw || !emailRaw || !telefonRaw) {
+    return jsonResponse(
+      {
+        ok: false,
+        error: "Lütfen ad, soyad, e-posta ve telefon alanlarını doldurun."
+      },
+      400
+    );
+  }
+
+  var ad = "";
+  var soyad = "";
+  var email = "";
+  var telefon = "";
+  var veli_ad = "";
+  var veli_soyad = "";
+  var veli_telefon = "";
+  var veli_email = "";
+
+  if (lead_type === "STUDENT") {
+    ad = adRaw;
+    soyad = soyadRaw;
+    email = emailRaw;
+    telefon = telefonRaw;
+  } else {
+    veli_ad = adRaw;
+    veli_soyad = soyadRaw;
+    veli_telefon = telefonRaw;
+    veli_email = emailRaw;
   }
 
   var kayit_tarihi = new Date().toISOString();
@@ -111,14 +150,18 @@ async function handleSubmitForm(request, env) {
   try {
     var result = await db
       .prepare(
-        "INSERT INTO students (ad, soyad, email, telefon, tip, ilgilenilen_program, mesaj, kvkk_onay, kayit_tarihi, kaynak, status_id, hedef_ulke, landing_page) VALUES (?, ?, ?, ?, ?, ?, ?, 1, ?, ?, 1, ?, ?)"
+        "INSERT INTO students (ad, soyad, email, telefon, veli_ad, veli_soyad, veli_telefon, veli_email, lead_type, ilgilenilen_program, mesaj, kvkk_onay, kayit_tarihi, kaynak, status_id, hedef_ulke, landing_page) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 1, ?, ?, 1, ?, ?)"
       )
       .bind(
         ad,
         soyad,
         email,
         telefon,
-        tip,
+        veli_ad,
+        veli_soyad,
+        veli_telefon,
+        veli_email,
+        lead_type,
         ilgilenilen_program,
         mesaj,
         kayit_tarihi,
