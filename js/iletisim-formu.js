@@ -1,6 +1,147 @@
 (function () {
   'use strict';
   var SUBMIT_URL = '/api/submit-form';
+  var TURNSTILE_SCRIPT =
+    'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
+
+  function turnstileSiteKey() {
+    var k =
+      typeof window !== 'undefined' && window.NEXT_PUBLIC_TURNSTILE_SITE_KEY != null
+        ? String(window.NEXT_PUBLIC_TURNSTILE_SITE_KEY)
+        : '';
+    return k.trim();
+  }
+
+  function loadScript(src, attrName, done) {
+    if (document.querySelector('script[' + attrName + ']')) {
+      done();
+      return;
+    }
+    var s = document.createElement('script');
+    s.src = src;
+    s.async = true;
+    s.setAttribute(attrName, '1');
+    s.onload = function () {
+      done();
+    };
+    s.onerror = function () {
+      done();
+    };
+    document.head.appendChild(s);
+  }
+
+  function ensureTurnstileEnv(done) {
+    loadScript('/js/turnstile-env.js', 'data-turnstile-env', done);
+  }
+
+  function ensureTurnstileApi(done) {
+    if (window.turnstile && typeof window.turnstile.render === 'function') {
+      done();
+      return;
+    }
+    loadScript(TURNSTILE_SCRIPT, 'data-cf-turnstile-api', function () {
+      var n = 0;
+      function waitReady() {
+        if (window.turnstile && typeof window.turnstile.render === 'function') {
+          done();
+          return;
+        }
+        n += 1;
+        if (n > 50) {
+          done();
+          return;
+        }
+        setTimeout(waitReady, 50);
+      }
+      waitReady();
+    });
+  }
+
+  function getTurnstileToken(form) {
+    if (form && form._turnstileToken) return String(form._turnstileToken);
+    var input =
+      form &&
+      (form.querySelector('input[name="cf-turnstile-response"]') ||
+        form.querySelector('textarea[name="cf-turnstile-response"]'));
+    return input && input.value ? String(input.value).trim() : '';
+  }
+
+  function resetTurnstile(form) {
+    form._turnstileToken = '';
+    if (
+      form._turnstileWidgetId != null &&
+      window.turnstile &&
+      typeof window.turnstile.reset === 'function'
+    ) {
+      try {
+        window.turnstile.reset(form._turnstileWidgetId);
+      } catch (err) {
+        /* widget yoksa yoksay */
+      }
+    }
+  }
+
+  function clearTurnstileError(form) {
+    var wrap = form.querySelector('.turnstile-wrap');
+    if (!wrap) return;
+    var s = wrap.nextElementSibling;
+    if (s && s.classList && s.classList.contains('iletisim-alan-hata')) {
+      s.remove();
+    }
+  }
+
+  function setTurnstileError(form, message) {
+    clearTurnstileError(form);
+    var wrap = form.querySelector('.turnstile-wrap');
+    if (!wrap) return;
+    var span = document.createElement('span');
+    span.className = 'iletisim-alan-hata';
+    span.setAttribute('role', 'alert');
+    span.textContent = message;
+    wrap.insertAdjacentElement('afterend', span);
+  }
+
+  function mountTurnstile(form) {
+    ensureTurnstileEnv(function () {
+      var key = turnstileSiteKey();
+      if (!key) return;
+      if (form.querySelector('.turnstile-wrap')) return;
+
+      var wrap = document.createElement('div');
+      wrap.className = 'turnstile-wrap';
+      var slot = document.createElement('div');
+      slot.className = 'cf-turnstile-slot';
+      wrap.appendChild(slot);
+
+      var kvkk = form.querySelector('.kvkk-satir');
+      var btn = form.querySelector('button[type="submit"]');
+      if (kvkk && kvkk.parentNode) {
+        kvkk.parentNode.insertBefore(wrap, kvkk);
+      } else if (btn && btn.parentNode) {
+        btn.parentNode.insertBefore(wrap, btn);
+      } else {
+        form.appendChild(wrap);
+      }
+
+      ensureTurnstileApi(function () {
+        if (!window.turnstile || typeof window.turnstile.render !== 'function') return;
+        form._turnstileToken = '';
+        form._turnstileWidgetId = window.turnstile.render(slot, {
+          sitekey: key,
+          callback: function (token) {
+            form._turnstileToken = token || '';
+            clearTurnstileError(form);
+          },
+          'expired-callback': function () {
+            form._turnstileToken = '';
+          },
+          'error-callback': function () {
+            form._turnstileToken = '';
+          }
+        });
+      });
+    });
+  }
 
   function messageForValidity(el) {
     var v = el.validity;
@@ -334,6 +475,7 @@
     form.setAttribute('novalidate', 'novalidate');
     wireKvkkCheckbox(form);
     enforceAllFieldsRequired(form);
+    mountTurnstile(form);
 
     form.addEventListener('input', function (ev) {
       var t = ev.target;
@@ -382,6 +524,15 @@
         }
         return;
       }
+
+      var siteKey = turnstileSiteKey();
+      var turnstileToken = getTurnstileToken(form);
+      if (siteKey && !turnstileToken) {
+        setTurnstileError(form, 'Lütfen bot doğrulamasını tamamlayın.');
+        if (buton) buton.disabled = false;
+        return;
+      }
+
       var payload = {
         ad: valField(form, 'ad'),
         soyad: valField(form, 'soyad'),
@@ -392,7 +543,8 @@
         hedef_ulke: valField(form, 'hedef_ulke'),
         mesaj: valField(form, 'mesaj'),
         landing_page: pageH1Text(),
-        kvkk_onay: kvkkAccepted(form) ? 1 : 0
+        kvkk_onay: kvkkAccepted(form) ? 1 : 0,
+        turnstile_token: turnstileToken
       };
       postSubmit(payload)
         .then(function () {
@@ -400,6 +552,7 @@
           clearFormErrors(form);
           wireKvkkCheckbox(form);
           enforceAllFieldsRequired(form);
+          resetTurnstile(form);
           showBildirim(
             'basari',
             'Mesajınız bize ulaştı. Uzman ekibimiz en kısa sürede sizinle iletişime geçecektir.',
@@ -409,6 +562,7 @@
           );
         })
         .catch(function (err) {
+          resetTurnstile(form);
           showBildirim('hata', submitErrorMessage(err), function () {
             if (buton) buton.disabled = false;
           });

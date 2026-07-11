@@ -1,6 +1,9 @@
 # Cursor / yerel
 *.mdc
 /dev
+.env
+.env.local
+.env.*.local
 
 # Dokümantasyon ve notlar (deploy edilmez)
 *.md
