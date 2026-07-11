@@ -40,6 +40,9 @@
     if (status === 413) {
       return 'Mesajınız çok uzun. Lütfen kısaltıp tekrar deneyin.';
     }
+    if (status === 429) {
+      return 'Bu e-posta veya telefon ile bugün en fazla 5 bilgi isteği gönderebilirsiniz. Lütfen yarın tekrar deneyin veya bizi arayın.';
+    }
     if (status === 503) {
       return 'Form şu an hizmet dışı. Lütfen daha sonra tekrar deneyin veya telefonla bize ulaşın.';
     }

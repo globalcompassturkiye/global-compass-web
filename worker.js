@@ -37,6 +37,30 @@ function mapDbErrorToUserMessage(tech) {
   return "Formunuz kaydedilemedi. Lütfen bilgilerinizi kontrol edip tekrar deneyin.";
 }
 
+var DAILY_SUBMIT_LIMIT = 5;
+var DAILY_SUBMIT_LIMIT_MSG =
+  "Bu e-posta veya telefon ile bugün en fazla 5 bilgi isteği gönderebilirsiniz. Lütfen yarın tekrar deneyin veya bizi arayın.";
+
+/** İstanbul takvim gününün 00:00:00 anı (UTC ISO). TR kalıcı UTC+3. */
+function istanbulDayStartIso(date) {
+  var d = date || new Date();
+  var parts = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Europe/Istanbul",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit"
+  }).formatToParts(d);
+  var y = "";
+  var m = "";
+  var day = "";
+  for (var i = 0; i < parts.length; i++) {
+    if (parts[i].type === "year") y = parts[i].value;
+    else if (parts[i].type === "month") m = parts[i].value;
+    else if (parts[i].type === "day") day = parts[i].value;
+  }
+  return new Date(y + "-" + m + "-" + day + "T00:00:00+03:00").toISOString();
+}
+
 async function handleSubmitForm(request, env) {
   var db = env.STUDENTS_DB;
   if (!db) {
@@ -122,6 +146,28 @@ async function handleSubmitForm(request, env) {
       },
       400
     );
+  }
+
+  var dayStart = istanbulDayStartIso();
+  try {
+    var countRow = await db
+      .prepare(
+        "SELECT COUNT(*) AS c FROM students WHERE kayit_tarihi >= ? AND ((email != '' AND email = ?) OR (veli_email != '' AND veli_email = ?) OR (telefon != '' AND telefon = ?) OR (veli_telefon != '' AND veli_telefon = ?))"
+      )
+      .bind(dayStart, emailRaw, emailRaw, telefonRaw, telefonRaw)
+      .first();
+    var todayCount = countRow && countRow.c != null ? Number(countRow.c) : 0;
+    if (todayCount >= DAILY_SUBMIT_LIMIT) {
+      return jsonResponse({ ok: false, error: DAILY_SUBMIT_LIMIT_MSG }, 429);
+    }
+  } catch (limitErr) {
+    var limitTech = "";
+    if (limitErr && typeof limitErr.message === "string") limitTech = limitErr.message;
+    else if (limitErr && limitErr.cause && typeof limitErr.cause.message === "string") {
+      limitTech = limitErr.cause.message;
+    } else limitTech = String(limitErr || "");
+    logSubmitError("daily limit", limitTech);
+    return jsonResponse({ ok: false, error: mapDbErrorToUserMessage(limitTech) }, 500);
   }
 
   var ad = "";
