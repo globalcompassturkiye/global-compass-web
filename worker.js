@@ -347,7 +347,35 @@ export default {
       "/blog/felsted-summer-camp.amp",
       "/uc-berkeley-yaz-programlari",
       "/ecole-chantemerle-yaz-kampi",
-      "/blog/felsted-summer-camp"
+      "/blog/felsted-summer-camp",
+      // GSC 404 (2026-07-12) — listede olmayanlar
+      "/yurt-disi-yabanci-dil-okullari",
+      "/ingiltere-yaz-okullari/immerse-education-13-15-yas/bilgisayar-bilimleri",
+      "/ingiltere-yaz-okullari/immerse-education-13-15-yas/fizik",
+      "/ingiltere-yaz-okullari/immerse-education-13-15-yas/muhendislik",
+      "/ingiltere-yaz-okullari/immerse-education-cambridge-yaz-okulu/biology",
+      "/ingiltere-yaz-okullari/immerse-education-cambridge-yaz-okulu/biotechnology",
+      "/ingiltere-yaz-okullari/immerse-education-cambridge-yaz-okulu/biotechnology-society",
+      "/ingiltere-yaz-okullari/immerse-education-cambridge-yaz-okulu/coding",
+      "/ingiltere-yaz-okullari/immerse-education-cambridge-yaz-okulu/computer-science",
+      "/ingiltere-yaz-okullari/immerse-education-cambridge-yaz-okulu/consciousness-the-mind",
+      "/ingiltere-yaz-okullari/immerse-education-cambridge-yaz-okulu/creative-ındustries",
+      "/ingiltere-yaz-okullari/immerse-education-cambridge-yaz-okulu/creative-industries",
+      "/ingiltere-yaz-okullari/immerse-education-cambridge-yaz-okulu/criminology",
+      "/ingiltere-yaz-okullari/immerse-education-cambridge-yaz-okulu/doga-bilimleri",
+      "/ingiltere-yaz-okullari/immerse-education-cambridge-yaz-okulu/english-literature",
+      "/ingiltere-yaz-okullari/immerse-education-cambridge-yaz-okulu/fizik",
+      "/ingiltere-yaz-okullari/immerse-education-cambridge-yaz-okulu/geopolitics-global-conflict",
+      "/ingiltere-yaz-okullari/immerse-education-cambridge-yaz-okulu/global-leadership",
+      "/ingiltere-yaz-okullari/immerse-education-cambridge-yaz-okulu/human-cultures",
+      "/ingiltere-yaz-okullari/immerse-education-cambridge-yaz-okulu/international-relations",
+      "/ingiltere-yaz-okullari/immerse-education-cambridge-yaz-okulu/mathematics",
+      "/ingiltere-yaz-okullari/immerse-education-cambridge-yaz-okulu/muhendislik",
+      "/ingiltere-yaz-okullari/immerse-education-cambridge-yaz-okulu/philosophy",
+      "/ingiltere-yaz-okullari/immerse-education-cambridge-yaz-okulu/philosophy-politics-economics",
+      "/ingiltere-yaz-okullari/immerse-education-cambridge-yaz-okulu/planetin-crisis",
+      "/ingiltere-yaz-okullari/immerse-education-cambridge-yaz-okulu/tip",
+      "/ingiltere-yaz-okullari/immerse-education-cambridge-yaz-okulu/uluslararasi-iliskiler"
     ]);
 
     // 410 kontrolü
