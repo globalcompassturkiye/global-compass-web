@@ -268,6 +268,59 @@ async function handleSubmitForm(request, env) {
   return jsonResponse({ ok: true }, 201);
 }
 
+/** D1 countries.name (EN) → formda görünen Türkçe etiket. D1 değeri değişmez. */
+var COUNTRY_LABEL_TR = {
+  Australia: "Avustralya",
+  Austria: "Avusturya",
+  Azerbaijan: "Azerbaycan",
+  Belgium: "Belçika",
+  Bulgaria: "Bulgaristan",
+  Canada: "Kanada",
+  China: "Çin",
+  Cyprus: "Kıbrıs",
+  Czechia: "Çekya",
+  Denmark: "Danimarka",
+  Estonia: "Estonya",
+  Finland: "Finlandiya",
+  France: "Fransa",
+  Germany: "Almanya",
+  Greece: "Yunanistan",
+  Hungary: "Macaristan",
+  India: "Hindistan",
+  Ireland: "İrlanda",
+  Italy: "İtalya",
+  Japan: "Japonya",
+  Kazakhstan: "Kazakistan",
+  Kyrgyzstan: "Kırgızistan",
+  Latvia: "Letonya",
+  Lithuania: "Litvanya",
+  Luxembourg: "Lüksemburg",
+  Malta: "Malta",
+  Netherlands: "Hollanda",
+  "New Zealand": "Yeni Zelanda",
+  Norway: "Norveç",
+  Poland: "Polonya",
+  Portugal: "Portekiz",
+  Romania: "Romanya",
+  Russia: "Rusya",
+  Singapore: "Singapur",
+  Slovakia: "Slovakya",
+  Slovenia: "Slovenya",
+  "South Korea": "Güney Kore",
+  Spain: "İspanya",
+  Sweden: "İsveç",
+  Switzerland: "İsviçre",
+  Turkey: "Türkiye",
+  Ukraine: "Ukrayna",
+  "United Kingdom": "Birleşik Krallık",
+  "United States": "Amerika Birleşik Devletleri"
+};
+
+function countryLabelTr(englishName) {
+  var n = String(englishName || "").trim();
+  return COUNTRY_LABEL_TR[n] || n;
+}
+
 async function handleCountries(env) {
   var db = env.STUDENTS_DB;
   if (!db) {
@@ -279,15 +332,28 @@ async function handleCountries(env) {
   try {
     var result = await db
       .prepare(
-        "SELECT id, name FROM countries WHERE is_active = 1 ORDER BY is_popular DESC, name COLLATE NOCASE ASC"
+        "SELECT id, name, is_popular FROM countries WHERE is_active = 1"
       )
       .all();
     var rows = result && result.results ? result.results : [];
+    var countries = rows.map(function (r) {
+      var name = String(r.name || "");
+      return {
+        id: Number(r.id),
+        name: name,
+        label: countryLabelTr(name),
+        is_popular: Number(r.is_popular) === 1 ? 1 : 0
+      };
+    });
+    countries.sort(function (a, b) {
+      if (b.is_popular !== a.is_popular) return b.is_popular - a.is_popular;
+      return String(a.label).localeCompare(String(b.label), "tr");
+    });
     return new Response(
       JSON.stringify({
         ok: true,
-        countries: rows.map(function (r) {
-          return { id: Number(r.id), name: String(r.name || "") };
+        countries: countries.map(function (c) {
+          return { id: c.id, name: c.name, label: c.label };
         })
       }),
       {

@@ -407,9 +407,13 @@
       return { id: '', name: '' };
     }
     var opt = sel.options[sel.selectedIndex];
+    var enName =
+      (opt && opt.getAttribute('data-name')) ||
+      (opt && opt.textContent) ||
+      '';
     return {
       id: String(sel.value),
-      name: opt ? String(opt.textContent || '').trim() : ''
+      name: String(enName).trim()
     };
   }
 
@@ -424,7 +428,8 @@
       if (!id || existing[id]) return;
       var o = document.createElement('option');
       o.value = id;
-      o.textContent = c.name || id;
+      o.setAttribute('data-name', c.name || '');
+      o.textContent = c.label || c.name || id;
       select.appendChild(o);
     });
   }
