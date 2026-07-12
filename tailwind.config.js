@@ -5,6 +5,8 @@ module.exports = {
     './yurt-disi-lise/index.html',
     './yurt-disi-lise/degisim-programlari/index.html',
     './yurt-disi-universite/index.html',
+    './yurt-disi-universite/switzerland/index.html',
+    './yurt-disi-yuksek-lisans-mba/index.html',
     './js/ana-sayfa-blog-ozeti.js',
     './js/ornek-acilir-menu.js',
     './js/header-offset.js',
