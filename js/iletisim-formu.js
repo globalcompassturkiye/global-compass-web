@@ -1,6 +1,8 @@
 (function () {
   'use strict';
   var SUBMIT_URL = '/api/submit-form';
+  var COUNTRIES_URL = '/api/countries';
+  var countriesCache = null;
   var TURNSTILE_SCRIPT =
     'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
 
@@ -399,6 +401,83 @@
     return valTrim(el);
   }
 
+  function hedefUlkeFromForm(form) {
+    var sel = form.querySelector('select[name="hedef_ulke_country_id"]');
+    if (!sel || !sel.value) {
+      return { id: '', name: '' };
+    }
+    var opt = sel.options[sel.selectedIndex];
+    return {
+      id: String(sel.value),
+      name: opt ? String(opt.textContent || '').trim() : ''
+    };
+  }
+
+  function fillCountryOptions(select, list) {
+    if (!select || !list || !list.length) return;
+    var existing = {};
+    Array.prototype.forEach.call(select.options, function (o) {
+      if (o.value) existing[o.value] = true;
+    });
+    list.forEach(function (c) {
+      var id = String(c.id);
+      if (!id || existing[id]) return;
+      var o = document.createElement('option');
+      o.value = id;
+      o.textContent = c.name || id;
+      select.appendChild(o);
+    });
+  }
+
+  function loadCountriesIntoSelect(select) {
+    if (!select) return;
+    if (countriesCache) {
+      fillCountryOptions(select, countriesCache);
+      return;
+    }
+    fetch(COUNTRIES_URL, { method: 'GET', headers: { Accept: 'application/json' } })
+      .then(function (res) {
+        if (!res.ok) throw new Error('countries ' + res.status);
+        return res.json();
+      })
+      .then(function (data) {
+        var list = data && data.countries ? data.countries : [];
+        countriesCache = list;
+        fillCountryOptions(select, list);
+      })
+      .catch(function () {
+        /* liste yüklenemezse select boş kalır; gönderimde sunucu doğrular */
+      });
+  }
+
+  /** Metin hedef_ulke alanını D1 ülkeleri select'ine çevirir (tüm form sayfaları). */
+  function upgradeHedefUlkeField(form) {
+    if (!form) return;
+    if (form.querySelector('select[name="hedef_ulke_country_id"]')) {
+      loadCountriesIntoSelect(form.querySelector('select[name="hedef_ulke_country_id"]'));
+      return;
+    }
+    var input = form.querySelector('input[name="hedef_ulke"]');
+    if (!input || !input.parentNode) return;
+
+    var select = document.createElement('select');
+    select.name = 'hedef_ulke_country_id';
+    select.id = input.id || 'hedef-ulke';
+    select.required = true;
+    var aria = input.getAttribute('aria-label') || 'Hedeflediğiniz Ülke?';
+    select.setAttribute('aria-label', aria);
+
+    var placeholder = document.createElement('option');
+    placeholder.value = '';
+    placeholder.textContent = input.getAttribute('placeholder') || 'Hedeflediğiniz Ülke?';
+    placeholder.disabled = true;
+    placeholder.selected = true;
+    select.appendChild(placeholder);
+
+    input.parentNode.replaceChild(select, input);
+    loadCountriesIntoSelect(select);
+  }
+
   function kimlikValue(form) {
     var r =
       form.querySelector('input[type="radio"][name^="kimlik"]:checked') ||
@@ -474,12 +553,13 @@
     if (!form) return;
     form.setAttribute('novalidate', 'novalidate');
     wireKvkkCheckbox(form);
+    upgradeHedefUlkeField(form);
     enforceAllFieldsRequired(form);
     mountTurnstile(form);
 
     form.addEventListener('input', function (ev) {
       var t = ev.target;
-      if (t && t.matches && t.matches('input:not([type="radio"]):not([type="checkbox"]), textarea')) {
+      if (t && t.matches && t.matches('input:not([type="radio"]):not([type="checkbox"]), textarea, select')) {
         clearFieldError(t);
       }
     });
@@ -489,7 +569,7 @@
       if (t && t.type === 'radio' && t.name && t.name.indexOf('kimlik') === 0) {
         clearKimlikGroupErrors(form);
       }
-      if (t && t.type === 'checkbox') {
+      if (t && (t.type === 'checkbox' || (t.tagName && t.tagName.toLowerCase() === 'select'))) {
         clearFieldError(t);
       }
     });
@@ -503,7 +583,7 @@
         if (buton) buton.disabled = false;
         var firstBad =
           form.querySelector(
-            'input[aria-invalid="true"]:not([type="radio"]), textarea[aria-invalid="true"], input[type="checkbox"][aria-invalid="true"]'
+            'input[aria-invalid="true"]:not([type="radio"]), select[aria-invalid="true"], textarea[aria-invalid="true"], input[type="checkbox"][aria-invalid="true"]'
           ) || form.querySelector('input[type="radio"][aria-invalid="true"]');
         if (firstBad && typeof firstBad.focus === 'function') {
           firstBad.focus();
@@ -533,6 +613,15 @@
         return;
       }
 
+      var ulke = hedefUlkeFromForm(form);
+      if (!ulke.id) {
+        var ulkeSel = form.querySelector('select[name="hedef_ulke_country_id"]');
+        if (ulkeSel) setFieldError(ulkeSel, 'Lütfen listeden bir hedef ülke seçin.');
+        if (buton) buton.disabled = false;
+        if (ulkeSel && typeof ulkeSel.focus === 'function') ulkeSel.focus();
+        return;
+      }
+
       var payload = {
         ad: valField(form, 'ad'),
         soyad: valField(form, 'soyad'),
@@ -540,7 +629,8 @@
         telefon: valField(form, 'telefon'),
         lead_type: kimlikVal === 'veli' ? 'PARENT' : 'STUDENT',
         ilgilenilen_program: valField(form, 'hangi_program'),
-        hedef_ulke: valField(form, 'hedef_ulke'),
+        hedef_ulke: ulke.name,
+        hedef_ulke_country_id: Number(ulke.id),
         mesaj: valField(form, 'mesaj'),
         landing_page: pageH1Text(),
         kvkk_onay: kvkkAccepted(form) ? 1 : 0,
@@ -551,6 +641,7 @@
           form.reset();
           clearFormErrors(form);
           wireKvkkCheckbox(form);
+          upgradeHedefUlkeField(form);
           enforceAllFieldsRequired(form);
           resetTurnstile(form);
           showBildirim(

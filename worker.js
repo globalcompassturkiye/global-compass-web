@@ -123,10 +123,6 @@ async function handleSubmitForm(request, env) {
     body.landing_page != null ? body.landing_page : body.h1,
     500
   );
-  var hedef_ulke = truncStr(body.hedef_ulke, 120);
-  if (!hedef_ulke) {
-    hedef_ulke = "Belirtilmedi";
-  }
 
   if (lead_type !== "STUDENT" && lead_type !== "PARENT") {
     return jsonResponse(
@@ -147,6 +143,38 @@ async function handleSubmitForm(request, env) {
       400
     );
   }
+
+  var countryIdNum = Number(
+    body.hedef_ulke_country_id != null ? body.hedef_ulke_country_id : body.country_id
+  );
+  if (!Number.isFinite(countryIdNum) || countryIdNum < 1 || Math.floor(countryIdNum) !== countryIdNum) {
+    return jsonResponse(
+      { ok: false, error: "Lütfen listeden bir hedef ülke seçin." },
+      400
+    );
+  }
+
+  var countryRow;
+  try {
+    countryRow = await db
+      .prepare("SELECT id, name FROM countries WHERE id = ? AND is_active = 1")
+      .bind(countryIdNum)
+      .first();
+  } catch (countryErr) {
+    var countryTech = "";
+    if (countryErr && typeof countryErr.message === "string") countryTech = countryErr.message;
+    else countryTech = String(countryErr || "");
+    logSubmitError("country lookup", countryTech);
+    return jsonResponse({ ok: false, error: mapDbErrorToUserMessage(countryTech) }, 500);
+  }
+  if (!countryRow || !countryRow.name) {
+    return jsonResponse(
+      { ok: false, error: "Seçilen ülke geçersiz. Lütfen listeden tekrar seçin." },
+      400
+    );
+  }
+  var hedef_ulke = truncStr(countryRow.name, 120);
+  var hedef_ulke_country_id = Number(countryRow.id);
 
   var dayStart = istanbulDayStartIso();
   try {
@@ -196,7 +224,7 @@ async function handleSubmitForm(request, env) {
   try {
     var result = await db
       .prepare(
-        "INSERT INTO students (ad, soyad, email, telefon, veli_ad, veli_soyad, veli_telefon, veli_email, lead_type, ilgilenilen_program, mesaj, kvkk_onay, kayit_tarihi, kaynak, status_id, hedef_ulke, landing_page) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 1, ?, ?, 1, ?, ?)"
+        "INSERT INTO students (ad, soyad, email, telefon, veli_ad, veli_soyad, veli_telefon, veli_email, lead_type, ilgilenilen_program, mesaj, kvkk_onay, kayit_tarihi, kaynak, status_id, hedef_ulke, hedef_ulke_country_id, landing_page) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 1, ?, ?, 1, ?, ?, ?)"
       )
       .bind(
         ad,
@@ -213,6 +241,7 @@ async function handleSubmitForm(request, env) {
         kayit_tarihi,
         "web_site",
         hedef_ulke,
+        hedef_ulke_country_id,
         landing_page
       )
       .run();
@@ -237,6 +266,43 @@ async function handleSubmitForm(request, env) {
   }
 
   return jsonResponse({ ok: true }, 201);
+}
+
+async function handleCountries(env) {
+  var db = env.STUDENTS_DB;
+  if (!db) {
+    return jsonResponse(
+      { ok: false, error: "Ülke listesi şu an kullanılamıyor." },
+      503
+    );
+  }
+  try {
+    var result = await db
+      .prepare(
+        "SELECT id, name FROM countries WHERE is_active = 1 ORDER BY is_popular DESC, name COLLATE NOCASE ASC"
+      )
+      .all();
+    var rows = result && result.results ? result.results : [];
+    return new Response(
+      JSON.stringify({
+        ok: true,
+        countries: rows.map(function (r) {
+          return { id: Number(r.id), name: String(r.name || "") };
+        })
+      }),
+      {
+        status: 200,
+        headers: {
+          "Content-Type": "application/json; charset=utf-8",
+          "Cache-Control": "public, max-age=300"
+        }
+      }
+    );
+  } catch (e) {
+    var tech = e && typeof e.message === "string" ? e.message : String(e || "");
+    logSubmitError("countries", tech);
+    return jsonResponse({ ok: false, error: mapDbErrorToUserMessage(tech) }, 500);
+  }
 }
 
 export default {
@@ -398,6 +464,16 @@ export default {
       return new Response("Method Not Allowed", {
         status: 405,
         headers: { Allow: "POST", "Content-Type": "text/plain; charset=utf-8" }
+      });
+    }
+
+    if (pathname === "/api/countries") {
+      if (request.method === "GET" || request.method === "HEAD") {
+        return handleCountries(env);
+      }
+      return new Response("Method Not Allowed", {
+        status: 405,
+        headers: { Allow: "GET, HEAD", "Content-Type": "text/plain; charset=utf-8" }
       });
     }
 

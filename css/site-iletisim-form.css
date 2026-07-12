@@ -218,6 +218,7 @@ article.icerik-alani .iletisim-form-alani > .hizmet-alanlari-baslik.icerik-bilgi
 .iletisim-form-alani input[type="text"],
 .iletisim-form-alani input[type="tel"],
 .iletisim-form-alani input[type="email"],
+.iletisim-form-alani select,
 .iletisim-form-alani textarea {
     width: 100%;
     min-height: 48px;
@@ -236,12 +237,30 @@ article.icerik-alani .iletisim-form-alani > .hizmet-alanlari-baslik.icerik-bilgi
     transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
+.iletisim-form-alani select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    background-image:
+        linear-gradient(45deg, transparent 50%, #64748b 50%),
+        linear-gradient(135deg, #64748b 50%, transparent 50%);
+    background-position:
+        calc(100% - 20px) calc(50% - 3px),
+        calc(100% - 14px) calc(50% - 3px);
+    background-size: 6px 6px, 6px 6px;
+    background-repeat: no-repeat;
+    padding-right: 40px;
+}
+
 .iletisim-form-alani input:hover,
+.iletisim-form-alani select:hover,
 .iletisim-form-alani textarea:hover {
     border-color: #94a3b8;
 }
 
 .iletisim-form-alani input:focus,
+.iletisim-form-alani select:focus,
 .iletisim-form-alani textarea:focus {
     outline: none;
     border-color: #bd0505;
@@ -250,12 +269,14 @@ article.icerik-alani .iletisim-form-alani > .hizmet-alanlari-baslik.icerik-bilgi
 }
 
 .iletisim-form-alani input[aria-invalid="true"],
+.iletisim-form-alani select[aria-invalid="true"],
 .iletisim-form-alani textarea[aria-invalid="true"] {
     border-color: #b91c1c;
     box-shadow: 0 0 0 2px rgba(185, 28, 28, 0.2);
 }
 
 .iletisim-form-alani input[aria-invalid="true"]:focus,
+.iletisim-form-alani select[aria-invalid="true"]:focus,
 .iletisim-form-alani textarea[aria-invalid="true"]:focus {
     border-color: #b91c1c;
     box-shadow: 0 0 0 2px rgba(185, 28, 28, 0.35);
@@ -315,7 +336,8 @@ article.icerik-alani .iletisim-form-alani > .hizmet-alanlari-baslik.icerik-bilgi
     margin: 0 0 18px;
 }
 
-.iletisim-form-alani .form-satir-hedef-ulke-program > input {
+.iletisim-form-alani .form-satir-hedef-ulke-program > input,
+.iletisim-form-alani .form-satir-hedef-ulke-program > select {
     flex: 1 1 0;
     min-width: 0;
     width: auto;
@@ -423,6 +445,7 @@ article.icerik-alani .iletisim-form-alani > .hizmet-alanlari-baslik.icerik-bilgi
     .iletisim-form-alani input[type="text"],
     .iletisim-form-alani input[type="tel"],
     .iletisim-form-alani input[type="email"],
+    .iletisim-form-alani select,
     .iletisim-form-alani textarea {
         font-size: 16px;
     }
