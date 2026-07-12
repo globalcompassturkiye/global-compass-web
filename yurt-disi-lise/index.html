@@ -24,6 +24,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css?v=20260417h1">
+    <link rel="stylesheet" href="/css/tailwind.css?v=20260712tw2">
     <link rel="stylesheet" href="/css/site-ustmenu.css">
     <link rel="stylesheet" href="/css/site-footer.css">
     <link rel="stylesheet" href="/css/site-breadcrumb.css">
@@ -31,7 +32,7 @@
     <link rel="stylesheet" href="/css/sss.css">
     <link rel="stylesheet" href="/css/blog.css">
 </head>
-<body class="sayfa-yurt-disi-lise blog-yazi-sayfa-mobil-ux">
+<body class="sayfa-yurt-disi-lise blog-yazi-sayfa-mobil-ux font-sans">
     <div class="sabit-ust-alan">
         <div class="ust-serit">
             <div class="ust-serit-kapsayici">
@@ -181,11 +182,11 @@
         <div class="blog-yazi-layout blog-yazi-layout--yan-panel">
         <div class="blog-yazi-ana">
 
-        <h1 id="lise-hub-giris">Yurt Dışında Lise Eğitimi:<br>
+        <h1 id="lise-hub-giris" class="mx-0 my-[25px] text-center text-[length:var(--h1-px,28px)] font-bold leading-[1.6] text-brand-navy">Yurt Dışında Lise Eğitimi:<br>
             <span class="vurgu-renk">Global Bir Kariyer İçin İlk Adımı Atın</span>
         </h1>
 
-        <p class="giris-metin">Çocuğunuzun eğitim hayatındaki en kritik dönemlerden biri olan lise yıllarını, uluslararası bir ortamda geçirmesi ona sadece dil becerisi değil; vizyoner bir bakış açısı ve dünya vatandaşlığı kazandırır. Global Compass olarak biz, Amerika’dan (🇺🇸 US) İngiltere’ye (🇬🇧 GB), Kanada’dan (🇨🇦 CA) Avrupa’ya (🇪🇺 EU) kadar dünyanın en saygın eğitim sistemlerine sahip ülkelerinde, öğrencinin karakterine ve hedeflerine en uygun lise yerleştirmelerini yapıyoruz.</p>
+        <p class="giris-metin mx-auto mt-[25px] mb-0 box-border block w-full text-justify">Çocuğunuzun eğitim hayatındaki en kritik dönemlerden biri olan lise yıllarını, uluslararası bir ortamda geçirmesi ona sadece dil becerisi değil; vizyoner bir bakış açısı ve dünya vatandaşlığı kazandırır. Global Compass olarak biz, Amerika’dan (🇺🇸 US) İngiltere’ye (🇬🇧 GB), Kanada’dan (🇨🇦 CA) Avrupa’ya (🇪🇺 EU) kadar dünyanın en saygın eğitim sistemlerine sahip ülkelerinde, öğrencinin karakterine ve hedeflerine en uygun lise yerleştirmelerini yapıyoruz.</p>
 
         <div id="blog-mobil-icindekiler-hedef" class="blog-mobil-icindekiler-wrap">
             <nav class="blog-mobil-icindekiler-duz" aria-labelledby="lise-hub-mobil-icindekiler-baslik">
@@ -202,50 +203,50 @@
             </nav>
         </div>
 
-        <h2 class="metin-h2" id="lise-hub-program-secimi">
-            <span>Yurt Dışı Lise Programlarını Keşfedin!</span>
-            <span class="vurgu-satir">Hangi Programı Tercih Edersiniz?</span>
+        <h2 class="metin-h2 mx-auto mb-[15px] mt-8 flex max-w-site flex-col items-center justify-center gap-0 p-0 text-center text-[length:var(--sayfa-bolum-baslik-font-size,22px)] font-bold leading-[1.35] text-black" id="lise-hub-program-secimi">
+            <span class="m-0 block w-full text-center font-bold text-black">Yurt Dışı Lise Programlarını Keşfedin!</span>
+            <span class="vurgu-satir mt-[0.35rem] block text-[length:clamp(1.2rem,2.5vw,1.5rem)] font-bold leading-[1.3] text-brand-redDark">Hangi Programı Tercih Edersiniz?</span>
         </h2>
 
-        <div class="dil-okullari-secim-paneli">
-            <nav class="rozet-kart-grid yaz-okullari-ulke-kart-wrap" aria-label="Lise programları">
-                <a href="/yurt-disi-lise/degisim-programlari/" class="rozet-kart-link yaz-okullari-ulke-kart">
-                    <div class="rozet-kart-icerik yaz-okullari-ulke-kart-icerik">
-                        <span class="rozet-kart-gorsel yaz-okullari-ulke-kart-bayrak" aria-hidden="true">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="44" height="44" class="yaz-okullari-ulke-kart-svg" focusable="false" aria-hidden="true"><path fill="#000080" d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3zm0 13.09L5.17 14.2 12 17l6.83-2.8L12 16.09zM5 13.62v4.38c0 .85.5 1.61 1.28 1.95l5.2 2.26c.44.19.94.19 1.38 0l5.2-2.26c.78-.34 1.28-1.1 1.28-1.95v-4.38l-6.4 2.78c-.44.19-.94.19-1.38 0L5 13.62z"/></svg>
+        <div class="dil-okullari-secim-paneli mb-4 border-0 bg-transparent p-0">
+            <nav class="rozet-kart-grid yaz-okullari-ulke-kart-wrap mx-auto grid max-w-[min(100%,var(--ulke-secim-kart-en))] grid-cols-1 justify-center" aria-label="Lise programları">
+                <a href="/yurt-disi-lise/degisim-programlari/" class="rozet-kart-link yaz-okullari-ulke-kart group relative box-border flex min-h-[128px] flex-col items-stretch justify-center overflow-hidden rounded-[15px] bg-white px-4 py-[1.1rem] pb-[1.15rem] text-center text-inherit no-underline shadow-[0_2px_6px_rgba(15,23,42,0.07),0_10px_24px_rgba(15,23,42,0.1)] transition-[transform,box-shadow,background-color] duration-300 hover:-translate-y-[7px] hover:scale-[1.01] hover:bg-[#fafbfc] hover:shadow-[0_10px_22px_rgba(15,23,42,0.13),0_22px_46px_rgba(15,23,42,0.18)] focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-offset-2 focus-visible:outline-[rgba(0,0,128,0.35)]">
+                    <div class="rozet-kart-icerik yaz-okullari-ulke-kart-icerik flex flex-col items-center">
+                        <span class="rozet-kart-gorsel yaz-okullari-ulke-kart-bayrak mx-auto mb-0 block w-full max-w-[48px] leading-none transition-transform duration-300 group-hover:scale-105" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="44" height="44" class="yaz-okullari-ulke-kart-svg block h-auto w-11 max-w-full" focusable="false" aria-hidden="true"><path fill="#000080" d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3zm0 13.09L5.17 14.2 12 17l6.83-2.8L12 16.09zM5 13.62v4.38c0 .85.5 1.61 1.28 1.95l5.2 2.26c.44.19.94.19 1.38 0l5.2-2.26c.78-.34 1.28-1.1 1.28-1.95v-4.38l-6.4 2.78c-.44.19-.94.19-1.38 0L5 13.62z"/></svg>
                         </span>
-                        <span class="rozet-kart-baslik yaz-okullari-ulke-kart-baslik">Lise Değişim Programları</span>
+                        <span class="rozet-kart-baslik yaz-okullari-ulke-kart-baslik px-3 pb-3 pt-2.5 text-center text-[0.8125rem] font-bold leading-[1.35] tracking-[0.02em] text-slate-700">Lise Değişim Programları</span>
                     </div>
                 </a>
             </nav>
         </div>
 
         <div class="cerceve-kutu icerik-kutusu" id="lise-hub-neden">
-            <h2 class="metin-h2">Neden Yurt Dışında Lise Okumalısınız?</h2>
+            <h2 class="metin-h2 mb-4 text-left text-[length:var(--h2-px,22px)] font-bold text-brand-ink">Neden Yurt Dışında Lise Okumalısınız?</h2>
             <div class="rozet-grid icerik-kutusu-grid yatay-3">
                 <article class="rozet-kart">
-                    <div class="rozet-ikon">1</div>
-                    <h3 class="rozet-baslik">Dünya Üniversitelerine Doğrudan Geçiş</h3>
-                    <p class="rozet-metin">Yurt dışından alınan lise diploması (IB, AP, A-Level), dünyanın en iyi üniversitelerine girişte anahtar rol oynar.</p>
+                    <div class="rozet-ikon flex h-8 w-8 items-center justify-center rounded-full border-0 bg-[#fef2f2] text-sm font-bold text-[#b91c1c]">1</div>
+                    <h3 class="rozet-baslik m-0 font-bold text-[#111827]">Dünya Üniversitelerine Doğrudan Geçiş</h3>
+                    <p class="rozet-metin mt-1 text-[15px] leading-[1.7] text-[#4b5563]">Yurt dışından alınan lise diploması (IB, AP, A-Level), dünyanın en iyi üniversitelerine girişte anahtar rol oynar.</p>
                 </article>
                 <article class="rozet-kart">
-                    <div class="rozet-ikon">2</div>
-                    <h3 class="rozet-baslik">Anadil Seviyesinde Yabancı Dil</h3>
-                    <p class="rozet-metin">Erken yaşta deneyimlenen dil eğitimi, akademik ve sosyal hayatta kalıcı bir akıcılık sağlar.</p>
+                    <div class="rozet-ikon flex h-8 w-8 items-center justify-center rounded-full border-0 bg-[#fef2f2] text-sm font-bold text-[#b91c1c]">2</div>
+                    <h3 class="rozet-baslik m-0 font-bold text-[#111827]">Anadil Seviyesinde Yabancı Dil</h3>
+                    <p class="rozet-metin mt-1 text-[15px] leading-[1.7] text-[#4b5563]">Erken yaşta deneyimlenen dil eğitimi, akademik ve sosyal hayatta kalıcı bir akıcılık sağlar.</p>
                 </article>
                 <article class="rozet-kart">
-                    <div class="rozet-ikon">3</div>
-                    <h3 class="rozet-baslik">Kişisel Gelişim ve Özgüven</h3>
-                    <p class="rozet-metin">Farklı kültürlerle büyümek, sorumluluk alma ve problem çözme yeteneklerini geliştirir.</p>
+                    <div class="rozet-ikon flex h-8 w-8 items-center justify-center rounded-full border-0 bg-[#fef2f2] text-sm font-bold text-[#b91c1c]">3</div>
+                    <h3 class="rozet-baslik m-0 font-bold text-[#111827]">Kişisel Gelişim ve Özgüven</h3>
+                    <p class="rozet-metin mt-1 text-[15px] leading-[1.7] text-[#4b5563]">Farklı kültürlerle büyümek, sorumluluk alma ve problem çözme yeteneklerini geliştirir.</p>
                 </article>
             </div>
         </div>
 
         <div class="cerceve-kutu icerik-kutusu" id="lise-hub-ulkeler">
-            <h2 class="metin-h2">Popüler Ülkeler ve Eğitim Sistemleri</h2>
+            <h2 class="metin-h2 mb-4 text-left text-[length:var(--h2-px,22px)] font-bold text-brand-ink">Popüler Ülkeler ve Eğitim Sistemleri</h2>
             <div class="rozet-grid icerik-kutusu-grid yatay-2">
                 <article class="rozet-kart">
-                    <div class="rozet-ikon" aria-label="ABD bayrağı">
+                    <div class="rozet-ikon flex h-8 w-8 items-center justify-center rounded-full border-0 bg-[#fef2f2] text-sm font-bold text-[#b91c1c]" aria-label="ABD bayrağı">
                         <svg viewBox="0 0 19 14" width="20" height="14" role="img" aria-hidden="true">
                             <rect width="19" height="14" fill="#b22234"></rect>
                             <rect y="1" width="19" height="1" fill="#ffffff"></rect>
@@ -257,12 +258,12 @@
                             <rect width="8" height="7" fill="#3c3b6e"></rect>
                         </svg>
                     </div>
-                    <h3 class="rozet-baslik">Amerika’da Lise</h3>
-                    <p class="rozet-metin">Amerikan rüyasını lisede keşfedin. Private High School ve değişim programları ile spor, sanat ve bilimde uzmanlaşabilirsiniz.</p>
+                    <h3 class="rozet-baslik m-0 font-bold text-[#111827]">Amerika’da Lise</h3>
+                    <p class="rozet-metin mt-1 text-[15px] leading-[1.7] text-[#4b5563]">Amerikan rüyasını lisede keşfedin. Private High School ve değişim programları ile spor, sanat ve bilimde uzmanlaşabilirsiniz.</p>
                 </article>
 
                 <article class="rozet-kart">
-                    <div class="rozet-ikon" aria-label="Kanada bayrağı">
+                    <div class="rozet-ikon flex h-8 w-8 items-center justify-center rounded-full border-0 bg-[#fef2f2] text-sm font-bold text-[#b91c1c]" aria-label="Kanada bayrağı">
                         <svg viewBox="0 0 19 14" width="20" height="14" role="img" aria-hidden="true">
                             <rect width="19" height="14" fill="#ffffff"></rect>
                             <rect width="4" height="14" fill="#d80621"></rect>
@@ -271,12 +272,12 @@
                             <rect x="9.2" y="7.8" width="0.6" height="2.2" fill="#d80621"></rect>
                         </svg>
                     </div>
-                    <h3 class="rozet-baslik">Kanada’da Lise</h3>
-                    <p class="rozet-metin">Dünyanın en güvenli ülkelerinden birinde, yüksek yaşam standartları ve devlet liselerinin kalitesiyle eğitim alın.</p>
+                    <h3 class="rozet-baslik m-0 font-bold text-[#111827]">Kanada’da Lise</h3>
+                    <p class="rozet-metin mt-1 text-[15px] leading-[1.7] text-[#4b5563]">Dünyanın en güvenli ülkelerinden birinde, yüksek yaşam standartları ve devlet liselerinin kalitesiyle eğitim alın.</p>
                 </article>
 
                 <article class="rozet-kart">
-                    <div class="rozet-ikon" aria-label="Birleşik Krallık bayrağı">
+                    <div class="rozet-ikon flex h-8 w-8 items-center justify-center rounded-full border-0 bg-[#fef2f2] text-sm font-bold text-[#b91c1c]" aria-label="Birleşik Krallık bayrağı">
                         <svg viewBox="0 0 19 14" width="20" height="14" role="img" aria-hidden="true">
                             <rect width="19" height="14" fill="#012169"></rect>
                             <path d="M0 0 19 14M19 0 0 14" stroke="#ffffff" stroke-width="3"></path>
@@ -285,12 +286,12 @@
                             <path d="M9.5 0v14M0 7h19" stroke="#c8102e" stroke-width="2"></path>
                         </svg>
                     </div>
-                    <h3 class="rozet-baslik">İngiltere’de Lise</h3>
-                    <p class="rozet-metin">A-Level ve GCSE programları ile akademik mükemmelliğe odaklanın, İngiliz eğitim geleneğinin parçası olun.</p>
+                    <h3 class="rozet-baslik m-0 font-bold text-[#111827]">İngiltere’de Lise</h3>
+                    <p class="rozet-metin mt-1 text-[15px] leading-[1.7] text-[#4b5563]">A-Level ve GCSE programları ile akademik mükemmelliğe odaklanın, İngiliz eğitim geleneğinin parçası olun.</p>
                 </article>
 
                 <article class="rozet-kart">
-                    <div class="rozet-ikon" aria-label="Avrupa Birliği bayrağı">
+                    <div class="rozet-ikon flex h-8 w-8 items-center justify-center rounded-full border-0 bg-[#fef2f2] text-sm font-bold text-[#b91c1c]" aria-label="Avrupa Birliği bayrağı">
                         <svg viewBox="0 0 19 14" width="20" height="14" role="img" aria-hidden="true">
                             <rect width="19" height="14" fill="#003399"></rect>
                             <circle cx="9.5" cy="4" r="0.6" fill="#ffcc00"></circle>
@@ -305,43 +306,43 @@
                             <circle cx="7.5" cy="4.6" r="0.6" fill="#ffcc00"></circle>
                         </svg>
                     </div>
-                    <h3 class="rozet-baslik">Avrupa’da Lise</h3>
-                    <p class="rozet-metin">Almanya, Fransa veya İtalya gibi ülkelerde kültürel derinliği olan bir eğitim deneyimi yaşayın.</p>
+                    <h3 class="rozet-baslik m-0 font-bold text-[#111827]">Avrupa’da Lise</h3>
+                    <p class="rozet-metin mt-1 text-[15px] leading-[1.7] text-[#4b5563]">Almanya, Fransa veya İtalya gibi ülkelerde kültürel derinliği olan bir eğitim deneyimi yaşayın.</p>
                 </article>
             </div>
         </div>
 
         <div class="cerceve-kutu icerik-kutusu" id="lise-hub-secenekler">
-            <h2 class="metin-h2">Program Seçenekleri</h2>
+            <h2 class="metin-h2 mb-4 text-left text-[length:var(--h2-px,22px)] font-bold text-brand-ink">Program Seçenekleri</h2>
             <div class="rozet-grid icerik-kutusu-grid yatay-3">
                 <article class="rozet-kart">
-                    <div class="rozet-ikon">1</div>
-                    <h3 class="rozet-baslik">Özel Yatılı Liseler (Boarding Schools)</h3>
-                    <p class="rozet-metin">Kampüs içinde konaklama, üst düzey tesisler ve 24 saat gözetim.</p>
+                    <div class="rozet-ikon flex h-8 w-8 items-center justify-center rounded-full border-0 bg-[#fef2f2] text-sm font-bold text-[#b91c1c]">1</div>
+                    <h3 class="rozet-baslik m-0 font-bold text-[#111827]">Özel Yatılı Liseler (Boarding Schools)</h3>
+                    <p class="rozet-metin mt-1 text-[15px] leading-[1.7] text-[#4b5563]">Kampüs içinde konaklama, üst düzey tesisler ve 24 saat gözetim.</p>
                 </article>
                 <article class="rozet-kart">
-                    <div class="rozet-ikon">2</div>
-                    <h3 class="rozet-baslik">Gündüzlü Liseler ve Aile Yanı Konaklama</h3>
-                    <p class="rozet-metin">Yerel kültürü evin içinde deneyimleme şansı.</p>
+                    <div class="rozet-ikon flex h-8 w-8 items-center justify-center rounded-full border-0 bg-[#fef2f2] text-sm font-bold text-[#b91c1c]">2</div>
+                    <h3 class="rozet-baslik m-0 font-bold text-[#111827]">Gündüzlü Liseler ve Aile Yanı Konaklama</h3>
+                    <p class="rozet-metin mt-1 text-[15px] leading-[1.7] text-[#4b5563]">Yerel kültürü evin içinde deneyimleme şansı.</p>
                 </article>
                 <article class="rozet-kart">
-                    <div class="rozet-ikon">3</div>
-                    <h3 class="rozet-baslik">Lise Değişim Programları (Exchange)</h3>
-                    <p class="rozet-metin">Belirli bir süre (1 dönem veya 1 yıl) yurt dışındaki bir devlet lisesinde eğitim alma imkanı.</p>
+                    <div class="rozet-ikon flex h-8 w-8 items-center justify-center rounded-full border-0 bg-[#fef2f2] text-sm font-bold text-[#b91c1c]">3</div>
+                    <h3 class="rozet-baslik m-0 font-bold text-[#111827]">Lise Değişim Programları (Exchange)</h3>
+                    <p class="rozet-metin mt-1 text-[15px] leading-[1.7] text-[#4b5563]">Belirli bir süre (1 dönem veya 1 yıl) yurt dışındaki bir devlet lisesinde eğitim alma imkanı.</p>
                 </article>
             </div>
         </div>
 
         <div class="cerceve-kutu icerik-kutusu" id="lise-hub-degisim">
-            <h2 class="metin-h2">Lise Değişim Programları</h2>
-            <p class="h2-altinda-metin">
+            <h2 class="metin-h2 mb-4 text-left text-[length:var(--h2-px,22px)] font-bold text-brand-ink">Lise Değişim Programları</h2>
+            <p class="h2-altinda-metin mb-[15px] text-justify">
                 Lise değişim programları, öğrencilere eğitim hayatlarının bir dönemini farklı bir ülkede geçirme ve yerel bir ailenin yanında konaklayarak o kültürü bizzat deneyimleme şansı tanır. Bu programlar sayesinde gençler, yabancı dil becerilerini anadil düzeyine yaklaştırırken aynı zamanda uluslararası bir liseden ders alarak akademik vizyonlarını genişletirler.<br><br>
                 Erken yaşta edinilen bu yurtdışı tecrübesi, öğrencilerin özgüven kazanmalarına, problem çözme yeteneklerini geliştirmelerine ve küresel bir bakış açısı edinmelerine büyük katkı sağlar. Katılımcılar, dünyanın dört bir yanından edindikleri dostluklarla hayat boyu sürecek bir kültürel ağın parçası olma fırsatı yakalarlar. Lise değişim programları gelecekteki üniversite ve iş başvurularında büyük bir avantaj sağlar.
             </p>
         </div>
 
         <div class="cerceve-kutu" id="lise-hub-sss">
-            <h2 class="metin-h2">Yurt Dışı Lise<span class="vurgu-satir">Sıkça Sorulan Sorular (SSS)</span></h2>
+            <h2 class="metin-h2 mb-4 text-left text-[length:var(--h2-px,22px)] font-bold text-brand-ink">Yurt Dışı Lise<span class="vurgu-satir text-brand-redDark">Sıkça Sorulan Sorular (SSS)</span></h2>
             <div class="sss-alani">
                 <details class="sss-item">
                     <summary>1. Yurt dışı lise eğitimi için en uygun yaş ve başvuru zamanı nedir?</summary>
@@ -412,7 +413,7 @@
         </section>
 
         <div class="okul-liste-kapsayici" id="lise-hub-yaz-okullari">
-            <h2 class="metin-h2">Yurt Dışı Yaz Okulları</h2>
+            <h2 class="metin-h2 mb-4 text-left text-[length:var(--h2-px,22px)] font-bold text-brand-ink">Yurt Dışı Yaz Okulları</h2>
             <section class="alt-yonlendirme-alani">
                 <div class="yonlendirme-karti">
                     <p>Ülke ve şehir seçenekleriyle tüm yurt dışı yaz okulu programlarına genel sayfamızdan ulaşabilirsiniz.</p>
