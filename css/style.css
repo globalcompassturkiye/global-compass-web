@@ -369,11 +369,10 @@ h1 {
         body.sayfa-kings-education-new-york
             .kings-london-toc-outer
             .blog-mobil-icindekiler-wrap.kings-la-mobil-icindekiler-giris-alti,
-        body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
+        body.sbc-canford-yaz-okulu-sayfa
             .kings-london-toc-outer
             .blog-mobil-icindekiler-wrap.sbc-canford-mobil-icindekiler-giris-alti,
-        body.sayfa-swiss-education-academy
-            .kings-london-toc-outer
+        .kings-london-toc-outer
             .blog-mobil-icindekiler-wrap.sea-mobil-icindekiler-giris-alti
     ) {
         display: flex;
@@ -388,9 +387,8 @@ h1 {
             body.sayfa-chantemerle,
             body.sayfa-kings-education-los-angeles,
             body.sayfa-kings-education-new-york,
-            body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford,
-            body.sayfa-swiss-education-academy
-        )
+            body.sbc-canford-yaz-okulu-sayfa,
+            body.sayfa-swiss-education-academy)
         .kings-london-toc-outer
         .blog-yan-panel {
         display: none;
@@ -469,37 +467,37 @@ article.icerik-alani #new-york-neden-yaz.icerik-kutusu .yaz-konaklama-oge {
         font-size: var(--h1-px, 28px);
     }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-konaklama-galeri {
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-konaklama-galeri {
         gap: 12px;
     }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
-        :is(.sbc-canford-gezi-kart__media img, .sbc-canford-gezi-kart__media--kucuk img) {
+body.sbc-canford-yaz-okulu-sayfa
+        :is(
+            .sbc-canford-gezi-kart__media img,
+            .sbc-canford-gezi-kart__media--kucuk img,
+            .sbc-spor-akademi-kart__media img
+        ) {
         max-height: 220px;
     }
 
-    body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-gezi-kart__baslik {
+    body.sbc-canford-yaz-okulu-sayfa .sbc-canford-gezi-kart__baslik {
         font-size: 15px;
     }
 
-    body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-gezi-kart__metin {
+    body.sbc-canford-yaz-okulu-sayfa .sbc-canford-gezi-kart__metin {
         font-size: 14px;
         line-height: 1.65;
     }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-course-grid {
+body.sbc-canford-yaz-okulu-sayfa .sbc-course-grid {
         --sbc-course-grid-gap: 12px;
     }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-spor-akademi-kart__media img {
-        max-height: 220px;
-    }
-
-    body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-spor-akademi-kart__baslik {
+    body.sbc-canford-yaz-okulu-sayfa .sbc-spor-akademi-kart__baslik {
         font-size: 15px;
     }
 
-    body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-spor-akademi-kart__aciklama {
+    body.sbc-canford-yaz-okulu-sayfa .sbc-spor-akademi-kart__aciklama {
         font-size: 14px;
         line-height: 1.6;
     }
@@ -1101,16 +1099,16 @@ body.sayfa-hizmetlerimiz article.icerik-alani.hizmetlerimiz-sayfa .hizmet-adimla
         text-align: center;
     }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-konaklama-galeri {
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-konaklama-galeri {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-gezi-kart {
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-gezi-kart {
         flex-direction: column;
         align-items: stretch;
     }
 
-    body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
+    body.sbc-canford-yaz-okulu-sayfa
         :is(.sbc-canford-gezi-kart__media, .sbc-canford-gezi-kart__media--kucuk) {
         flex: 0 0 auto;
         width: 100%;
@@ -1118,11 +1116,11 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
         min-height: 0;
     }
 
-    body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-gezi-kart--metin-sol-gorsel-sag .sbc-canford-gezi-kart__media {
+    body.sbc-canford-yaz-okulu-sayfa .sbc-canford-gezi-kart--metin-sol-gorsel-sag .sbc-canford-gezi-kart__media {
         order: -1;
     }
 
-    body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
+    body.sbc-canford-yaz-okulu-sayfa
         :is(.sbc-canford-gezi-kart__media img, .sbc-canford-gezi-kart__media--kucuk img) {
         position: static;
         width: 100%;
@@ -1133,42 +1131,42 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
         object-fit: cover;
     }
 
-    body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
+    body.sbc-canford-yaz-okulu-sayfa
         :is(.sbc-canford-gezi-kart__icerik, .sbc-canford-gezi-kart--metin-sol-gorsel-sag .sbc-canford-gezi-kart__icerik) {
         padding: 16px 16px 18px 16px;
     }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-course-grid {
+body.sbc-canford-yaz-okulu-sayfa .sbc-course-grid {
         --sbc-course-grid-gap: 16px;
     }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-course-card {
+body.sbc-canford-yaz-okulu-sayfa .sbc-course-card {
         padding: 20px 16px 18px;
     }
 
-    body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-course-card__ust-satir {
+    body.sbc-canford-yaz-okulu-sayfa .sbc-course-card__ust-satir {
         gap: 10px;
     }
 
-    body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-course-card__rozet {
+    body.sbc-canford-yaz-okulu-sayfa .sbc-course-card__rozet {
         width: 32px;
         height: 32px;
         font-size: 14px;
     }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-spor-akademi-kart {
+body.sbc-canford-yaz-okulu-sayfa .sbc-spor-akademi-kart {
         flex-direction: column;
         align-items: stretch;
     }
 
-    body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-spor-akademi-kart__media {
+    body.sbc-canford-yaz-okulu-sayfa .sbc-spor-akademi-kart__media {
         flex: 0 0 auto;
         width: 100%;
         max-width: none;
         min-height: 0;
     }
 
-    body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-spor-akademi-kart__media img {
+    body.sbc-canford-yaz-okulu-sayfa .sbc-spor-akademi-kart__media img {
         position: static;
         width: 100%;
         height: auto;
@@ -1178,7 +1176,7 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
         object-fit: cover;
     }
 
-    body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-spor-akademi-kart__govde {
+    body.sbc-canford-yaz-okulu-sayfa .sbc-spor-akademi-kart__govde {
         padding: 16px 16px 18px 16px;
     }
 
@@ -1194,11 +1192,6 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     :is(.dil-okullari-secim-paneli, .yaz-okullari-secim-paneli) {
         margin: 20px 0 0 0;
         padding: 0;
-    }
-
-    .usa-avantaj-grid-4lu .rozet-kart:nth-child(4) {
-        grid-column: auto;
-        width: 100%;
     }
 
 .new-york-neden-kutu .rozet-grid {
@@ -1442,7 +1435,7 @@ body.odeme-durum-sayfa .sabit-ust-alan .ust-alan {
 #yas13-15:checked ~ .yas-tab-icerikler .yas13-15-icerik, #yas15-18:checked ~ .yas-tab-icerikler .yas15-18-icerik, #yas16-18:checked ~ .yas-tab-icerikler .yas16-18-icerik, #yas18-30:checked ~ .yas-tab-icerikler .yas18-30-icerik, #yas13-15-oxford:checked ~ .yas-tab-icerikler .yas13-15-oxford-icerik, #yas16-18-oxford:checked ~ .yas-tab-icerikler .yas16-18-oxford-icerik, #tokyo-immerse-akademik:checked ~ .yas-tab-icerikler .tokyo-immerse-akademik-icerik, #tokyo-immerse-kariyer:checked ~ .yas-tab-icerikler .tokyo-immerse-kariyer-icerik, #yas15-18-toronto:checked ~ .yas-tab-icerikler .yas15-18-toronto-icerik, #toronto-simgesel:checked ~ .yas-tab-icerikler .toronto-simgesel-icerik, #toronto-kulturel:checked ~ .yas-tab-icerikler .toronto-kulturel-icerik, #toronto-arkadaslik:checked ~ .yas-tab-icerikler .toronto-arkadaslik-icerik, #toronto-immerse-sec-akademik:checked ~ .yas-tab-icerikler .toronto-immerse-sec-akademik-icerik, #toronto-immerse-sec-deneyim:checked ~ .yas-tab-icerikler .toronto-immerse-sec-deneyim-icerik, #toronto-mezuniyet-staji:checked ~ .yas-tab-icerikler .toronto-mezuniyet-staji-icerik, #sea-bern:checked ~ .yas-tab-icerikler .sea-bern-icerik, #sea-cailler:checked ~ .yas-tab-icerikler .sea-cailler-icerik, #sea-olimpiyat:checked ~ .yas-tab-icerikler .sea-olimpiyat-icerik, #sektor-mimarlik:checked ~ .yas-tab-icerikler .sektor-mimarlik-icerik, #sektor-bankacilik:checked ~ .yas-tab-icerikler .sektor-bankacilik-icerik, #sektor-muhendislik:checked ~ .yas-tab-icerikler .sektor-muhendislik-icerik, #sektor-film:checked ~ .yas-tab-icerikler .sektor-film-icerik, #investin-15-18:checked ~ .yas-tab-icerikler .investin-15-18-icerik, #investin-12-14:checked ~ .yas-tab-icerikler .investin-12-14-icerik,
 #gez-cam-nehri:checked ~ .yas-tab-icerikler .gez-cam-nehri-icerik, #gez-kings-chapel:checked ~ .yas-tab-icerikler .gez-kings-chapel-icerik, #gez-mentor-aile:checked ~ .yas-tab-icerikler .gez-mentor-aile-icerik, #gez-cambridge-simgeleri:checked ~ .yas-tab-icerikler .gez-cambridge-simgeleri-icerik, #gez-kulturel-etkinlikler:checked ~ .yas-tab-icerikler .gez-kulturel-etkinlikler-icerik, #oxford-geleneksel:checked ~ .yas-tab-icerikler .oxford-geleneksel-icerik, #oxford-tarihi-yapilar:checked ~ .yas-tab-icerikler .oxford-tarihi-yapilar-icerik, #oxford-botanik-bahcesi:checked ~ .yas-tab-icerikler .oxford-botanik-bahcesi-icerik, #oxford-cherwell-sandal:checked ~ .yas-tab-icerikler .oxford-cherwell-sandal-icerik, #oxford-yuruyus-turu:checked ~ .yas-tab-icerikler .oxford-yuruyus-turu-icerik,
 .yas-alan-etiketleri li .alan-en, .yas-alan-etiketleri li .alan-tr, .yas-alan-etiketleri li .tab-icerik-alan-en,
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
+body.sbc-canford-yaz-okulu-sayfa
     :is(.sbc-course-card__spec-ikon svg, .sbc-spor-akademi-kart__ikon svg) {
     display: block;
 }
@@ -1501,9 +1494,9 @@ body.sayfa-kings-education-los-angeles .kings-la-konaklama-bolum .konaklama-list
 body.kings-oxford-sayfa .kings-oxford-sosyal-paragraf-son,
 .londra-dil-giris p:last-child,
 .oxford-dil-giris p:last-child,
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-konaklama-metin .son-paragraf-sifir-margin,
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-kurs-kartlari-bolumu > .kirmizi-kutu,
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-sss-dahil-liste li:last-child,
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-konaklama-metin .son-paragraf-sifir-margin,
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-kurs-kartlari-bolumu > .kirmizi-kutu,
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-sss-dahil-liste li:last-child,
 .usa-sehir-dil-giris p:last-child {
     margin-bottom: 0;
 }
@@ -1544,8 +1537,7 @@ body.sayfa-kings-education-boston
 body.sayfa-kings-education-new-york
     :is(.kings-ny-konaklama-bant, .kings-ny-konaklama-bilgi-iskelet .cerceve-kutu.kings-mini-kutu-sik),
 .okul-listesi-program-secim-hub-baslik > .okul-listesi-alt-satir-lacivert:first-child,
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .blog-yazi-ana > .sbc-canford-giris-alt-baslik + .sbc-canford-giris-metni,
-body.sayfa-swiss-education-academy .sea-giris-metni > p:first-child,
+body.sbc-canford-yaz-okulu-sayfa .blog-yazi-ana > .sbc-canford-giris-alt-baslik + .sbc-canford-giris-metni,
 .yaz-okullari-sehir-okul-paneli .okul-liste-kapsayici,
 .cerceve-kutu.los-angeles-neden-kutu .rozet-grid .rozet-metin,
 .yaz-okullari-secim-paneli .program-secim-hub-baslik > .vurgu-satir:first-child,
@@ -1850,7 +1842,7 @@ summary.immerse-tokyo-devam-btn::-webkit-details-marker,
 .sayfa-kings-education .kings-london-dahil-gri-dikey .rozet-metin,
 .sportech-academy-page .gradyan-h3-baslik:first-of-type,
 body.sayfa-yurt-disi-universite-switzerland-bhms .gradyan-h3-baslik:first-of-type,
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-konaklama-metin,
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-konaklama-metin,
 body.oxford-royale-cambridge-sayfa .cerceve-kutu .ora-ulasim-alt-baslik:first-of-type {
     margin-top: 8px;
 }
@@ -1899,7 +1891,7 @@ article.icerik-alani .kings-kampus-olani-sol ul.kutu-liste.yas-alan-etiketleri l
 .immerse-detay-kart.immerse-tokyo-detay-one-cikanlar .kutu-liste li::before,
 .sayfa-kings-education .immerse-detay-kart.kings-london-detay-liste-kart .kutu-liste li::before,
 body.sayfa-kings-education-los-angeles .kutu-liste.kings-la-liste-sifir:not(.kings-la-film-icerik-listesi) li::before, body.sayfa-kings-education-new-york .kutu-liste.kings-la-liste-sifir:not(.kings-la-film-icerik-listesi) li::before,
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-tesisler-kart .yas-alan-etiketleri li::before, body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-etkinlikler-kart .yas-alan-etiketleri li::before {
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-tesisler-kart .yas-alan-etiketleri li::before, body.sbc-canford-yaz-okulu-sayfa .sbc-canford-etkinlikler-kart .yas-alan-etiketleri li::before {
     content: none;
     display: none;
 }
@@ -2109,8 +2101,7 @@ body.sayfa-kings-education-boston .kings-bos-konaklama-bilgi-iskelet.kings-la-ko
 .ulke-buton-almanya,
 .ulke-buton-kanada,
 .ulke-buton-isvicre,
-.ulke-buton-italya,
-.ulke-buton-japonya {
+.ulke-buton-italya {
     background: #2c3e50;
 }
 
@@ -2284,17 +2275,6 @@ article.icerik-alani .rozet-grid.icerik-kutusu-grid.yatay-2 > .rozet-kart:last-c
 
 .dijital-kart {
         grid-column: 2; 
-    }
-
-    .cerceve-kutu .usa-avantaj-grid-4lu,
-    .cerceve-kutu .usa-avantaj-grid-4lu:has(>.rozet-kart:nth-child(3)) {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .usa-avantaj-grid-4lu .rozet-kart:nth-child(4) {
-        grid-column: 1 / -1;
-        justify-self: center;
-        width: min(100%, calc((100% - 2 * var(--icerik-rozet-grid-gap)) / 3));
     }
 }
 
@@ -2870,7 +2850,9 @@ article.icerik-alani .rozet-grid.icerik-kutusu-grid.yatay-2 > .rozet-kart.kings-
 }
 
 .immerse-detay-kart h3,
-.almanya-avantaj-gorsel-sag h3 {
+.almanya-avantaj-gorsel-sag h3,
+.immerse-akademik-kart h3,
+.investin-kimler-oge-icerik h3 {
     font-size: var(--h3-font-size);
     font-weight: 700;
     margin: 0 0 8px 0;
@@ -3668,7 +3650,10 @@ article.icerik-alani .cerceve-kutu.japan-tercih-bolumu > h2 + p + .rozet-grid.ja
     object-fit: cover;
 }
 
-body.sayfa-alpadia-frankfurt .immerse-detay-kutu .immerse-detay-kart h3 {
+:is(body.sayfa-alpadia-frankfurt, body.sayfa-alpadia-freiburg)
+    .immerse-detay-kutu
+    .immerse-detay-kart
+    h3 {
     border-bottom: 1px solid var(--site-kart-kenar);
     padding-bottom: 10px;
     margin: 0 0 12px 0;
@@ -3701,7 +3686,7 @@ body.sayfa-alpadia-frankfurt .immerse-detay-kutu .immerse-detay-kart h3 {
         .immerse-detay-kart:nth-child(-n+6),
 .chantemerle-galeri-grid > .galeri-oge:nth-child(-n + 4),
 .almanya-avantaj-grid-3-2 > .rozet-kart:nth-child(1), .almanya-avantaj-grid-3-2 > .rozet-kart:nth-child(2), .almanya-avantaj-grid-3-2 > .rozet-kart:nth-child(3),
-body.sayfa-swiss-education-academy .immerse-detay-kutu .sea-program-detay-grid > .immerse-detay-kart:nth-child(-n+6) {
+.immerse-detay-kutu .sea-program-detay-grid > .immerse-detay-kart:nth-child(-n+6) {
     grid-column: span 2;
 }
 
@@ -3737,11 +3722,10 @@ body.sayfa-chantemerle .immerse-detay-kutu .chantemerle-detay-grid-3lu .chanteme
         body.sayfa-chantemerle,
         body.sayfa-kings-education-los-angeles,
         body.sayfa-kings-education-new-york,
-        body.sayfa-swiss-education-academy
-    )
+        body.sayfa-swiss-education-academy)
     .blog-yazi-layout--yan-panel
     .blog-yazi-ana,
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-spor-akademileri-bolumu .cerceve-kutu,
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-spor-akademileri-bolumu .cerceve-kutu,
 body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli,
 body.sportech-academy-page.sayfa-yurt-disi-yaz-okullari .dil-okullari-secim-paneli,
 body.sayfa-yurt-disi-universite-switzerland-bhms .dil-okullari-secim-paneli,
@@ -3843,12 +3827,6 @@ body.sayfa-alpadia-freiburg .alpadia-galeri-grid {
         border-bottom-right-radius: 15px;
     }
 
-}
-
-body.sayfa-alpadia-freiburg .immerse-detay-kutu .immerse-detay-kart h3 {
-    border-bottom: 1px solid var(--site-kart-kenar);
-    padding-bottom: 10px;
-    margin: 0 0 12px 0;
 }
 
 .site-ana-hizmetler-kartlari-bolumu {
@@ -4132,8 +4110,8 @@ body.ana-sayfa h2 > .vurgu-satir {
     margin: 0.35rem 0 0 0;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .icerik-alani > .kirmizi-kutu,
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .icerik-alani > .okul-liste-kapsayici {
+body.sbc-canford-yaz-okulu-sayfa .icerik-alani > .kirmizi-kutu,
+body.sbc-canford-yaz-okulu-sayfa .icerik-alani > .okul-liste-kapsayici {
     margin-top: 28px;
 }
 .bournemouth-dil-giris,
@@ -4153,7 +4131,6 @@ article.icerik-alani .cerceve-kutu.japan-tercih-bolumu > h2 + p:has(+ .rozet-gri
 
 .bournemouth-neden-kutu .rozet-ikon-tick,
 .londra-neden-kutu .rozet-grid .rozet-ikon-tick,
-.usa-avantaj-grid-4lu .rozet-ikon-tick,
 .new-york-neden-kutu .rozet-grid .rozet-ikon-tick {
     font-size: 1.05em;
     font-weight: 700;
@@ -4218,8 +4195,7 @@ article.icerik-alani .cerceve-kutu.japan-tercih-bolumu > h2 + p:has(+ .rozet-gri
 }
 
 .oxford-sosyal-rozet-kutu .rozet-grid,
-.usa-one-cikan-sehirler-kutu .rozet-grid,
-.usa-avantaj-grid-4lu {
+.usa-one-cikan-sehirler-kutu .rozet-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: var(--icerik-rozet-grid-gap);
 }
@@ -4229,7 +4205,6 @@ article.icerik-alani .cerceve-kutu.japan-tercih-bolumu > h2 + p:has(+ .rozet-gri
 .oxford-neden-kutu .rozet-grid .rozet-kart,
 .oxford-sosyal-rozet-kutu .rozet-grid .rozet-kart,
 .usa-one-cikan-sehirler-kutu .rozet-kart,
-.usa-avantaj-grid-4lu .rozet-kart,
 .new-york-neden-kutu .rozet-grid .rozet-kart,
 .boston-neden-kutu .rozet-grid .rozet-kart,
 .london-sosyal-rozet-kutu .rozet-grid.icerik-kutusu-grid.yatay-2 .rozet-kart {
@@ -4400,11 +4375,11 @@ body.sayfa-chantemerle .chantemerle-program-ozet-liste {
         display: none;
     }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-course-grid {
+body.sbc-canford-yaz-okulu-sayfa .sbc-course-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-course-card:nth-child(5) {
+    body.sbc-canford-yaz-okulu-sayfa .sbc-course-card:nth-child(5) {
         grid-column: 1 / -1;
         justify-self: center;
         width: 100%;
@@ -4459,7 +4434,7 @@ body.sayfa-chantemerle .immerse-detay-kutu .chantemerle-detay-grid-3lu .immerse-
 body.sayfa-chantemerle .immerse-detay-kutu .chantemerle-detay-grid-3lu .immerse-detay-kart .kutu-liste li,
 body.sayfa-kings-education-boston .kings-bos-konaklama-bilgi-iskelet .kutu-liste li,
 body.sayfa-kings-education-new-york .kings-ny-konaklama-bilgi-iskelet .kutu-liste li,
-body.sayfa-swiss-education-academy .sea-konaklama-gri-kutu .sea-konaklama-ozet-kart .sea-kart-p-sek {
+.sea-konaklama-gri-kutu .sea-konaklama-ozet-kart .sea-kart-p-sek {
     font-size: 15px;
     line-height: 1.7;
 }
@@ -4469,11 +4444,11 @@ body.sayfa-chantemerle .immerse-detay-kutu .chantemerle-detay-grid-3lu {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-body.sayfa-swiss-education-academy .immerse-detay-kutu .immerse-detay-grid.sea-program-detay-grid {
+.immerse-detay-kutu .immerse-detay-grid.sea-program-detay-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    body.sayfa-swiss-education-academy .immerse-detay-kutu .sea-program-detay-grid > .immerse-detay-kart:nth-child(-n+8) {
+    .immerse-detay-kutu .sea-program-detay-grid > .immerse-detay-kart:nth-child(-n+8) {
         grid-column: auto;
     }
 }
@@ -4487,7 +4462,7 @@ body.sayfa-chantemerle .immerse-detay-kutu .chantemerle-detay-grid-3lu {
         grid-column: auto;
     }
 
-body.sayfa-swiss-education-academy .immerse-detay-kutu .immerse-detay-grid.sea-program-detay-grid {
+.immerse-detay-kutu .immerse-detay-grid.sea-program-detay-grid {
         grid-template-columns: 1fr;
     }
 }
@@ -4801,8 +4776,8 @@ body.sayfa-kings-education-bournemouth .kings-oxford-basvuru-bant,
 body.sayfa-kings-education-new-york #kings-ny-konaklama .konaklama-giris,
 body.kings-oxford-sayfa .blog-yazi-ana > .kings-giris-metni,
 body.kings-oxford-sayfa .kings-oxford-basvuru-bant,
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .blog-yazi-ana > .sbc-canford-giris-metni,
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .blog-yazi-ana > .sbc-canford-program-bolumu,
+body.sbc-canford-yaz-okulu-sayfa .blog-yazi-ana > .sbc-canford-giris-metni,
+body.sbc-canford-yaz-okulu-sayfa .blog-yazi-ana > .sbc-canford-program-bolumu,
 body.sayfa-yurt-disi-universite-switzerland-bhms .toronto-arkadaslik-icerik > p:nth-of-type(2),
 body.sportech-academy-page .blog-yazi-ana > .sportech-academy-giris-metni,
 body.sportech-academy-page .blog-yazi-ana > .giris-metni {
@@ -4814,7 +4789,6 @@ article.icerik-alani .blog-yazi-ana > .giris-metni:not(.cerceve-kutu):not(.site-
 article.icerik-alani .blog-yazi-ana > .kings-giris-metni:not(.cerceve-kutu):not(.site-gri-cerceve-kutu),
 article.icerik-alani .blog-yazi-ana > .sportech-academy-giris-metni:not(.cerceve-kutu):not(.site-gri-cerceve-kutu),
 article.icerik-alani .blog-yazi-ana > .alpadia-tanitim-giris:not(.cerceve-kutu):not(.site-gri-cerceve-kutu),
-article.icerik-alani .blog-yazi-ana > .sea-giris-metni:not(.cerceve-kutu):not(.site-gri-cerceve-kutu),
 article.icerik-alani .blog-yazi-ana > .chantemerle-giris-metni:not(.cerceve-kutu):not(.site-gri-cerceve-kutu) {
     width: 100%;
     max-width: 1000px;
@@ -4842,7 +4816,6 @@ article.icerik-alani .blog-yazi-ana > h1 + p.intro-metin {
     article.icerik-alani.blog-yazi-detay .blog-yazi-ana > .kings-giris-metni:not(.cerceve-kutu):not(.site-gri-cerceve-kutu),
     article.icerik-alani.blog-yazi-detay .blog-yazi-ana > .sportech-academy-giris-metni:not(.cerceve-kutu):not(.site-gri-cerceve-kutu),
     article.icerik-alani.blog-yazi-detay .blog-yazi-ana > .alpadia-tanitim-giris:not(.cerceve-kutu):not(.site-gri-cerceve-kutu),
-    article.icerik-alani.blog-yazi-detay .blog-yazi-ana > .sea-giris-metni:not(.cerceve-kutu):not(.site-gri-cerceve-kutu),
     article.icerik-alani.blog-yazi-detay .blog-yazi-ana > .chantemerle-giris-metni:not(.cerceve-kutu):not(.site-gri-cerceve-kutu) {
         max-width: 100%;
         padding-left: 0;
@@ -4854,7 +4827,6 @@ article.icerik-alani .blog-yazi-ana > h1 + p.intro-metin {
     article.icerik-alani .blog-yazi-ana > .kings-giris-metni:not(.cerceve-kutu):not(.site-gri-cerceve-kutu),
     article.icerik-alani .blog-yazi-ana > .sportech-academy-giris-metni:not(.cerceve-kutu):not(.site-gri-cerceve-kutu),
     article.icerik-alani .blog-yazi-ana > .alpadia-tanitim-giris:not(.cerceve-kutu):not(.site-gri-cerceve-kutu),
-    article.icerik-alani .blog-yazi-ana > .sea-giris-metni:not(.cerceve-kutu):not(.site-gri-cerceve-kutu),
     article.icerik-alani .blog-yazi-ana > .chantemerle-giris-metni:not(.cerceve-kutu):not(.site-gri-cerceve-kutu) {
         max-width: 100%;
         padding-left: 0;
@@ -4881,8 +4853,7 @@ article.icerik-alani .blog-yazi-layout--yan-panel .blog-yazi-ana > :is(.dil-okul
 
 .futbol-mt-75 { margin-top: 75px; }
 
-.futbol-mb-24,
-.sea-mb24 {
+.futbol-mb-24 {
     margin-bottom: 24px;
 }
 
@@ -5079,7 +5050,7 @@ article.icerik-alani .blog-yazi-layout--yan-panel .blog-yazi-ana > :is(.dil-okul
 .futbol-tesis-baslik-satir .rozet-ikon,
 .sayfa-kings-education .kings-ayricalik-kart .rozet-ikon,
 .sayfa-kings-education .kings-ielts-gri-icerik .rozet-ikon, .sayfa-kings-education .kings-dahil-gri-icerik .rozet-ikon,
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-spor-akademi-kart__fiyat-etiket,
+body.sbc-canford-yaz-okulu-sayfa .sbc-spor-akademi-kart__fiyat-etiket,
 .cerceve-kutu.los-angeles-neden-kutu .los-angeles-rozet-ust .rozet-ikon {
     flex-shrink: 0;
 }
@@ -6064,8 +6035,8 @@ body.sayfa-yurt-disi-burs-firsatlari article.icerik-alani .cerceve-kutu p {
     border-radius: 999px; 
 }
 
-body.sayfa-yurt-disi-yaz-okullari-japan-tokyo-immerse-education #tokyo-immerse-mobil-icindekiler-kutu,
-body.sayfa-yurt-disi-yaz-okullari-japan-tokyo-immerse-education #tokyo-immerse-masaustu-icindekiler-baslik {
+body.immerse-education-page #tokyo-immerse-mobil-icindekiler-kutu,
+body.immerse-education-page #tokyo-immerse-masaustu-icindekiler-baslik {
     scroll-margin-top: calc(var(--site-header-offset, 122px) + 0.5rem);
 }
 
@@ -6346,12 +6317,6 @@ article.icerik-alani .blog-yazi-layout--yan-panel .blog-yazi-ana .ana-gorsel-kap
     max-width: 340px;
 }
 
-.immerse-detay-kart h3 {
-    font-size: var(--h3-font-size);
-    font-weight: 700;
-    margin: 0 0 8px 0;
-}
-
 .immerse-programlar-kutu .immerse-program-liste {
     list-style: none;
     margin: 30px 0 0 0;
@@ -6520,12 +6485,6 @@ article.icerik-alani .blog-yazi-layout--yan-panel .blog-yazi-ana .ana-gorsel-kap
     justify-content: center;
     font-size: 20px;
     margin-bottom: 10px;
-}
-
-.immerse-akademik-kart h3 {
-    font-size: var(--h3-font-size);
-    font-weight: 700;
-    margin: 0 0 8px 0;
 }
 
 .immerse-konaklama-kutu .konaklama-intro-panel {
@@ -6929,12 +6888,6 @@ summary.immerse-tokyo-devam-btn {
     color: #fff;
     background: #0f766e;
     line-height: 1;
-}
-
-.investin-kimler-oge-icerik h3 {
-    font-size: var(--h3-font-size);
-    font-weight: 700;
-    margin: 0 0 8px 0;
 }
 
 .investin-kimler-oge-icerik p {
@@ -7410,7 +7363,7 @@ body.sayfa-kings-education-boston .kings-bos-konaklama-bilgi-iskelet.kings-la-ko
 
 .sayfa-kings-education .kings-bos-etiket-lacivert-kalin,
 .sayfa-kings-education .kings-genel-ing-vurgu-kutu strong,
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-giris-vurgu-metin strong {
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-giris-vurgu-metin strong {
     color: #000080;
     font-weight: 700;
 }
@@ -7973,15 +7926,15 @@ body.sayfa-kings-education-london .kings-cambridge-gri-ikili .cerceve-kutu {
         grid-template-columns: 1fr;
     }
 
-    body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-detay-ust-iki-sutun {
+    body.sbc-canford-yaz-okulu-sayfa .sbc-canford-detay-ust-iki-sutun {
         grid-template-columns: 1fr;
     }
 
-    body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-spor-karsilastirma-tablo {
+    body.sbc-canford-yaz-okulu-sayfa .sbc-spor-karsilastirma-tablo {
         font-size: 13px;
     }
 
-    body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
+    body.sbc-canford-yaz-okulu-sayfa
         .sbc-spor-karsilastirma-tablo
         :is(thead th, tbody td) {
         padding: 12px 12px;
@@ -9097,11 +9050,11 @@ article.icerik-alani.blog-yazi-detay .blog-yazi-ana .cerceve-kutu.program-detay-
     grid-row: 1;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .blog-yazi-layout--yan-panel .blog-yazi-ana {
+body.sbc-canford-yaz-okulu-sayfa .blog-yazi-layout--yan-panel .blog-yazi-ana {
     overflow: visible;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-giris-alt-baslik {
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-giris-alt-baslik {
     margin: 0.65rem 0 1rem 0;
     font-size: clamp(1.05rem, 2.4vw, 1.3rem);
     font-weight: 600;
@@ -9110,7 +9063,7 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     text-align: center;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-giris-global-compass-vurgu {
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-giris-global-compass-vurgu {
     margin-top: 1.35rem;
     padding: 1.25rem var(--icerik-yan-gutter) 15px var(--icerik-yan-gutter);
     border: 0;
@@ -9119,7 +9072,7 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     box-sizing: border-box;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-giris-vurgu-etiket {
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-giris-vurgu-etiket {
     margin: 0 0 0.45rem 0;
     font-size: 1.05rem;
     font-weight: 700;
@@ -9129,7 +9082,7 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     color: #111827;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-giris-vurgu-metin {
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-giris-vurgu-metin {
     margin: 0;
     font-size: 15px;
     line-height: 1.7;
@@ -9141,15 +9094,15 @@ body.sbc-canford-yaz-okulu-sayfa .sbc-canford-giris-global-compass-vurgu .rozet-
     background: #ffffff;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-program-bolumu .immerse-detay-kutu .immerse-detay-grid {
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-program-bolumu .immerse-detay-kutu .immerse-detay-grid {
     justify-content: flex-start;
     align-content: flex-start;
     width: 100%;
     box-sizing: border-box;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-program-bolumu .immerse-detay-kutu .immerse-detay-grid > .sbc-canford-detay-ust-iki-sutun,
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-tesis-etkinlik-bolumu .immerse-detay-kutu .immerse-detay-grid > .sbc-canford-tesisler-kart, body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-tesis-etkinlik-bolumu .immerse-detay-kutu .immerse-detay-grid > .sbc-canford-etkinlikler-kart {
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-program-bolumu .immerse-detay-kutu .immerse-detay-grid > .sbc-canford-detay-ust-iki-sutun,
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-tesis-etkinlik-bolumu .immerse-detay-kutu .immerse-detay-grid > .sbc-canford-tesisler-kart, body.sbc-canford-yaz-okulu-sayfa .sbc-canford-tesis-etkinlik-bolumu .immerse-detay-kutu .immerse-detay-grid > .sbc-canford-etkinlikler-kart {
     flex: 0 0 100%;
     width: 100%;
     max-width: 100%;
@@ -9157,22 +9110,22 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     box-sizing: border-box;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-tesis-etkinlik-bolumu,
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-konaklama-bolumu,
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-geziler-kartlari-bolumu,
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-kurs-kartlari-bolumu {
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-tesis-etkinlik-bolumu,
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-konaklama-bolumu,
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-geziler-kartlari-bolumu,
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-kurs-kartlari-bolumu {
     margin-top: 32px;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-tesis-etkinlik-bolumu .sbc-canford-tesisler-kart > h3,
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-tesis-etkinlik-bolumu .sbc-canford-etkinlikler-kart > h3 {
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-tesis-etkinlik-bolumu .sbc-canford-tesisler-kart > h3,
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-tesis-etkinlik-bolumu .sbc-canford-etkinlikler-kart > h3 {
     font-size: var(--h3-font-size);
     font-weight: 700;
     line-height: 1.35;
     margin: 0 0 12px 0;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-tesis-etkinlik-bolumu .immerse-detay-kutu .immerse-detay-grid {
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-tesis-etkinlik-bolumu .immerse-detay-kutu .immerse-detay-grid {
     flex-direction: column;
     flex-wrap: nowrap;
     gap: 22px;
@@ -9182,28 +9135,28 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     box-sizing: border-box;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-detay-ust-iki-sutun {
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-detay-ust-iki-sutun {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     align-items: start;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-detay-ust-iki-sutun > .immerse-detay-kart {
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-detay-ust-iki-sutun > .immerse-detay-kart {
     width: 100%;
     max-width: none;
     min-width: 0;
     box-sizing: border-box;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-konaklama-metin p {
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-konaklama-metin p {
     font-size: 15px;
     line-height: 1.7;
     color: #334155;
     margin: 0 0 1em 0;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-konaklama-galeri {
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-konaklama-galeri {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 16px;
@@ -9214,13 +9167,13 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     box-sizing: border-box;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-konaklama-galeri li {
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-konaklama-galeri li {
     margin: 0;
     padding: 0;
     min-width: 0;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-konaklama-galeri .galeri-oge img {
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-konaklama-galeri .galeri-oge img {
     width: 300px;
     height: 300px;
     object-fit: cover;
@@ -9229,7 +9182,7 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     box-sizing: border-box;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-geziler-liste {
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-geziler-liste {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -9238,7 +9191,7 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     box-sizing: border-box;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-gezi-kart {
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-gezi-kart {
     display: flex;
     flex-direction: row;
     align-items: stretch;
@@ -9252,7 +9205,7 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     min-height: 0;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-gezi-kart__media {
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-gezi-kart__media {
     position: relative;
     flex: 0 0 42%;
     max-width: 320px;
@@ -9262,12 +9215,13 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     background: #f1f5f9;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-gezi-kart__media--kucuk {
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-gezi-kart__media--kucuk {
     flex: 0 0 31%;
     max-width: 240px;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-gezi-kart__media img {
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-gezi-kart__media img,
+body.sbc-canford-yaz-okulu-sayfa .sbc-spor-akademi-kart__media img {
     position: static;
     display: block;
     width: 300px;
@@ -9275,7 +9229,7 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     object-fit: cover;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-gezi-kart__icerik {
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-gezi-kart__icerik {
     flex: 1;
     min-width: 0;
     padding: 20px 18px 18px 20px;
@@ -9284,12 +9238,12 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     justify-content: center;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-gezi-kart--metin-sol-gorsel-sag .sbc-canford-gezi-kart__icerik {
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-gezi-kart--metin-sol-gorsel-sag .sbc-canford-gezi-kart__icerik {
     padding: 20px 20px 18px 20px;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-gezi-kart__baslik,
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-spor-akademi-kart__baslik {
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-gezi-kart__baslik,
+body.sbc-canford-yaz-okulu-sayfa .sbc-spor-akademi-kart__baslik {
     margin: 0 0 10px 0;
     font-size: 16px;
     font-weight: 700;
@@ -9297,15 +9251,15 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     color: #111827;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-gezi-kart__metin {
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-gezi-kart__metin {
     margin: 0;
     font-size: 15px;
     line-height: 1.7;
     color: #334155;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-tesisler-kart .yas-alan-etiketleri,
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-etkinlikler-kart .yas-alan-etiketleri {
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-tesisler-kart .yas-alan-etiketleri,
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-etkinlikler-kart .yas-alan-etiketleri {
     display: grid;
     flex-wrap: unset;
     justify-content: stretch;
@@ -9317,8 +9271,8 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     gap: 10px;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-tesisler-kart .yas-alan-etiketleri li,
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-etkinlikler-kart .yas-alan-etiketleri li {
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-tesisler-kart .yas-alan-etiketleri li,
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-etkinlikler-kart .yas-alan-etiketleri li {
     max-width: 100%;
     width: 100%;
     min-width: 0;
@@ -9337,7 +9291,7 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     min-width: 0;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-tesisler-kart .yas-alan-etiketleri li.sbc-tesis-etiket-son-satir {
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-tesisler-kart .yas-alan-etiketleri li.sbc-tesis-etiket-son-satir {
     grid-column: 1 / -1;
     display: flex;
     flex-direction: row;
@@ -9358,7 +9312,7 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     line-height: inherit;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-tesis-etiket-yaprak {
+body.sbc-canford-yaz-okulu-sayfa .sbc-tesis-etiket-yaprak {
     font-size: 13px;
     font-weight: 500;
     color: #0f172a;
@@ -9374,7 +9328,7 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     box-sizing: border-box;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-course-grid-intro {
+body.sbc-canford-yaz-okulu-sayfa .sbc-course-grid-intro {
     font-size: 15px;
     line-height: 1.65;
     color: #4a5568;
@@ -9382,7 +9336,7 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     max-width: 720px;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-course-grid {
+body.sbc-canford-yaz-okulu-sayfa .sbc-course-grid {
     --sbc-course-grid-gap: 24px;
     display: grid;
     grid-template-columns: 1fr;
@@ -9392,7 +9346,7 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     box-sizing: border-box;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-course-card {
+body.sbc-canford-yaz-okulu-sayfa .sbc-course-card {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -9404,16 +9358,16 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     transition: transform 0.22s ease, box-shadow 0.22s ease;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-course-card:hover {
+body.sbc-canford-yaz-okulu-sayfa .sbc-course-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-course-card:focus-within {
+body.sbc-canford-yaz-okulu-sayfa .sbc-course-card:focus-within {
     box-shadow: 0 16px 40px rgba(15, 23, 42, 0.14);
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-course-badge {
+body.sbc-canford-yaz-okulu-sayfa .sbc-course-badge {
     align-self: flex-start;
     display: inline-block;
     font-size: 11px;
@@ -9426,7 +9380,7 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     margin-bottom: 14px;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-course-card__ust-satir {
+body.sbc-canford-yaz-okulu-sayfa .sbc-course-card__ust-satir {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -9434,7 +9388,7 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     margin-bottom: 12px;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-course-card__rozet {
+body.sbc-canford-yaz-okulu-sayfa .sbc-course-card__rozet {
     flex-shrink: 0;
     display: flex;
     align-items: center;
@@ -9451,7 +9405,7 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     margin-top: 2px;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-course-card__title {
+body.sbc-canford-yaz-okulu-sayfa .sbc-course-card__title {
     margin: 0;
     flex: 1;
     min-width: 0;
@@ -9461,7 +9415,7 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     color: #1a202c;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-course-card__title-tr {
+body.sbc-canford-yaz-okulu-sayfa .sbc-course-card__title-tr {
     display: inline-block;
     margin-top: 6px;
     font-size: 0.92rem;
@@ -9470,7 +9424,7 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     color: #64748b;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-course-card__desc {
+body.sbc-canford-yaz-okulu-sayfa .sbc-course-card__desc {
     margin: 0 0 18px 0;
     font-size: 15px;
     line-height: 1.65;
@@ -9482,7 +9436,7 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     flex-grow: 1;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-course-card__specs {
+body.sbc-canford-yaz-okulu-sayfa .sbc-course-card__specs {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px 14px;
@@ -9491,7 +9445,7 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     border-top: 1px solid #edf2f7;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-course-card__spec {
+body.sbc-canford-yaz-okulu-sayfa .sbc-course-card__spec {
     display: grid;
     grid-template-columns: auto 1fr;
     grid-template-rows: auto auto;
@@ -9500,7 +9454,7 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     min-width: 0;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-course-card__spec-ikon {
+body.sbc-canford-yaz-okulu-sayfa .sbc-course-card__spec-ikon {
     grid-row: 1 / -1;
     color: #64748b;
     display: flex;
@@ -9508,7 +9462,7 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     padding-top: 2px;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-course-card__spec-key {
+body.sbc-canford-yaz-okulu-sayfa .sbc-course-card__spec-key {
     grid-column: 2;
     font-size: 10.5px;
     font-weight: 600;
@@ -9518,7 +9472,7 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     line-height: 1.25;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-course-card__spec-val {
+body.sbc-canford-yaz-okulu-sayfa .sbc-course-card__spec-val {
     grid-column: 2;
     font-size: 13px;
     font-weight: 600;
@@ -9527,19 +9481,19 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     word-break: break-word;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-spor-akademileri-bolumu {
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-spor-akademileri-bolumu {
     margin-top: 32px;
     overflow: visible;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-spor-akademileri-bolumu .cerceve-kutu > h2 .sbc-spor-akademi-baslik-ek {
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-spor-akademileri-bolumu .cerceve-kutu > h2 .sbc-spor-akademi-baslik-ek {
     display: inline;
     font-weight: 600;
     font-size: clamp(0.82em, 2.6vw, 0.95em);
     opacity: 0.95;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-spor-akademi-giris {
+body.sbc-canford-yaz-okulu-sayfa .sbc-spor-akademi-giris {
     font-size: 15px;
     line-height: 1.65;
     color: #475569;
@@ -9547,7 +9501,7 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     max-width: 52rem;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-spor-akademi-kart-grid {
+body.sbc-canford-yaz-okulu-sayfa .sbc-spor-akademi-kart-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
@@ -9556,7 +9510,7 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     box-sizing: border-box;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-spor-akademi-kart {
+body.sbc-canford-yaz-okulu-sayfa .sbc-spor-akademi-kart {
     display: flex;
     flex-direction: row;
     align-items: stretch;
@@ -9570,7 +9524,7 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     min-height: min-content;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-spor-akademi-kart__media {
+body.sbc-canford-yaz-okulu-sayfa .sbc-spor-akademi-kart__media {
     position: relative;
     flex: 0 0 26%;
     max-width: 200px;
@@ -9580,15 +9534,7 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     background: #f1f5f9;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-spor-akademi-kart__media img {
-    position: static;
-    display: block;
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-}
-
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-spor-akademi-kart__govde {
+body.sbc-canford-yaz-okulu-sayfa .sbc-spor-akademi-kart__govde {
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -9598,13 +9544,13 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     box-sizing: border-box;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-spor-akademi-kart:hover {
+body.sbc-canford-yaz-okulu-sayfa .sbc-spor-akademi-kart:hover {
     border-color: rgba(15, 118, 110, 0.35);
     box-shadow: 0 10px 28px rgba(15, 23, 42, 0.1);
     transform: translateY(-2px);
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-spor-akademi-kart__aciklama {
+body.sbc-canford-yaz-okulu-sayfa .sbc-spor-akademi-kart__aciklama {
     margin: 0 0 16px 0;
     font-size: 15px;
     line-height: 1.65;
@@ -9620,13 +9566,13 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     overflow-wrap: break-word;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-spor-akademi-kart__vurgu,
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-spor-karsilastirma-tablo tbody td:last-child {
+body.sbc-canford-yaz-okulu-sayfa .sbc-spor-akademi-kart__vurgu,
+body.sbc-canford-yaz-okulu-sayfa .sbc-spor-karsilastirma-tablo tbody td:last-child {
     font-weight: 600;
     color: #0f766e;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-spor-akademi-kart__meta {
+body.sbc-canford-yaz-okulu-sayfa .sbc-spor-akademi-kart__meta {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -9638,31 +9584,31 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     color: #0f766e;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-spor-akademi-kart__meta-oge {
+body.sbc-canford-yaz-okulu-sayfa .sbc-spor-akademi-kart__meta-oge {
     display: inline-flex;
     align-items: center;
     gap: 6px;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-spor-akademi-kart__ikon {
+body.sbc-canford-yaz-okulu-sayfa .sbc-spor-akademi-kart__ikon {
     display: flex;
     color: #0f766e;
     flex-shrink: 0;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-spor-akademi-kart__ayrac {
+body.sbc-canford-yaz-okulu-sayfa .sbc-spor-akademi-kart__ayrac {
     color: #cbd5e1;
     font-weight: 400;
     user-select: none;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-spor-karsilastirma-blok {
+body.sbc-canford-yaz-okulu-sayfa .sbc-spor-karsilastirma-blok {
     margin-top: 36px;
     padding-top: 28px;
     border-top: 1px solid var(--site-kart-kenar);
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-spor-karsilastirma-baslik {
+body.sbc-canford-yaz-okulu-sayfa .sbc-spor-karsilastirma-baslik {
     margin: 0 0 6px 0;
     font-size: 1.15rem;
     font-weight: 700;
@@ -9670,14 +9616,14 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     color: #0f172a;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-spor-karsilastirma-alt {
+body.sbc-canford-yaz-okulu-sayfa .sbc-spor-karsilastirma-alt {
     margin: 0 0 18px 0;
     font-size: 14px;
     line-height: 1.55;
     color: #64748b;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-spor-tablo-scroll {
+body.sbc-canford-yaz-okulu-sayfa .sbc-spor-tablo-scroll {
     width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -9685,7 +9631,7 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     background: #fafafa;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-spor-karsilastirma-tablo {
+body.sbc-canford-yaz-okulu-sayfa .sbc-spor-karsilastirma-tablo {
     width: 100%;
     min-width: 560px;
     border-collapse: collapse;
@@ -9693,7 +9639,7 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     table-layout: fixed;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-spor-karsilastirma-tablo thead th {
+body.sbc-canford-yaz-okulu-sayfa .sbc-spor-karsilastirma-tablo thead th {
     text-align: left;
     padding: 14px 16px;
     font-size: 12px;
@@ -9705,57 +9651,57 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     border-bottom: 1px solid var(--site-kart-kenar);
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-spor-karsilastirma-tablo tbody td {
+body.sbc-canford-yaz-okulu-sayfa .sbc-spor-karsilastirma-tablo tbody td {
     padding: 14px 16px;
     color: #334155;
     border-bottom: 1px solid var(--site-kart-kenar);
     vertical-align: middle;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-spor-karsilastirma-tablo tbody tr:last-child td {
+body.sbc-canford-yaz-okulu-sayfa .sbc-spor-karsilastirma-tablo tbody tr:last-child td {
     border-bottom: none;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-spor-karsilastirma-tablo tbody tr {
+body.sbc-canford-yaz-okulu-sayfa .sbc-spor-karsilastirma-tablo tbody tr {
     transition: background 0.15s ease;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-spor-karsilastirma-tablo tbody tr:hover {
+body.sbc-canford-yaz-okulu-sayfa .sbc-spor-karsilastirma-tablo tbody tr:hover {
     background: rgba(15, 118, 110, 0.08);
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-spor-karsilastirma-tablo thead th:nth-child(1),
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-spor-karsilastirma-tablo tbody td:nth-child(1) {
+body.sbc-canford-yaz-okulu-sayfa .sbc-spor-karsilastirma-tablo thead th:nth-child(1),
+body.sbc-canford-yaz-okulu-sayfa .sbc-spor-karsilastirma-tablo tbody td:nth-child(1) {
     width: 40%;
     word-break: break-word;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-spor-karsilastirma-tablo thead th:nth-child(2),
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-spor-karsilastirma-tablo thead th:nth-child(3),
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-spor-karsilastirma-tablo thead th:nth-child(4),
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-spor-karsilastirma-tablo thead th:nth-child(5),
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-spor-karsilastirma-tablo tbody td:nth-child(2),
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-spor-karsilastirma-tablo tbody td:nth-child(3),
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-spor-karsilastirma-tablo tbody td:nth-child(4),
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-spor-karsilastirma-tablo tbody td:nth-child(5) {
+body.sbc-canford-yaz-okulu-sayfa .sbc-spor-karsilastirma-tablo thead th:nth-child(2),
+body.sbc-canford-yaz-okulu-sayfa .sbc-spor-karsilastirma-tablo thead th:nth-child(3),
+body.sbc-canford-yaz-okulu-sayfa .sbc-spor-karsilastirma-tablo thead th:nth-child(4),
+body.sbc-canford-yaz-okulu-sayfa .sbc-spor-karsilastirma-tablo thead th:nth-child(5),
+body.sbc-canford-yaz-okulu-sayfa .sbc-spor-karsilastirma-tablo tbody td:nth-child(2),
+body.sbc-canford-yaz-okulu-sayfa .sbc-spor-karsilastirma-tablo tbody td:nth-child(3),
+body.sbc-canford-yaz-okulu-sayfa .sbc-spor-karsilastirma-tablo tbody td:nth-child(4),
+body.sbc-canford-yaz-okulu-sayfa .sbc-spor-karsilastirma-tablo tbody td:nth-child(5) {
     width: 15%;
     white-space: nowrap;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-sss-dahil-liste {
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-sss-dahil-liste {
     list-style: disc;
     margin: 12px 0 0 0;
     padding-left: 1.35em;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-sss-dahil-liste li {
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-sss-dahil-liste li {
     margin-bottom: 8px;
     font-size: 15px;
     line-height: 1.65;
     color: #555;
 }
 
-body.sayfa-swiss-education-academy .sea-konaklama-gri-kutu .sea-konaklama-ozet-stack {
+.sea-konaklama-gri-kutu .sea-konaklama-ozet-stack {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
     grid-auto-rows: auto;
@@ -9766,7 +9712,7 @@ body.sayfa-swiss-education-academy .sea-konaklama-gri-kutu .sea-konaklama-ozet-s
     box-sizing: border-box;
 }
 
-body.sayfa-swiss-education-academy .sea-konaklama-gri-kutu .sea-konaklama-ozet-kart {
+.sea-konaklama-gri-kutu .sea-konaklama-ozet-kart {
     width: 100%;
     max-width: 100%;
     min-width: 0;
@@ -9778,32 +9724,18 @@ body.sayfa-swiss-education-academy .sea-konaklama-gri-kutu .sea-konaklama-ozet-k
     box-sizing: border-box;
 }
 
-body.sayfa-swiss-education-academy .cerceve-kutu.dahil-kutu .rozet-grid .rozet-kart.sea-yaz-programlari-rozet-ortali {
+.cerceve-kutu.dahil-kutu .rozet-grid .rozet-kart.sea-yaz-programlari-rozet-ortali {
     grid-column: 1 / -1;
     justify-self: center;
 }
 
 @media (min-width: 641px) {
-body.sayfa-swiss-education-academy .cerceve-kutu.dahil-kutu .rozet-grid .rozet-kart.sea-yaz-programlari-rozet-ortali {
+.cerceve-kutu.dahil-kutu .rozet-grid .rozet-kart.sea-yaz-programlari-rozet-ortali {
         width: min(100%, calc((100% - var(--icerik-rozet-grid-gap)) / 2));
     }
 }
 
-body.sayfa-swiss-education-academy .sea-giris-metni {
-    margin: 0 0 1rem;
-}
-
-body.sayfa-swiss-education-academy .sea-giris-metni p {
-    font-size: 15px;
-    line-height: 1.7;
-    color: #334155;
-}
-
-body.sayfa-swiss-education-academy .sea-giris-metni p + p {
-    margin-top: 0.65rem;
-}
-
-body.sayfa-swiss-education-academy .immerse-detay-kutu .immerse-detay-grid.sea-program-detay-grid {
+.immerse-detay-kutu .immerse-detay-grid.sea-program-detay-grid {
     display: grid;
     grid-template-columns: repeat(6, minmax(0, 1fr));
     gap: 20px;
@@ -9814,22 +9746,22 @@ body.sayfa-swiss-education-academy .immerse-detay-kutu .immerse-detay-grid.sea-p
     align-items: stretch;
 }
 
-body.sayfa-swiss-education-academy .immerse-detay-kutu .sea-program-detay-grid > .immerse-detay-kart {
+.immerse-detay-kutu .sea-program-detay-grid > .immerse-detay-kart {
     max-width: none;
     width: auto;
     min-width: 0;
     flex: none;
 }
 
-body.sayfa-swiss-education-academy .immerse-detay-kutu .sea-program-detay-grid > .immerse-detay-kart:nth-child(7) {
+.immerse-detay-kutu .sea-program-detay-grid > .immerse-detay-kart:nth-child(7) {
     grid-column: 2 / 4;
 }
 
-body.sayfa-swiss-education-academy .immerse-detay-kutu .sea-program-detay-grid > .immerse-detay-kart:nth-child(8) {
+.immerse-detay-kutu .sea-program-detay-grid > .immerse-detay-kart:nth-child(8) {
     grid-column: 4 / 6;
 }
 
-body.sayfa-swiss-education-academy .immerse-detay-kutu .sea-program-detay-grid > .immerse-detay-kart > h3 {
+.immerse-detay-kutu .sea-program-detay-grid > .immerse-detay-kart > h3 {
     font-size: var(--h3-font-size);
     font-weight: 700;
     line-height: 1.35;
@@ -11664,7 +11596,7 @@ h2 > .vurgu-satir {
     .kings-galeri-kutu .kings-galeri-grid,
     .alpadia-galeri-grid,
     .chantemerle-galeri-grid,
-    body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-konaklama-galeri {
+    body.sbc-canford-yaz-okulu-sayfa .sbc-canford-konaklama-galeri {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
@@ -11780,7 +11712,6 @@ article.icerik-alani.blog-yazi-detay .blog-yazi-ana > .giris-metni:not(.cerceve-
 article.icerik-alani.blog-yazi-detay .blog-yazi-ana > .kings-giris-metni:not(.cerceve-kutu):not(.site-gri-cerceve-kutu),
 article.icerik-alani.blog-yazi-detay .blog-yazi-ana > .sportech-academy-giris-metni:not(.cerceve-kutu):not(.site-gri-cerceve-kutu),
 article.icerik-alani.blog-yazi-detay .blog-yazi-ana > .alpadia-tanitim-giris:not(.cerceve-kutu):not(.site-gri-cerceve-kutu),
-article.icerik-alani.blog-yazi-detay .blog-yazi-ana > .sea-giris-metni:not(.cerceve-kutu):not(.site-gri-cerceve-kutu),
 article.icerik-alani.blog-yazi-detay .blog-yazi-ana > .chantemerle-giris-metni:not(.cerceve-kutu):not(.site-gri-cerceve-kutu) {
     max-width: 100%;
     margin-left: 0;
@@ -11957,13 +11888,13 @@ article.icerik-alani > h2.kart-h2 > span.vurgu-satir,
     line-height: 1.35;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-konaklama-galeri > .galeri-oge {
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-konaklama-galeri > .galeri-oge {
     width: auto;
     height: auto;
     justify-self: stretch;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-konaklama-galeri .galeri-oge img {
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-konaklama-galeri .galeri-oge img {
     width: 100%;
     height: 150px;
     max-width: 100%;
@@ -11972,9 +11903,9 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     object-fit: cover;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-gezi-kart__media,
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-gezi-kart__media--kucuk,
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-spor-akademi-kart__media {
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-gezi-kart__media,
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-gezi-kart__media--kucuk,
+body.sbc-canford-yaz-okulu-sayfa .sbc-spor-akademi-kart__media {
     flex: 0 0 160px;
     width: 160px;
     height: auto;
@@ -11984,8 +11915,8 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     min-height: 0;
 }
 
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-gezi-kart__media img,
-body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-spor-akademi-kart__media img {
+body.sbc-canford-yaz-okulu-sayfa .sbc-canford-gezi-kart__media img,
+body.sbc-canford-yaz-okulu-sayfa .sbc-spor-akademi-kart__media img {
     width: 100%;
     height: 160px;
     max-width: 160px;
@@ -11995,22 +11926,22 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
 }
 
 @media (max-width: 900px) {
-    body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-konaklama-galeri .galeri-oge img {
+    body.sbc-canford-yaz-okulu-sayfa .sbc-canford-konaklama-galeri .galeri-oge img {
         height: 140px;
         max-height: 140px;
     }
 
-    body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-gezi-kart__media,
-    body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-gezi-kart__media--kucuk,
-    body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-spor-akademi-kart__media {
+    body.sbc-canford-yaz-okulu-sayfa .sbc-canford-gezi-kart__media,
+    body.sbc-canford-yaz-okulu-sayfa .sbc-canford-gezi-kart__media--kucuk,
+    body.sbc-canford-yaz-okulu-sayfa .sbc-spor-akademi-kart__media {
         flex: 0 0 140px;
         width: 140px;
         max-width: 140px;
         min-width: 140px;
     }
 
-    body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-canford-gezi-kart__media img,
-    body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .sbc-spor-akademi-kart__media img {
+    body.sbc-canford-yaz-okulu-sayfa .sbc-canford-gezi-kart__media img,
+    body.sbc-canford-yaz-okulu-sayfa .sbc-spor-akademi-kart__media img {
         height: 140px;
         max-width: 140px;
         max-height: 140px;
