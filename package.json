@@ -9,7 +9,9 @@
   "scripts": {
     "build:css": "tailwindcss -i ./css/tailwind-src.css -o ./css/tailwind.css --minify",
     "watch:css": "tailwindcss -i ./css/tailwind-src.css -o ./css/tailwind.css --watch",
-    "build": "npm run build:css"
+    "build": "npm run build:css",
+    "migrate:tw": "node tools/tw-migrate-pages.js",
+    "report:dead-css": "node tools/tw-dead-css-report.js"
   },
   "repository": {
     "type": "git",

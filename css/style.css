@@ -3,7 +3,9 @@
  * Tailwind CSS: built from css/tailwind-src.css → css/tailwind.css
  * (@tailwind base/components/utilities). Preflight is OFF in
  * tailwind.config.js so this legacy stylesheet and all other pages stay intact.
- * Homepage links /css/tailwind.css for utility classes.
+ * All pages link /css/tailwind.css for utility classes (hybrid migrate).
+ * Budama: tools/tw-dead-css-report.js (manuel inceleme; otomatik silme yok).
+ * Release: tools/tw-release-checklist.md
  */
 @import url("site-cls-rezerv.css");
 
@@ -11401,10 +11403,6 @@ body.sayfa-yurt-disi-lise .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wra
     box-sizing: border-box;
 }
 
-@media (min-width: 502px) and (max-width: 599px) {
-
-}
-
 @media (min-width: 769px) and (max-width: 1199px) {
     :is(
             #egitim-alanlari .dil-okullari-secim-paneli,
@@ -11598,10 +11596,6 @@ body.sayfa-yurt-disi-lise .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wra
     ) .yaz-okullari-ulke-kart-wrap > .yaz-okullari-ulke-kart {
         border-radius: 15px;
     }
-}
-
-@media (min-width: 600px) and (max-width: 899px) {
-
 }
 
 @media (max-width: 501px) {

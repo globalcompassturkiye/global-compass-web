@@ -24,6 +24,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css?v=20260417h1">
+    <link rel="stylesheet" href="/css/tailwind.css?v=20260712tw5">
     <link rel="stylesheet" href="/css/site-ustmenu.css">
     <link rel="stylesheet" href="/css/site-footer.css">
     <link rel="stylesheet" href="/css/site-breadcrumb.css">
@@ -31,7 +32,7 @@
     <link rel="stylesheet" href="/css/sss.css">
     <link rel="stylesheet" href="/css/blog.css">
 </head>
-<body class="sayfa-yurt-disi-dil-okullari-uk blog-yazi-sayfa-mobil-ux">
+<body class="sayfa-yurt-disi-dil-okullari-uk blog-yazi-sayfa-mobil-ux font-sans">
     <div class="sabit-ust-alan">
         <div class="ust-serit">
             <div class="ust-serit-kapsayici">
@@ -184,11 +185,11 @@
         <div class="blog-yazi-layout blog-yazi-layout--yan-panel">
         <div class="blog-yazi-ana">
 
-        <h1 id="uk-giris">İngiltere Dil Okulları:<br>
+        <h1 id="uk-giris" class="mx-0 my-[25px] text-center text-[length:var(--h1-px,28px)] font-bold leading-[1.6] text-brand-navy">İngiltere Dil Okulları:<br>
             <span class="vurgu-renk">İngilizceyi Yaşayarak Öğrenin!</span>
         </h1>
 
-        <p id="uk-giris-metni" class="giris-metin">İngiltere, dünya çapında akredite edilmiş dil okulları, ileri düzey eğitim standartları ve uluslararası öğrencilere sunduğu geniş program yelpazesi ile İngilizce eğitimi denildiğinde ilk akla gelen destinasyonlardan biridir. Modern kampüs olanakları, teknolojik altyapısı ve her yaş grubuna hitap eden esnek kurs seçenekleri sayesinde öğrenciler hem akademik hem de sosyal anlamda kendilerini geliştirme fırsatı bulur.</p>
+        <p id="uk-giris-metni" class="giris-metin mx-auto mt-[25px] mb-0 box-border block w-full text-justify">İngiltere, dünya çapında akredite edilmiş dil okulları, ileri düzey eğitim standartları ve uluslararası öğrencilere sunduğu geniş program yelpazesi ile İngilizce eğitimi denildiğinde ilk akla gelen destinasyonlardan biridir. Modern kampüs olanakları, teknolojik altyapısı ve her yaş grubuna hitap eden esnek kurs seçenekleri sayesinde öğrenciler hem akademik hem de sosyal anlamda kendilerini geliştirme fırsatı bulur.</p>
 
         <div class="blog-mobil-icindekiler-wrap">
             <nav class="blog-mobil-icindekiler-duz" aria-labelledby="uk-mobil-icindekiler-baslik">
@@ -205,7 +206,7 @@
 
         <h2 id="ingiltere-dil-okullarini-kesfedin-hangi-sehri-tercih-edersiniz-div-cla" class="kart-h2">
             <span>İngiltere Dil Okullarını Keşfedin!</span>
-            <span class="vurgu-satir">Hangi Şehri Tercih Edersiniz?</span>
+            <span class="vurgu-satir text-brand-redDark">Hangi Şehri Tercih Edersiniz?</span>
         </h2>
 
         <div class="yaz-okullari-secim-paneli dil-okullari-secim-paneli ulke-secim-paneli-ortak ulke-hub-kart-paneli ulke-hub--satir-3" id="uk-sehir-secim">
@@ -238,52 +239,52 @@
         </div>
 
         <div id="uk-neden" class="cerceve-kutu icerik-kutusu dahil-kutu ingiltere-neden-kutu">
-            <h2 class="metin-h2">Neden İngiltere Dil Okullarını Tercih Etmelisiniz?</h2>
+            <h2 class="metin-h2 mb-4 text-left text-[length:var(--h2-px,22px)] font-bold text-brand-ink">Neden İngiltere Dil Okullarını Tercih Etmelisiniz?</h2>
 
-            <p class="h2-altinda-metin">İngiltere, dil eğitimi denince dünyada ilk akla gelen rotadır.</p>
+            <p class="h2-altinda-metin mb-[15px] text-justify">İngiltere, dil eğitimi denince dünyada ilk akla gelen rotadır.</p>
 
             <div class="rozet-grid icerik-kutusu-grid yatay-2">
                 <!-- 1: İngilizcenin Merkezi -->
                 <article class="rozet-kart">
-                    <div class="rozet-ikon rozet-ikon-tick" aria-hidden="true">✓</div>
-                    <h3 class="rozet-baslik">İngilizcenin Merkezi</h3>
-                    <p class="rozet-metin">
+                    <div class="rozet-ikon rozet-ikon-tick flex h-8 w-8 items-center justify-center rounded-full border-0 bg-[#fef2f2] text-sm font-bold text-[#b91c1c]" aria-hidden="true">✓</div>
+                    <h3 class="rozet-baslik m-0 font-bold text-[#111827]">İngilizcenin Merkezi</h3>
+                    <p class="rozet-metin mt-1 text-[15px] leading-[1.7] text-[#4b5563]">
                         Dilin en saf ve aksansız halini, doğduğu topraklarda öğrenerek telaffuz ve duyma becerilerinizi hızla geliştirebilirsiniz.
                     </p>
                 </article>
 
                 <!-- 2: Şehir Seçenekleri -->
                 <article class="rozet-kart">
-                    <div class="rozet-ikon">2</div>
-                    <h3 class="rozet-baslik">Şehir Seçenekleri</h3>
-                    <p class="rozet-metin">
+                    <div class="rozet-ikon flex h-8 w-8 items-center justify-center rounded-full border-0 bg-[#fef2f2] text-sm font-bold text-[#b91c1c]">2</div>
+                    <h3 class="rozet-baslik m-0 font-bold text-[#111827]">Şehir Seçenekleri</h3>
+                    <p class="rozet-metin mt-1 text-[15px] leading-[1.7] text-[#4b5563]">
                         Kozmopolit bir yaşam için Londra, enerjik bir sahil kenti için Brighton, akademik atmosfer için Oxford veya Cambridge gibi onlarca farklı şehir seçeneği mevcuttur.
                     </p>
                 </article>
 
                 <!-- 3: Akreditasyon ve Kalite -->
                 <article class="rozet-kart">
-                    <div class="rozet-ikon rozet-ikon-tick" aria-hidden="true">✓</div>
-                    <h3 class="rozet-baslik">Akreditasyon ve Kalite</h3>
-                    <p class="rozet-metin">
+                    <div class="rozet-ikon rozet-ikon-tick flex h-8 w-8 items-center justify-center rounded-full border-0 bg-[#fef2f2] text-sm font-bold text-[#b91c1c]" aria-hidden="true">✓</div>
+                    <h3 class="rozet-baslik m-0 font-bold text-[#111827]">Akreditasyon ve Kalite</h3>
+                    <p class="rozet-metin mt-1 text-[15px] leading-[1.7] text-[#4b5563]">
                         İngiltere'deki tüm dil okulları British Council tarafından düzenli olarak denetlenir; bu da eğitim kalitesinin her zaman en üst seviyede tutulmasını sağlar.
                     </p>
                 </article>
 
                 <!-- 4: Kültürel ve Tarihi Miras -->
                 <article class="rozet-kart">
-                    <div class="rozet-ikon rozet-ikon-tick" aria-hidden="true">✓</div>
-                    <h3 class="rozet-baslik">Kültürel ve Tarihi Miras</h3>
-                    <p class="rozet-metin">
+                    <div class="rozet-ikon rozet-ikon-tick flex h-8 w-8 items-center justify-center rounded-full border-0 bg-[#fef2f2] text-sm font-bold text-[#b91c1c]" aria-hidden="true">✓</div>
+                    <h3 class="rozet-baslik m-0 font-bold text-[#111827]">Kültürel ve Tarihi Miras</h3>
+                    <p class="rozet-metin mt-1 text-[15px] leading-[1.7] text-[#4b5563]">
                         Eğitim alırken aynı zamanda dünyaca ünlü müzeleri gezebilir, ikonik yapıları görebilir ve Avrupa'nın kültürel başkentinde unutulmaz anılar biriktirebilirsiniz.
                     </p>
                 </article>
 
                 <!-- 5: Esnek Programlar -->
                 <article class="rozet-kart">
-                    <div class="rozet-ikon rozet-ikon-tick" aria-hidden="true">✓</div>
-                    <h3 class="rozet-baslik">Esnek Programlar</h3>
-                    <p class="rozet-metin">
+                    <div class="rozet-ikon rozet-ikon-tick flex h-8 w-8 items-center justify-center rounded-full border-0 bg-[#fef2f2] text-sm font-bold text-[#b91c1c]" aria-hidden="true">✓</div>
+                    <h3 class="rozet-baslik m-0 font-bold text-[#111827]">Esnek Programlar</h3>
+                    <p class="rozet-metin mt-1 text-[15px] leading-[1.7] text-[#4b5563]">
                         Genel İngilizce'den IELTS hazırlığa, iş İngilizcesinden tatil İngilizcesine kadar her ihtiyaca ve bütçeye uygun program çeşitliliği sunulur.
                     </p>
                 </article>
@@ -291,7 +292,7 @@
         </div>
 
         <div id="uk-deneyim" class="cerceve-kutu icerik-kutusu baslik-iki-satir">
-            <h2 class="metin-h2">İngiltere’de İngilizce Öğrenin:<br><span class="vurgu-satir">Sizi Neler Bekliyor?</span></h2>
+            <h2 class="metin-h2 mb-4 text-left text-[length:var(--h2-px,22px)] font-bold text-brand-ink">İngiltere’de İngilizce Öğrenin:<br><span class="vurgu-satir text-brand-redDark">Sizi Neler Bekliyor?</span></h2>
 
             <p>İngiltere dil okulları, öğrencilere yalnızca sınıf içi eğitim değil, tam anlamıyla <strong>yaşayarak öğrenme</strong> deneyimi sunar. Haftalık programlar genellikle sabah saatlerinde genel veya yoğun İngilizce ile ihtiyaca yönelik IELTS hazırlık dersleriyle başlar; böylece günün en verimli zamanında dil gelişiminize odaklanırsınız.</p>
 
@@ -301,7 +302,7 @@
         </div>
 
         <div id="uk-sss" class="cerceve-kutu">
-            <h2 class="metin-h2">İngiltere Dil Okulları<span class="vurgu-satir">Sıkça Sorulan Sorular (SSS)</span></h2>
+            <h2 class="metin-h2 mb-4 text-left text-[length:var(--h2-px,22px)] font-bold text-brand-ink">İngiltere Dil Okulları<span class="vurgu-satir text-brand-redDark">Sıkça Sorulan Sorular (SSS)</span></h2>
 
             <div class="sss-alani">
                 <details class="sss-item">
@@ -343,7 +344,7 @@
 
         <section class="iletisim-form-alani" id="bilgi-istek" aria-labelledby="yurt-disi-dil-okullari-uk-bilgi-form-baslik">
             <div class="hizmet-alanlari-baslik icerik-bilgi-form-bant">
-                <h2 id="yurt-disi-dil-okullari-uk-bilgi-form-baslik" class="kart-h2"><span>Daha Fazla Bilgi ve Başvuru İçin</span><span class="vurgu-satir">Bilgi İstek Formu</span></h2>
+                <h2 id="yurt-disi-dil-okullari-uk-bilgi-form-baslik" class="kart-h2"><span>Daha Fazla Bilgi ve Başvuru İçin</span><span class="vurgu-satir text-brand-redDark">Bilgi İstek Formu</span></h2>
             </div>
             <div class="iletisim-form-beyaz-cerceve">
                 <p>Birleşik Krallık’taki dil okulları arasından size en uygun programı, hedeflerinize hitap eden şehri ve bütçenize en yakın seçenekleri belirlemek için <strong>bilgi istek formunu</strong> doldurmanız yeterlidir. Vize sürecinden konaklama detaylarına, okul kayıtlarından şehirlere kadar merak ettiğiniz tüm konularda uzman ekibimizden <strong>ücretsiz danışmanlık</strong> alabilirsiniz.</p>
@@ -387,7 +388,7 @@
         </section>
 
         <div id="uk-yaz-okullari" class="okul-liste-kapsayici">
-            <h2 class="metin-h2">Amerika Dil Okulları</h2>
+            <h2 class="metin-h2 mb-4 text-left text-[length:var(--h2-px,22px)] font-bold text-brand-ink">Amerika Dil Okulları</h2>
             <section class="alt-yonlendirme-alani">
                 <div class="yonlendirme-karti">
                     <p>Amerika'da New York, Los Angeles ve Boston şehirlerinde sunulan dil okulu programlarını detaylıca inceleyebilirsiniz.</p>

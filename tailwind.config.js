@@ -1,16 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './index.html',
-    './yurt-disi-lise/index.html',
-    './yurt-disi-lise/degisim-programlari/index.html',
-    './yurt-disi-universite/index.html',
-    './yurt-disi-universite/switzerland/index.html',
-    './yurt-disi-yuksek-lisans-mba/index.html',
-    './js/ana-sayfa-blog-ozeti.js',
-    './js/ornek-acilir-menu.js',
-    './js/header-offset.js',
-    './js/nav-submenu.js'
+    './**/*.{html,js}',
+    '!./node_modules/**',
+    '!./tools/**',
+    '!./reports/**',
+    '!./dev/**'
   ],
   // Site-wide style.css + Poppins reset korunur; Preflight diğer sayfaları bozmasın.
   corePlugins: {
@@ -27,15 +22,33 @@ module.exports = {
           redDark: '#bd0505',
           navy: '#000080',
           ink: '#1e293b',
-          muted: '#64748b'
+          muted: '#64748b',
+          rozetTitle: '#111827',
+          rozetBody: '#4b5563',
+          rozetIconBg: '#fef2f2',
+          rozetIcon: '#b91c1c'
         }
+      },
+      fontSize: {
+        h1site: ['var(--h1-px, 28px)', { lineHeight: '1.6', fontWeight: '700' }],
+        h2site: ['var(--h2-px, 22px)', { lineHeight: '1.35', fontWeight: '700' }],
+        bolum: [
+          'var(--sayfa-bolum-baslik-font-size, 22px)',
+          { lineHeight: '1.35', fontWeight: '700' }
+        ],
+        rozet: ['15px', { lineHeight: '1.7' }],
+        rozetTitle: ['14.5px', { lineHeight: '1.4', fontWeight: '700' }]
       },
       maxWidth: {
         site: '1200px'
       },
       boxShadow: {
         card: '0 2px 10px rgba(15, 23, 42, 0.07)',
-        cardHover: '0 8px 24px rgba(15, 23, 42, 0.12)'
+        cardHover: '0 8px 24px rgba(15, 23, 42, 0.12)',
+        ulkeKart:
+          '0 2px 6px rgba(15, 23, 42, 0.07), 0 10px 24px rgba(15, 23, 42, 0.1)',
+        ulkeKartHover:
+          '0 10px 22px rgba(15, 23, 42, 0.13), 0 22px 46px rgba(15, 23, 42, 0.18)'
       }
     }
   },
