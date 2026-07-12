@@ -24,6 +24,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css?v=20260417h1">
+    <link rel="stylesheet" href="/css/tailwind.css?v=20260712tw3">
     <link rel="stylesheet" href="/css/site-ustmenu.css">
     <link rel="stylesheet" href="/css/site-footer.css">
     <link rel="stylesheet" href="/css/site-breadcrumb.css">
@@ -31,7 +32,7 @@
     <link rel="stylesheet" href="/css/blog.css">
     <link rel="stylesheet" href="/css/sss.css">
 </head>
-<body class="sayfa-yurt-disi-universite blog-yazi-sayfa-mobil-ux">
+<body class="sayfa-yurt-disi-universite blog-yazi-sayfa-mobil-ux font-sans">
     <div class="sabit-ust-alan">
         <div class="ust-serit">
             <div class="ust-serit-kapsayici">
@@ -182,11 +183,11 @@
         <div class="blog-yazi-layout blog-yazi-layout--yan-panel">
         <div class="blog-yazi-ana">
 
-        <h1 id="uni-hub-giris">Yurt Dışı Üniversite Eğitimi<br>
+        <h1 id="uni-hub-giris" class="mx-0 my-[25px] text-center text-[length:var(--h1-px,28px)] font-bold leading-[1.6] text-brand-navy">Yurt Dışı Üniversite Eğitimi<br>
             <span class="vurgu-renk">Ülkeler, Bölümler, Kabul Şartları ve Sınavsız Seçenekler</span>
         </h1>
 
-        <p class="giris-metin">Yurt dışında lisans eğitimi almak size sadece bir diploma değil; ana dil seviyesinde yabancı dil, global bir çevre ve uluslararası iş kapılarını açar. İngiltere, Amerika, Kanada ve Avrupa’nın eğitim başkentlerinde geçireceğiniz üniversite yılları, analitik düşünme becerinizi geliştirirken size dünya standartlarında bir vizyon kazandırır. Ancak bu heyecan verici süreç; doğru üniversite seçimi, karmaşık başvuru şartları ve titiz dosya hazırlığı gibi uzmanlık gerektiren pek çok aşamadan oluşur.</p>
+        <p class="giris-metin mx-auto mt-[25px] mb-0 box-border block w-full text-justify">Yurt dışında lisans eğitimi almak size sadece bir diploma değil; ana dil seviyesinde yabancı dil, global bir çevre ve uluslararası iş kapılarını açar. İngiltere, Amerika, Kanada ve Avrupa’nın eğitim başkentlerinde geçireceğiniz üniversite yılları, analitik düşünme becerinizi geliştirirken size dünya standartlarında bir vizyon kazandırır. Ancak bu heyecan verici süreç; doğru üniversite seçimi, karmaşık başvuru şartları ve titiz dosya hazırlığı gibi uzmanlık gerektiren pek çok aşamadan oluşur.</p>
 
         <div id="blog-mobil-icindekiler-hedef" class="blog-mobil-icindekiler-wrap">
             <nav class="blog-mobil-icindekiler-duz" aria-labelledby="uni-hub-mobil-icindekiler-baslik">
@@ -203,26 +204,26 @@
             </nav>
         </div>
 
-        <h2 class="metin-h2" id="uni-ulkeler-secim">Üniversite Eğitimi İçin Hangi Ülkeyi Tercih Edersiniz?</h2>
-        <div class="yaz-okullari-secim-paneli">
-            <nav class="son-kart-ortala rozet-kart-grid yaz-okullari-ulke-kart-wrap" aria-label="Ülke seçimi">
-                <a href="/yurt-disi-universite/switzerland/" class="rozet-kart-link yaz-okullari-ulke-kart">
-                    <div class="rozet-kart-icerik yaz-okullari-ulke-kart-icerik">
-                        <span class="rozet-kart-gorsel yaz-okullari-ulke-kart-bayrak" aria-hidden="true">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 20" width="44" height="28" class="yaz-okullari-ulke-kart-svg" focusable="false"><path fill="#DA291C" d="M0 0h32v20H0z"/><rect fill="#FFF" x="14" y="2" width="4" height="16"/><rect fill="#FFF" x="6" y="8" width="20" height="4"/></svg>
+        <h2 class="metin-h2 mx-auto mb-[15px] mt-8 flex max-w-site flex-col items-center justify-center gap-0 p-0 text-center text-[length:var(--sayfa-bolum-baslik-font-size,22px)] font-bold leading-[1.35] text-black" id="uni-ulkeler-secim">Üniversite Eğitimi İçin Hangi Ülkeyi Tercih Edersiniz?</h2>
+        <div class="yaz-okullari-secim-paneli mt-0">
+            <nav class="son-kart-ortala rozet-kart-grid yaz-okullari-ulke-kart-wrap mx-auto grid max-w-[min(100%,var(--ulke-secim-kart-en))] grid-cols-1 justify-center px-0 pb-3" aria-label="Ülke seçimi">
+                <a href="/yurt-disi-universite/switzerland/" class="rozet-kart-link yaz-okullari-ulke-kart group relative box-border flex min-h-[128px] w-[min(100%,var(--ulke-secim-kart-en))] max-w-[var(--ulke-secim-kart-en)] flex-col items-stretch justify-center justify-self-center overflow-hidden rounded-[15px] bg-white px-4 py-[1.1rem] pb-[1.15rem] text-center text-inherit no-underline shadow-[0_2px_6px_rgba(15,23,42,0.07),0_10px_24px_rgba(15,23,42,0.1)] transition-[transform,box-shadow,background-color] duration-300 hover:-translate-y-[7px] hover:scale-[1.01] hover:bg-[#fafbfc] hover:shadow-[0_10px_22px_rgba(15,23,42,0.13),0_22px_46px_rgba(15,23,42,0.18)] focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-offset-2 focus-visible:outline-[rgba(0,0,128,0.35)]">
+                    <div class="rozet-kart-icerik yaz-okullari-ulke-kart-icerik flex flex-col items-center">
+                        <span class="rozet-kart-gorsel yaz-okullari-ulke-kart-bayrak mx-auto mb-0 block w-full max-w-[48px] leading-none transition-transform duration-300 group-hover:scale-105" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 20" width="44" height="28" class="yaz-okullari-ulke-kart-svg block h-auto w-11 max-w-full" focusable="false"><path fill="#DA291C" d="M0 0h32v20H0z"/><rect fill="#FFF" x="14" y="2" width="4" height="16"/><rect fill="#FFF" x="6" y="8" width="20" height="4"/></svg>
                         </span>
-                        <span class="rozet-kart-baslik yaz-okullari-ulke-kart-baslik">İsviçre</span>
+                        <span class="rozet-kart-baslik yaz-okullari-ulke-kart-baslik px-3 pb-3 pt-2.5 text-center text-[0.8125rem] font-bold leading-[1.35] tracking-[0.02em] text-slate-700">İsviçre</span>
                     </div>
                 </a>
             </nav>
         </div>
 
         <div class="cerceve-kutu icerik-kutusu" id="uni-neden-yurt-disinda">
-            <h2 class="metin-h2">Neden Yurt Dışında Üniversite Okumalısınız?</h2>
+            <h2 class="metin-h2 mb-4 text-left text-[length:var(--h2-px,22px)] font-bold text-brand-ink">Neden Yurt Dışında Üniversite Okumalısınız?</h2>
 
             <div class="rozet-grid icerik-kutusu-grid yatay-1">
                 <article class="rozet-kart">
-                    <h3 class="rozet-baslik">Kariyer Avantajı</h3>
+                    <h3 class="rozet-baslik m-0 font-bold text-[#111827]">Kariyer Avantajı</h3>
                     <ul class="kutu-liste">
                         <li><strong>Global Fırsatlar:</strong> Mezuniyet sonrası Avrupa, Amerika veya Kanada'da çalışma izni fırsatları.</li>
                         <li><strong>İş Dünyası:</strong> Uluslararası şirketlerin kapılarını açan prestijli bir özgeçmiş.</li>
@@ -231,7 +232,7 @@
                 </article>
 
                 <article class="rozet-kart">
-                    <h3 class="rozet-baslik">Eğitim Kalitesi</h3>
+                    <h3 class="rozet-baslik m-0 font-bold text-[#111827]">Eğitim Kalitesi</h3>
                     <ul class="kutu-liste">
                         <li><strong>QS World Rankings:</strong> Dünya sıralamasında ilk sıralarda yer alan okullarda eğitim.</li>
                         <li><strong>Akademik Derinlik:</strong> Modern laboratuvarlar, kütüphaneler ve uzman öğretim üyeleri.</li>
@@ -240,7 +241,7 @@
                 </article>
 
                 <article class="rozet-kart">
-                    <h3 class="rozet-baslik">Kişisel Gelişim</h3>
+                    <h3 class="rozet-baslik m-0 font-bold text-[#111827]">Kişisel Gelişim</h3>
                     <ul class="kutu-liste">
                         <li><strong>Global Vizyon:</strong> Farklı kültürleri yerinde tanıma ve dünya vatandaşı olma süreci.</li>
                         <li><strong>Dil Yetkinliği:</strong> Akademik düzeyde ve ana dil seviyesinde yabancı dil hakimiyeti.</li>
@@ -251,45 +252,45 @@
         </div>
 
         <div class="cerceve-kutu icerik-kutusu" id="uni-populer-ulkeler">
-            <h2 class="metin-h2">Popüler Ülkeler ve Eğitim Sistemleri</h2>
-            <p class="h2-altinda-metin">Yurt dışı üniversite başvurularında her ülkenin kendine has kabul şartları vardır. Size en uygun seçeneği birlikte belirliyoruz:</p>
+            <h2 class="metin-h2 mb-4 text-left text-[length:var(--h2-px,22px)] font-bold text-brand-ink">Popüler Ülkeler ve Eğitim Sistemleri</h2>
+            <p class="h2-altinda-metin mb-[15px] text-justify">Yurt dışı üniversite başvurularında her ülkenin kendine has kabul şartları vardır. Size en uygun seçeneği birlikte belirliyoruz:</p>
             <div class="rozet-grid icerik-kutusu-grid yatay-2 son-kart-ortala">
                 <article class="rozet-kart">
-                    <div class="rozet-ikon">1</div>
-                    <h3 class="rozet-baslik">İngiltere</h3>
-                    <p class="rozet-metin">
+                    <div class="rozet-ikon flex h-8 w-8 items-center justify-center rounded-full border-0 bg-[#fef2f2] text-sm font-bold text-[#b91c1c]">1</div>
+                    <h3 class="rozet-baslik m-0 font-bold text-[#111827]">İngiltere</h3>
+                    <p class="rozet-metin mt-1 text-[15px] leading-[1.7] text-[#4b5563]">
                         3 yıllık lisans süresi ve köklü eğitim geleneği.
                     </p>
                 </article>
 
                 <article class="rozet-kart">
-                    <div class="rozet-ikon">2</div>
-                    <h3 class="rozet-baslik">Almanya</h3>
-                    <p class="rozet-metin">
+                    <div class="rozet-ikon flex h-8 w-8 items-center justify-center rounded-full border-0 bg-[#fef2f2] text-sm font-bold text-[#b91c1c]">2</div>
+                    <h3 class="rozet-baslik m-0 font-bold text-[#111827]">Almanya</h3>
+                    <p class="rozet-metin mt-1 text-[15px] leading-[1.7] text-[#4b5563]">
                         Ücretsiz veya çok düşük maliyetli kaliteli devlet üniversiteleri.
                     </p>
                 </article>
 
                 <article class="rozet-kart">
-                    <div class="rozet-ikon">3</div>
-                    <h3 class="rozet-baslik">Polonya ve Macaristan</h3>
-                    <p class="rozet-metin">
+                    <div class="rozet-ikon flex h-8 w-8 items-center justify-center rounded-full border-0 bg-[#fef2f2] text-sm font-bold text-[#b91c1c]">3</div>
+                    <h3 class="rozet-baslik m-0 font-bold text-[#111827]">Polonya ve Macaristan</h3>
+                    <p class="rozet-metin mt-1 text-[15px] leading-[1.7] text-[#4b5563]">
                         Ekonomik yaşam maliyetleri ve sınavsız üniversite imkanları.
                     </p>
                 </article>
 
                 <article class="rozet-kart">
-                    <div class="rozet-ikon">4</div>
-                    <h3 class="rozet-baslik">Amerika ve Kanada</h3>
-                    <p class="rozet-metin">
+                    <div class="rozet-ikon flex h-8 w-8 items-center justify-center rounded-full border-0 bg-[#fef2f2] text-sm font-bold text-[#b91c1c]">4</div>
+                    <h3 class="rozet-baslik m-0 font-bold text-[#111827]">Amerika ve Kanada</h3>
+                    <p class="rozet-metin mt-1 text-[15px] leading-[1.7] text-[#4b5563]">
                         Esnek müfredat yapısı ve geniş araştırma olanakları.
                     </p>
                 </article>
 
                 <article class="rozet-kart">
-                    <div class="rozet-ikon">5</div>
-                    <h3 class="rozet-baslik">Hollanda</h3>
-                    <p class="rozet-metin">
+                    <div class="rozet-ikon flex h-8 w-8 items-center justify-center rounded-full border-0 bg-[#fef2f2] text-sm font-bold text-[#b91c1c]">5</div>
+                    <h3 class="rozet-baslik m-0 font-bold text-[#111827]">Hollanda</h3>
+                    <p class="rozet-metin mt-1 text-[15px] leading-[1.7] text-[#4b5563]">
                         İngilizce eğitim seçeneklerinin en geniş olduğu Avrupa ülkelerinden biri.
                     </p>
                 </article>
@@ -298,56 +299,56 @@
         </div>
 
         <div class="cerceve-kutu icerik-kutusu" id="uni-basvuru-sartlari">
-            <h2 class="metin-h2">Yurt Dışı Üniversite Başvuru Şartları Nelerdir?</h2>
-            <p class="h2-altinda-metin">Başvuru sürecinde başarı şansınızı artırmak için şu kriterlere odaklanıyoruz:</p>
+            <h2 class="metin-h2 mb-4 text-left text-[length:var(--h2-px,22px)] font-bold text-brand-ink">Yurt Dışı Üniversite Başvuru Şartları Nelerdir?</h2>
+            <p class="h2-altinda-metin mb-[15px] text-justify">Başvuru sürecinde başarı şansınızı artırmak için şu kriterlere odaklanıyoruz:</p>
             <div class="rozet-grid icerik-kutusu-grid yatay-2">
                 <article class="rozet-kart">
-                    <div class="rozet-ikon" aria-hidden="true">1</div>
-                    <h3 class="rozet-baslik">Lise Diploması ve Not Ortalaması (GPA)</h3>
-                    <p class="rozet-metin">Akademik başarınızın uluslararası denkliği.</p>
+                    <div class="rozet-ikon flex h-8 w-8 items-center justify-center rounded-full border-0 bg-[#fef2f2] text-sm font-bold text-[#b91c1c]" aria-hidden="true">1</div>
+                    <h3 class="rozet-baslik m-0 font-bold text-[#111827]">Lise Diploması ve Not Ortalaması (GPA)</h3>
+                    <p class="rozet-metin mt-1 text-[15px] leading-[1.7] text-[#4b5563]">Akademik başarınızın uluslararası denkliği.</p>
                 </article>
                 <article class="rozet-kart">
-                    <div class="rozet-ikon" aria-hidden="true">2</div>
-                    <h3 class="rozet-baslik">Dil Yeterliliği</h3>
-                    <p class="rozet-metin">IELTS, TOEFL veya Duolingo skorları.</p>
+                    <div class="rozet-ikon flex h-8 w-8 items-center justify-center rounded-full border-0 bg-[#fef2f2] text-sm font-bold text-[#b91c1c]" aria-hidden="true">2</div>
+                    <h3 class="rozet-baslik m-0 font-bold text-[#111827]">Dil Yeterliliği</h3>
+                    <p class="rozet-metin mt-1 text-[15px] leading-[1.7] text-[#4b5563]">IELTS, TOEFL veya Duolingo skorları.</p>
                 </article>
                 <article class="rozet-kart">
-                    <div class="rozet-ikon" aria-hidden="true">3</div>
-                    <h3 class="rozet-baslik">Hazırlık (Foundation) Programları</h3>
-                    <p class="rozet-metin">Doğrudan kabul alamayan öğrenciler için köprü programlar.</p>
+                    <div class="rozet-ikon flex h-8 w-8 items-center justify-center rounded-full border-0 bg-[#fef2f2] text-sm font-bold text-[#b91c1c]" aria-hidden="true">3</div>
+                    <h3 class="rozet-baslik m-0 font-bold text-[#111827]">Hazırlık (Foundation) Programları</h3>
+                    <p class="rozet-metin mt-1 text-[15px] leading-[1.7] text-[#4b5563]">Doğrudan kabul alamayan öğrenciler için köprü programlar.</p>
                 </article>
                 <article class="rozet-kart">
-                    <div class="rozet-ikon" aria-hidden="true">4</div>
-                    <h3 class="rozet-baslik">Portfolyo ve Mülakat</h3>
-                    <p class="rozet-metin">Sanat veya mimarlık gibi bölümler için özel hazırlık desteği.</p>
+                    <div class="rozet-ikon flex h-8 w-8 items-center justify-center rounded-full border-0 bg-[#fef2f2] text-sm font-bold text-[#b91c1c]" aria-hidden="true">4</div>
+                    <h3 class="rozet-baslik m-0 font-bold text-[#111827]">Portfolyo ve Mülakat</h3>
+                    <p class="rozet-metin mt-1 text-[15px] leading-[1.7] text-[#4b5563]">Sanat veya mimarlık gibi bölümler için özel hazırlık desteği.</p>
                 </article>
             </div>
         </div>
 
         <div class="cerceve-kutu icerik-kutusu" id="uni-global-compass-adimlar">
-            <h2 class="metin-h2">Global Compass İle Adım Adım Üniversite Başvurusu</h2>
-            <p class="h2-altinda-metin">Global Compass olarak, 300’den fazla partner üniversitemizle, hayalinizdeki bölüme kabul almanız için profesyonel yurt dışı eğitim danışmanlığı sunuyoruz.</p>
+            <h2 class="metin-h2 mb-4 text-left text-[length:var(--h2-px,22px)] font-bold text-brand-ink">Global Compass İle Adım Adım Üniversite Başvurusu</h2>
+            <p class="h2-altinda-metin mb-[15px] text-justify">Global Compass olarak, 300’den fazla partner üniversitemizle, hayalinizdeki bölüme kabul almanız için profesyonel yurt dışı eğitim danışmanlığı sunuyoruz.</p>
             <div class="rozet-grid icerik-kutusu-grid yatay-2 son-kart-ortala">
                 <article class="rozet-kart">
-                    <div class="rozet-ikon">1</div>
-                    <h3 class="rozet-baslik">Kişiye Özel Bölüm ve Üniversite Seçimi</h3>
-                    <p class="rozet-metin">
+                    <div class="rozet-ikon flex h-8 w-8 items-center justify-center rounded-full border-0 bg-[#fef2f2] text-sm font-bold text-[#b91c1c]">1</div>
+                    <h3 class="rozet-baslik m-0 font-bold text-[#111827]">Kişiye Özel Bölüm ve Üniversite Seçimi</h3>
+                    <p class="rozet-metin mt-1 text-[15px] leading-[1.7] text-[#4b5563]">
                         Her öğrencinin kariyer hedefi ve akademik geçmişi farklıdır. Global Compass olarak, sizin yeteneklerinize ve bütçenize en uygun ülke, üniversite ve bölümü belirliyoruz. Kariyer analizlerimizle mezuniyet sonrası iş bulma şansınızın en yüksek olduğu programlara odaklanmanızı sağlıyoruz.
                     </p>
                 </article>
 
                 <article class="rozet-kart">
-                    <div class="rozet-ikon">2</div>
-                    <h3 class="rozet-baslik">Motivasyon Mektubu ve CV Hazırlığı</h3>
-                    <p class="rozet-metin">
+                    <div class="rozet-ikon flex h-8 w-8 items-center justify-center rounded-full border-0 bg-[#fef2f2] text-sm font-bold text-[#b91c1c]">2</div>
+                    <h3 class="rozet-baslik m-0 font-bold text-[#111827]">Motivasyon Mektubu ve CV Hazırlığı</h3>
+                    <p class="rozet-metin mt-1 text-[15px] leading-[1.7] text-[#4b5563]">
                         Yurt dışı üniversite kabullerinde not ortalaması kadar önemli olan bir diğer unsur, kendinizi nasıl ifade ettiğinizdir. Uzman danışmanlarımız; güçlü yönlerinizi ön plana çıkaran, fark yaratan bir motivasyon mektubu ve uluslararası standartlara uygun bir akademik CV hazırlamanız için size birebir rehberlik eder.
                     </p>
                 </article>
 
                 <article class="rozet-kart">
-                    <div class="rozet-ikon">3</div>
-                    <h3 class="rozet-baslik">Vize ve Konaklama Danışmanlığı</h3>
-                    <p class="rozet-metin">
+                    <div class="rozet-ikon flex h-8 w-8 items-center justify-center rounded-full border-0 bg-[#fef2f2] text-sm font-bold text-[#b91c1c]">3</div>
+                    <h3 class="rozet-baslik m-0 font-bold text-[#111827]">Vize ve Konaklama Danışmanlığı</h3>
+                    <p class="rozet-metin mt-1 text-[15px] leading-[1.7] text-[#4b5563]">
                         Kabul belgenizi aldıktan sonraki süreçte de yanınızdayız. Karmaşık vize prosedürlerini sizin adınıza yönetiyor, gerekli evrakların eksiksiz hazırlanmasını sağlıyoruz. Ayrıca, güvenli ve bütçenize uygun yurt veya özel konaklama seçeneklerinin ayarlanması konusunda destek vererek eğitim hayatınıza sorunsuz bir başlangıç yapmanızı sağlıyoruz.
                     </p>
                 </article>
@@ -357,7 +358,7 @@
         </div>
 
         <div class="cerceve-kutu" id="uni-sss">
-            <h2 class="metin-h2">Yurt Dışı Üniversite<span class="vurgu-satir">Sıkça Sorulan Sorular (SSS)</span></h2>
+            <h2 class="metin-h2 mb-4 text-left text-[length:var(--h2-px,22px)] font-bold text-brand-ink">Yurt Dışı Üniversite<span class="vurgu-satir text-brand-redDark">Sıkça Sorulan Sorular (SSS)</span></h2>
             <div class="sss-alani">
                 <details class="sss-item">
                     <summary>1. Yurt dışında üniversite okumak için sınav şartı var mı?</summary>
@@ -442,7 +443,7 @@
         </section>
 
         <div class="okul-liste-kapsayici" id="uni-dil-okullari-yonlendirme">
-            <h2 class="metin-h2">Yurt Dışı Dil Okulları</h2>
+            <h2 class="metin-h2 mb-4 text-left text-[length:var(--h2-px,22px)] font-bold text-brand-ink">Yurt Dışı Dil Okulları</h2>
             <section class="alt-yonlendirme-alani">
                 <div class="yonlendirme-karti">
                     <p>Kariyerinizde veya akademik yolculuğunuzda fark yaratmak için dil engeline takılmayın. Yoğun dil kurslarından IELTS/TOEFL sınav hazırlık programlarına kadar her ihtiyaca uygun çözümler sunuyoruz. Konaklama ve vize desteği dahil, ülke ve şehir bazlı tüm seçenekleri aşağıda keşfedebilirsiniz:</p>

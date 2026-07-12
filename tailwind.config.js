@@ -3,6 +3,7 @@ module.exports = {
   content: [
     './index.html',
     './yurt-disi-lise/index.html',
+    './yurt-disi-universite/index.html',
     './js/ana-sayfa-blog-ozeti.js',
     './js/ornek-acilir-menu.js',
     './js/header-offset.js',
