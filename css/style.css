@@ -1,4 +1,10 @@
 ﻿
+/*
+ * Tailwind CSS: built from css/tailwind-src.css → css/tailwind.css
+ * (@tailwind base/components/utilities). Preflight is OFF in
+ * tailwind.config.js so this legacy stylesheet and all other pages stay intact.
+ * Homepage links /css/tailwind.css for utility classes.
+ */
 @import url("site-cls-rezerv.css");
 
 * {

@@ -41,27 +41,31 @@
     grid.innerHTML = '';
     posts.forEach(function (p) {
       var art = document.createElement('article');
-      art.className = 'ana-sayfa-blog-kart';
+      art.className =
+        'ana-sayfa-blog-kart flex h-full flex-col overflow-hidden rounded-[12px] border border-slate-100 bg-white shadow-card transition-shadow hover:shadow-cardHover';
       art.setAttribute('role', 'listitem');
       art.setAttribute('itemscope', '');
       art.setAttribute('itemtype', 'https://schema.org/BlogPosting');
       var cat = '';
       if (p.category) {
-        cat = '<span class="ana-sayfa-blog-kart-kategori">' + escapeHtml(p.category) + '</span>';
+        cat =
+          '<span class="ana-sayfa-blog-kart-kategori mb-2 inline-block text-xs font-semibold uppercase tracking-wide text-brand-redDark">' +
+          escapeHtml(p.category) +
+          '</span>';
       }
       art.innerHTML =
-        '<a class="ana-sayfa-blog-kart-tum-link" href="' +
+        '<a class="ana-sayfa-blog-kart-tum-link block h-full p-4 text-inherit no-underline md:p-5" href="' +
         escapeHtml(p.href) +
         '" itemprop="url">' +
-        '<div class="ana-sayfa-blog-kart-icerik">' +
+        '<div class="ana-sayfa-blog-kart-icerik flex h-full flex-col gap-2">' +
         cat +
-        '<h3 class="ana-sayfa-blog-kart-baslik" itemprop="headline">' +
+        '<h3 class="ana-sayfa-blog-kart-baslik m-0 text-[15px] font-bold leading-snug text-brand-ink" itemprop="headline">' +
         escapeHtml(p.title) +
         '</h3>' +
-        '<p class="ana-sayfa-blog-kart-ozet" itemprop="description">' +
+        '<p class="ana-sayfa-blog-kart-ozet m-0 flex-1 text-[14px] leading-[1.6] text-brand-muted" itemprop="description">' +
         escapeHtml(p.excerpt) +
         '</p>' +
-        '<p class="ana-sayfa-blog-kart-meta">' +
+        '<p class="ana-sayfa-blog-kart-meta m-0 mt-auto text-xs font-medium text-slate-500">' +
         escapeHtml(formatDateTR(p.published)) +
         '</p>' +
         '</div>' +

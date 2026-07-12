@@ -1,0 +1,31 @@
+{
+  "name": "global-compass-web",
+  "version": "1.0.0",
+  "description": "Global Compass static website",
+  "main": "worker.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build:css": "tailwindcss -i ./css/tailwind-src.css -o ./css/tailwind.css --minify",
+    "watch:css": "tailwindcss -i ./css/tailwind-src.css -o ./css/tailwind.css --watch",
+    "build": "npm run build:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/globalcompassturkiye/global-compass-web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/globalcompassturkiye/global-compass-web/issues"
+  },
+  "homepage": "https://github.com/globalcompassturkiye/global-compass-web#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.5.2",
+    "postcss": "^8.5.17",
+    "tailwindcss": "^3.4.17"
+  }
+}

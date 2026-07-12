@@ -4,6 +4,7 @@
 .env
 .env.local
 .env.*.local
+node_modules/
 
 # Dokümantasyon ve notlar (deploy edilmez)
 *.md
