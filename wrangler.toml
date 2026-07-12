@@ -8,6 +8,11 @@ binding = "ASSETS"
 # 410 listesi ve form API’si asset eşleşmesinden önce çalışsın
 run_worker_first = true
 
+# Form → CRM lead API (bilgilendirme e-postası + submissions burada).
+# Secret: wrangler secret put COMMUNICATIONS_API_SECRET  (CRM ile aynı değer)
+# Opsiyonel override: CRM_WEB_FORM_LEADS_URL
+[vars]
+CRM_WEB_FORM_LEADS_URL = "https://crm.globalcompass.com.tr/api/web-form/leads"
 
 # Cloudflare: wrangler d1 list → database_id değerini yapıştırın. Binding adı worker.js ile aynı olmalı (STUDENTS_DB).
 [[d1_databases]]

@@ -74,6 +74,22 @@ async function handleSubmitForm(request, env) {
     );
   }
 
+  var crmLeadsUrl = truncStr(
+    env.CRM_WEB_FORM_LEADS_URL || "https://crm.globalcompass.com.tr/api/web-form/leads",
+    500
+  );
+  var crmApiKey = truncStr(env.COMMUNICATIONS_API_SECRET || "", 500);
+  if (!crmApiKey) {
+    logSubmitError("config", "COMMUNICATIONS_API_SECRET missing");
+    return jsonResponse(
+      {
+        ok: false,
+        error: "Form şu an hizmet dışı. Lütfen daha sonra tekrar deneyin veya telefonla bize ulaşın."
+      },
+      503
+    );
+  }
+
   var body;
   try {
     var raw = await request.text();
@@ -122,6 +138,14 @@ async function handleSubmitForm(request, env) {
   var landing_page = truncStr(
     body.landing_page != null ? body.landing_page : body.h1,
     500
+  );
+  var turnstile_token = truncStr(
+    body.turnstile_token != null
+      ? body.turnstile_token
+      : body["cf-turnstile-response"] != null
+        ? body["cf-turnstile-response"]
+        : "",
+    2048
   );
 
   if (lead_type !== "STUDENT" && lead_type !== "PARENT") {
@@ -174,7 +198,6 @@ async function handleSubmitForm(request, env) {
     );
   }
   var hedef_ulke = truncStr(countryRow.name, 120);
-  var hedef_ulke_country_id = Number(countryRow.id);
 
   var dayStart = istanbulDayStartIso();
   try {
@@ -198,71 +221,70 @@ async function handleSubmitForm(request, env) {
     return jsonResponse({ ok: false, error: mapDbErrorToUserMessage(limitTech) }, 500);
   }
 
-  var ad = "";
-  var soyad = "";
-  var email = "";
-  var telefon = "";
-  var veli_ad = "";
-  var veli_soyad = "";
-  var veli_telefon = "";
-  var veli_email = "";
-
-  if (lead_type === "STUDENT") {
-    ad = adRaw;
-    soyad = soyadRaw;
-    email = emailRaw;
-    telefon = telefonRaw;
-  } else {
-    veli_ad = adRaw;
-    veli_soyad = soyadRaw;
-    veli_telefon = telefonRaw;
-    veli_email = emailRaw;
-  }
-
-  var kayit_tarihi = new Date().toISOString();
+  var crmPayload = {
+    ad: adRaw,
+    soyad: soyadRaw,
+    email: emailRaw,
+    telefon: telefonRaw,
+    lead_type: lead_type,
+    ilgilenilen_program: ilgilenilen_program,
+    mesaj: mesaj,
+    hedef_ulke: hedef_ulke,
+    hedef_ulke_country_id: Number(countryRow.id),
+    landing_page: landing_page,
+    kvkk_onay: 1,
+    submitted_at: new Date().toISOString(),
+    turnstile_token: turnstile_token || undefined,
+    raw_payload: body
+  };
 
   try {
-    var result = await db
-      .prepare(
-        "INSERT INTO students (ad, soyad, email, telefon, veli_ad, veli_soyad, veli_telefon, veli_email, lead_type, ilgilenilen_program, mesaj, kvkk_onay, kayit_tarihi, kaynak, status_id, hedef_ulke, hedef_ulke_country_id, landing_page) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 1, ?, ?, 1, ?, ?, ?)"
-      )
-      .bind(
-        ad,
-        soyad,
-        email,
-        telefon,
-        veli_ad,
-        veli_soyad,
-        veli_telefon,
-        veli_email,
-        lead_type,
-        ilgilenilen_program,
-        mesaj,
-        kayit_tarihi,
-        "web_site",
-        hedef_ulke,
-        hedef_ulke_country_id,
-        landing_page
-      )
-      .run();
-
-    if (result && result.success === false) {
-      var runErr =
-        result.error != null
-          ? typeof result.error === "string"
-            ? result.error
-            : JSON.stringify(result.error)
-          : "D1 sorgusu başarısız.";
-      logSubmitError("D1 run", runErr);
-      return jsonResponse({ ok: false, error: mapDbErrorToUserMessage(runErr) }, 500);
+    var crmRes = await fetch(crmLeadsUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json; charset=utf-8",
+        "X-Communications-Api-Key": crmApiKey
+      },
+      body: JSON.stringify(crmPayload)
+    });
+    var crmText = await crmRes.text();
+    var crmJson = null;
+    try {
+      crmJson = crmText ? JSON.parse(crmText) : null;
+    } catch (parseErr) {
+      crmJson = null;
     }
+
+    if (!crmRes.ok || !crmJson || crmJson.success !== true) {
+      var crmErr =
+        crmJson && typeof crmJson.error === "string" && crmJson.error.trim()
+          ? crmJson.error.trim()
+          : "CRM lead kaydı başarısız (HTTP " + crmRes.status + ").";
+      logSubmitError("crm leads", {
+        status: crmRes.status,
+        error: crmErr,
+        body: crmText ? crmText.slice(0, 500) : ""
+      });
+      if (crmRes.status === 400) {
+        return jsonResponse({ ok: false, error: crmErr }, 400);
+      }
+      if (crmRes.status === 429) {
+        return jsonResponse({ ok: false, error: DAILY_SUBMIT_LIMIT_MSG }, 429);
+      }
+      return jsonResponse({ ok: false, error: mapDbErrorToUserMessage(crmErr) }, 502);
+    }
+
+    console.log("submit-form crm ok", {
+      student_id: crmJson.student_id,
+      submission_id: crmJson.submission_id,
+      created_student: crmJson.created_student
+    });
   } catch (e) {
     var tech = "";
     if (e && typeof e.message === "string") tech = e.message;
-    else if (e && e.cause && typeof e.cause.message === "string") tech = e.cause.message;
     else tech = String(e || "");
-    logSubmitError("D1", tech);
-    return jsonResponse({ ok: false, error: mapDbErrorToUserMessage(tech) }, 500);
+    logSubmitError("crm fetch", tech);
+    return jsonResponse({ ok: false, error: mapDbErrorToUserMessage(tech) }, 502);
   }
 
   return jsonResponse({ ok: true }, 201);
