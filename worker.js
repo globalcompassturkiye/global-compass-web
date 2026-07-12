@@ -338,11 +338,14 @@ async function handleCountries(env) {
     var rows = result && result.results ? result.results : [];
     var countries = rows.map(function (r) {
       var name = String(r.name || "");
+      var pop = r.is_popular;
+      var isPopular =
+        pop === 1 || pop === true || pop === "1" || Number(pop) === 1 ? 1 : 0;
       return {
         id: Number(r.id),
         name: name,
         label: countryLabelTr(name),
-        is_popular: Number(r.is_popular) === 1 ? 1 : 0
+        is_popular: isPopular
       };
     });
     countries.sort(function (a, b) {
