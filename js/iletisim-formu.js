@@ -547,6 +547,25 @@
     });
   }
 
+  /** Hata mesajlarının flex satırında input’u ezmemesi için her alanı sarar. */
+  function wrapFormSatirFields(form) {
+    if (!form) return;
+    form.querySelectorAll('.form-satir').forEach(function (row) {
+      var children = Array.prototype.slice.call(row.children);
+      children.forEach(function (el) {
+        if (!el || !el.tagName) return;
+        if (el.classList && el.classList.contains('form-alan')) return;
+        if (el.classList && el.classList.contains('iletisim-alan-hata')) return;
+        var tag = el.tagName.toLowerCase();
+        if (tag !== 'input' && tag !== 'select' && tag !== 'textarea') return;
+        var wrap = document.createElement('div');
+        wrap.className = 'form-alan';
+        row.insertBefore(wrap, el);
+        wrap.appendChild(el);
+      });
+    });
+  }
+
   function pageH1Text() {
     var h1 = document.querySelector('h1');
     if (!h1) return '';
@@ -559,6 +578,7 @@
     form.setAttribute('novalidate', 'novalidate');
     wireKvkkCheckbox(form);
     upgradeHedefUlkeField(form);
+    wrapFormSatirFields(form);
     enforceAllFieldsRequired(form);
     mountTurnstile(form);
 
@@ -647,6 +667,7 @@
           clearFormErrors(form);
           wireKvkkCheckbox(form);
           upgradeHedefUlkeField(form);
+          wrapFormSatirFields(form);
           enforceAllFieldsRequired(form);
           resetTurnstile(form);
           showBildirim(
