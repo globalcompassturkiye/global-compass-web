@@ -125,10 +125,6 @@ body.sayfa-yurt-disi-dil-okullari-uk-london .londra-neden-kutu .rozet-grid .roze
     margin: 0;
 }
 
-
-
-
-
 article.icerik-alani h2,
 article.icerik-alani h2:has(> .vurgu-satir),
 .icerik-alani h2,
@@ -200,18 +196,6 @@ strong {
     text-decoration-thickness: 1px;
     display: inline-block;
     margin-bottom: 5px;
-}
-
-.ana-sayfa-slogan {
-    font-size: 22px;
-    color: #000000;               
-    font-weight: 700;             
-    margin-top: 0;                
-    margin-bottom: 30px;          
-    text-align: center;           
-    max-width: 1200px;            
-    margin-left: auto;            
-    margin-right: auto;
 }
 
 .icerik-alani {
@@ -287,12 +271,6 @@ h1 {
         padding-top: 0;
         width: 100%;
         box-sizing: border-box;
-    }
-
-    .karsilama-icerik h1,
-    .karsilama-icerik h1 span {
-        font-size: var(--h1-px, 28px);
-        line-height: 1.4;
     }
 
 .konaklama-konteyner {
@@ -379,17 +357,6 @@ h1 {
         font-weight: 700;
     }
 
-.ana-sayfa .ana-karsilama-alani {
-        padding-top: 25px;
-        padding-bottom: 0;
-    }
-
-    .ana-sayfa .karsilama-icerik .ana-marka-baslik,
-    .ana-sayfa .karsilama-icerik .ana-marka-baslik span {
-        font-size: var(--h1-px, 28px);
-        line-height: 1.4;
-    }
-
 :is(
         body.sayfa-alpadia-frankfurt
             .kings-london-toc-outer
@@ -430,8 +397,6 @@ h1 {
         .blog-yan-panel {
         display: none;
     }
-
-
 
 .immerse-tokyo-giris-kategori-grid.rozet-grid {
         display: flex;
@@ -664,10 +629,6 @@ article.icerik-alani #usa-neden-yaz-okulu.icerik-kutusu .yaz-konaklama-oge {
         border-bottom-left-radius: 15px;
     }
 
-
-
-
-
 .ulke-secim-butonlari {
         gap: 12px;
         margin: 30px 0 40px 0;
@@ -799,10 +760,6 @@ article.icerik-alani #usa-neden-yaz-okulu.icerik-kutusu .yaz-konaklama-oge {
         gap: 10px;
     }
 
-    .ana-sayfa .beceri-grid {
-        gap: 25px 20px;  
-    }
-
 .buton-alani { flex-direction: column; padding: 0 var(--icerik-yan-gutter); }
 
 .konaklama-grid {
@@ -822,10 +779,6 @@ article.icerik-alani #usa-neden-yaz-okulu.icerik-kutusu .yaz-konaklama-oge {
 
     .ayrac-dikey { display: none; } 
 
-.karsilama-aksiyon { flex-direction: column; }
-    body.ana-sayfa .karsilama-aksiyon .ana-buton-light { display: none; }
-    .guven-rozetleri { flex-direction: column; gap: 4px; }
-    .rozet-item { font-size: 22px; }
     .sosyal-medya-alani {
         flex-direction: row;           
         align-items: center;           
@@ -849,20 +802,10 @@ article.icerik-alani #usa-neden-yaz-okulu.icerik-kutusu .yaz-konaklama-oge {
         text-align: center;            
     }
 
-.ana-marka-baslik { font-size: var(--h1-px, 28px); }
     .vurgu-renk2 { border-left: none; padding-left: 0; }
 
 .kazanim-seridi { flex-direction: column; gap: 40px; }
     .kazanim-seridi::before { display: none; }
-
-.ana-sayfa .ana-karsilama-alani .ana-marka-baslik,
-    .ana-sayfa .ana-karsilama-alani .ana-sayfa-slogan,
-    .ana-sayfa .ana-karsilama-alani .guven-rozetleri {
-        margin-bottom: 50px;
-    }
-    .ana-sayfa .ana-karsilama-alani .karsilama-aksiyon {
-        margin-bottom: 0;
-    }
 
 .londra-neden-kutu .avantaj-grid,
     .oxford-neden-kutu .avantaj-grid,
@@ -904,11 +847,6 @@ body.sayfa-alpadia-freiburg .immerse-detay-kutu .immerse-detay-grid.alpadia-prog
         .immerse-detay-kart:is(:nth-child(7), :nth-child(8), .alpadia-tarihler-tam-satir) {
         grid-column: auto;
     }
-
-    body.ana-sayfa .ana-karsilama-alani :is(.ana-marka-baslik, .ana-sayfa-slogan, .guven-rozetleri) {
-        margin-bottom: 0;
-    }
-
 
     .canada-program-sehir-grid {
         grid-template-columns: 1fr;
@@ -1418,12 +1356,6 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
     --ulke-secim-kart-en: calc(320px * 0.85);
 }
 
-.ana-sayfa .beceri-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px 20px;
-}
-
 p {
     font-size: 15px;
     color: #000;
@@ -1436,24 +1368,6 @@ p {
     color: #bd0505;
     padding-top: 6px;
     display: inline-block;
-}
-
-.ana-sayfa .beceri-grid h3 {
-    position: absolute;
-    top: -12px;
-    left: 20px;
-    background: #ffffff;
-    padding: 0 10px;
-    font-size: var(--h3-font-size);
-    font-weight: 700;
-    text-transform: uppercase;
-    margin: 0;
-}
-
-.ana-sayfa .beceri-grid p {
-    font-size: 14px;
-    color: #555555;
-    margin: 0;
 }
 
 .cerceve-kutu,
@@ -1489,7 +1403,6 @@ p {
 .site-ana-hizmetler-kartlari-bolumu > .cerceve-kutu.icerik-kutusu {
     margin-top: 0;
 }
-
 
 .odeme-sonuc-kapsayici {
     max-width: 800px;
@@ -1936,8 +1849,6 @@ body.sayfa-yurt-disi-dil-okullari-uk-london .londra-neden-kutu .rozet-grid .roze
     margin: 0 0 6px 0;
 }
 
-
-
 .italy-program-kutu .rozet-grid,
 .frankfurt-avantaj-kutu .frankfurt-avantaj-grid {
     display: grid;
@@ -2007,8 +1918,6 @@ body.sayfa-yurt-disi-dil-okullari-uk-london .londra-neden-kutu .rozet-grid .roze
     font-weight: 400;
 }
 
-
-
 .yas-tab-input,
 .dahil-ana-baslik,
 .konaklama-ana-baslik,
@@ -2042,17 +1951,12 @@ summary.immerse-tokyo-devam-btn::-webkit-details-marker,
     overflow: hidden;
 }
 
-
-
 #yas13-15:checked ~ .yas-tab-basliklar label[for="yas13-15"], #yas15-18:checked ~ .yas-tab-basliklar label[for="yas15-18"], #yas16-18:checked ~ .yas-tab-basliklar label[for="yas16-18"], #yas18-30:checked ~ .yas-tab-basliklar label[for="yas18-30"], #yas13-15-oxford:checked ~ .yas-tab-basliklar label[for="yas13-15-oxford"], #yas16-18-oxford:checked ~ .yas-tab-basliklar label[for="yas16-18-oxford"], #tokyo-immerse-akademik:checked ~ .yas-tab-basliklar label[for="tokyo-immerse-akademik"], #tokyo-immerse-kariyer:checked ~ .yas-tab-basliklar label[for="tokyo-immerse-kariyer"], #yas15-18-toronto:checked ~ .yas-tab-basliklar label[for="yas15-18-toronto"], #toronto-simgesel:checked ~ .yas-tab-basliklar label[for="toronto-simgesel"], #toronto-kulturel:checked ~ .yas-tab-basliklar label[for="toronto-kulturel"], #toronto-arkadaslik:checked ~ .yas-tab-basliklar label[for="toronto-arkadaslik"], #toronto-immerse-sec-akademik:checked ~ .yas-tab-basliklar label[for="toronto-immerse-sec-akademik"], #toronto-immerse-sec-deneyim:checked ~ .yas-tab-basliklar label[for="toronto-immerse-sec-deneyim"], #toronto-mezuniyet-staji:checked ~ .yas-tab-basliklar label[for="toronto-mezuniyet-staji"], #sea-bern:checked ~ .yas-tab-basliklar label[for="sea-bern"], #sea-cailler:checked ~ .yas-tab-basliklar label[for="sea-cailler"], #sea-olimpiyat:checked ~ .yas-tab-basliklar label[for="sea-olimpiyat"], #sektor-mimarlik:checked ~ .yas-tab-basliklar label[for="sektor-mimarlik"], #sektor-bankacilik:checked ~ .yas-tab-basliklar label[for="sektor-bankacilik"], #sektor-muhendislik:checked ~ .yas-tab-basliklar label[for="sektor-muhendislik"], #sektor-film:checked ~ .yas-tab-basliklar label[for="sektor-film"], #aktivite-genel:checked ~ .yas-tab-basliklar label[for="aktivite-genel"], #aktivite-doga:checked ~ .yas-tab-basliklar label[for="aktivite-doga"], #aktivite-kultur:checked ~ .yas-tab-basliklar label[for="aktivite-kultur"], #aktivite-teknoloji:checked ~ .yas-tab-basliklar label[for="aktivite-teknoloji"],
 #yas13-15:checked ~ .yas-tab-basliklar label[for="yas13-15"], #yas15-18:checked ~ .yas-tab-basliklar label[for="yas15-18"], #yas16-18:checked ~ .yas-tab-basliklar label[for="yas16-18"], #yas18-30:checked ~ .yas-tab-basliklar label[for="yas18-30"], #yas13-15-oxford:checked ~ .yas-tab-basliklar label[for="yas13-15-oxford"], #yas16-18-oxford:checked ~ .yas-tab-basliklar label[for="yas16-18-oxford"], #tokyo-immerse-akademik:checked ~ .yas-tab-basliklar label[for="tokyo-immerse-akademik"], #tokyo-immerse-kariyer:checked ~ .yas-tab-basliklar label[for="tokyo-immerse-kariyer"], #yas15-18-toronto:checked ~ .yas-tab-basliklar label[for="yas15-18-toronto"], #toronto-simgesel:checked ~ .yas-tab-basliklar label[for="toronto-simgesel"], #toronto-kulturel:checked ~ .yas-tab-basliklar label[for="toronto-kulturel"], #toronto-arkadaslik:checked ~ .yas-tab-basliklar label[for="toronto-arkadaslik"], #toronto-immerse-sec-akademik:checked ~ .yas-tab-basliklar label[for="toronto-immerse-sec-akademik"], #toronto-immerse-sec-deneyim:checked ~ .yas-tab-basliklar label[for="toronto-immerse-sec-deneyim"], #toronto-mezuniyet-staji:checked ~ .yas-tab-basliklar label[for="toronto-mezuniyet-staji"], #sea-bern:checked ~ .yas-tab-basliklar label[for="sea-bern"], #sea-cailler:checked ~ .yas-tab-basliklar label[for="sea-cailler"], #sea-olimpiyat:checked ~ .yas-tab-basliklar label[for="sea-olimpiyat"], #sektor-mimarlik:checked ~ .yas-tab-basliklar label[for="sektor-mimarlik"], #sektor-bankacilik:checked ~ .yas-tab-basliklar label[for="sektor-bankacilik"], #sektor-muhendislik:checked ~ .yas-tab-basliklar label[for="sektor-muhendislik"], #sektor-film:checked ~ .yas-tab-basliklar label[for="sektor-film"], #investin-15-18:checked ~ .yas-tab-basliklar label[for="investin-15-18"], #investin-12-14:checked ~ .yas-tab-basliklar label[for="investin-12-14"] {
     background: #0f766e;
     color: #ffffff;
     box-shadow: 0 4px 10px rgba(15, 118, 110, 0.35);
 }
-
-
-
 
 .cerceve-kutu.icerik-kutusu .kurs-icerik-esnek,
 .sayfa-kings-education .kings-london-dahil-gri-dikey .rozet-metin,
@@ -2097,7 +2001,7 @@ body.oxford-royale-cambridge-sayfa .cerceve-kutu .ora-ulasim-alt-baslik:first-of
     box-sizing: border-box;
 }
 
-body.ana-sayfa article.icerik-alani > section.ana-hizmetler-bolumu + h2, .ana-sayfa-blog-ozeti-kirmizi-bant #ana-sayfa-blog-ozeti-baslik, article.icerik-alani .ana-sayfa-blog-ozeti-kirmizi-bant #ana-sayfa-blog-ozeti-baslik, body.ana-sayfa article.icerik-alani .ana-sayfa-blog-ozeti-kirmizi-bant #ana-sayfa-blog-ozeti-baslik,
+body.ana-sayfa article.icerik-alani > section.ana-hizmetler-bolumu + h2,
 article.icerik-alani p, article.icerik-alani .kutu-liste li, article.icerik-alani .rozet-metin,
 article.icerik-alani .kings-kampus-olani-sol ul.kutu-liste.yas-alan-etiketleri li {
     font-size: 15px;
@@ -2205,19 +2109,13 @@ body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford
 }
 
 @media (min-width: 501px) {
-    body.ana-sayfa article.icerik-alani > section.ana-hizmetler-bolumu + h2,
-    .ana-sayfa-blog-ozeti-kirmizi-bant #ana-sayfa-blog-ozeti-baslik,
-    article.icerik-alani .ana-sayfa-blog-ozeti-kirmizi-bant #ana-sayfa-blog-ozeti-baslik,
-    body.ana-sayfa article.icerik-alani .ana-sayfa-blog-ozeti-kirmizi-bant #ana-sayfa-blog-ozeti-baslik {
+    {
         font-size: 16px;
     }
 }
 
 @media (min-width: 768px) {
-    body.ana-sayfa article.icerik-alani > section.ana-hizmetler-bolumu + h2,
-    .ana-sayfa-blog-ozeti-kirmizi-bant #ana-sayfa-blog-ozeti-baslik,
-    article.icerik-alani .ana-sayfa-blog-ozeti-kirmizi-bant #ana-sayfa-blog-ozeti-baslik,
-    body.ana-sayfa article.icerik-alani .ana-sayfa-blog-ozeti-kirmizi-bant #ana-sayfa-blog-ozeti-baslik {
+    {
         font-size: 17px;
     }
 
@@ -2307,10 +2205,7 @@ body.sayfa-kings-education-boston .kings-bos-konaklama-bilgi-iskelet.kings-la-ko
 }
 
 @media (min-width: 1024px) {
-    body.ana-sayfa article.icerik-alani > section.ana-hizmetler-bolumu + h2,
-    .ana-sayfa-blog-ozeti-kirmizi-bant #ana-sayfa-blog-ozeti-baslik,
-    article.icerik-alani .ana-sayfa-blog-ozeti-kirmizi-bant #ana-sayfa-blog-ozeti-baslik,
-    body.ana-sayfa article.icerik-alani .ana-sayfa-blog-ozeti-kirmizi-bant #ana-sayfa-blog-ozeti-baslik {
+    {
         font-size: 18px;
     }
 }
@@ -2403,7 +2298,6 @@ body.sayfa-kings-education-boston .kings-bos-konaklama-bilgi-iskelet.kings-la-ko
     .konaklama-kart {
         margin-bottom: 20px;
     }
-
 
     .canada-program-sehir-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -3925,8 +3819,6 @@ body.kings-oxford-sayfa .kings-oxford-teknik-vurgu {
     box-shadow: 0 8px 25px rgba(0,0,128,0.08);
 }
 
-.skyline-stil:hover .incele-btn-minimal,
-.ana-marka-baslik,
 .iletisim-kart-ofis .iletisim-kart-baslik,
 .sayfa-kings-education .kings-bos-vurgu-lacivert,
 .sayfa-kings-education .kings-bos-toefl-kart h4,
@@ -3937,58 +3829,6 @@ body.kings-oxford-sayfa .kings-oxford-teknik-vurgu {
 .skyline-stil:hover .ok-animasyon {
     transform: translateX(5px);
     color: #bd0505;
-}
-
-.ana-karsilama-alani {
-    width: 100%;
-
-    padding: 25px 0 0 0;
-    background: transparent;
-}
-
-.karsilama-konteynir {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 25px;
-}
-
-.karsilama-icerik {
-    max-width: 1200px; 
-    margin: 0 auto;
-    text-align: center;
-}
-
-.ust-vurgu {
-    display: inline-block;
-    color: #bd0505; 
-    font-weight: 700;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
-}
-
-.karsilama-icerik h1 {
-    font-size: var(--h1-px, 28px);
-    line-height: 1.3;
-    margin-top: 0;
-    margin-bottom: 25px;
-}
-
-.karsilama-icerik h1 span {
-    font-weight: 400;
-}
-
-.ana-karsilama-alani .guven-rozetleri {
-    padding: 8px 0 36px 0;
-    margin-top: 0;
-}
-
-.karsilama-aksiyon {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    margin-bottom: 0;
 }
 
 .ana-buton-light {
@@ -4027,23 +3867,6 @@ button.ana-buton-light {
     outline-offset: 3px;
 }
 
-.guven-rozetleri {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-}
-
-.rozet-item {
-    font-size: 22px;
-    font-weight: 700;  
-    color: #bd0505;    
-}
-
-body.ana-sayfa .ana-sayfa-slogan,
-body.ana-sayfa .guven-rozetleri .rozet-item {
-    font-size: 22px;
-}
-
 .ust-marka-alani {
     margin-bottom: 15px;
 }
@@ -4062,16 +3885,6 @@ body.ana-sayfa .guven-rozetleri .rozet-item {
     margin-left: 10px;
     font-weight: 800;
     position: relative;
-}
-
-.karsilama-icerik h1 {
-    font-size: var(--h1-px, 28px);
-    line-height: 1.35;
-    margin-top: 10px;
-}
-
-.karsilama-icerik h1 span {
-    font-weight: 800;
 }
 
 .vurgu-renk2 {
@@ -4261,8 +4074,6 @@ body.sayfa-chantemerle .chantemerle-giris-metni {
     height: auto;
     display: inline-block;
 }
-
-
 
 body.sayfa-alpadia-frankfurt .alpadia-neden-kutu .rozet-baslik,
 body.sayfa-chantemerle .chantemerle-sol-kenar-cerceve .rozet-baslik {
@@ -4467,37 +4278,6 @@ body.sayfa-alpadia-freiburg .immerse-detay-kutu .immerse-detay-kart h3 {
     margin: 0 0 12px 0;
 }
 
-.ana-sayfa-blog-ozeti {
-    width: 100%;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 0 2.75rem;
-    box-sizing: border-box;
-}
-
-body.ana-sayfa .ana-sayfa-blog-ozeti-wrap .ana-sayfa-blog-ozeti {
-    width: 100%;
-    max-width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-    box-sizing: border-box;
-}
-
-body.ana-sayfa .ana-sayfa-blog-ozeti-wrap .ana-sayfa-blog-ozeti-govde {
-    padding-left: 0;
-    padding-right: 0;
-}
-
-body.ana-sayfa .ana-sayfa-blog-ozeti-wrap {
-    margin-top: 0;
-}
-
-body.ana-sayfa article.icerik-alani > section.ana-sayfa-blog-ozeti-wrap.icerik-alani {
-    padding-left: 0;
-    padding-right: 0;
-}
-
 .site-ana-hizmetler-kartlari-bolumu {
     box-sizing: border-box;
 }
@@ -4509,76 +4289,10 @@ body.ana-sayfa article.icerik-alani > section.ana-sayfa-blog-ozeti-wrap.icerik-a
     column-gap: 5px;
 }
 
-.ana-sayfa-blog-ozeti-kirmizi-bant {
-    background-color: transparent;
-    background-image: none;
-    text-align: left;
-    padding: 0 0 0.75rem;
-}
-
-.ana-sayfa-blog-ozeti-baslik-wrap {
-    text-align: center;
-    margin: 0;
-    width: 100%;
-}
-
-.ana-sayfa-blog-ozeti-govde {
-    padding: 0 var(--icerik-yan-gutter) 2rem;
-}
-
-#ana-sayfa-blog-ozeti-baslik {
-    font-weight: 700;
-    color: #000000;
-    line-height: 1.25;
-    margin: 0;
-    letter-spacing: -0.02em;
-    text-align: center;
-}
-
-body.ana-sayfa .ana-sayfa-blog-ozeti-wrap > #ana-sayfa-blog-ozeti-baslik {
-    margin: 25px 0 15px 0;
-    text-align: left;
-}
-
-.ana-sayfa-blog-ozeti-kirmizi-bant #ana-sayfa-blog-ozeti-baslik {
-    color: #0f172a;
-}
-
-body.ana-sayfa article.icerik-alani .ana-sayfa-blog-ozeti-kirmizi-bant #ana-sayfa-blog-ozeti-baslik {
-    font-size: 20px;
-}
-
-.ana-sayfa-blog-ozeti-alt {
-    font-size: 15px;
-    line-height: 1.65;
-    color: #64748b;
-    margin: 0 auto 25px auto;
-    max-width: 1200px;
-}
-
-.ana-sayfa-blog-ozeti-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
-}
-
 @media (min-width: 600px) {
-.ana-sayfa-blog-ozeti-grid {
-        grid-template-columns: repeat(2, minmax(0, var(--ulke-secim-kart-en)));
-        justify-content: center;
-    }
-
     :is(#egitim-alanlari .dil-okullari-secim-paneli, body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli)) .yaz-okullari-ulke-kart-wrap {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         justify-content: stretch;
-    }
-}
-
-@media (min-width: 900px) {
-.ana-sayfa-blog-ozeti-grid {
-        grid-template-columns: repeat(3, minmax(0, var(--ulke-secim-kart-en)));
-        justify-content: center;
-        gap: 1.35rem;
     }
 }
 
@@ -4739,64 +4453,9 @@ body.ana-sayfa article.icerik-alani .ana-sayfa-blog-ozeti-kirmizi-bant #ana-sayf
     }
 }
 
-.ana-sayfa-blog-kart {
-    display: flex;
-    flex-direction: column;
-    background: #fff;
-    border: 0 solid transparent;
-    border-radius: 15px;
-    overflow: hidden;
-    transition: box-shadow 0.2s ease, transform 0.2s ease;
-}
-.ana-sayfa-blog-kart:hover {
-    box-shadow: 0 10px 32px rgba(15, 23, 42, 0.1);
-    transform: translateY(-2px);
-}
-
-.ana-sayfa-blog-kart-tum-link {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    color: inherit;
-    text-decoration: none;
-}
-
-.ana-sayfa-blog-kart-icerik {
-    padding: 1.2rem 1.15rem 1.25rem;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-
-.ana-sayfa-blog-kart-kategori {
-    display: inline-block;
-    align-self: flex-start;
-    font-size: 0.7rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: #c41e3a;
-    text-decoration: none;
-    margin-bottom: 0.5rem;
-}
-
-.ana-sayfa-blog-kart-kategori:hover {
-    text-decoration: none;
-    color: #9e1830;
-}
-
-.ana-sayfa-blog-kart-baslik {
-    font-size: 17px;
-    font-weight: 700;
-    line-height: 1.35;
-    margin: 0 0 0.5rem;
-}
-
-.ana-sayfa-blog-kart-baslik,
 body.sayfa-yurt-disi-yaz-okullari :is(a.yaz-okullari-ulke-kart, a.rozet-kart-link):hover :is(.yaz-okullari-ulke-kart-baslik, .rozet-kart-baslik),
 body.sayfa-yurt-disi-universite :is(a.yaz-okullari-ulke-kart, a.rozet-kart-link):hover :is(.yaz-okullari-ulke-kart-baslik, .rozet-kart-baslik),
 .ulke-hub-kart-paneli :is(a.yaz-okullari-ulke-kart, a.rozet-kart-link):hover :is(.yaz-okullari-ulke-kart-baslik, .rozet-kart-baslik),
-body.ana-sayfa :is(a.yaz-okullari-ulke-kart, a.rozet-kart-link):hover :is(.yaz-okullari-ulke-kart-baslik, .rozet-kart-baslik),
 body.sayfa-hizmetlerimiz :is(a.yaz-okullari-ulke-kart, a.rozet-kart-link):hover :is(.yaz-okullari-ulke-kart-baslik, .rozet-kart-baslik, .h3-ortak-baslik),
 body.sayfa-yurt-disi-lise :is(a.yaz-okullari-ulke-kart, a.rozet-kart-link):hover :is(.yaz-okullari-ulke-kart-baslik, .rozet-kart-baslik),
 body.sayfa-yurt-disi-dil-okullari :is(a.yaz-okullari-ulke-kart, a.rozet-kart-link):hover :is(.yaz-okullari-ulke-kart-baslik, .rozet-kart-baslik),
@@ -4804,46 +4463,6 @@ body.sayfa-yurt-disi-dil-okullari-uk :is(a.yaz-okullari-ulke-kart, a.rozet-kart-
 body.sayfa-yurt-disi-dil-okullari-usa :is(a.yaz-okullari-ulke-kart, a.rozet-kart-link):hover :is(.yaz-okullari-ulke-kart-baslik, .rozet-kart-baslik) {
     color: #0f172a;
 }
-.ana-sayfa-blog-kart-tum-link:hover .ana-sayfa-blog-kart-baslik { color: #c41e3a; }
-
-.ana-sayfa-blog-kart-ozet {
-    font-size: 15px;
-    line-height: 1.65;
-    color: #475569;
-    margin: 0;
-    flex: 1;
-}
-
-.ana-sayfa-blog-kart-meta {
-    font-size: 0.8rem;
-    color: #94a3b8;
-    margin-top: 0.75rem;
-}
-
-.ana-sayfa-blog-ozeti-alt-aksiyon {
-    margin-top: 1.75rem;
-    text-align: center;
-}
-
-.ana-sayfa-blog-ozeti-tum {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.35rem;
-    padding: 0.65rem 1.35rem;
-    background: #c41e3a;
-    color: #fff;
-    font-weight: 600;
-    font-size: 0.95rem;
-    text-decoration: none;
-    transition: background 0.2s ease, transform 0.15s ease;
-}
-
-.ana-sayfa-blog-ozeti-tum:hover {
-    background: #9e1830;
-    transform: translateY(-1px);
-}
-
 .ana-sayfa-blog-ozeti--yukleniyor .ana-sayfa-blog-ozeti-grid {
     min-height: var(--site-ana-sayfa-blog-ozeti-yukleniyor-min, 22rem);
 }
@@ -4872,52 +4491,6 @@ body.sayfa-yurt-disi-dil-okullari-usa :is(a.yaz-okullari-ulke-kart, a.rozet-kart
     text-align: center;
     font-size: 15px;
     color: #64748b;
-}
-
-.ana-sayfa-blog-noscript {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem var(--site-cerceve-gutter, 15px);
-    text-align: center;
-    font-size: 15px;
-}
-
-.ana-sayfa-blog-noscript a {
-    color: #c41e3a;
-    font-weight: 600;
-}
-
-body.ana-sayfa .ana-tab-cerceve-ust-bant,
-body.ana-sayfa .ana-sayfa-blog-ozeti-kirmizi-bant {
-    box-sizing: border-box;
-    display: block;
-    min-height: 0;
-}
-
-body.ana-sayfa .ana-tab-cerceve-ust-bant {
-    padding: 0;
-}
-
-body.ana-sayfa .ana-sayfa-blog-ozeti-kirmizi-bant {
-    padding: 25px 0 0.75rem;
-}
-
-body.ana-sayfa .ana-tab-cerceve-ust-bant {
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 14px;
-    background-color: transparent;
-    background-image: none;
-    text-align: center;
-    padding: 0 0 0.75rem;
-}
-
-body.ana-sayfa article.icerik-alani > section.ana-hizmetler-bolumu + h2 {
-    margin: 100px 0 25px 0;
-    font-weight: 700;
-    color: #0f172a;
-    text-align: center;
 }
 
 :is(#egitim-alanlari .dil-okullari-secim-paneli, body.sayfa-yurt-disi-yaz-okullari .yaz-okullari-secim-paneli:not(.ulke-hub-kart-paneli), body.sayfa-yurt-disi-lise .dil-okullari-secim-paneli) .yaz-okullari-ulke-kart-wrap {
@@ -4974,8 +4547,6 @@ body.kings-oxford-sayfa .icerik-alani.dahil-olanlar-konteyner {
 }
 
 body.ana-sayfa {
-    --ana-hero-metin-araligi: 12px;
-
     --ana-sayfa-blok-araligi: 40px;
     --ulke-secim-kart-en: calc(320px * 0.85);
 }
@@ -4988,21 +4559,6 @@ body.ana-sayfa h2 > .vurgu-satir {
     margin: 0.35rem 0 0 0;
 }
 
-body.ana-sayfa .karsilama-icerik > h1.ana-marka-baslik {
-    margin: 0;
-}
-
-body.ana-sayfa .karsilama-icerik > p.ana-sayfa-slogan {
-    margin: var(--ana-hero-metin-araligi) 0 0;
-    text-align: center;
-}
-
-body.ana-sayfa .ana-karsilama-alani .guven-rozetleri {
-    margin: var(--ana-hero-metin-araligi) 0 0;
-    padding: 0;
-}
-
-body.ana-sayfa .karsilama-icerik > .karsilama-aksiyon,
 body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .icerik-alani > .kirmizi-kutu,
 body.sayfa-yurt-disi-yaz-okullari-uk-bournemouth-summer-boarding-courses-canford .icerik-alani > .okul-liste-kapsayici {
     margin-top: 28px;
@@ -5128,7 +4684,6 @@ article.icerik-alani .cerceve-kutu.japan-tercih-bolumu > h2 + p:has(+ .rozet-gri
 body.kings-bournemouth-yaz-okulu-sayfa article.icerik-alani h2 {
     text-align: center;
 }
-
 
 .canada-program-sehir-grid {
     display: grid;
@@ -6178,8 +5733,6 @@ body.sayfa-hizmetlerimiz article.icerik-alani.hizmetlerimiz-sayfa .blog-yazi-ana
     margin: 0 0 8px 0;
 }
 
-
-
 .hakkimizda-sayfa .okul-liste-kapsayici,
 .hizmetlerimiz-sayfa #egitim-alanlari + .kirmizi-kutu {
     margin-top: 48px;
@@ -6189,8 +5742,6 @@ body.sayfa-hizmetlerimiz article.icerik-alani.hizmetlerimiz-sayfa .hizmet-adimla
     font-size: 26px;
     line-height: 1.35;
 }
-
-
 
 body.sayfa-hizmetlerimiz .hizmet-adimlar-section > h2:not(.kart-h2) {
     text-align: center;
@@ -6410,8 +5961,6 @@ body.sayfa-hizmetlerimiz .hizmet-adimlar-section .okul-liste-kapsayici .hizmet-a
         margin-right: auto;
     }
 
-
-
     .hizmetlerimiz-sayfa .hizmet-adim-kart {
         width: 100%;
         max-width: none;
@@ -6438,8 +5987,6 @@ body.sayfa-hizmetlerimiz .hizmet-adimlar-section .okul-liste-kapsayici .hizmet-a
         margin-right: auto;
     }
 
-
-
     .hizmetlerimiz-sayfa .hizmet-adim-kart {
         width: 100%;
         max-width: none;
@@ -6450,7 +5997,6 @@ body.sayfa-hizmetlerimiz .hizmet-adimlar-section .okul-liste-kapsayici .hizmet-a
         box-sizing: border-box;
         justify-content: flex-start;
     }
-
 
 }
 
@@ -7871,7 +7417,6 @@ summary.immerse-tokyo-devam-btn {
 
 .italy-program-kutu
 
-
 body.sayfa-yurt-disi-yaz-okullari-italy .yaz-okullari-ulke-kart[href*="italy/milan"] .yaz-okullari-ulke-kart-bayrak img {
     object-position: center top;
 }
@@ -8182,10 +7727,6 @@ body.sayfa-yurt-disi-yaz-okullari-italy .yaz-okullari-ulke-kart[href*="italy/mil
     margin: 0;
     line-height: 1.6;
 }
-
-
-
-
 
 .sayfa-kings-education .kings-ielts-merkez-kutu .kings-yildiz-ikon,
 .sayfa-kings-education .kings-bos-go-yildiz,
@@ -10779,7 +10320,6 @@ body.sayfa-swiss-education-academy .immerse-detay-kutu .sea-program-detay-grid >
     border-bottom: 1px solid var(--site-kart-kenar);
 }
 
-
 .cerceve-kutu.toronto-aktivite-kutu .rozet-grid {
     margin-top: 20px;
     display: grid;
@@ -12062,20 +11602,6 @@ body.sayfa-yurt-disi-lise .dil-okullari-secim-paneli .yaz-okullari-ulke-kart-wra
 
 @media (min-width: 600px) and (max-width: 899px) {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
 @media (max-width: 501px) {
@@ -12519,7 +12045,6 @@ h2 > .vurgu-satir {
         > :is(.yaz-okullari-ulke-kart, .rozet-kart-link):last-child:nth-child(odd):not(:only-child) {
         border-bottom-right-radius: 15px;
     }
-
 
 }
 
