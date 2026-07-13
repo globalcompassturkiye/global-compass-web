@@ -265,11 +265,15 @@ async function handleSubmitForm(request, env) {
         error: crmErr,
         body: crmText ? crmText.slice(0, 500) : ""
       });
-      if (crmRes.status === 400) {
-        return jsonResponse({ ok: false, error: crmErr }, 400);
-      }
       if (crmRes.status === 429) {
         return jsonResponse({ ok: false, error: DAILY_SUBMIT_LIMIT_MSG }, 429);
+      }
+      // CRM'nin net hata metnini kullanıcıya ilet (400/422/5xx)
+      if (crmJson && typeof crmJson.error === "string" && crmJson.error.trim()) {
+        return jsonResponse(
+          { ok: false, error: crmErr },
+          crmRes.status === 400 ? 400 : 502
+        );
       }
       return jsonResponse({ ok: false, error: mapDbErrorToUserMessage(crmErr) }, 502);
     }
