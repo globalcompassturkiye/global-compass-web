@@ -323,7 +323,63 @@
     return false;
   }
 
+  function hideIletiliyor() {
+    var mevcut = document.querySelector(
+      '.iletisim-form-bildirim-kaplama.iletisim-form-bildirim-kaplama--iletilyor'
+    );
+    if (mevcut && mevcut.parentNode) {
+      mevcut.parentNode.removeChild(mevcut);
+    }
+    if (!document.querySelector('.iletisim-form-bildirim-kaplama')) {
+      document.body.classList.remove('iletisim-form-bildirim-acik');
+    }
+  }
+
+  function showIletiliyor() {
+    hideIletiliyor();
+    var kaplama = document.createElement('div');
+    kaplama.className =
+      'iletisim-form-bildirim-kaplama iletisim-form-bildirim-kaplama--iletilyor';
+    kaplama.setAttribute('role', 'dialog');
+    kaplama.setAttribute('aria-modal', 'true');
+    kaplama.setAttribute('aria-busy', 'true');
+    var baslikId = 'iletisim-bildirim-iletilyor-' + String(Date.now());
+    kaplama.setAttribute('aria-labelledby', baslikId);
+
+    var panel = document.createElement('div');
+    panel.className =
+      'iletisim-form-bildirim-panel iletisim-form-bildirim-panel--iletilyor';
+
+    var spinner = document.createElement('div');
+    spinner.className = 'iletisim-form-bildirim-spinner';
+    spinner.setAttribute('aria-hidden', 'true');
+
+    var baslik = document.createElement('h3');
+    baslik.id = baslikId;
+    baslik.className = 'iletisim-form-bildirim-baslik';
+    baslik.textContent = 'İletiliyor…';
+
+    var duyuru = document.createElement('div');
+    duyuru.className = 'iletisim-form-bildirim-duyuru';
+    duyuru.setAttribute('aria-live', 'polite');
+    duyuru.setAttribute('aria-atomic', 'true');
+    duyuru.setAttribute('role', 'status');
+
+    var paragraf = document.createElement('p');
+    paragraf.className = 'iletisim-form-bildirim-metin';
+    paragraf.textContent = 'Mesajınız gönderiliyor, lütfen bekleyin…';
+
+    duyuru.appendChild(paragraf);
+    panel.appendChild(spinner);
+    panel.appendChild(baslik);
+    panel.appendChild(duyuru);
+    kaplama.appendChild(panel);
+    document.body.classList.add('iletisim-form-bildirim-acik');
+    document.body.appendChild(kaplama);
+  }
+
   function showBildirim(tip, metin, onKapat) {
+    hideIletiliyor();
     var kaplama = document.createElement('div');
     kaplama.className = 'iletisim-form-bildirim-kaplama';
     kaplama.setAttribute('role', 'dialog');
@@ -661,8 +717,13 @@
         kvkk_onay: kvkkAccepted(form) ? 1 : 0,
         turnstile_token: turnstileToken
       };
+      var butonMetin = buton ? buton.textContent : '';
+      if (buton) buton.textContent = 'İletiliyor…';
+      showIletiliyor();
       postSubmit(payload)
         .then(function () {
+          hideIletiliyor();
+          if (buton) buton.textContent = butonMetin || 'Gönder';
           form.reset();
           clearFormErrors(form);
           wireKvkkCheckbox(form);
@@ -679,6 +740,8 @@
           );
         })
         .catch(function (err) {
+          hideIletiliyor();
+          if (buton) buton.textContent = butonMetin || 'Gönder';
           resetTurnstile(form);
           showBildirim('hata', submitErrorMessage(err), function () {
             if (buton) buton.disabled = false;

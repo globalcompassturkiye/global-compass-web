@@ -550,6 +550,40 @@ body.iletisim-form-bildirim-acik {
     border-top: 4px solid #b91c1c;
 }
 
+.iletisim-form-bildirim-panel--iletilyor {
+    border-top: 4px solid #000080;
+}
+
+.iletisim-form-bildirim-spinner {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 16px;
+    border: 3px solid rgba(0, 0, 128, 0.15);
+    border-top-color: #000080;
+    border-radius: 50%;
+    animation: iletisim-bildirim-spinner-don 0.75s linear infinite;
+}
+
+@keyframes iletisim-bildirim-spinner-don {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.iletisim-form-bildirim-panel--iletilyor .iletisim-form-bildirim-baslik {
+    animation: iletisim-bildirim-baslik-nabiz 1.4s ease-in-out infinite;
+}
+
+@keyframes iletisim-bildirim-baslik-nabiz {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.55;
+    }
+}
+
 .iletisim-form-bildirim-baslik {
     margin: 0 0 12px;
     font-size: 20px;
