@@ -203,7 +203,7 @@ async function handleSubmitForm(request, env) {
   try {
     var countRow = await db
       .prepare(
-        "SELECT COUNT(*) AS c FROM students WHERE kayit_tarihi >= ? AND ((email != '' AND email = ?) OR (veli_email != '' AND veli_email = ?) OR (telefon != '' AND telefon = ?) OR (veli_telefon != '' AND veli_telefon = ?))"
+        "SELECT COUNT(*) AS c FROM students WHERE kayit_tarihi >= ? AND ((student_email != '' AND student_email = ?) OR (parent_email != '' AND parent_email = ?) OR (student_phone != '' AND student_phone = ?) OR (parent_phone != '' AND parent_phone = ?))"
       )
       .bind(dayStart, emailRaw, emailRaw, telefonRaw, telefonRaw)
       .first();
