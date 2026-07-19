@@ -148,6 +148,108 @@ async function handleSubmitForm(request, env) {
     2048
   );
 
+  var formSubmittedAt = truncStr(
+    body.form_submitted_at != null
+      ? body.form_submitted_at
+      : body.created_at != null
+        ? body.created_at
+        : body.submitted_at != null
+          ? body.submitted_at
+          : "",
+    64
+  );
+  if (!formSubmittedAt) formSubmittedAt = new Date().toISOString();
+
+  var dogum_tarihi = truncStr(
+    body.dogum_tarihi != null ? body.dogum_tarihi : "",
+    32
+  );
+  var yasRaw = body.yas;
+  var yasNum =
+    yasRaw === null || yasRaw === undefined || yasRaw === ""
+      ? null
+      : Number(yasRaw);
+  if (yasNum != null && (!Number.isFinite(yasNum) || yasNum < 1 || yasNum > 120)) {
+    return jsonResponse(
+      { ok: false, error: "Geçerli bir yaş veya doğum tarihi girin." },
+      400
+    );
+  }
+
+  var isUnder18 =
+    body.is_under_18 === true ||
+    body.is_under_18 === 1 ||
+    body.is_under_18 === "1" ||
+    (yasNum != null && yasNum < 18);
+
+  var veliAdSoyad = truncStr(
+    body.veli_ad_soyad != null
+      ? body.veli_ad_soyad
+      : body.parent_full_name != null
+        ? body.parent_full_name
+        : "",
+    160
+  );
+  var parent_name = truncStr(
+    body.parent_name != null ? body.parent_name : "",
+    120
+  );
+  var parent_surname = truncStr(
+    body.parent_surname != null ? body.parent_surname : "",
+    120
+  );
+  if ((!parent_name || !parent_surname) && veliAdSoyad) {
+    var veliParts = veliAdSoyad.split(/\s+/).filter(Boolean);
+    if (veliParts.length === 1) {
+      parent_name = parent_name || veliParts[0];
+    } else if (veliParts.length > 1) {
+      parent_name = parent_name || veliParts[0];
+      parent_surname = parent_surname || veliParts.slice(1).join(" ");
+    }
+  }
+  var parent_phone = truncStr(
+    body.parent_phone != null
+      ? body.parent_phone
+      : body.veli_telefon != null
+        ? body.veli_telefon
+        : "",
+    64
+  );
+
+  if (lead_type === "STUDENT") {
+    if (yasNum == null && !dogum_tarihi) {
+      return jsonResponse(
+        {
+          ok: false,
+          error: "Öğrenci başvurularında doğum tarihi veya yaş zorunludur."
+        },
+        400
+      );
+    }
+    if (isUnder18 && ((!veliAdSoyad && !parent_name) || !parent_phone)) {
+      return jsonResponse(
+        {
+          ok: false,
+          error: "18 yaş altı başvurularda veli adı soyadı ve veli telefonu zorunludur."
+        },
+        400
+      );
+    }
+  } else {
+    isUnder18 = false;
+  }
+
+  var whatsappBulkOptOut =
+    isUnder18 ||
+    body.whatsapp_bulk_opt_out === true ||
+    body.whatsapp_bulk_opt_out === 1 ||
+    body.whatsapp_bulk_opt_out === "1" ||
+    body.exclude_from_whatsapp_marketing === true ||
+    body.exclude_from_whatsapp_marketing === 1 ||
+    body.exclude_from_whatsapp_marketing === "1"
+      ? 1
+      : 0;
+
   if (lead_type !== "STUDENT" && lead_type !== "PARENT") {
     return jsonResponse(
       {
@@ -233,7 +335,19 @@ async function handleSubmitForm(request, env) {
     hedef_ulke_country_id: Number(countryRow.id),
     landing_page: landing_page,
     kvkk_onay: 1,
-    submitted_at: new Date().toISOString(),
+    submitted_at: formSubmittedAt,
+    form_submitted_at: formSubmittedAt,
+    created_at: formSubmittedAt,
+    dogum_tarihi: dogum_tarihi || undefined,
+    yas: yasNum != null ? yasNum : undefined,
+    is_under_18: isUnder18 === true,
+    veli_ad_soyad: veliAdSoyad || undefined,
+    veli_telefon: parent_phone || undefined,
+    parent_name: parent_name || undefined,
+    parent_surname: parent_surname || undefined,
+    parent_phone: parent_phone || undefined,
+    whatsapp_bulk_opt_out: whatsappBulkOptOut,
+    exclude_from_whatsapp_marketing: whatsappBulkOptOut === 1,
     turnstile_token: turnstile_token || undefined,
     raw_payload: body
   };

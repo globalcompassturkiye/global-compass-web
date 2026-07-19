@@ -546,6 +546,261 @@
     return r && r.value ? r.value : '';
   }
 
+  function splitAdSoyad(full) {
+    var parts = String(full || '')
+      .trim()
+      .split(/\s+/)
+      .filter(Boolean);
+    if (!parts.length) return { ad: '', soyad: '' };
+    if (parts.length === 1) return { ad: parts[0], soyad: '' };
+    return { ad: parts[0], soyad: parts.slice(1).join(' ') };
+  }
+
+  /** GG.AA.YYYY / GG/AA/YYYY / YYYY-MM-DD veya düz yaş (1–120). */
+  function parseDogumTarihiVeyaYas(raw) {
+    var s = String(raw || '').trim();
+    if (!s) {
+      return { ok: false, error: 'Doğum tarihi veya yaş alanı zorunludur.' };
+    }
+    if (/^\d{1,3}$/.test(s)) {
+      var ageNum = Number(s);
+      if (!Number.isFinite(ageNum) || ageNum < 1 || ageNum > 120) {
+        return { ok: false, error: 'Geçerli bir yaş girin (1–120).' };
+      }
+      return {
+        ok: true,
+        age: ageNum,
+        birthIso: '',
+        isUnder18: ageNum < 18
+      };
+    }
+    var m = s.match(/^(\d{1,2})[./](\d{1,2})[./](\d{4})$/);
+    var y;
+    var mo;
+    var d;
+    if (m) {
+      d = Number(m[1]);
+      mo = Number(m[2]);
+      y = Number(m[3]);
+    } else {
+      m = s.match(/^(\d{4})-(\d{1,2})-(\d{1,2})$/);
+      if (!m) {
+        return {
+          ok: false,
+          error: 'Doğum tarihi GG.AA.YYYY veya yaş (ör. 16) olarak girin.'
+        };
+      }
+      y = Number(m[1]);
+      mo = Number(m[2]);
+      d = Number(m[3]);
+    }
+    if (!y || !mo || !d || mo < 1 || mo > 12 || d < 1 || d > 31) {
+      return { ok: false, error: 'Geçerli bir doğum tarihi girin.' };
+    }
+    var birth = new Date(y, mo - 1, d);
+    if (
+      birth.getFullYear() !== y ||
+      birth.getMonth() !== mo - 1 ||
+      birth.getDate() !== d
+    ) {
+      return { ok: false, error: 'Geçerli bir doğum tarihi girin.' };
+    }
+    var now = new Date();
+    var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    if (birth > today) {
+      return { ok: false, error: 'Doğum tarihi gelecekte olamaz.' };
+    }
+    var age = today.getFullYear() - y;
+    if (
+      today.getMonth() + 1 < mo ||
+      (today.getMonth() + 1 === mo && today.getDate() < d)
+    ) {
+      age -= 1;
+    }
+    if (age < 0 || age > 120) {
+      return { ok: false, error: 'Geçerli bir doğum tarihi girin.' };
+    }
+    var mm = mo < 10 ? '0' + mo : String(mo);
+    var dd = d < 10 ? '0' + d : String(d);
+    return {
+      ok: true,
+      age: age,
+      birthIso: y + '-' + mm + '-' + dd,
+      isUnder18: age < 18
+    };
+  }
+
+  function ensureYasVeliUi(form) {
+    if (!form) return null;
+    var existing = form.querySelector('.iletisim-yas-veli-wrap');
+    if (existing) return existing;
+
+    var radioGrup = form.querySelector('.radyo-grup');
+    if (!radioGrup || !radioGrup.parentNode) return null;
+    var insertAfter =
+      radioGrup.closest('.form-grup') || radioGrup;
+
+    var wrap = document.createElement('div');
+    wrap.className = 'iletisim-yas-veli-wrap';
+
+    var yasBlok = document.createElement('div');
+    yasBlok.className = 'form-grup iletisim-yas-blok';
+    yasBlok.hidden = true;
+    var yasAlan = document.createElement('div');
+    yasAlan.className = 'form-alan';
+    var yasInput = document.createElement('input');
+    yasInput.type = 'text';
+    yasInput.name = 'dogum_tarihi_veya_yas';
+    yasInput.id = 'dogum-tarihi-veya-yas';
+    yasInput.maxLength = 32;
+    yasInput.autocomplete = 'bday';
+    yasInput.placeholder = 'Doğum Tarihi (GG.AA.YYYY) veya Yaş';
+    yasInput.setAttribute('aria-label', 'Doğum Tarihi (GG.AA.YYYY) veya Yaş');
+    yasInput.disabled = true;
+    yasAlan.appendChild(yasInput);
+    yasBlok.appendChild(yasAlan);
+
+    var veliBlok = document.createElement('div');
+    veliBlok.className = 'form-satir iletisim-veli-blok';
+    veliBlok.hidden = true;
+
+    var veliAdAlan = document.createElement('div');
+    veliAdAlan.className = 'form-alan';
+    var veliAd = document.createElement('input');
+    veliAd.type = 'text';
+    veliAd.name = 'veli_ad_soyad';
+    veliAd.id = 'veli-ad-soyad';
+    veliAd.maxLength = 160;
+    veliAd.autocomplete = 'name';
+    veliAd.placeholder = 'Velinizin Adı Soyadı*';
+    veliAd.setAttribute('aria-label', 'Velinizin Adı Soyadı');
+    veliAd.disabled = true;
+    veliAdAlan.appendChild(veliAd);
+
+    var veliTelAlan = document.createElement('div');
+    veliTelAlan.className = 'form-alan';
+    var veliTel = document.createElement('input');
+    veliTel.type = 'tel';
+    veliTel.name = 'veli_telefon';
+    veliTel.id = 'veli-telefon';
+    veliTel.maxLength = 64;
+    veliTel.autocomplete = 'tel';
+    veliTel.placeholder = 'Velinizin Telefonu*';
+    veliTel.setAttribute('aria-label', 'Velinizin Telefonu');
+    veliTel.disabled = true;
+    veliTelAlan.appendChild(veliTel);
+
+    veliBlok.appendChild(veliAdAlan);
+    veliBlok.appendChild(veliTelAlan);
+
+    wrap.appendChild(yasBlok);
+    wrap.appendChild(veliBlok);
+    insertAfter.parentNode.insertBefore(wrap, insertAfter.nextSibling);
+    return wrap;
+  }
+
+  function syncYasVeliFields(form) {
+    ensureYasVeliUi(form);
+    var kimlik = kimlikValue(form);
+    var yasBlok = form.querySelector('.iletisim-yas-blok');
+    var veliBlok = form.querySelector('.iletisim-veli-blok');
+    var yasInput = form.querySelector('input[name="dogum_tarihi_veya_yas"]');
+    var veliAd = form.querySelector('input[name="veli_ad_soyad"]');
+    var veliTel = form.querySelector('input[name="veli_telefon"]');
+    if (!yasBlok || !veliBlok || !yasInput || !veliAd || !veliTel) return;
+
+    var isOgrenci = kimlik === 'ogrenci';
+    yasBlok.hidden = !isOgrenci;
+    yasInput.disabled = !isOgrenci;
+    yasInput.required = isOgrenci;
+    if (!isOgrenci) {
+      yasInput.value = '';
+      clearFieldError(yasInput);
+      veliBlok.hidden = true;
+      veliAd.disabled = true;
+      veliTel.disabled = true;
+      veliAd.required = false;
+      veliTel.required = false;
+      veliAd.value = '';
+      veliTel.value = '';
+      clearFieldError(veliAd);
+      clearFieldError(veliTel);
+      return;
+    }
+
+    var parsed = parseDogumTarihiVeyaYas(yasInput.value);
+    var under18 = parsed.ok && parsed.isUnder18 === true;
+    veliBlok.hidden = !under18;
+    veliAd.disabled = !under18;
+    veliTel.disabled = !under18;
+    veliAd.required = under18;
+    veliTel.required = under18;
+    if (!under18) {
+      veliAd.value = '';
+      veliTel.value = '';
+      clearFieldError(veliAd);
+      clearFieldError(veliTel);
+    }
+  }
+
+  function readYasVeliState(form) {
+    var kimlik = kimlikValue(form);
+    if (kimlik !== 'ogrenci') {
+      return {
+        ok: true,
+        isOgrenci: false,
+        isUnder18: false,
+        age: null,
+        birthIso: '',
+        veliAdSoyad: '',
+        veliTelefon: ''
+      };
+    }
+    var yasInput = form.querySelector('input[name="dogum_tarihi_veya_yas"]');
+    var parsed = parseDogumTarihiVeyaYas(yasInput ? yasInput.value : '');
+    if (!parsed.ok) {
+      return { ok: false, error: parsed.error, field: yasInput };
+    }
+    if (!parsed.isUnder18) {
+      return {
+        ok: true,
+        isOgrenci: true,
+        isUnder18: false,
+        age: parsed.age,
+        birthIso: parsed.birthIso,
+        veliAdSoyad: '',
+        veliTelefon: ''
+      };
+    }
+    var veliAd = form.querySelector('input[name="veli_ad_soyad"]');
+    var veliTel = form.querySelector('input[name="veli_telefon"]');
+    var veliAdSoyad = valTrim(veliAd);
+    var veliTelefon = valTrim(veliTel);
+    if (!veliAdSoyad) {
+      return {
+        ok: false,
+        error: '18 yaş altı başvurularda velinizin adı soyadı zorunludur.',
+        field: veliAd
+      };
+    }
+    if (!veliTelefon) {
+      return {
+        ok: false,
+        error: '18 yaş altı başvurularda velinizin telefonu zorunludur.',
+        field: veliTel
+      };
+    }
+    return {
+      ok: true,
+      isOgrenci: true,
+      isUnder18: true,
+      age: parsed.age,
+      birthIso: parsed.birthIso,
+      veliAdSoyad: veliAdSoyad,
+      veliTelefon: veliTelefon
+    };
+  }
+
   function wireKvkkCheckbox(form) {
     if (form.querySelector('input[name="kvkk_onay"]')) return;
     var cb =
@@ -599,6 +854,7 @@
       if (!el || el.disabled || el.readOnly) return;
       var t = (el.type || '').toLowerCase();
       if (t === 'hidden' || t === 'submit' || t === 'button' || t === 'reset') return;
+      if (el.closest && el.closest('[hidden]')) return;
       el.required = true;
     });
   }
@@ -628,13 +884,31 @@
     return (h1.textContent || '').replace(/\s+/g, ' ').trim();
   }
 
-  function bind() {
-    var form = document.getElementById('iletisim-formu');
-    if (!form) return;
+  function findIletisimForms() {
+    var list = [];
+    var seen = {};
+    function add(f) {
+      if (!f || !f.tagName || f.tagName.toLowerCase() !== 'form') return;
+      var id = f.id || '';
+      var key = id || String(list.length);
+      if (seen[key]) return;
+      seen[key] = true;
+      list.push(f);
+    }
+    add(document.getElementById('iletisim-formu'));
+    document.querySelectorAll('form[id^="iletisim-formu"]').forEach(add);
+    return list;
+  }
+
+  function bindForm(form) {
+    if (!form || form.getAttribute('data-iletisim-bound') === '1') return;
+    form.setAttribute('data-iletisim-bound', '1');
     form.setAttribute('novalidate', 'novalidate');
     wireKvkkCheckbox(form);
     upgradeHedefUlkeField(form);
     wrapFormSatirFields(form);
+    ensureYasVeliUi(form);
+    syncYasVeliFields(form);
     enforceAllFieldsRequired(form);
     mountTurnstile(form);
 
@@ -643,15 +917,24 @@
       if (t && t.matches && t.matches('input:not([type="radio"]):not([type="checkbox"]), textarea, select')) {
         clearFieldError(t);
       }
+      if (t && t.name === 'dogum_tarihi_veya_yas') {
+        syncYasVeliFields(form);
+      }
     });
 
     form.addEventListener('change', function (ev) {
       var t = ev.target;
       if (t && t.type === 'radio' && t.name && t.name.indexOf('kimlik') === 0) {
         clearKimlikGroupErrors(form);
+        syncYasVeliFields(form);
+        enforceAllFieldsRequired(form);
       }
       if (t && (t.type === 'checkbox' || (t.tagName && t.tagName.toLowerCase() === 'select'))) {
         clearFieldError(t);
+      }
+      if (t && t.name === 'dogum_tarihi_veya_yas') {
+        syncYasVeliFields(form);
+        enforceAllFieldsRequired(form);
       }
     });
 
@@ -659,6 +942,8 @@
       e.preventDefault();
       var buton = form.querySelector('button[type="submit"]');
       if (buton) buton.disabled = true;
+
+      syncYasVeliFields(form);
 
       if (!validateAndShowErrors(form)) {
         if (buton) buton.disabled = false;
@@ -686,6 +971,16 @@
         return;
       }
 
+      var yasVeli = readYasVeliState(form);
+      if (!yasVeli.ok) {
+        if (yasVeli.field) setFieldError(yasVeli.field, yasVeli.error);
+        if (buton) buton.disabled = false;
+        if (yasVeli.field && typeof yasVeli.field.focus === 'function') {
+          yasVeli.field.focus();
+        }
+        return;
+      }
+
       var siteKey = turnstileSiteKey();
       var turnstileToken = getTurnstileToken(form);
       if (siteKey && !turnstileToken) {
@@ -703,6 +998,8 @@
         return;
       }
 
+      var submittedAt = new Date().toISOString();
+      var veliParts = splitAdSoyad(yasVeli.veliAdSoyad);
       var payload = {
         ad: valField(form, 'ad'),
         soyad: valField(form, 'soyad'),
@@ -715,7 +1012,20 @@
         mesaj: valField(form, 'mesaj'),
         landing_page: pageH1Text(),
         kvkk_onay: kvkkAccepted(form) ? 1 : 0,
-        turnstile_token: turnstileToken
+        turnstile_token: turnstileToken,
+        form_submitted_at: submittedAt,
+        created_at: submittedAt,
+        submitted_at: submittedAt,
+        dogum_tarihi: yasVeli.birthIso || '',
+        yas: yasVeli.age != null ? yasVeli.age : null,
+        is_under_18: yasVeli.isUnder18 === true,
+        veli_ad_soyad: yasVeli.veliAdSoyad || '',
+        veli_telefon: yasVeli.veliTelefon || '',
+        parent_name: veliParts.ad || '',
+        parent_surname: veliParts.soyad || '',
+        parent_phone: yasVeli.veliTelefon || '',
+        whatsapp_bulk_opt_out: yasVeli.isUnder18 ? 1 : 0,
+        exclude_from_whatsapp_marketing: yasVeli.isUnder18 === true
       };
       var butonMetin = buton ? buton.textContent : '';
       if (buton) buton.textContent = 'İletiliyor…';
@@ -729,6 +1039,8 @@
           wireKvkkCheckbox(form);
           upgradeHedefUlkeField(form);
           wrapFormSatirFields(form);
+          ensureYasVeliUi(form);
+          syncYasVeliFields(form);
           enforceAllFieldsRequired(form);
           resetTurnstile(form);
           showBildirim(
@@ -748,6 +1060,10 @@
           });
         });
     });
+  }
+
+  function bind() {
+    findIletisimForms().forEach(bindForm);
   }
 
   function postSubmit(payload) {
