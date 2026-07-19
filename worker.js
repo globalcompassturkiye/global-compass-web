@@ -450,41 +450,57 @@ async function handleSubmitForm(request, env) {
   return jsonResponse({ ok: true }, 201);
 }
 
-/** D1 countries.name (EN) → formda görünen Türkçe etiket. D1 değeri değişmez. */
+/** D1 countries.name (EN) → formda görünen Türkçe etiket. D1 / CRM değeri değişmez. */
 var COUNTRY_LABEL_TR = {
+  Albania: "Arnavutluk",
+  Andorra: "Andorra",
+  Armenia: "Ermenistan",
   Australia: "Avustralya",
   Austria: "Avusturya",
   Azerbaijan: "Azerbaycan",
+  Belarus: "Belarus",
   Belgium: "Belçika",
+  "Bosnia and Herzegovina": "Bosna-Hersek",
   Bulgaria: "Bulgaristan",
   Canada: "Kanada",
   China: "Çin",
+  Croatia: "Hırvatistan",
   Cyprus: "Kıbrıs",
   Czechia: "Çekya",
   Denmark: "Danimarka",
   Estonia: "Estonya",
   Finland: "Finlandiya",
   France: "Fransa",
+  Georgia: "Gürcistan",
   Germany: "Almanya",
   Greece: "Yunanistan",
   Hungary: "Macaristan",
+  Iceland: "İzlanda",
   India: "Hindistan",
   Ireland: "İrlanda",
   Italy: "İtalya",
   Japan: "Japonya",
   Kazakhstan: "Kazakistan",
+  Kosovo: "Kosova",
   Kyrgyzstan: "Kırgızistan",
   Latvia: "Letonya",
+  Liechtenstein: "Liechtenstein",
   Lithuania: "Litvanya",
   Luxembourg: "Lüksemburg",
   Malta: "Malta",
+  Moldova: "Moldova",
+  Monaco: "Monako",
+  Montenegro: "Karadağ",
   Netherlands: "Hollanda",
   "New Zealand": "Yeni Zelanda",
+  "North Macedonia": "Kuzey Makedonya",
   Norway: "Norveç",
   Poland: "Polonya",
   Portugal: "Portekiz",
   Romania: "Romanya",
   Russia: "Rusya",
+  "San Marino": "San Marino",
+  Serbia: "Sırbistan",
   Singapore: "Singapur",
   Slovakia: "Slovakya",
   Slovenia: "Slovenya",
@@ -495,12 +511,18 @@ var COUNTRY_LABEL_TR = {
   Turkey: "Türkiye",
   Ukraine: "Ukrayna",
   "United Kingdom": "Birleşik Krallık",
-  "United States": "Amerika Birleşik Devletleri"
+  "United States": "Amerika Birleşik Devletleri",
+  "Vatican City": "Vatikan"
 };
 
 function countryLabelTr(englishName) {
   var n = String(englishName || "").trim();
-  return COUNTRY_LABEL_TR[n] || n;
+  if (Object.prototype.hasOwnProperty.call(COUNTRY_LABEL_TR, n)) {
+    return COUNTRY_LABEL_TR[n];
+  }
+  // Yeni ülke eklendiyse görünür uyarı; formda yine de İngilizce düşmesin diye boş bırakma
+  console.warn("[countries] Türkçe etiket eksik:", n);
+  return n;
 }
 
 async function handleCountries(env) {
