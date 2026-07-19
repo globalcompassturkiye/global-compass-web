@@ -223,8 +223,39 @@ async function handleSubmitForm(request, env) {
         : "",
     64
   );
+  var parent_email = truncStr(
+    body.parent_email != null
+      ? body.parent_email
+      : body.veli_email != null
+        ? body.veli_email
+        : "",
+    254
+  );
 
-  if (lead_type === "STUDENT") {
+  // 18 altı öğrenci akışı: yalnızca veli iletişim kaydı (PARENT); öğrenci PII yok.
+  if (isUnder18) {
+    lead_type = "PARENT";
+    if (!parent_name) parent_name = adRaw;
+    if (!parent_surname) parent_surname = soyadRaw;
+    if (!parent_phone) parent_phone = telefonRaw;
+    if (!parent_email) parent_email = emailRaw;
+    if (!parent_name || !parent_surname || !parent_phone || !parent_email) {
+      return jsonResponse(
+        {
+          ok: false,
+          error: "18 yaş altı başvurularda veli adı, soyadı, telefonu ve e-posta zorunludur."
+        },
+        400
+      );
+    }
+    // CRM PARENT eşlemesi ad/soyad/email/telefon üzerinden veliye yazar.
+    adRaw = parent_name;
+    soyadRaw = parent_surname;
+    telefonRaw = parent_phone;
+    emailRaw = parent_email;
+    dogum_tarihi = "";
+    yasNum = null;
+  } else if (lead_type === "STUDENT") {
     if (yasNum == null && !dogum_tarihi) {
       return jsonResponse(
         {
@@ -234,21 +265,16 @@ async function handleSubmitForm(request, env) {
         400
       );
     }
-    if (isUnder18 && (!parent_name || !parent_surname || !parent_phone)) {
-      return jsonResponse(
-        {
-          ok: false,
-          error: "18 yaş altı başvurularda veli adı, soyadı ve telefonu zorunludur."
-        },
-        400
-      );
-    }
-  } else {
-    // Veliyim: formdaki ad/soyad/telefon zaten veli olarak kaydedilir; ek veli alanı yok.
-    isUnder18 = false;
     parent_name = "";
     parent_surname = "";
     parent_phone = "";
+    parent_email = "";
+  } else {
+    // Veliyim (reşit başvuru sahibi): formdaki alanlar zaten veli.
+    parent_name = "";
+    parent_surname = "";
+    parent_phone = "";
+    parent_email = "";
   }
 
   var whatsappBulkOptOut =
@@ -357,9 +383,11 @@ async function handleSubmitForm(request, env) {
     veli_ad: parent_name || undefined,
     veli_soyad: parent_surname || undefined,
     veli_telefon: parent_phone || undefined,
+    veli_email: parent_email || undefined,
     parent_name: parent_name || undefined,
     parent_surname: parent_surname || undefined,
     parent_phone: parent_phone || undefined,
+    parent_email: parent_email || undefined,
     whatsapp_bulk_opt_out: whatsappBulkOptOut,
     exclude_from_whatsapp_marketing: whatsappBulkOptOut === 1,
     turnstile_token: turnstile_token || undefined,

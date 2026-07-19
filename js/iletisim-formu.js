@@ -651,11 +651,11 @@
     if (!form) return null;
     var existing = form.querySelector('.iletisim-yas-veli-wrap');
     if (existing) {
-      // Eski tek satırlı "adı soyadı" alanını yeni ad+soyad yapısına yükselt
-      if (
-        existing.querySelector('input[name="veli_ad_soyad"]') &&
-        !existing.querySelector('input[name="veli_ad"]')
-      ) {
+      var needsUpgrade =
+        (existing.querySelector('input[name="veli_ad_soyad"]') &&
+          !existing.querySelector('input[name="veli_ad"]')) ||
+        !existing.querySelector('input[name="veli_email"]');
+      if (needsUpgrade) {
         existing.parentNode.removeChild(existing);
       } else {
         return existing;
@@ -690,52 +690,93 @@
       id: 'veli-ad',
       maxLength: 120,
       autocomplete: 'given-name',
-      placeholder: 'Velinizin Adı*',
-      ariaLabel: 'Velinizin Adı'
+      placeholder: 'Veli Adı*',
+      ariaLabel: 'Veli Adı'
     });
     var veliSoyad = makeTextInput({
       name: 'veli_soyad',
       id: 'veli-soyad',
       maxLength: 120,
       autocomplete: 'family-name',
-      placeholder: 'Velinizin Soyadı*',
-      ariaLabel: 'Velinizin Soyadı'
+      placeholder: 'Veli Soyadı*',
+      ariaLabel: 'Veli Soyadı'
     });
     veliAdSoyadSatir.appendChild(veliAd.wrap);
     veliAdSoyadSatir.appendChild(veliSoyad.wrap);
 
-    var veliTelSatir = document.createElement('div');
-    veliTelSatir.className = 'form-satir iletisim-veli-blok iletisim-veli-telefon';
-    veliTelSatir.hidden = true;
+    var veliIletisimSatir = document.createElement('div');
+    veliIletisimSatir.className = 'form-satir iletisim-veli-blok iletisim-veli-iletisim';
+    veliIletisimSatir.hidden = true;
     var veliTel = makeTextInput({
       type: 'tel',
       name: 'veli_telefon',
       id: 'veli-telefon',
       maxLength: 64,
       autocomplete: 'tel',
-      placeholder: 'Velinizin Telefonu*',
-      ariaLabel: 'Velinizin Telefonu'
+      placeholder: 'Veli Telefonu*',
+      ariaLabel: 'Veli Telefonu'
     });
-    veliTelSatir.appendChild(veliTel.wrap);
+    var veliEmail = makeTextInput({
+      type: 'email',
+      name: 'veli_email',
+      id: 'veli-email',
+      maxLength: 254,
+      autocomplete: 'email',
+      placeholder: 'Veli E-Posta*',
+      ariaLabel: 'Veli E-Posta'
+    });
+    veliIletisimSatir.appendChild(veliTel.wrap);
+    veliIletisimSatir.appendChild(veliEmail.wrap);
 
     wrap.appendChild(yasBlok);
     wrap.appendChild(veliAdSoyadSatir);
-    wrap.appendChild(veliTelSatir);
+    wrap.appendChild(veliIletisimSatir);
     insertAfter.parentNode.insertBefore(wrap, insertAfter.nextSibling);
     return wrap;
+  }
+
+  /** Ana ad/soyad/telefon/e-posta satırlarını göster/gizle (öğrenci veya veli kimliği). */
+  function setAnaKontaktVisible(form, visible) {
+    var names = ['ad', 'soyad', 'telefon', 'email'];
+    var rows = [];
+    names.forEach(function (name) {
+      var el = form.querySelector('input[name="' + name + '"]');
+      if (!el) return;
+      el.disabled = !visible;
+      el.required = visible;
+      if (!visible) {
+        el.value = '';
+        clearFieldError(el);
+      }
+      var row = el.closest('.form-satir');
+      if (row && rows.indexOf(row) === -1) rows.push(row);
+    });
+    rows.forEach(function (row) {
+      row.hidden = !visible;
+    });
   }
 
   function setVeliFieldsState(form, under18) {
     var veliAd = form.querySelector('input[name="veli_ad"]');
     var veliSoyad = form.querySelector('input[name="veli_soyad"]');
     var veliTel = form.querySelector('input[name="veli_telefon"]');
+    var veliEmail = form.querySelector('input[name="veli_email"]');
     var adSoyadBlok = form.querySelector('.iletisim-veli-ad-soyad');
-    var telBlok = form.querySelector('.iletisim-veli-telefon');
-    if (!veliAd || !veliSoyad || !veliTel || !adSoyadBlok || !telBlok) return;
+    var iletisimBlok = form.querySelector('.iletisim-veli-iletisim');
+    if (
+      !veliAd ||
+      !veliSoyad ||
+      !veliTel ||
+      !veliEmail ||
+      !adSoyadBlok ||
+      !iletisimBlok
+    ) {
+      return;
+    }
 
     adSoyadBlok.hidden = !under18;
-    telBlok.hidden = !under18;
-    [veliAd, veliSoyad, veliTel].forEach(function (el) {
+    iletisimBlok.hidden = !under18;
+    [veliAd, veliSoyad, veliTel, veliEmail].forEach(function (el) {
       el.disabled = !under18;
       el.required = under18;
       if (!under18) {
@@ -753,19 +794,48 @@
     if (!yasBlok || !yasInput) return;
 
     var isOgrenci = kimlik === 'ogrenci';
+    var isVeli = kimlik === 'veli';
     yasBlok.hidden = !isOgrenci;
     yasInput.disabled = !isOgrenci;
     yasInput.required = isOgrenci;
+
+    if (isVeli) {
+      yasInput.value = '';
+      clearFieldError(yasInput);
+      setVeliFieldsState(form, false);
+      setAnaKontaktVisible(form, true);
+      return;
+    }
+
     if (!isOgrenci) {
       yasInput.value = '';
       clearFieldError(yasInput);
       setVeliFieldsState(form, false);
+      setAnaKontaktVisible(form, true);
       return;
     }
 
-    var parsed = parseDogumTarihiVeyaYas(yasInput.value);
-    var under18 = parsed.ok && parsed.isUnder18 === true;
-    setVeliFieldsState(form, under18);
+    var rawYas = String(yasInput.value || '').trim();
+    if (!rawYas) {
+      setVeliFieldsState(form, false);
+      setAnaKontaktVisible(form, false);
+      return;
+    }
+
+    var parsed = parseDogumTarihiVeyaYas(rawYas);
+    if (!parsed.ok) {
+      setVeliFieldsState(form, false);
+      setAnaKontaktVisible(form, false);
+      return;
+    }
+
+    if (parsed.isUnder18) {
+      setVeliFieldsState(form, true);
+      setAnaKontaktVisible(form, false);
+    } else {
+      setVeliFieldsState(form, false);
+      setAnaKontaktVisible(form, true);
+    }
   }
 
   function readYasVeliState(form) {
@@ -779,7 +849,8 @@
         birthIso: '',
         veliAd: '',
         veliSoyad: '',
-        veliTelefon: ''
+        veliTelefon: '',
+        veliEmail: ''
       };
     }
     var yasInput = form.querySelector('input[name="dogum_tarihi_veya_yas"]');
@@ -796,34 +867,44 @@
         birthIso: parsed.birthIso,
         veliAd: '',
         veliSoyad: '',
-        veliTelefon: ''
+        veliTelefon: '',
+        veliEmail: ''
       };
     }
     var veliAdEl = form.querySelector('input[name="veli_ad"]');
     var veliSoyadEl = form.querySelector('input[name="veli_soyad"]');
     var veliTelEl = form.querySelector('input[name="veli_telefon"]');
+    var veliEmailEl = form.querySelector('input[name="veli_email"]');
     var veliAd = valTrim(veliAdEl);
     var veliSoyad = valTrim(veliSoyadEl);
     var veliTelefon = valTrim(veliTelEl);
+    var veliEmail = valTrim(veliEmailEl);
     if (!veliAd) {
       return {
         ok: false,
-        error: '18 yaş altı başvurularda velinizin adı zorunludur.',
+        error: '18 yaş altı başvurularda veli adı zorunludur.',
         field: veliAdEl
       };
     }
     if (!veliSoyad) {
       return {
         ok: false,
-        error: '18 yaş altı başvurularda velinizin soyadı zorunludur.',
+        error: '18 yaş altı başvurularda veli soyadı zorunludur.',
         field: veliSoyadEl
       };
     }
     if (!veliTelefon) {
       return {
         ok: false,
-        error: '18 yaş altı başvurularda velinizin telefonu zorunludur.',
+        error: '18 yaş altı başvurularda veli telefonu zorunludur.',
         field: veliTelEl
+      };
+    }
+    if (!veliEmail) {
+      return {
+        ok: false,
+        error: '18 yaş altı başvurularda veli e-posta zorunludur.',
+        field: veliEmailEl
       };
     }
     return {
@@ -834,7 +915,8 @@
       birthIso: parsed.birthIso,
       veliAd: veliAd,
       veliSoyad: veliSoyad,
-      veliTelefon: veliTelefon
+      veliTelefon: veliTelefon,
+      veliEmail: veliEmail
     };
   }
 
@@ -1037,12 +1119,15 @@
       }
 
       var submittedAt = new Date().toISOString();
+      // 18 altı: yalnızca veli iletişim bilgisi kaydedilir (öğrenci PII yok) → PARENT
+      var under18 = yasVeli.isUnder18 === true;
       var payload = {
-        ad: valField(form, 'ad'),
-        soyad: valField(form, 'soyad'),
-        email: valField(form, 'email'),
-        telefon: valField(form, 'telefon'),
-        lead_type: kimlikVal === 'veli' ? 'PARENT' : 'STUDENT',
+        ad: under18 ? yasVeli.veliAd : valField(form, 'ad'),
+        soyad: under18 ? yasVeli.veliSoyad : valField(form, 'soyad'),
+        email: under18 ? yasVeli.veliEmail : valField(form, 'email'),
+        telefon: under18 ? yasVeli.veliTelefon : valField(form, 'telefon'),
+        lead_type:
+          kimlikVal === 'veli' || under18 ? 'PARENT' : 'STUDENT',
         ilgilenilen_program: valField(form, 'hangi_program'),
         hedef_ulke: ulke.name,
         hedef_ulke_country_id: Number(ulke.id),
@@ -1053,17 +1138,19 @@
         form_submitted_at: submittedAt,
         created_at: submittedAt,
         submitted_at: submittedAt,
-        dogum_tarihi: yasVeli.birthIso || '',
-        yas: yasVeli.age != null ? yasVeli.age : null,
-        is_under_18: yasVeli.isUnder18 === true,
-        veli_ad: yasVeli.veliAd || '',
-        veli_soyad: yasVeli.veliSoyad || '',
-        veli_telefon: yasVeli.veliTelefon || '',
-        parent_name: yasVeli.veliAd || '',
-        parent_surname: yasVeli.veliSoyad || '',
-        parent_phone: yasVeli.veliTelefon || '',
-        whatsapp_bulk_opt_out: yasVeli.isUnder18 ? 1 : 0,
-        exclude_from_whatsapp_marketing: yasVeli.isUnder18 === true
+        dogum_tarihi: under18 ? '' : yasVeli.birthIso || '',
+        yas: under18 ? null : yasVeli.age != null ? yasVeli.age : null,
+        is_under_18: under18,
+        veli_ad: under18 ? yasVeli.veliAd : '',
+        veli_soyad: under18 ? yasVeli.veliSoyad : '',
+        veli_telefon: under18 ? yasVeli.veliTelefon : '',
+        veli_email: under18 ? yasVeli.veliEmail : '',
+        parent_name: under18 ? yasVeli.veliAd : '',
+        parent_surname: under18 ? yasVeli.veliSoyad : '',
+        parent_phone: under18 ? yasVeli.veliTelefon : '',
+        parent_email: under18 ? yasVeli.veliEmail : '',
+        whatsapp_bulk_opt_out: under18 ? 1 : 0,
+        exclude_from_whatsapp_marketing: under18
       };
       var butonMetin = buton ? buton.textContent : '';
       if (buton) buton.textContent = 'İletiliyor…';

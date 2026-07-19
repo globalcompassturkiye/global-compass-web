@@ -356,8 +356,9 @@ article.icerik-alani .iletisim-form-alani > .hizmet-alanlari-baslik.icerik-bilgi
     margin-bottom: 8px;
 }
 
-.iletisim-yas-veli-wrap .iletisim-veli-telefon > .form-alan {
-    flex: 1 1 100%;
+.iletisim-form-alani .form-satir[hidden],
+.iletisim-yas-veli-wrap [hidden] {
+    display: none !important;
 }
 
 .iletisim-yas-veli-wrap input:disabled {
