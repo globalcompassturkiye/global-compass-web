@@ -572,7 +572,8 @@
         ok: true,
         age: ageNum,
         birthIso: '',
-        isUnder18: ageNum < 18
+        isUnder18: ageNum < 18,
+        mode: 'yas'
       };
     }
     var m = s.match(/^(\d{1,2})[./](\d{1,2})[./](\d{4})$/);
@@ -588,7 +589,8 @@
       if (!m) {
         return {
           ok: false,
-          error: 'Doğum tarihi GG.AA.YYYY veya yaş (ör. 16) olarak girin.'
+          error: 'Doğum tarihi GG.AA.YYYY veya yaş (ör. 16) olarak girin.',
+          mode: 'partial'
         };
       }
       y = Number(m[1]);
@@ -596,7 +598,7 @@
       d = Number(m[3]);
     }
     if (!y || !mo || !d || mo < 1 || mo > 12 || d < 1 || d > 31) {
-      return { ok: false, error: 'Geçerli bir doğum tarihi girin.' };
+      return { ok: false, error: 'Geçerli bir doğum tarihi girin.', mode: 'tarih' };
     }
     var birth = new Date(y, mo - 1, d);
     if (
@@ -604,12 +606,12 @@
       birth.getMonth() !== mo - 1 ||
       birth.getDate() !== d
     ) {
-      return { ok: false, error: 'Geçerli bir doğum tarihi girin.' };
+      return { ok: false, error: 'Geçerli bir doğum tarihi girin.', mode: 'tarih' };
     }
     var now = new Date();
     var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
     if (birth > today) {
-      return { ok: false, error: 'Doğum tarihi gelecekte olamaz.' };
+      return { ok: false, error: 'Doğum tarihi gelecekte olamaz.', mode: 'tarih' };
     }
     var age = today.getFullYear() - y;
     if (
@@ -619,7 +621,7 @@
       age -= 1;
     }
     if (age < 0 || age > 120) {
-      return { ok: false, error: 'Geçerli bir doğum tarihi girin.' };
+      return { ok: false, error: 'Geçerli bir doğum tarihi girin.', mode: 'tarih' };
     }
     var mm = mo < 10 ? '0' + mo : String(mo);
     var dd = d < 10 ? '0' + d : String(d);
@@ -627,8 +629,131 @@
       ok: true,
       age: age,
       birthIso: y + '-' + mm + '-' + dd,
-      isUnder18: age < 18
+      isUnder18: age < 18,
+      mode: 'tarih',
+      display: dd + '.' + mm + '.' + y
     };
+  }
+
+  /**
+   * Yazarken akıllı maske:
+   * - 1–3 rakam, nokta yok → yaş (ör. 16)
+   * - 4+ rakam veya nokta var → GG.AA.YYYY
+   */
+  function formatDogumTarihiInput(raw) {
+    var s = String(raw || '').replace(/\//g, '.');
+    var hasDot = s.indexOf('.') !== -1;
+    var digits = s.replace(/\D/g, '');
+    if (!hasDot && digits.length <= 3) {
+      return digits;
+    }
+    digits = digits.slice(0, 8);
+    if (digits.length <= 2) return digits;
+    if (digits.length <= 4) {
+      return digits.slice(0, 2) + '.' + digits.slice(2);
+    }
+    return digits.slice(0, 2) + '.' + digits.slice(2, 4) + '.' + digits.slice(4);
+  }
+
+  function updateYasOnizleme(form, yasInput) {
+    var tip = form.querySelector('.iletisim-yas-ipucu');
+    var oniz = form.querySelector('.iletisim-yas-onizleme');
+    if (!oniz) return;
+    if (!yasInput || yasInput.disabled || yasInput.closest('[hidden]')) {
+      oniz.hidden = true;
+      oniz.textContent = '';
+      oniz.classList.remove('iletisim-yas-onizleme--ok', 'iletisim-yas-onizleme--uyari');
+      return;
+    }
+    var raw = String(yasInput.value || '').trim();
+    if (!raw) {
+      oniz.hidden = true;
+      oniz.textContent = '';
+      oniz.classList.remove('iletisim-yas-onizleme--ok', 'iletisim-yas-onizleme--uyari');
+      if (tip) tip.hidden = false;
+      return;
+    }
+    // Kısmi tarih (henüz tamamlanmamış) — sessiz
+    if (/^\d{1,2}\.?$/.test(raw) || /^\d{1,2}\.\d{1,2}\.?$/.test(raw) || /^\d{1,2}\.\d{1,2}\.\d{1,3}$/.test(raw)) {
+      oniz.hidden = true;
+      oniz.textContent = '';
+      oniz.classList.remove('iletisim-yas-onizleme--ok', 'iletisim-yas-onizleme--uyari');
+      if (tip) tip.hidden = false;
+      return;
+    }
+    var parsed = parseDogumTarihiVeyaYas(raw);
+    if (!parsed.ok) {
+      oniz.hidden = false;
+      oniz.textContent = parsed.error || 'Geçersiz tarih';
+      oniz.classList.add('iletisim-yas-onizleme--uyari');
+      oniz.classList.remove('iletisim-yas-onizleme--ok');
+      if (tip) tip.hidden = true;
+      return;
+    }
+    oniz.hidden = false;
+    oniz.classList.add('iletisim-yas-onizleme--ok');
+    oniz.classList.remove('iletisim-yas-onizleme--uyari');
+    if (tip) tip.hidden = true;
+    if (parsed.mode === 'yas') {
+      oniz.textContent =
+        parsed.age +
+        ' yaş' +
+        (parsed.isUnder18 ? ' — veli iletişim bilgileri istenecek' : ' — öğrenci bilgileri yeterli');
+    } else {
+      oniz.textContent =
+        'Hesaplanan yaş: ' +
+        parsed.age +
+        (parsed.isUnder18 ? ' (18 altı — veli bilgileri istenecek)' : ' (18+ — öğrenci kaydı)');
+    }
+  }
+
+  function wireDogumTarihiSmartInput(form, yasInput) {
+    if (!yasInput || yasInput.getAttribute('data-yas-smart') === '1') return;
+    yasInput.setAttribute('data-yas-smart', '1');
+    yasInput.setAttribute('inputmode', 'numeric');
+    yasInput.setAttribute('autocomplete', 'bday');
+    yasInput.setAttribute('maxlength', '10');
+    yasInput.setAttribute(
+      'placeholder',
+      'Doğum tarihi (GG.AA.YYYY) veya yaş'
+    );
+    yasInput.setAttribute(
+      'aria-label',
+      'Doğum tarihi gün.ay.yıl veya yaş'
+    );
+    yasInput.setAttribute('aria-describedby', 'iletisim-yas-ipucu iletisim-yas-onizleme');
+
+    yasInput.addEventListener('input', function () {
+      var before = yasInput.value;
+      var formatted = formatDogumTarihiInput(before);
+      if (formatted !== before) {
+        var sel = yasInput.selectionStart;
+        yasInput.value = formatted;
+        // İmleci sonda tut (maske eklenince)
+        try {
+          var pos = formatted.length;
+          yasInput.setSelectionRange(pos, pos);
+        } catch (err) {
+          /* ignore */
+        }
+      }
+      updateYasOnizleme(form, yasInput);
+    });
+
+    yasInput.addEventListener('blur', function () {
+      var raw = String(yasInput.value || '').trim();
+      var digits = raw.replace(/\D/g, '');
+      if (digits.length === 8 && raw.indexOf('.') === -1) {
+        yasInput.value = formatDogumTarihiInput(digits);
+      }
+      var parsed = parseDogumTarihiVeyaYas(yasInput.value);
+      if (parsed.ok && parsed.display) {
+        yasInput.value = parsed.display;
+      }
+      updateYasOnizleme(form, yasInput);
+      syncYasVeliFields(form);
+      enforceAllFieldsRequired(form);
+    });
   }
 
   function makeTextInput(opts) {
@@ -654,10 +779,13 @@
       var needsUpgrade =
         (existing.querySelector('input[name="veli_ad_soyad"]') &&
           !existing.querySelector('input[name="veli_ad"]')) ||
-        !existing.querySelector('input[name="veli_email"]');
+        !existing.querySelector('input[name="veli_email"]') ||
+        !existing.querySelector('.iletisim-yas-ipucu');
       if (needsUpgrade) {
         existing.parentNode.removeChild(existing);
       } else {
+        var yasExisting = existing.querySelector('input[name="dogum_tarihi_veya_yas"]');
+        if (yasExisting) wireDogumTarihiSmartInput(form, yasExisting);
         return existing;
       }
     }
@@ -675,12 +803,25 @@
     var yasField = makeTextInput({
       name: 'dogum_tarihi_veya_yas',
       id: 'dogum-tarihi-veya-yas',
-      maxLength: 32,
+      maxLength: 10,
       autocomplete: 'bday',
-      placeholder: 'Doğum Tarihi (GG.AA.YYYY) veya Yaş',
-      ariaLabel: 'Doğum Tarihi (GG.AA.YYYY) veya Yaş'
+      placeholder: 'Doğum tarihi (GG.AA.YYYY) veya yaş',
+      ariaLabel: 'Doğum tarihi gün.ay.yıl veya yaş'
     });
+    var yasIpucu = document.createElement('p');
+    yasIpucu.className = 'iletisim-yas-ipucu';
+    yasIpucu.id = 'iletisim-yas-ipucu';
+    yasIpucu.textContent =
+      'Tarih yazın (ör. 15.03.2008) — noktalar otomatik eklenir. İsterseniz sadece yaş yazın (ör. 16).';
+    var yasOniz = document.createElement('p');
+    yasOniz.className = 'iletisim-yas-onizleme';
+    yasOniz.id = 'iletisim-yas-onizleme';
+    yasOniz.setAttribute('aria-live', 'polite');
+    yasOniz.hidden = true;
+    yasField.wrap.appendChild(yasIpucu);
+    yasField.wrap.appendChild(yasOniz);
     yasBlok.appendChild(yasField.wrap);
+    wireDogumTarihiSmartInput(form, yasField.input);
 
     var veliAdSoyadSatir = document.createElement('div');
     veliAdSoyadSatir.className = 'form-satir iletisim-veli-blok iletisim-veli-ad-soyad';
@@ -819,6 +960,7 @@
     if (!rawYas) {
       setVeliFieldsState(form, false);
       setAnaKontaktVisible(form, false);
+      updateYasOnizleme(form, yasInput);
       return;
     }
 
@@ -826,6 +968,7 @@
     if (!parsed.ok) {
       setVeliFieldsState(form, false);
       setAnaKontaktVisible(form, false);
+      updateYasOnizleme(form, yasInput);
       return;
     }
 
@@ -836,6 +979,7 @@
       setVeliFieldsState(form, false);
       setAnaKontaktVisible(form, true);
     }
+    updateYasOnizleme(form, yasInput);
   }
 
   function readYasVeliState(form) {

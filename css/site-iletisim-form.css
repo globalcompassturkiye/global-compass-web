@@ -343,6 +343,26 @@ article.icerik-alani .iletisim-form-alani > .hizmet-alanlari-baslik.icerik-bilgi
     margin: 0 0 12px;
 }
 
+.iletisim-yas-ipucu,
+.iletisim-yas-onizleme {
+    margin: 8px 0 0;
+    font-size: 13px;
+    line-height: 1.45;
+    font-weight: 500;
+}
+
+.iletisim-yas-ipucu {
+    color: #64748b;
+}
+
+.iletisim-yas-onizleme--ok {
+    color: #0f766e;
+}
+
+.iletisim-yas-onizleme--uyari {
+    color: #b91c1c;
+}
+
 .iletisim-yas-veli-wrap .iletisim-yas-blok .form-alan,
 .iletisim-yas-veli-wrap .iletisim-veli-blok > .form-alan {
     flex: 1 1 0;
