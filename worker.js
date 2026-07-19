@@ -191,11 +191,19 @@ async function handleSubmitForm(request, env) {
     160
   );
   var parent_name = truncStr(
-    body.parent_name != null ? body.parent_name : "",
+    body.parent_name != null
+      ? body.parent_name
+      : body.veli_ad != null
+        ? body.veli_ad
+        : "",
     120
   );
   var parent_surname = truncStr(
-    body.parent_surname != null ? body.parent_surname : "",
+    body.parent_surname != null
+      ? body.parent_surname
+      : body.veli_soyad != null
+        ? body.veli_soyad
+        : "",
     120
   );
   if ((!parent_name || !parent_surname) && veliAdSoyad) {
@@ -226,17 +234,21 @@ async function handleSubmitForm(request, env) {
         400
       );
     }
-    if (isUnder18 && ((!veliAdSoyad && !parent_name) || !parent_phone)) {
+    if (isUnder18 && (!parent_name || !parent_surname || !parent_phone)) {
       return jsonResponse(
         {
           ok: false,
-          error: "18 yaş altı başvurularda veli adı soyadı ve veli telefonu zorunludur."
+          error: "18 yaş altı başvurularda veli adı, soyadı ve telefonu zorunludur."
         },
         400
       );
     }
   } else {
+    // Veliyim: formdaki ad/soyad/telefon zaten veli olarak kaydedilir; ek veli alanı yok.
     isUnder18 = false;
+    parent_name = "";
+    parent_surname = "";
+    parent_phone = "";
   }
 
   var whatsappBulkOptOut =
@@ -342,6 +354,8 @@ async function handleSubmitForm(request, env) {
     yas: yasNum != null ? yasNum : undefined,
     is_under_18: isUnder18 === true,
     veli_ad_soyad: veliAdSoyad || undefined,
+    veli_ad: parent_name || undefined,
+    veli_soyad: parent_surname || undefined,
     veli_telefon: parent_phone || undefined,
     parent_name: parent_name || undefined,
     parent_surname: parent_surname || undefined,

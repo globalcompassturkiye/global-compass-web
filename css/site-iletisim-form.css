@@ -356,6 +356,10 @@ article.icerik-alani .iletisim-form-alani > .hizmet-alanlari-baslik.icerik-bilgi
     margin-bottom: 8px;
 }
 
+.iletisim-yas-veli-wrap .iletisim-veli-telefon > .form-alan {
+    flex: 1 1 100%;
+}
+
 .iletisim-yas-veli-wrap input:disabled {
     opacity: 0.55;
     cursor: not-allowed;
