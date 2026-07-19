@@ -945,6 +945,7 @@
       clearFieldError(yasInput);
       setVeliFieldsState(form, false);
       setAnaKontaktVisible(form, true);
+      updateYasOnizleme(form, yasInput);
       return;
     }
 
@@ -953,6 +954,7 @@
       clearFieldError(yasInput);
       setVeliFieldsState(form, false);
       setAnaKontaktVisible(form, true);
+      updateYasOnizleme(form, yasInput);
       return;
     }
 
