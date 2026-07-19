@@ -510,7 +510,7 @@ var COUNTRY_LABEL_TR = {
   Switzerland: "İsviçre",
   Turkey: "Türkiye",
   Ukraine: "Ukrayna",
-  "United Kingdom": "Birleşik Krallık",
+  "United Kingdom": "İngiltere",
   "United States": "Amerika Birleşik Devletleri",
   "Vatican City": "Vatikan"
 };
