@@ -591,6 +591,54 @@ export default {
 
     pathname = pathname.toLowerCase();
 
+    // D1 CMS (dinamik-website) — panelden düzenlenen sayfalar
+    var cmsPages = {
+      "/yurt-disi-universite": true,
+      "/ingiltere-universiteleri": true
+    };
+    if (
+      cmsPages[pathname] &&
+      (request.method === "GET" || request.method === "HEAD")
+    ) {
+      var cmsOrigin = String(
+        env.CMS_WORKER_ORIGIN ||
+          "https://dinamik-website.canmuratsubat.workers.dev"
+      ).replace(/\/+$/, "");
+      var cmsTarget = cmsOrigin + pathname + "/";
+      try {
+        var cmsRes = await fetch(cmsTarget, {
+          method: request.method,
+          headers: {
+            Accept: request.headers.get("Accept") || "text/html",
+            "User-Agent":
+              request.headers.get("User-Agent") || "global-compass-web-cms-proxy"
+          },
+          redirect: "follow",
+          cf: { cacheTtl: 0, cacheEverything: false }
+        });
+        if (cmsRes.ok) {
+          var outHeaders = new Headers(cmsRes.headers);
+          outHeaders.set(
+            "Cache-Control",
+            "public, max-age=0, s-maxage=60, must-revalidate"
+          );
+          outHeaders.set("X-GC-Source", "dinamik-website");
+          return new Response(cmsRes.body, {
+            status: cmsRes.status,
+            headers: outHeaders
+          });
+        }
+        console.error(
+          "CMS proxy upstream status",
+          cmsRes.status,
+          cmsTarget
+        );
+      } catch (err) {
+        console.error("CMS proxy failed", err);
+      }
+      // Upstream hata → eski static asset’e düş (geçici fallback)
+    }
+
     // 410 listesi (normalize edilmiş)
     const expiredPaths = new Set([
       "/yurtdisi-yaz-okullari/ingiltere/cambridge",
